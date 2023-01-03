@@ -5,7 +5,7 @@
 	<description>Recent content in All Articles on Mischa&#39;s Blog</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Sun, 01 Jan 2023 19:05:13 +0100</lastBuildDate>
+	<lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://mischavandenburg.com/articles/index.xml" rel="self" type="application/rss+xml" />
 	
@@ -108,6 +108,32 @@
 		<guid>http://mischavandenburg.com/zet/sdk/</guid>
 		<description>&lt;p&gt;A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.&lt;/p&gt;
 &lt;p&gt;SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Copyright and License</title>
+		<link>http://mischavandenburg.com/articles/copyright-license/</link>
+		<pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+		
+		<guid>http://mischavandenburg.com/articles/copyright-license/</guid>
+		<description>&lt;p&gt;As an open knowledge project priority is on making this content available to everyone and anyone — in whatever way they can use it — including commercially — and to ensure that any change or alternation or improvement is available to everyone else as well.&lt;/p&gt;
+&lt;p&gt;Therefore, except where otherwise noted, the published content is copyright 2023 Mischa van den Burg and licensed to all under a Creative Commons Attribution 4.0 International license. This includes the code included in any part of the content. No warranty of any kind is provided with that code since it is simply a part of the written content.&lt;/p&gt;
+&lt;p&gt;If you need to create a PDF of any specific page the printed copyright at the bottom of each page should fulfill these requirements if unaltered.&lt;/p&gt;
+&lt;p&gt;This means you are free to do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy and redistribute the material in any medium or format&lt;/li&gt;
+&lt;li&gt;Remix, transform, and build upon the material for any purpose, even commercially&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So long as you do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.&lt;/li&gt;
+&lt;li&gt;If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.&lt;/li&gt;
+&lt;li&gt;You may not apply legal terms or technological measures that legally restrict others from doing anything this license permits.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ironically, this page was copied from &lt;a href=&#34;https://rwx.gg/copyright/&#34;&gt;Rob Muhlenstein&amp;rsquo;s website&lt;/a&gt; because I think he has a good license and copyright setup. It is modified to my name, and I changed some formatting.&lt;/p&gt;
+&lt;p&gt;Link:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rwx.gg/copyright/&#34;&gt;https://rwx.gg/copyright/&lt;/a&gt;&lt;/p&gt;
 </description>
 	</item>
 	
@@ -1405,6 +1431,10 @@ The results should be printed to the screen and saved to a new text file.
 
 	&lt;li&gt;
         &lt;a href=&#34;http://mischavandenburg.com/zet/sdk/&#34;&gt;2023 - What is a SDK?&lt;/a&gt;
+	&lt;/li&gt;
+
+	&lt;li&gt;
+        &lt;a href=&#34;http://mischavandenburg.com/articles/copyright-license/&#34;&gt;2023 - Copyright and License&lt;/a&gt;
 	&lt;/li&gt;
 
 	&lt;li&gt;
