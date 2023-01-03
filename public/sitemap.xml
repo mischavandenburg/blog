@@ -41,13 +41,25 @@
     <loc>http://mischavandenburg.com/articles/copyright-license/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://mischavandenburg.com/articles/how-this-blog-is-created/</loc>
+    <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://mischavandenburg.com/tags/neovim/</loc>
+    <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://mischavandenburg.com/tags/personal/</loc>
+    <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://mischavandenburg.com/tags/productivity/</loc>
+    <lastmod>2023-01-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://mischavandenburg.com/zet/call-stacks/</loc>
     <lastmod>2023-01-02T21:11:26+01:00</lastmod>
   </url><url>
     <loc>http://mischavandenburg.com/tags/devops/</loc>
-    <lastmod>2023-01-02T21:00:11+01:00</lastmod>
-  </url><url>
-    <loc>http://mischavandenburg.com/tags/personal/</loc>
     <lastmod>2023-01-02T21:00:11+01:00</lastmod>
   </url><url>
     <loc>http://mischavandenburg.com/zet/starting-a-project/</loc>
@@ -59,22 +71,13 @@
     <loc>http://mischavandenburg.com/articles/obsidian-introduction/</loc>
     <lastmod>2023-01-01T19:05:13+01:00</lastmod>
   </url><url>
-    <loc>http://mischavandenburg.com/tags/productivity/</loc>
-    <lastmod>2023-01-01T19:05:13+01:00</lastmod>
-  </url><url>
     <loc>http://mischavandenburg.com/tags/study/</loc>
     <lastmod>2023-01-01T19:05:13+01:00</lastmod>
-  </url><url>
-    <loc>http://mischavandenburg.com/tags/linux/</loc>
-    <lastmod>2023-01-01T16:17:58+01:00</lastmod>
   </url><url>
     <loc>http://mischavandenburg.com/articles/what-are-containers/</loc>
     <lastmod>2023-01-01T16:17:58+01:00</lastmod>
   </url><url>
     <loc>http://mischavandenburg.com/articles/kickstart-nvim/</loc>
-    <lastmod>2023-01-01T09:11:57+01:00</lastmod>
-  </url><url>
-    <loc>http://mischavandenburg.com/tags/neovim/</loc>
     <lastmod>2023-01-01T09:11:57+01:00</lastmod>
   </url><url>
     <loc>http://mischavandenburg.com/articles/az-104-study-guide/</loc>
@@ -158,8 +161,8 @@
     <loc>http://mischavandenburg.com/my-journey-into-devops-so-far/</loc>
     <lastmod>2022-01-28T08:56:38+00:00</lastmod>
   </url><url>
-    <loc>http://mischavandenburg.com/aboutme/</loc>
-  </url><url>
     <loc>http://mischavandenburg.com/all/</loc>
+  </url><url>
+    <loc>http://mischavandenburg.com/aboutme/</loc>
   </url>
 </urlset>

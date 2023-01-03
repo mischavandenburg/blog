@@ -5,7 +5,7 @@
 	<description>Recent content in Personal on Mischa&#39;s Blog</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Mon, 02 Jan 2023 21:00:11 +0100</lastBuildDate>
+	<lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://mischavandenburg.com/tags/personal/index.xml" rel="self" type="application/rss+xml" />
 	
@@ -93,9 +93,9 @@
 		<pubDate>Tue, 03 Jan 2023 07:58:44 +0100</pubDate>
 		
 		<guid>http://mischavandenburg.com/zet/distributed-tracing/</guid>
-		<description>&lt;p&gt;Debugging is done using &lt;a href=&#34;http://mischavandenburg.com/content/zet/call-stacks/&#34;&gt;call stacks&lt;/a&gt; in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.&lt;/p&gt;
+		<description>&lt;p&gt;Debugging is done using &lt;a href=&#34;http://mischavandenburg.com/zet/call-stacks/&#34;&gt;call stacks&lt;/a&gt; in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.&lt;/p&gt;
 &lt;p&gt;Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.&lt;/p&gt;
-&lt;p&gt;Distributed tracing is an implementation of the call stack in the cloud. It is usually implemented by adding an agent, &lt;a href=&#34;http://mischavandenburg.com/content/zet/sdk/&#34;&gt;SDK&lt;/a&gt;, or library to the service. In Azure you can enable distributed tracing via Application Insights through auto-instrumentation or SDKs.&lt;/p&gt;
+&lt;p&gt;Distributed tracing is an implementation of the call stack in the cloud. It is usually implemented by adding an agent, &lt;a href=&#34;http://mischavandenburg.com/zet/sdk/&#34;&gt;SDK&lt;/a&gt;, or library to the service. In Azure you can enable distributed tracing via Application Insights through auto-instrumentation or SDKs.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-monitor/app/transaction-diagnostics&#34;&gt;Unified cross-component transaction diagnostics&lt;/a&gt;&lt;/p&gt;
 </description>
 	</item>
@@ -134,6 +134,31 @@
 &lt;p&gt;Ironically, this page was copied from &lt;a href=&#34;https://rwx.gg/copyright/&#34;&gt;Rob Muhlenstein&amp;rsquo;s website&lt;/a&gt; because I think he has a good license and copyright setup. It is modified to my name, and I changed some formatting.&lt;/p&gt;
 &lt;p&gt;Link:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://rwx.gg/copyright/&#34;&gt;https://rwx.gg/copyright/&lt;/a&gt;&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>How This Blog is Created, Written and Hosted</title>
+		<link>http://mischavandenburg.com/articles/how-this-blog-is-created/</link>
+		<pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+		
+		<guid>http://mischavandenburg.com/articles/how-this-blog-is-created/</guid>
+		<description>&lt;p&gt;As I alluded to in my &lt;a href=&#34;http://mischavandenburg.com/articles/obsidian-introduction&#34;&gt;article about Obsidian,&lt;/a&gt; I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.&lt;/p&gt;
+&lt;p&gt;Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.&lt;/p&gt;
+&lt;p&gt;I discovered &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; and I fell in love with it immediately.&lt;/p&gt;
+&lt;p&gt;Hugo is a static site generator based on markdown files. My entire blog is written in markdown files which are stored &lt;a href=&#34;https://github.com/mischavandenburg/blog&#34;&gt;in a GitHub repo.&lt;/a&gt;. I write my blog posts in vim and when I&amp;rsquo;m done I use Hugo to generate the updated website.&lt;/p&gt;
+&lt;p&gt;The result is what you see in the &amp;ldquo;public&amp;rdquo; directory in the GitHub repo. This public directory is pushed to a different repo which is hooked up to my hosting provider. My hosting provider uses Plesk, and with Plesk I have the option to connect the GitHub repo to the web server with a webhook. When I push to my hosting repo, the contents are gathered by the webserver and served as public web content.&lt;/p&gt;
+&lt;p&gt;My complete writing and publishing workflow looks like this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new markdown file&lt;/li&gt;
+&lt;li&gt;Write the note or article&lt;/li&gt;
+&lt;li&gt;Save the file and run the &amp;ldquo;hugo&amp;rdquo; command to regenerate the website&lt;/li&gt;
+&lt;li&gt;Run the &amp;ldquo;publish&amp;rdquo; script. This is a custom script I wrote that takes the contents of the &amp;ldquo;public&amp;rdquo; directory to my hosting repo&lt;/li&gt;
+&lt;li&gt;Push the newly generated website to the hosting repo&lt;/li&gt;
+&lt;li&gt;And we&amp;rsquo;re live! 🚀 🎉&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It is such a smooth and convenient process. I can literally have a new note published to the interet within a few minutes, and it is all done from the command line using my favorite tools.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mischavandenburg/blog&#34;&gt;Blog GitHub repo&lt;/a&gt;&lt;/p&gt;
 </description>
 	</item>
 	
@@ -1392,24 +1417,6 @@ The results should be printed to the screen and saved to a new text file.
 	</item>
 	
 	<item>
-		<title>About Me</title>
-		<link>http://mischavandenburg.com/aboutme/</link>
-		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-		
-		<guid>http://mischavandenburg.com/aboutme/</guid>
-		<description>&lt;h2 id=&#34;living-on-the-command-line&#34;&gt;Living on the command line&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;m a nerd. I use neovim for most of my text editing. I have a fully customized setup with dozens of custom keybindings so I can work a little more effectively. This blog is entirely written in neovim.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve built my custom setup in Arch Linux. I wrote &lt;a href=&#34;http://mischavandenburg.com/content/articles/linux-creativity&#34;&gt;an article&lt;/a&gt; about how customizing and maintaining my tailored operating system is a creative activity to me.&lt;/p&gt;
-&lt;p&gt;In the words of Rob Muhlenstein, &lt;em&gt;&amp;ldquo;Using the Linux Bash terminal command-line is coding. Every command you type on every line is part of an interactive, ongoing program interpreted by Bash and processed by Linux.&amp;rdquo;&lt;/em&gt; Having this dialogue with the computer through commands and effects is one of the most fascinating things on this earth to me, and I feel fortunate that I can work with this every day as a DevOps engineer.&lt;/p&gt;
-&lt;h2 id=&#34;about-this-blog&#34;&gt;About this blog&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;m &lt;a href=&#34;http://mischavandenburg.com/content/articles/jiro-sushi&#34;&gt;in love with my work.&lt;/a&gt; After I finish my day&amp;rsquo;s work, I usually sit down to study more about my field. There is always something new to learn, and I always have a project and a course going.&lt;/p&gt;
-&lt;p&gt;I love to learn, and I love to write. I keep notes of the things I&amp;rsquo;m learning and I decided to make a practice of publishing them on this blog.&lt;/p&gt;
-&lt;p&gt;Explaining things in my own words by writing articles about them is a great way to test my knowledge of a subject. Sometimes I even try to explain it as simple as possible, known as the Feynman technique.&lt;/p&gt;
-&lt;p&gt;Sometimes I write full articles on topics, sometimes they are smaller atomic notes.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
 		<title>All Content</title>
 		<link>http://mischavandenburg.com/all/</link>
 		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1435,6 +1442,10 @@ The results should be printed to the screen and saved to a new text file.
 
 	&lt;li&gt;
         &lt;a href=&#34;http://mischavandenburg.com/articles/copyright-license/&#34;&gt;2023 - Copyright and License&lt;/a&gt;
+	&lt;/li&gt;
+
+	&lt;li&gt;
+        &lt;a href=&#34;http://mischavandenburg.com/articles/how-this-blog-is-created/&#34;&gt;2023 - How This Blog is Created, Written and Hosted&lt;/a&gt;
 	&lt;/li&gt;
 
 	&lt;li&gt;
@@ -1554,14 +1565,31 @@ The results should be printed to the screen and saved to a new text file.
 	&lt;/li&gt;
 
 	&lt;li&gt;
-        &lt;a href=&#34;http://mischavandenburg.com/aboutme/&#34;&gt;0001 - About Me&lt;/a&gt;
+        &lt;a href=&#34;http://mischavandenburg.com/all/&#34;&gt;0001 - All Content&lt;/a&gt;
 	&lt;/li&gt;
 
 	&lt;li&gt;
-        &lt;a href=&#34;http://mischavandenburg.com/all/&#34;&gt;0001 - All Content&lt;/a&gt;
+        &lt;a href=&#34;http://mischavandenburg.com/aboutme/&#34;&gt;0001 - Living on The Command Line&lt;/a&gt;
 	&lt;/li&gt;
 &lt;/ul&gt;
 
+</description>
+	</item>
+	
+	<item>
+		<title>Living on The Command Line</title>
+		<link>http://mischavandenburg.com/aboutme/</link>
+		<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+		
+		<guid>http://mischavandenburg.com/aboutme/</guid>
+		<description>&lt;p&gt;I&amp;rsquo;m a nerd. I use neovim for most of my text editing. I have a fully customized setup with dozens of custom keybindings so I can work a little more effectively. This blog is entirely written in neovim.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve built my custom setup in Arch Linux. I wrote &lt;a href=&#34;http://mischavandenburg.com/articles/linux-creativity&#34;&gt;an article&lt;/a&gt; about how customizing and maintaining my tailored operating system is a creative activity to me.&lt;/p&gt;
+&lt;p&gt;In the words of Rob Muhlenstein, &lt;em&gt;&amp;ldquo;Using the Linux Bash terminal command-line is coding. Every command you type on every line is part of an interactive, ongoing program interpreted by Bash and processed by Linux.&amp;rdquo;&lt;/em&gt; Having this dialogue with the computer through commands and effects is one of the most fascinating things on this earth to me, and I feel fortunate that I can work with this every day as a DevOps engineer.&lt;/p&gt;
+&lt;h2 id=&#34;about-this-blog&#34;&gt;About this blog&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m &lt;a href=&#34;http://mischavandenburg.com/articles/jiro-sushi&#34;&gt;in love with my work.&lt;/a&gt; After I finish my day&amp;rsquo;s work, I usually sit down to study more about my field. There is always something new to learn, and I always have a project and a course going.&lt;/p&gt;
+&lt;p&gt;I love to learn, and I love to write. I keep notes of the things I&amp;rsquo;m learning and I decided to make a practice of publishing them on this blog.&lt;/p&gt;
+&lt;p&gt;Explaining things in my own words by writing articles about them is a great way to test my knowledge of a subject. Sometimes I even try to explain it as simple as possible, known as the Feynman technique.&lt;/p&gt;
+&lt;p&gt;Sometimes I write full articles on topics, sometimes they are smaller atomic notes.&lt;/p&gt;
 </description>
 	</item>
 	

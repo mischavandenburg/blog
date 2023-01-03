@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>How This Blog Is Created, Written and Hosted | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files.">
+	<meta name="keywords" content="Neovim, Productivity, Personal, Explanations, Linux">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>How This Blog is Created, Written and Hosted</h1></header>
+<article>
+<p>As I alluded to in my <a href="/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
+<p>Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</p>
+<p>I discovered <a href="https://gohugo.io/">Hugo</a> and I fell in love with it immediately.</p>
+<p>Hugo is a static site generator based on markdown files. My entire blog is written in markdown files which are stored <a href="https://github.com/mischavandenburg/blog">in a GitHub repo.</a>. I write my blog posts in vim and when I&rsquo;m done I use Hugo to generate the updated website.</p>
+<p>The result is what you see in the &ldquo;public&rdquo; directory in the GitHub repo. This public directory is pushed to a different repo which is hooked up to my hosting provider. My hosting provider uses Plesk, and with Plesk I have the option to connect the GitHub repo to the web server with a webhook. When I push to my hosting repo, the contents are gathered by the webserver and served as public web content.</p>
+<p>My complete writing and publishing workflow looks like this:</p>
+<ol>
+<li>Create a new markdown file</li>
+<li>Write the note or article</li>
+<li>Save the file and run the &ldquo;hugo&rdquo; command to regenerate the website</li>
+<li>Run the &ldquo;publish&rdquo; script. This is a custom script I wrote that takes the contents of the &ldquo;public&rdquo; directory to my hosting repo</li>
+<li>Push the newly generated website to the hosting repo</li>
+<li>And we&rsquo;re live! 🚀 🎉</li>
+</ol>
+<p>It is such a smooth and convenient process. I can literally have a new note published to the interet within a few minutes, and it is all done from the command line using my favorite tools.</p>
+<p><a href="https://github.com/mischavandenburg/blog">Blog GitHub repo</a></p>
+<div id="nextprev">
+<a href="/zet/call-stacks/"><div id="prevart">Previous:<br>Call Stacks</div></a>
+<a href="/articles/copyright-license/"><div id="nextart">Next:<br>Copyright and License</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_neovim" href="http://mischavandenburg.com/tags/neovim">Neovim</a> &middot; <a id="tag_productivity" href="http://mischavandenburg.com/tags/productivity">Productivity</a> &middot; <a id="tag_personal" href="http://mischavandenburg.com/tags/personal">Personal</a> &middot; <a id="tag_explanations" href="http://mischavandenburg.com/tags/explanations">Explanations</a> &middot; <a id="tag_linux" href="http://mischavandenburg.com/tags/linux">Linux</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <a href="https://mischavandenburg.com/articles/copyright-license/">Copyright and License</a><br><br>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2farticles%2fhow-this-blog-is-created%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+
