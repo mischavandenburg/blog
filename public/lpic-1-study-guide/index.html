@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>LPIC-1 Study Guide | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me.">
+	<meta name="keywords" content="Linux, Study">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>LPIC-1 Study Guide</h1></header>
+<article>
+<p>I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me. This article offers a beginner’s perspective on the LPIC-1 certification. Is the LPIC-1 hard to pass? Keep reading to find out.</p>
+<p>Before this certification, I had only a little bit of experience. I deployed LAMP stacks using Ansible and configured VMs to be able to communicate with each other using only the command line. I also did a “Linux Fundamentals” video training. I could navigate the filesystem, edit text files and work in the terminal, but that was about it.</p>
+<p><img src="/hard.jpg" alt=""></p>
+<h3 id="is-it-hard">Is it hard?</h3>
+<p>For a beginner: yes, it was hard! But if you are a Linux administrator with a few years of experience, these exams probably are not very difficult to pass. However, even if you are experienced, be prepared to do a lot of memorization. Even though the requirements on the website seem very basic and straightforward, when you dig into the study resources, you will soon discover that you need to learn a large host of commands and many of their accompanying parameters. For example, you will need to know what grep -H does precisely, the difference between passwd -l, chage -l, and chage -L, the location of the directory that contains all the timezones, and the directory that contains the printer configurations for CUPS.</p>
+<h3 id="the-certification">The certification</h3>
+<p>The LPIC-1 certificate requires candidates to pass the LPI 101-500 and 102-500 exams. These exams test the candidates on various subjects, such as file management, boot loaders, networking fundamentals, user and group management, file systems and partitioning, and much more.</p>
+<p>Each exam has a 600-page syllabus, so to get your LPIC-1 certification, you need to work through 1200 pages and memorize a few hundred commands and parameters. However, if you work as a Linux sysadmin, you’ll probably know many of these commands and concepts.</p>
+<h3 id="study-materials">Study Materials</h3>
+<p>I attended a 4-day course that covered both exams. However, because of the large amount of information that needs to be covered, the teacher could only address the subjects on a superficial level. Therefore, I would advise you to be suspicious of any courses that promise to prep you for the exams in 4 days if you are a beginner. I estimate that you need at least double that amount to get some proper explanation of the material.</p>
+<h4 id="lpi-syllabus">LPI Syllabus</h4>
+<p>After finishing the course, it became clear that I needed a lot of studying to pass the exams. Fortunately, LPI has created a syllabus for each exam. These are available for free on the <a href="https://www.lpi.org/our-certifications/lpic-1-overview">LPI.org website.</a></p>
+<h4 id="lpi-practice-exams">LPI Practice Exams</h4>
+<p>It is crucial to test your knowledge. This is the resource I used:</p>
+<p><a href="https://amzn.to/3KHAkCZ">LPIC-1 Linux Professional Institute Certification Practice Tests: Exam 101-500 and Exam 102-500 </a></p>
+<p>If you are a member of O’Reilly’s, you can read the book there. It contains around 90 practice questions for every chapter in the LPI syllabus. The questions test your knowledge in detail and are a great way to determine whether you have fully grasped the material.</p>
+<p>However, the book was written in 2019 and contains questions about certain subjects that have since been removed from the exams. So if you suddenly encounter questions that do not seem familiar at all, make sure to double-check that it is actually an exam objective.</p>
+<p>Lastly, I used <a href="https://www.udemy.com/share/1029gO3@XonS1Jh2QkFmIV_mN-r8Rbx04vCYiyykPhTpewu5iLZQVNIYMVe4z53YFSxp2tly/">these practice exams on Udemy</a>.</p>
+<h3 id="memorization">Memorization</h3>
+<p>As I have stated before, the exams require you to do a lot of memorization. Fortunately, we have some tools and techniques available to help us with this task.</p>
+<p>The primary tool is Anki. If you are not familiar with it, Anki is a very simple and free program that allows you to create flashcards that you can use to study and test your knowledge. The best thing about Anki is that it implements spaced repetition. You can download and learn more about Anki here: <a href="https://apps.ankiweb.net/">https://apps.ankiweb.net</a></p>
+<p>Secondly, I am fond of memory techniques. You can remember things much more quickly by visualizing them in your mind or utilizing techniques such as Memory Palaces or the Method of Loci. If you are interested in learning more about memory techniques, I highly recommend Dr. Anthony Metivier’s <a href="https://www.youtube.com/c/AnthonyMetivierMMM/featured">YouTube channel.</a></p>
+<p><img src="/palace.jpg" alt=""></p>
+<h3 id="strategy">Strategy</h3>
+<p>Here is the strategy that I used to pass the exams:</p>
+<ul>
+<li>Read through a chapter and take notes.</li>
+<li>Make Anki flashcards for all the commands and flags that you do not know yet</li>
+<li>Do the exercises at the end of the chapter</li>
+<li>Do the practice exam for your chapter from the exam book, which should give you a good indication of how well you have grasped the material.</li>
+<li>Make flashcards of all the questions that you answered wrong (trust me, there will be quite a few)</li>
+<li>Use Anki to test yourself and memorize all of the commands and exam questions</li>
+</ul>
+<h3 id="tips">Tips:</h3>
+<ul>
+<li>Do your Anki reviews every day. On some days I was adding more than 100 new cards, which will lead to a lot of reviews in the coming days</li>
+<li>Although the syllabus for exam 101 explained things very well, the 102 syllabus sometimes is very meager in its explanations and you might need to supplement with reading man pages, YouTube videos, and other tutorials. For example, I needed to find quite a bit of supplementary material for chapter 109 Networking Fundamentals.</li>
+<li>Ask for help if you don’t understand a certain topic</li>
+<li>Don’t think you can get away with skipping a topic. You will be tested on absolutely everything that’s in the syllabus, trust me.</li>
+<li>Try doing it together with someone else. I was doing it together with my friend and colleague, and it was extremely useful to be able to share things I struggled with and to discuss things with him to understand them better. Thank you for the good times, Gino!</li>
+</ul>
+<h3 id="my-thoughts-on-the-certification">My thoughts on the certification</h3>
+<p>The subject matter is extensive, and I know my way around Linux much better now. Therefore, if I encounter a problem, I am better positioned to assess where the cause might be and then solve the problem from there. I also feel I have a much better grasp of basic networking concepts, which will prove to be very useful in many situations in my work as a DevOps Engineer.</p>
+<p>However, there are also a few drawbacks to this certification. I think there is too much emphasis on memorizing commands and their flags. I think it is not necessary to memorize all of the possible parameters of the chage command because, in the real world, I would take a quick look at the man page to find the parameter that I need. The exams force you to memorize many parameters in a short time, and to be honest, you will probably forget about them very quickly anyway.</p>
+<p>But overall, I am pleased and grateful to my employer that I was able to obtain this certification, and it has made me hungry for more, and I am very eager to continue my learning in this domain.</p>
+<div id="nextprev">
+<a href="/my-first-contribution-to-open-source/"><div id="prevart">Previous:<br>My First Contribution to Open Source</div></a>
+<a href="/yadm-keep-track-of-your-precious-dotfiles/"><div id="nextart">Next:<br>Yadm: Keep Track of Your Precious Dotfiles</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_linux" href="http://mischavandenburg.com/tags/linux">Linux</a> &middot; <a id="tag_study" href="http://mischavandenburg.com/tags/study">Study</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2flpic-1-study-guide%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

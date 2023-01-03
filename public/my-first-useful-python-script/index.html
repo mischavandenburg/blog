@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My Mirst Useful Python Script | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="The best part of learning Python is trying to identify things in my life which I can automate by writing a script. Learning a programming language involves doing a lot of exercises that sometimes lack a connection with the real world.">
+	<meta name="keywords" content="Coding">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>My Mirst Useful Python Script</h1></header>
+<article>
+<p>The best part of learning Python is trying to identify things in my life which I can automate by writing a script. Learning a programming language involves doing a lot of exercises that sometimes lack a connection with the real world. But after I decided to go for it, I am always on the lookout for projects. Not only for my job as a DevOps Engineer, but also for my private life. In this case, I needed to write a program that parses log files from a bot so I could get a total number of runs. You can have a look at the final result in my Diablo 2 <a href="https://github.com/mischavandenburg/diablo2">GitHub repo. </a></p>
+<p>Like I wrote in my <a href="https://mischavandenburg.com/my-journey-into-devops-so-far/">journey into DevOps article</a>, I love automating games. Diablo 2 is a game that was originally released in 2002 and which recently was remastered. Diablo 2 always had a very strong presence of bots in the online game, and it didn’t take long before I also joined the ride.</p>
+<p>A few months after the remaster the first bots have started emerging as well. There is a a particularly good one written in Python which is an <a href="https://github.com/aeon0/botty">open source project</a>, which is a perfect opportunity for me to learn more about Python by trying to understand its code and solving problems. I was very excited to discover it because I was playing quite a few hours a week. Diablo 2 is a very grindy game and it takes a lot of time to find the needed gear. Now I could finally outsource my grinding to the computer again.</p>
+<h2 id="the-problem">the problem</h2>
+<p>Although the bot is very functional and does several tasks very well, there are still features missing because it is relatively early in its development. One of these features is keeping track of the total amount of runs that the bot has done. In Diablo, every time you play you start a “game” or an instance. In that game there are certain bosses you can kill, and when you are finished you exit your game. This is called a run. Then you create a new game and everything is reset, and you get another shot at killing the bosses to get the precious gear.</p>
+<p>Being the nerd that I am, I like to keep track of the total amount of runs that the bot has done. On these numbers I like to apply some calculations to see how many items I get per xxxx runs and suchlike. The bot keeps track of the amount of runs it does per session and stores them in a log file. But there is no functionality of seeing the total amount of runs you have done, and when I discovered this, I realised I had my first little Python project.</p>
+<h2 id="log-files">log files</h2>
+<p>Every time you close the bot after a session, a log file is created that looks like this:</p>
+<p><img src="/logfile.png" alt=""></p>
+<p>It is formatted as a .txt file and shows information about the bosses that were run and the items that were found. Most importantly, it contains the amount of games that were done in the session. Even after only using the bot for a short time I had over 100 log files to go through, and that’s where I needed a script that would go through these files for me and add the numbers in order to get the total amount of runs.</p>
+<h2 id="the-script">the script</h2>
+<p>After completing chapter 9 and 10 in the Automate the Boring Stuff book, I learned about file paths and opening files and reading from them. Now it was time to apply that knowledge. The process went pretty well and soon I had a script that would open the files for me.</p>
+<p>Things got a little bit more complicated when I needed to read information from the files. And of course, this operation would almost certainly involve the dreaded topic of regex. In the end it was not as bad, and I ended up with the following regex:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>regex_games <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;Games:&#34;</span>)
+</span></span><span style="display:flex;"><span>regex_dict <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;nihla&#39;</span>: <span style="color:#e6db74">&#39;Nihl|Nihlatak&#39;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;pindle&#39;</span>: <span style="color:#e6db74">&#39;Pin|Pindle&#39;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;eldritch&#39;</span>: <span style="color:#e6db74">&#39;Eld&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>As you will see afterwards, I needed a way to check every line for a certain statement. However, rather than hardcoding every operation, I wanted it to loop over a list of terms. This meant that I could easily go back to the code and add a few more search statements if I needed them. I ended up storing them in a dictionary as you can see above. I really like the way you can make dictionaries in Python and have every entry on a new line. It makes the code very readable and structured.</p>
+<p>And this is the actual looping sequence that I ended up with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> folder_name, sub_folder, file_names <span style="color:#f92672">in</span> os<span style="color:#f92672">.</span>walk(source):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> filename <span style="color:#f92672">in</span> file_names:
+</span></span><span style="display:flex;"><span>        p <span style="color:#f92672">=</span> PurePath(folder_name, filename)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> open(p, <span style="color:#e6db74">&#39;rt&#39;</span>) <span style="color:#66d9ef">as</span> my_file:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># search for games number line</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> my_file:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># find number of games and add to total games</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> regex_games<span style="color:#f92672">.</span>search(line):
+</span></span><span style="display:flex;"><span>                    g <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>split()
+</span></span><span style="display:flex;"><span>                    total_games <span style="color:#f92672">+=</span> int(g[<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>                    f <span style="color:#f92672">=</span> my_file<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># check which runs were done by using the regex dict</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">for</span> key <span style="color:#f92672">in</span> regex_dict:
+</span></span><span style="display:flex;"><span>                        location <span style="color:#f92672">=</span> regex_dict[key]
+</span></span><span style="display:flex;"><span>                        reg <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(location)
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e"># if there is a match, add the numbers to the total variable</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> reg<span style="color:#f92672">.</span>search(f):
+</span></span><span style="display:flex;"><span>                            var_name <span style="color:#f92672">=</span> key <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;_total&#39;</span>
+</span></span><span style="display:flex;"><span>                            globals()[var_name] <span style="color:#f92672">+=</span> int(g[<span style="color:#ae81ff">1</span>])
+</span></span></code></pre></div><p>This sequence loops through the folder, the subfolder, and opens each file one by one. When the file is opened it looks for the “Games: 25” line and adds the number to a variable. However, I was not only interested in the total number of games. I also wanted to get more insight in how many Pindle runs or Nihla runs I had done. So I set up another regex search and made sure that the number of games are added to a “pindle_total” or “nihla_total” variable.</p>
+<h2 id="result">result</h2>
+<p>When running the script in the shell, the result looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mischa@MischaMacBook stats_parser % python3 total_runs.py 
+</span></span><span style="display:flex;"><span>Total runs: <span style="color:#ae81ff">7159</span>
+</span></span><span style="display:flex;"><span>Pindle runs: <span style="color:#ae81ff">6926</span>
+</span></span><span style="display:flex;"><span>Eldritch + Shenk runs: <span style="color:#ae81ff">367</span>
+</span></span><span style="display:flex;"><span>Nihla runs: <span style="color:#ae81ff">232</span>
+</span></span><span style="display:flex;"><span>mischa@MischaMacBook stats_parser % 
+</span></span></code></pre></div><p>Exactly what I wanted. Now I can just paste my stats files into a folder and see how many runs I’ve done. Maybe I’ll improve it by building a GUI. Another fun idea I have is to create a little pipeline where this script would be run once an hour and the stats would be uploaded to a webpage somewhere, so others could see the amount of runs of my bot. Not that anyone is interested in that, but it is a fun project for me to do. Let’s see what happens!</p>
+<p>For now I am very happy with the result. It was a very satisfying experience to identify a problem that I had and to be able to come up with an automated solution. Of course it is still very rudimentary programming, and there is a long long way ahead of me, but it was fun to finally do something practical that solved a particular problem in my life.</p>
+<p>The final result is in my <a href="https://github.com/mischavandenburg/diablo2">Diablo 2 GitHub repo.</a></p>
+<div id="nextprev">
+<a href="/python-project-mad-libs/"><div id="prevart">Previous:<br>Python Project: Mad Libs</div></a>
+<a href="/my-first-contribution-to-open-source/"><div id="nextart">Next:<br>My First Contribution to Open Source</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_coding" href="http://mischavandenburg.com/tags/coding">Coding</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fmy-first-useful-python-script%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lab Project: GitOps With ArgoCD, Azure Pipelines and Minikube | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.
+My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube.">
+	<meta name="keywords" content="DevOps">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Lab Project: GitOps with ArgoCD, Azure Pipelines and Minikube</h1></header>
+<article>
+<p>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.</p>
+<p>My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure. I also wanted to try out ArgoCD and learn more about GitOps.</p>
+<p>The application is a simple web app that I wrote which displays a quote in the browser:</p>
+<p><img src="/app.png" alt=""></p>
+<h1 id="gitops-and-structure">GitOps and Structure</h1>
+<p>GitOps is used to automate the process of provisioning infrastructure. Infrastructure as code is used to generate the same environment every time the environment is deployed.</p>
+<p>For my project I have two separate GitHub repos. <a href="https://github.com/mischavandenburg/static-quote-app">The first repo</a> contains the code for a simple web app I created and the Dockerfile to generate the image. I call this my application repo. The other repo is <a href="https://github.com/mischavandenburg/static-quote-app-gitops">my GitOps repo</a> which contains the manifest files to deploy the application in Kubernetes. I decided to leverage Helm to create my manifest files. This way I can create templates and define my desired values in a values.yaml file in the repo.</p>
+<p>Ultimately my goal was to use an Azure pipeline to build an image from my application repo and push it to Docker hub. This new image is given a new tag which needs to be stored. The first pipeline should trigger a new pipeline that makes a pull request to the GitOps repo to update the tag in my Helm chart.</p>
+<p>ArgoCD will then scan the GitOps repo and realize that the tag has been updated, and deploy the new tag to my cluster.</p>
+<h1 id="minikube">Minikube</h1>
+<p>I used <a href="https://minikube.sigs.k8s.io/docs/">minikube</a> to deploy my local Kubernetes cluster. Another option is <a href="https://kind.sigs.k8s.io/">kind</a> (Kubernetes In Docker) but I wanted to use a VM approach this time.</p>
+<h1 id="argocd">ArgoCD</h1>
+<p><a href="https://argo-cd.readthedocs.io/">ArgoCD</a> is a declarative GitOps continuous delivery tool for Kubernetes. This is the solution I used to continuously scan my GitOps repo. When ArgoCD detects a change in the desired state, it will compare it with the state in my running cluster and make changes accordingly. I found a really good <a href="https://redhat-scholars.github.io/argocd-tutorial/argocd-tutorial/02-getting_started.html">tutorial to run ArgoCD in minikube</a>.</p>
+<p><img src="/argocd-dashboard.png" alt="ArgoCD dashboard"></p>
+<h1 id="azure-pipelines">Azure Pipelines</h1>
+<p>With my cluster running on my local machine and my repos set up, I needed to use Azure Pipelines to bring it all together. Building the image and pushing it to Docker Hub wasn&rsquo;t a big deal. But I had two big challenges in my desired setup: I needed to pass the new tag number to a new pipeline, and I needed to use Azure Pipelines to create a new PR to my GitOps repo.</p>
+<h3 id="passing-a-value-from-one-pipeline-to-another">Passing a value from one pipeline to another</h3>
+<p>Interestingly, this wasn&rsquo;t as easy as it sounds, and from my internet searching it seemed that many people struggled with this. I decided to use the Variable Groups in Azure DevOps. However, after I finished writing my pipeline, I discovered I had no problems with reading the value from the Variable Groups, but it was impossible to update it using existing pipeline tasks. So I had to a bit of hacking to make it work. In the end I had to use the Azure CLI from within the pipeline to update my variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">update_tag</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">job</span>: <span style="color:#ae81ff">update_tag_variable </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">displayName</span>: <span style="color:#ae81ff">Update Tag Variable</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">bash</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          az pipelines variable-group variable \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          update --group-id 202 \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          --org $(System.CollectionUri) \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          --project $(System.TeamProject) \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          --name tag --value $(Build.BuildId)</span>          
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">AZURE_DEVOPS_EXT_PAT</span>: <span style="color:#ae81ff">$(System.AccessToken)</span>
+</span></span></code></pre></div><p>This didn&rsquo;t feel like a very elegant solution, but it was the only solution I could come up with.</p>
+<p>I also struggled a lot with permissions. I needed to find the correct service principal to assign the administrator rights to. <a href="https://stackoverflow.com/questions/52986076/having-no-permission-for-updating-variable-group-via-azure-devops-rest-api-from">This post</a> really helped to solve my problem.</p>
+<h3 id="submitting-a-pr-to-a-github-repo">Submitting a PR to a GitHub repo</h3>
+<p>When I started writing my pipeline I thought it would be very straightforward to just submit a PR to a repo, but I quickly discovered that this is not natively supported in Azure pipelines yet. In fact, I could not find a way to submit a PR at all. I had to settle for a solution that checks out the GitOps repo and creates a new branch. This new branch updates the tag in the values.yaml with the new tag that was passed from the previous pipeline.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">variables</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">group</span>: <span style="color:#ae81ff">mischa-quote</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">passed_tag</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">value</span>: <span style="color:#ae81ff">$[variables.tag]</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">branch_name</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">value</span>: <span style="color:#e6db74">&#34;pipeline-$(passed_tag)&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">pool</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">vmImage</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">checkout</span>: <span style="color:#ae81ff">self</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">persistCredentials</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">clean</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">script</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      git config --global user.email &#34;mischa@pipeline.com&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      git config --global user.name &#34;Mischa Pipeline&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      git switch -c &#34;$(branch_name)&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      sed -i &#34;s/tag:.*/tag: $(passed_tag)/&#34; values.yaml 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      git add .
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      git commit -m &#34;Update tag to $(passed_tag)&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      git push --set-upstream origin &#34;$(branch_name)&#34;</span>      
+</span></span></code></pre></div><p>This also felt a bit hacky to do with explicit shell commands, but it was the only way I could find to achieve my goal. I used sed to update the tag.</p>
+<h1 id="result">Result</h1>
+<p>The resulting deployment pipeline is as follows.</p>
+<ol>
+<li>I make a commit to my application repo, which triggers a build pipeline in Azure DevOps:</li>
+</ol>
+<p><img src="/trigger-pipeline1.png" alt=""></p>
+<ol start="2">
+<li>This resulted in an image pushed to my Docker Hub:</li>
+</ol>
+<p><img src="/docker-hub.png" alt=""></p>
+<ol start="3">
+<li>The pipeline created a new branch in my GitOps repo. Unfortunately, I have to make the PR myself, but as you can see, the pipeline successfully updates the values.yaml with the new tag which we also saw in Docker Hub:</li>
+</ol>
+<p><img src="/new-branch.png" alt=""></p>
+<p><img src="/update-tag.png" alt=""></p>
+<ol start="4">
+<li>When I merged the pull request, ArgoCD detected the change and deployed a new pod with the new tag.</li>
+</ol>
+<p><img src="/argocd-sync.png" alt=""></p>
+<ol start="5">
+<li>Running a <code>kubectl describe</code> on the pod also verifies that we have the correct image:</li>
+</ol>
+<p><img src="/kubectl-tag.png" alt=""></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>This was a fun challenge, but I learned a lot from solving the problems I encountered and my entire Saturday flew by in an uninterrupted flow state. I had some good practice in setting up Azure pipelines, learned about Helm, and did my first implementation of GitOps. Not bad for a day&rsquo;s work!</p>
+<h1 id="links">Links</h1>
+<p><a href="https://github.com/mischavandenburg/static-quote-app">Application GitHub repo</a></p>
+<p><a href="https://github.com/mischavandenburg/static-quote-app-gitops">GitOps repo</a></p>
+<p><a href="https://minikube.sigs.k8s.io/docs/">minikube</a></p>
+<p><a href="https://kind.sigs.k8s.io/">kind</a></p>
+<p><a href="https://argo-cd.readthedocs.io/">ArgoCD</a></p>
+<p><a href="https://redhat-scholars.github.io/argocd-tutorial/argocd-tutorial/02-getting_started.html">tutorial to run ArgoCD in minikube</a></p>
+<div id="nextprev">
+<a href="/articles/identity/"><div id="prevart">Previous:<br>Tokens and Identity on the Internet</div></a>
+<a href="/articles/az-104-study-guide/"><div id="nextart">Next:<br>Study Guide: AZ-104 Azure Administrator Associate</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_devops" href="http://mischavandenburg.com/tags/devops">DevOps</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2farticles%2flab-argocd-azure-pipelines%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

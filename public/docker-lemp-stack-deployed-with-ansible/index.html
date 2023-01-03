@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Docker LEMP Stack Deployed With Ansible | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.">
+	<meta name="keywords" content="DevOps">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Docker LEMP Stack deployed with Ansible</h1></header>
+<article>
+<p>In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.</p>
+<p>I wrote a playbook that installs Docker and deploys a fully containerised LEMP stack on a virtual machine.</p>
+<p><a href="https://github.com/mischavandenburg/lemp_docker_ansible">You can have a look at the Github repo with the result here. </a></p>
+<p>The repo is using the “ansible-galaxy init” role structure. You will find the playbooks as follows: roles/your_choice/tasks/main.yml</p>
+<h2 id="docker">Docker</h2>
+<p>I was very excited to learn more about Docker and containerisation. I was familiar with the concept of virtualisation, which is creating virtual versions of fully functional machines on a host operating system. But the concept of containerisation was new to me.</p>
+<p>As I understand it, containerisation differs drastically from virtualisation because containers are able to use resources from host directly. They do not need an entire operating system to run, and therefore they are a much more lightweight.</p>
+<p>This means that resources can be used much more efficiently which eventually can mean cost reduction in your cloud infrastructure.</p>
+<p>Docker is a very popular platform for building and running containers. It seemed like the best option to get started with deploying my own containers.</p>
+<h2 id="lemp-stack">LEMP Stack</h2>
+<p>My colleague recommended me <a href="https://tech.osteel.me/posts/docker-for-local-web-development-part-1-a-basic-lemp-stack">this tutorial</a> to become more familiar with Docker. It uses a LEMP stack as an example application. When I told friends about the fact that I was building a LEMP stack, they corrected me and said it was a LAMP stack.</p>
+<p>The LAMP stack is a collection of software built out of these elements:</p>
+<p>L – Linux: the operating system</p>
+<p>A – Apace: webserver</p>
+<p>M – MySQL: database</p>
+<p>P – PHP: server scripting language</p>
+<p>However, in a LEMP stack, we use NGINX as a webserver, which is pronounced “Engine X”, hence the E in LEMP stack. Therefore, LEMP is the correct way to spell it, and it is used in all the tutorials that I have been using.</p>
+<p>I highly recommend <a href="https://tech.osteel.me/posts/docker-for-local-web-development-part-1-a-basic-lemp-stack">the tutorial</a> in order to learn how to deploy your first collection of containers. Deploying one container is relatively easy with Docker, but it gets a little more complicated when deploying several containers and making them communicate with each other in order to combine them into one application. But this tutorial does a great job at showing you how it’s done and it is especially good at explaining the steps along the way.</p>
+<h2 id="docker-compose-vs-ansible">Docker Compose vs. Ansible</h2>
+<p>Docker Compose is a tool you can use to run multi-container applications. With the help of the tutorial, it was fairly easy to understand and hit the ground running by deploying multiple containers into one network.</p>
+<p>Now let’s have a look at how we actually set up the containers. In the Docker Compose file, the NGINX container was defined like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3.8&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Services</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#Nginx Service</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">nginx</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:1.19</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">80</span>:<span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./src:/var/www/php</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./.docker/nginx/conf.d:/etc/nginx/conf.d</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">php</span>
+</span></span></code></pre></div><p>It looks pretty straightforward, right? Almost like pseudocode. We tell Docker which image to pull from the Docker Hub, and we tell it to route container’s port 80 to our host’s port 80. This ensures that the web server can be accessed from the outside, provided you have opened this port in the firewall.</p>
+<p>Next there is the volumes section: this mounts certain directories on the host into the container so it is accessible. In this case this was necessary to transfer the web server configuration and the index.php which we wanted to serve to the outside.</p>
+<p>Having successfully deployed my LEMP using Docker Compose, the next step was to automate this process by using Ansible. Ansible is a very powerful tool which enables you to automate configuration management and application deployment by writing scripts called playbooks.</p>
+<h5 id="why-was-it-necessary-to-introduce-ansible">Why was it necessary to introduce Ansible?</h5>
+<p>By using Docker Compose, you would need to have Docker and Docker Compose installed on the virtual machine before you could start running the containers.</p>
+<p>However, Ansible gives you the power to take a completely fresh virtual machine, configure it from scratch, and install Docker and its necessary dependencies, followed by deploying the containers.</p>
+<h4 id="now-lets-take-a-look-at-the-same-container-defined-in-ansible">Now let’s take a look at the same container defined in Ansible:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">start nginx </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">docker_container</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:1.19</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">detach</span>: <span style="color:#66d9ef">yes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">80</span>:<span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">network_one</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/src:/var/www/php</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/.docker/nginx/conf.d:/etc/nginx/conf.d</span>
+</span></span></code></pre></div><p>Although there are some differences, they look very similar. Converting my Docker Compose file to an Ansible playbook was quite a natural and easy experience. It also helps that both are written in YAML and therefore use the same indentation conventions.</p>
+<p>A few differences we can observe:</p>
+<p>In the Ansible playbook we invoke the docker_container module, whereas they are defined as services in the Docker Compose file. Another difference is that we need to set up the network ourselves. In the Docker Compose file, we just specified the containers and Docker Compose created a network automatically and made sure that all containers were connected to it.</p>
+<p>However, it isn’t very complicated in Ansible either:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">setup network</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">docker_network</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">network_one</span>
+</span></span></code></pre></div><p>We simply call the docker_network module and tell it to make a network called network_one. All we need to do then is make sure to set the networks: parameter to network_one in the docker_container module as we saw above.</p>
+<p>The last point to note is the detach parameter. This means that the container will keep running in the background after it is started.</p>
+<h3 id="result">Result</h3>
+<p>After some debugging here and there and making sure all of the elements were in place, eventually we get the satisfying message that everything went according to plan:</p>
+<p><img src="/success.png" alt="Successful play from Ansible"></p>
+<p>The result is a webpage being served on the server ip:</p>
+<p><img src="/webpage.png" alt="The final web page served by Nginx "></p>
+<p>I know, it is not the prettiest or most intricate design. But remember that I am working towards becoming a DevOps Engineer, not a Front End Developer 😉</p>
+<p>We can also enter the phpMyAdmin dashboard by adding port 8080 to our ip in the browser:</p>
+<p><img src="/php.png" alt="The PHP page."></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The assignment of deploying a LEMP stack in separate containers has been very useful and I learned a lot from the process. There were a few more modules that needed to be configured in Ansible as opposed to the Docker Compose method, but the tradeoff is that Ansible is much more powerful and enables you to configure the server from scratch. You can have a look at the code in the GitHub repo to see all of the changes I needed to do.</p>
+<p>The only part that I needed to do by hand is to create the VM in the Microsoft Azure portal, open the ports and configure the SSH keys. The next step in my learning process will be to learn how I can automate this step as well. This means that I will need to learn Terraform.</p>
+<p>By using Terraform I will be truly deploying this stack as Infrastructure as Code, but doing all of these steps with Ansible has given me a much better understanding of Infrastructure as Code already.</p>
+<div id="nextprev">
+<a href="/why-i-chose-a-bear-for-my-logo/"><div id="prevart">Previous:<br>Why I Chose a Bear as a Logo</div></a>
+<a href="/python-project-mad-libs/"><div id="nextart">Next:<br>Python Project: Mad Libs</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_devops" href="http://mischavandenburg.com/tags/devops">DevOps</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fdocker-lemp-stack-deployed-with-ansible%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

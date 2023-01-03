@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Distributed Tracing | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="Debugging is done using call stacks in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.">
+	<meta name="keywords" content="Zettelkasten, Explanations, Azure">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Distributed Tracing</h1></header>
+<article>
+<p>Debugging is done using <a href="/content/zet/call-stacks/">call stacks</a> in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.</p>
+<p>Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.</p>
+<p>Distributed tracing is an implementation of the call stack in the cloud. It is usually implemented by adding an agent, <a href="/content/zet/sdk/">SDK</a>, or library to the service. In Azure you can enable distributed tracing via Application Insights through auto-instrumentation or SDKs.</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/app/transaction-diagnostics">Unified cross-component transaction diagnostics</a></p>
+<div id="nextprev">
+<a href="/zet/sdk/"><div id="prevart">Previous:<br>What is a SDK?</div></a>
+<a href="/zet/pipelines-continuous-monitoring/"><div id="nextart">Next:<br>Pipelines: Continuous Monitoring</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_zettelkasten" href="http://mischavandenburg.com/tags/zettelkasten">Zettelkasten</a> &middot; <a id="tag_explanations" href="http://mischavandenburg.com/tags/explanations">Explanations</a> &middot; <a id="tag_azure" href="http://mischavandenburg.com/tags/azure">Azure</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fzet%2fdistributed-tracing%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

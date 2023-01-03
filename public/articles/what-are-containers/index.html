@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>What Are Containers? | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible.">
+	<meta name="keywords" content="Explanations, Linux, DevOps">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>What Are Containers?</h1></header>
+<article>
+<p>When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
+<h1 id="virtualization">Virtualization</h1>
+<p>To understand containers, we need to understand virtualization. Virtualization is the process of creating &ldquo;fake computers&rdquo; or &ldquo;virtual computers&rdquo; on a physical computer.</p>
+<p>On your desk, you have a laptop or a desktop PC. This machine has hardware such as a motherboard, a hard disk, and a video card. To run programs on your computer, it needs an Operating System. Usually, Windows, macOS, or Linux are used.</p>
+<p>Let&rsquo;s say you have a computer running Windows, but you want to run a program that can only run on Linux. One solution is to buy another laptop and put it beside your Windows laptop on your desk. So now you have two computers with two different operating systems.</p>
+<p>Fortunately, there are other solutions. We can use virtualization to make a Virtual Machine. A virtual machine is created by software to imitate a fully functional running computer inside your current operating system. You can create a virtual machine that runs Linux on your Windows computer. Your Windows computer running the Linux virtual machine is known as the **host.</p>
+<p>Now you don&rsquo;t need to buy another computer to run your Linux program. Instead, you can boot up your Linux virtual machine and run your program when needed. If you have a powerful computer, you could run ten or more virtual machines, each of which has its own operating system and custom environment.</p>
+<h1 id="containers">Containers</h1>
+<p>Every time you create a virtual machine, the virtual machine needs a complete operating system to work. So, first, the software creates a virtual processor, virtual video card, and a virtual network interface. Then, it runs a fully functional operating system on that virtual hardware. This takes up a lot of resources.</p>
+<p>Containers are lightweight packages of software. They are designed to do a very specific task, and therefore they only contain the resources they need to do that task. Nothing more.</p>
+<p>Containers use the operating system of the physical computer to run. They have a very minimal, lightweight operating system inside them, but it only contains the elements they need to do their specific task. Therefore, containers are very easy to distribute, and you can run them very quickly.</p>
+<h1 id="containers-are-like-newspapers">Containers are like newspapers</h1>
+<p>Containers are like newspapers. Newspapers have a particular task: providing you with the day&rsquo;s news. You cannot use newspapers to study for your mathematics exam. You use your math book to study for your math exam. If you want to be informed of the day&rsquo;s news, you use a newspaper. This is what I mean by containers having a specific task.</p>
+<p>Next, newspapers are printed on a specific kind of paper. When you buy an expensive book, it will have a sturdy and durable cover, and the pages are made of nice thick paper that will last a long time. The pages don&rsquo;t tear very quickly, and when the book gets wet, it can withstand it. This thick cover and high-quality papers are like the operating system of a virtual machine.</p>
+<p>Newspapers, on the other hand, are printed on very thin paper. Because they are designed to distribute the news to you effectively, newspapers do not need to be stored forever or do any other tasks. If you used thick, expensive paper for newspapers, they would become costly, and no one would buy them anymore. The paper is optimized to bring the news to you.</p>
+<p>In the same way, the container only comes with the components it needs to do its specific task. Therefore, the container is optimized for its purpose. As a result, they can be distributed more quickly and do not take up a lot of resources when running.</p>
+<p>There are other benefits to containers, such as improving the ability to autoscale your application, but I will expand on those in a future blog post.</p>
+<h1 id="further-study">Further study</h1>
+<p>To learn more about containers, you can use the following resources:</p>
+<p><a href="https://youtu.be/r6YIlPEC4y4">Containers &amp; Friends from John Savill&rsquo;s DevOps Masterclass</a></p>
+<p><a href="https://docs.docker.com/get-started/overview/">Docker Documentation</a></p>
+<p><a href="https://youtu.be/3c-iBn73dDE">Docker Tutorial for Beginners</a></p>
+<div id="nextprev">
+<a href="/articles/kickstart-nvim/"><div id="prevart">Previous:<br>Getting Started with Neovim: kickstart.nvim</div></a>
+<a href="/articles/obsidian-introduction/"><div id="nextart">Next:<br>Obsidian: A Note Taking App For DevOps Engineers</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_explanations" href="http://mischavandenburg.com/tags/explanations">Explanations</a> &middot; <a id="tag_linux" href="http://mischavandenburg.com/tags/linux">Linux</a> &middot; <a id="tag_devops" href="http://mischavandenburg.com/tags/devops">DevOps</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2farticles%2fwhat-are-containers%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Goodbye Windows, Hello Linux! Switching to Linux as My Daily Driver | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="After getting my LPIC-1 certification, my interest in Linux continued to grow. When I started my new job, I performed more sysadmin tasks, such as increasing the size of filesystems or removing backups, and it felt good to put the theory into practice.">
+	<meta name="keywords" content="Linux">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Goodbye Windows, Hello Linux! Switching to Linux as my Daily Driver</h1></header>
+<article>
+<p>After getting my LPIC-1 certification, my interest in Linux continued to grow. When I started my new job, I performed more sysadmin tasks, such as increasing the size of filesystems or removing backups, and it felt good to put the theory into practice.</p>
+<p>I was still using Windows in my personal setup, and I started running into limitations. Finally, I realized how much I appreciated the freedom and control over my system that Linux gave me. So I decided I wanted to switch to Linux for my daily operating system. But a few things were holding me back. Will I be able to play my favorite games? Will I run into a lot of problems with my sound and microphone? Are all the apps I need for working from home available on Linux? Can I even edit videos on Linux?</p>
+<h2 id="preparing-to-switch">preparing to switch</h2>
+<p>I made a dual boot install of Ubuntu to try things out to answer these questions. I started things off by setting small goals for myself. For example, I need to be able to work from home. Which programs do I need? And I started from there.</p>
+<p>I had no problems installing Slack, Zoom, Teams, and all the other programs I needed for my work. I was very surprised by how well all of the external hardware worked. My Bluetooth keyboard and mouse worked immediately without needing to install any drivers. Even my USB webcam worked instantly without any problems.</p>
+<p>To put this into perspective, I spent an entire afternoon getting my keyboard to work correctly on my MacBook. It needed a lot of extra drivers. Still, there is a 4-second delay when I press my volume up/down keys when working on my MacBook. All of this works perfectly on my Linux OS without any delays and without any drivers or extra configuration.</p>
+<p>I kept my dual boot setup for a while as I was trying out different distros, and I eventually ended up with Manjaro as my distro of choice. I like it because it is based on Arch Linux, and it gives you access to the Arch User Repository (AUR). I want to use Arch eventually, and I figured this might be a good stepping stone.</p>
+<h2 id="fate-decided-for-me">fate decided for me</h2>
+<p>This dual boot setup continued for a while as I was warming up to the idea of completely abandoning Windows. I set Linux as my default boot option, and after a few weeks, I realized I hadn’t needed to boot into Windows for anything at all. However, I still didn’t feel quite ready to switch completely to Linux.</p>
+<p>One evening I wanted to make another fresh install to check out the GNOME version of Manjaro. I was doing a lot of chores at the same time, and it was getting quite late, but I wanted to have the installer running as I was doing other tasks. Probably not my most brilliant move.</p>
+<p>You probably know what is coming: in between my chores, I started the installation. In a moment of carelessness, I managed to point the installation to my Windows partition, and it was completely wiped and replaced with a sparkling fresh Linux install.</p>
+<p>“Well, I guess I am moving to Linux today!” I thought while I suppressed a hint of panic as I racked my brain to see if I had lost any important files. I knew that most of my important stuff was safely backed up in the cloud. But if I had formatted my Windows drive by choice, rather than by accident, I would have backed up a lot more files.</p>
+<h2 id="first-week-without-windows">first week without windows</h2>
+<p>A week ago, I lost my complete Windows install, but there hasn’t been a single moment where I regretted making the switch. Fortunately, it also seems that I did not lose anything important.</p>
+<p>I am learning so much by forcing myself to use Linux as a daily driver. Most things are correctly configured out of the box. But sometimes, you have to do some work to get the configuration you like.</p>
+<p>For instance, after installing Steam, I wanted to have the game files located on a different hard disk because my OS SSD is only 256GB. This required me to format my data SSD to an ext4 filesystem and mount it in a folder. I also needed to add it to my /etc/fstab file to make sure that it mounts automatically when I boot my PC.</p>
+<p>These tasks have been great practice for the things I need to do on my servers at work, and they will make me approach these tasks with a little more confidence because I have done them before on my personal setup. This is the great advantage of having Linux as a daily driver if you are becoming a DevOps Engineer or Linux System Administrator.</p>
+<div id="nextprev">
+<a href="/yadm-keep-track-of-your-precious-dotfiles/"><div id="prevart">Previous:<br>Yadm: Keep Track of Your Precious Dotfiles</div></a>
+<a href="/how-to-move-your-steam-game-files-to-a-separate-hard-drive-on-linux/"><div id="nextart">Next:<br>How To Move Steam Game Files To a Separate Hard Drive on Linux</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_linux" href="http://mischavandenburg.com/tags/linux">Linux</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fgoodbye-windows-hello-linux-switching-to-linux-as-my-daily-driver%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

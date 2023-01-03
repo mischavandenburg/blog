@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Yadm: Keep Track of Your Precious Dotfiles | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="This week I learned about yadm: yet another dotfile manager. It is the perfect way to keep track of all your custom configuration files, known as dotfiles.
+Even if you have only a little bit of experience with Linux, you know that everything is managed in files.">
+	<meta name="keywords" content="Linux">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Yadm: Keep Track of Your Precious Dotfiles</h1></header>
+<article>
+<p>This week I learned about <a href="https://yadm.io">yadm: yet another dotfile manager</a>. It is the perfect way to keep track of all your custom configuration files, known as dotfiles.</p>
+<p>Even if you have only a little bit of experience with Linux, you know that everything is managed in files. All configuration parameters are set or changed in text files stored on the hard disk. These files are usually located in your home directory and are hidden by default. This is indicated by prefixing the file with a period. So the configuration file for the vim editor is .vimrc, and for zshell you use the .zshrc. This is why configuration files are referred to as dotfiles.</p>
+<h3 id="customisation">customisation</h3>
+<p>The more I work with Linux, the more I appreciate the ability to customize things. When I first started, I was pretty satisfied with the vanilla experience. You punch your commands into the terminal, and you do your tasks. What more could you need?</p>
+<p>This started to change when I began working with senior engineers who built their custom setups over the years. I saw them opening 3 terminal windows in a perfect ratio with beautiful colorschemes or previewing files in a file browser directly in vim so they could split them vertically and edit them side by side.</p>
+<p>I wanted to create a similar setup by adding settings and plugins to the .vimrc and .zshrc files. However, before going down this rabbit hole, I asked myself the following question. How can I bring this configuration with me to other machines? What happens if my laptop gets stolen and I lose my precious configuration files?</p>
+<h3 id="yet-another-dotfile-manager">yet another dotfile manager</h3>
+<p>Enter yadm. I had thought of putting my dotfiles in a GitHub repo, but this brings up a whole set of new challenges where you would need to create symbolic links across your system to have the files in their correct places. Yadm solves this problem.</p>
+<p>Yadm turns your home directory ( ~/ ) into a Git repo which can be pushed to a host of your choice. You can add your files one by one, and yadm will track them. The best thing is that you can add the files from all over your system, and yadm will not bother with any of the other files in your home directory.</p>
+<h3 id="you-want-git-for-your-dotfiles">you want git for your dotfiles</h3>
+<p>Setting up your configuration files in a git repository has a lot of advantages:</p>
+<ul>
+<li>configuration is saved in multiple places</li>
+<li>easily share your configuration across machines</li>
+<li>version control</li>
+</ul>
+<p>Version control is especially useful. You will always be able to trace back that one plugin you used a few years ago, but you cannot remember the name of. And it is fun to watch your configuration grow over time.</p>
+<h3 id="setting-up-yadm">setting up yadm</h3>
+<p><a href="https://yadm.io/docs/install">Installing yadm</a> is a breeze. For my mac I just used</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install yadm
+</span></span></code></pre></div><p>or you can use the apt-get or dnf install equivalents if you are on Linux.</p>
+<p><strong>You interact with yadm the same way you interact with git. You simply replace the word git with yadm in the commands.</strong></p>
+<p>Then you navigate to your home directory and set up the repository. If you don’t have a repository yet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yadm init
+</span></span><span style="display:flex;"><span>yadm add &lt;important file&gt;
+</span></span><span style="display:flex;"><span>yadm commit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>yadm remote add origin &lt;url&gt;
+</span></span><span style="display:flex;"><span>yadm push -u origin &lt;local branch&gt;:&lt;remote branch&gt;
+</span></span></code></pre></div><p>Or if you already have a dotfiles repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yadm clone &lt;url&gt;
+</span></span><span style="display:flex;"><span>yadm status
+</span></span></code></pre></div><p>And that’s it. Now add your configuration files and push them to your hosted repo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yadm add ~/.vimrc 
+</span></span><span style="display:flex;"><span>yadm add ~/.zshrc
+</span></span><span style="display:flex;"><span>yadm commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span>yadm push
+</span></span></code></pre></div><p>You will notice that yadm expects you to add all the files every time you want to make a new commit. Use this command to stage all the files you added previously:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yadm add -u
+</span></span></code></pre></div><h3 id="enjoy-your-synched-customisation">enjoy your synched customisation</h3>
+<p>Having your dotfiles in a GitHub repo makes it easy to set up your preferred settings on a new machine or environment. So install yadm and pull your repo, and off you go!</p>
+<p>I hope you will enjoy it as much as I do. Crafting a customized setup takes a lot of time and effort, and now that I finally have an excellent solution to keep track of my files, I am ready to dive into the customization rabbit hole.</p>
+<p>Download yadm <a href="https://yadm.io">here.</a> Here you will also find all the necessary information to install and configure your yadm.</p>
+<div id="nextprev">
+<a href="/lpic-1-study-guide/"><div id="prevart">Previous:<br>LPIC-1 Study Guide</div></a>
+<a href="/goodbye-windows-hello-linux-switching-to-linux-as-my-daily-driver/"><div id="nextart">Next:<br>Goodbye Windows, Hello Linux! Switching to Linux as my Daily Driver</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_linux" href="http://mischavandenburg.com/tags/linux">Linux</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fyadm-keep-track-of-your-precious-dotfiles%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

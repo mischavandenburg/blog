@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Book Notes: The Phoenix Project | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &ldquo;the old way&rdquo; of doing things and the merits of implementing DevOps principles.">
+	<meta name="keywords" content="DevOps, Book-Notes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Book Notes: The Phoenix Project</h1></header>
+<article>
+<p><img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/914-sUgELZL.jpg" alt="Phoenix Project"></p>
+<p>When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &ldquo;the old way&rdquo; of doing things and the merits of implementing DevOps principles.</p>
+<p>I reread the book ten months later. In the meantime, I&rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.</p>
+<p>Not surprisingly, it made a lot more sense to me this time, and I&rsquo;m sure it will be even better when I reread it a few years later. In this article, I&rsquo;ll share my thoughts and notes on the book.</p>
+<h2 id="the-story">The Story</h2>
+<p>The main character is Bill Palmer, a mid-level IT manager in a manufacturing company called Parts Unlimited. Within a few pages, he is called into the CEO&rsquo;s office, and he is promoted to the VP of Operations, putting him in charge of IT, much against his own will or desire.</p>
+<p>The situation Bill enters is a humorously chaotic one. We are thrown straight into a Sev 1 incident where managers point fingers and shout at each other. We quickly get the impression that this is a dysfunctional department that only performs tasks for the manager who shouts the loudest while fighting off crippling outages.</p>
+<blockquote>
+<p>It’s like the Wild West out here. We’re mostly shooting from the hip.”<br>
+<em>The Phoenix Project</em></p>
+</blockquote>
+<p>The bulk of the story revolves around how Bill, together with his team of managers, Wes, Patty, and John, manage to turn this chaos into a department that does work according to a streamlined plan in a much more predictable manner.</p>
+<p>To achieve this goal, Bill is introduced to Erik, a prospective board member of the company. Erik becomes Bill&rsquo;s mentor and guides Bill through the process of creating order in the chaos. Their interaction reminds me of Zen masters training their disciples by asking deep questions which don&rsquo;t have an immediately apparent answer.</p>
+<h2 id="master--disciple">Master &amp; Disciple</h2>
+<p>Erik takes Bill to the manufacturing plant of Parts Unlimited and tries to impress upon Bill that manufacturing planning principles from Lean can be applied to IT work. Erik argues that an IT department could be structured like a factory production line, but Bill is not ready to accept this.</p>
+<p>A fundamental notion from manufacturing principles is that work should always be moving forwards along the production line, never backward. But unfortunately, this is very often the case in the &ldquo;old&rdquo; way of working: the development team works on an application for several months, and when they are finished with it, they throw it over the fence to the Operations people, whose job it is to deploy the application.</p>
+<blockquote>
+<p>One of the developers had actually walked in a couple of minutes ago and said, “Look, it’s running on my laptop. How hard can it be?”<br>
+<em>The Phoenix Project</em></p>
+</blockquote>
+<p>However, as we see happening time after time in the book, usually the application is incompatible with the infrastructure it is deployed to. As a result, the application needs to go back to development. According to manufacturing theory, this is a situation where work goes backward through the production line, which we must avoid at all costs.</p>
+<h2 id="implementation">Implementation</h2>
+<p>Erik challenges Bill to start doing ten deployments a day instead of one deployment every nine months. Understandably, this is a ridiculous notion to Bill. The last few deployments were disastrous events that required his entire department to pull all-nighters through the weekend, and still, the stores were not managing to process all orders and payments.</p>
+<p>However, Bill takes his mentor&rsquo;s advice and figures out a way to do it together with his team. One of the main problems they uncovered was the inconsistent deployment and production environments.</p>
+<p>The solution to this problem was to involve the operations people in the development stage right from the beginning, so the development environment matched the production environment exactly. The environments were standardized and put in code with version control, and things started progressing quickly.</p>
+<blockquote>
+<p>As Wes talks, I think about Erik challenging me to think like a plant manager as opposed to a work center supervisor. I suddenly realize that he probably meant that I needed to span the departmental boundaries of Development and IT Operations.
+<em>The Phoenix Project</em></p>
+</blockquote>
+<p>This is just one of the problems addressed by melting away the fence between Development and Operations. By the end of the book, the two camps started to work together much better. They come closer to the target of 10 deployments a day, and the DevOps way of working was born.</p>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>I think this book is a must-read for anyone considering entering the DevOps field or anyone already working with DevOps.</p>
+<p>As a nerd who loves structure and organization, the theme of the story is incredibly entertaining and satisfying to me. The authors excellently capture the transition from an utterly disorganized situation to a predictable environment with happy co-workers. Actually, I&rsquo;m a little embarrassed by how much joy this transition brings me.</p>
+<p>Especially the second time around, it helped me better understand the underlying principles that enable the DevOps way of working in an organization. Moreover, it paints a great picture of how an organization can change for the better by embracing DevOps principles and how these changes express themselves in the improved quality and speed of software development and deployment. All of these advantages lead to delivering better value to the customer, which is the core focus of any productive and creative endeavor involving customers and end users.</p>
+<h2 id="the-phoenix-project-written-by-gene-kim-kevin-behr-george-spafford">The Phoenix Project, written by Gene Kim, Kevin Behr, George Spafford</h2>
+<div id="nextprev">
+<a href="/articles/cka-tips/"><div id="prevart">Previous:<br>Certified Kubernetes Administrator (CKA) Exam Tips</div></a>
+<a href="/articles/how-started-vim/"><div id="nextart">Next:<br>How and Why I Started Using Vim</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_devops" href="http://mischavandenburg.com/tags/devops">DevOps</a> &middot; <a id="tag_book-notes" href="http://mischavandenburg.com/tags/book-notes">Book-Notes</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2farticles%2fphoenix-project%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

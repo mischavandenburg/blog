@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>How to Upgrade Java and Jenkins on Ubuntu 18.04 | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 will be required to run Jenkins.">
+	<meta name="keywords" content="DevOps, Linux">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>How to Upgrade Java and Jenkins on Ubuntu 18.04</h1></header>
+<article>
+<p>Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 <a href="https://www.jenkins.io/blog/2022/06/28/require-java-11/">will be required to run Jenkins</a>. Also, the upcoming LTS release will require Java 11.</p>
+<p>This means that I also needed to update Java on our Jenkins servers. Here are the steps that I did to perform the Jenkins and Java upgrade.</p>
+<p>SSH into the server and stop the service. Then get the latest upgrades for your server, which is good practice:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>service jenkins stop
+</span></span><span style="display:flex;"><span>apt-get update
+</span></span><span style="display:flex;"><span>apt-get upgrade
+</span></span></code></pre></div><p>Depending on your setup, the apt-get upgrade command might upgrade Jenkins to the latest version that does not require Java 11+. In my case, that was 3.346.</p>
+<p><strong>When you get a question about updating your current config file, take the default option. This option keeps your current configuration.</strong></p>
+<p>However, if your Jenkins is installed from a binary or another source, you might need to upgrade Jenkins to 3.346 using the Jenkins.war file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /usr/share/jenkins
+</span></span><span style="display:flex;"><span>mv jenkins.war jenkins.war.old
+</span></span><span style="display:flex;"><span>wget https://updates.jenkins-ci.org/latest/jenkins.war
+</span></span><span style="display:flex;"><span>service jenkins start
+</span></span></code></pre></div><p>When you start Jenkins, it will be updated to the latest version that does not require Java 11 or higher. You will notice that there will be a new folder called migrate in /usr/share/jenkins , and the jenkins.war is now located in /usr/share/java</p>
+<p>This is where I got confused because it did not patch to the latest version, only up to 3.346 and the jenkins.war file was no longer being updated from the /usr/share/jenkins folder.</p>
+<p>The reason is that this update moves the .war file to the /usr/share/java directory.</p>
+<h1 id="java">java</h1>
+<p>To get Jenkins to the latest version, we need to install or update Java and check if it has worked:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install default-jre
+</span></span><span style="display:flex;"><span>java -version
+</span></span></code></pre></div><p>Now that you have updated the java version, you are ready to update Jenkins to the latest version.</p>
+<p>Notice that we use the /usr/share/java folder now, instead of /usr/share/jenkins</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>service jenkins stop
+</span></span><span style="display:flex;"><span>cd /usr/share/java
+</span></span><span style="display:flex;"><span>mv jenkins.war jenkins.war.old
+</span></span><span style="display:flex;"><span>wget https://updates.jenkins-ci.org/latest/jenkins.war
+</span></span><span style="display:flex;"><span>service jenkins start
+</span></span></code></pre></div><h1 id="nodes">nodes</h1>
+<p>When I accessed the Jenkins GUI, everything seemed fine, and my version was up to 3.358.</p>
+<p>However, I noticed that the build nodes were all offline. When inspecting the logs, I saw the following error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java.io.EOFException
+</span></span><span style="display:flex;"><span>	at java.base/java.io.ObjectInputStream$PeekInputStream.readFully<span style="color:#f92672">(</span>ObjectInputStream.java:2905<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at java.base/java.io.ObjectInputStream$BlockDataInputStream.readShort<span style="color:#f92672">(</span>ObjectInputStream.java:3400<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at java.base/java.io.ObjectInputStream.readStreamHeader<span style="color:#f92672">(</span>ObjectInputStream.java:936<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at java.base/java.io.ObjectInputStream.&lt;init&gt;<span style="color:#f92672">(</span>ObjectInputStream.java:379<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at hudson.remoting.ObjectInputStreamEx.&lt;init&gt;<span style="color:#f92672">(</span>ObjectInputStreamEx.java:49<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at hudson.remoting.Command.readFrom<span style="color:#f92672">(</span>Command.java:142<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at hudson.remoting.Command.readFrom<span style="color:#f92672">(</span>Command.java:128<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read<span style="color:#f92672">(</span>AbstractSynchronousByteArrayCommandTransport.java:35<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run<span style="color:#f92672">(</span>SynchronousCommandTransport.java:61<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Caused: java.io.IOException: Unexpected termination of the channel
+</span></span><span style="display:flex;"><span>	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run<span style="color:#f92672">(</span>SynchronousCommandTransport.java:75<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Observing that the error had something to do with Java, I ssh’d into the build nodes and updated Java there as well with the same command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install default-jre
+</span></span></code></pre></div><p>After updating Java on the build node, head back to the GUI on the master node and restart the build node.</p>
+<p>It should now be online again.</p>
+<div id="nextprev">
+<a href="/5-reasons-why-i-changed-my-career-to-it-in-my-thirties/"><div id="prevart">Previous:<br>5 Reasons Why I Changed my Career to IT in my Thirties</div></a>
+<a href="/linux-creativity/"><div id="nextart">Next:<br>Building my Own OS: Linux as a Creative Activity</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_devops" href="http://mischavandenburg.com/tags/devops">DevOps</a> &middot; <a id="tag_linux" href="http://mischavandenburg.com/tags/linux">Linux</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fhow-to-upgrade-java-and-jenkins-on-ubuntu-18-04%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

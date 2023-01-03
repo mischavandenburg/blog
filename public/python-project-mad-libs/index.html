@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Python Project: Mad Libs | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="I am currently working through the book Automate the Boring Stuff by Al Sweigart . I can already highly recommend it to anybody who is learning Python.
+Chapter 9 is about reading and writing files, and there are two assignments at the end of the chapter.">
+	<meta name="keywords" content="Coding">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Python Project: Mad Libs</h1></header>
+<article>
+<p>I am currently working through the book <a href="https://automatetheboringstuff.com">Automate the Boring Stuff</a> by Al Sweigart . I can already highly recommend it to anybody who is learning Python.</p>
+<p>Chapter 9 is about reading and writing files, and there are two assignments at the end of the chapter. Here I’ll discuss my solution of the Mad Libs assignment.</p>
+<h3 id="here-is-the-full-assignment-text">here is the full assignment text:</h3>
+<pre tabindex="0"><code>Mad Libs
+Create a Mad Libs program that reads in text files and lets the user add their own text anywhere the word ADJECTIVE, NOUN, ADVERB, or VERB appears in the text file. For example, a text file may look like this:
+The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN was
+unaffected by these events.
+
+The program would find these occurrences and prompt the user to replace them.
+Enter an adjective:
+silly
+Enter a noun:
+chandelier
+Enter a verb:
+screamed
+Enter a noun:
+pickup truck
+
+The following text file would then be created:
+The silly panda walked to the chandelier and then screamed. A nearby pickup
+truck was unaffected by these events.
+
+The results should be printed to the screen and saved to a new text file.
+</code></pre><p>Looks pretty simple, right? I went into it with a lot of zeal and started writing a long list of if statements. My first attempts at the solution involved matching the words NOUN and ADJECTIVE directly, like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> word <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ADJECTIVE&#39;</span>:
+</span></span><span style="display:flex;"><span>        inv <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;Enter an adjective: &#39;</span>)
+</span></span></code></pre></div><p>However, this is problematic because as you can see, the sentence can contain words with a period attached, such as “VERB.” in the above example.</p>
+<h2 id="no-please-no-regex">no, please no regex!</h2>
+<p>I’ve understood that here is a general anxiety around regex. I have certainly noticed it in myself and some of my junior engineer friends. As soon as I read the word regex, or realise that an assignment is going to involve regex, I get a constricting feeling in my throat and a rise in my heart rate.</p>
+<p>I’ve had to struggle with it quite a bit during my freeCodeCamp Front End Development Certificate, and the memories are still fresh in my mind.</p>
+<p>So, like any other ‘rational’ human being, I tried to approach this relatively simple assignment with all sorts of ways trying to account for a period ending the word:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">period_check</span>(x):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> letter <span style="color:#f92672">in</span> x:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> letter <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;.&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># loop over the array and prompt user</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> word <span style="color:#f92672">in</span> source_text:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    period <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> period_check(word):
+</span></span><span style="display:flex;"><span>        word <span style="color:#f92672">=</span> word<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>        period <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> word <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ADJECTIVE&#39;</span>:
+</span></span><span style="display:flex;"><span>        invoer <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;Enter an adjective: &#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> period:
+</span></span><span style="display:flex;"><span>            result_text<span style="color:#f92672">.</span>append(invoer <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.&#34;</span>)
+</span></span><span style="display:flex;"><span>            period <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            result_text<span style="color:#f92672">.</span>append(invoer)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> word <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;NOUN&#39;</span>:
+</span></span></code></pre></div><p>It’s quite funny to see the lengths we go through to avoid regular expressions. However, as you maybe deduce from the code above, it didn’t work, and after a couple of hours of fiddling I gave up, and like any other frustrated programmer, I started to google.</p>
+<p>I quickly found solutions to this assignment and they all involved regex, and I realised I could not walk away from my fears anymore.</p>
+<h2 id="an-elegant-solution">an elegant solution</h2>
+<p>Eventually I ended up with the following result for the part of my assignment that needed to recognise and replace the words with the user input. Of course I heavily borrowed from my Google search results.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># set up and match the regex</span>
+</span></span><span style="display:flex;"><span>grammar_regex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;ADJECTIVE|NOUN|VERB|ADVERB&#39;</span>)
+</span></span><span style="display:flex;"><span>match_regex <span style="color:#f92672">=</span> grammar_regex<span style="color:#f92672">.</span>findall(source_text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># replace the matches with user input </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> match_regex:
+</span></span><span style="display:flex;"><span>    ask_user <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;Please enter &#39;</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;: &#39;</span>)
+</span></span><span style="display:flex;"><span>    source_text <span style="color:#f92672">=</span> source_text<span style="color:#f92672">.</span>replace(i, ask_user, <span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>When I say elegant, I mean elegant in total Python beginner terms. I’m sure there are enough Seniors out there who will burst out laughing when they see this. But to me, it was quite an eye-opening experience to see this little piece of code do exactly what I had intended to achieve with 3 different functions and long blocks of if statements.</p>
+<p>Also, I was pleasantly surprised with how simple regex can be in Python. In this case there were no scary [Az ^**/!!${}aa{}aA{nF}] statements. We simply defined which words we wanted and called the findall() module to generate a list with all the matches.</p>
+<p>Then we iterate over the list of matches and for each match we ask the user for the desired word, and replace it in the source_text.</p>
+<h2 id="final-result">final result</h2>
+<p>Having sorted out the pattern matching and replacing part, it was only a matter of implementing reading from files and writing to a new file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Automate the Boring Stuff chapter 9</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mad Libs assignment</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mischa van den Burg</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ask the user which file to open</span>
+</span></span><span style="display:flex;"><span>file_name <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;Enter the filename. For example, grammar.txt: &#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># my script and .txt file are located in ~/python/automatetheboringstuff/ </span>
+</span></span><span style="display:flex;"><span>text_file <span style="color:#f92672">=</span> open(Path<span style="color:#f92672">.</span>home() <span style="color:#f92672">/</span> <span style="color:#e6db74">&#39;python&#39;</span> <span style="color:#f92672">/</span> <span style="color:#e6db74">&#39;automatetheboringstuff&#39;</span> <span style="color:#f92672">/</span> file_name )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># read the file and store in variable &amp; close</span>
+</span></span><span style="display:flex;"><span>source_text <span style="color:#f92672">=</span> text_file<span style="color:#f92672">.</span>read()
+</span></span><span style="display:flex;"><span>text_file<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># set up and match the regex</span>
+</span></span><span style="display:flex;"><span>grammar_regex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;ADJECTIVE|NOUN|VERB|ADVERB&#39;</span>)
+</span></span><span style="display:flex;"><span>match_regex <span style="color:#f92672">=</span> grammar_regex<span style="color:#f92672">.</span>findall(source_text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># replace the matches with user input </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> match_regex:
+</span></span><span style="display:flex;"><span>    ask_user <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;Enter &#39;</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;: &#39;</span>)
+</span></span><span style="display:flex;"><span>    source_text <span style="color:#f92672">=</span> source_text<span style="color:#f92672">.</span>replace(i, ask_user, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># write to the new file and print the result</span>
+</span></span><span style="display:flex;"><span>new_file <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;new_&#39;</span> <span style="color:#f92672">+</span> file_name, <span style="color:#e6db74">&#39;w&#39;</span>)
+</span></span><span style="display:flex;"><span>new_file<span style="color:#f92672">.</span>write(source_text)
+</span></span><span style="display:flex;"><span>new_file<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(source_text)
+</span></span></code></pre></div><p>I was getting into some better functionality, such as accounting for existing filenames, and making the pathing relative so it could be run from anywhere. But I decided to save that for a later assignment.</p>
+<p>The assignment was clear and did not require such functionality. I need to learn to keep things simple, and I decided to do just what I was asked and not go into any other rabbit holes.</p>
+<h1 id="lessons-learned">Lessons Learned</h1>
+<p>All in all the assignment is pretty simple, but I learned surprisingly much from it. I decided I’ll need to change and learn to love regex rather than fear it, because it showed me how powerful it can be.</p>
+<p>Also, I got some insight into my own mind and how I tend to work. I realised I have a tendency to make things much more complicated than they need to be. I need to learn to keep things simple.</p>
+<div id="nextprev">
+<a href="/docker-lemp-stack-deployed-with-ansible/"><div id="prevart">Previous:<br>Docker LEMP Stack deployed with Ansible</div></a>
+<a href="/my-first-useful-python-script/"><div id="nextart">Next:<br>My Mirst Useful Python Script</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_coding" href="http://mischavandenburg.com/tags/coding">Coding</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fpython-project-mad-libs%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

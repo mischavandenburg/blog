@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Call Stacks | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="When you call a function, the system sets aside space in memory for the function to do its work. Those chunks are called &ldquo;stack frames&rdquo; or &ldquo;function frames.&rdquo;
+These frames are arranged in a stack.">
+	<meta name="keywords" content="Zettelkasten, Coding">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Call Stacks</h1></header>
+<article>
+<p>When you call a function, the system sets aside space in memory  for the function to do its work. Those chunks are called &ldquo;stack frames&rdquo; or &ldquo;function frames.&rdquo;</p>
+<p>These frames are arranged in a stack. The frame for the most recently called function is always at the top of the stack. When a new function is called, it becomes the active frame, and it is on top of the stack.</p>
+<p>The function that is actually doing something at the moment is on top of the stack and is known as the &ldquo;active frame.&rdquo;</p>
+<p>When the function finishes its work, the frame is popped off of the stack. The frame in second place becomes the active frame. It had been paused in the meantime, and now it is active again, because it is on top.</p>
+<p>Functions that are not on top, are not running.</p>
+<p><a href="https://www.youtube.com/watch?v=aCPkszeKRa4">This video explains it well.</a></p>
+<div id="nextprev">
+<a href="/zet/starting-a-project/"><div id="prevart">Previous:<br>Starting a Project</div></a>
+<a href="/zet/sdk/"><div id="nextart">Next:<br>What is a SDK?</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_zettelkasten" href="http://mischavandenburg.com/tags/zettelkasten">Zettelkasten</a> &middot; <a id="tag_coding" href="http://mischavandenburg.com/tags/coding">Coding</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fzet%2fcall-stacks%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

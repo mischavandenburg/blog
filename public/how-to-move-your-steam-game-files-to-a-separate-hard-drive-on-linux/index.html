@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>How to Move Steam Game Files to a Separate Hard Drive on Linux | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="I have installed my OS on a 240GB SSD, and I prefer to keep my data on a different disk to leave enough space to work with. I wanted to move my steam game files to a separate hard drive on Linux.">
+	<meta name="keywords" content="Linux">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>How To Move Steam Game Files To a Separate Hard Drive on Linux</h1></header>
+<article>
+<p>I have installed my OS on a 240GB SSD, and I prefer to keep my data on a different disk to leave enough space to work with. I wanted to move my steam game files to a separate hard drive on Linux. I’ll show you what I did to make this happen in this article. I use Manjaro GNOME.</p>
+<p>First, you need a correctly partitioned hard drive.</p>
+<p>To wipe your drive clean and have a single partition on it, we’ll use GParted.</p>
+<p><img src="/gparted1.png" alt="">
+Select your disk in the upper right corner.</p>
+<p>Then go to Device and select Create Partition Table:</p>
+<p><img src="/parted2.png" alt=""></p>
+<p>Follow the wizard and use an ext4 filesystem. NTFS can cause problems because Steam cannot read it properly.</p>
+<h1 id="mounting">mounting</h1>
+<p>To use a disk or a partition in Linux, it needs to be mounted.</p>
+<p>List your devices and identify the one you wish to mount by using the “lsblk” command.</p>
+<p>In my case, I wish to mount the drive sdc1</p>
+<p><img src="/lsblk.png" alt=""></p>
+<p>On Linux, all filesystems need to be mounted before they can be used. I wanted my whole disk to be available in the directory /mnt/data</p>
+<p>Before mounting, I created the directory.</p>
+<p><code>cd /mnt</code></p>
+<p><code>sudo mkdir data</code></p>
+<p>When you make the directory by using sudo, the directory owner will be the root user. This means that you cannot access the directory and write to it from your own user.</p>
+<p>Use this command to change the ownership of the directory. Replace “mischa” with your username.</p>
+<p><code>sudo chmod mischa:mischa data</code></p>
+<p>Verify that the directory now has the correct ownership:</p>
+<p><img src="/steamgames1.png" alt=""></p>
+<p>Now you can mount your directory, so it is available for use.</p>
+<p><code>mount /dev/sdc1 /mnt/data</code></p>
+<h1 id="mounting-on-boot">mounting on boot</h1>
+<p>For the mount to happen automatically on startup, you’ll need to add it to the /etc/fstab file. We start by finding the UUID of our disk.</p>
+<p>Use the following command:</p>
+<p><code>ls -al /dev/disk/by-uuid/</code></p>
+<p><img src="/steamgames2.png" alt=""></p>
+<p>In my case the UUID will be 50d608bc-a7ad-4ff6-bf44-bb6f26efa4f6</p>
+<h3 id="etcfstab">/etc/fstab</h3>
+<p>open the file in your favorite editor. I like to use vim.</p>
+<p><code>sudo vim /etc/fstab</code></p>
+<p>Add a new entry to your /etc/fstab file and use the following parameters:</p>
+<p><code>UUID=50d608bc-a7ad-4ff6-bf44-bb6f26efa4f6 /mnt/data ext4 defaults 0 0</code></p>
+<p><img src="/steamgames3.png" alt=""></p>
+<p>Before we go further, verify that we did this correctly by using the following command:</p>
+<p><code>findmnt --</code>verify</p>
+<p>This will verify the /etc/fstab file. Not meaning to scare you, but an incorrectly configured fstab may lead to an unbootable system.</p>
+<p>Now reboot your system and check if your disk is mounted automatically.</p>
+<p>It is also a good idea to cd to your mounted directory and touch a file to see if you have write permissions.</p>
+<p><img src="/steamgames4.png" alt=""></p>
+<h1 id="steam">Steam</h1>
+<p>Now it’s time to set things up in Steam. Open Steam and open your settings.</p>
+<p><img src="/steamgames5.png" alt=""></p>
+<p>go to Downloads –&gt; Steam Library Folders</p>
+<p>Click the + button and navigate to your mounted drive.</p>
+<p><img src="/steamgames6.png" alt=""></p>
+<p>To test, install a game and reboot your system.</p>
+<div id="nextprev">
+<a href="/goodbye-windows-hello-linux-switching-to-linux-as-my-daily-driver/"><div id="prevart">Previous:<br>Goodbye Windows, Hello Linux! Switching to Linux as my Daily Driver</div></a>
+<a href="/5-reasons-why-i-changed-my-career-to-it-in-my-thirties/"><div id="nextart">Next:<br>5 Reasons Why I Changed my Career to IT in my Thirties</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_linux" href="http://mischavandenburg.com/tags/linux">Linux</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fhow-to-move-your-steam-game-files-to-a-separate-hard-drive-on-linux%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

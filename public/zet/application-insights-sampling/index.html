@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Application Insights: Telemetry Sampling | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.
+Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.">
+	<meta name="keywords" content="Azure, Zettelkasten, Explanations">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Application Insights: Telemetry Sampling</h1></header>
+<article>
+<p>Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.</p>
+<p>Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.</p>
+<p>For small and medium sized applications sampling is generally not necessary.</p>
+<p>Advantages of sampling:</p>
+<ul>
+<li>Throttling data when the application suddenly sends a high volume of telemetry in a short time
+<ul>
+<li>This saves costs!</li>
+</ul>
+</li>
+<li>Keeping a pricing tier quota</li>
+<li>Reduce network traffic from telemetry collection</li>
+</ul>
+<p>Three different kinds of sampling:</p>
+<ul>
+<li>adaptive sampling
+<ul>
+<li>automatically adjusts volume of telemetry</li>
+<li>from ASP.NET or Azure Functions</li>
+<li>only for these two</li>
+</ul>
+</li>
+<li>fixed-rate sampling
+<ul>
+<li>rate is set by the administrator</li>
+<li>use when you have a clear idea of the appropriate sampling percentage</li>
+<li>reduces volume from
+<ul>
+<li>ASP.NET or ASP.NET Core server</li>
+<li>Java server</li>
+<li>Python applications</li>
+<li>User browsers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ingestion sampling
+<ul>
+<li>used when monthly quota is often met</li>
+<li>reduces amount of processed and retained traffic by Application Insights
+<ul>
+<li>less processing = less cost</li>
+<li>doesn&rsquo;t reduce telemetry traffic sent from the app</li>
+<li>happens at Applications Insight service endpoint</li>
+</ul>
+</li>
+<li>disabled if SDK samples telemetry</li>
+<li>can set sampling rate without redeploying the app</li>
+<li>only applies when no other sampling is in effect
+<ul>
+<li>supports all Application Insights SDK&rsquo;s</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="nextprev">
+<a href="/zet/pipelines-continuous-monitoring/"><div id="prevart">Previous:<br>Pipelines: Continuous Monitoring</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_azure" href="http://mischavandenburg.com/tags/azure">Azure</a> &middot; <a id="tag_zettelkasten" href="http://mischavandenburg.com/tags/zettelkasten">Zettelkasten</a> &middot; <a id="tag_explanations" href="http://mischavandenburg.com/tags/explanations">Explanations</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2fzet%2fapplication-insights-sampling%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

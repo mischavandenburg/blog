@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tokens and Identity on the Internet | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="Introduction Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&rsquo;s account?">
+	<meta name="keywords" content="DevOps, Explanations">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Tokens and Identity on the Internet</h1></header>
+<article>
+<h1 id="introduction">Introduction</h1>
+<p>Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&rsquo;s account?</p>
+<p>This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
+<h1 id="identity">Identity</h1>
+<p>The first step in this process is identity. You need a starting point; for many of us, this can be our Google account. You signed up for this account and probably verified this with your phone number.</p>
+<p>This relates to <strong>authentication</strong>. Authentication is the process of verifying identity. You&rsquo;ll need to provide the correct password when you log in to your Google account. You must give a valid password to log in to your account and access the resources. Google uses your password to <strong>authenticate</strong> that it is you.</p>
+<h1 id="authorization">Authorization</h1>
+<p>Then we have <strong>authorization</strong>. Authorization means granting access to particular resources. For example, let&rsquo;s say you are working in the science classroom at school. In the classroom is a bookcase that everybody can use: it is not dangerous, and every student can take the books they need without asking for permission. In the back of the science classroom is a cabinet that contains chemicals. It would be very dangerous if everybody could go into the cabinet and take out the sulphuric acid. Not everybody might know how dangerous sulphuric acid is. That&rsquo;s why the cabinet is locked.</p>
+<p>If you need something from the chemicals cabinet, you need to ask permission from the teacher. You need to be <strong>authorized</strong> by the teacher to take out the sulphuric acid. When you make your request, the teacher may ask you questions to ensure you know what you are doing. He might even ask you for your school ID card because he has not seen you before. The teacher <strong>authenticates</strong> you by asking for your school ID, and then he <strong>authorizes</strong> you to take out the sulphuric acid.</p>
+<h1 id="tokens">Tokens</h1>
+<p>How do we accomplish this on the internet?</p>
+<p>To verify identities on the internet, we have identity providers. Google is an identity provider. Azure AD is also an identity provider. An open-source identity provider is Keycloak.</p>
+<p>Identity providers use <em>tokens</em> to verify identity and authorize access to resources. There are two types of tokens: ID tokens and access tokens. And for each token, there is an associated protocol.</p>
+<h2 id="id-tokens">ID tokens</h2>
+<p>OpenID Connect, also known as OIDC, is an open standard for authentication. Identity providers have agreed with each other that they will use this standard. When you go through an OpenID workflow, the result is an ID token, proving that the user has been authenticated.</p>
+<p>Your school ID card is the ID token in our science class example. When you started at your school, you went through a registration process. Your parents probably handled this. Your name was written down, and the school verified that it was you by looking at your passport and talking to your parents. The result of this process was your school ID card, which you use to borrow books from the library. The school ID card proves that you are a student of that school and that you can use the facilities at the school.</p>
+<h2 id="access-tokens">Access tokens</h2>
+<p>These are specifically designed to allow access to a resource. For example, this resource could be a file on a server or a database.</p>
+<p>Access tokens are strictly for authorization and use the OAuth 2.0 standard.</p>
+<p>In our science class example, the token would be the key to the chemicals cabinet. The teacher authorizes you to access the cabinet and gives you the key to the cabinet.</p>
+<h2 id="putting-it-together">Putting it Together</h2>
+<p>Now let&rsquo;s put it together with an example.</p>
+<p>You just created a new Facebook account and want to add all your friends. However, you have a Google account, and Facebook can use the contacts in your Google account to automatically add all of your friends.</p>
+<p>Your Google account can only be accessed by you, and your contacts are locked away behind a password. But it is possible to grant Facebook access to this.</p>
+<p>On Facebook, you select the &ldquo;import contacts from Google&rdquo; function. Facebook sends you to Google, and Google will ask you to log in. Google is the teacher in our science class example. Google needs you to <strong>authenticate</strong> to prove that it is you. When this is done, Google generates an ID token using OIDC for Facebook: Google gives Facebook a school ID that it can use.</p>
+<p>Next, Facebook needs access to the contacts in your Google account. In our example, Facebook asks to take the sulphuric acid from the chemicals cabinet. You will see a menu that specifies what Facebook wants to do, and you need to give your permission. When you give your permission, Google generates an OAuth 2.0 token for Facebook. In other words, Google gives the key to the chemicals cabinet to Facebook, and Facebook is now authorized to take the sulphuric acid.</p>
+<p>When both of these tokens are generated, Facebook contacts Google and asks if it can take the sulphuric acid from the chemicals cabinet.</p>
+<p>Google, the teacher, asks Facebook for the school ID, and Facebook shows the ID card it received earlier. When Google is satisfied with the ID and successfully authenticates Facebook, it gives Facebook the key to the chemicals cabinet. Facebook is now authorized to take out the sulphuric acid. Facebook is now authorized to access the contacts in your Google account.</p>
+<h1 id="links">Links</h1>
+<p>You can use these resources to learn more about this topic:</p>
+<p><a href="https://www.youtube.com/watch?v=t18YB3xDfXI">An Illustrated Guide to OAuth and OpenID connect</a></p>
+<p><a href="https://www.youtube.com/watch?v=M4JIvUIE17c">ID Tokens vs Access Tokens - Do you know the difference?</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/id-tokens">Microsoft Learn: ID Tokens</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/security-tokens">Microsoft Learn: Security Tokens</a></p>
+<div id="nextprev">
+<a href="/articles/nav-podcast/"><div id="prevart">Previous:<br>Podcast Tip: The system that runs Norway&#39;s welfare payments</div></a>
+<a href="/articles/lab-argocd-azure-pipelines/"><div id="nextart">Next:<br>Lab Project: GitOps with ArgoCD, Azure Pipelines and Minikube</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_devops" href="http://mischavandenburg.com/tags/devops">DevOps</a> &middot; <a id="tag_explanations" href="http://mischavandenburg.com/tags/explanations">Explanations</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2farticles%2fidentity%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+

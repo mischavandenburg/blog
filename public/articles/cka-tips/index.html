@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Certified Kubernetes Administrator (CKA) Exam Tips | Mischa&#39;s Blog</title>
+	<link rel="canonical" href="http://mischavandenburg.com/">
+	<link rel='alternate' type='application/rss+xml' title="Mischa&#39;s Blog RSS" href='/index.xml'>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/pojoaque.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+	<link rel="icon" href="/bear.svg">
+	<meta name="description" content="I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux.">
+	<meta name="keywords" content="Study, DevOps">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Certified Kubernetes Administrator (CKA) Exam Tips</h1></header>
+<article>
+<p>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.</p>
+<h3 id="my-preparation">My preparation</h3>
+<ul>
+<li><a href="https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/">KodeKloud CKA Course</a></li>
+<li><a href="https://killer.sh/">Killer.sh Mock Exam</a></li>
+<li><a href="https://killercoda.com/killer-shell-cka">Killercoda</a></li>
+</ul>
+<p>I kept track of the time I spent on this certification. In total, I spent 80 hours on study and practice.</p>
+<h3 id="in-hindsight">In Hindsight</h3>
+<p>I spent too much time repeating things during the KodeKloud course. This is the one thing I would do differently if I could start over. I went over some modules multiple times and kept meticulous notes. However, I have hardly used any of those notes. But they will be nice to have for the future.</p>
+<p>I learned most from the killer.sh exams. So I would advise you to go through the KodeKloud course and do all the exercises, but don&rsquo;t spend too much time repeating stuff. If you don&rsquo;t understand the topic at all, it is, of course, necessary to repeat it. But you don&rsquo;t need to know all the details.</p>
+<h3 id="killersh">Killer.sh</h3>
+<p>After I finished the KodeKloud course, I purchased the exam voucher and started the killer.sh on Saturday morning. I wanted to simulate the exam experience as much as possible, so I set the timer and did not allow myself to stand up for two hours. My first round was humiliating. I only managed to get 24 out of 125 points. A little shocked by the experience, I spent the whole Saturday going through all the solutions of the exercises that killer.sh provides. The explanations they give are extensive, and I found them helpful. Saturday evening, I went out for dinner with friends, and on Sunday morning, I passed killer.sh. I spent the whole Sunday studying the solutions more and more, and on my last try on Sunday evening, I scored 115 out of 125.</p>
+<h2 id="tips">Tips:</h2>
+<ul>
+<li>
+<p>I know tmux quite well and used it extensively during the killer.sh, but it was not necessary during the exam. No need to learn it if you don&rsquo;t know it already.</p>
+</li>
+<li>
+<p>Knowing vim well will save you a lot of time at the exam. For example, dG to delete all lines until the end of the file from your current location. Run &ldquo;vimtutor&rdquo; on a Linux system to learn the basics.</p>
+</li>
+<li>
+<p>You cannot use bookmarks. Learn how to search the docs efficiently. One handy one I figured out was to control + F and enter &ldquo;kind: Pod&rdquo; or &ldquo;kind: PersistentVolume&rdquo; to immediately go to the example YAML.</p>
+</li>
+<li>
+<p>my exam environment did not need much extra configuration. All I added to my .bashrc was alias v=vim and export do=&quot;&ndash;dry-run=client -o yaml&quot; so you can use &ldquo;k run Nginx $do &gt; Nginx.YAML&rdquo;</p>
+</li>
+<li>
+<p>The exam environment is not as bad as people make it out to be on the internet. There is a little delay while scrolling through the docs in the browser, but working in the terminal didn&rsquo;t give me any problems. Get used to the environment on killer.sh, and there should not be any surprises in the real exam environment.</p>
+</li>
+<li>
+<p>Skip questions you cannot solve immediately. But don&rsquo;t spend time reviewing all the questions, sorting by the highest % and doing those first. You will lose a lot of time evaluating all of these questions. It is much better to solve the questions during your first pass through and skip the ones you cannot immediately solve.</p>
+</li>
+<li>
+<p>When the 120-minute timer ran out, I was presented with a screen that said &ldquo;quit&rdquo; or &ldquo;request more time.&rdquo; I was pretty sure I could not get more time for this exam, so I just pressed &ldquo;quit.&rdquo; After I pressed quit, the application closed immediately, and there was no confirmation whatsoever that they received my exam results or anything. This was extremely disorienting, and I was left doubting if I had done it correctly. Eventually, I could see in the Linux Foundation portal that my exam was in Grading status.</p>
+</li>
+<li>
+<p>Speed is of the essence. An hour before my exam, I used killercoda to get into the mood and get things up to speed. Learn to solve things quickly and don&rsquo;t spend time having to arrange terminal windows on your screen or stumbling around in vim. You cannot afford to lose time on these things.</p>
+</li>
+<li>
+<p>Finally, this video is an excellent summary of all the necessary tips and information: <a href="https://www.youtube.com/watch?v=8VK9NJ3pObU"></a></p>
+</li>
+</ul>
+<div id="nextprev">
+<a href="/linux-creativity/"><div id="prevart">Previous:<br>Building my Own OS: Linux as a Creative Activity</div></a>
+<a href="/articles/phoenix-project/"><div id="nextart">Next:<br>Book Notes: The Phoenix Project</div></a>
+</div>
+<div style="clear:both" class=taglist>
+		<br>
+		<p>Related articles:</p><a id="tag_study" href="http://mischavandenburg.com/tags/study">Study</a> &middot; <a id="tag_devops" href="http://mischavandenburg.com/tags/devops">DevOps</a></div>
+</article>
+</main>
+<footer>
+	<br>
+	<a href="http://mischavandenburg.com/">Home</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>© Mischa van den Burg 2023</p>
+    <img src="https://visitor-badge.glitch.me/badge?page_id=http%3a%2f%2fmischavandenburg.com%2farticles%2fcka-tips%2f" alt="Views"/>
+</footer>
+</body>
+</html>
+
