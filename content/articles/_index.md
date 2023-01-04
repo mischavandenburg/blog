@@ -1,9 +1,4 @@
 ---
 title: All Articles
 ---
----
-## Topics:
-
-{{< tagcloud >}}
-
----
+These are long form articles.

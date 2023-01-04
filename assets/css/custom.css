@@ -1,0 +1,23 @@
+/* header */
+
+#menu .active {
+    color: #ffff00;
+    box-shadow: 0 2px 0 var(--signature);
+}
+
+
+/* For some reason these blocks are not applied, editing directly in theme post-single css, need to fix later: */
+
+.paginav {
+    margin-top: var(--content-gap);
+    display: flex;
+    line-height: 30px;
+    border-radius: var(--radius);
+    background: var(--code-bg);
+}
+
+.paginav a {
+    padding-inline-start: 14px;
+    padding-inline-end: 14px;
+    border-radius: var(--radius);
+}
