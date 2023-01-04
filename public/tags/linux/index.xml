@@ -139,10 +139,10 @@ The Beginning The reason why I started to use vim is rather practical.</descript
     
     <item>
       <title>Building my Own OS: Linux as a Creative Activity</title>
-      <link>https://mischavandenburg.com/linux-creativity/</link>
+      <link>https://mischavandenburg.com/articles/linux-creativity/</link>
       <pubDate>Sat, 10 Sep 2022 12:22:28 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/linux-creativity/</guid>
+      <guid>https://mischavandenburg.com/articles/linux-creativity/</guid>
       <description>NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.
 introduction I started using GNU/Linux as a daily driver about six months ago, and I have not regretted the decision ever since.</description>
       <content:encoded><![CDATA[<p><em>NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.</em></p>
