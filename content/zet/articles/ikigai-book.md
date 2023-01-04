@@ -7,7 +7,7 @@ tags:
 title: "Book Notes: Ikigai: The Japanese Secret to a Long and Happy Life"
 ---
 
-I came across this little book while doing some research for my [Jiro Dreams of Sushi article.](/articles/jiro-sushi) While scanning the book's description, I was intrigued by this sentence: "the happiness of always being busy." Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?
+I came across this little book while doing some research for my [Jiro Dreams of Sushi article.](/zet/articles/jiro-sushi) While scanning the book's description, I was intrigued by this sentence: "the happiness of always being busy." Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?
 
 ## Ikigai
 
@@ -18,7 +18,7 @@ I came across this little book while doing some research for my [Jiro Dreams of 
 
 According to Japanese culture, everybody has a purpose in life: the ikigai. "Ikigai is the reason we get up in the morning." The book explores this concept through interesting stories and brings related notions from various areas to explain ikigai to the Western mind.
 
-There are many different ikigai, and people can have several ikigai simultaneously. For example, some people have their vegetable garden as their ikigai, while others have drawing or calligraphy. [Jiro](/articles/jiro-sushi) has making sushi as his ikigai. Even though many people have their work as their ikigai, it does not necessarily have to be the case. Ikigai can also be of a social nature, such as a family or local community.
+There are many different ikigai, and people can have several ikigai simultaneously. For example, some people have their vegetable garden as their ikigai, while others have drawing or calligraphy. [Jiro](/zet/articles/jiro-sushi) has making sushi as his ikigai. Even though many people have their work as their ikigai, it does not necessarily have to be the case. Ikigai can also be of a social nature, such as a family or local community.
 
 ![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3nw94z2pgadc432nw33p8qg5-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2018%2F01%2Fwhat-is-ikigai-darling.png&f=1&nofb=1&ipt=f5fa9a17a2865d283af2bfdf8d978f1dcb0e9ff4e7fb646fb2c26c4963f95e77&ipo=images)
 

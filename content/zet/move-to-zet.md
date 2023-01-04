@@ -6,7 +6,7 @@ tags:
 - Zettelkasten
 ---
 
-I've transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my [Obsidian](/articles/obsidian-introduction/) vault. 
+I've transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my [Obsidian](/zet/articles/obsidian-introduction/) vault. 
 
 The concept of "atomic notes" is also very important in Zettelkasten methods. Notes should be small and concise. 
 
