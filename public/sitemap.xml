@@ -3,8 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-01-03T08:41:09+01:00</lastmod>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/fall-in-love-with-sed/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/application-insights-sampling/</loc>
     <lastmod>2023-01-03T08:41:09+01:00</lastmod>
@@ -19,9 +25,6 @@
     <lastmod>2023-01-03T08:41:09+01:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
-    <lastmod>2023-01-03T08:41:09+01:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-01-03T08:41:09+01:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</loc>

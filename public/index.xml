@@ -5,7 +5,32 @@
     <link>https://mischavandenburg.com/</link>
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 03 Jan 2023 08:41:09 +0100</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fall-in-love-with-sed</title>
+      <link>https://mischavandenburg.com/zet/fall-in-love-with-sed/</link>
+      <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/fall-in-love-with-sed/</guid>
+      <description>Sed, it&amp;rsquo;s so powerful.
+sed -i &amp;#39;s/\/articles\//\/zet\/articles\//g&amp;#39; $(fd .md) diff --git a/content/zet/move-to-zet.md b/content/zet/move-to-zet.md index 1e37283..3b817e3 100644 --- a/content/zet/move-to-zet.md +++ b/content/zet/move-to-zet.md @@ -6,7 +6,7 @@ tags: - Zettelkasten --- -I&amp;#39;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my [Obsidian](/articles/obsidian-introduction/) vault. +I&amp;#39;ve transitioned my note taking system towards a Zettelkasten system.</description>
+      <content:encoded><![CDATA[<p>Sed, it&rsquo;s so powerful.</p>
+<pre tabindex="0"><code>sed -i &#39;s/\/articles\//\/zet\/articles\//g&#39; $(fd .md)
+</code></pre><pre tabindex="0"><code>diff --git a/content/zet/move-to-zet.md b/content/zet/move-to-zet.md
+index 1e37283..3b817e3 100644
+--- a/content/zet/move-to-zet.md
++++ b/content/zet/move-to-zet.md
+@@ -6,7 +6,7 @@ tags:
+ - Zettelkasten
+ ---
+
+-I&#39;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more
+often than not I put them in the larger generic 00-zettelkasten directory in my [Obsidian](/articles/obsidian-introduction/) vault.
++I&#39;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more
+often than not I put them in the larger generic 00-zettelkasten directory in my [Obsidian](/zet/articles/obsidian-introduction/) vault.
+</code></pre>]]></content:encoded>
+    </item>
+    
     <item>
       <title>Application Insights: Telemetry Sampling</title>
       <link>https://mischavandenburg.com/zet/application-insights-sampling/</link>
@@ -147,7 +172,7 @@ Under the following terms: Attribution — You must give appropriate credit, pro
       <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
       <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
-      <content:encoded><![CDATA[<p>As I alluded to in my <a href="/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
+      <content:encoded><![CDATA[<p>As I alluded to in my <a href="/zet/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
 <p>Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</p>
 <p>I discovered <a href="https://gohugo.io/">Hugo</a> and I fell in love with it immediately.</p>
 <p>Hugo is a static site generator based on markdown files. My entire blog is written in markdown files which are stored <a href="https://github.com/mischavandenburg/blog">in a GitHub repo.</a>. I write my blog posts in vim and when I&rsquo;m done I use Hugo to generate the updated website.</p>
@@ -193,7 +218,7 @@ These frames are arranged in a stack. The frame for the most recently called fun
 He&amp;rsquo;ll do the development, I&amp;rsquo;m in charge of hosting. We&amp;rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&amp;rsquo;ve learned in my recently obtained AZ-104 Azure Administrator certification.
 Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application.</description>
       <content:encoded><![CDATA[<p>I&rsquo;m starting a project with a friend. Developing an application. We make a good team, he&rsquo;s great at coding and knows the backend too.</p>
-<p>He&rsquo;ll do the development, I&rsquo;m in charge of hosting. We&rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&rsquo;ve learned in my recently obtained <a href="/articles/az-104-study-guide/">AZ-104</a> Azure Administrator certification.</p>
+<p>He&rsquo;ll do the development, I&rsquo;m in charge of hosting. We&rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&rsquo;ve learned in my recently obtained <a href="/zet/articles/az-104-study-guide/">AZ-104</a> Azure Administrator certification.</p>
 <p>Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application. I&rsquo;ll set up a full CI/CD pipeline with testing in a secure manner. Credentials stored in an Azure key vault and images pushed to a private registry.</p>
 <p>This is going to be fun!</p>
 ]]></content:encoded>
@@ -208,7 +233,7 @@ Even though it is a small scale hobby project, I still plan to approach it as if
       <description>I&amp;rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my Obsidian vault.
 The concept of &amp;ldquo;atomic notes&amp;rdquo; is also very important in Zettelkasten methods. Notes should be small and concise.
 Up until this point I&amp;rsquo;ve been publishing full articles on my blog. I came across Rob Muhlestein yesterday and I was very inspired by his setup and public zettelkasten.</description>
-      <content:encoded><![CDATA[<p>I&rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my <a href="/articles/obsidian-introduction/">Obsidian</a> vault.</p>
+      <content:encoded><![CDATA[<p>I&rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my <a href="/zet/articles/obsidian-introduction/">Obsidian</a> vault.</p>
 <p>The concept of &ldquo;atomic notes&rdquo; is also very important in Zettelkasten methods. Notes should be small and concise.</p>
 <p>Up until this point I&rsquo;ve been publishing full articles on my blog. I came across <a href="https://github.com/rwxrob">Rob Muhlestein</a> yesterday and I was very inspired by his setup and public zettelkasten. I think I&rsquo;ll move to a similar approach. Still planning to write and publish full articles as well, but also including atomic notes and personal status updates.</p>
 ]]></content:encoded>
@@ -515,7 +540,7 @@ The system that runs Norway&amp;rsquo;s welfare payments</description>
       <guid>https://mischavandenburg.com/zet/articles/ikigai-book/</guid>
       <description>I came across this little book while doing some research for my Jiro Dreams of Sushi article. While scanning the book&amp;rsquo;s description, I was intrigued by this sentence: &amp;ldquo;the happiness of always being busy.&amp;rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?
 Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</description>
-      <content:encoded><![CDATA[<p>I came across this little book while doing some research for my <a href="/articles/jiro-sushi">Jiro Dreams of Sushi article.</a> While scanning the book&rsquo;s description, I was intrigued by this sentence: &ldquo;the happiness of always being busy.&rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?</p>
+      <content:encoded><![CDATA[<p>I came across this little book while doing some research for my <a href="/zet/articles/jiro-sushi">Jiro Dreams of Sushi article.</a> While scanning the book&rsquo;s description, I was intrigued by this sentence: &ldquo;the happiness of always being busy.&rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?</p>
 <h2 id="ikigai">Ikigai</h2>
 <blockquote>
 <hr>
@@ -526,7 +551,7 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
 <hr>
 </blockquote>
 <p>According to Japanese culture, everybody has a purpose in life: the ikigai. &ldquo;Ikigai is the reason we get up in the morning.&rdquo; The book explores this concept through interesting stories and brings related notions from various areas to explain ikigai to the Western mind.</p>
-<p>There are many different ikigai, and people can have several ikigai simultaneously. For example, some people have their vegetable garden as their ikigai, while others have drawing or calligraphy. <a href="/articles/jiro-sushi">Jiro</a> has making sushi as his ikigai. Even though many people have their work as their ikigai, it does not necessarily have to be the case. Ikigai can also be of a social nature, such as a family or local community.</p>
+<p>There are many different ikigai, and people can have several ikigai simultaneously. For example, some people have their vegetable garden as their ikigai, while others have drawing or calligraphy. <a href="/zet/articles/jiro-sushi">Jiro</a> has making sushi as his ikigai. Even though many people have their work as their ikigai, it does not necessarily have to be the case. Ikigai can also be of a social nature, such as a family or local community.</p>
 <p>
   <img loading="lazy" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3nw94z2pgadc432nw33p8qg5-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2018%2F01%2Fwhat-is-ikigai-darling.png&amp;f=1&amp;nofb=1&amp;ipt=f5fa9a17a2865d283af2bfdf8d978f1dcb0e9ff4e7fb646fb2c26c4963f95e77&amp;ipo=images" alt=""  /></p>
 <h2 id="retirement">Retirement</h2>
@@ -563,7 +588,7 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
       <description>This book is the sequel to the Phoenix project. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet.</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg" alt="Unicorn Project"  /></p>
-<p>This book is the sequel to <a href="/articles/phoenix-project">the Phoenix project</a>. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet. Phoenix will enable it to generate targeted marketing campaigns from the data when it&rsquo;s finished.</p>
+<p>This book is the sequel to <a href="/zet/articles/phoenix-project">the Phoenix project</a>. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet. Phoenix will enable it to generate targeted marketing campaigns from the data when it&rsquo;s finished.</p>
 <p>But as we saw in the previous book, it is far from finished, and things go wrong all the time. The company is not doing well, the stock prices are falling, and they need an edge over the competition. Phoenix will be their edge, but they&rsquo;ve been working on it for years. Eventually, management decided that Phoenix needed to be deployed in two weeks. But it is far from ready.</p>
 <p>The main character in the Unicorn project is Maxine, a senior developer who temporarily transferred to a different department. She had to work on the Phoenix project against her will because of an unfortunate situation that needed a scapegoat. However, Maxine decides to make the best out of it, and she&rsquo;d like to begin with one thing: to get a Phoenix build going on her laptop.</p>
 <p>Very quickly, she finds it impossible to run a full build of the Phoenix project due to missing files and other elements. She is appalled and makes it her mission to get the build going, but she meets another hurdle every step of the way. Missing credentials. Missing binaries and libraries. And for each of these hurdles, she must submit a ticket with a different department. Very soon, she has over 20 tickets running with long waiting times. Just to get a build going on her machine so she can work! Dozens of developers were hired to work on the Phoenix project. But when she asks them if they&rsquo;ve managed to get a build going yet, Maxine is horrified to discover that they&rsquo;ve tried for several months but haven&rsquo;t made any progress. Maxine has made more progress in a week.</p>

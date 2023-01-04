@@ -14,7 +14,7 @@
       <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
       <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
-      <content:encoded><![CDATA[<p>As I alluded to in my <a href="/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
+      <content:encoded><![CDATA[<p>As I alluded to in my <a href="/zet/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
 <p>Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</p>
 <p>I discovered <a href="https://gohugo.io/">Hugo</a> and I fell in love with it immediately.</p>
 <p>Hugo is a static site generator based on markdown files. My entire blog is written in markdown files which are stored <a href="https://github.com/mischavandenburg/blog">in a GitHub repo.</a>. I write my blog posts in vim and when I&rsquo;m done I use Hugo to generate the updated website.</p>
@@ -43,7 +43,7 @@ Previously I was using WordPress, but the editing and writing experience became 
 He&amp;rsquo;ll do the development, I&amp;rsquo;m in charge of hosting. We&amp;rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&amp;rsquo;ve learned in my recently obtained AZ-104 Azure Administrator certification.
 Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application.</description>
       <content:encoded><![CDATA[<p>I&rsquo;m starting a project with a friend. Developing an application. We make a good team, he&rsquo;s great at coding and knows the backend too.</p>
-<p>He&rsquo;ll do the development, I&rsquo;m in charge of hosting. We&rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&rsquo;ve learned in my recently obtained <a href="/articles/az-104-study-guide/">AZ-104</a> Azure Administrator certification.</p>
+<p>He&rsquo;ll do the development, I&rsquo;m in charge of hosting. We&rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&rsquo;ve learned in my recently obtained <a href="/zet/articles/az-104-study-guide/">AZ-104</a> Azure Administrator certification.</p>
 <p>Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application. I&rsquo;ll set up a full CI/CD pipeline with testing in a secure manner. Credentials stored in an Azure key vault and images pushed to a private registry.</p>
 <p>This is going to be fun!</p>
 ]]></content:encoded>
@@ -58,7 +58,7 @@ Even though it is a small scale hobby project, I still plan to approach it as if
       <description>I&amp;rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my Obsidian vault.
 The concept of &amp;ldquo;atomic notes&amp;rdquo; is also very important in Zettelkasten methods. Notes should be small and concise.
 Up until this point I&amp;rsquo;ve been publishing full articles on my blog. I came across Rob Muhlestein yesterday and I was very inspired by his setup and public zettelkasten.</description>
-      <content:encoded><![CDATA[<p>I&rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my <a href="/articles/obsidian-introduction/">Obsidian</a> vault.</p>
+      <content:encoded><![CDATA[<p>I&rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my <a href="/zet/articles/obsidian-introduction/">Obsidian</a> vault.</p>
 <p>The concept of &ldquo;atomic notes&rdquo; is also very important in Zettelkasten methods. Notes should be small and concise.</p>
 <p>Up until this point I&rsquo;ve been publishing full articles on my blog. I came across <a href="https://github.com/rwxrob">Rob Muhlestein</a> yesterday and I was very inspired by his setup and public zettelkasten. I think I&rsquo;ll move to a similar approach. Still planning to write and publish full articles as well, but also including atomic notes and personal status updates.</p>
 ]]></content:encoded>
@@ -72,7 +72,7 @@ Up until this point I&amp;rsquo;ve been publishing full articles on my blog. I c
       <guid>https://mischavandenburg.com/zet/articles/ikigai-book/</guid>
       <description>I came across this little book while doing some research for my Jiro Dreams of Sushi article. While scanning the book&amp;rsquo;s description, I was intrigued by this sentence: &amp;ldquo;the happiness of always being busy.&amp;rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?
 Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</description>
-      <content:encoded><![CDATA[<p>I came across this little book while doing some research for my <a href="/articles/jiro-sushi">Jiro Dreams of Sushi article.</a> While scanning the book&rsquo;s description, I was intrigued by this sentence: &ldquo;the happiness of always being busy.&rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?</p>
+      <content:encoded><![CDATA[<p>I came across this little book while doing some research for my <a href="/zet/articles/jiro-sushi">Jiro Dreams of Sushi article.</a> While scanning the book&rsquo;s description, I was intrigued by this sentence: &ldquo;the happiness of always being busy.&rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?</p>
 <h2 id="ikigai">Ikigai</h2>
 <blockquote>
 <hr>
@@ -83,7 +83,7 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
 <hr>
 </blockquote>
 <p>According to Japanese culture, everybody has a purpose in life: the ikigai. &ldquo;Ikigai is the reason we get up in the morning.&rdquo; The book explores this concept through interesting stories and brings related notions from various areas to explain ikigai to the Western mind.</p>
-<p>There are many different ikigai, and people can have several ikigai simultaneously. For example, some people have their vegetable garden as their ikigai, while others have drawing or calligraphy. <a href="/articles/jiro-sushi">Jiro</a> has making sushi as his ikigai. Even though many people have their work as their ikigai, it does not necessarily have to be the case. Ikigai can also be of a social nature, such as a family or local community.</p>
+<p>There are many different ikigai, and people can have several ikigai simultaneously. For example, some people have their vegetable garden as their ikigai, while others have drawing or calligraphy. <a href="/zet/articles/jiro-sushi">Jiro</a> has making sushi as his ikigai. Even though many people have their work as their ikigai, it does not necessarily have to be the case. Ikigai can also be of a social nature, such as a family or local community.</p>
 <p>
   <img loading="lazy" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3nw94z2pgadc432nw33p8qg5-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2018%2F01%2Fwhat-is-ikigai-darling.png&amp;f=1&amp;nofb=1&amp;ipt=f5fa9a17a2865d283af2bfdf8d978f1dcb0e9ff4e7fb646fb2c26c4963f95e77&amp;ipo=images" alt=""  /></p>
 <h2 id="retirement">Retirement</h2>
