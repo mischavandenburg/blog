@@ -1,17 +1,130 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>Mischa van den Burg</title>
     <link>https://mischavandenburg.com/</link>
-    <description>Recent content on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 03 Jan 2023 08:41:09 +0100</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Application Insights: Telemetry Sampling</title>
+      <link>https://mischavandenburg.com/zet/application-insights-sampling/</link>
+      <pubDate>Tue, 03 Jan 2023 08:41:09 +0100</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/application-insights-sampling/</guid>
+      <description>Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.
+Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.
+For small and medium sized applications sampling is generally not necessary.
+Advantages of sampling:
+Throttling data when the application suddenly sends a high volume of telemetry in a short time This saves costs! Keeping a pricing tier quota Reduce network traffic from telemetry collection Three different kinds of sampling:</description>
+      <content:encoded><![CDATA[<p>Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.</p>
+<p>Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.</p>
+<p>For small and medium sized applications sampling is generally not necessary.</p>
+<p>Advantages of sampling:</p>
+<ul>
+<li>Throttling data when the application suddenly sends a high volume of telemetry in a short time
+<ul>
+<li>This saves costs!</li>
+</ul>
+</li>
+<li>Keeping a pricing tier quota</li>
+<li>Reduce network traffic from telemetry collection</li>
+</ul>
+<p>Three different kinds of sampling:</p>
+<ul>
+<li>adaptive sampling
+<ul>
+<li>automatically adjusts volume of telemetry</li>
+<li>from ASP.NET or Azure Functions</li>
+<li>only for these two</li>
+</ul>
+</li>
+<li>fixed-rate sampling
+<ul>
+<li>rate is set by the administrator</li>
+<li>use when you have a clear idea of the appropriate sampling percentage</li>
+<li>reduces volume from
+<ul>
+<li>ASP.NET or ASP.NET Core server</li>
+<li>Java server</li>
+<li>Python applications</li>
+<li>User browsers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ingestion sampling
+<ul>
+<li>used when monthly quota is often met</li>
+<li>reduces amount of processed and retained traffic by Application Insights
+<ul>
+<li>less processing = less cost</li>
+<li>doesn&rsquo;t reduce telemetry traffic sent from the app</li>
+<li>happens at Applications Insight service endpoint</li>
+</ul>
+</li>
+<li>disabled if SDK samples telemetry</li>
+<li>can set sampling rate without redeploying the app</li>
+<li>only applies when no other sampling is in effect
+<ul>
+<li>supports all Application Insights SDK&rsquo;s</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Pipelines: Continuous Monitoring</title>
+      <link>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</link>
+      <pubDate>Tue, 03 Jan 2023 08:30:03 +0100</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</guid>
+      <description>This term can be confusing. Initially I thought it meant monitoring of the pipelines themselves. However, in the context of Azure Release Pipelines, continuous monitoring refers to something else.
+Continuous monitoring leverages metrics from other services such as Application Insights. You can set up release gates based on these metrics. For example, you can set up a release gate to roll back the deployment if an alert is being fired for high CPU usage in the application.</description>
+      <content:encoded><![CDATA[<p>This term can be confusing. Initially I thought it meant monitoring of the pipelines themselves. However, in the context of Azure Release Pipelines, continuous monitoring refers to something else.</p>
+<p>Continuous monitoring leverages metrics from other services such as Application Insights. You can set up release gates based on these metrics. For example, you can set up a release gate to roll back the deployment if an alert is being fired for high CPU usage in the application.</p>
+<p>You can set up several of these checks. If all these checks pass, the pipeline can proceed.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Distributed Tracing</title>
+      <link>https://mischavandenburg.com/zet/distributed-tracing/</link>
+      <pubDate>Tue, 03 Jan 2023 07:58:44 +0100</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/distributed-tracing/</guid>
+      <description>Debugging is done using call stacks in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.
+Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.
+Distributed tracing is an implementation of the call stack in the cloud.</description>
+      <content:encoded><![CDATA[<p>Debugging is done using <a href="/zet/call-stacks/">call stacks</a> in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.</p>
+<p>Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.</p>
+<p>Distributed tracing is an implementation of the call stack in the cloud. It is usually implemented by adding an agent, <a href="/zet/sdk/">SDK</a>, or library to the service. In Azure you can enable distributed tracing via Application Insights through auto-instrumentation or SDKs.</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-monitor/app/transaction-diagnostics">Unified cross-component transaction diagnostics</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>What is a SDK?</title>
+      <link>https://mischavandenburg.com/zet/sdk/</link>
+      <pubDate>Tue, 03 Jan 2023 07:50:55 +0100</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/sdk/</guid>
+      <description>A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.
+SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.</description>
+      <content:encoded><![CDATA[<p>A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.</p>
+<p>SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Copyright and License</title>
-      <link>https://mischavandenburg.com/articles/copyright-license/</link>
+      <link>https://mischavandenburg.com/zet/articles/copyright-license/</link>
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/copyright-license/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/copyright-license/</guid>
       <description>All of the content on this blog is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
 You are free to: Share — copy and redistribute the material in any medium or format
 Under the following terms: Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</description>
@@ -28,10 +141,10 @@ Under the following terms: Attribution — You must give appropriate credit, pro
     
     <item>
       <title>How This Blog is Created, Written and Hosted</title>
-      <link>https://mischavandenburg.com/articles/how-this-blog-is-created/</link>
+      <link>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</link>
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/how-this-blog-is-created/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
       <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
       <content:encoded><![CDATA[<p>As I alluded to in my <a href="/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
@@ -54,11 +167,59 @@ Previously I was using WordPress, but the editing and writing experience became 
     </item>
     
     <item>
+      <title>Call Stacks</title>
+      <link>https://mischavandenburg.com/zet/call-stacks/</link>
+      <pubDate>Mon, 02 Jan 2023 21:11:26 +0100</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/call-stacks/</guid>
+      <description>When you call a function, the system sets aside space in memory for the function to do its work. Those chunks are called &amp;ldquo;stack frames&amp;rdquo; or &amp;ldquo;function frames.&amp;rdquo;
+These frames are arranged in a stack. The frame for the most recently called function is always at the top of the stack. When a new function is called, it becomes the active frame, and it is on top of the stack.</description>
+      <content:encoded><![CDATA[<p>When you call a function, the system sets aside space in memory  for the function to do its work. Those chunks are called &ldquo;stack frames&rdquo; or &ldquo;function frames.&rdquo;</p>
+<p>These frames are arranged in a stack. The frame for the most recently called function is always at the top of the stack. When a new function is called, it becomes the active frame, and it is on top of the stack.</p>
+<p>The function that is actually doing something at the moment is on top of the stack and is known as the &ldquo;active frame.&rdquo;</p>
+<p>When the function finishes its work, the frame is popped off of the stack. The frame in second place becomes the active frame. It had been paused in the meantime, and now it is active again, because it is on top.</p>
+<p>Functions that are not on top, are not running.</p>
+<p><a href="https://www.youtube.com/watch?v=aCPkszeKRa4">This video explains it well.</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Starting a Project</title>
+      <link>https://mischavandenburg.com/zet/starting-a-project/</link>
+      <pubDate>Mon, 02 Jan 2023 21:00:11 +0100</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/starting-a-project/</guid>
+      <description>I&amp;rsquo;m starting a project with a friend. Developing an application. We make a good team, he&amp;rsquo;s great at coding and knows the backend too.
+He&amp;rsquo;ll do the development, I&amp;rsquo;m in charge of hosting. We&amp;rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&amp;rsquo;ve learned in my recently obtained AZ-104 Azure Administrator certification.
+Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;m starting a project with a friend. Developing an application. We make a good team, he&rsquo;s great at coding and knows the backend too.</p>
+<p>He&rsquo;ll do the development, I&rsquo;m in charge of hosting. We&rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&rsquo;ve learned in my recently obtained <a href="/articles/az-104-study-guide/">AZ-104</a> Azure Administrator certification.</p>
+<p>Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application. I&rsquo;ll set up a full CI/CD pipeline with testing in a secure manner. Credentials stored in an Azure key vault and images pushed to a private registry.</p>
+<p>This is going to be fun!</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Going to Publish Smaller, and More Often</title>
+      <link>https://mischavandenburg.com/zet/move-to-zet/</link>
+      <pubDate>Mon, 02 Jan 2023 20:52:50 +0100</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/move-to-zet/</guid>
+      <description>I&amp;rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my Obsidian vault.
+The concept of &amp;ldquo;atomic notes&amp;rdquo; is also very important in Zettelkasten methods. Notes should be small and concise.
+Up until this point I&amp;rsquo;ve been publishing full articles on my blog. I came across Rob Muhlestein yesterday and I was very inspired by his setup and public zettelkasten.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my <a href="/articles/obsidian-introduction/">Obsidian</a> vault.</p>
+<p>The concept of &ldquo;atomic notes&rdquo; is also very important in Zettelkasten methods. Notes should be small and concise.</p>
+<p>Up until this point I&rsquo;ve been publishing full articles on my blog. I came across <a href="https://github.com/rwxrob">Rob Muhlestein</a> yesterday and I was very inspired by his setup and public zettelkasten. I think I&rsquo;ll move to a similar approach. Still planning to write and publish full articles as well, but also including atomic notes and personal status updates.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Obsidian: A Note Taking App For DevOps Engineers</title>
-      <link>https://mischavandenburg.com/articles/obsidian-introduction/</link>
+      <link>https://mischavandenburg.com/zet/articles/obsidian-introduction/</link>
       <pubDate>Sun, 01 Jan 2023 19:05:13 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/obsidian-introduction/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/obsidian-introduction/</guid>
       <description>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.
 Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</description>
       <content:encoded><![CDATA[<p>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.</p>
@@ -84,10 +245,10 @@ Not only are there many of these categories, but within these categories, there 
     
     <item>
       <title>What Are Containers?</title>
-      <link>https://mischavandenburg.com/articles/what-are-containers/</link>
+      <link>https://mischavandenburg.com/zet/articles/what-are-containers/</link>
       <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/what-are-containers/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
       <description>When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.
 Virtualization To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.</description>
       <content:encoded><![CDATA[<p>When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
@@ -117,10 +278,10 @@ Virtualization To understand containers, we need to understand virtualization. V
     
     <item>
       <title>Getting Started with Neovim: kickstart.nvim</title>
-      <link>https://mischavandenburg.com/articles/kickstart-nvim/</link>
+      <link>https://mischavandenburg.com/zet/articles/kickstart-nvim/</link>
       <pubDate>Sun, 01 Jan 2023 09:11:57 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/kickstart-nvim/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/kickstart-nvim/</guid>
       <description>I&amp;rsquo;ve been using neovim for over a year now, and I&amp;rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.
 I started with an empty vanilla vim config and slowly added the plugins as I went along.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ve been using neovim for over a year now, and I&rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.</p>
@@ -138,10 +299,10 @@ I started with an empty vanilla vim config and slowly added the plugins as I wen
     
     <item>
       <title>Study Guide: AZ-104 Azure Administrator Associate</title>
-      <link>https://mischavandenburg.com/articles/az-104-study-guide/</link>
+      <link>https://mischavandenburg.com/zet/articles/az-104-study-guide/</link>
       <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/az-104-study-guide/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
       <description>TLDR It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck: GitHub repo
 Introduction When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.
 That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.</description>
@@ -183,10 +344,10 @@ That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.<
     
     <item>
       <title>Lab Project: GitOps with ArgoCD, Azure Pipelines and Minikube</title>
-      <link>https://mischavandenburg.com/articles/lab-argocd-azure-pipelines/</link>
+      <link>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</link>
       <pubDate>Sat, 24 Dec 2022 13:49:55 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/lab-argocd-azure-pipelines/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</guid>
       <description>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.
 My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure.</description>
       <content:encoded><![CDATA[<p>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.</p>
@@ -286,10 +447,10 @@ My goal was to be able to deploy an application from a GitHub repo to my local K
     
     <item>
       <title>Tokens and Identity on the Internet</title>
-      <link>https://mischavandenburg.com/articles/identity/</link>
+      <link>https://mischavandenburg.com/zet/articles/identity/</link>
       <pubDate>Sun, 18 Dec 2022 00:55:47 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/identity/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/identity/</guid>
       <description>Introduction Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?
 This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</description>
       <content:encoded><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -331,10 +492,10 @@ This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to expla
     
     <item>
       <title>Podcast Tip: The system that runs Norway&#39;s welfare payments</title>
-      <link>https://mischavandenburg.com/articles/nav-podcast/</link>
+      <link>https://mischavandenburg.com/zet/articles/nav-podcast/</link>
       <pubDate>Fri, 02 Dec 2022 20:45:46 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/nav-podcast/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/nav-podcast/</guid>
       <description>An interesting podcast episode describing the system that runs Norway&amp;rsquo;s welfare payments. It was interesting to hear that they focus on open source and that everything runs one one big kubernetes cluster.
 It was also very inspiring to hear that they went from 4 nightly deployments a year to 1700 deployments a week.
 Link to the podcast episode:
@@ -348,10 +509,10 @@ The system that runs Norway&amp;rsquo;s welfare payments</description>
     
     <item>
       <title>Book Notes: Ikigai: The Japanese Secret to a Long and Happy Life</title>
-      <link>https://mischavandenburg.com/articles/ikigai-book/</link>
+      <link>https://mischavandenburg.com/zet/articles/ikigai-book/</link>
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/ikigai-book/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/ikigai-book/</guid>
       <description>I came across this little book while doing some research for my Jiro Dreams of Sushi article. While scanning the book&amp;rsquo;s description, I was intrigued by this sentence: &amp;ldquo;the happiness of always being busy.&amp;rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?
 Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</description>
       <content:encoded><![CDATA[<p>I came across this little book while doing some research for my <a href="/articles/jiro-sushi">Jiro Dreams of Sushi article.</a> While scanning the book&rsquo;s description, I was intrigued by this sentence: &ldquo;the happiness of always being busy.&rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?</p>
@@ -395,10 +556,10 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
     
     <item>
       <title>Book Notes: The Unicorn Project</title>
-      <link>https://mischavandenburg.com/articles/unicorn-project/</link>
+      <link>https://mischavandenburg.com/zet/articles/unicorn-project/</link>
       <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/unicorn-project/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/unicorn-project/</guid>
       <description>This book is the sequel to the Phoenix project. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet.</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg" alt="Unicorn Project"  /></p>
@@ -427,10 +588,10 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
     
     <item>
       <title>I&#39;m In Love with my Work: Lessons from a Japanese Sushi Master</title>
-      <link>https://mischavandenburg.com/articles/jiro-sushi/</link>
+      <link>https://mischavandenburg.com/zet/articles/jiro-sushi/</link>
       <pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/jiro-sushi/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/jiro-sushi/</guid>
       <description>Last week I watched &amp;ldquo;Jiro Dreams of Sushi&amp;rdquo; again. It must be the eighth time I revisited this piece of art. I have very little interest in sushi, but there is much more to this documentary. It was first recommended to me by my good friend Anders more than five years ago, but I couldn&amp;rsquo;t grasp its underlying life lessons the first time around.
 Even though I couldn&amp;rsquo;t fully understand the message, I was intrigued by it and kept returning to the documentary.</description>
       <content:encoded><![CDATA[<p>Last week I watched &ldquo;Jiro Dreams of Sushi&rdquo; again. It must be the eighth time I revisited this piece of art. I have very little interest in sushi, but there is much more to this documentary. It was first recommended to me by my good friend Anders more than five years ago, but I couldn&rsquo;t grasp its underlying life lessons the first time around.</p>
@@ -503,10 +664,10 @@ Even though I couldn&amp;rsquo;t fully understand the message, I was intrigued b
     
     <item>
       <title>How and Why I Started Using Vim</title>
-      <link>https://mischavandenburg.com/articles/how-started-vim/</link>
+      <link>https://mischavandenburg.com/zet/articles/how-started-vim/</link>
       <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/how-started-vim/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/how-started-vim/</guid>
       <description>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.
 The Beginning The reason why I started to use vim is rather practical.</description>
       <content:encoded><![CDATA[<p>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.</p>
@@ -542,10 +703,10 @@ The Beginning The reason why I started to use vim is rather practical.</descript
     
     <item>
       <title>Book Notes: The Phoenix Project</title>
-      <link>https://mischavandenburg.com/articles/phoenix-project/</link>
+      <link>https://mischavandenburg.com/zet/articles/phoenix-project/</link>
       <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/phoenix-project/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/phoenix-project/</guid>
       <description>When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &amp;ldquo;the old way&amp;rdquo; of doing things and the merits of implementing DevOps principles.
 I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.</description>
       <content:encoded><![CDATA[<p>
@@ -589,10 +750,10 @@ I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many
     
     <item>
       <title>Certified Kubernetes Administrator (CKA) Exam Tips</title>
-      <link>https://mischavandenburg.com/articles/cka-tips/</link>
+      <link>https://mischavandenburg.com/zet/articles/cka-tips/</link>
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/cka-tips/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/cka-tips/</guid>
       <description>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily.</description>
       <content:encoded><![CDATA[<p>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.</p>
 <h3 id="my-preparation">My preparation</h3>
@@ -642,10 +803,10 @@ I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many
     
     <item>
       <title>Building my Own OS: Linux as a Creative Activity</title>
-      <link>https://mischavandenburg.com/articles/linux-creativity/</link>
+      <link>https://mischavandenburg.com/zet/articles/linux-creativity/</link>
       <pubDate>Sat, 10 Sep 2022 12:22:28 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/linux-creativity/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/linux-creativity/</guid>
       <description>NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.
 introduction I started using GNU/Linux as a daily driver about six months ago, and I have not regretted the decision ever since.</description>
       <content:encoded><![CDATA[<p><em>NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.</em></p>

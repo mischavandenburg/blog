@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Explanations on Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>Explanations on Mischa van den Burg</title>
     <link>https://mischavandenburg.com/tags/explanations/</link>
-    <description>Recent content in Explanations on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content in Explanations on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 03 Jan 2023 08:41:09 +0100</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/explanations/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -121,10 +121,10 @@ SDKs contain all the tools you need to get started. They typically contain a com
     
     <item>
       <title>How This Blog is Created, Written and Hosted</title>
-      <link>https://mischavandenburg.com/articles/how-this-blog-is-created/</link>
+      <link>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</link>
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/how-this-blog-is-created/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
       <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
       <content:encoded><![CDATA[<p>As I alluded to in my <a href="/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
@@ -148,10 +148,10 @@ Previously I was using WordPress, but the editing and writing experience became 
     
     <item>
       <title>What Are Containers?</title>
-      <link>https://mischavandenburg.com/articles/what-are-containers/</link>
+      <link>https://mischavandenburg.com/zet/articles/what-are-containers/</link>
       <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/what-are-containers/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
       <description>When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.
 Virtualization To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.</description>
       <content:encoded><![CDATA[<p>When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
@@ -181,10 +181,10 @@ Virtualization To understand containers, we need to understand virtualization. V
     
     <item>
       <title>Tokens and Identity on the Internet</title>
-      <link>https://mischavandenburg.com/articles/identity/</link>
+      <link>https://mischavandenburg.com/zet/articles/identity/</link>
       <pubDate>Sun, 18 Dec 2022 00:55:47 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/identity/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/identity/</guid>
       <description>Introduction Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?
 This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</description>
       <content:encoded><![CDATA[<h1 id="introduction">Introduction</h1>

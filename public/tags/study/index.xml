@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Study on Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>Study on Mischa van den Burg</title>
     <link>https://mischavandenburg.com/tags/study/</link>
-    <description>Recent content in Study on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content in Study on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 01 Jan 2023 19:05:13 +0100</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Obsidian: A Note Taking App For DevOps Engineers</title>
-      <link>https://mischavandenburg.com/articles/obsidian-introduction/</link>
+      <link>https://mischavandenburg.com/zet/articles/obsidian-introduction/</link>
       <pubDate>Sun, 01 Jan 2023 19:05:13 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/obsidian-introduction/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/obsidian-introduction/</guid>
       <description>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.
 Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</description>
       <content:encoded><![CDATA[<p>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.</p>
@@ -37,10 +37,10 @@ Not only are there many of these categories, but within these categories, there 
     
     <item>
       <title>Study Guide: AZ-104 Azure Administrator Associate</title>
-      <link>https://mischavandenburg.com/articles/az-104-study-guide/</link>
+      <link>https://mischavandenburg.com/zet/articles/az-104-study-guide/</link>
       <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/az-104-study-guide/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
       <description>TLDR It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck: GitHub repo
 Introduction When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.
 That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.</description>
@@ -82,10 +82,10 @@ That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.<
     
     <item>
       <title>Certified Kubernetes Administrator (CKA) Exam Tips</title>
-      <link>https://mischavandenburg.com/articles/cka-tips/</link>
+      <link>https://mischavandenburg.com/zet/articles/cka-tips/</link>
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/cka-tips/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/cka-tips/</guid>
       <description>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily.</description>
       <content:encoded><![CDATA[<p>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.</p>
 <h3 id="my-preparation">My preparation</h3>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Book-Notes on Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>Book-Notes on Mischa van den Burg</title>
     <link>https://mischavandenburg.com/tags/book-notes/</link>
-    <description>Recent content in Book-Notes on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content in Book-Notes on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 18 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/book-notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Book Notes: Ikigai: The Japanese Secret to a Long and Happy Life</title>
-      <link>https://mischavandenburg.com/articles/ikigai-book/</link>
+      <link>https://mischavandenburg.com/zet/articles/ikigai-book/</link>
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/ikigai-book/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/ikigai-book/</guid>
       <description>I came across this little book while doing some research for my Jiro Dreams of Sushi article. While scanning the book&amp;rsquo;s description, I was intrigued by this sentence: &amp;ldquo;the happiness of always being busy.&amp;rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?
 Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</description>
       <content:encoded><![CDATA[<p>I came across this little book while doing some research for my <a href="/articles/jiro-sushi">Jiro Dreams of Sushi article.</a> While scanning the book&rsquo;s description, I was intrigued by this sentence: &ldquo;the happiness of always being busy.&rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?</p>
@@ -55,10 +55,10 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
     
     <item>
       <title>Book Notes: The Unicorn Project</title>
-      <link>https://mischavandenburg.com/articles/unicorn-project/</link>
+      <link>https://mischavandenburg.com/zet/articles/unicorn-project/</link>
       <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/unicorn-project/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/unicorn-project/</guid>
       <description>This book is the sequel to the Phoenix project. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet.</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg" alt="Unicorn Project"  /></p>
@@ -87,10 +87,10 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
     
     <item>
       <title>Book Notes: The Phoenix Project</title>
-      <link>https://mischavandenburg.com/articles/phoenix-project/</link>
+      <link>https://mischavandenburg.com/zet/articles/phoenix-project/</link>
       <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/phoenix-project/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/phoenix-project/</guid>
       <description>When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &amp;ldquo;the old way&amp;rdquo; of doing things and the merits of implementing DevOps principles.
 I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.</description>
       <content:encoded><![CDATA[<p>

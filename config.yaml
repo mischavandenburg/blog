@@ -1,12 +1,12 @@
 baseURL: "https://mischavandenburg.com/"
-title: Mischa's Blog & Zettelkasten
+title: Mischa van den Burg
 paginate: 10
 theme: PaperModX
 
 enableRobotsTXT: true
 buildDrafts: false
-buildFuture: false
-buildExpired: false
+buildFuture: true 
+buildExpired: true 
 pygmentsUseClasses: true
 
 # googleAnalytics: UA-123-45
@@ -14,6 +14,7 @@ pygmentsUseClasses: true
 minify:
     disableXML: true
     minifyOutput: true
+
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -56,15 +57,15 @@ params:
     # profile-mode
     profileMode:
         enabled: false # needs to be explicitly set
-        title: ExampleSite
-        subtitle: "This is subtitle"
-        imageUrl: "<img location>"
+        title: Living on the Commandline 
+        subtitle: "A place to share my knowledge"
+        imageUrl: "/bear.svg"
         imageWidth: 120
         imageHeight: 120
         imageTitle: my image
         buttons:
-            - name: Posts
-              url: posts
+            - name: Blog
+              url: archives
             - name: Tags
               url: tags
 
@@ -137,6 +138,10 @@ menu:
         - identifier: About
           name: About 
           url: /aboutme/
+          weight: 30
+        - identifier: Archive 
+          name: Archive 
+          url: /archives/
           weight: 30
 # Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true

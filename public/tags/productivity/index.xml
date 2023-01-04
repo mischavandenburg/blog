@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Productivity on Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>Productivity on Mischa van den Burg</title>
     <link>https://mischavandenburg.com/tags/productivity/</link>
-    <description>Recent content in Productivity on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content in Productivity on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How This Blog is Created, Written and Hosted</title>
-      <link>https://mischavandenburg.com/articles/how-this-blog-is-created/</link>
+      <link>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</link>
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/how-this-blog-is-created/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
       <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
       <content:encoded><![CDATA[<p>As I alluded to in my <a href="/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
@@ -35,10 +35,10 @@ Previously I was using WordPress, but the editing and writing experience became 
     
     <item>
       <title>Obsidian: A Note Taking App For DevOps Engineers</title>
-      <link>https://mischavandenburg.com/articles/obsidian-introduction/</link>
+      <link>https://mischavandenburg.com/zet/articles/obsidian-introduction/</link>
       <pubDate>Sun, 01 Jan 2023 19:05:13 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/obsidian-introduction/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/obsidian-introduction/</guid>
       <description>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.
 Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</description>
       <content:encoded><![CDATA[<p>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.</p>

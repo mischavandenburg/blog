@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Azure on Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>Azure on Mischa van den Burg</title>
     <link>https://mischavandenburg.com/tags/azure/</link>
-    <description>Recent content in Azure on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 03 Jan 2023 08:41:09 +0100</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -108,10 +108,10 @@ Distributed tracing is an implementation of the call stack in the cloud.</descri
     
     <item>
       <title>Study Guide: AZ-104 Azure Administrator Associate</title>
-      <link>https://mischavandenburg.com/articles/az-104-study-guide/</link>
+      <link>https://mischavandenburg.com/zet/articles/az-104-study-guide/</link>
       <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/az-104-study-guide/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
       <description>TLDR It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck: GitHub repo
 Introduction When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.
 That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.</description>

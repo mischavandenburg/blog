@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>DevOps on Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>DevOps on Mischa van den Burg</title>
     <link>https://mischavandenburg.com/tags/devops/</link>
-    <description>Recent content in DevOps on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content in DevOps on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 02 Jan 2023 21:00:11 +0100</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -24,10 +24,10 @@ Even though it is a small scale hobby project, I still plan to approach it as if
     
     <item>
       <title>What Are Containers?</title>
-      <link>https://mischavandenburg.com/articles/what-are-containers/</link>
+      <link>https://mischavandenburg.com/zet/articles/what-are-containers/</link>
       <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/what-are-containers/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
       <description>When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.
 Virtualization To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.</description>
       <content:encoded><![CDATA[<p>When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
@@ -57,10 +57,10 @@ Virtualization To understand containers, we need to understand virtualization. V
     
     <item>
       <title>Study Guide: AZ-104 Azure Administrator Associate</title>
-      <link>https://mischavandenburg.com/articles/az-104-study-guide/</link>
+      <link>https://mischavandenburg.com/zet/articles/az-104-study-guide/</link>
       <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/az-104-study-guide/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
       <description>TLDR It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck: GitHub repo
 Introduction When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.
 That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.</description>
@@ -102,10 +102,10 @@ That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.<
     
     <item>
       <title>Lab Project: GitOps with ArgoCD, Azure Pipelines and Minikube</title>
-      <link>https://mischavandenburg.com/articles/lab-argocd-azure-pipelines/</link>
+      <link>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</link>
       <pubDate>Sat, 24 Dec 2022 13:49:55 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/lab-argocd-azure-pipelines/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</guid>
       <description>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.
 My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure.</description>
       <content:encoded><![CDATA[<p>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.</p>
@@ -205,10 +205,10 @@ My goal was to be able to deploy an application from a GitHub repo to my local K
     
     <item>
       <title>Tokens and Identity on the Internet</title>
-      <link>https://mischavandenburg.com/articles/identity/</link>
+      <link>https://mischavandenburg.com/zet/articles/identity/</link>
       <pubDate>Sun, 18 Dec 2022 00:55:47 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/identity/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/identity/</guid>
       <description>Introduction Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?
 This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</description>
       <content:encoded><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -250,10 +250,10 @@ This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to expla
     
     <item>
       <title>Podcast Tip: The system that runs Norway&#39;s welfare payments</title>
-      <link>https://mischavandenburg.com/articles/nav-podcast/</link>
+      <link>https://mischavandenburg.com/zet/articles/nav-podcast/</link>
       <pubDate>Fri, 02 Dec 2022 20:45:46 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/nav-podcast/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/nav-podcast/</guid>
       <description>An interesting podcast episode describing the system that runs Norway&amp;rsquo;s welfare payments. It was interesting to hear that they focus on open source and that everything runs one one big kubernetes cluster.
 It was also very inspiring to hear that they went from 4 nightly deployments a year to 1700 deployments a week.
 Link to the podcast episode:
@@ -267,10 +267,10 @@ The system that runs Norway&amp;rsquo;s welfare payments</description>
     
     <item>
       <title>Book Notes: The Unicorn Project</title>
-      <link>https://mischavandenburg.com/articles/unicorn-project/</link>
+      <link>https://mischavandenburg.com/zet/articles/unicorn-project/</link>
       <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/unicorn-project/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/unicorn-project/</guid>
       <description>This book is the sequel to the Phoenix project. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet.</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg" alt="Unicorn Project"  /></p>
@@ -299,10 +299,10 @@ The system that runs Norway&amp;rsquo;s welfare payments</description>
     
     <item>
       <title>Book Notes: The Phoenix Project</title>
-      <link>https://mischavandenburg.com/articles/phoenix-project/</link>
+      <link>https://mischavandenburg.com/zet/articles/phoenix-project/</link>
       <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/phoenix-project/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/phoenix-project/</guid>
       <description>When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &amp;ldquo;the old way&amp;rdquo; of doing things and the merits of implementing DevOps principles.
 I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.</description>
       <content:encoded><![CDATA[<p>
@@ -346,10 +346,10 @@ I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many
     
     <item>
       <title>Certified Kubernetes Administrator (CKA) Exam Tips</title>
-      <link>https://mischavandenburg.com/articles/cka-tips/</link>
+      <link>https://mischavandenburg.com/zet/articles/cka-tips/</link>
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/cka-tips/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/cka-tips/</guid>
       <description>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily.</description>
       <content:encoded><![CDATA[<p>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.</p>
 <h3 id="my-preparation">My preparation</h3>

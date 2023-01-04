@@ -36,13 +36,13 @@
     <loc>https://mischavandenburg.com/zet/sdk/</loc>
     <lastmod>2023-01-03T07:50:55+01:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/copyright-license/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/copyright-license/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/how-this-blog-is-created/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/linux/</loc>
@@ -69,31 +69,31 @@
     <loc>https://mischavandenburg.com/zet/move-to-zet/</loc>
     <lastmod>2023-01-02T20:52:50+01:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/obsidian-introduction/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/obsidian-introduction/</loc>
     <lastmod>2023-01-01T19:05:13+01:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/study/</loc>
     <lastmod>2023-01-01T19:05:13+01:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/what-are-containers/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/what-are-containers/</loc>
     <lastmod>2023-01-01T16:17:58+01:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/kickstart-nvim/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/kickstart-nvim/</loc>
     <lastmod>2023-01-01T09:11:57+01:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/az-104-study-guide/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/az-104-study-guide/</loc>
     <lastmod>2022-12-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/lab-argocd-azure-pipelines/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</loc>
     <lastmod>2022-12-24T13:49:55+01:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/identity/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/identity/</loc>
     <lastmod>2022-12-18T00:55:47+01:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/nav-podcast/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/nav-podcast/</loc>
     <lastmod>2022-12-02T20:45:46+01:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/ikigai-book/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/ikigai-book/</loc>
     <lastmod>2022-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/book-notes/</loc>
@@ -102,22 +102,22 @@
     <loc>https://mischavandenburg.com/tags/career/</loc>
     <lastmod>2022-10-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/unicorn-project/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/unicorn-project/</loc>
     <lastmod>2022-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/jiro-sushi/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/jiro-sushi/</loc>
     <lastmod>2022-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/how-started-vim/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/how-started-vim/</loc>
     <lastmod>2022-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/phoenix-project/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/phoenix-project/</loc>
     <lastmod>2022-09-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/cka-tips/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/cka-tips/</loc>
     <lastmod>2022-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/articles/linux-creativity/</loc>
+    <loc>https://mischavandenburg.com/zet/articles/linux-creativity/</loc>
     <lastmod>2022-09-10T12:22:28+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/how-to-upgrade-java-and-jenkins-on-ubuntu-18-04/</loc>
@@ -161,6 +161,8 @@
   </url><url>
     <loc>https://mischavandenburg.com/my-journey-into-devops-so-far/</loc>
     <lastmod>2022-01-28T08:56:38+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/archives/</loc>
   </url><url>
     <loc>https://mischavandenburg.com/aboutme/</loc>
   </url>

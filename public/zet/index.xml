@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Zettelkasten on Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>Zettelkasten on Mischa van den Burg</title>
     <link>https://mischavandenburg.com/zet/</link>
-    <description>Recent content in Zettelkasten on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 03 Jan 2023 08:41:09 +0100</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -116,6 +116,17 @@ Distributed tracing is an implementation of the call stack in the cloud.</descri
 SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.</description>
       <content:encoded><![CDATA[<p>A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.</p>
 <p>SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>All Articles</title>
+      <link>https://mischavandenburg.com/zet/articles/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/</guid>
+      <description>These are long form articles.</description>
+      <content:encoded><![CDATA[<p>These are long form articles.</p>
 ]]></content:encoded>
     </item>
     

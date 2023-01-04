@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Linux on Mischa&#39;s Blog &amp; Zettelkasten</title>
+    <title>Linux on Mischa van den Burg</title>
     <link>https://mischavandenburg.com/tags/linux/</link>
-    <description>Recent content in Linux on Mischa&#39;s Blog &amp; Zettelkasten</description>
+    <description>Recent content in Linux on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How This Blog is Created, Written and Hosted</title>
-      <link>https://mischavandenburg.com/articles/how-this-blog-is-created/</link>
+      <link>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</link>
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/how-this-blog-is-created/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
       <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
       <content:encoded><![CDATA[<p>As I alluded to in my <a href="/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
@@ -35,10 +35,10 @@ Previously I was using WordPress, but the editing and writing experience became 
     
     <item>
       <title>What Are Containers?</title>
-      <link>https://mischavandenburg.com/articles/what-are-containers/</link>
+      <link>https://mischavandenburg.com/zet/articles/what-are-containers/</link>
       <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/what-are-containers/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
       <description>When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.
 Virtualization To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.</description>
       <content:encoded><![CDATA[<p>When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
@@ -68,10 +68,10 @@ Virtualization To understand containers, we need to understand virtualization. V
     
     <item>
       <title>Book Notes: The Unicorn Project</title>
-      <link>https://mischavandenburg.com/articles/unicorn-project/</link>
+      <link>https://mischavandenburg.com/zet/articles/unicorn-project/</link>
       <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/unicorn-project/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/unicorn-project/</guid>
       <description>This book is the sequel to the Phoenix project. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet.</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg" alt="Unicorn Project"  /></p>
@@ -100,10 +100,10 @@ Virtualization To understand containers, we need to understand virtualization. V
     
     <item>
       <title>How and Why I Started Using Vim</title>
-      <link>https://mischavandenburg.com/articles/how-started-vim/</link>
+      <link>https://mischavandenburg.com/zet/articles/how-started-vim/</link>
       <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/how-started-vim/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/how-started-vim/</guid>
       <description>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.
 The Beginning The reason why I started to use vim is rather practical.</description>
       <content:encoded><![CDATA[<p>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.</p>
@@ -139,10 +139,10 @@ The Beginning The reason why I started to use vim is rather practical.</descript
     
     <item>
       <title>Building my Own OS: Linux as a Creative Activity</title>
-      <link>https://mischavandenburg.com/articles/linux-creativity/</link>
+      <link>https://mischavandenburg.com/zet/articles/linux-creativity/</link>
       <pubDate>Sat, 10 Sep 2022 12:22:28 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/articles/linux-creativity/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/linux-creativity/</guid>
       <description>NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.
 introduction I started using GNU/Linux as a daily driver about six months ago, and I have not regretted the decision ever since.</description>
       <content:encoded><![CDATA[<p><em>NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.</em></p>
