@@ -72,7 +72,7 @@ params:
     homeInfoParams:
         Title: "Greetings."
         Content: >
-          Welcome to my page. I’m Mischa, and I’m a DevOps Engineer from Amsterdam.
+          Welcome to my page. I’m Mischa, a DevOps Engineer from Amsterdam.
 
           On this blog I share what I learn by writing articles and publishing notes about the topics I’m studying.
           
@@ -133,6 +133,10 @@ menu:
         - identifier: Zettelkasten 
           name: Zettelkasten 
           url: /zet/
+          weight: 30
+        - identifier: About
+          name: About 
+          url: /aboutme/
           weight: 30
 # Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true

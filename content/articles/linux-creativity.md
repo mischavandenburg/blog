@@ -2,8 +2,8 @@
 date: "2022-09-10T12:22:28Z"
 tags:
 - Linux
+- Personal
 title: 'Building my Own OS: Linux as a Creative Activity'
-url: /linux-creativity/
 ---
 
 *NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.*
