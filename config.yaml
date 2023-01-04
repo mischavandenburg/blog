@@ -70,7 +70,7 @@ params:
 
     # home-info mode
     homeInfoParams:
-        Title: "Greetings."
+        Title: "Living on The Command Line."
         Content: >
           Welcome to my page. I’m Mischa, a DevOps Engineer from Amsterdam.
 
@@ -81,7 +81,7 @@ params:
           
           If you’d like to know more about me and my blog, go to the [About Me](/aboutme) page.
           
-          If you’d like to search this blog or see the files, head over to the GitHub repo where it is stored. And give me a star while you’re at it! 🌟 😁
+          If you’d like to search this blog or see the files, head over to the [GitHub repo](https://github.com/mischavandenburg/blog) where it is stored. And give me a star while you’re at it! 🌟 😁
 
 
     socialIcons:
