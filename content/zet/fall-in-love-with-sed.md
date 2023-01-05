@@ -7,7 +7,7 @@ tags:
 - Zettelkasten
 ---
 
-Sed, it's so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making to my entire second brain in Obsidian with one command. 
+Sed, it's so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command. 
 
 Today I needed to update my /articles/ links to /zet/articles/ links because I'm restructuring my website. Here is the sed expression that is executed for every markdown file that is found by fd:
 

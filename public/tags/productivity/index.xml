@@ -5,7 +5,37 @@
     <link>https://mischavandenburg.com/tags/productivity/</link>
     <description>Recent content in Productivity on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fall in love with sed.</title>
+      <link>https://mischavandenburg.com/zet/fall-in-love-with-sed/</link>
+      <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/fall-in-love-with-sed/</guid>
+      <description>Sed, it&amp;rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making to my entire second brain in Obsidian with one command.
+Today I needed to update my /articles/ links to /zet/articles/ links because I&amp;rsquo;m restructuring my website.</description>
+      <content:encoded><![CDATA[<p>Sed, it&rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making to my entire second brain in Obsidian with one command.</p>
+<p>Today I needed to update my /articles/ links to /zet/articles/ links because I&rsquo;m restructuring my website. Here is the sed expression that is executed for every markdown file that is found by fd:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/\/articles\//\/zet\/articles\//g&#39;</span> <span class="k">$(</span>fd .md<span class="k">)</span>
+</span></span></code></pre></div><p>The result:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">diff --git a/content/zet/move-to-zet.md b/content/zet/move-to-zet.md
+</span></span><span class="line"><span class="cl">index 1e37283..3b817e3 <span class="m">100644</span>
+</span></span><span class="line"><span class="cl">--- a/content/zet/move-to-zet.md
+</span></span><span class="line"><span class="cl">+++ b/content/zet/move-to-zet.md
+</span></span><span class="line"><span class="cl">@@ -6,7 +6,7 @@ tags:
+</span></span><span class="line"><span class="cl"> - Zettelkasten
+</span></span><span class="line"><span class="cl"> ---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-I<span class="s1">&#39;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more
+</span></span></span><span class="line"><span class="cl"><span class="s1">often than not I put them in the larger generic 00-zettelkasten directory in my [Obsidian](/articles/obsidian-introduction/) vault.
+</span></span></span><span class="line"><span class="cl"><span class="s1">+I&#39;</span>ve transitioned my note taking system towards a Zettelkasten system. I still use directories <span class="k">for</span> folders and make copious links, but more
+</span></span><span class="line"><span class="cl">often than not I put them in the larger generic 00-zettelkasten directory in my <span class="o">[</span>Obsidian<span class="o">](</span>/zet/articles/obsidian-introduction/<span class="o">)</span> vault.
+</span></span></code></pre></div><p>These sites are super useful to help you formulate your expressions:</p>
+<p><a href="https://sed.js.org/">https://sed.js.org/</a></p>
+<p><a href="https://regex101.com/">https://regex101.com/</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>How This Blog is Created, Written and Hosted</title>
       <link>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</link>
