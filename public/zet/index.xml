@@ -12,9 +12,9 @@
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/fall-in-love-with-sed/</guid>
-      <description>Sed, it&amp;rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making to my entire second brain in Obsidian with one command.
+      <description>Sed, it&amp;rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command.
 Today I needed to update my /articles/ links to /zet/articles/ links because I&amp;rsquo;m restructuring my website.</description>
-      <content:encoded><![CDATA[<p>Sed, it&rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making to my entire second brain in Obsidian with one command.</p>
+      <content:encoded><![CDATA[<p>Sed, it&rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command.</p>
 <p>Today I needed to update my /articles/ links to /zet/articles/ links because I&rsquo;m restructuring my website. Here is the sed expression that is executed for every markdown file that is found by fd:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/\/articles\//\/zet\/articles\//g&#39;</span> <span class="k">$(</span>fd .md<span class="k">)</span>
 </span></span></code></pre></div><p>The result:</p>
@@ -205,6 +205,44 @@ Up until this point I&amp;rsquo;ve been publishing full articles on my blog. I c
       <content:encoded><![CDATA[<p>I&rsquo;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more often than not I put them in the larger generic 00-zettelkasten directory in my <a href="/zet/articles/obsidian-introduction/">Obsidian</a> vault.</p>
 <p>The concept of &ldquo;atomic notes&rdquo; is also very important in Zettelkasten methods. Notes should be small and concise.</p>
 <p>Up until this point I&rsquo;ve been publishing full articles on my blog. I came across <a href="https://github.com/rwxrob">Rob Muhlestein</a> yesterday and I was very inspired by his setup and public zettelkasten. I think I&rsquo;ll move to a similar approach. Still planning to write and publish full articles as well, but also including atomic notes and personal status updates.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>How to install the Openstack CLI on Linux</title>
+      <link>https://mischavandenburg.com/zet/install-openstack-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/install-openstack-cli/</guid>
+      <description>Make sure to have pip installed.
+Run pip install python-openstackclient
+Pip will install a binary called &amp;ldquo;openstack&amp;rdquo; in ~/.local/bin
+If the openstack command is not available in your session, you might need to add it to your PATH:
+export PATH=&amp;quot;$HOME/.local/bin:$PATH&amp;quot;
+Add this to your ~/.zshrc or ~/.bashrc to make sure this happens for each shell session.
+Don&amp;rsquo;t forget to source your updated ~/.zshrc if you chose to add it:
+source ~/.</description>
+      <content:encoded><![CDATA[<p>Make sure to have pip installed.</p>
+<p>Run <code>pip install python-openstackclient</code></p>
+<p>Pip will install a binary called &ldquo;openstack&rdquo; in ~/.local/bin</p>
+<p>If the openstack command is not available in your session, you might need to add it to your PATH:</p>
+<p><code>export PATH=&quot;$HOME/.local/bin:$PATH&quot;</code></p>
+<p>Add this to your ~/.zshrc or ~/.bashrc to make sure this happens for each shell session.</p>
+<p>Don&rsquo;t forget to source your updated ~/.zshrc if you chose to add it:</p>
+<p><code>source ~/.zshrc</code></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>run-installed-pip-packages</title>
+      <link>https://mischavandenburg.com/zet/run-installed-pip-packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/run-installed-pip-packages/</guid>
+      <description>add .local/bin to PATH
+test</description>
+      <content:encoded><![CDATA[<p>add .local/bin to PATH</p>
+<p>test</p>
 ]]></content:encoded>
     </item>
     

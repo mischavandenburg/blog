@@ -12,9 +12,9 @@
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/fall-in-love-with-sed/</guid>
-      <description>Sed, it&amp;rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making to my entire second brain in Obsidian with one command.
+      <description>Sed, it&amp;rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command.
 Today I needed to update my /articles/ links to /zet/articles/ links because I&amp;rsquo;m restructuring my website.</description>
-      <content:encoded><![CDATA[<p>Sed, it&rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making to my entire second brain in Obsidian with one command.</p>
+      <content:encoded><![CDATA[<p>Sed, it&rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command.</p>
 <p>Today I needed to update my /articles/ links to /zet/articles/ links because I&rsquo;m restructuring my website. Here is the sed expression that is executed for every markdown file that is found by fd:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/\/articles\//\/zet\/articles\//g&#39;</span> <span class="k">$(</span>fd .md<span class="k">)</span>
 </span></span></code></pre></div><p>The result:</p>
