@@ -28,7 +28,7 @@ params:
     defaultTheme: auto # dark, light
     disableThemeToggle: false
 
-    ShowReadingTime: true
+    ShowReadingTime: false
     ShowShareButtons: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: false
@@ -129,7 +129,7 @@ menu:
           weight: 10
         - identifier: Articles 
           name: Articles 
-          url: /articles/
+          url: /zet/articles/
           weight: 20
         - identifier: Zettelkasten 
           name: Zettelkasten 
