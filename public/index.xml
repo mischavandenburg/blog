@@ -5,7 +5,72 @@
     <link>https://mischavandenburg.com/</link>
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install the Openstack CLI on Linux</title>
+      <link>https://mischavandenburg.com/zet/install-openstack-cli/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/install-openstack-cli/</guid>
+      <description>Make sure to have pip installed.
+Run pip install python-openstackclient
+Pip will install a binary called &amp;ldquo;openstack&amp;rdquo; in ~/.local/bin
+If the openstack command is not available in your session, you might need to add it to your PATH:
+export PATH=&amp;quot;$HOME/.local/bin:$PATH&amp;quot;
+Add this to your ~/.zshrc or ~/.bashrc to make sure this happens for each shell session.
+Don&amp;rsquo;t forget to source your updated ~/.zshrc if you chose to add it:
+source ~/.</description>
+      <content:encoded><![CDATA[<p>Make sure to have pip installed.</p>
+<p>Run <code>pip install python-openstackclient</code></p>
+<p>Pip will install a binary called &ldquo;openstack&rdquo; in ~/.local/bin</p>
+<p>If the openstack command is not available in your session, you might need to add it to your PATH:</p>
+<p><code>export PATH=&quot;$HOME/.local/bin:$PATH&quot;</code></p>
+<p>Add this to your ~/.zshrc or ~/.bashrc to make sure this happens for each shell session.</p>
+<p>Don&rsquo;t forget to source your updated ~/.zshrc if you chose to add it:</p>
+<p><code>source ~/.zshrc</code></p>
+<p><a href="https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html">https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>How to Reset a VM Root Password using the Openstack CLI</title>
+      <link>https://mischavandenburg.com/zet/openstack-root-password/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/openstack-root-password/</guid>
+      <description> Download the Openstack RC file from the Openstack portal. Click your username in the top right corner to find it. Source the RC file to make the environment variables avaialable to your current session: source ~/my_openstack.sh Find the instance ID of your VM from the portal. Run openstack server set --root-password be3xxxx5-8348-418b-xxxb-c4xxxx575cd You will be prompted for the new password which will be set on the virtual machine. </description>
+      <content:encoded><![CDATA[<ol>
+<li>Download the Openstack RC file from the Openstack portal. Click your username in the top right corner to find it.</li>
+<li>Source the RC file to make the environment variables avaialable to your current session: <code>source ~/my_openstack.sh</code></li>
+<li>Find the instance ID of your VM from the portal.</li>
+<li>Run <code>openstack server set --root-password be3xxxx5-8348-418b-xxxb-c4xxxx575cd</code></li>
+<li>You will be prompted for the new password which will be set on the virtual machine.</li>
+</ol>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>How to run installed pip packages as binaries</title>
+      <link>https://mischavandenburg.com/zet/run-installed-pip-packages/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/run-installed-pip-packages/</guid>
+      <description>When you install a pip package which is meant to be run from the command line as a command, you might find that it is not available to you after installation.
+If this happens, it might be that the path is missing from your PATH variable. Therefore, the shell does not source these binaries when initiated, and does not know that these executables exist.
+You can find the location of your binaries by running pip show package_name</description>
+      <content:encoded><![CDATA[<p>When you install a pip package which is meant to be run from the command line as a command, you might find that it is not available to you after installation.</p>
+<p>If this happens, it might be that the path is missing from your PATH variable. Therefore, the shell does not source these binaries when initiated, and does not know that these executables exist.</p>
+<p>You can find the location of your binaries by running <code>pip show package_name</code></p>
+<p>Usually the binaries will be located in ~/.local/bin on a UNIX based system.</p>
+<p>To add this to your path, run:</p>
+<p><code>export PATH=&quot;$HOME/.local/bin:$PATH&quot;</code></p>
+<p>Add this to your ~/.zshrc or ~/.bashrc to make sure this happens for each shell session.</p>
+<p>Don&rsquo;t forget to source your updated ~/.zshrc if you chose to add it:</p>
+<p><code>source ~/.zshrc</code></p>
+<p><a href="https://stackoverflow.com/questions/29980798/where-does-pip-install-its-packages">https://stackoverflow.com/questions/29980798/where-does-pip-install-its-packages</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Fall in love with sed.</title>
       <link>https://mischavandenburg.com/zet/fall-in-love-with-sed/</link>
@@ -1515,44 +1580,6 @@ I intended to create a tech blog to document my journey ever since I started my 
 <p>I very quickly realised that he was right on the money with his suggestion and I started to become very enthusiastic to learn how to make a living by working with computers and automation.</p>
 <h2 id="traineeship">Traineeship</h2>
 <p>As I mentioned before, employers in The Netherlands are now willing to train potential candidates, and I used my hobby projects as a way to demonstrate my genuine interest and affinity with IT and automation. I was offered a traineeship to become a DevOps Engineer in 2021. After a period of training I started working for the City of Amsterdam and I&rsquo;ve been part of an IT4IT operations team since.</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>How to install the Openstack CLI on Linux</title>
-      <link>https://mischavandenburg.com/zet/install-openstack-cli/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/install-openstack-cli/</guid>
-      <description>Make sure to have pip installed.
-Run pip install python-openstackclient
-Pip will install a binary called &amp;ldquo;openstack&amp;rdquo; in ~/.local/bin
-If the openstack command is not available in your session, you might need to add it to your PATH:
-export PATH=&amp;quot;$HOME/.local/bin:$PATH&amp;quot;
-Add this to your ~/.zshrc or ~/.bashrc to make sure this happens for each shell session.
-Don&amp;rsquo;t forget to source your updated ~/.zshrc if you chose to add it:
-source ~/.</description>
-      <content:encoded><![CDATA[<p>Make sure to have pip installed.</p>
-<p>Run <code>pip install python-openstackclient</code></p>
-<p>Pip will install a binary called &ldquo;openstack&rdquo; in ~/.local/bin</p>
-<p>If the openstack command is not available in your session, you might need to add it to your PATH:</p>
-<p><code>export PATH=&quot;$HOME/.local/bin:$PATH&quot;</code></p>
-<p>Add this to your ~/.zshrc or ~/.bashrc to make sure this happens for each shell session.</p>
-<p>Don&rsquo;t forget to source your updated ~/.zshrc if you chose to add it:</p>
-<p><code>source ~/.zshrc</code></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>run-installed-pip-packages</title>
-      <link>https://mischavandenburg.com/zet/run-installed-pip-packages/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/run-installed-pip-packages/</guid>
-      <description>add .local/bin to PATH
-test</description>
-      <content:encoded><![CDATA[<p>add .local/bin to PATH</p>
-<p>test</p>
 ]]></content:encoded>
     </item>
     

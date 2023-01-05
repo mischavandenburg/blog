@@ -3,25 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/fall-in-love-with-sed/</loc>
-    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
+    <loc>https://mischavandenburg.com/zet/install-openstack-cli/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/openstack-root-password/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/run-installed-pip-packages/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/how-to/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/fall-in-love-with-sed/</loc>
     <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/productivity/</loc>
     <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
-    <lastmod>2023-01-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/application-insights-sampling/</loc>
@@ -167,10 +179,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/archives/</loc>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/install-openstack-cli/</loc>
-  </url><url>
     <loc>https://mischavandenburg.com/aboutme/</loc>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/run-installed-pip-packages/</loc>
   </url>
 </urlset>
