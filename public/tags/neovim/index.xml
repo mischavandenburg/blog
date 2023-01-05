@@ -5,7 +5,27 @@
     <link>https://mischavandenburg.com/tags/neovim/</link>
     <description>Recent content in Neovim on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Attaching the Ansible Language Server to yaml files in neovim (LSP)</title>
+      <link>https://mischavandenburg.com/zet/ansible-lsp-fix/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/ansible-lsp-fix/</guid>
+      <description>When you have an Ansible language server installed, you might find that your yaml LSP will attach to your current buffer, but the ansible language server won&amp;rsquo;t attach.
+You can fix this by setting the correct file type for the current buffer:
+:set ft=yaml.ansible
+You could also adjust the Ansible LSP so it attaches to all yaml files. However, this does not work out for me, because I edit different yaml files for different purposes every day.</description>
+      <content:encoded><![CDATA[<p>When you have an Ansible language server installed, you might find that your yaml LSP will attach to your current buffer, but the ansible language server won&rsquo;t attach.</p>
+<p>You can fix this by setting the correct file type for the current buffer:</p>
+<p><code>:set ft=yaml.ansible</code></p>
+<p>You could also adjust the Ansible LSP so it attaches to all yaml files. However, this does not work out for me, because I edit different yaml files for different purposes every day. Not all yaml files are to be used with Ansible.</p>
+<p>There is logic for the Ansible language server to figure out if you are working on Ansible yaml files based on the directory structure you&rsquo;re working in.</p>
+<p>So setting the filetype when I needed works well for me.</p>
+<p><a href="https://www.reddit.com/r/neovim/comments/tbd7g0/lsp_ansiblels_wont_attach_anymore/">https://www.reddit.com/r/neovim/comments/tbd7g0/lsp_ansiblels_wont_attach_anymore/</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>How This Blog is Created, Written and Hosted</title>
       <link>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</link>

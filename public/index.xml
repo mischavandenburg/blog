@@ -7,6 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 05 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Attaching the Ansible Language Server to yaml files in neovim (LSP)</title>
+      <link>https://mischavandenburg.com/zet/ansible-lsp-fix/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/ansible-lsp-fix/</guid>
+      <description>When you have an Ansible language server installed, you might find that your yaml LSP will attach to your current buffer, but the ansible language server won&amp;rsquo;t attach.
+You can fix this by setting the correct file type for the current buffer:
+:set ft=yaml.ansible
+You could also adjust the Ansible LSP so it attaches to all yaml files. However, this does not work out for me, because I edit different yaml files for different purposes every day.</description>
+      <content:encoded><![CDATA[<p>When you have an Ansible language server installed, you might find that your yaml LSP will attach to your current buffer, but the ansible language server won&rsquo;t attach.</p>
+<p>You can fix this by setting the correct file type for the current buffer:</p>
+<p><code>:set ft=yaml.ansible</code></p>
+<p>You could also adjust the Ansible LSP so it attaches to all yaml files. However, this does not work out for me, because I edit different yaml files for different purposes every day. Not all yaml files are to be used with Ansible.</p>
+<p>There is logic for the Ansible language server to figure out if you are working on Ansible yaml files based on the directory structure you&rsquo;re working in.</p>
+<p>So setting the filetype when I needed works well for me.</p>
+<p><a href="https://www.reddit.com/r/neovim/comments/tbd7g0/lsp_ansiblels_wont_attach_anymore/">https://www.reddit.com/r/neovim/comments/tbd7g0/lsp_ansiblels_wont_attach_anymore/</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>How to install the Openstack CLI on Linux</title>
       <link>https://mischavandenburg.com/zet/install-openstack-cli/</link>
       <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
@@ -68,6 +88,22 @@ You can find the location of your binaries by running pip show package_name</des
 <p>Don&rsquo;t forget to source your updated ~/.zshrc if you chose to add it:</p>
 <p><code>source ~/.zshrc</code></p>
 <p><a href="https://stackoverflow.com/questions/29980798/where-does-pip-install-its-packages">https://stackoverflow.com/questions/29980798/where-does-pip-install-its-packages</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Working on the command line is already coding</title>
+      <link>https://mischavandenburg.com/zet/bash-cmdline-is-coding/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/bash-cmdline-is-coding/</guid>
+      <description>Rob Muhlenstein makes an interesting point that using bash on the command line is already coding. When you are running commands in the terminal, you are coding one line at a time.
+When you put these commands in a file you have a bash script. Therefore, he argues that bash should be your first language.
+I think this is such an interesting point. I&amp;rsquo;ve been using Linux and working on the command line for years but it never dawned on me that I, in fact, was coding while working on the command line.</description>
+      <content:encoded><![CDATA[<p>Rob Muhlenstein makes an interesting point that using bash on the command line is already coding. When you are running commands in the terminal, you are coding one line at a time.</p>
+<p>When you put these commands in a file you have a bash script. Therefore, he argues that bash should be your first language.</p>
+<p>I think this is such an interesting point. I&rsquo;ve been using Linux and working on the command line for years but it never dawned on me that I, in fact, was coding while working on the command line. However, when I was writing bash scripts, I did consider myself to be coding. There is literally no difference. A bash script is just a string of commands that you would enter manually anyway.</p>
+<p><a href="https://rwx.gg/">https://rwx.gg/</a></p>
 ]]></content:encoded>
     </item>
     

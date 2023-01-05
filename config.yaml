@@ -9,7 +9,7 @@ buildFuture: true
 buildExpired: true 
 pygmentsUseClasses: true
 
-# googleAnalytics: UA-123-45
+googleAnalytics: G-VLS3GJYW82
 
 minify:
     disableXML: true
@@ -19,8 +19,8 @@ minify:
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: Mischa's Blog & Zettelkasten 
-    description: "On this blog I share what I learn by writing articles and publishing notes about the topics I’m studying. I started with long form articles but it is turning more into a public Zettelkasten."
-    keywords: [Blog, Portfolio, CV, DevOps, Zettelkasten, Second Brain]
+    description: "On this blog I share what I learn by writing articles and publishing notes about the topics I’m studying in the DevOps and cloud computing field. I started with long form articles but it is turning more into a public Zettelkasten."
+    keywords: [Blog, Portfolio, CV, DevOps, Zettelkasten, Second Brain, Linux, Azure, Productivity, vim, neovim, unix]
     author: Mischa van den Burg
     # author: ["Me", "You"] # multiple authors
     images: ["<link or path of image for opengraph, twitter-cards>"]

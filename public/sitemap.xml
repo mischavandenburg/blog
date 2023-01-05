@@ -6,6 +6,9 @@
     <lastmod>2023-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
+    <loc>https://mischavandenburg.com/zet/ansible-lsp-fix/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/zet/install-openstack-cli/</loc>
     <lastmod>2023-01-05T00:00:00+00:00</lastmod>
   </url><url>
@@ -21,7 +24,13 @@
     <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2023-01-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/neovim/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/bash-cmdline-is-coding/</loc>
     <lastmod>2023-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/</loc>
@@ -64,9 +73,6 @@
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</loc>
-    <lastmod>2023-01-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/neovim/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/personal/</loc>
