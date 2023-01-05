@@ -1,6 +1,9 @@
 ---
 title: Working on the command line is already coding
 date: 2023-01-05
+tags:
+- Coding
+- Linux
 ---
 Rob Muhlenstein makes an interesting point that using bash on the command line is already coding. When you are running commands in the terminal, you are coding one line at a time. 
 
