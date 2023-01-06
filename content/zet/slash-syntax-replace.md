@@ -6,7 +6,7 @@ tags:
 - Zettelkasten
 ---
 
-In this evening's studies I came across this bash script in a tutorial by rwx.gg:
+In this evening's studies I came across this bash script in a tutorial by Rob Muhlenstein:
 
 ```bash
 !#/bin/bash
@@ -31,4 +31,3 @@ To do this with sed, you would do:
 ```bash
 echo "$foo" | sed 's/[0-9]/x/g'
 ```
-

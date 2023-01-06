@@ -17,10 +17,7 @@ Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripg
       <content:encoded><![CDATA[<p>I use the <a href="/zet/articles/obsidian-introduction/">Obsidian</a> app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched.</p>
 <p>Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.</p>
 <p>To pass the -L flag, and some other flags, I added the following to my telescope config file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">require</span><span class="p">(</span><span class="s1">&#39;telescope&#39;</span><span class="p">).</span><span class="n">load_extension</span><span class="p">(</span><span class="s1">&#39;fzf&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">-- require(&#34;telescope&#34;).load_extension(&#34;emoji&#34;)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">-- Custom ripgrep configuration:</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Custom ripgrep configuration:</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">telescope</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;telescope&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">telescopeConfig</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;telescope.config&#34;</span><span class="p">)</span>
@@ -49,7 +46,8 @@ Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripg
 </span></span><span class="line"><span class="cl">		<span class="p">},</span>
 </span></span><span class="line"><span class="cl">	<span class="p">},</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><p><a href="https://github.com/nvim-telescope/telescope.nvim">https://github.com/nvim-telescope/telescope.nvim</a></p>
+</span></span></code></pre></div><p>Based on the configuration examples found on the project&rsquo;s GitHub page.</p>
+<p><a href="https://github.com/nvim-telescope/telescope.nvim">https://github.com/nvim-telescope/telescope.nvim</a></p>
 ]]></content:encoded>
     </item>
     

@@ -5,7 +5,30 @@
     <link>https://mischavandenburg.com/tags/zettelkasten/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using &#34;//&#34; syntax as search and replace</title>
+      <link>https://mischavandenburg.com/zet/slash-syntax-replace/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/slash-syntax-replace/</guid>
+      <description>In this evening&amp;rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:
+!#/bin/bash echo -e ${PATH//:/\\n} I could not make heads or tails of all these slashes, since the output clearly indicated that search and replacement was being performed. I&amp;rsquo;m used to the sed / vim syntax: s/foo/bar
+After some research I learned that &amp;lsquo;//&amp;rsquo; is a global search and replace syntax of several text processing programs.</description>
+      <content:encoded><![CDATA[<p>In this evening&rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">!#/bin/bash
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="si">${</span><span class="nv">PATH</span><span class="p">//:/</span><span class="se">\\</span><span class="nv">n</span><span class="si">}</span>
+</span></span></code></pre></div><p>I could not make heads or tails of all these slashes, since the output clearly indicated that search and replacement was being performed. I&rsquo;m used to the sed / vim syntax: <code>s/foo/bar</code></p>
+<p>After some research I learned that &lsquo;//&rsquo; is a global search and replace syntax of several text processing programs.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">foo</span><span class="o">=</span><span class="s2">&#34;1234567890&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">foo</span><span class="p">//[0-9]/x</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>This replaces all the digits in the $foo variable with &lsquo;x&rsquo;, so the output would be xxxxxxxxxx</p>
+<p>To do this with sed, you would do:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$foo</span><span class="s2">&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[0-9]/x/g&#39;</span>
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>Fall in love with sed.</title>
       <link>https://mischavandenburg.com/zet/fall-in-love-with-sed/</link>

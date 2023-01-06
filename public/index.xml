@@ -17,10 +17,7 @@ Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripg
       <content:encoded><![CDATA[<p>I use the <a href="/zet/articles/obsidian-introduction/">Obsidian</a> app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched.</p>
 <p>Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.</p>
 <p>To pass the -L flag, and some other flags, I added the following to my telescope config file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">require</span><span class="p">(</span><span class="s1">&#39;telescope&#39;</span><span class="p">).</span><span class="n">load_extension</span><span class="p">(</span><span class="s1">&#39;fzf&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">-- require(&#34;telescope&#34;).load_extension(&#34;emoji&#34;)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">-- Custom ripgrep configuration:</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Custom ripgrep configuration:</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">telescope</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;telescope&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">telescopeConfig</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;telescope.config&#34;</span><span class="p">)</span>
@@ -49,8 +46,32 @@ Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripg
 </span></span><span class="line"><span class="cl">		<span class="p">},</span>
 </span></span><span class="line"><span class="cl">	<span class="p">},</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><p><a href="https://github.com/nvim-telescope/telescope.nvim">https://github.com/nvim-telescope/telescope.nvim</a></p>
+</span></span></code></pre></div><p>Based on the configuration examples found on the project&rsquo;s GitHub page.</p>
+<p><a href="https://github.com/nvim-telescope/telescope.nvim">https://github.com/nvim-telescope/telescope.nvim</a></p>
 ]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Using &#34;//&#34; syntax as search and replace</title>
+      <link>https://mischavandenburg.com/zet/slash-syntax-replace/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/slash-syntax-replace/</guid>
+      <description>In this evening&amp;rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:
+!#/bin/bash echo -e ${PATH//:/\\n} I could not make heads or tails of all these slashes, since the output clearly indicated that search and replacement was being performed. I&amp;rsquo;m used to the sed / vim syntax: s/foo/bar
+After some research I learned that &amp;lsquo;//&amp;rsquo; is a global search and replace syntax of several text processing programs.</description>
+      <content:encoded><![CDATA[<p>In this evening&rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">!#/bin/bash
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="si">${</span><span class="nv">PATH</span><span class="p">//:/</span><span class="se">\\</span><span class="nv">n</span><span class="si">}</span>
+</span></span></code></pre></div><p>I could not make heads or tails of all these slashes, since the output clearly indicated that search and replacement was being performed. I&rsquo;m used to the sed / vim syntax: <code>s/foo/bar</code></p>
+<p>After some research I learned that &lsquo;//&rsquo; is a global search and replace syntax of several text processing programs.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">foo</span><span class="o">=</span><span class="s2">&#34;1234567890&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">foo</span><span class="p">//[0-9]/x</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>This replaces all the digits in the $foo variable with &lsquo;x&rsquo;, so the output would be xxxxxxxxxx</p>
+<p>To do this with sed, you would do:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$foo</span><span class="s2">&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[0-9]/x/g&#39;</span>
+</span></span></code></pre></div>]]></content:encoded>
     </item>
     
     <item>
