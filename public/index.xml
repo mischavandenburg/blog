@@ -5,7 +5,54 @@
     <link>https://mischavandenburg.com/</link>
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 05 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to follow symbolic links while searching with Telescope in neovim</title>
+      <link>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</guid>
+      <description>I use the Obsidian app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched.
+Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.</description>
+      <content:encoded><![CDATA[<p>I use the <a href="/zet/articles/obsidian-introduction/">Obsidian</a> app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched.</p>
+<p>Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.</p>
+<p>To pass the -L flag, and some other flags, I added the following to my telescope config file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">require</span><span class="p">(</span><span class="s1">&#39;telescope&#39;</span><span class="p">).</span><span class="n">load_extension</span><span class="p">(</span><span class="s1">&#39;fzf&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- require(&#34;telescope&#34;).load_extension(&#34;emoji&#34;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Custom ripgrep configuration:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">telescope</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;telescope&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">telescopeConfig</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;telescope.config&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Clone the default Telescope configuration</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">vimgrep_arguments</span> <span class="o">=</span> <span class="p">{</span> <span class="n">unpack</span><span class="p">(</span><span class="n">telescopeConfig.values</span><span class="p">.</span><span class="n">vimgrep_arguments</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- I want to search in hidden/dot files.</span>
+</span></span><span class="line"><span class="cl"><span class="n">table.insert</span><span class="p">(</span><span class="n">vimgrep_arguments</span><span class="p">,</span> <span class="s2">&#34;--hidden&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- I don&#39;t want to search in the `.git` directory.</span>
+</span></span><span class="line"><span class="cl"><span class="n">table.insert</span><span class="p">(</span><span class="n">vimgrep_arguments</span><span class="p">,</span> <span class="s2">&#34;--glob&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">table.insert</span><span class="p">(</span><span class="n">vimgrep_arguments</span><span class="p">,</span> <span class="s2">&#34;!**/.git/*&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- I want to follow symbolic links</span>
+</span></span><span class="line"><span class="cl"><span class="n">table.insert</span><span class="p">(</span><span class="n">vimgrep_arguments</span><span class="p">,</span> <span class="s2">&#34;-L&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">telescope.setup</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="n">defaults</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">-- `hidden = true` is not supported in text grep commands.</span>
+</span></span><span class="line"><span class="cl">		<span class="n">vimgrep_arguments</span> <span class="o">=</span> <span class="n">vimgrep_arguments</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="p">},</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pickers</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">find_files</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">-- `hidden = true` will still show the inside of `.git/` as it&#39;s not `.gitignore`d.</span>
+</span></span><span class="line"><span class="cl">			<span class="n">find_command</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;rg&#34;</span><span class="p">,</span> <span class="s2">&#34;--files&#34;</span><span class="p">,</span> <span class="s2">&#34;--hidden&#34;</span><span class="p">,</span> <span class="s2">&#34;--glob&#34;</span><span class="p">,</span> <span class="s2">&#34;!**/.git/*&#34;</span><span class="p">,</span> <span class="s2">&#34;-L&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span>
+</span></span><span class="line"><span class="cl">	<span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><p><a href="https://github.com/nvim-telescope/telescope.nvim">https://github.com/nvim-telescope/telescope.nvim</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Attaching the Ansible Language Server to yaml files in neovim (LSP)</title>
       <link>https://mischavandenburg.com/zet/ansible-lsp-fix/</link>

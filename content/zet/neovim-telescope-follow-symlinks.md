@@ -6,7 +6,7 @@ tags:
 - Linux
 - How-To
 ---
-I use the [Obsidian](/zet/articles/obsidian-introduction.md) app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched. 
+I use the [Obsidian](/zet/articles/obsidian-introduction/) app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched. 
 
 Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.
 

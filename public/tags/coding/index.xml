@@ -5,7 +5,23 @@
     <link>https://mischavandenburg.com/tags/coding/</link>
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 03 Jan 2023 07:50:55 +0100</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Working on the command line is already coding</title>
+      <link>https://mischavandenburg.com/zet/bash-cmdline-is-coding/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/bash-cmdline-is-coding/</guid>
+      <description>Rob Muhlenstein makes an interesting point that using bash on the command line is already coding. When you are running commands in the terminal, you are coding one line at a time.
+When you put these commands in a file you have a bash script. Therefore, he argues that bash should be your first language.
+I think this is such an interesting point. I&amp;rsquo;ve been using Linux and working on the command line for years but it never dawned on me that I, in fact, was coding while working on the command line.</description>
+      <content:encoded><![CDATA[<p>Rob Muhlenstein makes an interesting point that using bash on the command line is already coding. When you are running commands in the terminal, you are coding one line at a time.</p>
+<p>When you put these commands in a file you have a bash script. Therefore, he argues that bash should be your first language.</p>
+<p>I think this is such an interesting point. I&rsquo;ve been using Linux and working on the command line for years but it never dawned on me that I, in fact, was coding while working on the command line. However, when I was writing bash scripts, I did consider myself to be coding. There is literally no difference. A bash script is just a string of commands that you would enter manually anyway.</p>
+<p><a href="https://rwx.gg/">https://rwx.gg/</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>What is a SDK?</title>
       <link>https://mischavandenburg.com/zet/sdk/</link>
