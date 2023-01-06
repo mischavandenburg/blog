@@ -13,9 +13,6 @@ Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripg
 To pass the -L flag, and some other flags, I added the following to my telescope config file:
 
 ```lua
-require('telescope').load_extension('fzf')
--- require("telescope").load_extension("emoji")
-
 -- Custom ripgrep configuration:
 
 local telescope = require("telescope")
@@ -46,5 +43,7 @@ telescope.setup({
 	},
 })
 ```
+
+Based on the configuration examples found on the project's GitHub page.
 
 https://github.com/nvim-telescope/telescope.nvim
