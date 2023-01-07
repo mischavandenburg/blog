@@ -5,7 +5,32 @@
     <link>https://mischavandenburg.com/zet/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying a simple Linux VM to Azure with Terraform</title>
+      <link>https://mischavandenburg.com/zet/terraform-linux-vm/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/terraform-linux-vm/</guid>
+      <description>For a project I&amp;rsquo;m setting up my environment with Terraform.
+I used this tutorial, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.
+I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at ~/.</description>
+      <content:encoded><![CDATA[<p>For a project I&rsquo;m setting up my environment with Terraform.</p>
+<p>I used <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform">this tutorial</a>, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.</p>
+<p>I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at <code>~/.ssh/id_rsa.pub</code></p>
+<p>To run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">terraform</span> <span class="k">init</span>
+</span></span><span class="line"><span class="cl"><span class="k">terraform</span> <span class="k">plan</span>
+</span></span><span class="line"><span class="cl"><span class="k">terraform</span> <span class="k">apply</span>
+</span></span></code></pre></div><p>The scripts prints the public IP of the newly created VM. You should be able to SSH to it:</p>
+<p><code>ssh azureuser@the_printed_ip_address</code></p>
+<p>You can find the code in <a href="https://github.com/mischavandenburg/lab/tree/main/terraform/azure-simple-linux-vm">my &ldquo;lab&rdquo; repo on GitHub.</a></p>
+<p><a href="https://github.com/mischavandenburg/lab/tree/main/terraform/azure-simple-linux-vm">https://github.com/mischavandenburg/lab/tree/main/terraform/azure-simple-linux-vm</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform">https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/developer/terraform/authenticate-to-azure?source=recommendations&amp;tabs=bash#authenticate-to-azure-via-a-microsoft-account">https://learn.microsoft.com/en-us/azure/developer/terraform/authenticate-to-azure?source=recommendations&amp;tabs=bash#authenticate-to-azure-via-a-microsoft-account</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>How to follow symbolic links while searching with Telescope in neovim</title>
       <link>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</link>

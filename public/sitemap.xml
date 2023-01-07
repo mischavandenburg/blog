@@ -3,31 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/terraform-linux-vm/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/devops/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/how-to/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/terraform/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/how-to/</loc>
-    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
-    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/neovim/</loc>
-    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/slash-syntax-replace/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
-    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/ansible-lsp-fix/</loc>
@@ -86,9 +95,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/call-stacks/</loc>
     <lastmod>2023-01-02T21:11:26+01:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/devops/</loc>
-    <lastmod>2023-01-02T21:00:11+01:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/starting-a-project/</loc>
     <lastmod>2023-01-02T21:00:11+01:00</lastmod>
