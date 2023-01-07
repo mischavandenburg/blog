@@ -1,5 +1,5 @@
 ---
-title: Deploying a simple Linux VM to Azure with Terraform
+title: Deploying a Linux VM to Azure with Terraform
 date: 2023-01-07
 tags:
 - DevOps

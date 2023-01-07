@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Deploying a simple Linux VM to Azure with Terraform</title>
+      <title>Deploying a Linux VM to Azure with Terraform</title>
       <link>https://mischavandenburg.com/zet/terraform-linux-vm/</link>
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
