@@ -7,6 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Back to Bas(h)ics: leaving zsh for now</title>
+      <link>https://mischavandenburg.com/zet/back-to-bashics/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/back-to-bashics/</guid>
+      <description>I&amp;rsquo;ve used zsh for nearly two years now. I have a custom setup with autocompletion and a good looking prompt.
+Recently I&amp;rsquo;ve been diving deeper into bash scripting, following tutorials by rwxrob. He emphasizes all the time that it is much better to stick to bash instead of zsh.
+Advantages of using bash:
+the default Linux shell available on any Linux system full documentation available anywhere at all times with man bash free software less dependent on external plugins and configurations more portable practice by working on the command line The fact that working on the commandline is already coding convinced me to leave my beloved customized prompt behind (for now) and go back to the basics.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ve used zsh for nearly two years now. I have a custom setup with autocompletion and a good looking prompt.</p>
+<p>Recently I&rsquo;ve been diving deeper into bash scripting, following tutorials by rwxrob. He emphasizes all the time that it is much better to stick to bash instead of zsh.</p>
+<p>Advantages of using bash:</p>
+<ul>
+<li>the default Linux shell</li>
+<li>available on any Linux system</li>
+<li>full documentation available anywhere at all times with <code>man bash</code></li>
+<li>free software</li>
+<li>less dependent on external plugins and configurations</li>
+<li>more portable</li>
+<li>practice by working on the command line</li>
+</ul>
+<p>The fact that <a href="/content/zet/bash-cmdline-is-coding.md">working on the commandline is already coding</a> convinced me to leave my beloved customized prompt behind (for now) and go back to the basics.</p>
+<p>I want to improve my bash scripting, and working in the bash shell will improve that just by virtue of doing my daily tasks on the command line.</p>
+<p>Also I noticed I&rsquo;ve gotten used to zsh&rsquo;s excellent autocompletion and menu navigation. When I log in to servers at work, there is always this little moment of &ldquo;oh, I don&rsquo;t have that here&rdquo;. I want to get better at bash so I&rsquo;m not dependent on these external crutches anymore.</p>
+<p>Also, I&rsquo;m going to port my zsh configuration to bash. My current zsh configuration loads a bunch of plugins, and it is more of a hassle to get set up on a new system.</p>
+<p>I want to be able to pull my dotfiles repo and do very few steps to configure my environment.</p>
+<p>But I&rsquo;m going to miss that good-looking prompt with all the lovely icons!</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>How to build and deploy a Docker container to an Azure VM using Azure Pipelines</title>
       <link>https://mischavandenburg.com/zet/docker-to-azure-vm/</link>
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
