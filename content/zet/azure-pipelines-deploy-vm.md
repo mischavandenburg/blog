@@ -5,6 +5,7 @@ tags:
 - Azure
 - Linux
 - DevOps
+- How-To
 ---
 To reach a VM from Azure Pipelines, you need to set up an environment.
 
@@ -20,7 +21,7 @@ A command is generated for you. SSH into your VM and run the command.
 
 Now the VM should show up under environments in Azure DevOps.
 
-Set up a repo with an azure-pipelines.yml wit these contents to test:
+Set up a repo with an azure-pipelines.yml with these contents to test. under `environment`, set the same name as you did in Azure DevOps for your environment.
 
 ```yaml
 trigger: 

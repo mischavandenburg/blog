@@ -5,7 +5,49 @@
     <link>https://mischavandenburg.com/tags/how-to/</link>
     <description>Recent content in How-To on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 07 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to deploy to a Linux VM in Azure with Azure Pipelines</title>
+      <link>https://mischavandenburg.com/zet/azure-pipelines-deploy-vm/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/azure-pipelines-deploy-vm/</guid>
+      <description>To reach a VM from Azure Pipelines, you need to set up an environment.
+Create your Linux VM in Azure.
+In Azure DevOps, click envirnoments, new, and select the Virtual Machine option.
+A command is generated for you. SSH into your VM and run the command.
+Now the VM should show up under environments in Azure DevOps.
+Set up a repo with an azure-pipelines.yml with these contents to test. under environment, set the same name as you did in Azure DevOps for your environment.</description>
+      <content:encoded><![CDATA[<p>To reach a VM from Azure Pipelines, you need to set up an environment.</p>
+<p>Create your Linux VM in Azure.</p>
+<p>In Azure DevOps, click envirnoments, new, and select the Virtual Machine option.</p>
+<p><img loading="lazy" src="/env1.png" type="" alt=""  /></p>
+<p>A command is generated for you. SSH into your VM and run the command.</p>
+<p><img loading="lazy" src="/env2.png" type="" alt=""  /></p>
+<p>Now the VM should show up under environments in Azure DevOps.</p>
+<p>Set up a repo with an azure-pipelines.yml with these contents to test. under <code>environment</code>, set the same name as you did in Azure DevOps for your environment.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">trigger</span><span class="p">:</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">pool</span><span class="p">:</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="nt">vmImage</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">deployment</span><span class="p">:</span><span class="w"> </span><span class="l">VMDeploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">displayName</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy to VM</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">environment</span><span class="p">:</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">dev</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="nt">resourceType</span><span class="p">:</span><span class="w"> </span><span class="l">VirtualMachine</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nt">runOnce</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">deploy</span><span class="p">:</span><span class="w">   
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="l">echo &#34;Hello world&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>You can see it when the deploy runs on the VM:</p>
+<p><img loading="lazy" src="/env3.png" type="" alt=""  /></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Deploying a Linux VM to Azure with Terraform</title>
       <link>https://mischavandenburg.com/zet/terraform-linux-vm/</link>
