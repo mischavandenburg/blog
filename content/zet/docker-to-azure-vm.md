@@ -1,9 +1,10 @@
 ---
-title: How To Build and Deploy A Docker Container to An Azure VM Using Azure Pipelines 
+title: How to build and deploy a Docker container to an Azure VM using Azure Pipelines 
 date: 2023-01-08
 tags:
 - Azure
 - DevOps
+- How-To
 ---
 I wanted to build an application from a Dockerfile and deploy it to a VM. I used a default Svelte setup as an example app.
 
