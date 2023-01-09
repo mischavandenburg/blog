@@ -5,7 +5,24 @@
     <link>https://mischavandenburg.com/tags/zettelkasten/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automatically adding my recent blog posts to my GitHub Readme</title>
+      <link>https://mischavandenburg.com/zet/adding-posts-github-readme/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/adding-posts-github-readme/</guid>
+      <description>My friend gave me a nice tip for customizing the readme on my personal GitHub page. I discovered there is a whole world of plugins and customizations out there.
+I set up this one for my GitHub homepage. It uses a workflow to update the readme in my personal GitHub repo with the most recent posts from this blog, based on the RSS feed. Neat!
+It was very easy to set up.</description>
+      <content:encoded><![CDATA[<p>My friend gave me a nice tip for customizing the readme on my personal GitHub page. I discovered there is a whole world of plugins and customizations out there.</p>
+<p>I set up <a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">this one</a> for my GitHub homepage. It uses a workflow to update the readme in my personal GitHub repo with the most recent posts from this blog, based on the RSS feed. Neat!</p>
+<p>It was very easy to set up. If you don&rsquo;t have your own blog, you could configure it with a different RSS feed. Hacker News for example.</p>
+<p><a href="https://github.com/gautamkrishnar/blog-post-workflow">https://github.com/gautamkrishnar/blog-post-workflow</a></p>
+<p><a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">https://github.com/abhisheknaiidu/awesome-github-profile-readme</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Using &#34;//&#34; syntax as search and replace</title>
       <link>https://mischavandenburg.com/zet/slash-syntax-replace/</link>

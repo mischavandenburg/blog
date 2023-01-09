@@ -5,13 +5,13 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Azure</title>
-      <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      <title>Career</title>
+      <link>https://mischavandenburg.com/tags/career/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/azure/</guid>
+      <guid>https://mischavandenburg.com/tags/career/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -19,9 +19,29 @@
     <item>
       <title>Coding</title>
       <link>https://mischavandenburg.com/tags/coding/</link>
-      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/coding/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Zettelkasten</title>
+      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>https://mischavandenburg.com/tags/azure/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/azure/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -77,16 +97,6 @@
     </item>
     
     <item>
-      <title>Zettelkasten</title>
-      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
-      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Productivity</title>
       <link>https://mischavandenburg.com/tags/productivity/</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
@@ -132,16 +142,6 @@
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/book-notes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Career</title>
-      <link>https://mischavandenburg.com/tags/career/</link>
-      <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/career/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
