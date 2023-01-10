@@ -5,13 +5,13 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Career</title>
-      <link>https://mischavandenburg.com/tags/career/</link>
-      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      <title>Bash</title>
+      <link>https://mischavandenburg.com/tags/bash/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/career/</guid>
+      <guid>https://mischavandenburg.com/tags/bash/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -19,7 +19,7 @@
     <item>
       <title>Coding</title>
       <link>https://mischavandenburg.com/tags/coding/</link>
-      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/coding/</guid>
       <description></description>
@@ -27,11 +27,31 @@
     </item>
     
     <item>
+      <title>Linux</title>
+      <link>https://mischavandenburg.com/tags/linux/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/linux/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Zettelkasten</title>
       <link>https://mischavandenburg.com/tags/zettelkasten/</link>
-      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Career</title>
+      <link>https://mischavandenburg.com/tags/career/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/career/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -62,16 +82,6 @@
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/how-to/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://mischavandenburg.com/tags/linux/</link>
-      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/linux/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

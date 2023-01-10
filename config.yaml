@@ -43,15 +43,15 @@ params:
 
     assets:
         # disableFingerprinting: true
-        favicon: "<link / abs url>"
-        favicon16x16: "<link / abs url>"
-        favicon32x32: "<link / abs url>"
-        apple_touch_icon: "<link / abs url>"
-        safari_pinned_tab: "<link / abs url>"
+        favicon: "/bear.svg"
+        favicon16x16: "/bear.svg"
+        favicon32x32: "/bear.svg"
+        apple_touch_icon: "/bear.svg"
+        safari_pinned_tab: "/bear.svg"
 
     label:
         text: "Home"
-        icon: /apple-touch-icon.png
+        icon: "/bear.svg"
         iconHeight: 35
 
     # profile-mode
