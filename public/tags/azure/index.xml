@@ -5,7 +5,24 @@
     <link>https://mischavandenburg.com/tags/azure/</link>
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure DevOps Personal Access Tokens are always for authenticating into ADO</title>
+      <link>https://mischavandenburg.com/zet/azure-personal-access-tokens/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/azure-personal-access-tokens/</guid>
+      <description>The PAT (Personal Access Token) often comes up during practice tests for the AZ-400.
+One way to remember when to use a PAT is that these are only for authenticating into Azure DevOps, never to external services.
+For example, you might get a question on connecting your Azure DevOps project with a GitHub account from Azure DevOps, and PAT will show up as one of the alternative answers. By remembering that PATs are only for authenticating into ADO, you can elminate this alternative, and make your choice easier.</description>
+      <content:encoded><![CDATA[<p>The PAT (Personal Access Token) often comes up during practice tests for the AZ-400.</p>
+<p>One way to remember when to use a PAT is that these are only for authenticating <strong>into</strong> Azure DevOps, never to external services.</p>
+<p>For example, you might get a question on connecting your Azure DevOps project with a GitHub account from Azure DevOps, and PAT will show up as one of the alternative answers. By remembering that PATs are only for authenticating into ADO, you can elminate this alternative, and make your choice easier.</p>
+<p>Personal Access Tokens are an alternative to passwords but should be treated in exactly the same way.</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&amp;tabs=Windows">https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&amp;tabs=Windows</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>How to build and deploy a Docker container to an Azure VM using Azure Pipelines</title>
       <link>https://mischavandenburg.com/zet/docker-to-azure-vm/</link>

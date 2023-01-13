@@ -4,6 +4,7 @@ date: 2023-01-08
 tags:
 - Linux
 - Coding
+- Bash
 ---
 I've used zsh for nearly two years now. I have a custom setup with autocompletion and a good looking prompt. 
 
