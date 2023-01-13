@@ -5,7 +5,26 @@
     <link>https://mischavandenburg.com/tags/productivity/</link>
     <description>Recent content in Productivity on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Pomodoro technique has won me over</title>
+      <link>https://mischavandenburg.com/zet/pomodoro/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/pomodoro/</guid>
+      <description>I did a lot of studying last year, and I achieved a few tough certifications. I&amp;rsquo;ve always been good at studying and never struggled with getting decent grades in university. As a result, I never felt the need to use particular techniques to pass my tests. However, now that I need to do my studies combined with a full-time job, I did some optimization and looked into study techniques.
+One technique I&amp;rsquo;ve become very fond of is the Pomodoro Technique.</description>
+      <content:encoded><![CDATA[<p>I did a lot of studying last year, and I achieved a few tough certifications. I&rsquo;ve always been good at studying and never struggled with getting decent grades in university. As a result, I never felt the need to use particular techniques to pass my tests. However, now that I need to do my studies combined with a full-time job, I did some optimization and looked into study techniques.</p>
+<p>One technique I&rsquo;ve become very fond of is the Pomodoro Technique. I don&rsquo;t have any problems focusing for long periods, but I still decided to try it. I use the standard 25-minute study with a 5-minute break routine, and after four cycles, I take a 30-minute break.</p>
+<p>The Pomodoro technique has been a way to force myself to take breaks, which I wasn&rsquo;t used to. I used to chip away at a specific task for hours. However, I discovered that when I take a break, walk around for five minutes, and apply myself to the task again, my mind is in a fresh state and much more receptive to the information. Perhaps the time I spend studying after a break is actually more productive because the mind had a little rest.</p>
+<p>The technique also pushed my limits a bit more. I study more hours a day, considering that I also work full time. There is this moment where I want to quit studying, but I ask myself, &ldquo;do I have another Pomodoro in me?&rdquo;</p>
+<p>Now that I&rsquo;ve gotten used to breaking things up into 25-minute chunks of time, I started using the Pomodoro technique for other areas in life as well, such as blog writing or coding projects.</p>
+<p>You can use any tool you like to start using the Pomodoro technique and pick any break schedule that suits you. I&rsquo;ll link some resources below. All you need is some sort of timer. You can use a timer on your computer or a physical timer. I use the Forest app on my iPhone because it integrates with the iOs &ldquo;do not disturb&rdquo; and &ldquo;focus&rdquo; modes, so  I don&rsquo;t get any distracting notifications when I&rsquo;m on a Pomodoro.</p>
+<p><a href="https://science.nichd.nih.gov/confluence/display/newsletter/2020/05/07/The+Pomodoro+Technique%3A+An+Effective+Time+Management+Tool">https://science.nichd.nih.gov/confluence/display/newsletter/2020/05/07/The+Pomodoro+Technique%3A+An+Effective+Time+Management+Tool</a></p>
+<p><a href="https://www.youtube.com/watch?v=5WRO79zuJ4U">https://www.youtube.com/watch?v=5WRO79zuJ4U</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Fall in love with sed.</title>
       <link>https://mischavandenburg.com/zet/fall-in-love-with-sed/</link>
