@@ -8,7 +8,7 @@ tags:
 - Productivity
 - Career
 ---
-I'm typing this 30 minutes after I passed my AZ-400 exam. I'm sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust.
+I'm typing this 30 minutes after I passed my AZ-400 exam. I'm sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust. This one took about 70 hours of study.
 
 I started preparing immediately after passing my AZ-104 exam, which was a good move. The AZ-400 requires you to know many details about Azure services and how to access them. For example, Shared Access Signatures are only used for accessing storage accounts, but they came up quite often as alternative answers to the questions.
 
