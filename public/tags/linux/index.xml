@@ -104,6 +104,63 @@ Note that I&rsquo;m using the notation convention from the Arch Wiki where the &
     </item>
     
     <item>
+      <title>Setting up automated backups on my Arch Linux system with rsync and bash</title>
+      <link>https://mischavandenburg.com/zet/arch-backup-setup-1/</link>
+      <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/arch-backup-setup-1/</guid>
+      <description>For the past few months I&amp;rsquo;ve been stuyding every hour of free time that I had. Now that I reached my certification goals for now, I finally had some time to do a chore I had been meaning to do for a long time.
+My Arch Linux system is fully encrypted, and I make backups. But I was still doing it a bit haphazardly, usually every Friday. I fired the commmand of by hand.</description>
+      <content:encoded><![CDATA[<p>For the past few months I&rsquo;ve been stuyding every hour of free time that I had. Now that I reached my certification goals for now, I finally had some time to do a chore I had been meaning to do for a long time.</p>
+<p>My Arch Linux system is fully encrypted, and I make backups. But I was still doing it a bit haphazardly, usually every Friday. I fired the commmand of by hand.</p>
+<p>I wanted to automate this for a long time now, but I never got round to it. Today I made the first steps, but it is still in progress.</p>
+<p>Naturally, I could use a tool like Timeshift or something similar to schedule my backups. However, I want to do it myself using rsync because I want to fully understand what I am backing up, when, and where. Rsync is also used in our environment at work, so I assume it is more common in enterprise and production environments.</p>
+<h2 id="full-system-backup">full system backup</h2>
+<p>Before I was making a full system backup every Friday using this command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rsync -aAXH --info<span class="o">=</span>stats1,progress2 --exclude<span class="o">={</span><span class="s2">&#34;/dev/*&#34;</span>,<span class="s2">&#34;/proc/*&#34;</span>,<span class="s2">&#34;/sys/*&#34;</span>,<span class="s2">&#34;/tmp/*&#34;</span>,<span class="s2">&#34;/run/*&#34;</span>,<span class="s2">&#34;/mnt/*&#34;</span>,<span class="s2">&#34;/media/*&#34;</span>,<span class="s2">&#34;/lost+found&#34;</span>,<span class="s2">&#34;/home/*/.cache/*&#34;</span>,<span class="s2">&#34;/data-hdd/&#34;</span>,<span class="s2">&#34;/games/&#34;</span>,<span class="s2">&#34;/var/lib/docker/*&#34;</span>,<span class="s2">&#34;/home/mischa/music/*&#34;</span>,<span class="s2">&#34;/swapfile&#34;</span>, <span class="s2">&#34;/data-hdd2/&#34;</span>, <span class="s2">&#34;/data-hdd3/&#34;</span><span class="o">}</span> / /data-hdd/backups/arch-beast/01-01-23
+</span></span></code></pre></div><p>This command creates a full backup of my entire root filesystem, and it should be possible to restore my entire system by just reversing the target and destination in the end.</p>
+<p>However, as I was coming up with my new strategy, I thought this was overkill.</p>
+<h2 id="slimming-down">slimming down</h2>
+<p>All I really need to back up is my home directory and it would be nice to have my /etc directory backed up as well.</p>
+<p>So I wrote a simple shell script to do this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">BACKUPS_DESTINATION</span><span class="o">=</span><span class="s2">&#34;/data-hdd/backups/arch-beast&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># format:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># rsync -a --delete --quiet /path/to/backup /location/of/backup</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># stop the script if an error occurs</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -e
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rsync -a --delete --quiet --exclude<span class="o">=</span><span class="s2">&#34;{&#34;</span>/home/*/.cache/*<span class="s2">&#34;}&#34;</span> /home/mischa <span class="nv">$BACKUPS_DESTINATION</span>/home
+</span></span><span class="line"><span class="cl">rsync -a --delete --quiet /etc <span class="nv">$BACKUPS_DESTINATION</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Made backups on: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span> &gt;&gt; /var/log/backup.log
+</span></span></code></pre></div><p>-a flag from man page:</p>
+<p><em>&ldquo;This  is  equivalent to -rlptgoD.  It is a quick way of saying you want recursion and want to preserve almost everything.&rdquo;</em></p>
+<p>&ndash;delete: means files deleted on the source are to be deleted on the backup as well</p>
+<h2 id="automation">automation</h2>
+<p>I have a few scripts running in cronjobs on my system. I have a goal of putting them all in systemd timers, but I haven&rsquo;t gotten round to it yet. For now, I will just add my backup scripts to my existing cronjobs setup.</p>
+<p>To make my backups every day, I added this to my crontab:</p>
+<p><code>0 12 * * * /bin/bash /home/mischa/git/lab/bash/backup</code></p>
+<p>Every day it will make a backup to the same directory and update the changed files, or delete the files I deleted from my system.</p>
+<p>I also wanted to have a weekly backup happening on Monday.</p>
+<p>I will make a more elaborate script to make a weekly directory, and rotate it with a new directory every week. But for now, I just chose a quick solution by creating a weekly version of my script and running it every Monday.</p>
+<p>The only difference is the path:</p>
+<p><code>BACKUPS_DESTINATION=&quot;/data-hdd/backups/arch-beast/weekly&quot;</code></p>
+<p>In the crontab:</p>
+<p><code>0 10 * * 1 /bin/bash /home/mischa/git/lab/bash/backup-weekly</code></p>
+<h2 id="to-do">to do</h2>
+<ul>
+<li>set up weekly backup in the same script</li>
+<li>create error handling and improve logging</li>
+<li>set up in systemd timers instead of crontab</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Using parameter expansion as search and replace</title>
       <link>https://mischavandenburg.com/zet/slash-syntax-replace/</link>
       <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
