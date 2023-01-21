@@ -7,7 +7,7 @@ tags:
 ---
 For the past few months I've been stuyding every hour of free time that I had. Now that I reached my certification goals for now, I finally had some time to do a chore I had been meaning to do for a long time.
 
-My Arch Linux system is fully encrypted, and I make backups. But I was still doing it a bit haphazardly, usually every Friday. I fired the commmand of by hand. 
+My Arch Linux system is fully encrypted, and I make backups. But I was still doing it a bit haphazardly, usually every Friday.
 
 I wanted to automate this for a long time now, but I never got round to it. Today I made the first steps, but it is still in progress.
 

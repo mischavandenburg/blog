@@ -13,9 +13,10 @@
       
       <guid>https://mischavandenburg.com/zet/arch-backup-setup-1/</guid>
       <description>For the past few months I&amp;rsquo;ve been stuyding every hour of free time that I had. Now that I reached my certification goals for now, I finally had some time to do a chore I had been meaning to do for a long time.
-My Arch Linux system is fully encrypted, and I make backups. But I was still doing it a bit haphazardly, usually every Friday. I fired the commmand of by hand.</description>
+My Arch Linux system is fully encrypted, and I make backups. But I was still doing it a bit haphazardly, usually every Friday.
+I wanted to automate this for a long time now, but I never got round to it.</description>
       <content:encoded><![CDATA[<p>For the past few months I&rsquo;ve been stuyding every hour of free time that I had. Now that I reached my certification goals for now, I finally had some time to do a chore I had been meaning to do for a long time.</p>
-<p>My Arch Linux system is fully encrypted, and I make backups. But I was still doing it a bit haphazardly, usually every Friday. I fired the commmand of by hand.</p>
+<p>My Arch Linux system is fully encrypted, and I make backups. But I was still doing it a bit haphazardly, usually every Friday.</p>
 <p>I wanted to automate this for a long time now, but I never got round to it. Today I made the first steps, but it is still in progress.</p>
 <p>Naturally, I could use a tool like Timeshift or something similar to schedule my backups. However, I want to do it myself using rsync because I want to fully understand what I am backing up, when, and where. Rsync is also used in our environment at work, so I assume it is more common in enterprise and production environments.</p>
 <h2 id="full-system-backup">full system backup</h2>
