@@ -3,8 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/articles/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/article/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/how-to/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
     <lastmod>2023-01-14T00:00:00+00:00</lastmod>
@@ -21,13 +42,7 @@
     <loc>https://mischavandenburg.com/tags/study/</loc>
     <lastmod>2023-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
-    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/azure-personal-access-tokens/</loc>
@@ -45,9 +60,6 @@
     <loc>https://mischavandenburg.com/tags/coding/</loc>
     <lastmod>2023-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
-    <lastmod>2023-01-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/slash-syntax-replace/</loc>
     <lastmod>2023-01-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -61,9 +73,6 @@
     <lastmod>2023-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/azure-pipelines-deploy-vm/</loc>
-    <lastmod>2023-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/how-to/</loc>
     <lastmod>2023-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/terraform-linux-vm/</loc>
@@ -110,9 +119,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/sdk/</loc>
     <lastmod>2023-01-03T07:50:55+01:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/articles/</loc>
-    <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/copyright-license/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
