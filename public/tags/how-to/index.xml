@@ -66,7 +66,7 @@ Note that I&rsquo;m using the notation convention from the Arch Wiki where the &
 </span></span><span class="line"><span class="cl">└─sde1          8:65   <span class="m">0</span> 931.5G  <span class="m">0</span> part
 </span></span><span class="line"><span class="cl">  └─data-hdd3 254:4    <span class="m">0</span> 931.5G  <span class="m">0</span> crypt /data-hdd3
 </span></span></code></pre></div><h2 id="auto-mounting-at-boot">Auto mounting at boot</h2>
-<p>We&rsquo;ll need to add this disk to the grub parameters, /etc/crypttab and /etc/fstab. I haven&rsquo;t gotten round to switching to systemd boot yet, but I will do so very soon.</p>
+<p>We&rsquo;ll need to add this disk to the kerenel parameters, /etc/crypttab and /etc/fstab. I haven&rsquo;t gotten round to switching to systemd boot yet, but I will do so very soon.</p>
 <p>Open tmux and split the pane. In the bottom pane, run <code>lsblk -f</code> to have all the UUIDs listed. Then open the grub configuration file with <code>sudoedit /etc/default/grub</code></p>
 <p><img loading="lazy" src="/luks1.png" type="" alt=""  /></p>
 <p>You can discern which uuid to add from the listed examples. For my new disk, I needed to add the following:</p>

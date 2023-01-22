@@ -80,7 +80,7 @@ sde             8:64   0 931.5G  0 disk
 
 ## Auto mounting at boot
 
-We'll need to add this disk to the grub parameters, /etc/crypttab and /etc/fstab. I haven't gotten round to switching to systemd boot yet, but I will do so very soon.
+We'll need to add this disk to the kerenel parameters, /etc/crypttab and /etc/fstab. I haven't gotten round to switching to systemd boot yet, but I will do so very soon.
 
 Open tmux and split the pane. In the bottom pane, run `lsblk -f` to have all the UUIDs listed. Then open the grub configuration file with `sudoedit /etc/default/grub`
 
