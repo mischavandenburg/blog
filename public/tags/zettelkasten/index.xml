@@ -5,7 +5,28 @@
     <link>https://mischavandenburg.com/tags/zettelkasten/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 21 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get a free 4 CPU 24GB Ram VM on from Oracle</title>
+      <link>https://mischavandenburg.com/zet/free-oracle-vm/</link>
+      <pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/free-oracle-vm/</guid>
+      <description>A few weeks ago someone gave me a tip. Oracle actually has a really good free tier offering.
+You can host a 4CPU 24GB VM for free!
+This is perfect for a lab environment.
+I spent my evening creating the VM and setting up a kubernetes cluster from scratch.
+Use this video to claim your free vm:
+https://www.youtube.com/watch?v=NKc3k7xceT8</description>
+      <content:encoded><![CDATA[<p>A few weeks ago someone gave me a tip. Oracle actually has a really good free tier offering.</p>
+<p>You can host a 4CPU 24GB VM for free!</p>
+<p>This is perfect for a lab environment.</p>
+<p>I spent my evening creating the VM and setting up a kubernetes cluster from scratch.</p>
+<p>Use this video to claim your free vm:</p>
+<p><a href="https://www.youtube.com/watch?v=NKc3k7xceT8">https://www.youtube.com/watch?v=NKc3k7xceT8</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Setting up automated backups on my Arch Linux system with rsync and bash</title>
       <link>https://mischavandenburg.com/zet/arch-backup-setup-1/</link>
