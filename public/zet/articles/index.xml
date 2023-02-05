@@ -5,7 +5,101 @@
     <link>https://mischavandenburg.com/zet/articles/</link>
     <description>Recent content in All Articles on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 21 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up a simple cluster on an Ubuntu 20.04 VM with containerd and flannel</title>
+      <link>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</guid>
+      <description>You can get a free 24GB ram VM from Oracle. What better place for your own Kubernetes lab that is always available? See this article to create your VM.
+Here are the steps I took to install a single node kubernetes cluster on the Ubuntu VM.
+Installation sudo apt-get update sudo apt install apt-transport-https curl Install containerd
+sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg echo &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.</description>
+      <content:encoded><![CDATA[<p>You can get a free 24GB ram VM from Oracle. What better place for your own Kubernetes lab that is always available? See <a href="/zet/free-oracle-vm.md">this article</a> to create your VM.</p>
+<p>Here are the steps I took to install a single node kubernetes cluster on the Ubuntu VM.</p>
+<h2 id="installation">Installation</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt install apt-transport-https curl
+</span></span></code></pre></div><p>Install containerd</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /etc/apt/keyrings
+</span></span><span class="line"><span class="cl">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&#34;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install containerd.io
+</span></span></code></pre></div><p>Remove the default containerd configuration, because it creates errors when running kubeadm init.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rm -f /etc/containerd/config.toml
+</span></span><span class="line"><span class="cl">sudo systemctl status containerd.service
+</span></span></code></pre></div><p>Install Kubernetes</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main&#34;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/kubernetes.list
+</span></span><span class="line"><span class="cl">sudo apt install kubeadm kubelet kubectl kubernetes-cni
+</span></span></code></pre></div><p>Avoid the error &ldquo;/proc/sys/net/bridge/bridge-nf-call-iptables does not exist&rdquo; on kubeinit (reference <a href="https://github.com/kubernetes/kubeadm/issues/1062)">https://github.com/kubernetes/kubeadm/issues/1062)</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo modprobe br_netfilter
+</span></span><span class="line"><span class="cl">sudo <span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/ip_forward
+</span></span></code></pre></div><h2 id="start-the-cluster">Start the cluster</h2>
+<p>Initialize the Kubernetes cluster for use with Flannel</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo kubeadm init --pod-network-cidr<span class="o">=</span>10.244.0.0/16
+</span></span></code></pre></div><p>Copy to config as kubadm command says</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p <span class="nv">$HOME</span>/.kube
+</span></span><span class="line"><span class="cl">sudo cp -i /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
+</span></span><span class="line"><span class="cl">sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="nv">$HOME</span>/.kube/config
+</span></span></code></pre></div><p>Usually you wouldn&rsquo;t run pods on your control-plane node. However, since we are running a lab environment on a single VM, it&rsquo;s ok. To be able to schedule pods on the control-plane node, we need to remove the NoSchedule taint:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl taint node instance-20230205-0909 node-role.kubernetes.io/control-plane:NoSchedule-
+</span></span></code></pre></div><h2 id="add-a-container-networking-interface">Add a Container Networking Interface</h2>
+<p>Install Flannel to the cluster (reference <a href="https://github.com/flannel-io/flannel">https://github.com/flannel-io/flannel</a>)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+</span></span></code></pre></div><h2 id="set-up-bashrc">Set up bashrc</h2>
+<p>Next, edit your bashrc with <code>vim ~/.bashrc</code> and add these lines:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> &lt;<span class="o">(</span>kubectl completion bash<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">k</span><span class="o">=</span>kubectl
+</span></span><span class="line"><span class="cl"><span class="nb">complete</span> -o default -F __start_kubectl k
+</span></span></code></pre></div><p>Then run <code>source ~/.bashrc</code></p>
+<p>This configures autocompletion for kubectl, and sets up &ldquo;k&rdquo; as an alias for kubectl.</p>
+<h2 id="lets-run-a-pod">Let&rsquo;s run a pod!</h2>
+<p>To see all pods running on your cluster:</p>
+<p><code>k get pods -A</code></p>
+<p>Now let&rsquo;s run a simple nginx pod and expose it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k run nginx --image<span class="o">=</span>nginx
+</span></span><span class="line"><span class="cl">k expose pod nginx --port<span class="o">=</span><span class="m">80</span> --type<span class="o">=</span>NodePort
+</span></span></code></pre></div><p>To find out which port it&rsquo;s running on, run <code>k get service</code>. In the PORT(S) column, there will be an nginx service exposing port 80 to a random port on the node in the range of 30000-32767.</p>
+<p>In my case, it says &ldquo;80:31878/TCP&rdquo;</p>
+<p>To see if we can reach the container, run:</p>
+<p><code>curl localhost:31878</code></p>
+<p>If everything went well, you will get back the HTML of the default index page served by NGINX:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ubuntu@instance-20230205-0909:~$ curl localhost:31878
+</span></span><span class="line"><span class="cl">&lt;!DOCTYPE html&gt;
+</span></span><span class="line"><span class="cl">&lt;html&gt;
+</span></span><span class="line"><span class="cl">&lt;head&gt;
+</span></span><span class="line"><span class="cl">&lt;title&gt;Welcome to nginx!&lt;/title&gt;
+</span></span><span class="line"><span class="cl">&lt;style&gt;
+</span></span><span class="line"><span class="cl">html <span class="o">{</span> color-scheme: light dark<span class="p">;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">body <span class="o">{</span> width: 35em<span class="p">;</span> margin: <span class="m">0</span> auto<span class="p">;</span>
+</span></span><span class="line"><span class="cl">font-family: Tahoma, Verdana, Arial, sans-serif<span class="p">;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">&lt;/style&gt;
+</span></span><span class="line"><span class="cl">&lt;/head&gt;
+</span></span><span class="line"><span class="cl">&lt;body&gt;
+</span></span><span class="line"><span class="cl">&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
+</span></span><span class="line"><span class="cl">&lt;p&gt;If you see this page, the nginx web server is successfully installed and
+</span></span><span class="line"><span class="cl">working. Further configuration is required.&lt;/p&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;p&gt;For online documentation and support please refer to
+</span></span><span class="line"><span class="cl">&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;http://nginx.org/&#34;</span>&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;
+</span></span><span class="line"><span class="cl">Commercial support is available at
+</span></span><span class="line"><span class="cl">&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;http://nginx.com/&#34;</span>&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;p&gt;&lt;em&gt;Thank you <span class="k">for</span> using nginx.&lt;/em&gt;&lt;/p&gt;
+</span></span><span class="line"><span class="cl">&lt;/body&gt;
+</span></span><span class="line"><span class="cl">&lt;/html&gt;
+</span></span></code></pre></div><p>To reach the pod from the browser, open your port in the security group configured for the subnet of your VM.</p>
+<p>Good luck with your new lab environment!</p>
+<h2 id="links">Links</h2>
+<p><a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/</a>
+<a href="https://kubernetes.io/docs/concepts/services-networking/service/">https://kubernetes.io/docs/concepts/services-networking/service/</a>
+<a href="https://github.com/flannel-io/flannel">https://github.com/flannel-io/flannel</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Setting up a new LUKS encrypted disk with dm-crypt in Arch Linux</title>
       <link>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</link>
