@@ -49,6 +49,16 @@ sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubu
 </span></span></code></pre></div><h2 id="add-a-container-networking-interface">Add a Container Networking Interface</h2>
 <p>Install Flannel to the cluster (reference <a href="https://github.com/flannel-io/flannel">https://github.com/flannel-io/flannel</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+</span></span></code></pre></div><h2 id="configure-the-server-firewall">Configure the server firewall</h2>
+<p>We use Uncomplicated Firewall. Run these commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw allow <span class="m">22</span>
+</span></span><span class="line"><span class="cl">sudo ufw allow 6443/tcp
+</span></span><span class="line"><span class="cl">sudo ufw allow 2379:2380/tcp
+</span></span><span class="line"><span class="cl">sudo ufw allow 10250/tcp
+</span></span><span class="line"><span class="cl">sudo ufw allow 10259/tcp
+</span></span><span class="line"><span class="cl">sudo ufw allow 10257/tcp
+</span></span><span class="line"><span class="cl">sudo ufw <span class="nb">enable</span>
+</span></span><span class="line"><span class="cl">sudo ufw status
 </span></span></code></pre></div><h2 id="set-up-bashrc">Set up bashrc</h2>
 <p>Next, edit your bashrc with <code>vim ~/.bashrc</code> and add these lines:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> &lt;<span class="o">(</span>kubectl completion bash<span class="o">)</span>
@@ -94,9 +104,9 @@ sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubu
 </span></span></code></pre></div><p>To reach the pod from the browser, open your port in the security group configured for the subnet of your VM.</p>
 <p>Good luck with your new lab environment!</p>
 <h2 id="links">Links</h2>
-<p><a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/</a>
-<a href="https://kubernetes.io/docs/concepts/services-networking/service/">https://kubernetes.io/docs/concepts/services-networking/service/</a>
-<a href="https://github.com/flannel-io/flannel">https://github.com/flannel-io/flannel</a></p>
+<p><a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/</a></p>
+<p><a href="https://kubernetes.io/docs/concepts/services-networking/service/">https://kubernetes.io/docs/concepts/services-networking/service/</a></p>
+<p><a href="https://github.com/flannel-io/flannel">https://github.com/flannel-io/flannel</a></p>
 ]]></content:encoded>
     </item>
     

@@ -79,6 +79,21 @@ Install Flannel to the cluster (reference https://github.com/flannel-io/flannel)
 ```bash
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 ```
+## Configure the server firewall
+
+We use Uncomplicated Firewall. Run these commands:
+
+```bash
+sudo ufw allow 22
+sudo ufw allow 6443/tcp
+sudo ufw allow 2379:2380/tcp
+sudo ufw allow 10250/tcp
+sudo ufw allow 10259/tcp
+sudo ufw allow 10257/tcp
+sudo ufw enable
+sudo ufw status
+```
+
 ## Set up bashrc
 
 Next, edit your bashrc with `vim ~/.bashrc` and add these lines:
@@ -149,5 +164,7 @@ Good luck with your new lab environment!
 ## Links
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+
 https://kubernetes.io/docs/concepts/services-networking/service/
+
 https://github.com/flannel-io/flannel
