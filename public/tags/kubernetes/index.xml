@@ -7,6 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Lab VM project - Install ArgoCD to your Kubernetes cluster</title>
+      <link>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</guid>
+      <description>This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.
+Install argocd and argocd cli kubectl create namespace argocd kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml My VM is running on arm architecture, so I need these commands to install the argocd cli on ubuntu.
+curl -sSL -o argocd-linux-arm64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64 sudo install -m 555 argocd-linux-arm64 /usr/local/bin/argocd rm argocd-linux-arm64 Change the service type to LoadBalancer</description>
+      <content:encoded><![CDATA[<p>This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.</p>
+<h2 id="install-argocd-and-argocd-cli">Install argocd and argocd cli</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create namespace argocd
+</span></span><span class="line"><span class="cl">kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+</span></span></code></pre></div><p>My VM is running on arm architecture, so I need these commands to install the argocd cli on ubuntu.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -sSL -o argocd-linux-arm64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64
+</span></span><span class="line"><span class="cl">sudo install -m <span class="m">555</span> argocd-linux-arm64 /usr/local/bin/argocd
+</span></span><span class="line"><span class="cl">rm argocd-linux-arm64
+</span></span></code></pre></div><p>Change the service type to LoadBalancer</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl patch svc argocd-server -n argocd -p <span class="s1">&#39;{&#34;spec&#34;: {&#34;type&#34;: &#34;LoadBalancer&#34;}}&#39;</span>
+</span></span></code></pre></div><p>Retrieve your passsword</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl -n argocd get secret argocd-initial-admin-secret -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&#34;{.data.password}&#34;</span> <span class="p">|</span> base64 -d<span class="p">;</span> <span class="nb">echo</span>
+</span></span></code></pre></div><p>Find out which port argocd-server is running on</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k get svc -A
+</span></span></code></pre></div><p>Look for the argocd-server and see where port 80 is mapped to. In my case, it is 80:31372.</p>
+<p>Open this port in your network security group for your VM, and you should be able to log in on ArgoCD in the browser by entering the VM ip followed by the port:</p>
+<p><code>http://143.44.179.11:31372</code></p>
+<h2 id="links">Links</h2>
+<p><a href="https://argo-cd.readthedocs.io/en/stable/getting_started/">https://argo-cd.readthedocs.io/en/stable/getting_started/</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Setting up a Kubernetes cluster on an Ubuntu 20.04 VM with containerd and flannel</title>
       <link>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</link>
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>

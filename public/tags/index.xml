@@ -7,11 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>ArgoCD</title>
+      <link>https://mischavandenburg.com/tags/argocd/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/argocd/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Article</title>
       <link>https://mischavandenburg.com/tags/article/</link>
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/article/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>GitOps</title>
+      <link>https://mischavandenburg.com/tags/gitops/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/gitops/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
