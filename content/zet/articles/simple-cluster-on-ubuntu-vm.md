@@ -1,5 +1,5 @@
 ---
-title: Setting up a simple cluster on an Ubuntu 20.04 VM with containerd and flannel
+title: Setting up a Kubernetes cluster on an Ubuntu 20.04 VM with containerd and flannel
 date: 2023-02-05
 tags:
 - Article

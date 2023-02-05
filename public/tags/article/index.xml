@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/article/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Setting up a simple cluster on an Ubuntu 20.04 VM with containerd and flannel</title>
+      <title>Setting up a Kubernetes cluster on an Ubuntu 20.04 VM with containerd and flannel</title>
       <link>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</link>
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       
