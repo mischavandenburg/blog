@@ -3,8 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-02-05T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/career/</loc>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/new-job-2023/</loc>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/personal/</loc>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/</loc>
     <lastmod>2023-02-05T00:00:00+00:00</lastmod>
@@ -30,16 +48,7 @@
     <loc>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</loc>
     <lastmod>2023-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2023-02-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/free-oracle-vm/</loc>
-    <lastmod>2023-02-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
     <lastmod>2023-02-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/how-to/</loc>
@@ -52,9 +61,6 @@
     <lastmod>2023-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
-    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/career/</loc>
     <lastmod>2023-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/passed-az-400/</loc>
@@ -145,9 +151,6 @@
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</loc>
-    <lastmod>2023-01-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/personal/</loc>
     <lastmod>2023-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/call-stacks/</loc>

@@ -5,7 +5,22 @@
     <link>https://mischavandenburg.com/tags/zettelkasten/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New job!</title>
+      <link>https://mischavandenburg.com/zet/new-job-2023/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/new-job-2023/</guid>
+      <description>Last week I accepted a job offer! I&amp;rsquo;ve been hired as a DevOps Engineer by Fullstaq.
+Fullstaq specialises in Kubernetes and Cloud Native, so I&amp;rsquo;m really happy I could join their team. I&amp;rsquo;ll be doing projects for a variety of clients, and I think it will be a great place to learn and gain more experience in the Kubernetes and CNCF space.
+Fullstaq has been delightfully welcoming and great to work with so far.</description>
+      <content:encoded><![CDATA[<p>Last week I accepted a job offer! I&rsquo;ve been hired as a DevOps Engineer by <a href="https://fullstaq.com">Fullstaq</a>.</p>
+<p>Fullstaq specialises in Kubernetes and Cloud Native, so I&rsquo;m really happy I could join their team. I&rsquo;ll be doing projects for a variety of clients, and I think it will be a great place to learn and gain more experience in the Kubernetes and CNCF space.</p>
+<p>Fullstaq has been delightfully welcoming and great to work with so far. The future looks bright!</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Get a free 4 CPU 24GB Ram VM on from Oracle</title>
       <link>https://mischavandenburg.com/zet/free-oracle-vm/</link>

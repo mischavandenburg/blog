@@ -5,7 +5,37 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Career</title>
+      <link>https://mischavandenburg.com/tags/career/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/career/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>https://mischavandenburg.com/tags/personal/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/personal/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Zettelkasten</title>
+      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
+      <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>ArgoCD</title>
       <link>https://mischavandenburg.com/tags/argocd/</link>
@@ -57,16 +87,6 @@
     </item>
     
     <item>
-      <title>Zettelkasten</title>
-      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
-      <pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>How-To</title>
       <link>https://mischavandenburg.com/tags/how-to/</link>
       <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
@@ -82,16 +102,6 @@
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/azure/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Career</title>
-      <link>https://mischavandenburg.com/tags/career/</link>
-      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/career/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -172,16 +182,6 @@
       <pubDate>Tue, 03 Jan 2023 08:41:09 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/tags/explanations/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Personal</title>
-      <link>https://mischavandenburg.com/tags/personal/</link>
-      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/personal/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
