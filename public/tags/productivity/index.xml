@@ -7,6 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Controlling Apple Music with hotkeys from anywhere on MacOS</title>
+      <link>https://mischavandenburg.com/zet/apple-music-hotkeys/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/apple-music-hotkeys/</guid>
+      <description>I&amp;rsquo;m a little obsessed with controlling everything with my keyboard. That&amp;rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.
+One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;m a little obsessed with controlling everything with my keyboard. That&rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.</p>
+<p>One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.</p>
+<p>I started using Apple Music as my music app but it does not have any global hotkeys, and it makes you use a widget with the mouse.</p>
+<h1 id="skhd">skhd</h1>
+<p>I solved the problem using <a href="https://github.com/koekeishiya/skhd">skhd</a>. This is a free hotkey daemon for MacOS. To install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install koekeishiya/formulae/skhd
+</span></span><span class="line"><span class="cl">brew services start skhd
+</span></span></code></pre></div><p>Then I added the following to my skhd config file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Control apple music globally</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Based on Aesome-copycats theme for AesomeWM</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ctrl + cmd + fn - up : osascript -e <span class="s1">&#39;tell app &#34;Music&#34; to playpause&#39;</span>
+</span></span><span class="line"><span class="cl">ctrl + cmd + fn - left : osascript -e <span class="s1">&#39;tell app &#34;Music&#34; to back track&#39;</span>
+</span></span><span class="line"><span class="cl">ctrl + cmd + fn - right : osascript -e <span class="s1">&#39;tell app &#34;Music&#34; to play next track&#39;</span>
+</span></span></code></pre></div><h1 id="links">links</h1>
+<p><a href="https://github.com/koekeishiya/skhd">https://github.com/koekeishiya/skhd</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>New Laptop: Moving to MacOS</title>
       <link>https://mischavandenburg.com/zet/move-to-macos/</link>
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
