@@ -5,7 +5,27 @@
     <link>https://mischavandenburg.com/</link>
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 22 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Laptop: Moving to MacOS</title>
+      <link>https://mischavandenburg.com/zet/move-to-macos/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/move-to-macos/</guid>
+      <description>My new employer kindly sponsored me with a new 16-inch MacBook Pro M2. I chose 32GB Ram and the base model with 12 CPU and 19 GPU cores and 1TB of hard disk. These specifications will suit my needs well.
+I&amp;rsquo;ve been daily driving Linux for a year now, and it has been such an incredible journey. Building my own Arch Linux system taught me much about Linux and what it means to maintain a system yourself.</description>
+      <content:encoded><![CDATA[<p>My new employer kindly sponsored me with a new 16-inch MacBook Pro M2. I chose 32GB Ram and the base model with 12 CPU and 19 GPU cores and 1TB of hard disk. These specifications will suit my needs well.</p>
+<p>I&rsquo;ve been daily driving Linux for a year now, and it has been such an incredible journey. Building my own Arch Linux system taught me much about Linux and what it means to maintain a system yourself. I will undoubtedly miss my custom AwesomeWM configuration and the freedom that Arch provides.</p>
+<p>Technically I could have chosen a Windows laptop and installed Linux on it. But I went for a Mac for the following reasons:</p>
+<ul>
+<li>Compatibility. I&rsquo;ll be doing contracts for various customers, so I&rsquo;ll likely run into environments where I&rsquo;ll need to use some software, such as a VPN that is not supported on Linux. MacOS will always be compatible everywhere.</li>
+<li>Portability. I&rsquo;ll probably be going to the office multiple times a week, and using a MacBook as a daily driver will allow me to take my full setup with me everywhere. I also plan to spend some time abroad, and using a MacBook as a daily driver will allow me to work remotely for extended periods.</li>
+<li>Stability. Even though my Linux systems never really broke on me, there is always a possibility. I don&rsquo;t have to worry about that with MacOS.</li>
+</ul>
+<p>Even though I&rsquo;ll be switching to my MacBook as my primary workstation, I will continue using Linux for my hobby projects and home lab. So there will be plenty of opportunity to keep growing in that area in the future.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>New job!</title>
       <link>https://mischavandenburg.com/zet/new-job-2023/</link>
