@@ -5,7 +5,23 @@
     <link>https://mischavandenburg.com/tags/coding/</link>
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I started to learn Go!</title>
+      <link>https://mischavandenburg.com/zet/start-learning-go/</link>
+      <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/start-learning-go/</guid>
+      <description>For month&amp;rsquo;s I considered to learn Go, and today I finally started.
+I doubted for a long time, because I figured it would be better to dive deeper into Python. However, when I reflected on it, I realized I&amp;rsquo;m able to do the things I want to do in Python. I can create scripts to manipulate data, and I can string different tools and libraries together if I need to. So how deep do I actually need to go as a DevOps Engineer?</description>
+      <content:encoded><![CDATA[<p>For month&rsquo;s I considered to learn Go, and today I finally started.</p>
+<p>I doubted for a long time, because I figured it would be better to dive deeper into Python. However, when I reflected on it, I realized I&rsquo;m able to do the things I want to do in Python. I can create scripts to manipulate data, and I can string different tools and libraries together if I need to. So how deep do I actually need to go as a DevOps Engineer?</p>
+<p>The breakthrough came when I discovered this website: <a href="https://goodfirstissue.dev/language/go">Good First Issue</a>. It&rsquo;s a collection of issues in open source projects which are suitable for people who are starting out. Scrolling through the available projects for Python and Go, I noticed I got a lot more energy from the things I saw in the Go list: Grafana, ArgoCD, Kubernetes. I probably have a long way to go before I can make any meaningful contributions, but my goal is to be able to contribute to open source in the future.</p>
+<p>Additionally, I&rsquo;m going to focus my career in the direction of Kubernetes and CNCF, where Go is mostly used.</p>
+<p>I have a week off before I start my new job so I&rsquo;m going to spend a few hours a day to get a good start, and when I&rsquo;m working full time again, my plan is to spend at least one pomodoro (25 minutes) a day on Go. Small increments will add up to something big over time.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Controlling Apple Music with hotkeys from anywhere on MacOS</title>
       <link>https://mischavandenburg.com/zet/apple-music-hotkeys/</link>
