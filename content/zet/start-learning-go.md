@@ -16,3 +16,5 @@ The breakthrough came when I discovered this website: [Good First Issue](https:/
 Additionally, I'm going to focus my career in the direction of Kubernetes and CNCF, where Go is mostly used. 
 
 I have a week off before I start my new job so I'm going to spend a few hours a day to get a good start, and when I'm working full time again, my plan is to spend at least one pomodoro (25 minutes) a day on Go. Small increments will add up to something big over time.
+
+I created [a new GitHub repo](https://github.com/mischavandenburg/go) where I'll be uploading all my practice code and projects.

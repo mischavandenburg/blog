@@ -5,11 +5,11 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding</title>
       <link>https://mischavandenburg.com/tags/coding/</link>
-      <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/coding/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>Go</title>
       <link>https://mischavandenburg.com/tags/go/</link>
-      <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/go/</guid>
       <description></description>
@@ -27,9 +27,19 @@
     </item>
     
     <item>
+      <title>Study</title>
+      <link>https://mischavandenburg.com/tags/study/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/study/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Zettelkasten</title>
       <link>https://mischavandenburg.com/tags/zettelkasten/</link>
-      <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
       <description></description>
@@ -142,16 +152,6 @@
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/azure/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Study</title>
-      <link>https://mischavandenburg.com/tags/study/</link>
-      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/study/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

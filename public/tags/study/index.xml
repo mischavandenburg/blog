@@ -5,7 +5,85 @@
     <link>https://mischavandenburg.com/tags/study/</link>
     <description>Recent content in Study on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 14 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Go Day 1: Notes</title>
+      <link>https://mischavandenburg.com/zet/go-day-1/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-day-1/</guid>
+      <description>The CTO of my new company recommended the Udemy course &amp;ldquo;Go: The Complete Developer&amp;rsquo;s Guide (Golang)&amp;rdquo;. I started today and here are some notes I made.
+Hello World in Go We start by writing a Hello World and studying all the elements.
+package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } How do we run code? go run main.go runs the program go build main.go compiles it to an executable</description>
+      <content:encoded><![CDATA[<p>The CTO of my new company recommended the Udemy course &ldquo;Go: The Complete Developer&rsquo;s Guide (Golang)&rdquo;. I started today and here are some notes I made.</p>
+<h1 id="hello-world-in-go">Hello World in Go</h1>
+<p>We start by writing a Hello World and studying all the elements.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello World!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="how-do-we-run-code">How do we run code?</h3>
+<p><code>go run main.go</code> runs the program
+<code>go build main.go</code> compiles it to an executable</p>
+<h3 id="what-does-package-main-mean">What does package main mean?</h3>
+<p><code>package main</code></p>
+<p>A package is a collection of common source code files.</p>
+<p>One app is a package. If you have multiple files in a folder, such as helper.go or support.go, they should have <code>package main</code> to indicate that they belong to package main.</p>
+<p>*Why do we call it main?</p>
+<p>There are two types of packages.</p>
+<ul>
+<li>executable
+<ul>
+<li>generates file that can be run</li>
+</ul>
+</li>
+<li>reusable
+<ul>
+<li>used as &ldquo;helpers&rdquo;</li>
+<li>reusable logic</li>
+</ul>
+</li>
+</ul>
+<p>When you call the package <code>main</code>, you are telling the compiler it needs to be compiled as an executable. If it  has a different name, it won&rsquo;t generate an executable. Main is sacred.</p>
+<p>Any other name is a reusable or dependency type package (helper code).</p>
+<p>Another important point is that whenever you create an executable package, it must always have a func called &lsquo;main&rsquo;.</p>
+<h3 id="what-does-import-fmt-mean">What does import fmt mean?</h3>
+<p>The import statement is used to give our package access to code written in another package.  You are saying &ldquo;give access to all code in fmt&rdquo;. Fmt is a standard library package included in Go. Short for format. Used to print out information to the terminal.</p>
+<p>Other packages included in the standard library of go are debug, math, encoding, crypto, io.</p>
+<p>golang.org/pkg for documentation on standard library packages for Go.</p>
+<p>A lot of learning go is learning the standard packages and how they work.</p>
+<h3 id="organizing-the-maingo-file">Organizing the main.go file</h3>
+<p>It is the same for every go file, just like the code example at the top of the page. Package main, import fmt, and func main.</p>
+<h1 id="variable-declarations">variable declarations</h1>
+<p><code>var card string = &quot;Ace of Spades&quot;</code></p>
+<p>var: we are about to create a new variable</p>
+<p>card: name</p>
+<p>string = telling the go compiler that only strings will be assigned to this variable</p>
+<h3 id="alternatively">Alternatively:</h3>
+<p><code>card := &quot;Ace of Spades&quot;</code></p>
+<p>Here you are relying on the compiler to figure out what type it is.</p>
+<p>Compiler will infer the type.</p>
+<p>We only use this := assignment for <strong>new variables</strong></p>
+<p>If you want to assign a value to a variable after it is declared, you just do <code>card = &quot;Five of Diamonds&quot;</code></p>
+<h3 id="go-types">Go types</h3>
+<p>Go is  a statically typed language.</p>
+<p>Javascript, python are dynamically typed language. We don&rsquo;t care what value is assigned to a variable.</p>
+<p>You always a assign a type to a variable in Go.</p>
+<p>Basic go types:</p>
+<ul>
+<li>bool</li>
+<li>string</li>
+<li>into</li>
+<li>float64 : a number with a decimal after it.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>I passed the AZ-400 DevOps Expert today</title>
       <link>https://mischavandenburg.com/zet/passed-az-400/</link>
