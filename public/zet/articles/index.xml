@@ -5,7 +5,358 @@
     <link>https://mischavandenburg.com/zet/articles/</link>
     <description>Recent content in All Articles on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes: Fundamentals of Bicep</title>
+      <link>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</guid>
+      <description>I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.
+Why Bicep? Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ll be working with Bicep during my next contract, so I&rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.</p>
+<h1 id="why-bicep">Why Bicep?</h1>
+<p>Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.</p>
+<p>Bicep templates are transpiled into JSON objects, which are sent to the Azure API to create resources with the Azure Resource Manager.</p>
+<h1 id="fundamentals-of-bicep-notes">Fundamentals of Bicep Notes</h1>
+<blockquote>
+<p>A <em>parameter</em> lets you bring in values from outside the template file. For example, if someone is manually deploying the template by using the Azure CLI or Azure PowerShell, they&rsquo;ll be asked to provide values for each parameter. They can also create a <em>parameter file</em>, which lists all of the parameters and values they want to use for the deployment. If the template is deployed from an automated process like a deployment pipeline, the pipeline can provide the parameter values.</p>
+</blockquote>
+<blockquote>
+<p>A <em>variable</em> is defined and set within the template. Variables let you store important information in one place and refer to it throughout the template without having to copy and paste it.</p>
+</blockquote>
+<h2 id="generating-unique-names">generating unique names</h2>
+<blockquote>
+<p>Bicep has another function called <code>uniqueString()</code> that comes in handy when you&rsquo;re creating resource names. When you use this function, you need to provide a <em>seed value</em>, which should be different across different deployments but consistent across all deployments of the same resources.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>storageAccountName<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">uniqueString</span><span class="p">(</span><span class="nf">resourceGroup</span><span class="p">().</span>id<span class="p">)</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li>Every time you deploy the same resources, they&rsquo;ll go into the same resource group. The <code>uniqueString()</code> function will return the same value every time.</li>
+<li>If you deploy into two different resource groups in the Azure subscription, the <code>resourceGroup().id</code> value will be different, because the resource group names will be different. The <code>uniqueString()</code> function will give different values for each set of resources.</li>
+<li>If you deploy into two different Azure subscriptions, <em>even if you use the same resource group name</em>, the <code>resourceGroup().id</code> value will be different because the Azure subscription ID will be different. The <code>uniqueString()</code> function will again give different values for each set of resources.</li>
+</ul>
+<h3 id="combining-strings">combining strings</h3>
+<p>Can use string interpolation to generate a unique string with a recognizable hardcoded part:</p>
+<p><code>param storageAccountName string = 'toylaunch${uniqueString(resourceGroup().id)}'</code></p>
+<p>This can also be handy for generating correct names. For example, storage accounts may not begin with a number.</p>
+<h2 id="parameter-decorators">parameter decorators</h2>
+<h3 id="allowed-parameters">allowed parameters</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">allowed</span><span class="p">([</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;nonprod&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;prod&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">])</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>environmentType<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span></code></pre></div><p>The template cannot be deployed unless the nonprod or prod values are provided.</p>
+<p>@allowed is a <em>parameter decorator</em>: it gives Bicep information on what the parameter&rsquo;s value needs to be.</p>
+<p>You can also specify the allowed length of the parameter by using the following decorators:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">minLength</span><span class="p">(</span>5<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">maxLength</span><span class="p">(</span>24<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>storageAccountName<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span></code></pre></div><p>You can apply multiple decorators to a parameter by putting each on a separate line.</p>
+<p>These min and maxLength decorators can also be used to limit the length of an array.</p>
+<p>To limit int values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">minValue</span><span class="p">(</span>1<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">maxValue</span><span class="p">(</span>10<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>appServicePlanInstanceCount<span class="w"> </span><span class="nf">int</span><span class="w">
+</span></span></span></code></pre></div><p>Finally, you can add descriptions to your parameters with the @description decorator:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">description</span><span class="p">(</span><span class="s">&#39;The locations into which this Cosmos DB account should be configured. This parameter needs to be a list of objects, each of which has a locationName property.&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>cosmosDBAccountLocations<span class="w"> </span><span class="nf">array</span><span class="w">
+</span></span></span></code></pre></div><h2 id="if-statements">if statements</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span>storageAccountSkuName<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span>environmentType<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="si">&#39;prod&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="si">&#39;Standard_GRS&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard_LRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>appServicePlanSkuName<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span>environmentType<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="si">&#39;prod&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="si">&#39;P2V3&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="si">&#39;F1&#39;</span><span class="w">
+</span></span></span></code></pre></div><p>Let&rsquo;s unpack this:</p>
+<p>? is a <em>ternary operator</em> and evaluates an if/then statement. The value after ? is used if the expression is true. If it&rsquo;s false, the value after : is used.</p>
+<p>So here, if the environmentType is prod, the SKU is set to Standard_GRS</p>
+<h2 id="objects-in-bicep">Objects in Bicep</h2>
+<p>You can use objects within resource definitions, within variables, or within expressions in your Bicep file.</p>
+<p>Objects are the same as dictionaries in python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>appServicePlanSku<span class="w"> </span><span class="kt">object</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;F1&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">tier</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Free&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span>1<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>These are called &ldquo;properties&rdquo; of type string and int. Note that they are line separated, not comma separated like in python.</p>
+<p>When referencing the parameter in the template, you can use dot notation to access the object properties:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>appServicePlan<span class="w"> </span><span class="s">&#39;Microsoft.Web/serverfarms@2022-03-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServicePlanName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServicePlanSku<span class="p">.</span>name<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">tier</span><span class="p">:</span><span class="w"> </span>appServicePlanSku<span class="p">.</span>tier<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span>appServicePlanSku<span class="p">.</span>capacity<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><blockquote>
+<p>[!important]
+Keep in mind that you don&rsquo;t specify the type of each property within an object. However, when you use a property&rsquo;s value, its type must match what&rsquo;s expected. In the previous example, both the name and the tier of the App Service plan SKU must be strings.</p>
+</blockquote>
+<h3 id="example-tags">Example: tags</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>resourceTags<span class="w"> </span><span class="kt">object</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">EnvironmentName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Test&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">CostCenter</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;1000100&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">Team</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Human Resources&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>appServicePlan<span class="w"> </span><span class="s">&#39;Microsoft.Web/serverfarms@2022-03-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServicePlanName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">tags</span><span class="p">:</span><span class="w"> </span>resourceTags<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;S1&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>appServiceApp<span class="w"> </span><span class="s">&#39;Microsoft.Web/sites@&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServiceAppName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">tags</span><span class="p">:</span><span class="w"> </span>resourceTags<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;app&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">serverFarmId</span><span class="p">:</span><span class="w"> </span>appServicePlan<span class="p">.</span>id<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Here we take the tags for all the resources of the template as parameters. But we easily reuse all the tags for each resource by referencing the entire object.</p>
+<h2 id="arrays">Arrays</h2>
+<p>Arrays are not typed in Bicep. You cannot specify that it must contain strings.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>cosmosDBAccountLocations<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">locationName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;australiaeast&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">locationName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;southcentralus&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">locationName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;westeurope&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><p>This is an array of objects, which have an locationName property each.</p>
+<p>And you would access it by:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>account<span class="w"> </span><span class="s">&#39;Microsoft.DocumentDB/databaseAccounts@2022-08-15&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>accountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">locations</span><span class="p">:</span><span class="w"> </span>cosmosDBAccountLocations<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="specifying-parameter-values">Specifying parameter values</h2>
+<p>When deploying a template file there are three options:</p>
+<ol>
+<li>default values</li>
+<li>command line</li>
+<li>parameter file</li>
+</ol>
+<h3 id="parameter-file">Parameter file</h3>
+<p>This is a json file. To deploy a template with a paramter file, use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">az deployment group create <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --template-file main.bicep <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --parameters main.parameters.json
+</span></span></code></pre></div><h3 id="priority">priority</h3>
+<p>The order of priority is this, from high to low priority:</p>
+<ol>
+<li>Parameters specified on the command line</li>
+<li>Parameter file</li>
+<li>Default values in template</li>
+</ol>
+<h2 id="securing-parameters">Securing parameters</h2>
+<p>It is best to use Managed Identities for Azure, but if you need to supply secret values to a deployment, use the @secure() decorator. These values aren&rsquo;t available in the deployment logs, and they won&rsquo;t be displayed on the screen when entered in the terminal.</p>
+<h2 id="loops">Loops</h2>
+<p>Defined with the for keyword. Usually you iterate over an array to create multiple instances of a resource.</p>
+<h3 id="copy-loops">Copy loops</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>storageAccountNames<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;saauditus&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;saauditeurope&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;saauditapac&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>storageAccountResources<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2021-09-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>storageAccountName<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="py">storageAccountNames</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>storageAccountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageV2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard_LRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>Notice that bicep requires &ldquo;[&rdquo; before the for, and a closing bracket.</p>
+<h3 id="count-loops">count loops</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccountResources<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2021-09-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span>1<span class="err">,</span>4<span class="p">):</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;sa${i}&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageV2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard_LRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>The range function takes two arguments. The first one specifies the starting value, and the second tells Bicep the number of values you want.</p>
+<p>If you use range(3,4), you will get 3, 4, 5 and 6.</p>
+<h4 id="accessing-the-index">accessing the index</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>locations<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;westeurope&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;eastus2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;eastasia&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>sqlServers<span class="w"> </span><span class="s">&#39;Microsoft.Sql/servers@2021-11-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span><span class="p">(</span>location<span class="err">,</span><span class="w"> </span>i<span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="py">locations</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sqlserver-${i+1}&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">administratorLogin</span><span class="p">:</span><span class="w"> </span>administratorLogin<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">administratorLoginPassword</span><span class="p">:</span><span class="w"> </span>administratorLoginPassword<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>The first value is zero, so you can add 1 to i if you want your names to be sqlserver-1, sqlserver-2 etc.</p>
+<p>i is used here, but you can use any value you want.</p>
+<h3 id="filtering-with-loops">Filtering with loops</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>sqlServerDetails<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sqlserver-we&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;westeurope&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environmentName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Production&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sqlserver-eus2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;eastus2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environmentName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Development&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sqlserver-eas&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;eastasia&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environmentName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Production&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>sqlServers<span class="w"> </span><span class="s">&#39;Microsoft.Sql/servers@2021-11-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>sqlServer<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="py">sqlServerDetails</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span>sqlServer<span class="p">.</span>environmentName<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="si">&#39;Production&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>sqlServer<span class="p">.</span>name<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>sqlServer<span class="p">.</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">administratorLogin</span><span class="p">:</span><span class="w"> </span>administratorLogin<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">administratorLoginPassword</span><span class="p">:</span><span class="w"> </span>administratorLoginPassword<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">tags</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environment</span><span class="p">:</span><span class="w"> </span>sqlServer<span class="p">.</span>environmentName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>This will deploy -we and -eas, but not -eus2, because the environmentName does not match Production.</p>
+<h3 id="controlling-loop-execution">Controlling loop execution</h3>
+<p>By default all the iterations of a loop are executed simultaneously. However, you don&rsquo;t always want this to be happening.</p>
+<p>To control the amount you can use the @batchSize decorator.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">batchSize</span><span class="p">(</span>2<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>appServiceApp<span class="w"> </span><span class="s">&#39;Microsoft.Web/sites@2021-03-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span>1<span class="err">,</span>3<span class="p">):</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;app${i}&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>Here bicep will wait for the first two to be fully completed before it moves to the next.</p>
+<p>To loop sequentially, meaning one at a time in order, use @batchSize(1)</p>
+<h3 id="variable-loops">Variable loops</h3>
+<p>You can use loops to create arrays that you can use in the Bicep template.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span><span class="nf">items</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span>1<span class="err">,</span><span class="w"> </span>5<span class="p">):</span><span class="w"> </span><span class="si">&#39;item${i}&#39;</span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><p>This produces an array containing the values item1, item2 up to 5 stored in the items variable.</p>
+<p>Reminds me of list comprehensions in python.</p>
+<p>Here is an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>addressPrefix<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;10.10.0.0/16&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>subnets<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;frontend&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">ipAddressRange</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.10.0.0/24&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;backend&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">ipAddressRange</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.10.1.0/24&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>subnetsProperty<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>subnet<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="py">subnets</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>subnet<span class="p">.</span>name<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">addressPrefix</span><span class="p">:</span><span class="w"> </span>subnet<span class="p">.</span>ipAddressRange<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>virtualNetwork<span class="w"> </span><span class="s">&#39;Microsoft.Network/virtualNetworks@2021-08-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;teddybear&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">addressSpace</span><span class="p">:{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">addressPrefixes</span><span class="p">:[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>addressPrefix<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">subnets</span><span class="p">:</span><span class="w"> </span>subnetsProperty<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The content of the subnetsProperty array would look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;frontend&#39;</span><span class="err">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">addressPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.10.0.0/24&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;backend&#39;</span><span class="err">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">addressPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.10.1.0/24&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><h3 id="output-loops">Output loops</h3>
+<p>To output the contents of the array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span><span class="nf">items</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item1&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item4&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item5&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">output</span><span class="w"> </span>outputItems<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span>0<span class="err">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">items</span><span class="p">)):</span><span class="w"> </span><span class="nf">items</span><span class="p">[</span>i<span class="p">]]</span><span class="w">
+</span></span></span></code></pre></div><h2 id="modules">Modules</h2>
+<p>You can create modules in Bicep so the code becomes reusable. You can share the modules with other teams and use them for different outcomes.</p>
+<blockquote>
+<p>Generally, it&rsquo;s not a good practice to create a module for every resource that you deploy. A good Bicep module typically defines multiple related resources. However, if you have a particularly complex resource with a lot of configuration, it might make sense to create a single module to encapsulate the complexity. This approach keeps your main templates simple and uncluttered.</p>
+</blockquote>
+<p>So for example it would make sense to write a networking module and a database module that handles these resources.</p>
+<p>Modules can be nested, but it can quickly become very complex.</p>
+<p>To call a module in a template:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">module</span><span class="w"> </span>appModule<span class="w"> </span><span class="s">&#39;modules/app.bicep&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;myApp&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">appServiceAppName</span><span class="p">:</span><span class="w"> </span>appServiceAppName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environmentType</span><span class="p">:</span><span class="w"> </span>environmentType<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The modules are stored in the modules folder in your root directory.</p>
+<h3 id="parameters">Parameters</h3>
+<p>Modules will take parameters, but it is good practice to leave out default values for parameters in modules. In templates it&rsquo;s good practice to add defaults wherever you can. Therefore it is best to leave them out in modules because templates usually have their own default values. This can get confusing if you have similar default values in the templates and modules.</p>
+<h3 id="module-dependency">Module dependency</h3>
+<p>Bicep will figure out automatically if there is a dependency between modules. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">description</span><span class="p">(</span><span class="s">&#39;Username for the virtual machine.&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>adminUsername<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">description</span><span class="p">(</span><span class="s">&#39;Password for the virtual machine.&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">minLength</span><span class="p">(</span>12<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">secure</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>adminPassword<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">module</span><span class="w"> </span>virtualNetwork<span class="w"> </span><span class="s">&#39;modules/vnet.bicep&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;virtual-network&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">module</span><span class="w"> </span>virtualMachine<span class="w"> </span><span class="s">&#39;modules/vm.bicep&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;virtual-machine&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">adminUsername</span><span class="p">:</span><span class="w"> </span>adminUsername<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">adminPassword</span><span class="p">:</span><span class="w"> </span>adminPassword<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">subnetResourceId</span><span class="p">:</span><span class="w"> </span>virtualNetwork<span class="p">.</span>outputs<span class="p">.</span>subnetResourceId<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Here the virtualMachine module takes the subnetResourceId from the virtualNetwork module outputs.</p>
+<p>Because it is defined like this, Bicep will wait with deploying the virtualMachine modul until the virtualNetwork module is finished, and pass in the required parameter.</p>
+<p>It is important to note that this means that it will wait until the virtualNetwork module is completely finished. If it takes a long time to deploy the previous module, all the subsequent modules will have to wait until it&rsquo;s finished.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Lab VM project - Install ArgoCD to your Kubernetes cluster</title>
       <link>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</link>
