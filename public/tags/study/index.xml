@@ -5,7 +5,274 @@
     <link>https://mischavandenburg.com/tags/study/</link>
     <description>Recent content in Study on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes: Intermediate Bicep</title>
+      <link>https://mischavandenburg.com/zet/intermediate-bicep/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/intermediate-bicep/</guid>
+      <description>Today I finished the Intermediate Bicep module. Here are my notes.
+Child and Extension You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&amp;rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.</description>
+      <content:encoded><![CDATA[<p>Today I finished the Intermediate Bicep module. Here are my notes.</p>
+<h1 id="child-and-extension">Child and Extension</h1>
+<blockquote>
+<p>You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.</p>
+</blockquote>
+<p>Some resources are only deployed in context of their parent. For example:</p>
+<p>Virtual network subnets 	Microsoft.Network/virtualNetworks/subnets
+App Service configuration 	Microsoft.Web/sites/config
+SQL databases 	Microsoft.Sql/servers/databases
+Virtual machine extensions 	Microsoft.Compute/virtualMachines/extensions
+Storage blob containers 	Microsoft.Storage/storageAccounts/blobServices/containers
+Azure Cosmos DB containers</p>
+<p>It does not make sense for a container to exist without a storage account.</p>
+<h2 id="difference-between-child-and-extension">Difference between child and extension</h2>
+<p>In summary, you define extensions with the <code>scope</code> keyword, and child resources are defined by nesting them or by using the <code>parent</code> keyword.</p>
+<p>An extension resource is a resource that modifies another resource. For example, assigning a role to a resource.</p>
+<p>A child resource is a resource that exists only within the context of another resource, such as a subnet existing only within a vnet.</p>
+<h2 id="nested-resource">Nested resource</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>vm<span class="w"> </span><span class="s">&#39;Microsoft.Compute/virtualMachines@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>vmName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">resource</span><span class="w"> </span>installCustomScriptExtension<span class="w"> </span><span class="si">&#39;extensions&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;InstallCustomScript&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Here the extension resource is within the vm resource. The fully qualified domain name is <code>Microsoft.Compute/virtualMachines/extensions</code>, but it is not necessary because it inherits it from the parent. Therefore we only need to specify &rsquo;extensions&rsquo; here.</p>
+<p>No API version is specified either, this is also inherited.</p>
+<blockquote>
+<p>You can refer to a nested resource by using the :: operator. For example, you could create an output that will return the full resource ID of the extension:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">output</span><span class="w"> </span>childResourceId<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="py">vm</span><span class="p">::</span>installCustomScriptExtension<span class="p">.</span>id<span class="w">
+</span></span></span></code></pre></div><h2 id="parent-property">Parent property</h2>
+<p>This is the second way to declare a child resource.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>vm<span class="w"> </span><span class="s">&#39;Microsoft.Compute/virtualMachines@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>vmName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>installCustomScriptExtension<span class="w"> </span><span class="s">&#39;Microsoft.Compute/virtualMachines/extensions@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span>vm<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;InstallCustomScript&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="dependson">dependsOn</h2>
+<p>use dependsOn to indicate a dependency.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="py">dependsOn</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>vm<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><h2 id="extension-resources">Extension resources</h2>
+<p>Extension resources are always attached to other Azure resources. They extend them with extra functionality. Some examples are role assignments, locks, and policy assignments.</p>
+<p>It doesn&rsquo;t make sense to deploy a lock by itself. It always has to be deployed to another resource, because it prevents deletion or modification of a resource.</p>
+<p>Resources are defined almost the same way as normal resources, but you add the <code>scope</code> property to tell Bicep that it is attached to another resource in the template.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>cosmosDBAccount<span class="w"> </span><span class="s">&#39;Microsoft.DocumentDB/databaseAccounts@2020-04-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>cosmosDBAccountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>lockResource<span class="w"> </span><span class="s">&#39;Microsoft.Authorization/locks@2016-09-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scope</span><span class="p">:</span><span class="w"> </span>cosmosDBAccount<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;DontDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">level</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;CanNotDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">notes</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Prevents deletion of the toy data Cosmos DB account.&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Extensions have slightly different resource ID&rsquo;s. They consist of the parent resource ID, the separator <code>/providers/</code>, and the extension resource ID.</p>
+<blockquote>
+<p>If you see a resource ID that starts with a normal resource ID and then adds /providers/ and another resource type and name, it means that you&rsquo;re looking at an extension resource ID.</p>
+</blockquote>
+<h3 id="existing-resources">Existing resources</h3>
+<p>Bicep files often need to refer to resources that have been already created elswewhere. They might have been created in the portal or by another Bicep file.</p>
+<p>Here you use the <code>existing</code> keyword in Bicep. You are defining a resource that already exists, and therefore you are telling Bicep that it shouldn&rsquo;t try to deploy it. Think of it as a placeholder resource.</p>
+<p>You can do the same for nested or child resources.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccount<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2019-06-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;toydesigndocs&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="existing-resources-outside-of-the-resource-group-and-subscription">Existing resources outside of the resource group and subscription</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>vnet<span class="w"> </span><span class="s">&#39;Microsoft.Network/virtualNetworks@2020-11-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scope</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">(</span><span class="s">&#39;f0750bbe-ea75-4ae5-b24d-a92ca601da2c&#39;</span><span class="err">,</span><span class="w"> </span><span class="s">&#39;networking-rg&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;toy-design-vnet&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>You can refer to these as long as they are within your Azure AD tenant.</p>
+<h2 id="add-child-and-extension-resources-to-an-existing-resource">Add child and extension resources to an existing resource</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>server<span class="w"> </span><span class="s">&#39;Microsoft.Sql/servers@2020-11-01-preview&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>serverName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>database<span class="w"> </span><span class="s">&#39;Microsoft.Sql/servers/databases@2020-11-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span>server<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>databaseName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">tier</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Use the <code>existing</code> keyword to refer to the resource, and then you add the child by specifying the <code>parent</code> property.</p>
+<p>Finally, to deploy an extension resource to an existing resource, use the <code>scope</code> keyword:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccount<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2019-06-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;toydesigndocs&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>lockResource<span class="w"> </span><span class="s">&#39;Microsoft.Authorization/locks@2016-09-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scope</span><span class="p">:</span><span class="w"> </span>storageAccount<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;DontDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">level</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;CanNotDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">notes</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Prevents deletion of the toy design documents storage account.&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="referring-to-an-existing-resources-properties">Referring to an existing resource&rsquo;s properties</h2>
+<p>Define the resource and you can refer to its properties if the prperty isn&rsquo;t secure.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>applicationInsights<span class="w"> </span><span class="s">&#39;Microsoft.Insights/components@2018-05-01-preview&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>applicationInsightsName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>functionApp<span class="w"> </span><span class="s">&#39;Microsoft.Web/sites@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>functionAppName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;functionapp&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">siteConfig</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">appSettings</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;APPINSIGHTS_INSTRUMENTATIONKEY&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="py">value</span><span class="p">:</span><span class="w"> </span>applicationInsights<span class="p">.</span>properties<span class="p">.</span>InstrumentationKey<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>When you need to access secure data, use the listKeys() function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccount<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2019-06-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>storageAccountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>functionApp<span class="w"> </span><span class="s">&#39;Microsoft.Web/sites@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>functionAppName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;functionapp&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">siteConfig</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">appSettings</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageAccountKey&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="py">value</span><span class="p">:</span><span class="w"> </span>storageAccount<span class="p">.</span><span class="nf">listKeys</span><span class="p">().</span>keys<span class="p">[</span>0<span class="p">].</span>value<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The VScode extension will show hints to help you understand the data this function returns.</p>
+<p>You need to have sufficient permissions to use the listKeys function.</p>
+<h2 id="child-and-extension-1">Child and extension</h2>
+<p>In this example we are attaching an extension to a child resource.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccount<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2019-06-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>storageAccountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">resource</span><span class="w"> </span>blobService<span class="w"> </span><span class="si">&#39;blobServices&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;default&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* Note: Here we are attaching to blobServices which itself is a child resource. So we are attaching an extension to a child resource. */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>storageAccountBlobDiagnostics<span class="w"> </span><span class="s">&#39;Microsoft.Insights/diagnosticSettings@2017-05-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scope</span><span class="p">:</span><span class="w"> </span><span class="py">storageAccount</span><span class="p">::</span>blobService<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>storageAccountBlobDiagnosticSettingsName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">workspaceId</span><span class="p">:</span><span class="w"> </span>logAnalyticsWorkspace<span class="p">.</span>id<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">logs</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">category</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageRead&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">enabled</span><span class="p">:</span><span class="w"> </span>true<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">category</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageWrite&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">enabled</span><span class="p">:</span><span class="w"> </span>true<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">category</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">enabled</span><span class="p">:</span><span class="w"> </span>true<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h1 id="structuring-bicep-for-collaboration">Structuring Bicep for Collaboration</h1>
+<h2 id="configuration-maps">configuration maps</h2>
+<p>Using many different parameters can be confusing to the user of the template you&rsquo;re writing. One way of solving this is by creating a config map:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">allowed</span><span class="p">([</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;Production&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;Test&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">])</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>environmentType<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="si">&#39;Test&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>environmentConfigurationMap<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">Production</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">appServicePlan</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;P2V3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span>3<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">storageAccount</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;ZRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">Test</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">appServicePlan</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;S2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span>1<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">storageAccount</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;LRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>appServicePlan<span class="w"> </span><span class="s">&#39;Microsoft.Web/serverfarms@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServicePlanName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span>environmentConfigurationMap<span class="p">[</span>environmentType<span class="p">].</span>appServicePlan<span class="p">.</span>sku<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Here we are taking a parameter for the environment, but create an object that contains the settings for that particular environment. Note that we are accessing it like we&rsquo;d access a dictionary in python: <code>sku: environmentConfigurationMap[environmentType].appServicePlan.sku</code></p>
+<h2 id="naming">Naming</h2>
+<blockquote>
+<p>In Bicep, you ordinarily use camelCase capitalization style for the names of parameters, variables, and resource symbolic names.</p>
+</blockquote>
+<p>Resource names cannot be renamed after they&rsquo;re deployed in Azure.</p>
+<h2 id="comments">Comments</h2>
+<p>use // for single line comments, and /* */ for multi-line comments.</p>
+<p>When adding comments to JSON files, you might have to save the file as jsonc to let the code editor know that comments are allowed.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Notes: Fundamentals of Bicep</title>
       <link>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</link>
