@@ -5,7 +5,57 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevOps</title>
+      <link>https://mischavandenburg.com/tags/devops/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/devops/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://mischavandenburg.com/tags/kubernetes/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>MacOS</title>
+      <link>https://mischavandenburg.com/tags/macos/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/macos/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>https://mischavandenburg.com/tags/productivity/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/productivity/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Zettelkasten</title>
+      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Azure</title>
       <link>https://mischavandenburg.com/tags/azure/</link>
@@ -47,16 +97,6 @@
     </item>
     
     <item>
-      <title>Zettelkasten</title>
-      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
-      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Article</title>
       <link>https://mischavandenburg.com/tags/article/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
@@ -72,26 +112,6 @@
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/go/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>MacOS</title>
-      <link>https://mischavandenburg.com/tags/macos/</link>
-      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/macos/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Productivity</title>
-      <link>https://mischavandenburg.com/tags/productivity/</link>
-      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/productivity/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -137,16 +157,6 @@
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Linux</title>
       <link>https://mischavandenburg.com/tags/linux/</link>
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
@@ -162,16 +172,6 @@
       <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/how-to/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>https://mischavandenburg.com/tags/devops/</link>
-      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/devops/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

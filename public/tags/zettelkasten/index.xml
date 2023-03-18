@@ -5,7 +5,43 @@
     <link>https://mischavandenburg.com/tags/zettelkasten/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Docker and Kubernetes on Mac M2</title>
+      <link>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</guid>
+      <description>The past few days I&amp;rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.
+Unfortunately you can&amp;rsquo;t just run brew install docker and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.
+Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&amp;rsquo;t tried any of the other alternatives because I found something better.</description>
+      <content:encoded><![CDATA[<p>The past few days I&rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.</p>
+<p>Unfortunately you can&rsquo;t just run <code>brew install docker</code> and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.</p>
+<p>Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&rsquo;t tried any of the other alternatives because I found something better.</p>
+<p>Rancher Desktop provides everything that you need. It sets up a local VM where it will run a Kubernetes cluster using k3s. It will configure the containerd container engine for you which you can interact with using <code>nerdctl</code>.</p>
+<p>To install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install rancher
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#after installing rancher, start it up and wait for it to boot the VM.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">docker</span><span class="o">=</span>nerdctl
+</span></span><span class="line"><span class="cl">docker run hello-world
+</span></span></code></pre></div><p>And you&rsquo;re good to go. Rancher will add the rancher-desktop to your kube context.</p>
+<p>To test your Kubernetes cluster:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k get pods
+</span></span><span class="line"><span class="cl">k get nodes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># test running a pod</span>
+</span></span><span class="line"><span class="cl">k run nginx --image<span class="o">=</span>nginx
+</span></span><span class="line"><span class="cl">k expose pod nginx --port<span class="o">=</span><span class="m">80</span> --type<span class="o">=</span>NodePort
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># inspect your services and look for 80:31066/TCP under PORT(S)</span>
+</span></span><span class="line"><span class="cl">k get svc
+</span></span><span class="line"><span class="cl">curl localhost:31066
+</span></span></code></pre></div><p>Or visit localhost:31066 in your browser. Replace 31066 with the port you found listed under your services.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Notes: Intermediate Bicep</title>
       <link>https://mischavandenburg.com/zet/intermediate-bicep/</link>
