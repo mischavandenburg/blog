@@ -5,7 +5,108 @@
     <link>https://mischavandenburg.com/tags/azure/</link>
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes: Advanced Bicep</title>
+      <link>https://mischavandenburg.com/zet/advanced-bicep/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/advanced-bicep/</guid>
+      <description>Deploying to subscriptions and management groups To tell Bicep which scope to deploy to, use the targetScope keyword, for example, managementGroup.
+You&amp;rsquo;re not specifying which management group exactly, this is done during deployment of the template file.
+targetScope can be set to resourceGroup, subscription, managementGroup or tenant.
+If it is not set, Bicep assumes resourceGroup.
+create a resource group targetScope = &amp;#39;subscription&amp;#39; resource resourceGroup &amp;#39;Microsoft.Resources/resourceGroups@2021-01-01&amp;#39; = { name: &amp;#39;example-resource-group&amp;#39; location: &amp;#39;westus&amp;#39; } To deploy you use az deployment group create for resource groups, but you use az deployment sub create for subscriptions, mg for management group and tenant for tenant.</description>
+      <content:encoded><![CDATA[<h1 id="deploying-to-subscriptions-and-management-groups">Deploying to subscriptions and management groups</h1>
+<p>To tell Bicep which scope to deploy to, use the <code>targetScope</code> keyword, for example, managementGroup.</p>
+<p>You&rsquo;re not specifying which management group exactly, this is done during deployment of the template file.</p>
+<p>targetScope can be set to resourceGroup, subscription, managementGroup or tenant.</p>
+<p>If it is not set, Bicep assumes resourceGroup.</p>
+<h2 id="create-a-resource-group">create a resource group</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl">targetScope<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="si">&#39;subscription&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="w"> </span><span class="s">&#39;Microsoft.Resources/resourceGroups@2021-01-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;example-resource-group&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;westus&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>To deploy you use <code>az deployment group create</code> for resource groups, but you use <code>az deployment sub create</code> for subscriptions, <code>mg</code> for management group and <code>tenant</code> for tenant.</p>
+<h2 id="deployment-scripts">deployment scripts</h2>
+<blockquote>
+<p>deploymentScripts resources are either PowerShell or Bash scripts that run in a Docker container as part of your template deployment. The default container images have either the Azure CLI or Azure PowerShell available. These scripts run during the processing of the ARM template, so you can add custom behavior to the deployment process.</p>
+</blockquote>
+<p>Here is an example of a deployment script with some comments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>myFirstDeploymentScript<span class="w"> </span><span class="s">&#39;Microsoft.Resources/deploymentScripts@2020-10-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;myFirstDeploymentScript&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// can be AzurePowershell or Azure CLI</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;AzurePowerShell&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// the script will be run in a container. We need to provide a Managed Identity to give the script the required permissions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">identity</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">type</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;UserAssigned&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">userAssignedIdentities</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#39;/subscriptions/01234567-89AB-CDEF-0123-456789ABCDEF/resourcegroups/deploymenttest/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myscriptingid&#39;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">azPowerShellVersion</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;3.0&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// in Bicep we use &#39;&#39;&#39; to indicate a multi line string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">scriptContent</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="err">&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="err">$</span><span class="kd">output</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;Hello Learner!&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>Write-Output<span class="w"> </span><span class="err">$</span><span class="kd">output</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="c1">// the $DeploymentScriptOutputs variable is created to return output back to the Bicep template</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="c1">// It needs to be a hash table</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="err">$</span>DeploymentScriptOutputs<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="err">$</span>DeploymentScriptOutputs<span class="p">[</span><span class="si">&#39;text&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">$</span><span class="kd">output</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#39;&#39;</span><span class="err">&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">retentionInterval</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;P1D&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">output</span><span class="w"> </span>scriptResult<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span>myFirstDeploymentScript<span class="p">.</span>properties<span class="p">.</span>outputs<span class="p">.</span>text<span class="w">
+</span></span></span></code></pre></div><blockquote>
+<p>You can also write deployment scripts in Bash. To create outputs from a Bash script, you need to create a JSON file in a location specified by the AZ_SCRIPTS_OUTPUT_PATH environment variable.</p>
+</blockquote>
+<p>To include a script file, use the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">azPowerShellVersion</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;3.0&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scriptContent</span><span class="p">:</span><span class="w"> </span><span class="nf">loadTextContent</span><span class="p">(</span><span class="si">&#39;myscript.ps1&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">retentionInterval</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;P1D&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="deploying-a-managed-identity-and-assigning-a-role">deploying a managed identity and assigning a role</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span>userAssignedIdentityName<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="si">&#39;configDeployer&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>roleAssignmentName<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">guid</span><span class="p">(</span><span class="nf">resourceGroup</span><span class="p">().</span>id<span class="err">,</span><span class="w"> </span><span class="si">&#39;contributor&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>contributorRoleDefinitionId<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">resourceId</span><span class="p">(</span><span class="s">&#39;Microsoft.Authorization/roleDefinitions&#39;</span><span class="err">,</span><span class="w"> </span><span class="s">&#39;b24988ac-6180-42a0-ab88-20f7382dd24c&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>userAssignedIdentity<span class="w"> </span><span class="s">&#39;Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>userAssignedIdentityName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>roleAssignment<span class="w"> </span><span class="s">&#39;Microsoft.Authorization/roleAssignments@2020-04-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>roleAssignmentName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">roleDefinitionId</span><span class="p">:</span><span class="w"> </span>contributorRoleDefinitionId<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">principalId</span><span class="p">:</span><span class="w"> </span>userAssignedIdentity<span class="p">.</span>properties<span class="p">.</span>principalId<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">principalType</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;ServicePrincipal&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="template-specs">template specs</h2>
+<p>When you have a lot of reusable templates, you can use Template Specs to enable your entire organization to deploy them.</p>
+<p>You can convert a Bicep file to a template spec. The template spec is then deployed to Azure as a resource, and anybody with the right access and do deployments with the template spec from the portal or Azure CLI. Azure will handle the version control.</p>
+<p>You will lose any comments and whitespace.</p>
+<p>Bicep modules are intended to be combined into larger deployments. Template specs are for sets of resources with a certain configuration.</p>
+<p>Template specs can be used as a Bicep module. You use the following code to import it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">module</span><span class="w"> </span>storageAccountTemplateSpec<span class="w"> </span><span class="py">&#39;ts</span><span class="p">:</span>f0750bbe-ea75-4ae5-b24d-a92ca601da2c<span class="o">/</span>sharedTemplates<span class="o">/</span><span class="py">StorageWithoutSAS</span><span class="p">:</span>1<span class="p">.</span>0<span class="err">&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;storageAccountTemplateSpec&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>Notes: Intermediate Bicep</title>
       <link>https://mischavandenburg.com/zet/intermediate-bicep/</link>
