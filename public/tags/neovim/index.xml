@@ -5,7 +5,28 @@
     <link>https://mischavandenburg.com/tags/neovim/</link>
     <description>Recent content in Neovim on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 06 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to continuously run a Go file while coding in the terminal</title>
+      <link>https://mischavandenburg.com/zet/running-go-on-change/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/running-go-on-change/</guid>
+      <description>I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.
+You can use this command in a split window to keep running a Go file. It will update when you save the file.
+entr -c bash -c &amp;quot;go run main.go&amp;quot; &amp;lt;&amp;lt;&amp;lt; main.go
+Entr runs commands when files change. Here we are feeding it only one file, but you can also feed it a directory like so:</description>
+      <content:encoded><![CDATA[<p>I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.</p>
+<p>You can use this command in a split window to keep running a Go file. It will update when you save the file.</p>
+<p><code>entr -c bash -c &quot;go run main.go&quot; &lt;&lt;&lt; main.go</code></p>
+<p>Entr runs commands when files change. Here we are feeding it only one file, but you can also feed it a directory like so:</p>
+<p><code>find src/ | entr -s 'make'</code></p>
+<p>Super handy to see the outcome of your code changes in real time.</p>
+<p>I picked this up while going through Rob&rsquo;s Beginner Boost of 2022:</p>
+<p><a href="https://youtu.be/kwrN3jbv4sE">https://youtu.be/kwrN3jbv4sE</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>How to follow symbolic links while searching with Telescope in neovim</title>
       <link>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</link>

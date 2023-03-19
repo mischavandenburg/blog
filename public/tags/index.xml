@@ -5,7 +5,57 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding</title>
+      <link>https://mischavandenburg.com/tags/coding/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/coding/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://mischavandenburg.com/tags/go/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/go/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://mischavandenburg.com/tags/linux/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/linux/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Neovim</title>
+      <link>https://mischavandenburg.com/tags/neovim/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/neovim/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Zettelkasten</title>
+      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Azure</title>
       <link>https://mischavandenburg.com/tags/azure/</link>
@@ -22,16 +72,6 @@
       <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/bicep/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Coding</title>
-      <link>https://mischavandenburg.com/tags/coding/</link>
-      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/coding/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -87,31 +127,11 @@
     </item>
     
     <item>
-      <title>Zettelkasten</title>
-      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
-      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Article</title>
       <link>https://mischavandenburg.com/tags/article/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/article/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://mischavandenburg.com/tags/go/</link>
-      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/go/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -157,16 +177,6 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://mischavandenburg.com/tags/linux/</link>
-      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/linux/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>How-To</title>
       <link>https://mischavandenburg.com/tags/how-to/</link>
       <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
@@ -192,16 +202,6 @@
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/terraform/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Neovim</title>
-      <link>https://mischavandenburg.com/tags/neovim/</link>
-      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/neovim/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

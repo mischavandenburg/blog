@@ -3,16 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/coding/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/go/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/running-go-on-change/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/neovim/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
     <lastmod>2023-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/bicep/</loc>
-    <lastmod>2023-03-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/coding/</loc>
     <lastmod>2023-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/devops/</loc>
@@ -36,15 +57,6 @@
     <loc>https://mischavandenburg.com/tags/study/</loc>
     <lastmod>2023-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-03-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
-    <lastmod>2023-03-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2023-03-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/intermediate-bicep/</loc>
     <lastmod>2023-03-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -56,9 +68,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</loc>
     <lastmod>2023-03-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/go/</loc>
-    <lastmod>2023-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/go-day-1/</loc>
     <lastmod>2023-02-28T00:00:00+00:00</lastmod>
@@ -88,9 +97,6 @@
     <lastmod>2023-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</loc>
-    <lastmod>2023-02-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2023-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</loc>
@@ -142,9 +148,6 @@
     <lastmod>2023-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</loc>
-    <lastmod>2023-01-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/neovim/</loc>
     <lastmod>2023-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/ansible-lsp-fix/</loc>
