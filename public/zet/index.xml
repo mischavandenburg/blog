@@ -7,6 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Had a CLI Shokunin Moment Today</title>
+      <link>https://mischavandenburg.com/zet/cli-shokunin-moment/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/cli-shokunin-moment/</guid>
+      <description>Today was meal prepping day and I cut up some vegetables for the coming week. I&amp;rsquo;m on a strict caloric restriction regiment and need to meticulously track and plan all the food that I consume.
+I cut up three kinds of vegetables and wrote down how many grams of each I cut up so I could divide them by three and add them to my calorie tracking application.
+As I took out my phone to pick up my calculator to divide each number, my inner engineer started complaining about the fact that I had to do three calculations by hand and that it would be much better to loop over an array of these values.</description>
+      <content:encoded><![CDATA[<p>Today was meal prepping day and I cut up some vegetables for the coming week. I&rsquo;m on a strict caloric restriction regiment and need to meticulously track and plan all the food that I consume.</p>
+<p>I cut up three kinds of vegetables and wrote down how many grams of each I cut up so I could divide them by three and add them to my calorie tracking application.</p>
+<p>As I took out my phone to pick up my calculator to divide each number, my inner engineer started complaining about the fact that I had to do three calculations by hand and that it would be much better to loop over an array of these values.</p>
+<p>I had my laptop nearby with a terminal open and wrote this instead:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> i in <span class="m">287</span> <span class="m">252</span> 321<span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2"> / 3&#34;</span> <span class="p">|</span> bc<span class="p">;</span> <span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">95</span>
+</span></span><span class="line"><span class="cl"><span class="m">84</span>
+</span></span><span class="line"><span class="cl"><span class="m">107</span>
+</span></span></code></pre></div><p>After turning my passion into my career, I love the fact that I&rsquo;m starting to think like an engineer in all my other areas of life. I&rsquo;m also happy to see my progress in command line work. I chose to go the hard way, using bash instead of zsh and doing all my editing in vim and using Linux as much as possible, and it is paying off because I don&rsquo;t have to think much about these little operations anymore.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>How to continuously run a Go file while coding in the terminal</title>
       <link>https://mischavandenburg.com/zet/running-go-on-change/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
