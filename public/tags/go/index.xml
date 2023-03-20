@@ -26,8 +26,8 @@ multiple modules I was running into some trouble with this because I want to hav
 <p>I was running into some trouble with this because I want to have one big repo where I will store all my go projects.</p>
 <p>My gopls LSP in Neovim would start throwing errors when I added multiple projects in my repo.</p>
 <p>The fix is to create a separate directory for each project. For example:</p>
-<p>/go/hello/main.go
-/go/hi/main.go</p>
+<p>/go/hello/main.go</p>
+<p>/go/hi/main.go</p>
 <p>Hello and Hi are each separate projects.</p>
 <p>Now I enter each of these directories and run <code>go mod init hello</code></p>
 <p>I&rsquo;m sure this isn&rsquo;t good practice for production code, but it serves its purpose to collect all my learning code in one place.</p>

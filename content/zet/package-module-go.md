@@ -26,6 +26,7 @@ My gopls LSP in Neovim would start throwing errors when I added multiple project
 The fix is to create a separate directory for each project. For example:
 
 /go/hello/main.go
+
 /go/hi/main.go
 
 Hello and Hi are each separate projects.
