@@ -5,7 +5,36 @@
     <link>https://mischavandenburg.com/</link>
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is the difference between a Go module and a package?</title>
+      <link>https://mischavandenburg.com/zet/package-module-go/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/package-module-go/</guid>
+      <description>A module is generally associated with a single git repo.
+You can have a module with multiple packages, and each package would get its own subdirectory.
+You should always name your main file main.go
+creating a module Use the go mod init {{your path here}} command to initiate a module.
+multiple modules I was running into some trouble with this because I want to have one big repo where I will store all my go projects.</description>
+      <content:encoded><![CDATA[<p>A module is generally associated with a single git repo.</p>
+<p>You can have a module with multiple packages, and each package would get its own subdirectory.</p>
+<p>You should always name your main file main.go</p>
+<h2 id="creating-a-module">creating a module</h2>
+<p>Use the <code>go mod init {{your path here}}</code> command to initiate a module.</p>
+<h2 id="multiple-modules">multiple modules</h2>
+<p>I was running into some trouble with this because I want to have one big repo where I will store all my go projects.</p>
+<p>My gopls LSP in Neovim would start throwing errors when I added multiple projects in my repo.</p>
+<p>The fix is to create a separate directory for each project. For example:</p>
+<p>/go/hello/main.go
+/go/hi/main.go</p>
+<p>Hello and Hi are each separate projects.</p>
+<p>Now I enter each of these directories and run <code>go mod init hello</code></p>
+<p>I&rsquo;m sure this isn&rsquo;t good practice for production code, but it serves its purpose to collect all my learning code in one place.</p>
+<p><a href="https://www.youtube.com/watch?v=9hEnzD-bNy4">https://www.youtube.com/watch?v=9hEnzD-bNy4</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Had a CLI Shokunin Moment Today</title>
       <link>https://mischavandenburg.com/zet/cli-shokunin-moment/</link>
