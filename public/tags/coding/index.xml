@@ -5,7 +5,29 @@
     <link>https://mischavandenburg.com/tags/coding/</link>
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Surround a Word in Quotes in Vim</title>
+      <link>https://mischavandenburg.com/zet/surround-word-quotes-neovim/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/surround-word-quotes-neovim/</guid>
+      <description>I find myself quoting words very often in vim when I&amp;rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.
+I found this vim command:
+ciw&amp;quot;&amp;quot;&amp;lt;Esc&amp;gt;P
+&amp;ldquo;c&amp;rdquo; deletes into register and enters insert mode. &amp;ldquo;iw&amp;rdquo; stands for &amp;ldquo;inner word&amp;rdquo; and selects the word.
+So we delete the entire word and enter insert mode.</description>
+      <content:encoded><![CDATA[<p>I find myself quoting words very often in vim when I&rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.</p>
+<p>I found this vim command:</p>
+<p><code>ciw&quot;&quot;&lt;Esc&gt;P</code></p>
+<p>&ldquo;c&rdquo; deletes into register and enters insert mode. &ldquo;iw&rdquo; stands for &ldquo;inner word&rdquo; and selects the word.</p>
+<p>So we delete the entire word and enter insert mode. Then we type two quotes, and we press &ldquo;P&rdquo; to paste the register (containing the word) before the cursor.</p>
+<p>Voila, the word is surrounded by quotes.</p>
+<p>To make it even easier, I added this to my keymaps, and I&rsquo;ll add a few more for parentheses and brackets.</p>
+<p><code>vim.keymap.set(&quot;n&quot;, &quot;&lt;leader&gt;wsq&quot;, 'ciw&quot;&quot;&lt;Esc&gt;P', { desc = &quot;Word Surround Quotes&quot; })</code></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>What is the difference between a Go module and a package?</title>
       <link>https://mischavandenburg.com/zet/package-module-go/</link>
