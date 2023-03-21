@@ -1,11 +1,13 @@
 ---
-title: How to Surround a Word in Quotes in Vim 
+title: How to Surround a Word with Quotes in Vim 
 date: 2023-03-21
 tags:
 - Zettelkasten
 - Neovim
 - Coding
 ---
+
+[[neovim]]
 
 I find myself quoting words very often in vim when I'm writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.
 
@@ -22,3 +24,5 @@ Voila, the word is surrounded by quotes.
 To make it even easier, I added this to my keymaps, and I'll add a few more for parentheses and brackets.
 
 `vim.keymap.set("n", "<leader>wsq", 'ciw""<Esc>P', { desc = "Word Surround Quotes" })`
+
+https://vi.stackexchange.com/questions/21113/vimscript-surround-word-under-cursor-with-quotes
