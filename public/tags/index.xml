@@ -5,21 +5,11 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Coding</title>
-      <link>https://mischavandenburg.com/tags/coding/</link>
-      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/coding/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Neovim</title>
       <link>https://mischavandenburg.com/tags/neovim/</link>
-      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/neovim/</guid>
       <description></description>
@@ -27,11 +17,61 @@
     </item>
     
     <item>
+      <title>Notetaking</title>
+      <link>https://mischavandenburg.com/tags/notetaking/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/notetaking/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>https://mischavandenburg.com/tags/productivity/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/productivity/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Second-brain</title>
+      <link>https://mischavandenburg.com/tags/second-brain/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/second-brain/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>https://mischavandenburg.com/tags/writing/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/writing/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Zettelkasten</title>
       <link>https://mischavandenburg.com/tags/zettelkasten/</link>
-      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Coding</title>
+      <link>https://mischavandenburg.com/tags/coding/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/coding/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -102,16 +142,6 @@
       <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/macos/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Productivity</title>
-      <link>https://mischavandenburg.com/tags/productivity/</link>
-      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/productivity/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

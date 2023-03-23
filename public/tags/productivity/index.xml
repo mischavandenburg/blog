@@ -5,7 +5,40 @@
     <link>https://mischavandenburg.com/tags/productivity/</link>
     <description>Recent content in Productivity on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trying out pandoc for vim</title>
+      <link>https://mischavandenburg.com/zet/trying-out-pandoc/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/trying-out-pandoc/</guid>
+      <description>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.
+Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</description>
+      <content:encoded><![CDATA[<p>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&rsquo;m studying, and my entire blog is written in markdown.</p>
+<p>Some of the writing is done in Obsidian but I&rsquo;m moving away from Obsidian step by step. I&rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</p>
+<p>I&rsquo;ve been using nvim-markdown for a while now and I was quite happy with it, but it was bothering me that <strong>bold text</strong> was not rendered in my editor.</p>
+<p>Pandoc had been on my radar for a while because it uses the Commonmark <a href="https://spec.commonmark.org/">markdown spec</a> and it can be used to convert to many different documentation types. It&rsquo;s an interesting thought to keep my entire collection of notes and writings compatible with something that can be converted into anything.</p>
+<p>I noticed rwxrob uses pandoc as one of his few vim plugins.</p>
+<p>It took me an hour to make it compatible with neovim and to disable the spelling and folding. I couldn&rsquo;t just set the provided variables because they are still in vimscript and I haven&rsquo;t figured out how to set them yet because they use a hashtag in their name #</p>
+<p>So far I like it, but there are a few things that I miss from my nvim-markdown</p>
+<ul>
+<li>automatic bulleted list</li>
+<li>nested bulleted lists
+<ul>
+<li>with nvim-markdown these lists would continue</li>
+<li>Here I have to indent each line myself and add a bullet</li>
+</ul>
+</li>
+<li>navigation between headers
+<ul>
+<li>I didn&rsquo;t use this much to be honest, but I haven&rsquo;t figured it out in pandoc yet. Maybe it is possible?</li>
+</ul>
+</li>
+</ul>
+<p>I find myself using bullete lists and nested lists a lot in my notes, but I wonder if it is better to step away from those and make more use of markdown headings.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Running Docker and Kubernetes on Mac M2</title>
       <link>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</link>
