@@ -21,6 +21,10 @@ Entr runs commands when files change. Here we are feeding it only one file, but 
 
 Super handy to see the outcome of your code changes in real time.
 
+To run all the files in the directory, use the following:
+
+`entr -c bash -c "go run . " < <(find .)`
+
 I picked this up while going through Rob's Beginner Boost of 2022:
 
 https://youtu.be/kwrN3jbv4sE

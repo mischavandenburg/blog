@@ -47,6 +47,8 @@ Entr runs commands when files change. Here we are feeding it only one file, but 
 <p>Entr runs commands when files change. Here we are feeding it only one file, but you can also feed it a directory like so:</p>
 <p><code>find src/ | entr -s 'make'</code></p>
 <p>Super handy to see the outcome of your code changes in real time.</p>
+<p>To run all the files in the directory, use the following:</p>
+<p><code>entr -c bash -c &quot;go run . &quot; &lt; &lt;(find .)</code></p>
 <p>I picked this up while going through Rob&rsquo;s Beginner Boost of 2022:</p>
 <p><a href="https://youtu.be/kwrN3jbv4sE">https://youtu.be/kwrN3jbv4sE</a></p>
 ]]></content:encoded>
