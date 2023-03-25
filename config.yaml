@@ -1,6 +1,6 @@
 baseURL: "https://mischavandenburg.com/"
 title: Mischa van den Burg
-paginate: 10
+paginate: 20
 theme: PaperModX
 
 enableRobotsTXT: true
@@ -75,13 +75,15 @@ params:
         Content: >
           Welcome to my page. I’m Mischa, a DevOps Engineer from Amsterdam.
 
-          On this blog I share what I learn by writing articles and publishing notes about the topics I’m studying.
-          
-          I started with long form articles but it is turning more into a public Zettelkasten.
-          
-          
+          This is my public Zettelkasten. I publish notes about the topics that I'm studying.
+
+          These are mostly related to DevOps, coding, Linux and productivity. But I also write about other interests such as health and exercise.
+
+
+          I'm not selling anything. There are no affiliate links or ads. I publish parts of my Zettelkasten simply because I enjoy writing and because hopefully some of these writings can be of use to others.
+
           If you’d like to know more about me and my blog, go to the [About Me](/aboutme) page.
-          
+
           If you’d like to search this blog or see the files, head over to the [GitHub repo](https://github.com/mischavandenburg/blog) where it is stored. And give me a star while you’re at it! 🌟 😁
 
           Send me message on LinkedIn to get in touch: 
@@ -145,6 +147,10 @@ menu:
           name: Archive 
           url: /archives/
           weight: 30
+        - identifier: Search
+          name: Search
+          url: /search/
+          weight: 30
 # Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 # markup:
@@ -155,3 +161,8 @@ menu:
 #         lineNos: true
 #         style: monokai
 
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
