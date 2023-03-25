@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Writing on Mischa van den Burg</title>
-    <link>https://mischavandenburg.com/tags/writing/</link>
-    <description>Recent content in Writing on Mischa van den Burg</description>
+    <title>Health on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/health/</link>
+    <description>Recent content in Health on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 25 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/health/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Converting markdown to PDF on MacOS</title>
-      <link>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</link>
+      <title>I ran 5K for the first time in my life!</title>
+      <link>https://mischavandenburg.com/zet/ran-5km/</link>
       <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</guid>
-      <description>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.
-This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.
-You need the pandoc and wkhtmltopdf packages.
-brew install pandoc wkhtmltopdf To convert:
-pandoc 00-zettelkasten/Fundamentals\ of\ Bicep.md --pdf-engine=wkhtmltopdf -o /tmp/test.pdf This will output a pdf to my /tmp/ directory and it looks pretty good.</description>
-      <content:encoded><![CDATA[<p>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.</p>
-<p>This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.</p>
-<p>You need the pandoc and wkhtmltopdf packages.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install pandoc wkhtmltopdf 
-</span></span></code></pre></div><p>To convert:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pandoc 00-zettelkasten/Fundamentals<span class="se">\ </span>of<span class="se">\ </span>Bicep.md --pdf-engine<span class="o">=</span>wkhtmltopdf  -o /tmp/test.pdf
-</span></span></code></pre></div><p>This will output a pdf to my /tmp/ directory and it looks pretty good.</p>
-<p>To convert all markdown files in a directory you can use a wildcard:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pandoc 00-zettelkasten/*.md --pdf-engine<span class="o">=</span>wkhtmltopdf  -o /tmp/test.pdf
-</span></span></code></pre></div><p>Fun fact: converting my entire zettelkasten took a few seconds and generated a document of 80 pages with a font size of 10. Pretty fun to see it in a more regular format instead of the terminal.</p>
+      <guid>https://mischavandenburg.com/zet/ran-5km/</guid>
+      <description>Yesterday I reached a significant milestone. I ran my first 5K!
+I&amp;rsquo;ve always been on the heavy side. I did a lot of weightlifting from age 18 to around 27 and I was always rather bulky, but very strong. This meant I was very good at working in the woods or helping people move house, but I&amp;rsquo;ve never been able to do any running or endurance because my knees would start protesting very quickly.</description>
+      <content:encoded><![CDATA[<p>Yesterday I reached a significant milestone. I ran my first 5K!</p>
+<p>I&rsquo;ve always been on the heavy side. I did a lot of weightlifting from age 18 to around 27 and I was always rather bulky, but very strong. This meant I was very good at working in the woods or helping people move house, but I&rsquo;ve never been able to do any running or endurance because my knees would start protesting very quickly. However, I always admired endurance athletes and I had the desire to be able to run more than a few minutes without feeling the urge to die on the spot.</p>
+<p>Over the past 1,5 years I lost 20kg (~44 pounds) so I decided to give it yet another try.</p>
+<p>I&rsquo;ve never been this lightweight so I decided to give running another try. I started small with only 10 minutes but over the course of two months I built it up gradually.</p>
+<p>Last week I ran 4km and it felt pretty good, so I just decided to push a little bit more and try for my goal of 5k, and it went well! It feels like quite an accomplishment to me.</p>
+<p>Now that I lost all this weight running actually feels good, and it is liberating to discover a whole new area of exercise that I haven&rsquo;t explored yet: endurance. Looking back to my progress over a couple of months, I&rsquo;m curious how far I&rsquo;ll come and what my limits are.</p>
 ]]></content:encoded>
     </item>
     
@@ -68,39 +61,6 @@ work I spend most of my waking hours sitting at my keyboard working on the comma
 <p>From the beginning I made sure to use a system where readers can filter on tags if they are looking for specific content. And honestly, who reads my stuff anyway? I know of one person who regularly reads my stuff (Hi, F!), but my blog is mostly a relaxing creative activity. I like scrolling through it and seeing the thoughts I captured, and to see it grow over time. And it helps me tremendously with learning information, because writing about topics is a great way to test whether I really understand the matter.</p>
 <p>Including my notes on other topics such as health and exercise will make my blog less focused and centralized around DevOps and tech, but it will reveal more about me as a person, and it will be fun to look back in the future and see my progress in these other areas as well. And I think that summaries of the research I do on these topics can actually be of use to others.</p>
 <p>So I&rsquo;ve decided to remove all limitations on topics for my blog and to just write about everything that I feel like publishing and sharing with the world.</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Trying out pandoc for vim</title>
-      <link>https://mischavandenburg.com/zet/trying-out-pandoc/</link>
-      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/trying-out-pandoc/</guid>
-      <description>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.
-Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</description>
-      <content:encoded><![CDATA[<p>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&rsquo;m studying, and my entire blog is written in markdown.</p>
-<p>Some of the writing is done in Obsidian but I&rsquo;m moving away from Obsidian step by step. I&rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</p>
-<p>I&rsquo;ve been using nvim-markdown for a while now and I was quite happy with it, but it was bothering me that <strong>bold text</strong> was not rendered in my editor.</p>
-<p>Pandoc had been on my radar for a while because it uses the Commonmark <a href="https://spec.commonmark.org/">markdown spec</a> and it can be used to convert to many different documentation types. It&rsquo;s an interesting thought to keep my entire collection of notes and writings compatible with something that can be converted into anything.</p>
-<p>I noticed rwxrob uses pandoc as one of his few vim plugins.</p>
-<p>It took me an hour to make it compatible with neovim and to disable the spelling and folding. I couldn&rsquo;t just set the provided variables because they are still in vimscript and I haven&rsquo;t figured out how to set them yet because they use a hashtag in their name #</p>
-<p>So far I like it, but there are a few things that I miss from my nvim-markdown</p>
-<ul>
-<li>automatic bulleted list</li>
-<li>nested bulleted lists
-<ul>
-<li>with nvim-markdown these lists would continue</li>
-<li>Here I have to indent each line myself and add a bullet</li>
-</ul>
-</li>
-<li>navigation between headers
-<ul>
-<li>I didn&rsquo;t use this much to be honest, but I haven&rsquo;t figured it out in pandoc yet. Maybe it is possible?</li>
-</ul>
-</li>
-</ul>
-<p>I find myself using bullete lists and nested lists a lot in my notes, but I wonder if it is better to step away from those and make more use of markdown headings.</p>
 ]]></content:encoded>
     </item>
     

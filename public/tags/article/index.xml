@@ -5,7 +5,48 @@
     <link>https://mischavandenburg.com/tags/article/</link>
     <description>Recent content in Article on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/article/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/article/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Writing about Health and Personal Life</title>
+      <link>https://mischavandenburg.com/zet/write-about-health-personal/</link>
+      <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/write-about-health-personal/</guid>
+      <description>For weeks I&amp;rsquo;ve been debating with myself whether I should open up more on my blog. I spend my energy on two main pillars of my life: work and health, and up until now I&amp;rsquo;ve only been writing about work on my blog.
+work I spend most of my waking hours sitting at my keyboard working on the command line: working, studying, coding, note taking. My life is focused around my career and I spend at at least 20 hours a week studying or learning new skills related to my career.</description>
+      <content:encoded><![CDATA[<p>For weeks I&rsquo;ve been debating with myself whether I should open up more on my blog. I spend my energy on two main pillars of my life: work and health, and up until now I&rsquo;ve only been writing about work on my blog.</p>
+<h1 id="work">work</h1>
+<p>I spend most of my waking hours sitting at my keyboard working on the command line: working, studying, coding, note taking. My life is focused around my career and I spend at at least 20 hours a week studying or learning new skills related to my career. When I made my career change I started to write this blog to document the process and share my learning with anyone who might find it useful</p>
+<h1 id="health">health</h1>
+<p>The other main pillar of my life is health. In 2017 my father suffered two very serious hard attacks in close succession, and nearly losing him really woke me up and made me focus on my health.</p>
+<p>I started eating a plant based diet and slowly reducing all the habits that were detrimental to my health, and increasing the activities that would promote my health. I quit drinking alcohol and I&rsquo;ve been sober for nearly 5 years now.</p>
+<h2 id="mental-health">mental health</h2>
+<p>I&rsquo;m also very interested in mental health. I&rsquo;ve done extensive studies of meditation and did several retreats. I&rsquo;ve had a daily meditation practice going for 6 years now. I have a teacher and enjoy conversing about this topic with friends that have similar interests. I also practice yoga several times a week.</p>
+<h2 id="diet">diet</h2>
+<p>I spend a lot of time reading and researching what the optimal diet is for me. I&rsquo;ve done a lot of experimentation. Not only what I eat, but also when I eat has been a subject of scrutiny for years now. I&rsquo;ve been on some form of intermittent fasting protocol since 2015, and I&rsquo;m currently eating only one meal a day.</p>
+<p><a href="https://www.youtube.com/watch?v=MkuWE4QNuo0">Caloric restriction</a> has been shown to extend lifespan in many different organisms and I find it very intriguing. I&rsquo;ve been on a weight loss journey since late 2021 and I find that restricting my calories gives me all sorts of benefits.</p>
+<h2 id="sleep">sleep</h2>
+<p>My life changed when I read Matt Walker&rsquo;s book &ldquo;Why We Sleep&rdquo; and I&rsquo;ve focused on sleep hygiene ever since. My average sleep over the last year is 7 hours a night (logged by my iWatch).</p>
+<h2 id="exercise">exercise</h2>
+<p>I recently ran <a href="/ran-5km">my first 5k</a> and I&rsquo;m about to embark on a whole new exercise journey where I&rsquo;ll be exploring my endurance limits.</p>
+<h1 id="blog">blog</h1>
+<p>All of the topics above are interests of mine and I spent a lot of time researching them. I listen to podcasts, read books, discuss them with friends. And most importantly: I keep notes about them.</p>
+<p>So if I&rsquo;m happy to publish all of my work related notes with the world, why should I not share my other interests as well? I spend so much time gathering all this information and writing notes about them, and I feel that it might be useful to others who don&rsquo;t wish to plough through all of the material and would like to read summaries of the information.</p>
+<h2 id="there-are-a-few-reasons-why-ive-been-hesitant-to-do-so">There are a few reasons why I&rsquo;ve been hesitant to do so.</h2>
+<h3 id="seo">seo</h3>
+<p>I used to have websites that marketed products, and from those years of optimizing for sales I&rsquo;ve gained some ingrained habits. These include keeping websites centered around one topic and repeating keywords throughout articles.</p>
+<p>This blog was never intended for any sales or marketing, so I haven&rsquo;t been writing with any SEO in mind which has been liberating, frankly. But I find that these ingrained habits have stopped me from broadening my scope for the blog.</p>
+<h3 id="centralization">centralization</h3>
+<p>But keeping the website centered focused on one area has been a sticking point. I&rsquo;ve always had the reader in mind, but also for selfish reasons. Colleagues and managers have pointed out that my blog is an excellent supplement to my CV. When I switched jobs recently, one hiring manager even offered me a job with a good salary solely based on my CV, my blog and one phone conversation.</p>
+<p>Readers of my blog might not necessarily be interested reading about my opinions and notes on health and exercise.</p>
+<h2 id="its-my-blog">It&rsquo;s my blog!</h2>
+<p>In the end I decided to start writing more about my personal life and health interests. The whole point of starting my own website was to have the <strong>freedom of writing about what I want without limitations</strong>. I could have just written all my stuff on LinkedIn on other social media, but then you don&rsquo;t own any of the content. What happens if you get banned for some reason? Or hacked? All your work is gone, which is why I chose my own website written in markdown files stored locally on my disk and hosted on GitHub.</p>
+<p>From the beginning I made sure to use a system where readers can filter on tags if they are looking for specific content. And honestly, who reads my stuff anyway? I know of one person who regularly reads my stuff (Hi, F!), but my blog is mostly a relaxing creative activity. I like scrolling through it and seeing the thoughts I captured, and to see it grow over time. And it helps me tremendously with learning information, because writing about topics is a great way to test whether I really understand the matter.</p>
+<p>Including my notes on other topics such as health and exercise will make my blog less focused and centralized around DevOps and tech, but it will reveal more about me as a person, and it will be fun to look back in the future and see my progress in these other areas as well. And I think that summaries of the research I do on these topics can actually be of use to others.</p>
+<p>So I&rsquo;ve decided to remove all limitations on topics for my blog and to just write about everything that I feel like publishing and sharing with the world.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Notes: Fundamentals of Bicep</title>
       <link>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</link>
