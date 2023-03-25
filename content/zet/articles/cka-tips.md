@@ -3,6 +3,7 @@ date: "2022-09-13"
 tags:
 - Study
 - DevOps
+- Article
 title: Certified Kubernetes Administrator (CKA) Exam Tips
 ---
 I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.

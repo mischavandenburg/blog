@@ -3,6 +3,7 @@ date: "2022-09-16"
 tags:
 - DevOps
 - Book-Notes
+- Article
 title: "Book Notes: The Phoenix Project"
 ---
 ![Phoenix Project](https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/914-sUgELZL.jpg)

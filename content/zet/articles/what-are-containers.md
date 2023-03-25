@@ -5,6 +5,7 @@ tags:
 - Explanations
 - Linux
 - DevOps
+- Article
 ---
 
 When you learn about DevOps, you will come across the concept of a container early on. This is a "Mischa Explains" article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old. 

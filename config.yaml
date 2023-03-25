@@ -15,11 +15,10 @@ minify:
     disableXML: true
     minifyOutput: true
 
-
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: Mischa's Blog & Zettelkasten 
-    description: "On this blog I share what I learn by writing articles and publishing notes about the topics I’m studying in the DevOps and cloud computing field. I started with long form articles but it is turning more into a public Zettelkasten."
+    title: Mischa's Blog & Public Zettelkasten 
+    description: "My public Zettelkasten where I publish the notes I write about the topics that interest me."
     keywords: [Blog, Portfolio, CV, DevOps, Zettelkasten, Second Brain, Linux, Azure, Productivity, vim, neovim, unix]
     author: Mischa van den Burg
     # author: ["Me", "You"] # multiple authors
@@ -73,20 +72,25 @@ params:
     homeInfoParams:
         Title: "Living on The Command Line."
         Content: >
-          Welcome to my page. I’m Mischa, a DevOps Engineer from Amsterdam.
+          Welcome to my website. I’m Mischa, a DevOps Engineer from Amsterdam.
 
-          This is my public Zettelkasten. I publish notes about the topics that I'm studying.
+          This is my public Zettelkasten where I publish notes about the topics that interest me.
 
-          These are mostly related to DevOps, coding, Linux and productivity. But I also write about other interests such as health and exercise.
+          These are mostly related to DevOps, coding, Linux and productivity. But I also write occassionally about my other interests, such as health and exercise.
 
 
           I'm not selling anything. There are no affiliate links or ads. I publish parts of my Zettelkasten simply because I enjoy writing and because hopefully some of these writings can be of use to others.
 
-          If you’d like to know more about me and my blog, go to the [About Me](/aboutme) page.
 
-          If you’d like to search this blog or see the files, head over to the [GitHub repo](https://github.com/mischavandenburg/blog) where it is stored. And give me a star while you’re at it! 🌟 😁
+          If this is your first time here, or if you'd like to know more about me and how I've set up this blog, I suggest you visit the [Start Here](/aboutme) page.
 
-          Send me message on LinkedIn to get in touch: 
+          This blog is also available for your preferred RSS reader at mischavandenburg.com/index.xml
+
+
+          To get in touch with me, connect with me on [linkedin.com/in/mischavandenburg](https://www.linkedin.com/in/mischavandenburg). Also check me out at [github.com/mischavandenburg](https://github.com/mischavandenburg/)
+
+
+          Socials:
 
 
     socialIcons:
@@ -127,30 +131,26 @@ params:
         keys: ["title", "permalink", "summary", "content"]
 menu:
     main:
+        - identifier: Start Here 
+          name: "Start Here"
+          url: /aboutme/
+          weight: 10
         - identifier: Tags
           name: Tags
           url: /tags/
-          weight: 10
-        - identifier: Articles 
-          name: Articles 
-          url: /zet/articles/
           weight: 20
-        - identifier: Zettelkasten 
-          name: Zettelkasten 
-          url: /zet/
-          weight: 30
-        - identifier: About
-          name: About 
-          url: /aboutme/
-          weight: 30
-        - identifier: Archive 
-          name: Archive 
+        - identifier: "Index (Zet)"
+          name: "Index (Zet)"
           url: /archives/
           weight: 30
+        - identifier: "Articles"
+          name: "Articles"
+          url: /tags/article/
+          weight: 40
         - identifier: Search
           name: Search
           url: /search/
-          weight: 30
+          weight: 50
 # Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 # markup:

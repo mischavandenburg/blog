@@ -3,6 +3,7 @@ title: "Lab Project: GitOps with ArgoCD, Azure Pipelines and Minikube"
 date: 2022-12-24T13:49:55+01:00
 tags:
 - DevOps
+- Article
 ---
 This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.
 

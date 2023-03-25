@@ -4,6 +4,7 @@ date: 2022-10-08
 tags:
 - Career
 - Personal
+- Article
 ---
 Last week I watched "Jiro Dreams of Sushi" again. It must be the eighth time I revisited this piece of art. I have very little interest in sushi, but there is much more to this documentary. It was first recommended to me by my good friend Anders more than five years ago, but I couldn't grasp its underlying life lessons the first time around. 
 

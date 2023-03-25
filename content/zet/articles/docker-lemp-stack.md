@@ -1,6 +1,7 @@
 ---
 categories:
 - DevOps
+- Article
 date: "2022-01-30T16:20:24Z"
 guid: https://mischavandenburg.com/?p=68
 id: 68

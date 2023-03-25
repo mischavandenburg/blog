@@ -4,6 +4,7 @@ tags:
 - Career
 - Personal
 - Book-Notes
+- Article
 title: "Book Notes: Ikigai: The Japanese Secret to a Long and Happy Life"
 ---
 

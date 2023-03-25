@@ -3,6 +3,7 @@ date: "2022-09-10T12:22:28Z"
 tags:
 - Linux
 - Personal
+- Article
 title: 'Building my Own OS: Linux as a Creative Activity'
 ---
 

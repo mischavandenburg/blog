@@ -2,6 +2,7 @@
 date: "2022-04-02T09:55:03Z"
 tags:
 - Linux
+- Article
 title: 'Yadm: Keep Track of Your Precious Dotfiles'
 url: /yadm-keep-track-of-your-precious-dotfiles/
 ---

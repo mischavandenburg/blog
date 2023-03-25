@@ -3,6 +3,7 @@ date: "2022-07-19T18:01:26Z"
 tags:
 - DevOps
 - Linux
+- Article
 title: How to Upgrade Java and Jenkins on Ubuntu 18.04
 url: /how-to-upgrade-java-and-jenkins-on-ubuntu-18-04/
 ---

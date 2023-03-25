@@ -4,6 +4,7 @@ date: 2022-09-18
 tags:
 - Linux
 - Neovim
+- Article
 ---
 If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.
 

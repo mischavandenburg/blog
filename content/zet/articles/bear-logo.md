@@ -2,6 +2,7 @@
 date: "2022-01-30T11:53:21Z"
 tags:
   - Personal
+  - Article
 title: Why I Chose a Bear as a Logo
 url: /why-i-chose-a-bear-for-my-logo/
 ---

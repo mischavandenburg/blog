@@ -3,6 +3,7 @@ date: "2022-01-28T08:56:38Z"
 tags:
   - DevOps
   - Career
+  - Article
 title: My Journey Into DevOps So Far
 url: /my-journey-into-devops-so-far/
 ---

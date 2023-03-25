@@ -4,6 +4,7 @@ date: 2023-01-01T19:05:13+01:00
 tags:
 - Productivity
 - Study
+- Article
 ---
 
 As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics. 

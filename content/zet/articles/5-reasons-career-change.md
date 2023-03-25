@@ -3,6 +3,7 @@ date: "2022-07-04T20:04:33Z"
 tags:
 - Career
 - DevOps
+- Article
 title: 5 Reasons Why I Changed my Career to IT in my Thirties
 url: /5-reasons-why-i-changed-my-career-to-it-in-my-thirties/
 ---

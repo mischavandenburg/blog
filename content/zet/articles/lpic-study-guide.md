@@ -4,6 +4,7 @@ image: /wp-content/uploads/2022/03/fallback-image-for-social-media_bw.jpg
 tags:
   - Linux
   - Study
+  - Article
 title: LPIC-1 Study Guide
 url: /lpic-1-study-guide/
 ---
