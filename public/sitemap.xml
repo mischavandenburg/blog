@@ -3,14 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
+    <loc>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/macos/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/neovim/</loc>
-    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/notetaking/</loc>
-    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/writing/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/productivity/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
@@ -18,19 +36,7 @@
     <loc>https://mischavandenburg.com/tags/second-brain/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/trying-out-pandoc/</loc>
-    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/writing/</loc>
-    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
-    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/coding/</loc>
@@ -64,9 +70,6 @@
     <lastmod>2023-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
-    <lastmod>2023-03-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/macos/</loc>
     <lastmod>2023-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/advanced-bicep/</loc>

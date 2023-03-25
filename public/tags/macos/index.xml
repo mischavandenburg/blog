@@ -5,7 +5,31 @@
     <link>https://mischavandenburg.com/tags/macos/</link>
     <description>Recent content in MacOS on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Converting markdown to PDF on MacOS</title>
+      <link>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</link>
+      <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</guid>
+      <description>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.
+This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.
+You need the pandoc and wkhtmltopdf packages.
+brew install pandoc wkhtmltopdf To convert:
+pandoc 00-zettelkasten/Fundamentals\ of\ Bicep.md --pdf-engine=wkhtmltopdf -o /tmp/test.pdf This will output a pdf to my /tmp/ directory and it looks pretty good.</description>
+      <content:encoded><![CDATA[<p>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.</p>
+<p>This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.</p>
+<p>You need the pandoc and wkhtmltopdf packages.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install pandoc wkhtmltopdf 
+</span></span></code></pre></div><p>To convert:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pandoc 00-zettelkasten/Fundamentals<span class="se">\ </span>of<span class="se">\ </span>Bicep.md --pdf-engine<span class="o">=</span>wkhtmltopdf  -o /tmp/test.pdf
+</span></span></code></pre></div><p>This will output a pdf to my /tmp/ directory and it looks pretty good.</p>
+<p>To convert all markdown files in a directory you can use a wildcard:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pandoc 00-zettelkasten/*.md --pdf-engine<span class="o">=</span>wkhtmltopdf  -o /tmp/test.pdf
+</span></span></code></pre></div><p>Fun fact: converting my entire zettelkasten took a few seconds and generated a document of 80 pages with a font size of 10. Pretty fun to see it in a more regular format instead of the terminal.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Running Docker and Kubernetes on Mac M2</title>
       <link>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</link>
