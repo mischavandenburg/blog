@@ -32,10 +32,10 @@ pandoc 00-zettelkasten/Fundamentals\ of\ Bicep.md --pdf-engine=wkhtmltopdf -o /t
     
     <item>
       <title>Writing about Health and Personal Life</title>
-      <link>https://mischavandenburg.com/zet/write-about-health-personal/</link>
+      <link>https://mischavandenburg.com/zet/articles/write-about-health-personal/</link>
       <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/zet/write-about-health-personal/</guid>
+      <guid>https://mischavandenburg.com/zet/articles/write-about-health-personal/</guid>
       <description>For weeks I&amp;rsquo;ve been debating with myself whether I should open up more on my blog. I spend my energy on two main pillars of my life: work and health, and up until now I&amp;rsquo;ve only been writing about work on my blog.
 work I spend most of my waking hours sitting at my keyboard working on the command line: working, studying, coding, note taking. My life is focused around my career and I spend at at least 20 hours a week studying or learning new skills related to my career.</description>
       <content:encoded><![CDATA[<p>For weeks I&rsquo;ve been debating with myself whether I should open up more on my blog. I spend my energy on two main pillars of my life: work and health, and up until now I&rsquo;ve only been writing about work on my blog.</p>
