@@ -37,7 +37,7 @@ My life changed when I read Matt Walker's book "Why We Sleep" and I've focused o
 
 ## exercise
 
-I recently ran [my first 5k](/ran-5km) and I'm about to embark on a whole new exercise journey where I'll be exploring my endurance limits.
+I recently ran [my first 5k](/zet/ran-5km) and I'm about to embark on a whole new exercise journey where I'll be exploring my endurance limits.
 
 # blog
 
