@@ -12,6 +12,9 @@
     <loc>https://mischavandenburg.com/tags/article/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/coding/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -25,6 +28,9 @@
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/macos/</loc>
+    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/website-housekeeping/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/neovim/</loc>
@@ -62,9 +68,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/trying-out-pandoc/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/coding/</loc>
-    <lastmod>2023-03-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/surround-word-quotes-neovim/</loc>
     <lastmod>2023-03-21T00:00:00+00:00</lastmod>
