@@ -71,6 +71,134 @@ We have the following function in main.</description>
     </item>
     
     <item>
+      <title>Go - Skillstak Beginner Boost Week 17 and 18 Notes</title>
+      <link>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</guid>
+      <description>Beginner Boost Week 17 and 18 Notes Link to video
+Don&amp;rsquo;t forget to set GOBIN=~/.local/bin, GOPRIVATE, CGO_ENABLED=0 Go Testing - Example Tests func ExampleFoo() { foo() // Output: // Foo } The ExampleFoo indicates the test here. It needs to match the name exactly after Example. But it is capitalized.
+It runs that function and will compare the output to what is specified.
+It says &amp;ldquo;see if the program generates this output in std out&amp;rdquo;.</description>
+      <content:encoded><![CDATA[<h1 id="beginner-boost-week-17-and-18-notes">Beginner Boost Week 17 and 18 Notes</h1>
+<p><a href="https://www.youtube.com/watch?v=WMH5ENF_Xvo">Link to video</a></p>
+<ul>
+<li>Don&rsquo;t forget to set <code>GOBIN=~/.local/bin</code>, <code>GOPRIVATE</code>, <code>CGO_ENABLED=0</code></li>
+</ul>
+<h1 id="go-testing---example-tests">Go Testing - Example Tests</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">ExampleFoo</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">foo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// Foo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The ExampleFoo indicates the test here. It needs to match the name exactly after Example. But it is capitalized.</p>
+<p>It runs that function and will compare the output to what is specified.</p>
+<p>It says &ldquo;see if the program generates this output in std out&rdquo;.</p>
+<p>These are called example tests.</p>
+<p>To export a function the first letter should be a capital. Everything that has a capital as first letter is exported.</p>
+<p>When you are writing example tests you are providing readable automatic documentation to your end users.</p>
+<p>You can use <code>// Unordered Output</code> if you don&rsquo;t care about the order.</p>
+<h2 id="printf">Printf</h2>
+<p>use <code>printf %q</code> to see all of the characters. <code>%q</code> escapes all of the invisible characters. So you can see \r or \n for example. This is the only way to check for empty values in Example tests.</p>
+<h1 id="how-to-learn-go">How to Learn Go</h1>
+<p>Don&rsquo;t go to the books. Stay with the spec, write your own projects, and find one or two or 10 Go projects and study the crap out of them.</p>
+<p>Study the code bases. Kind is a good codebase.</p>
+<p>Read the Go codebase!</p>
+<p><a href="https://youtu.be/9hEnzD-bNy4?t=8467">https://youtu.be/9hEnzD-bNy4?t=8467</a></p>
+<p>Read other people&rsquo;s code and see if your code looks like that.</p>
+<p>&ldquo;Good artists copy, great artists steal.&rdquo; - quote accredited to Steve Jobs but it has its origin in T.S. Eliot and even further back.</p>
+<p><strong>Start with the tests! Read the tests first.</strong></p>
+<h1 id="searching-go-documentation">Searching Go Documentation</h1>
+<p>Always search for golang when searching on the net. Preferably text based searching.</p>
+<p>Then you use <code>go doc os.Stderr</code> - for example.</p>
+<h1 id="variable-names">Variable Names</h1>
+<p>Long variable names are frowned upon in the Go community. They should be as short as they need to be.</p>
+<p>If using in a tight scope, a single letter is fine. In a block two or three characters is more than enough. It distracts from reading the code if they have very long names.</p>
+<p>The more remote the variable is, the more descriptive it should be.</p>
+<h1 id="the-art-of-coding">The Art of Coding</h1>
+<ul>
+<li>breaking everything down into small 1 task functions</li>
+<li>don&rsquo;t repeat yourself</li>
+</ul>
+<p>See <a href="#stuttering">stuttering</a></p>
+<h1 id="top-level-libraries">Top Level Libraries</h1>
+<p>It&rsquo;s not common to make a single utility at a top-level GitHub repo.</p>
+<p>It&rsquo;s very likely that you are going to want to reuse code somewhere.</p>
+<p>You should start thinking of things as composition. &ldquo;How is this code going to be used by other people&rdquo;.</p>
+<p>Go is different than bash: you will use this code elsewhere.</p>
+<ul>
+<li>What is the function of what I&rsquo;m creating?</li>
+<li>Create these as small composable blocks</li>
+<li>So you can use them later</li>
+</ul>
+<h1 id="example-based-testing">Example Based Testing</h1>
+<p><a href="https://pkg.go.dev/testing">https://pkg.go.dev/testing</a></p>
+<blockquote>
+<p>The package also runs and verifies example code. Example functions may include a
+concluding line comment that begins with &ldquo;Output:&rdquo; and is compared with the
+standard output of the function when the tests are run. (The comparison ignores
+leading and trailing space.) These are examples of an example:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">ExampleHello</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Output: hello
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">ExampleSalutations</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;hello, and&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;goodbye&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// hello, and
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// goodbye
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><h1 id="searching-information">Searching Information</h1>
+<p>Being able to look up information quickly and taking notes about them is just as important as the coding itself.</p>
+<h1 id="packages-or-libraries">Packages or Libraries</h1>
+<p>You can either have a command, which will be a main package, or you can have an importable library named <!-- raw HTML omitted -->.go. Should have any other name besides main.</p>
+<p>You rarely want your top level of your module to be a package.</p>
+<p>Convention: cmd directory.</p>
+<p>This is specifically for separate commands.</p>
+<h2 id="stuttering">Stuttering</h2>
+<p><code>greet.Greet()</code> is called stuttering in go. Don&rsquo;t do this.</p>
+<h1 id="modules">Modules</h1>
+<p>A module can be defined as &ldquo;a GitHub repo with a go.mod&rdquo; in it.</p>
+<p>&ldquo;A collection of Go packages stored in a file tree with a go.mod file at its root&rdquo;</p>
+<p>The go.mod contains the import path of the module.</p>
+<h2 id="what-module-does-greet-belong-to">What Module Does Greet Belong To?</h2>
+<p>In the case of our greet command, it belongs to the greet module located at:</p>
+<p><code>github.com/mischavandenburg/go/rwxrob/boost2022/challenges/greet</code></p>
+<p>Greet has a main package which is part of the greet module.</p>
+<p>Now we will add another command with another main package to this module.</p>
+<h1 id="cli">CLI</h1>
+<p>Stuff that has to do with interacting with the user on the command line should never be in the package library. The package library should be written to be solid no matter what.</p>
+<p>The &ldquo;name&rdquo; for our greet program should be able to come to anywhere.</p>
+<h1 id="avoid-interactive-input">Avoid Interactive Input</h1>
+<p>You generally want to avoid interactive input. Prefer arguments, env variables or file inputs.</p>
+<p>If you call your program from another script it will stall if it waits for interactive input.</p>
+<p>A good example is forgetting &ldquo;-y&rdquo; when running apt-get.</p>
+<p>An interactive story game is a different use case than a CLI tool.</p>
+<p>UNIX filters are specifically designed to read input and generate an output based on the input. Here it is expected behaviour to stall if no input is given.</p>
+<h1 id="runes">Runes</h1>
+<p>A rune is a single Unicode point.</p>
+<p>The same people who created Go, created the Unicode standard.</p>
+<p>Go has the best Unicode support.</p>
+<h1 id="writing-documentation">Writing Documentation</h1>
+<p>Convention is to always start with the name of the thing you are documenting. When documenting a function, always start with the function name. For example <code>// ReadLine reads from standard input</code></p>
+<p>Use <code>go doc --all</code> to see a print of all the documentation in your package.</p>
+<p>The same goes for packages. Always start with &ldquo;Package internal does bla bla&rdquo;</p>
+<h1 id="links">Links</h1>
+<p>202303261403</p>
+<p><a href="https://www.youtube.com/watch?v=WMH5ENF_Xvo">https://www.youtube.com/watch?v=WMH5ENF_Xvo</a></p>
+<p>[[go]]</p>
+<p>[[coding]]</p>
+<p>[[rwxrob]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Made Some Website Improvements</title>
       <link>https://mischavandenburg.com/zet/website-housekeeping/</link>
       <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>

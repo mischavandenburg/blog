@@ -87,6 +87,16 @@
     </item>
     
     <item>
+      <title>Study</title>
+      <link>https://mischavandenburg.com/tags/study/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/study/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Zettelkasten</title>
       <link>https://mischavandenburg.com/tags/zettelkasten/</link>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
@@ -222,16 +232,6 @@
       <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Study</title>
-      <link>https://mischavandenburg.com/tags/study/</link>
-      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/study/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
