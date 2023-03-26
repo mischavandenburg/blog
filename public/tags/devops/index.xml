@@ -5,7 +5,120 @@
     <link>https://mischavandenburg.com/tags/devops/</link>
     <description>Recent content in DevOps on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Difference Between DevOps, Cloud and Cloud Native</title>
+      <link>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</guid>
+      <description>I found an excellent video by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.
+Cloud These are primarily cloud services. The external cloud.
+&amp;ldquo;Something as a Service&amp;rdquo;.
+Amazon Azure GCP Cloud Native This is Cloud Native: The CNCF Landscape
+Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.
+Computing Edge Computing
+High Performance Computing</description>
+      <content:encoded><![CDATA[<p>I found <a href="https://youtu.be/gyjRriOyw-k">an excellent video</a> by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.</p>
+<h1 id="cloud">Cloud</h1>
+<p>These are primarily <em>cloud services</em>. The external cloud.</p>
+<p>&ldquo;Something as a Service&rdquo;.</p>
+<ul>
+<li>Amazon</li>
+<li>Azure</li>
+<li>GCP</li>
+</ul>
+<h1 id="cloud-native">Cloud Native</h1>
+<p>This is Cloud Native: <a href="https://landscape.cncf.io/">The CNCF Landscape</a></p>
+<p>Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.</p>
+<h2 id="computing">Computing</h2>
+<ul>
+<li>
+<p>Edge Computing</p>
+</li>
+<li>
+<p>High Performance Computing</p>
+</li>
+<li>
+<p>Encapsulates all of the technologies that are involved with containerization of work, jobs and nodes</p>
+</li>
+<li>
+<p>Deployment of compute resources as nodes</p>
+</li>
+<li>
+<p>This is why Google&rsquo;s Borg was called Borg</p>
+</li>
+<li>
+<p>Computers are drones of a larger collective</p>
+</li>
+<li>
+<p>Every node puts all the resources into the collective.</p>
+</li>
+</ul>
+<p>The collectives are all the nodes combined, and Kubernetes is the Borg that orchestrates everything. It sees available resources and allocates the work that needs to be done.</p>
+<p>Borg is the internal system developed at Google to run their infrastructure. You can read about it in the <a href="https://sre.google/books/">Site Reliability Engineering</a> books and I highly recommend them.</p>
+<blockquote>
+<p>Kubernetes is /proc for the cloud
+Rob Muhlenstein</p>
+</blockquote>
+<ul>
+<li>It&rsquo;s really big</li>
+</ul>
+<h2 id="most-important-technologies">Most IMportant Technologies</h2>
+<ul>
+<li>
+<p>Docker, Dockerfiles</p>
+</li>
+<li>
+<p>Kubernetes</p>
+</li>
+<li>
+<p>Helm</p>
+</li>
+<li>
+<p>Harbor</p>
+</li>
+<li>
+<p>Different registries, harbor, quay</p>
+</li>
+<li>
+<p>It is a lot of Python and POSIX shell</p>
+</li>
+<li>
+<p>Go for infrastructure application development</p>
+</li>
+<li>
+<p>Kubernetes and Helm have won the game</p>
+</li>
+</ul>
+<h2 id="containers-size-matters">Containers, Size Matters</h2>
+<ul>
+<li>Size matters (again) in the cloud</li>
+<li>The smaller your container the better, because it takes less resources and less costs</li>
+</ul>
+<h1 id="devops">DevOps</h1>
+<p>DevOps is not the same as Cloud Native. It is one piece of it, a specific set of practices and actions that can be done within Cloud Native.</p>
+<ul>
+<li>How you write software and release it</li>
+<li>CI/CD</li>
+<li>Focused on getting the software out</li>
+<li>GitLab has become the one stop shop</li>
+<li>Purpose is to write software and get it published fast</li>
+<li>GitOps</li>
+</ul>
+<h1 id="links">Links:</h1>
+<p>202303262003</p>
+<p><a href="https://youtu.be/gyjRriOyw-k">https://youtu.be/gyjRriOyw-k</a></p>
+<p><a href="https://landscape.cncf.io/">https://landscape.cncf.io/</a></p>
+<p><a href="https://sre.google/books/">https://sre.google/books/</a></p>
+<p>[[rwxrob]]</p>
+<p>[[devops]]</p>
+<p>[[kubernetes]]</p>
+<p>[[cloud-native]]</p>
+<p>[[cncf]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Running Docker and Kubernetes on Mac M2</title>
       <link>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</link>
