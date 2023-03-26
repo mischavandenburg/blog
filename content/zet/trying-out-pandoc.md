@@ -6,7 +6,7 @@ tags:
 - Neovim
 - Productivity
 - Writing
-- Second-brain
+- Second-Brain
 - Notetaking
 ---
 

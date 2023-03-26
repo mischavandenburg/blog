@@ -5,7 +5,37 @@
     <link>https://mischavandenburg.com/tags/how-to/</link>
     <description>Recent content in How-To on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 21 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Run Newsboat in Zenmode</title>
+      <link>https://mischavandenburg.com/zet/newsboat-in-zenmode/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/newsboat-in-zenmode/</guid>
+      <description>To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.
+However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&amp;rsquo;ll notice that the text is always located in a middle column of the window, so you don&amp;rsquo;t have to move your neck while reading.</description>
+      <content:encoded><![CDATA[<p>To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.</p>
+<p>However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&rsquo;ll notice that the text is always located in a middle column of the window, so you don&rsquo;t have to move your neck while reading. At least, this is the case with well designed websites that serve text content.</p>
+<p>Vim has a plugin that achieves this and I use it extensively. It is called Zenmode. In Neovim I use a similar plugin called No Neckpain.</p>
+<p>To achieve a similar configuration for Newsboat I used tmux. I wrote the following bash script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># nb opens a new pane and runs newsboat in it. I want to read from a centered column in my screen.</span>
+</span></span><span class="line"><span class="cl">tmux split-pane -h <span class="se">\;</span> resize-pane -x 130<span class="se">\;</span> send -t <span class="m">2</span> <span class="s2">&#34;newsboat&#34;</span> Enter<span class="se">\;</span> send -t <span class="m">1</span> <span class="s2">&#34;clear&#34;</span> Enter
+</span></span></code></pre></div><p>Note that this needs to be run from within an existing tmux window with no split panes.</p>
+<p>It splits the current window in to two panes, resizes the new pane to a width of 130 pixels and sends the &ldquo;newsboat&rdquo; command to the new pane, and the &ldquo;clear&rdquo; command to the old (left) pane to keep it nice and clean.</p>
+<p>In my <code>~/.newsboat/config</code> file I added the following setting:</p>
+<p><code>text-width 72</code></p>
+<p>This will limit the text on the right hand side of the screen.</p>
+<p>The end result looks like this:</p>
+<p><img loading="lazy" src="/newsboat-zen.png" type="" alt="Newsboat Zenmode"  /></p>
+<h2 id="links">Links:</h2>
+<p>202303260903</p>
+<p><a href="https://github.com/folke/zen-mode.nvim">https://github.com/folke/zen-mode.nvim</a></p>
+<p><a href="https://github.com/shortcuts/no-neck-pain.nvim">https://github.com/shortcuts/no-neck-pain.nvim</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Setting up a new LUKS encrypted disk with dm-crypt in Arch Linux</title>
       <link>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</link>

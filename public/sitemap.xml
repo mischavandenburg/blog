@@ -3,16 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/coding/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/command-line/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/explanations/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/go/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/newsboat-in-zenmode/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/how-to/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/neovim/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/productivity/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/article/</loc>
-    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/coding/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</loc>
@@ -33,9 +69,6 @@
     <loc>https://mischavandenburg.com/zet/website-housekeeping/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/neovim/</loc>
-    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/notetaking/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -45,23 +78,11 @@
     <loc>https://mischavandenburg.com/tags/running/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/writing/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/write-about-health-personal/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
-    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/productivity/</loc>
-    <lastmod>2023-03-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/second-brain/</loc>
     <lastmod>2023-03-23T00:00:00+00:00</lastmod>
@@ -72,9 +93,6 @@
     <loc>https://mischavandenburg.com/zet/surround-word-quotes-neovim/</loc>
     <lastmod>2023-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/go/</loc>
-    <lastmod>2023-03-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/package-module-go/</loc>
     <lastmod>2023-03-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -82,9 +100,6 @@
     <lastmod>2023-03-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/running-go-on-change/</loc>
-    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2023-03-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
@@ -147,9 +162,6 @@
     <loc>https://mischavandenburg.com/zet/free-oracle-vm/</loc>
     <lastmod>2023-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/how-to/</loc>
-    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</loc>
     <lastmod>2023-01-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -211,9 +223,6 @@
     <lastmod>2023-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/application-insights-sampling/</loc>
-    <lastmod>2023-01-03T08:41:09+01:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/explanations/</loc>
     <lastmod>2023-01-03T08:41:09+01:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</loc>

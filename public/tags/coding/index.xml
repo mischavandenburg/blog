@@ -5,7 +5,71 @@
     <link>https://mischavandenburg.com/tags/coding/</link>
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 25 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go - Reading from Standard Input Provided by User</title>
+      <link>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</guid>
+      <description>I&amp;rsquo;m working through the &amp;ldquo;greet&amp;rdquo; challenge by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.
+The program should take input from the user and print it out. I worked through the challenge together with Rob in his video but I&amp;rsquo;m going to talk (write) myself through these functions to fully understand what&amp;rsquo;s going on.
+We have the following function in main.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;m working through the &ldquo;greet&rdquo; <a href="https://rwx.gg/lang/cha/">challenge</a> by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.</p>
+<p>The program should take input from the user and print it out. I worked through the challenge together with Rob <a href="https://www.youtube.com/watch?v=WMH5ENF_Xvo">in his video</a> but I&rsquo;m going to talk (write) myself through these functions to fully understand what&rsquo;s going on.</p>
+<p>We have the following function in main.go:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">name</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">err</span> <span class="kt">error</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">)</span> <span class="p">&gt;</span> <span class="mi">1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">name</span> <span class="p">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Join</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">name</span> <span class="o">==</span> <span class="s">&#34;&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello there, what&#39;s your name?&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">name</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">internal</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdin</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">log</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">greet</span><span class="p">.</span><span class="nf">Hi</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>If the number of arguments passed to the program is greater than 1, we set <code>name</code> to a joined string created from the provided arguments. Args[0] would be the path to the program, so we don&rsquo;t want that to be included. As a result, <code>greet mischa</code> will pass <code>mischa</code> to the greet.Hi() function, as defined in greet.go, and print out <code>Hello, mischa</code>.</p>
+<p>However, if no arguments are passed to the greet program, discovered in case <code>name</code> is empty, we ask the user for input. We capture the input by <code>os.Stdin</code> and pass it to the <code>ReadLine()</code> function, which is located at internal/readline.go.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// ReadLine takes any io.Reader and returns a trimmed string (initial
+</span></span></span><span class="line"><span class="cl"><span class="c1">// and trailing white space) or an empty string and error if any error
+</span></span></span><span class="line"><span class="cl"><span class="c1">// is encountered.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">ReadLine</span><span class="p">(</span><span class="nx">in</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Reader</span><span class="p">)</span> <span class="p">(</span><span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">out</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">bufio</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">in</span><span class="p">).</span><span class="nf">ReadString</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">out</span> <span class="p">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">TrimSpace</span><span class="p">(</span><span class="nx">out</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">out</span><span class="p">,</span> <span class="nx">err</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>ReadLine has a parameter <code>in</code> of type io.Reader, which is an interface. Next, we determine that ReadLine should return two values of type string and error. I&rsquo;m saving to learn about interfaces for another day, I&rsquo;m just going to work through this function now.</p>
+<p>We assign the output of <code>bufio.NewReader(in).ReadString('\n')</code> to two new variables named <code>out</code> and <code>err</code> using the &ldquo;walrus operator&rdquo; <code>:=</code> which detects the types automatically. We can do it like this because ReadString returns (string, error).</p>
+<p>We take the <code>in</code> argument of type <code>io.Reader</code> which was passed to the ReadLine function, which in this case is the <code>io.Stdin</code> that came from our main function, and pass it on to <code>bufio.NewReader(in)</code>. Then we are able to read the string until the newline character <code>\n</code> in the string, and trim off the whitespace from the beginning and the end of the string by calling TrimSpace on the <code>out</code> variable.</p>
+<p>Then we return the trimmed string back to our original main function, which will pass it on to the <code>Hi()</code> function.</p>
+<p>However, if the <code>bufio.NewReader(in).ReadString('\n')</code> should return an error, it is caught by this code in the main function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">log</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span></code></pre></div><p>This is a standard way of handling errors in Go. If the error is anything else than nil, we will print the error and end the function with the return keyword.</p>
+<h1 id="thoughts">Thoughts</h1>
+<p>I&rsquo;m really glad I took the time to talk / write myself through this program. I think I&rsquo;m going to make a habit of this as I&rsquo;m learning Go. It made everything much clearer when I sat down and traced the arguments from function to function and describing every step in my own words.</p>
+<p>I&rsquo;ll post this note in the YouTube comments, maybe somebody will find it useful as well.</p>
+<h1 id="links">Links:</h1>
+<p>This page goes a lot deeper in what stdin and stdout actually do in this context. Very interesting reading:</p>
+<p><a href="https://stackoverflow.com/questions/12363030/read-from-initial-stdin-in-go">https://stackoverflow.com/questions/12363030/read-from-initial-stdin-in-go</a></p>
+<p>The code in my repo:</p>
+<p><a href="https://github.com/mischavandenburg/go/tree/main/rwxrob/boost2022/challenges/greet">https://github.com/mischavandenburg/go/tree/main/rwxrob/boost2022/challenges/greet</a></p>
+<p>[[go]]</p>
+<p>[[go-rwxrob]]</p>
+<p>[[coding]]</p>
+<p>[[functions]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Made Some Website Improvements</title>
       <link>https://mischavandenburg.com/zet/website-housekeeping/</link>
