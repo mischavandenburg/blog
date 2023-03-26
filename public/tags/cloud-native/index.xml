@@ -55,16 +55,15 @@ High Performance Computing</description>
 <p>Every node puts all the resources into the collective.</p>
 </li>
 </ul>
-<p>The collectives are all the nodes combined, and Kubernetes is the Borg that orchestrates everything. It sees available resources and allocates the work that needs to be done.</p>
+<p>The collective is all the nodes combined, and Kubernetes is the Borg that orchestrates everything. It sees available resources and allocates the work that needs to be done.</p>
 <p>Borg is the internal system developed at Google to run their infrastructure. You can read about it in the <a href="https://sre.google/books/">Site Reliability Engineering</a> books and I highly recommend them.</p>
 <blockquote>
-<p>Kubernetes is /proc for the cloud
-Rob Muhlenstein</p>
+<p>Kubernetes is /proc for the cloud</p>
 </blockquote>
-<ul>
-<li>It&rsquo;s really big</li>
-</ul>
-<h2 id="most-important-technologies">Most IMportant Technologies</h2>
+<blockquote>
+<p>Rob Muhlenstein</p>
+</blockquote>
+<h2 id="most-important-technologies">Most Important Technologies</h2>
 <ul>
 <li>
 <p>Docker, Dockerfiles</p>
@@ -91,7 +90,7 @@ Rob Muhlenstein</p>
 <p>Kubernetes and Helm have won the game</p>
 </li>
 </ul>
-<h2 id="containers-size-matters">Containers, Size Matters</h2>
+<h2 id="containers-size-matters">Containers: Size Matters</h2>
 <ul>
 <li>Size matters (again) in the cloud</li>
 <li>The smaller your container the better, because it takes less resources and less costs</li>
@@ -106,6 +105,8 @@ Rob Muhlenstein</p>
 <li>Purpose is to write software and get it published fast</li>
 <li>GitOps</li>
 </ul>
+<h1 id="summary">Summary</h1>
+<p>In summary, &ldquo;cloud&rdquo; stands for the services offered by cloud providers such as AWS, Azure and GCP. Cloud Native stands for all of the technology that makes these cloud services possible. DevOps is part of Cloud Native, but definitely not the same thing. DevOps is concerned with how software is written and released.</p>
 <h1 id="links">Links:</h1>
 <p>202303262003</p>
 <p><a href="https://youtu.be/gyjRriOyw-k">https://youtu.be/gyjRriOyw-k</a></p>

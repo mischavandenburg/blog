@@ -37,16 +37,15 @@ Cloud Native is the technology that makes the cloud possible, and all the techno
 * Computers are drones of a larger collective
 * Every node puts all the resources into the collective. 
 
-The collectives are all the nodes combined, and Kubernetes is the Borg that orchestrates everything. It sees available resources and allocates the work that needs to be done.
+The collective is all the nodes combined, and Kubernetes is the Borg that orchestrates everything. It sees available resources and allocates the work that needs to be done.
 
 Borg is the internal system developed at Google to run their infrastructure. You can read about it in the [Site Reliability Engineering](https://sre.google/books/) books and I highly recommend them.
 
 > Kubernetes is /proc for the cloud
+
 > Rob Muhlenstein
 
-* It's really big
-
-## Most IMportant Technologies
+## Most Important Technologies
 
 * Docker, Dockerfiles
 * Kubernetes
@@ -59,7 +58,7 @@ Borg is the internal system developed at Google to run their infrastructure. You
 
 * Kubernetes and Helm have won the game
 
-## Containers, Size Matters
+## Containers: Size Matters
 
 * Size matters (again) in the cloud
 * The smaller your container the better, because it takes less resources and less costs
@@ -74,6 +73,11 @@ DevOps is not the same as Cloud Native. It is one piece of it, a specific set of
 * GitLab has become the one stop shop
 * Purpose is to write software and get it published fast
 * GitOps
+
+
+# Summary
+
+In summary, "cloud" stands for the services offered by cloud providers such as AWS, Azure and GCP. Cloud Native stands for all of the technology that makes these cloud services possible. DevOps is part of Cloud Native, but definitely not the same thing. DevOps is concerned with how software is written and released.
 
 # Links:
 
