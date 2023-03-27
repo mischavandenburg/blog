@@ -2,7 +2,7 @@
 title: How to Surround a Word with Quotes in Vim 
 date: 2023-03-21
 tags:
-- Zettelkasten
+
 - Neovim
 - Coding
 ---

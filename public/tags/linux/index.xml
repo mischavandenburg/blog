@@ -632,7 +632,7 @@ Today I needed to update my /articles/ links to /zet/articles/ links because I&a
 </span></span><span class="line"><span class="cl">--- a/content/zet/move-to-zet.md
 </span></span><span class="line"><span class="cl">+++ b/content/zet/move-to-zet.md
 </span></span><span class="line"><span class="cl">@@ -6,7 +6,7 @@ tags:
-</span></span><span class="line"><span class="cl"> - Zettelkasten
+</span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"> ---
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">-I<span class="s1">&#39;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more
@@ -747,9 +747,8 @@ Virtualization To understand containers, we need to understand virtualization. V
 The Beginning The reason why I started to use vim is rather practical.</description>
       <content:encoded><![CDATA[<p>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.</p>
 <h2 id="the-beginning">The Beginning</h2>
-<p>The reason why I started to use vim is rather practical. During the first part of my traineeship, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.</p>
-<p>I was constantly working on new environments, and quickly it became very tiring to set everything up to connect remotely with Visual Studio Code every time.</p>
-<p>So I just started to edit the text files on the virtual machines with the included editor, which happened to be vim.</p>
+<p>The reason why I started to use vim is rather practical. When I was studying to become a Cloud Engineer, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs projects I did involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.</p>
+<p>I was using Visual Studio Code at the time on my local machine, but I had to connect to a new virtual machine multiple times a day. It became very tiresome to set everything up with VSCode every time, or pulling the files to my local machine and copying them over again. So I just ssh&rsquo;ed into the machines to edit the text files with the included editor, which happened to be vim.</p>
 <h2 id="obsession-in-its-infancy">Obsession in its Infancy</h2>
 <p>When you first use vim, it is a rather disorienting experience. But in every tutorial, I was told it would be difficult in the beginning but much faster and more effective in the end. I found this very appealing because I like to do things the hard way and challenge myself.</p>
 <p>I discovered that there were people out there who did all of their text editing and coding in vim. I met programmers who refuse to use anything else and people who write entire books in vim. So there had to be something to it.</p>

@@ -2,7 +2,7 @@
 title: How to Run Newsboat in Zenmode
 date: 2023-03-26
 tags:
-- Zettelkasten
+
 - Linux
 - Productivity
 - Command-Line

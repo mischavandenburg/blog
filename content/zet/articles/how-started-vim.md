@@ -10,11 +10,9 @@ If you are just starting your Linux journey, you might have noticed that a few c
 
 ## The Beginning
 
-The reason why I started to use vim is rather practical. During the first part of my traineeship, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration. 
+The reason why I started to use vim is rather practical. When I was studying to become a Cloud Engineer, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs projects I did involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration. 
 
-I was constantly working on new environments, and quickly it became very tiring to set everything up to connect remotely with Visual Studio Code every time.
-
-So I just started to edit the text files on the virtual machines with the included editor, which happened to be vim. 
+I was using Visual Studio Code at the time on my local machine, but I had to connect to a new virtual machine multiple times a day. It became very tiresome to set everything up with VSCode every time, or pulling the files to my local machine and copying them over again. So I just ssh'ed into the machines to edit the text files with the included editor, which happened to be vim. 
 
 ## Obsession in its Infancy
 

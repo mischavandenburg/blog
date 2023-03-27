@@ -3,7 +3,7 @@ title: adding encrypted drive luks
 date: 2023-01-15
 draft: true
 tags:
-- Zettelkasten
+
 ---
 ```bash
 

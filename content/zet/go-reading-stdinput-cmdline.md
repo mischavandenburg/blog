@@ -2,7 +2,7 @@
 title: "Go - Reading from Standard Input Provided by User"
 date: 2023-03-26
 tags:
-- Zettelkasten
+
 - Go
 - Coding
 - Explanations

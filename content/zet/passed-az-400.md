@@ -2,7 +2,7 @@
 title: I passed the AZ-400 DevOps Expert today
 date: 2023-01-14
 tags:
-- Zettelkasten
+
 - Azure
 - Study
 - Productivity

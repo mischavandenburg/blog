@@ -2,7 +2,7 @@
 title: "Learning Go Day 1: Notes" 
 date: 2023-02-28
 tags:
-- Zettelkasten
+
 - Go
 - Study
 - Coding

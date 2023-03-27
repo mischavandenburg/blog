@@ -2,7 +2,7 @@
 title: Trying out pandoc for vim
 date: 2023-03-23
 tags:
-- Zettelkasten
+
 - Neovim
 - Productivity
 - Writing

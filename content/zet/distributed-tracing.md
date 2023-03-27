@@ -2,7 +2,7 @@
 title: "Distributed Tracing"
 date: 2023-01-03T07:58:44+01:00
 tags:
-- Zettelkasten
+
 - Explanations
 - Azure
 ---

@@ -2,7 +2,7 @@
 title: Setting up automated backups on my Arch Linux system with rsync and bash
 date: 2023-01-21
 tags:
-- Zettelkasten
+
 - Linux
 ---
 For the past few months I've been stuyding every hour of free time that I had. Now that I reached my certification goals for now, I finally had some time to do a chore I had been meaning to do for a long time.

@@ -3,7 +3,7 @@ title: Using parameter expansion as search and replace
 date: 2023-01-10
 tags:
 - Linux
-- Zettelkasten
+
 - Linux
 - Bash
 - Coding

@@ -2,7 +2,7 @@
 title: Azure DevOps Personal Access Tokens are always for authenticating into ADO
 date: 2023-01-13
 tags:
-- Zettelkasten
+
 - Azure
 - DevOps
 ---

@@ -2,7 +2,7 @@
 title: The Difference Between DevOps, Cloud and Cloud Native
 date: 2023-03-26
 tags:
-- Zettelkasten
+
 - Kubernetes
 - DevOps
 - Cloud-Native

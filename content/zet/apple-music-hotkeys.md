@@ -2,7 +2,7 @@
 title: Controlling Apple Music with hotkeys from anywhere on MacOS
 date: 2023-02-24
 tags:
-- Zettelkasten
+
 - MacOS
 - Productivity
 - Coding

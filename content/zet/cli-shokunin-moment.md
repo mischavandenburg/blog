@@ -2,7 +2,7 @@
 title: Had a CLI Shokunin Moment Today
 date: 2023-03-19
 tags:
-- Zettelkasten
+
 - Linux
 ---
 

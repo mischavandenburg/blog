@@ -2,7 +2,7 @@
 title: "Notes: Advanced Bicep"
 date: 2023-03-18
 tags:
-- Zettelkasten
+
 - Bicep
 - Azure
 - Coding

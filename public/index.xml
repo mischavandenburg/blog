@@ -5,7 +5,120 @@
     <link>https://mischavandenburg.com/</link>
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Neovim Zettelkasten: How I Take Notes in Markdown Using Vim and Bash</title>
+      <link>https://mischavandenburg.com/zet/neovim-zettelkasten/</link>
+      <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/neovim-zettelkasten/</guid>
+      <description>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.
+Digital note-taking provides the following advantages:
+Searchability Collected in one place Can be converted to different output formats Easier to share with others Does not take up physical space No risk of losing your notes in case of fire or other disaster I&amp;rsquo;ve gone through several iterations of my note-taking systems.</description>
+      <content:encoded><![CDATA[<p>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.</p>
+<p>Digital note-taking provides the following advantages:</p>
+<ul>
+<li>Searchability</li>
+<li>Collected in one place</li>
+<li>Can be converted to different output formats</li>
+<li>Easier to share with others</li>
+<li>Does not take up physical space</li>
+<li>No risk of losing your notes in case of fire or other disaster</li>
+</ul>
+<p>I&rsquo;ve gone through several iterations of my note-taking systems. I started on Google Docs, moved on to Notion and eventually landed on Obsidian. However, as I became more proficient with UNIX systems and vim, I realized I did not need all of that distracting functionality, and I switched over to using Neovim and a few bash scripts. I occasionally open up Obsidian to look at my graph view or to make use of the Anki plugin, but I enjoy the trimmed-down version that I built myself. I don&rsquo;t need to leave the command line to read my notes or to create a new one.</p>
+<p>In this article I&rsquo;ll show you the system I&rsquo;m currently using for note-taking. My note-taking system is part of a larger system which I call my &ldquo;Second Brain&rdquo;, <a href="https://fortelabs.com/blog/basboverview/">a term coined by Tiago Forte.</a> This is an overarching system I&rsquo;ve build to manage my time, projects, tasks and bookmarks. Explaining this entire system is beyond the scope of this article, but I plan to write about my Second Brain in the future as well.</p>
+<p>My system is based on the Zettelkasten method, but I&rsquo;ve adjusted it to my own needs. After a few years of experimentation I feel that my system has reached a &ldquo;mature&rdquo; state, but it will always remain continuosly under development, also because my needs may change.</p>
+<h1 id="what-is-a-zettelkasten">What is a Zettelkasten?</h1>
+<p>Zettelkasten is a system of note taking and personal knowledge management. <a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a> means &ldquo;slip box&rdquo; in German. Traditionally it is a physical box of slips of paper or index cards containing smaller notes. Each of these cards have a unique identifier, and these identifiers are used to create links between the cards.</p>
+<p><a href="https://en.wikipedia.org/wiki/Niklas_Luhmann">Niklas Luhmann</a>, who was one of the most prolific scholars in history, used it extensively. He wrote 70 books and nearly 400 academic articles, and he credited the Zettelkasten with making his productivity possible. It contained around 90,000 index cards.</p>
+<p>I first came across this concept by reading the book <a href="https://www.soenkeahrens.de/en/takesmartnotes">How to take Smart Notes</a> by Sönke Ahrens.</p>
+<h1 id="why-take-notes">Why Take Notes?</h1>
+<blockquote>
+<p>&ldquo;Your professional success and quality of life depend directly on your ability to manage information effectively.&rdquo;</p>
+<p>Tiago Forte, Building A Second Brain</p>
+</blockquote>
+<p>In the modern age we consume very large amounts of information, much more than we can remember. It is therefore very important to manage your intake of information, but also the retention of that information. I find that taking notes on the topics that may be of interest to me at any given time helps me understand the subject much better, because it forces me to clearly formulate my thoughts and convert them to written form.</p>
+<p>Over time a large collection is built up which can be used to generate new ideas.</p>
+<h1 id="what-do-i-take-notes-on">What Do I Take Notes On?</h1>
+<p>Firstly, I keep a daily journal where I write down my thoughts, my feelings and the activities that I undertake. Some days may be several pages worth, and other days will be only &ldquo;Had a nice day today&rdquo;. But I make a point to write something down every day.</p>
+<p>Secondly, I write about the topics I study. I&rsquo;m always learning something new. I&rsquo;m a DevOps Cloud Engineer, and new developments are made constantly in the Cloud Native landscape. There is always more to learn.</p>
+<p>My notes are not only work related. I also keep notes of the research I do for all of my interests, such as health, longevity, exercise, diet, literature, yoga and meditation. I made a habit out of always writing a note when I read a book, watch a documentary or listen to a podcast. These notes can be a short summary, a few thoughts that come to mind, or a few bullet points that capture the main takeaways.</p>
+<p>These activities are usually accompanied by taking notes:</p>
+<ul>
+<li>Reading books</li>
+<li>Watching video courses</li>
+<li>Watching educational YouTube videos</li>
+<li>Researching hobbies and interests</li>
+<li>Coding</li>
+<li>Reflection</li>
+<li>Interesting conversations</li>
+<li>Listening to podcasts</li>
+</ul>
+<h1 id="an-overview-of-my-system">An Overview of My System</h1>
+<p>My system is a modified Zettelkasten system that incorporates daily notes for journaling. The Zettelkasten method emphasizes small atomic notes containing only your own thoughts and links to other notes. However, I choose to also make longer notes. For example, when I did the <a href="https://mischavandenburg.com/zet/articles/fundamentals-of-bicep">Fundamentals of Bicep</a> course, I made one large note that contains all of the information I wished to remember or refer to later. In this particular use case, I think it&rsquo;s much better to keep everything collected in one note, rather than breaking this note up in smaller notes on parameters and variables, for example.</p>
+<p>Another area where I diverge from the traditional Zettelkasten is categorization of notes. Traditionally the Zettelkasten is one big repository of notes, but I like to keep them loosely collected. When I create a new note, my system places that note in an inbox directory. Once a week I go through my inbox and revisit all of my notes. Sometimes I will throw some notes away because I don&rsquo;t think they&rsquo;re necessary after all. When I decide to keep it, I put it in a directory that I find suitable. I have a directory structure based on the <a href="https://fortelabs.com/blog/para/">PARA method</a>, but I also have a large Zettelkasten directory where I put anything that does not necessary belong to a category. I mostly keep some notes collected in a directory because I expect to use them as a collection at some point, or because I want to run scripts on the files.</p>
+<p>Every day a daily note is created that contains a few checkboxes for habit tracking and sometimes I&rsquo;ll include an inspirational quote in my template for a while.</p>
+<p>This is what a daily note looks like in my editor:</p>
+<p><img loading="lazy" src="/dailynote.png" type="" alt=""  /></p>
+<h1 id="local-text-files">Local Text Files</h1>
+<p>I think it is important to use locally stored markdown text files. This is mainly why I moved away from Notion. My notes are stored on my local machine rather than with a third party. This gives me complete control over my data.</p>
+<p>Because my notes are stored as markdown files, I can use various tools to write or edit my  notes. Moreover, storing my notes as local files allows me to run scripts on my notes and customize my workflow to my heart&rsquo;s content. This can be especially useful for automating tasks, streamlining my work, or making bulk updates.</p>
+<p>I have my collection backed up in several places and on GitHub.</p>
+<p>I recommend <a href="https://rwx.gg/lang/md/">this article</a> about the benefits and merits of using markdown for note-taking.</p>
+<h1 id="vim-my-preferred-text-editor">Vim, My Preferred Text Editor</h1>
+<p>I use Vim, or technically, Neovim for all of my text editing. It took a while to get used to, but my productivity related to text editing has increased significantly. I also find it very enjoyable to work on the command line, not having to leave my tmux window to manage my entire Zettelkasten or keep my journal.</p>
+<p>My vim configuration is always subject to constant change, but I only use three plugins that are related to my note-taking and Zettelkasten.</p>
+<h2 id="1-telescope">1. Telescope</h2>
+<p>I cannot live without <a href="https://github.com/nvim-telescope/telescope.nvim">this plugin</a> any longer. It is a fuzzy searcher integrated into my editor. I can search for files but also search within the files using ripgrep, and preview the files as I&rsquo;m searching.</p>
+<p>Heres what a search for Neovim looks like:</p>
+<p><img loading="lazy" src="/telescope.png" type="" alt=""  /></p>
+<p>I can navigate through all the search results blazingly fast using only the keyboard, and I can preview the files by scrolling up and down in the window on the right hand side.</p>
+<h2 id="2-marksman-lsp">2. Marksman LSP</h2>
+<p>Marksman is a markdown language server which helps me format my documents and to create links between notes.</p>
+<p><img loading="lazy" src="/marksman.png" type="" alt=""  /></p>
+<p>When I start to make a link it will search through my entire Zettelkasten and look for matches based on the filename or markdown headers. Here it shows me suggestions related to markdown.</p>
+<h2 id="3-pandoc">3. Pandoc</h2>
+<p>According to Wikipedia, &ldquo;Pandoc is a free-software document converter, widely used as a writing tool (especially by scholars) and as a basis for publishing workflows.&rdquo;</p>
+<p>I use the Pandoc plugin for vim to export my notes to different formats when I need to.</p>
+<p>However, the thing I like most about it is that it renders my notes very nicely as I&rsquo;m writing them. I really like how headings look, and that it will <strong>make text bold</strong> while editing, which did not work when I used nvim-markdown.</p>
+<h1 id="bash">Bash</h1>
+<p>To facilitate my workflow I wrote a few bash scripts.</p>
+<p>When I want to take a note, I run the <code>zet</code> command from the command line. This command is a bash script I wrote which creates a file in my inbox, adds a template to it, and opens the file in Neovim. I can either provide a filename to it as an argument or it will ask me to provide one.</p>
+<p>I have another script named <code>blog</code> which I use to create notes that I intend on publishing on my website. These files are stored in a different location and use a different template. The blog script also has a <code>pub</code> function that will publish the script directly to my website in a few seconds after I&rsquo;m done writing.</p>
+<p>These scripts can be found in my <a href="https://github.com/mischavandenburg/dotfiles/tree/main/scripts">dotfiles repo</a>.</p>
+<h1 id="identifiers-and-filenames">Identifiers and Filenames</h1>
+<p>The Zettelkasten method assigns unique identifiers to notes. I generate a unique identifier from the current date and time, but I never really use these identifiers. However, since I&rsquo;ve been doing this consistently from the beginning, I&rsquo;ll keep generating them to make my system future proof. Who knows, maybe they will become useful someday when I suddenly find a use case for it.</p>
+<p>I&rsquo;ve seen other people use unique identifiers in filenames as well, but this is a big no for me. I want to be able to discern what the contents might be from the filename whenever I&rsquo;m navigating around my directory structure. Using the filename as the note identifier is a much better solution in my opinion. There is a small chance that you will choose a filename that already exists, but you can easily add a number to it or change a word and you have solved that problem.</p>
+<p>Moreover, I use the marksman LSP server to create links between my notes in Neovim. The LSP server is based on headings and filenames, so I&rsquo;m really glad that I chose to use filenames such as &ldquo;fundamentals-of-bicep.md&rdquo; right from the beginning.</p>
+<h1 id="tags-and-links">Tags and Links</h1>
+<p>If you are as deep into note-taking systems as I am, you might have come across the problem of using tags versus using links for your note-taking system.</p>
+<p>I primarily use <code>[[markdown links]]</code> to create links in my notes. This is also why you will sometimes see these things in my public zettelkasten. The links between notes are rendered beatifully by Obsidian in the graph view. This is also why I&rsquo;ll always try to keep my system compatible with Obsidian, even though I&rsquo;ve moved away from the application almost entirely.</p>
+<p>Here is a graph view of my Zettelkasten:</p>
+<p><img loading="lazy" src="/graph-view.png" type="" alt=""  /></p>
+<p>For the notes in my Zettelkasten which are intended to be published on my website, I use tags in the YAML frontmatter. These are used by my static website generator, Hugo, to create tag pages on my website which I think will be useful to my readers.</p>
+<p>Here is an example of the YAML front matter of one of these notes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;I&#39;m In Love with my Work: Lessons from a Japanese Sushi Master&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2022-10-08</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Career</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Personal</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Article</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>That&rsquo;s about it. My system is a minimalistic set of tools utilized for maximum productivity. It&rsquo;s Neovim with a few plugins and a couple of helper scripts I wrote in bash that store markdown files in a directory structure that I find meaningful. After using many different applications and solutions, I&rsquo;m extremely satisfied with the system I built for  myself which is very basic, free from distractions and tailored to my own needs.</p>
+<p>When I want to reflect on a certain topic or to write an article, I go through my collection of notes and link them together. Very often I find that the creation of these links will stimulate even more new connections and associations, and I end up with new ideas and more topics of study I want to explore and write about. I use my Zettelkasten as a vehicle for reflection, learning and creativity.</p>
+<p>I love the simplicity of my system. It enables me to capture notes very quickly while I&rsquo;m working or studying with very little effort. By storing my note collection on my iCloud drive and in GitHub, they can be accessed from all of my devices across all different operating systems.</p>
+<p>I hope that this article may give you some inspiration to start building your own note collection. You don&rsquo;t need to build your own system like I have done, any app that satisfies your needs can be used. Keeping notes on the things I encounter in life is one of the most enriching habits I&rsquo;ve acquired. It will be interesting to see how large my collection grows over the years!</p>
+<h1 id="links">Links:</h1>
+<p>202303270703</p>
+<p><a href="https://fortelabs.com/blog/basboverview/">https://fortelabs.com/blog/basboverview/</a></p>
+<p><a href="https://fortelabs.com/blog/para/">https://fortelabs.com/blog/para/</a></p>
+<p><a href="https://rwx.gg/lang/md/">https://rwx.gg/lang/md/</a></p>
+<p><a href="https://github.com/mischavandenburg/dotfiles/tree/main/scripts">https://github.com/mischavandenburg/dotfiles/tree/main/scripts</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Go - Reading from Standard Input Provided by User</title>
       <link>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</link>
@@ -2173,7 +2286,7 @@ Today I needed to update my /articles/ links to /zet/articles/ links because I&a
 </span></span><span class="line"><span class="cl">--- a/content/zet/move-to-zet.md
 </span></span><span class="line"><span class="cl">+++ b/content/zet/move-to-zet.md
 </span></span><span class="line"><span class="cl">@@ -6,7 +6,7 @@ tags:
-</span></span><span class="line"><span class="cl"> - Zettelkasten
+</span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"> ---
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">-I<span class="s1">&#39;ve transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more
@@ -2852,9 +2965,8 @@ Even though I couldn&amp;rsquo;t fully understand the message, I was intrigued b
 The Beginning The reason why I started to use vim is rather practical.</description>
       <content:encoded><![CDATA[<p>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.</p>
 <h2 id="the-beginning">The Beginning</h2>
-<p>The reason why I started to use vim is rather practical. During the first part of my traineeship, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.</p>
-<p>I was constantly working on new environments, and quickly it became very tiring to set everything up to connect remotely with Visual Studio Code every time.</p>
-<p>So I just started to edit the text files on the virtual machines with the included editor, which happened to be vim.</p>
+<p>The reason why I started to use vim is rather practical. When I was studying to become a Cloud Engineer, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs projects I did involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.</p>
+<p>I was using Visual Studio Code at the time on my local machine, but I had to connect to a new virtual machine multiple times a day. It became very tiresome to set everything up with VSCode every time, or pulling the files to my local machine and copying them over again. So I just ssh&rsquo;ed into the machines to edit the text files with the included editor, which happened to be vim.</p>
 <h2 id="obsession-in-its-infancy">Obsession in its Infancy</h2>
 <p>When you first use vim, it is a rather disorienting experience. But in every tutorial, I was told it would be difficult in the beginning but much faster and more effective in the end. I found this very appealing because I like to do things the hard way and challenge myself.</p>
 <p>I discovered that there were people out there who did all of their text editing and coding in vim. I met programmers who refuse to use anything else and people who write entire books in vim. So there had to be something to it.</p>

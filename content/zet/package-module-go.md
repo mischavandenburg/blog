@@ -2,7 +2,7 @@
 title: "What is the difference between a Go module and a package?"
 date: 2023-03-20
 tags:
-- Zettelkasten
+
 - Go
 - Coding
 ---

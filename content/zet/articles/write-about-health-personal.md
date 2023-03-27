@@ -2,7 +2,7 @@
 title: Writing about Health and Personal Life
 date: 2023-03-25
 tags:
-- Zettelkasten
+
 - Article
 - Health
 - Writing

@@ -2,7 +2,7 @@
 title: The Pomodoro technique has won me over
 date: 2023-01-13
 tags:
-- Zettelkasten
+
 - Study
 - Productivity
 ---

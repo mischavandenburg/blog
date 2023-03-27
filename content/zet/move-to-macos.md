@@ -2,7 +2,7 @@
 title: "New Laptop: Moving to MacOS"
 date: 2023-02-24
 tags:
-- Zettelkasten
+
 - MacOS
 - Productivity
 ---

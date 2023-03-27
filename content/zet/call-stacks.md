@@ -2,7 +2,7 @@
 title: "Call Stacks"
 date: 2023-01-02T21:11:26+01:00
 tags:
-- Zettelkasten
+
 - Coding
 ---
 

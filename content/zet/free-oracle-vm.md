@@ -2,7 +2,7 @@
 title: Get a free 4 CPU 24GB Ram VM on from Oracle 
 date: 2023-02-04
 tags:
-- Zettelkasten
+
 - Linux
 - Kubernetes
 ---

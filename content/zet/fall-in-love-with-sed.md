@@ -4,7 +4,7 @@ date: 2023-01-04
 tags:
 - Linux
 - Productivity
-- Zettelkasten
+
 ---
 
 Sed, it's so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command. 
@@ -22,7 +22,7 @@ index 1e37283..3b817e3 100644
 --- a/content/zet/move-to-zet.md
 +++ b/content/zet/move-to-zet.md
 @@ -6,7 +6,7 @@ tags:
- - Zettelkasten
+ 
  ---
 
 -I've transitioned my note taking system towards a Zettelkasten system. I still use directories for folders and make copious links, but more

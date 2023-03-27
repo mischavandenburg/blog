@@ -2,7 +2,7 @@
 title: How to continuously run a Go file while coding in the terminal
 date: 2023-03-19
 tags:
-- Zettelkasten
+
 - Go
 - Coding
 - Linux

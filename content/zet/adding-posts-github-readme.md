@@ -2,7 +2,7 @@
 title: Automatically adding my recent blog posts to my GitHub Readme
 date: 2023-01-09
 tags:
-- Zettelkasten
+
 - Coding
 - Career
 ---

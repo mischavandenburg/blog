@@ -3,7 +3,7 @@ title: "Application Insights: Telemetry Sampling"
 date: 2023-01-03T08:41:09+01:00
 tags:
 - Azure
-- Zettelkasten
+
 - Explanations
 ---
 Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring. 

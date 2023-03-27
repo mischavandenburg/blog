@@ -2,6 +2,14 @@
 title: "Welcome!"
 ---
 
+# Favorites
+
+These articles came out particularly well, and might provide some value to you, or help you get to know me a little better.
+
+* [I'm In Love with my Work: Lessons from a Japanese Sushi Master](/zet/articles/jiro-sushi/)
+* [My Neovim Zettelkasten: How I Take Notes in Markdown Using Vim and Bash](/zet/neovim-zettelkasten/)
+* [How and Why I Started Using Vim](/zet/articles/how-started-vim/)
+
 # What is a Zettelkasten?
 
 Zettelkasten is a system of note taking and personal knowledge management. [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) means "slip box" in German. Traditionally it is a physical box of slips of paper or index cards containing smaller notes. Each of these cards have a unique identifier, and these identifiers are used to create links between the cards.
@@ -24,16 +32,6 @@ When I want to reflect on a certain topic or to write an article, I go through m
 
 I decided to make part of my notes public so I can share my learning journey in the exciting field of DevOps, cloud computing and coding. And I recently started publishing my notes on other topics such as health and execrice as well.
 
-## Tags and links
-
-To organize my notes for the website I use [tags](/tags/), but in my personal note taking system I use markdown links. This is why you will sometimes see `[[health]]` or `[[coding]]` in my notes. These are the links that I make in my personal system which I use for navigation and idea generation. It's not very pretty to have these included in the published notes, but it's the side effect of mixing a public and private Zettelkasten.
-
-## Code
-
-If you're curious about the writing and publishing process of this blog, see [this note.](/zet/articles/how-this-blog-is-created/)
-
-You can find the source code of the blog at [github.com/mischavandenburg/blog](https://github.com/mischavandenburg/blog), and the contents of the zettelkasten are hosted in the [zet directory at /blog/content/zet/](https://github.com/mischavandenburg/blog/tree/main/content/zet)
-
 # About me
 
 I’m Mischa. I’ve worked across various fields ranging from project management in the oil industry to health care, but my driving passion has always been IT. Fascinated since childhood, I’ve always passionately worked on projects that leveraged computers and automation to reach my goals. 
@@ -54,10 +52,24 @@ I love UNIX based operating systems and I've built my custom setup in Arch Linux
 
 In the words of Rob Muhlenstein, *"Using the Linux Bash terminal command-line is coding. Every command you type on every line is part of an interactive, ongoing program interpreted by Bash and processed by Linux."* Having this dialogue with the computer through commands is one of the most fascinating things on this earth to me, and I feel fortunate that I can work with this every day as a DevOps engineer.
 
-## Why I Write
+# Why Take Notes?
 
-I love to learn, and I love to write. I keep notes of the things I'm learning and I decided to make a practice of publishing them on this blog. 
+>“Your professional success and quality of life depend directly on your ability to manage information effectively.”
+>
+>Tiago Forte, Building A Second Brain
 
-Explaining things in my own words by writing articles about them is a great way to test my knowledge of a subject. Sometimes I even try to explain it as simple as possible, known as the Feynman technique. 
+In the modern age we consume very large amounts of information, much more than we can remember. It is therefore very important to manage your intake of information, but also the retention of that information. I find that taking notes on the topics that may be of interest to me at any given time helps me understand the subject much better, because it forces me to clearly formulate my thoughts and convert them to written form.
 
-Sometimes I write full articles on topics, sometimes they are smaller atomic notes.
+Over time a large collection is built up which can be used to generate new ideas.
+
+I publish certain sections of my note collection hoping it might provide value to others.
+
+## Tags and links
+
+To organize my notes for the website I use [tags](/tags/), but in my personal note taking system I use markdown links. This is why you will sometimes see `[[health]]` or `[[coding]]` in my notes. These are the links that I make in my personal system which I use for navigation and idea generation. It's not very pretty to have these included in the published notes, but it's the side effect of mixing a public and private Zettelkasten.
+
+## Code
+
+If you're curious about the writing and publishing process of this blog, see [this note.](/zet/articles/how-this-blog-is-created/)
+
+You can find the source code of the blog at [github.com/mischavandenburg/blog](https://github.com/mischavandenburg/blog), and the contents of the zettelkasten are hosted in the [zet directory at /blog/content/zet/](https://github.com/mischavandenburg/blog/tree/main/content/zet)

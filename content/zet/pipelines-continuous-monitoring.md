@@ -3,7 +3,7 @@ title: "Pipelines: Continuous Monitoring"
 date: 2023-01-03T08:30:03+01:00
 tags:
 - Azure
-- Zettelkasten
+
 - Explanations
 ---
 

@@ -2,7 +2,7 @@
 title: Running Docker and Kubernetes on Mac M2
 date: 2023-03-18
 tags:
-- Zettelkasten
+
 - MacOs
 - Kubernetes
 - Productivity

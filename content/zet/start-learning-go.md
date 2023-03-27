@@ -2,7 +2,7 @@
 title: I started to learn Go!
 date: 2023-02-27
 tags:
-- Zettelkasten
+
 - Go
 - Coding
 ---

@@ -2,7 +2,7 @@
 title: "Go - Skillstak Beginner Boost Week 17 and 18 Notes"
 date: 2023-03-26
 tags:
-- Zettelkasten
+
 - Study
 - Go
 - Coding
