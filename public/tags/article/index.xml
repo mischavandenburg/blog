@@ -67,7 +67,7 @@ Searchability Collected in one place Can be converted to different output format
 <p>I recommend <a href="https://rwx.gg/lang/md/">this article</a> about the benefits and merits of using markdown for note-taking.</p>
 <h1 id="vim-my-preferred-text-editor">Vim, My Preferred Text Editor</h1>
 <p>I use Vim, or technically, Neovim for all of my text editing. It took a while to get used to, but my productivity related to text editing has increased significantly. I also find it very enjoyable to work on the command line, not having to leave my tmux window to manage my entire Zettelkasten or keep my journal.</p>
-<p>My vim configuration is always subject to constant change, but I only use three plugins that are related to my note-taking and Zettelkasten.</p>
+<p>My <a href="https://github.com/mischavandenburg/dotfiles">vim configuration</a> is always subject to constant change, but I only use three plugins that are related to my note-taking and Zettelkasten.</p>
 <h2 id="1-telescope">1. Telescope</h2>
 <p>I cannot live without <a href="https://github.com/nvim-telescope/telescope.nvim">this plugin</a> any longer. It is a fuzzy searcher integrated into my editor. I can search for files but also search within the files using ripgrep, and preview the files as I&rsquo;m searching.</p>
 <p>Heres what a search for Neovim looks like:</p>

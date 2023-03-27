@@ -88,7 +88,7 @@ I recommend [this article](https://rwx.gg/lang/md/) about the benefits and merit
 
 I use Vim, or technically, Neovim for all of my text editing. It took a while to get used to, but my productivity related to text editing has increased significantly. I also find it very enjoyable to work on the command line, not having to leave my tmux window to manage my entire Zettelkasten or keep my journal.
 
-My vim configuration is always subject to constant change, but I only use three plugins that are related to my note-taking and Zettelkasten.
+My [vim configuration](https://github.com/mischavandenburg/dotfiles) is always subject to constant change, but I only use three plugins that are related to my note-taking and Zettelkasten.
 
 ## 1. Telescope
 
