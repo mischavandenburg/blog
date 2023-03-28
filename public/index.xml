@@ -5,7 +5,101 @@
     <link>https://mischavandenburg.com/</link>
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Wrote My First Go Program Today</title>
+      <link>https://mischavandenburg.com/zet/my-first-go-program/</link>
+      <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/my-first-go-program/</guid>
+      <description>I&amp;rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&amp;rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.
+The best thing to do is to write little programs that solve a problem that you have.
+One problem I needed to solve was converting sentences to title case in vim.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.</p>
+<p>The best thing to do is to write little programs that solve a problem that you have.</p>
+<p>One problem I needed to solve was converting sentences to title case in vim. There are plugins for this, or elaborate macros, but I thought this was a nice opportunity to write my first program from scratch. You can view the program here: <a href="https://github.com/mischavandenburg/go/tree/main/projects/title">my go repo</a>.</p>
+<h1 id="title">Title</h1>
+<p>Converting a string to title case is fairly easy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Package title converts a string to title case.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">title</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;strings&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">Make</span><span class="p">(</span><span class="nx">s</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">t</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Title</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%v\n&#34;</span><span class="p">,</span> <span class="nx">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This function takes a string as an argument and uses the Title function from the strings package to convert it. I use printf to format the output and to add a new line character.</p>
+<h1 id="challenge">Challenge</h1>
+<p>The challenge lies in taking input from Stdin. I solved this by reusing the things I learned from the greet challenge. I described how to read from standard input in go in <a href="/zet/go-reading-stdinput-cmdline">this article</a>.</p>
+<p>Here is the code for the title command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;log&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;os&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;strings&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/mischavandenburg/go/projects/title&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/mischavandenburg/go/projects/title/internal&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">x</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">err</span> <span class="kt">error</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">)</span> <span class="p">&gt;</span> <span class="mi">1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">x</span> <span class="p">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Join</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">x</span> <span class="o">==</span> <span class="s">&#34;&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">x</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">internal</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdin</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">log</span><span class="p">.</span><span class="nf">Print</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">title</span><span class="p">.</span><span class="nf">Make</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This main function checks if arguments are given to the program from the command line, and uses these arguments if they are given. If there are no arguments, it will expect input to be piped to it. It takes either the input from the arguments or from standard input and calls the <code>Make()</code> function that I described above.</p>
+<p>This main function uses a Readline function to extract the string from standard input:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">internal</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;bufio&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;io&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;strings&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ReadLine takes anything of type io.Reader and returns a trimmed string (initial
+</span></span></span><span class="line"><span class="cl"><span class="c1">// and trailing white space) or an empty string and error if any error
+</span></span></span><span class="line"><span class="cl"><span class="c1">// is encountered.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">ReadLine</span><span class="p">(</span><span class="nx">in</span> <span class="nx">io</span><span class="p">.</span><span class="nx">Reader</span><span class="p">)</span> <span class="p">(</span><span class="kt">string</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">out</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">bufio</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">in</span><span class="p">).</span><span class="nf">ReadString</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">out</span> <span class="p">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">TrimSpace</span><span class="p">(</span><span class="nx">out</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">out</span><span class="p">,</span> <span class="nx">err</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>For a more detailed explanation of this function read <a href="/zet/go-reading-stdinput-cmdline">this article</a> I wrote.</p>
+<h1 id="usage">Usage</h1>
+<p>I wrote the program so I can call it with a sentence as an argument:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mischa@mac-beast:~
+</span></span><span class="line"><span class="cl"><span class="o">(</span>ins<span class="o">)</span>$ title hello world, this is my sentence in title <span class="k">case</span>
+</span></span><span class="line"><span class="cl">Hello World, This Is My Sentence In Title Case
+</span></span></code></pre></div><p>But the main use case is to use it as a <a href="https://www.geeksforgeeks.org/pipes-and-filters-in-linux-unix/">UNIX filter</a> inside of vim. A UNIX filter is a program that takes standard input, performs some operation on the input, and prints it to standard output.</p>
+<p>Now, when I&rsquo;m working inside of vim, I can convert the current line to title case by typing the following command:</p>
+<p><code>!!title</code></p>
+<p>The <code>!!</code> command sends the specified amount of lines to the command you specify. Exclamation marks truly are magic wands! I highly recommend reading <a href="https://rwx.gg/tools/editors/vi/how/magic/">this article</a> by rwxrob to learn more about them.</p>
+<h2 id="links">Links:</h2>
+<p>202303280803</p>
+<p><a href="https://github.com/mischavandenburg/go/tree/main/projects/title">https://github.com/mischavandenburg/go/tree/main/projects/title</a></p>
+<p><a href="https://rwx.gg/tools/editors/vi/how/magic/">https://rwx.gg/tools/editors/vi/how/magic/</a></p>
+<p><a href="/zet/go-reading-stdinput-cmdline">Reading from standard input in Go</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>My Neovim Zettelkasten: How I Take Notes in Markdown Using Vim and Bash</title>
       <link>https://mischavandenburg.com/zet/neovim-zettelkasten/</link>
