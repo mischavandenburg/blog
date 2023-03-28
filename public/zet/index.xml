@@ -101,6 +101,80 @@ One problem I needed to solve was converting sentences to title case in vim.</de
     </item>
     
     <item>
+      <title>Kubernetes Resource Management for Pods and Containers - CPU and Memory</title>
+      <link>https://mischavandenburg.com/zet/kubernetes-resource-management-pods-containers/</link>
+      <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/kubernetes-resource-management-pods-containers/</guid>
+      <description>Pods have containers, and limits can be set on those containers.
+Requests used by the kube-scheduler to determine where the Pod will be placed containers can use more than requested resources if it is available on node If a limit is specified, but no request, Kubernetes will use the limit value as the request value.
+Limits containers may never use more than the set limit
+enforced by kubelet and container</description>
+      <content:encoded><![CDATA[<p>Pods have containers, and limits can be set on those containers.</p>
+<h1 id="requests">Requests</h1>
+<ul>
+<li>used by the kube-scheduler to determine where the Pod will be placed</li>
+<li>containers can use more than requested resources if it is available on node</li>
+</ul>
+<p>If a limit is specified, but no request, Kubernetes will use the limit value as the request value.</p>
+<h1 id="limits">Limits</h1>
+<ul>
+<li>
+<p>containers may never use more than the set limit</p>
+</li>
+<li>
+<p>enforced by kubelet and container</p>
+</li>
+<li>
+<p>host kernel will kill processes that attempt to allocate more than limit (OOM error)</p>
+</li>
+<li>
+<p>reactively: killed when exceeded</p>
+</li>
+<li>
+<p>enforcement: system prevents container to ever exceed limit</p>
+</li>
+<li>
+<p>If the node runs out of memory and the container exceeds its memory request, the pod will be evicted</p>
+</li>
+<li>
+<p>container runtimes don&rsquo;t terminate Pods or containers for excessive CPU usage</p>
+</li>
+</ul>
+<h1 id="pods">Pods</h1>
+<p>The pod resource request and limit is the sum of the resource requests of the containers in the pod.</p>
+<h1 id="cpu-units">CPU Units</h1>
+<p>Defined as an absolute amount of resource. 1000m = 1 CPU.</p>
+<p>This is always the same unit, regardless whether the host has 4 or 48 CPU&rsquo;s.</p>
+<p>500m CPU = 0.5 CPU</p>
+<h1 id="memory-units">Memory Units</h1>
+<p>Can use P, T, G, M etc.</p>
+<p>Note that &ldquo;m&rdquo; is not megabyte. 0.8m = 0.8 bytes.</p>
+<p>Use mebibytes Mi or megabytes M.</p>
+<h1 id="definiton-example">Definiton Example</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l">100Mi</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l">250m</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">limits</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l">200Mi</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l">500m</span><span class="w">
+</span></span></span></code></pre></div><h1 id="scheduling">Scheduling</h1>
+<p>The scheduler ensures that the sum of requests of the pods on the node does not exceed the available resources.</p>
+<p>Even if a node has low resource usage, it will not accept pods that have requests which exceed the available resources.</p>
+<h1 id="nodes">Nodes</h1>
+<p>use <code>k describe node</code> to see the resource status of the node.</p>
+<h2 id="links">Links:</h2>
+<p>202303281903</p>
+<p><a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/">https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>My Neovim Zettelkasten: How I Take Notes in Markdown Using Vim and Bash</title>
       <link>https://mischavandenburg.com/zet/neovim-zettelkasten/</link>
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>

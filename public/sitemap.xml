@@ -6,6 +6,9 @@
     <lastmod>2023-03-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/cloud-native/</loc>
+    <lastmod>2023-03-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/coding/</loc>
     <lastmod>2023-03-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -13,6 +16,15 @@
     <lastmod>2023-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/my-first-go-program/</loc>
+    <lastmod>2023-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
+    <lastmod>2023-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/kubernetes-resource-management-pods-containers/</loc>
+    <lastmod>2023-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2023-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/neovim/</loc>
@@ -42,9 +54,6 @@
     <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/cloud-native/</loc>
-    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/command-line/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -64,12 +73,6 @@
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/how-to/</loc>
-    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
-    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/study/</loc>
