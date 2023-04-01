@@ -8,8 +8,6 @@ tags:
 - Productivity
 ---
 
-After 6 months of doing Brazilian Jiu Jitsu twice a week, I decided to put that on hold again and return to the gym. BJJ is a great sport and I'm definitely interested in developing myself in that area. But I'm still on a weight loss journey (I've lost 20kg since late 2021) and I'm in a pretty heavy caloric deficit to get rid of the last few kilograms of fat around the waist. Being in such a caloric deficit, it is very hard to keep up with the group. When sparring / rolling, I'm fine for a few minutes but I quickly burn out and don't have any energy to fight back. 1600kcal for a 190cm tall guy is very little, but it is necessary to keep losing weight for my particular digestion. I might return when I reach my goal weight and can start eating at maintenance level again.
-
 I noticed multiple times now that during my workouts my mind is generating lots of new ideas for coding projects or blog posts. It is a well known fact that walking stimulates areas in the brain that which will in turn stimulate creativity. But I'm noticing that it starts to happen with strength workouts as well. 
 
 Although I don't struggle with the motivation to get myself to the gym, I sometimes feel "guilty" for not spending that time on coding or studying. I'm realizing now that this is a very irrational train of thought.
@@ -24,8 +22,10 @@ I should re-frame my thinking and actually put exercise as priority number 1. Ex
 
 [[exercise]]
 
-[[well-being]]
-
 [[health]]
+
+[[focus]]
+
+[[productivity]]
 
 
