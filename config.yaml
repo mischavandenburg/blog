@@ -22,7 +22,7 @@ params:
     keywords: [Blog, Portfolio, CV, DevOps, Zettelkasten, Second Brain, Linux, Azure, Productivity, vim, neovim, unix]
     author: Mischa van den Burg
     # author: ["Me", "You"] # multiple authors
-    images: ["<link or path of image for opengraph, twitter-cards>"]
+    images: ["/bear.svg"]
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
@@ -98,6 +98,8 @@ params:
           url: "https://github.com/mischavandenburg/"
         - name: linkedin
           url: "https://www.linkedin.com/in/mischavandenburg"
+        - name: twitter
+          url: "https://twitter.com/mischa_vdburg"
         - name: rss 
           url: "https://mischavandenburg.com/index.xml"
 
