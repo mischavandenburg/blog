@@ -5,7 +5,53 @@
     <link>https://mischavandenburg.com/zet/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 28 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generating Markdown Headings with YYYY-MM-DD Date Format Using Bash</title>
+      <link>https://mischavandenburg.com/zet/generate-markdown-headings-date/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/generate-markdown-headings-date/</guid>
+      <description>A couple of weeks ago I created a simple bash script to generate a date in format YYY-MM-DD to use with the magic !! wands in vim.
+Just now I wanted to expand this with being able to create a markdown header with this date.
+#!/bin/bash # Gendate generates the date in YYY-MM-DD format # Can be called with arguments h and number to generate a markdown heading # For example: &amp;#39;gendate h 3&amp;#39; will generate &amp;#39;### 2023-03-29&amp;#39; header=&amp;#34;&amp;#34; date=$(date +&amp;#34;%Y-%m-%d&amp;#34;) if [[ $# -gt 0 ]]; then # handling wrong arguments if [[ $# -eq 1 || &amp;#34;$1&amp;#34; !</description>
+      <content:encoded><![CDATA[<p>A couple of weeks ago I created a simple bash script to generate a date in format YYY-MM-DD to use with the magic !! wands in vim.</p>
+<p>Just now I wanted to expand this with being able to create a markdown header with this date.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Gendate generates the date in YYY-MM-DD format</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Can be called with arguments h and number to generate a markdown heading</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># For example: &#39;gendate h 3&#39; will generate &#39;### 2023-03-29&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">header</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">date</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$#</span> -gt <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># handling wrong arguments</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">||</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;h&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Usage: gendate h 2 to generate with markdown heading ##&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># format markdown heading if arguments h, n are given</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$#</span> -eq <span class="m">2</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$2</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">header</span><span class="o">+=</span><span class="s2">&#34;#&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">done</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">header</span><span class="o">+=</span><span class="s2">&#34; &#34;</span><span class="nv">$date</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$header</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># if no arguments given, generate the date</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$date</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h2 id="links">Links:</h2>
+<p>202304011104</p>
+<p><a href="https://github.com/mischavandenburg/dotfiles/tree/main/scripts">https://github.com/mischavandenburg/dotfiles/tree/main/scripts</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>I Wrote My First Go Program Today</title>
       <link>https://mischavandenburg.com/zet/my-first-go-program/</link>
