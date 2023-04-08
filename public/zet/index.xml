@@ -7,6 +7,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>I Made My First Tweet Using My Go Program</title>
+      <link>https://mischavandenburg.com/zet/go-first-tweet/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-first-tweet/</guid>
+      <description>I spent the evening learning about the Twitter API. It was not as straight forward as I thought. My goal was to do this project using only the standard library, and I hoped to get away with a few simple curls, but since the API requires OAuth 1 to create tweets, I had to revise my strategy.
+After struggling with Postman for a few hours to get the correct environment variables set up I managed to make my first tweet through Postman.</description>
+      <content:encoded><![CDATA[<p>I spent the evening learning about the Twitter API. It was not as straight forward as I thought. My goal was to do this project using only the standard library, and I hoped to get away with a few simple curls, but since the API requires OAuth 1 to create tweets, I had to revise my strategy.</p>
+<p>After struggling with Postman for a few hours to get the correct environment variables set up I managed to make my first tweet through Postman. Turns out that Twitter made some big changes in the free tier of their API, and it took me quite a while to figure out that the functions that are used as examples in the API documentation are not accessible to free accounts anymore.</p>
+<p>When I realized I would not get away with a simple curl I looked into libraries, but many were deprecated. Eventually I discovered <a href="https://github.com/michimani/gotwi">gotwi</a> and it didn&rsquo;t take long to make my first tweet using Go.</p>
+<p><img loading="lazy" src="/tweet.png" type="" alt=""  /></p>
+<p>It feels like cheating, but looking at the complexity of the library, it looks like I would be stuck in the weeds for quite a while if I wanted to figure all of this out by myself.</p>
+<p>There is still enough to figure out in this project, such as curling my RSS feed and creating a tweet out of that, and wrapping it in a CLI, so in the end I&rsquo;m glad I found a working library.</p>
+<p>Here&rsquo;s the program I used to make my first tweet. It is a modified example from the gotwi GitHub readme.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;context&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;os&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/michimani/gotwi&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/michimani/gotwi/tweet/managetweet&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="s">&#34;github.com/michimani/gotwi/tweet/managetweet/types&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">in</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">gotwi</span><span class="p">.</span><span class="nx">NewClientInput</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">AuthenticationMethod</span><span class="p">:</span> <span class="nx">gotwi</span><span class="p">.</span><span class="nx">AuthenMethodOAuth1UserContext</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">OAuthToken</span><span class="p">:</span>           <span class="nx">os</span><span class="p">.</span><span class="nf">Getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_ACCESS_TOKEN&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">OAuthTokenSecret</span><span class="p">:</span>     <span class="nx">os</span><span class="p">.</span><span class="nf">Getenv</span><span class="p">(</span><span class="s">&#34;TWITTER_ACCESS_TOKEN_SECRET&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">c</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">gotwi</span><span class="p">.</span><span class="nf">NewClient</span><span class="p">(</span><span class="nx">in</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">p</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">types</span><span class="p">.</span><span class="nx">CreateInput</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">Text</span><span class="p">:</span> <span class="nx">gotwi</span><span class="p">.</span><span class="nf">String</span><span class="p">(</span><span class="s">&#34;Hello World! This time I&#39;m using os.Getenv in my Go program to load the credentials.\n#go #coding #study #learning&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">res</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">managetweet</span><span class="p">.</span><span class="nf">Create</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nf">Background</span><span class="p">(),</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nf">Error</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;[%s] %s\n&#34;</span><span class="p">,</span> <span class="nx">gotwi</span><span class="p">.</span><span class="nf">StringValue</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Data</span><span class="p">.</span><span class="nx">ID</span><span class="p">),</span> <span class="nx">gotwi</span><span class="p">.</span><span class="nf">StringValue</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">Data</span><span class="p">.</span><span class="nx">Text</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="links">Links:</h2>
+<p>202304082104</p>
+<p><a href="https://github.com/michimani/gotwi">https://github.com/michimani/gotwi</a></p>
+<p><a href="https://mischavandenburg.com/zet/go-twitter-cli-project/">https://mischavandenburg.com/zet/go-twitter-cli-project/</a></p>
+<p>[[go]]</p>
+<p>[[go-twitter-cli-project]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Outlining My First Go Project</title>
       <link>https://mischavandenburg.com/zet/go-twitter-cli-project/</link>
       <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
