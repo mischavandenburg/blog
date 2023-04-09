@@ -15,6 +15,8 @@ Over the past few months I've generated a bunch of ideas for projects that I wan
 
 https://github.com/mischavandenburg/twitter-cli
 
+https://twitter.com/mischa_vdburg
+
 # Twitter CLI
 
 Programs should solve a problem. My problem has to do with Twitter. I recently created a Twitter account, and I want to make a tweet whenever I publish something new on my website. I'm currently doing this by hand, and that needs to stop, obviously. 
@@ -62,6 +64,8 @@ In any case, I want to have an application running on a server. I'm making plans
 202304081304
 
 https://github.com/mischavandenburg/twitter-cli
+
+https://twitter.com/mischa_vdburg
 
 [[go]]
 
