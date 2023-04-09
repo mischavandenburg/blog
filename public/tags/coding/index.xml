@@ -97,9 +97,11 @@ After struggling with Postman for a few hours to get the correct environment var
       <guid>https://mischavandenburg.com/zet/go-twitter-cli-project/</guid>
       <description>When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.
 Over the past few months I&amp;rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.
+https://github.com/mischavandenburg/twitter-cli
 Twitter CLI Programs should solve a problem.</description>
       <content:encoded><![CDATA[<p>When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.</p>
 <p>Over the past few months I&rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.</p>
+<p><a href="https://github.com/mischavandenburg/twitter-cli">https://github.com/mischavandenburg/twitter-cli</a></p>
 <h1 id="twitter-cli">Twitter CLI</h1>
 <p>Programs should solve a problem. My problem has to do with Twitter. I recently created a Twitter account, and I want to make a tweet whenever I publish something new on my website. I&rsquo;m currently doing this by hand, and that needs to stop, obviously.</p>
 <p>There are bots out there for this, but I want to build it myself. I&rsquo;ve created the following user stories for my project.</p>
@@ -132,6 +134,7 @@ Twitter CLI Programs should solve a problem.</description>
 <p>In any case, I want to have an application running on a server. I&rsquo;m making plans to start up a proper home lab and this will be a perfect use case to start running on my home Kubernetes cluster.</p>
 <h2 id="links">Links:</h2>
 <p>202304081304</p>
+<p><a href="https://github.com/mischavandenburg/twitter-cli">https://github.com/mischavandenburg/twitter-cli</a></p>
 <p>[[go]]</p>
 <p>[[go-twitter-cli-project]]</p>
 ]]></content:encoded>
