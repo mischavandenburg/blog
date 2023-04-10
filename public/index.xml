@@ -14,12 +14,12 @@
       <guid>https://mischavandenburg.com/zet/go-struct-python-class/</guid>
       <description>The Tour of Go is very clear:
 Go does not have classes.
-However, the benefits of learning multiple languages is that each language provides you with a set of &amp;ldquo;pegs&amp;rdquo; which you can use to refer to each other. As I was learning about structs in Go, I hung them to the &amp;ldquo;Python classes&amp;rdquo; peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</description>
+However, the benefits of learning multiple languages are that each language provides you with a set of &amp;ldquo;pegs&amp;rdquo; which you can use to refer to each other. As I was learning about structs in Go, I hung them to the &amp;ldquo;Python classes&amp;rdquo; peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</description>
       <content:encoded><![CDATA[<p>The Tour of Go is very clear:</p>
 <blockquote>
 <p>Go does not have classes.</p>
 </blockquote>
-<p>However, the benefits of learning multiple languages is that each language provides you with a set of &ldquo;pegs&rdquo; which you can use to refer to each other. As I was learning about structs in Go, I hung them to the &ldquo;Python classes&rdquo; peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</p>
+<p>However, the benefits of learning multiple languages are that each language provides you with a set of &ldquo;pegs&rdquo; which you can use to refer to each other. As I was learning about structs in Go, I hung them to the &ldquo;Python classes&rdquo; peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</p>
 <p>Even though Go does not have classes, my understanding of Python classes did help me to understand structs much more quickly.</p>
 <h1 id="go-structs">Go Structs</h1>
 <p>A struct is a collection of fields, and they are accessed using a dot.</p>

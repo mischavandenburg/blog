@@ -12,7 +12,7 @@ The Tour of Go is very clear:
 
 > Go does not have classes.
 
-However, the benefits of learning multiple languages is that each language provides you with a set of "pegs" which you can use to refer to each other. As I was learning about structs in Go, I hung them to the "Python classes" peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.
+However, the benefits of learning multiple languages are that each language provides you with a set of "pegs" which you can use to refer to each other. As I was learning about structs in Go, I hung them to the "Python classes" peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.
 
 Even though Go does not have classes, my understanding of Python classes did help me to understand structs much more quickly.
 
