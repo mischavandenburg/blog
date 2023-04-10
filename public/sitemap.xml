@@ -3,22 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-04-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://mischavandenburg.com/tags/coding/</loc>
-    <lastmod>2023-04-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/go/</loc>
-    <lastmod>2023-04-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/python/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/go-struct-python-class/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/study/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/go-use-q-for-debugging/</loc>
-    <lastmod>2023-04-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/go-use-q-for-debugging/</loc>
     <lastmod>2023-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/agile/</loc>
@@ -109,9 +118,6 @@
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/how-to/</loc>
-    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/study/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</loc>

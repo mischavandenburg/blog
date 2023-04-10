@@ -5,7 +5,96 @@
     <link>https://mischavandenburg.com/zet/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 09 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Structs In Go - Similar To Classes In Python?</title>
+      <link>https://mischavandenburg.com/zet/go-struct-python-class/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-struct-python-class/</guid>
+      <description>The Tour of Go is very clear:
+Go does not have classes.
+However, the benefits of learning multiple languages is that each language provides you with a set of &amp;ldquo;pegs&amp;rdquo; which you can use to refer to each other. As I was learning about structs in Go, I hung them to the &amp;ldquo;Python classes&amp;rdquo; peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</description>
+      <content:encoded><![CDATA[<p>The Tour of Go is very clear:</p>
+<blockquote>
+<p>Go does not have classes.</p>
+</blockquote>
+<p>However, the benefits of learning multiple languages is that each language provides you with a set of &ldquo;pegs&rdquo; which you can use to refer to each other. As I was learning about structs in Go, I hung them to the &ldquo;Python classes&rdquo; peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</p>
+<p>Even though Go does not have classes, my understanding of Python classes did help me to understand structs much more quickly.</p>
+<h1 id="go-structs">Go Structs</h1>
+<p>A struct is a collection of fields, and they are accessed using a dot.</p>
+<p>Each data field in a struct has its own type, either user defined or built in.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">name</span>    <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">address</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">person1</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span><span class="s">&#34;Mischa&#34;</span><span class="p">,</span> <span class="s">&#34;Amsterdam&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">person1</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">person1</span><span class="p">.</span><span class="nx">address</span><span class="p">)</span>
+</span></span></code></pre></div><p>When creating a struct, you can use the <code>Name:</code> syntax to set the values. Otherwise, you need to populate the fields in order.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Computer</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">os</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ram</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">macBook</span> <span class="o">:=</span> <span class="nx">Computer</span><span class="p">{</span><span class="nx">os</span><span class="p">:</span> <span class="s">&#34;MacOs&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">macBook</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">thinkPad</span> <span class="o">:=</span> <span class="nx">Computer</span><span class="p">{</span><span class="s">&#34;Arch Linux&#34;</span><span class="p">,</span> <span class="mi">16</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">thinkPad</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This produces the output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{</span><span class="nx">MacOs</span> <span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="nx">Arch</span> <span class="nx">Linux</span> <span class="mi">16</span><span class="p">}</span>
+</span></span></code></pre></div><p>In the first line, the ram is 0 because I only set the <code>os</code> field, and unset fields get a <code>0</code> value by default.</p>
+<h1 id="struct-methods">Struct Methods</h1>
+<p>Classes in Python can contain methods. What about Go structs?</p>
+<p>Structs can have methods, but they are not contained in the struct definition, like you would see in Python. Methods are defined on types, and the type does not need to be a struct. Therefore, methods are defined after you create the struct.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Computer</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">os</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ram</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="nx">Computer</span><span class="p">)</span> <span class="nf">doubleRam</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;If you would double your ram, you would have %v GB of ram.&#34;</span><span class="p">,</span> <span class="nx">c</span><span class="p">.</span><span class="nx">ram</span>  <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">macBook</span> <span class="o">:=</span> <span class="nx">Computer</span><span class="p">{</span><span class="s">&#34;MacOs&#34;</span><span class="p">,</span> <span class="mi">32</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">macBook</span><span class="p">.</span><span class="nf">doubleRam</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Output:</p>
+<p><code>If you would double your ram, you would have 64 GB of ram.</code></p>
+<p>In this example, <code>doubleRam()</code> is my method of the <code>Computer</code> type. Methods take a special receiver argument, written between the <code>func</code> keyword and the method name. The <code>doubleRam</code> method has a receiver of type <code>Computer</code>, named <code>c</code>.</p>
+<h1 id="struct-literal">Struct Literal</h1>
+<p>A struct literal is a struct which has its contents defined in the source code itself. The opposite would be to generate the contents of the struct through computation or reading memory during the execution of the program.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In conclusion, here are the similarities and differences that stood out to me in this morning&rsquo;s study of Go structs.</p>
+<h2 id="similarities">Similarities</h2>
+<ul>
+<li>Both can have fields to hold values of different types</li>
+<li>Both can have methods</li>
+</ul>
+<h2 id="differences">Differences</h2>
+<ul>
+<li>Go structs are used for data structures, classes in Python are used for OOP</li>
+<li>Go struct fields have static types</li>
+<li>Methods are defined separately from the struct definition</li>
+</ul>
+<h1 id="links">Links:</h1>
+<p>202304100704</p>
+<p>[[go]]</p>
+<p>[[data-types]]</p>
+<p><a href="https://go.dev/tour/moretypes/2">https://go.dev/tour/moretypes/2</a></p>
+<p><a href="https://go.dev/tour/methods/1">https://go.dev/tour/methods/1</a></p>
+<p><a href="https://articles.wesionary.team/map-vs-struct-in-golang-when-to-use-b0b66446627a">https://articles.wesionary.team/map-vs-struct-in-golang-when-to-use-b0b66446627a</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Use The %q Verb When Debugging In Go</title>
       <link>https://mischavandenburg.com/zet/go-use-q-for-debugging/</link>
