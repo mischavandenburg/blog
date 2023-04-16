@@ -22,7 +22,7 @@ params:
     keywords: [Blog, Portfolio, CV, DevOps, Zettelkasten, Second Brain, Linux, Azure, Productivity, vim, neovim, unix]
     author: Mischa van den Burg
     # author: ["Me", "You"] # multiple authors
-    images: ["bear.svg"]
+    images: ["k8s.png"]
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
@@ -42,15 +42,15 @@ params:
 
     assets:
         # disableFingerprinting: true
-        favicon: "bear.svg"
-        favicon16x16: "bear.svg"
-        favicon32x32: "bear.svg"
-        apple_touch_icon: "bear.svg"
-        safari_pinned_tab: "bear.svg"
+        favicon: "k8s.png"
+        favicon16x16: "k8s.png"
+        favicon32x32: "k8s.png"
+        apple_touch_icon: "k8s.png"
+        safari_pinned_tab: "k8s.png"
 
     label:
         text: "Home"
-        icon: "bear.svg"
+        icon: "k8s.png"
         iconHeight: 35
 
     # profile-mode
@@ -58,7 +58,7 @@ params:
         enabled: false # needs to be explicitly set
         title: Living on the Commandline 
         subtitle: "A place to share my knowledge"
-        imageUrl: "bear.svg"
+        imageUrl: "k8s.png"
         imageWidth: 120
         imageHeight: 120
         imageTitle: my image
