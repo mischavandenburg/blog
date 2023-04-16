@@ -5,7 +5,19 @@
     <link>https://mischavandenburg.com/tags/coding/</link>
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>testing for twitter</title>
+      <link>https://mischavandenburg.com/zet/testingfortwitter/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/testingfortwitter/</guid>
+      <description>Links: 202304162104</description>
+      <content:encoded><![CDATA[<h2 id="links">Links:</h2>
+<p>202304162104</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Structs In Go - Similar To Classes In Python?</title>
       <link>https://mischavandenburg.com/zet/go-struct-python-class/</link>
