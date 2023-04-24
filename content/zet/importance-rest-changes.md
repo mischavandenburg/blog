@@ -6,6 +6,7 @@ tags:
 - Health
 - Meditation
 - Buddhism
+- Personal
 ---
 
 Over the past two months I've increased the amount of exercise quite a lot. Over the past year or so I've been doing Brazilian Jiu Jitsu 1-2x a week and going for a 30-90 minute walk every day. 
