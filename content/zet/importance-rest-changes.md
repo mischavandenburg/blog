@@ -24,7 +24,7 @@ Having introduced an increased amount of exercise and mental stress due to calor
 
 To adjust I allowed myself to take a break from evening tech study and homelabbing and read some fiction instead, and I increased my meditation practice. Stilling the mind with breath meditation is helping me to deal with very intense food cravings. Quitting sugar is definitely no walk in the park. 
 
-I have made these kinds of changes many times before, and I know that after a while my body and mind are used to it and I can go back to my old routine again. Having a daily meditation practice gives me the tools to check in with myself. I am very grateful to myself that I put in the hard work to get an established practice. I am also extremely grateful to my teacher and the Buddhist community who supported me while I spent time in a monastery in Norway.
+I have made these kinds of changes many times before, and I know that after a while my body and mind are used to it and I can go back to my old routine again. Having a daily meditation practice gives me the tools to check in with myself. I am very grateful to myself that I put in the hard work over the past 6 years to get an established daily practice. I am also extremely grateful to my teacher and the Buddhist community who supported me while I spent time in a monastery in Norway.
 
 ## Links:
 
