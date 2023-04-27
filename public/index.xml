@@ -5,7 +5,29 @@
     <link>https://mischavandenburg.com/</link>
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 24 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You Can Abort Operations on AKS Clusters Now</title>
+      <link>https://mischavandenburg.com/zet/aks-abort-operation/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/aks-abort-operation/</guid>
+      <description>It&amp;rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.
+For example:
+az aks operation-abort --name myAKSCluster --resource-group myResourceGroup
+Links: 202304270704
+https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/
+https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli</description>
+      <content:encoded><![CDATA[<p>It&rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.</p>
+<p>For example:</p>
+<p><code>az aks operation-abort --name myAKSCluster --resource-group myResourceGroup</code></p>
+<h2 id="links">Links:</h2>
+<p>202304270704</p>
+<p><a href="https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/">https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli">https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Base Training For Running: Time Instead Of Distance</title>
       <link>https://mischavandenburg.com/zet/base-training-running/</link>
