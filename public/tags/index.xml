@@ -27,11 +27,51 @@
     </item>
     
     <item>
+      <title>Command-Line</title>
+      <link>https://mischavandenburg.com/tags/command-line/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/command-line/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Kubernetes</title>
       <link>https://mischavandenburg.com/tags/kubernetes/</link>
       <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>https://mischavandenburg.com/tags/personal/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/personal/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>https://mischavandenburg.com/tags/productivity/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/productivity/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video</title>
+      <link>https://mischavandenburg.com/tags/video/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/video/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -72,16 +112,6 @@
       <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/meditation/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Personal</title>
-      <link>https://mischavandenburg.com/tags/personal/</link>
-      <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/personal/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -207,16 +237,6 @@
     </item>
     
     <item>
-      <title>Productivity</title>
-      <link>https://mischavandenburg.com/tags/productivity/</link>
-      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/productivity/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Bash</title>
       <link>https://mischavandenburg.com/tags/bash/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
@@ -262,16 +282,6 @@
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Command-Line</title>
-      <link>https://mischavandenburg.com/tags/command-line/</link>
-      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/command-line/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
