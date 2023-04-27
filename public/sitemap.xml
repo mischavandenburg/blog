@@ -15,7 +15,13 @@
     <loc>https://mischavandenburg.com/tags/command-line/</loc>
     <lastmod>2023-04-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/zet/check-weather-terminal/</loc>
+    <lastmod>2023-04-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
+    <lastmod>2023-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2023-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/personal/</loc>
@@ -67,9 +73,6 @@
     <lastmod>2023-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/homelab/</loc>
-    <lastmod>2023-04-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2023-04-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/starting-my-homelab/</loc>

@@ -5,7 +5,29 @@
     <link>https://mischavandenburg.com/tags/linux/</link>
     <description>Recent content in Linux on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Check The Weather From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/check-weather-terminal/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/check-weather-terminal/</guid>
+      <description>For the past few months I&amp;rsquo;ve been using this neat API to check the weather from the command line. It&amp;rsquo;s very simple to use. Simply run:
+curl wttr.in
+This will show the weather based on your location, but you can also give a particular location and format.
+curl wttr.in/Amsterdam
+Links: 202304271504
+https://github.com/chubin/wttr.in</description>
+      <content:encoded><![CDATA[<p>For the past few months I&rsquo;ve been using this neat API to check the weather from the command line. It&rsquo;s very simple to use. Simply run:</p>
+<p><code>curl wttr.in</code></p>
+<p>This will show the weather based on your location, but you can also give a particular location and format.</p>
+<p><code>curl wttr.in/Amsterdam</code></p>
+<h2 id="links">Links:</h2>
+<p>202304271504</p>
+<p><a href="https://github.com/chubin/wttr.in">https://github.com/chubin/wttr.in</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Starting My Homelab</title>
       <link>https://mischavandenburg.com/zet/starting-my-homelab/</link>
