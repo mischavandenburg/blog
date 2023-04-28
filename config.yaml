@@ -100,8 +100,11 @@ params:
           url: "https://www.linkedin.com/in/mischavandenburg"
         - name: twitter
           url: "https://twitter.com/mischa_vdburg"
+        - name: youtube
+          url: "https://www.youtube.com/channel/UCDAck-gFPTrgTx_qp59-bQA"
         - name: rss 
           url: "https://mischavandenburg.com/index.xml"
+
 
     # analytics:
     #     google:
