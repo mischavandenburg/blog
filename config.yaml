@@ -21,7 +21,7 @@ params:
     description: "My public Zettelkasten where I publish the notes I write about the topics that interest me."
     keywords: [Blog, Portfolio, CV, DevOps, Zettelkasten, Second Brain, Linux, Azure, Productivity, vim, neovim, unix]
     author: Mischa van den Burg
-    images: ["https://raw.githubusercontent.com/mischavandenburg/blog/main/static/bear.svg"]
+    images: ["https://raw.githubusercontent.com/mischavandenburg/blog/main/static/k8s.png"]
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
