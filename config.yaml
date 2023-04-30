@@ -21,7 +21,6 @@ params:
     description: "My public Zettelkasten where I publish the notes I write about the topics that interest me."
     keywords: [Blog, Portfolio, CV, DevOps, Zettelkasten, Second Brain, Linux, Azure, Productivity, vim, neovim, unix]
     author: Mischa van den Burg
-    # author: ["Me", "You"] # multiple authors
     images: ["https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"]
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
@@ -39,19 +38,6 @@ params:
     hideSummary: false
     showtoc: false
     tocopen: false
-
-    # assets:
-        # disableFingerprinting: true
-        # favicon: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        # favicon16x16: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        # favicon32x32: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        # apple_touch_icon: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        # safari_pinned_tab: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-
-    label:
-        text: "Home"
-        icon: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        iconHeight: 35
 
     # profile-mode
     profileMode:
@@ -105,24 +91,10 @@ params:
         - name: rss 
           url: "https://mischavandenburg.com/index.xml"
 
-
-    # analytics:
-    #     google:
-    #         SiteVerificationTag: "XYZabc"
-    #     bing:
-    #         SiteVerificationTag: "XYZabc"
-    #     yandex:
-    #         SiteVerificationTag: "XYZabc"
-
     cover:
         hidden: true # hide everywhere but not in structured data
         hiddenInList: true # hide on list pages and home
         hiddenInSingle: true # hide on single page
-
-    # editPost:
-    #     URL: "https://github.com/<path_to_repo>/content"
-    #     Text: "Suggest Changes" # edit text
-    #     appendFilePath: true # to append file path to Edit link
 
     # for search
     # https://fusejs.io/api/options.html
