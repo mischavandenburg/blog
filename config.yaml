@@ -40,13 +40,13 @@ params:
     showtoc: false
     tocopen: false
 
-    assets:
+    # assets:
         # disableFingerprinting: true
-        favicon: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        favicon16x16: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        favicon32x32: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        apple_touch_icon: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
-        safari_pinned_tab: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
+        # favicon: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
+        # favicon16x16: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
+        # favicon32x32: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
+        # apple_touch_icon: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
+        # safari_pinned_tab: "https://github.com/mischavandenburg/blog/blob/main/static/k8s.png"
 
     label:
         text: "Home"
