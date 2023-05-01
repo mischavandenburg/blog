@@ -12,7 +12,7 @@ tags:
 - Zettelkasten
 ---
 
-Ah, writing. It's one of the skills that I've consistently received praised for throughout my life. I'm pretty good at it, and I think that's because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.
+Ah, writing. It's one of the skills that I've consistently been praised for throughout my life. I'm pretty good at it, and I think that's because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.
 
 However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post [on writing regularly](https://herman.bearblog.dev/on-writing-regularly/), and I was touched by his words:
 
