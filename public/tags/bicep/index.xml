@@ -5,7 +5,30 @@
     <link>https://mischavandenburg.com/tags/bicep/</link>
     <description>Recent content in Bicep on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/bicep/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/bicep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Ups And Downs Of A Devops Engineer</title>
+      <link>https://mischavandenburg.com/zet/ups-and-downs-of-devops-engineer/</link>
+      <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/ups-and-downs-of-devops-engineer/</guid>
+      <description>Next winter I&amp;rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&amp;rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.
+Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&amp;rsquo;t like.</description>
+      <content:encoded><![CDATA[<p>Next winter I&rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.</p>
+<p>Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&rsquo;t like. And now the first phases of overwhelm are confidently behind me, I&rsquo;m starting to learn the things I prefer doing over others.</p>
+<p>Being a DevOps Engineer does not mean you get to write code all day. I&rsquo;m currently working in an organization where we&rsquo;re not working fully DevOps yet. Rather than deploying many times in small increments, we are still using patching windows. Managing infrastructure in this way means you&rsquo;ll need to communicate with teams to schedule the patching and submit changes to the approval board. It can involve a lot of emailing and talking back and forth. And sometimes things go wrong and everything needs to be rescheduled again. Although it is valuable experience, and I certainly have the communication skills to handle these kinds of situations, I&rsquo;m learning that I lean more towards the dev side of things.</p>
+<p>Today was a fun day at work. I&rsquo;ve been working on a PR for a while whenever I wasn&rsquo;t required to work on tickets. The PR involved refactoring a Bicep template for our Azure Key Vault deployments, which were using parameter files with a lot of repeated code. After getting a lot of good feedback on my code changes, and submitting it for review multiple times, it was finally approved and I could get to work.</p>
+<p>I used bash, jq and vim to clean up the parameter files for each workload and submitted PRs. My colleague, who helped me with the PR&rsquo;s, was standing by and ready to approve them as soon as I submitted them. Some pipelines ran into some trouble and required a few more PR&rsquo;s to fix, and there was a bit of pressure because we needed to get the pipelines working before any other changes needed to be deployed the next day.</p>
+<p>By working together like this we managed to clean up 2850 lines of code in one day and it was a great feeling to get this job done. I had been working on this for a couple of weeks and it&rsquo;s so satisfying to move that ticket status to &ldquo;done&rdquo;.</p>
+<p>I really enjoy the coding! And I really enjoy working with Infrastructure as Code! Somehow it really gives me a lot of pleasure knowing that the code I&rsquo;m writing will be transformed to running infrastructure after it is submitted. I love writing programs in my free time as well, but there is just something magical seeing your parameter file being turned into a functional Kubernetes cluster or Key Vault.</p>
+<p>Working as a DevOps Engineer, I&rsquo;m generally having so much fun. I really enjoyed myself when I was learning jq and used scripts to change hundreds of lines of code at a time and submitting them as a PR. And some days, the work is less enjoyable, but it is all part of the job. It all serves to deliver value to the end customer, and if I can have fun most of the time while delivering value, I know I&rsquo;m in the right place.</p>
+<p>In any case, there hasn&rsquo;t been a second during these past two years where I regretted my choice of becoming a DevOps Engineer. I love my job, I found my passion in my work, and I&rsquo;m so excited for the future. Cloud computing is never standing still, Kubernetes is starting to become more and more popular, and my skills grow with every day that passes.</p>
+<p>I&rsquo;m a happy camper.</p>
+<h2 id="links">Links:</h2>
+<p>202305042005</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Notes: Advanced Bicep</title>
       <link>https://mischavandenburg.com/zet/advanced-bicep/</link>
