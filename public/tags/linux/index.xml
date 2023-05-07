@@ -5,7 +5,26 @@
     <link>https://mischavandenburg.com/tags/linux/</link>
     <description>Recent content in Linux on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: Creating A Command To Change Fontsize in Alacritty</title>
+      <link>https://mischavandenburg.com/zet/video-custom-fontsize-command/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-custom-fontsize-command/</guid>
+      <description>Links: 202305070805
+https://youtu.be/Q8dxoqqMHAg</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Q8dxoqqMHAg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="links">Links:</h2>
+<p>202305070805</p>
+<p><a href="https://youtu.be/Q8dxoqqMHAg">https://youtu.be/Q8dxoqqMHAg</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>The Ups And Downs Of A Devops Engineer</title>
       <link>https://mischavandenburg.com/zet/ups-and-downs-of-devops-engineer/</link>
