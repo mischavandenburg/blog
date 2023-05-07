@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-05-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/health/</loc>
+    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/stress-eating/</loc>
+    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/weight-loss/</loc>
+    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/bicep/</loc>
     <lastmod>2023-05-04T00:00:00+00:00</lastmod>
@@ -33,13 +48,7 @@
     <loc>https://mischavandenburg.com/zet/sabaton-concert-2023/</loc>
     <lastmod>2023-05-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-05-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/ups-and-downs-of-devops-engineer/</loc>
-    <lastmod>2023-05-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-05-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/history/</loc>
@@ -52,9 +61,6 @@
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/article/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/health/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/notetaking/</loc>
@@ -88,9 +94,6 @@
     <lastmod>2023-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/weeknotes/</loc>
-    <lastmod>2023-04-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/weight-loss/</loc>
     <lastmod>2023-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
