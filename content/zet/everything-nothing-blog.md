@@ -16,7 +16,7 @@ I thoroughly enjoy the sense of freedom it has given me. Rather than constrainin
 
 I'm sharing more and more personal content, and this is the type of content one might expect to be seen on a social media platform. I don't use social media much, and decided to carve out my own space on the internet and write there instead. I will always be the owner of this content, and I can write about whatever I want and change the appearance and presentation.
 
-I can't explain why, but there is something very satisfying scrolling through my [archives](/archives/) and seeing the things that caught my interest during those particular months, knowing that it is publically available and that others might be piqued by the keywords as well. 
+I can't explain why, but there is something very satisfying about scrolling through my [archives](/archives/) and seeing the things that caught my interest during those particular months, knowing that it is publically available and that others might be piqued by the keywords as well. 
 
 Discovering [Roy Tang's website](https://roytang.net/) was also very inspirational. I picked up the idea of sharing my week notes and logging the content consumption from his blog. Reading Hacker News regularly has exposed me to several personal blogs which I've added to my RSS feeds, and I enjoy reading about their interests and getting inspiration from what they decide to publish on their blogs.
 
