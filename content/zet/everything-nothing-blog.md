@@ -10,7 +10,7 @@ Read an interesting post this morning about [E/N websites.](http://sawv.org/en.h
 
 >E/N description: The website's author covers a myriad of topics. It's not narrowly focused. The author writes about everything or at least everything that's important to the author. The site might contain something useful for anyone who visits. The content means everything to the publisher, but it could mean nothing to the rest of the world. 
 
-In [this post from March](/zet/articles/write-about-health-personal/) I declared that I would write more about my personal life and expanding the rage of topics that I would publish on my blog / zettelkasten. And it has a great decision so far. 
+In [this post from March](/zet/articles/write-about-health-personal/) I declared that I would write more about my personal life and expanding the range of topics that I would publish on my blog / zettelkasten. And it has a great decision so far. 
 
 I thoroughly enjoy the sense of freedom it has given me. Rather than constraining myself to one subject area, I feel free to write about anything that currently interests me. Writing about these topics stimulates further research and more intentional content consumption. 
 
