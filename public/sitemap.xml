@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/everything-nothing-blog/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/personal/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/writing/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/2023-week-18/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
@@ -27,9 +42,6 @@
     <loc>https://mischavandenburg.com/tags/running/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/video/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -40,9 +52,6 @@
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/weight-loss/</loc>
-    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/bicep/</loc>
@@ -58,9 +67,6 @@
     <lastmod>2023-05-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/d2r-ladder-reset-may-2023/</loc>
-    <lastmod>2023-05-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/personal/</loc>
     <lastmod>2023-05-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/sabaton-concert-2023/</loc>
@@ -91,9 +97,6 @@
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/power-of-writing/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/writing/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
