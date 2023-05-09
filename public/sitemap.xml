@@ -6,6 +6,18 @@
     <lastmod>2023-05-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/bash/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/coding/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/command-line/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/zet/everything-nothing-blog/</loc>
     <lastmod>2023-05-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -13,6 +25,12 @@
     <lastmod>2023-05-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/video/</loc>
+    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/blogging-from-command-line/</loc>
     <lastmod>2023-05-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/writing/</loc>
@@ -24,25 +42,16 @@
     <loc>https://mischavandenburg.com/zet/2023-week-18/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/coding/</loc>
-    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/running-exploring-fun/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/health/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
-    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/stress-eating/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/running/</loc>
-    <lastmod>2023-05-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/video/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/video-custom-fontsize-command/</loc>
@@ -117,9 +126,6 @@
     <loc>https://mischavandenburg.com/tags/cloud-native/</loc>
     <lastmod>2023-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/command-line/</loc>
-    <lastmod>2023-04-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/check-weather-terminal/</loc>
     <lastmod>2023-04-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -182,9 +188,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/dopamine-and-motivation/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/bash/</loc>
-    <lastmod>2023-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/exercise-stimulates-creativity-and-motivation/</loc>
     <lastmod>2023-04-01T00:00:00+00:00</lastmod>
