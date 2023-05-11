@@ -86,6 +86,8 @@ params:
           url: "https://www.linkedin.com/in/mischavandenburg"
         - name: twitter
           url: "https://twitter.com/mischa_vdburg"
+        - name: instagram
+          url: "https://www.instagram.com/mischavandenburg"
         - name: youtube
           url: "https://www.youtube.com/channel/UCDAck-gFPTrgTx_qp59-bQA"
         - name: rss 
