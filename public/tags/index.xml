@@ -7,6 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 15 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Buddhism</title>
+      <link>https://mischavandenburg.com/tags/buddhism/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/buddhism/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Health</title>
+      <link>https://mischavandenburg.com/tags/health/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/health/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Personal</title>
       <link>https://mischavandenburg.com/tags/personal/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
@@ -27,21 +47,21 @@
     </item>
     
     <item>
-      <title>Blogging</title>
-      <link>https://mischavandenburg.com/tags/blogging/</link>
-      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
+      <title>Video</title>
+      <link>https://mischavandenburg.com/tags/video/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/blogging/</guid>
+      <guid>https://mischavandenburg.com/tags/video/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
-      <title>Health</title>
-      <link>https://mischavandenburg.com/tags/health/</link>
+      <title>Blogging</title>
+      <link>https://mischavandenburg.com/tags/blogging/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/health/</guid>
+      <guid>https://mischavandenburg.com/tags/blogging/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -122,16 +142,6 @@
       <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/linux/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Video</title>
-      <link>https://mischavandenburg.com/tags/video/</link>
-      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/video/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -302,16 +312,6 @@
       <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Buddhism</title>
-      <link>https://mischavandenburg.com/tags/buddhism/</link>
-      <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/buddhism/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
