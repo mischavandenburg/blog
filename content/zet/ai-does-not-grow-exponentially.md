@@ -6,7 +6,7 @@ tags:
 - Podcast
 ---
 
-https://www.youtube.com/watch?v=EKba_awaAkk
+{{< youtube EKba_awaAkk >}}
 
 I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.
 
@@ -17,3 +17,5 @@ This makes the doomsday image of an all-powerful single AI that takes over the w
 ## Links:
 
 202305152005
+
+https://www.youtube.com/watch?v=EKba_awaAkk
