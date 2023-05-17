@@ -2,6 +2,12 @@
 title: "Welcome!"
 ---
 
+# Why?
+
+Why bother with a personal website? Why not just write on social media?
+
+[This post captures it beautifully.](https://matthiasott.com/notes/simple-truths-about-personal-websites)
+
 # Favorites
 
 These articles came out particularly well, and might provide some value to you, or help you get to know me a little better.
