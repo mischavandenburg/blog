@@ -5,7 +5,59 @@
     <link>https://mischavandenburg.com/zet/</link>
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discovered MAF and Low Heart Rate Training</title>
+      <link>https://mischavandenburg.com/zet/discovered-maf-training/</link>
+      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/discovered-maf-training/</guid>
+      <description>Although I was already doing something very similar, yesterday I discovered MAF training through this video:
+This video is super inspiring because he actually runs a 3 hour marathon while recording!
+I was already doing base training for my running which I discovered through the r/running Reddit. Here you focus on time instead of distance and do many runs on low intensity throughout the week, and one long run where you go 5 minutes more every week.</description>
+      <content:encoded><![CDATA[<p>Although I was already doing something very similar, yesterday I discovered MAF training through this video:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/P_VNQ6UIbS8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>This video is super inspiring because he actually runs a 3 hour marathon while recording!</p>
+<p>I was already doing <a href="/zet/base-training-running/">base training for my running</a> which I discovered through the r/running Reddit. Here you focus on time instead of distance and do many runs on low intensity throughout the week, and one long run where you go 5 minutes more every week.</p>
+<p>I&rsquo;m now in week 6 of my base training schedule and I&rsquo;m progressing nicely. My long run went from 50 minutes to 86 minutes, and my weekly total distance has increased from 20,6km to 32,8km!</p>
+<h1 id="maf-training">MAF Training</h1>
+<p>MAF stands for Maximum Aerobic Function and was developed by Dr. Phil Maffetone.</p>
+<p>It uses <a href="https://philmaffetone.com/180-formula/">the 180 formula</a> to calculate the maximum heart rate you should hit during your run. What wasn&rsquo;t obvious from all the other videos I watched, was that this maximum heart rate actually establishes a zone you should be training in.</p>
+<p>I discovered this in Dr. Maffetone&rsquo;s Book:</p>
+<blockquote>
+<p>Once a maximum aerobic heart rate is found, a training range from this heart rate to 10 beats below could be used as a training range. For example, if an athlete’s maximum aerobic heart rate is determined to be 155, that person’s aerobic training zone would be 145 to 155 bpm. However, the more training at 155, the quicker an optimal aerobic base will be developed.</p>
+</blockquote>
+<h1 id="current-situation">Current Situation</h1>
+<p>I hadn&rsquo;t been paying much attention to my heart rate up until this point. I just used the guideline of &ldquo;conversational pace&rdquo;, and that runs should feel easy and enjoyable. However, I knew I was going to need metrics one day, so I diligently tracked my workouts using my iWatch SE from day 1.</p>
+<p>Here are my current heart rate stats and zones:</p>
+<p><img loading="lazy" src="/zones.jpg" type="" alt=""  /></p>
+<p>Going through my recent runs, my average heart rate has been around 100-115bpm. For example:</p>
+<p><img loading="lazy" src="/heart.png" type="" alt=""  /></p>
+<h1 id="time-to-start-nerding-on-some-numbers">Time To Start Nerding On Some Numbers</h1>
+<p>Using the 180 formula, I calculated that I should use 180 - 33 - 5 = 142 as a maximum heart rate for my endurance training, which gives me a training zone of 132-142bpm. This is about 15 beats higher than I was used to! And if you look at the zones that Apple calculated for me, you&rsquo;ll see that this almost perfectly matches my calculated Zone 2.</p>
+<p>After I calculated my new target, I tried it out immediately this morning. Here is the result:</p>
+<p><img loading="lazy" src="/firstmaf.jpg" type="" alt=""  /></p>
+<p><img loading="lazy" src="/firstmaf2.jpg" type="" alt=""  /></p>
+
+
+<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="9143184934"></div><script src="https://strava-embeds.com/embed.js"></script>
+
+
+<p>This definitely felt very different! After some experimentation and keeping an eye on my heart rate rising and falling, I managed to find a pattern that kept it around 135bpm. It felt much more like running instead of jogging. And I was surprised that even though I was running quite a bit faster than I was used to, I could still maintain a conversation if I wanted to, so I was still at a conversational pace. I had just estimated my conversational pace a lot lower than I was capable of. This shows you the power of using metrics for training! It definitely pushed me to go a little harder, a little faster, even though I&rsquo;m stil doing &ldquo;easy running&rdquo;.</p>
+<p>Towards the end my legs started to hurt quite a bit more than usual, it felt much more like a workout, even though I was not totally exhausted in the end. The previous run I shared had a pace of 7.41/km and this one was on 6.42/km, which is a lot faster.</p>
+<p>I have come to a point where all these numbers are starting to make sense to me now and I can start tracking them. Especially the heart rate has been a real eye opener. Now I have a perfect gauge to use while training: something that will let me know whether I should put in some more effort or slow down.</p>
+<p>Already I&rsquo;m getting so much joy of seeing the progress I&rsquo;ve made from week 1 to 6, and seeing the numbers increase. I&rsquo;m really falling in love with this sport in so many ways, it&rsquo;s perfect for a nerd like me!</p>
+<h2 id="links">Links:</h2>
+<p>202305261305</p>
+<p><a href="https://philmaffetone.com/180-formula/">https://philmaffetone.com/180-formula/</a></p>
+<p><a href="https://www.youtube.com/watch?v=e5wgoTuJuF8">https://www.youtube.com/watch?v=e5wgoTuJuF8</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>2023 week 20</title>
       <link>https://mischavandenburg.com/zet/2023-week-20/</link>

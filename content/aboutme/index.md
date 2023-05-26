@@ -2,6 +2,10 @@
 title: "Welcome!"
 ---
 
+{{< rawhtml >}}
+<iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/116768345/activity-summary/fcfe43e3d240fd35d0d3ae7f11eb2e924744d987'></iframe>
+{{< /rawhtml >}}
+
 # Why?
 
 Why bother with a personal website? Why not just write on social media?
