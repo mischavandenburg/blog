@@ -118,6 +118,10 @@ menu:
           name: "Start Here"
           url: /aboutme/
           weight: 10
+        - identifier: Current
+          name: "Current"
+          url: /current/
+          weight: 15
         - identifier: Tags
           name: Tags
           url: /tags/
