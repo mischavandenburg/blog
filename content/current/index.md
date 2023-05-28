@@ -32,6 +32,20 @@ See:
 
 [🍎 My Weight Loss Journey And Current Goal 📉](/zet/weight-loss-journey/)
 
+### Diet
+
+I eat a whole foods plant based diet. I've been vegan for almost 7 years, but I've had periods where I had a vegetarian diet. Sometimes I even eat meat for a short period during the winter. But I always feel best when I go full plant based. 
+
+Calorie target: 1995
+
+Macro division:
+
+Carbs: 146g, 30%
+
+Protein: 122g, 25%
+
+Fat: 97g, 45%
+
 ### Weight Loss Sprint
 
 I started doing my weight loss in sprints.
@@ -94,8 +108,6 @@ After getting my AZ104 and AZ400 during February, I don't have any certification
 
 I aim to sleep 7 hours a day. My 6 month average as per 2023-05-26 is 8 hours and 4 minutes.
 
-## Diet
-I eat a whole foods plant based diet. I've been vegan for almost 7 years, but I've had periods where I had a vegetarian diet. Sometimes I even eat meat for a short period during the winter. But I always feel best when I go full plant based. 
 
 ## Exercise
 
