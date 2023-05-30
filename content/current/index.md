@@ -6,7 +6,7 @@ On this page I share the things I'm currently focused on, which habits I'm track
 
 # Stats
 
-Last updated 2023-05-26
+Last updated 2023-05-30
 
 Calorie target: 1995 [(500 deficit)](https://tdeecalculator.net/result.php?s=metric&age=33&g=male&cm=190&kg=76&act=1.375&bf=12&f=1)
 
@@ -40,11 +40,11 @@ Calorie target: 1995
 
 Macro division:
 
-Carbs: 146g, 30%
+Carbs: 161g, 33%
 
-Protein: 122g, 25%
+Protein: 97g, 20%
 
-Fat: 97g, 45%
+Fat: 101g, 47%
 
 ### Weight Loss Sprint
 
