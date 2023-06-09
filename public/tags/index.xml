@@ -5,7 +5,37 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 04 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure</title>
+      <link>https://mischavandenburg.com/tags/azure/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/azure/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://mischavandenburg.com/tags/devops/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/devops/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://mischavandenburg.com/tags/kubernetes/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Weeknotes</title>
       <link>https://mischavandenburg.com/tags/weeknotes/</link>
@@ -207,16 +237,6 @@
     </item>
     
     <item>
-      <title>DevOps</title>
-      <link>https://mischavandenburg.com/tags/devops/</link>
-      <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/devops/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Gaming</title>
       <link>https://mischavandenburg.com/tags/gaming/</link>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
@@ -297,31 +317,11 @@
     </item>
     
     <item>
-      <title>Azure</title>
-      <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/azure/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Cloud-Native</title>
       <link>https://mischavandenburg.com/tags/cloud-native/</link>
       <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/cloud-native/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
