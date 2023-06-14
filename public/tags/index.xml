@@ -5,13 +5,14 @@
     <link>https://mischavandenburg.com/tags/</link>
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 12 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Weeknotes</title>
-      <link>https://mischavandenburg.com/tags/weeknotes/</link>
-      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+      <title>AKS</title>
+      <link>https://mischavandenburg.com/tags/aks/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/weeknotes/</guid>
+      <guid>https://mischavandenburg.com/tags/aks/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -19,7 +20,7 @@
     <item>
       <title>Azure</title>
       <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/azure/</guid>
       <description></description>
@@ -29,7 +30,7 @@
     <item>
       <title>DevOps</title>
       <link>https://mischavandenburg.com/tags/devops/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/devops/</guid>
       <description></description>
@@ -39,9 +40,29 @@
     <item>
       <title>Kubernetes</title>
       <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://mischavandenburg.com/tags/networking/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/networking/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Weeknotes</title>
+      <link>https://mischavandenburg.com/tags/weeknotes/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/weeknotes/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

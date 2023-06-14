@@ -5,6 +5,7 @@
     <link>https://mischavandenburg.com/tags/gitops/</link>
     <description>Recent content in GitOps on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lab VM project - Install ArgoCD to your Kubernetes cluster</title>

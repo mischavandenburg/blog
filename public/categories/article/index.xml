@@ -5,6 +5,7 @@
     <link>https://mischavandenburg.com/categories/article/</link>
     <description>Recent content in Article on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 30 Jan 2022 16:20:24 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/categories/article/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker LEMP Stack deployed with Ansible</title>
