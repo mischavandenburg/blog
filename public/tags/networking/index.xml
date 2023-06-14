@@ -32,10 +32,20 @@ Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have 
 <p>Pods are assigned addresses from a private CIDR which is logically separate from the VNet hosting the nodes. They do not use up the IP addressess of the VNets, which means that your workloads become nearly infinitely scalable within your assigned IP address ranges when you are operating in this type of corporate networking infrastructure with IP range limitations. You can scale up to literally thousands of nodes without worrying about IP exhaustion.</p>
 <p><img loading="lazy" src="/cnioverlay.png" type="" alt=""  /></p>
 <p>Additionally, the Overlay network can also span across multiple AKS clusters. This opens up a whole world of possibilities where pods from separate workloads on separate clusters could communicate with each other directly using the high speed native direct routing of the Azure network.</p>
+<h2 id="limitations">Limitations</h2>
+<p>Azure CNI Overlay also comes with some limitations. A big one is that you cannot use Application Gateway as an Ingress Controller (AGIC) for an Overlay cluster.</p>
+<p>Other notable limitations:</p>
+<ul>
+<li>Windows support is still in Preview</li>
+<li>Virtual Machine Availability Sets (VMAS) are not supported for Overlay</li>
+<li>Dualstack networking is not supported in Overlay</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
 <p>In conclusion, the Azure CNI Overlay provides a powerful solution to address the challenges of IP exhaustion and scalability in Azure AKS. By implementing the overlay network, organizations can overcome the limitations of the non-overlay version of Azure CNI and achieve a truly scalable and manageable infrastructure.</p>
 <p>Azure CNI Overlay is currently in preview, but I&rsquo;m very excited about the developments. I&rsquo;ll be following them closely and I hope to be a part of its implementation at my current contract.</p>
 <h1 id="links">Links:</h1>
 <p><a href="https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay">https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay</a></p>
+<p><a href="https://www.youtube.com/watch?v=kLBLaCC_dNs">https://www.youtube.com/watch?v=kLBLaCC_dNs</a></p>
 <p>202306131506</p>
 <p>[[aks-networking-essentials]]</p>
 ]]></content:encoded>

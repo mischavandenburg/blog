@@ -43,6 +43,18 @@ Pods are assigned addresses from a private CIDR which is logically separate from
 
 Additionally, the Overlay network can also span across multiple AKS clusters. This opens up a whole world of possibilities where pods from separate workloads on separate clusters could communicate with each other directly using the high speed native direct routing of the Azure network.
 
+## Limitations
+
+Azure CNI Overlay also comes with some limitations. A big one is that you cannot use Application Gateway as an Ingress Controller (AGIC) for an Overlay cluster.
+
+Other notable limitations:
+
+* Windows support is still in Preview
+* Virtual Machine Availability Sets (VMAS) are not supported for Overlay
+* Dualstack networking is not supported in Overlay
+
+## Conclusion
+
 In conclusion, the Azure CNI Overlay provides a powerful solution to address the challenges of IP exhaustion and scalability in Azure AKS. By implementing the overlay network, organizations can overcome the limitations of the non-overlay version of Azure CNI and achieve a truly scalable and manageable infrastructure.
 
 Azure CNI Overlay is currently in preview, but I'm very excited about the developments. I'll be following them closely and I hope to be a part of its implementation at my current contract.
@@ -50,6 +62,8 @@ Azure CNI Overlay is currently in preview, but I'm very excited about the develo
 # Links:
 
 https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay
+
+https://www.youtube.com/watch?v=kLBLaCC_dNs
 
 202306131506
 
