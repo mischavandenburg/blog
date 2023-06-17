@@ -6,13 +6,15 @@ On this page I share the things I'm currently focused on, which habits I'm track
 
 # Stats
 
-Last updated 2023-05-30
+Last updated 2023-06-16
 
-Calorie target: 1995 [(500 deficit)](https://tdeecalculator.net/result.php?s=metric&age=33&g=male&cm=190&kg=76&act=1.375&bf=12&f=1)
+Calorie target: 2342 [(500 deficit)](https://tdeecalculator.net/result.php?s=metric&age=33&g=male&cm=190&kg=77&act=1.55&bf=12&f=1)
 
-Current Weight: 76,8 (weekly average)
+My deficit is only 500, I would usually have it a little higher at around 700. But I want to allow for more optimal recovery from my running training.
 
-Current bodyfat: 11,3% (weekly average according to Withings)
+Current Weight: 76,47 (weekly average)
+
+Current bodyfat: 13,3% (weekly average according to Withings)
 
 {{< rawhtml >}}
 <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/116768345/latest-rides/fcfe43e3d240fd35d0d3ae7f11eb2e924744d987'></iframe>
@@ -36,29 +38,13 @@ See:
 
 I eat a whole foods plant based diet. I've been vegan for almost 7 years, but I've had periods where I had a vegetarian diet. Sometimes I even eat meat for a short period during the winter. But I always feel best when I go full plant based. 
 
-Calorie target: 1995
-
 Macro division:
 
-Carbs: 161g, 33%
+Carbs: 33%
 
-Protein: 97g, 20%
+Protein: 20%
 
-Fat: 101g, 47%
-
-### Weight Loss Sprint
-
-I started doing my weight loss in sprints.
-
-Sprint goal: 75kg
-
-Sprint started: Week 15, 23 April
-
-Sprint end: Week 23
-
-Main goal is to get a lean runner's physique with not too much muscle and no fat.
-
-This will likely be around 70-72kg.
+Fat: 47%
 
 ### Fasting
 

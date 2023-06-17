@@ -42,10 +42,11 @@ Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have 
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>In conclusion, the Azure CNI Overlay provides a powerful solution to address the challenges of IP exhaustion and scalability in Azure AKS. By implementing the overlay network, organizations can overcome the limitations of the non-overlay version of Azure CNI and achieve a truly scalable and manageable infrastructure.</p>
-<p>Azure CNI Overlay is currently in preview, but I&rsquo;m very excited about the developments. I&rsquo;ll be following them closely and I hope to be a part of its implementation at my current contract.</p>
+<p>Azure CNI Overlay is currently in preview for Windows and GA for Linux nodes, but I&rsquo;m very excited about the developments. I&rsquo;ll be following them closely and I hope to be a part of its implementation at my current contract.</p>
 <h1 id="links">Links:</h1>
 <p><a href="https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay">https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay</a></p>
 <p><a href="https://www.youtube.com/watch?v=kLBLaCC_dNs">https://www.youtube.com/watch?v=kLBLaCC_dNs</a></p>
+<p><a href="https://azure.microsoft.com/en-us/updates/generally-available-azure-cni-overlay-for-linux/">https://azure.microsoft.com/en-us/updates/generally-available-azure-cni-overlay-for-linux/</a></p>
 <p>202306131506</p>
 <p>[[aks-networking-essentials]]</p>
 ]]></content:encoded>
