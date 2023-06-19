@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/2023-week-24/</loc>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/weeknotes/</loc>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/aks/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
@@ -20,19 +32,10 @@
     <loc>https://mischavandenburg.com/tags/networking/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/2023-week-23/</loc>
-    <lastmod>2023-06-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/weeknotes/</loc>
     <lastmod>2023-06-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/deploy-draft-azure/</loc>

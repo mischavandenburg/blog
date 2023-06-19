@@ -6,7 +6,58 @@
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 Week 24</title>
+      <link>https://mischavandenburg.com/zet/2023-week-24/</link>
+      <pubDate>Mon, 19 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/2023-week-24/</guid>
+      <description>Week 24 My Week This weeks main event was Graspop! I went there on Friday together with my brother. The main reason for going was seeing Meshuggah live for the first time.
+It was an amazing experience. I&amp;rsquo;ve been listening to Meshuggah since I was 16 years old so it was awesome to see them live. They are getting pretty old so it was good that I managed to see them now.</description>
+      <content:encoded><![CDATA[<h1 id="week-24">Week 24</h1>
+<h2 id="my-week">My Week</h2>
+<p>This weeks main event was Graspop! I went there on Friday together with my brother. The main reason for going was seeing Meshuggah live for the first time.</p>
+<p>It was an amazing experience. I&rsquo;ve been listening to Meshuggah since I was 16 years old so it was awesome to see them live. They are getting pretty old so it was good that I managed to see them now. Perhaps they quit in a year or two?</p>
+<p>We left at noon on Friday, drove to Belgium and attended the festival. Meshuggah started playing at midnight, so it was a long day! I was back home at 4:30 in the morning. This hasn&rsquo;t happened for years. I didn&rsquo;t sleep at all, and this lack of sleep and the unusuallly high stimulation of the concert has had a lot of impact on my sleep, mood and weight.</p>
+<p>I completely derailed my schedule and routines, but it was all worth it.</p>
+<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
+<p>After ending my 2 month challenge and reaching my goal of 75kg, I had a week of less strict adherence.</p>
+<p>I ate more calories, more carbs, and I even bought some junk food again. Not good. My average weight climbed back up to 77,63kg in a single week!</p>
+<p>Now, a lot of this weight will be water weight because I ate more carbs. But still it&rsquo;s shocking to see how quickly the scale moves upward after loosening the reigns a bit.</p>
+<p>I feel quite disappointed about that and it definitely wasn&rsquo;t worth the pleasure of the junk food and eating more. It actually feels good to get back in control and to start tracking and planning my nutrition very carefully again starting Monday.</p>
+<p>I went for two 5k runs this week. Far less than I would like. The festival has completely derailed my usual routines and schedule. I didn&rsquo;t sleep for an entire night which left me completely incapable the next two days, so I missed two exercise opportunities there. But it was all worth it. I look forward to get back into my Program and usual routine again next week.</p>
+<h2 id="content-consumption">Content Consumption</h2>
+<h3 id="reading">Reading</h3>
+<p>No reading this week.</p>
+<h3 id="watching">Watching</h3>
+<p>Azure AKS networking Essentials</p>
+<p><a href="https://www.youtube.com/watch?v=kLBLaCC_dNs">https://www.youtube.com/watch?v=kLBLaCC_dNs</a></p>
+<p>I went into a personal finance rabbit hole, especially watched a lot of content by Dave Ramsey. Researching buying vs renting, and whether I should purchase a house or apartment.</p>
+<p>Dave Ramseys Baby Steps to Wealth</p>
+<p><a href="https://www.youtube.com/watch?v=OO25TrVo_dU&amp;pp=ygURcmFtc2V5IGJhYnkgc3RlcHM%3D">https://www.youtube.com/watch?v=OO25TrVo_dU&amp;pp=ygURcmFtc2V5IGJhYnkgc3RlcHM%3D</a></p>
+<p>How To INVEST In Your 30&rsquo;s To Be WEALTHY In Your 40&rsquo;s | Lewis Howes</p>
+<p><a href="https://www.youtube.com/watch?v=UNJhP_zgc7A&amp;t=2840s">https://www.youtube.com/watch?v=UNJhP_zgc7A&amp;t=2840s</a></p>
+<h3 id="listening">Listening</h3>
+<p>Mostly been listening to the &ldquo;Goed Met Geld&rdquo; podcast, a Dutch finance podcast.</p>
+<h1 id="next-week">Next Week</h1>
+<p>I have a very busy week coming up. I have an interesting Azure meetup on Tuesday about the journey to Azure by the NS, the train company I currently work for.</p>
+<p>On Wednesday I&rsquo;ll have an office day at Fullstaq, and I&rsquo;ll be attending an event at Microsoft on Thursday.</p>
+<p>So lots lof traveling and social activity. That will take up a lot of energy, but I&rsquo;m prepared for it.</p>
+<p>I spent my sunday preparing almost all of my nutrition for the week so I won&rsquo;t make any bad food choices when I&rsquo;m tired.</p>
+<h2 id="goals--intentions">Goals &amp; Intentions</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Blueprint adherence</li>
+<li><input disabled="" type="checkbox"> Focus on sleeping well</li>
+<li><input disabled="" type="checkbox"> Reduce perceived stress and time pressure</li>
+<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
+<li><input disabled="" type="checkbox"> 50min long run</li>
+</ul>
+<h2 id="links">Links:</h2>
+<p>202306191806</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>What is Azure CNI Overlay for AKS?</title>
       <link>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</link>
