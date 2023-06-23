@@ -17,9 +17,7 @@ var vnetSubnetId = '${resourceId(vnetResourceGroupName, 'Microsoft.Network/virtu
 
 This was hard to read and the Bicep linter gave the following warning in my editor and during deployment:
 
-```
 WARNING: D:\a\1\a\drop\Generic-templates\containers\azure-kubernetes-service\v4.0\templates\aks.bicep(117,7) : Warning use-resource-id-functions: If property "vnetSubnetID" represents a resource ID, it must use a symbolic resource reference, be a parameter or start with one of these functions: extensionResourceId, guid, if, reference, resourceId, subscription, subscriptionResourceId, tenantResourceId. Found nonconforming expression at vnetSubnetID -> vnetSubnetId [https://aka.ms/bicep/linter/use-resource-id-functions]
-```
 
 ## Using Existing Resources
 
