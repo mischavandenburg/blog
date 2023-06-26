@@ -6,15 +6,13 @@ On this page I share the things I'm currently focused on, which habits I'm track
 
 # Stats
 
-Last updated 2023-06-16
+Last updated 2023-06-26
 
-Calorie target: 2342 [(500 deficit)](https://tdeecalculator.net/result.php?s=metric&age=33&g=male&cm=190&kg=77&act=1.55&bf=12&f=1)
+Calorie target: 2100 [(~700 deficit)](https://tdeecalculator.net/result.php?s=metric&age=33&g=male&cm=190&kg=77&act=1.55&bf=12&f=1)
 
-My deficit is only 500, I would usually have it a little higher at around 700. But I want to allow for more optimal recovery from my running training.
+Current Weight: 77,59 (weekly average)
 
-Current Weight: 76,47 (weekly average)
-
-Current bodyfat: 13,3% (weekly average according to Withings)
+Current bodyfat: 13,6% (weekly average according to Withings)
 
 {{< rawhtml >}}
 <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/116768345/latest-rides/fcfe43e3d240fd35d0d3ae7f11eb2e924744d987'></iframe>
@@ -36,7 +34,9 @@ See:
 
 ### Diet
 
-I eat a whole foods plant based diet. I've been vegan for almost 7 years, but I've had periods where I had a vegetarian diet. Sometimes I even eat meat for a short period during the winter. But I always feel best when I go full plant based. 
+I eat a whole foods plant based diet. I've been vegan for almost 7 years, but I've had periods where I had a vegetarian diet. Sometimes I even ate meat for a short period during the winter. But I always feel best when I go full plant based. 
+
+I've narrowed my diet down to fruits and vegetables, beans, brown rice, nuts and seeds.
 
 Macro division:
 
