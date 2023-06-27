@@ -6,7 +6,68 @@
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim</title>
+      <link>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</guid>
+      <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
+Links: 202306271706
+https://www.youtube.com/watch?v=l0B65FUfNBU
+[[aks]] [[kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+      <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/l0B65FUfNBU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="links">Links:</h2>
+<p>202306271706</p>
+<p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
+<p>[[aks]]
+[[kubernetes]]
+[[neovim]]
+[[bicep]]
+[[coding]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: Introducing New Bicep Parameter Files - .bicepparam - No more JSON!</title>
+      <link>https://mischavandenburg.com/zet/video-bicep-bicepparam/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-bicep-bicepparam/</guid>
+      <description>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:
+More readable and editor friendly Cleaner and less lines of code VSCode integration Quickly convert from JSON or template file using VSCode In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .</description>
+      <content:encoded><![CDATA[<p>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:</p>
+<ul>
+<li>More readable and editor friendly</li>
+<li>Cleaner and less lines of code</li>
+<li>VSCode integration</li>
+<li>Quickly convert from JSON or template file using VSCode</li>
+</ul>
+<p>In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.</p>
+<p>Yes, you read that right, you&rsquo;ll be seeing a hardcore vim user switch to VSCode for this particular task!</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/6Gav1JpGAzo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="links">Links:</h2>
+<p>202306271706</p>
+<p><a href="https://youtu.be/6Gav1JpGAzo">https://youtu.be/6Gav1JpGAzo</a></p>
+<p>[[AKS]]
+[[bicep]]
+[[coding]]
+[[kubernetes]]
+[[azure]]
+[[neovim]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>How To Get The Id Of An Existing Subnet In Bicep</title>
       <link>https://mischavandenburg.com/zet/bicep-getting-subnet-id/</link>

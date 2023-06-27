@@ -8,6 +8,15 @@
     <loc>https://mischavandenburg.com/tags/aks/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/azure/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/bicep/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/coding/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -23,11 +32,11 @@
     <loc>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
+    <loc>https://mischavandenburg.com/zet/video-bicep-bicepparam/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/azure/</loc>
-    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/microsoft/</loc>
     <lastmod>2023-06-26T00:00:00+00:00</lastmod>
@@ -40,12 +49,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/tags/weeknotes/</loc>
     <lastmod>2023-06-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/bicep/</loc>
-    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/coding/</loc>
-    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/bicep-getting-subnet-id/</loc>
     <lastmod>2023-06-23T00:00:00+00:00</lastmod>

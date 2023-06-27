@@ -6,6 +6,9 @@ tags:
 - Kubernetes
 - Video
 - Neovim
+- Azure
+- Coding
+- Bicep
 ---
 
 Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn't disappointed!
