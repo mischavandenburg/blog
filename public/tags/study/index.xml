@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Study on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/study/</link>
+    <description>Recent content in Study on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Starting My Homelab</title>
+      <link>https://mischavandenburg.com/zet/starting-my-homelab/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/starting-my-homelab/</guid>
+      <description>This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s Homelab Init playlist on YouTube which I&amp;rsquo;m working on.
+There are a few reasons why I haven&amp;rsquo;t started up until now:</description>
+      <content:encoded><![CDATA[<p>This week I started a project which I&rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&rsquo;ve been collecting hardware here and there, and I&rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&rsquo;s <a href="https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J">Homelab Init</a> playlist on YouTube which I&rsquo;m working on.</p>
+<p>There are a few reasons why I haven&rsquo;t started up until now:</p>
+<ul>
+<li>Focused on switching jobs and certifications</li>
+<li>Not knowing what to run on the cluster</li>
+<li>High electricity costs</li>
+</ul>
+<p>Now that I found a new job with a great employer, I&rsquo;ve changed my focus towards doing more hands-on learning in my free time by learning Go and diving deeper into Cloud Native technology. Energy prices have come down in the meantime as well.</p>
+<p>I&rsquo;ve reached a stage in my Go learning journey where I&rsquo;m actually able to start making small deployable applications, and I want an environment where I can do that without high costs or without fearing to break something. I want to learn more about databases on Kubernetes, and I want to start writing small microservices and API&rsquo;s that are able to query these databases.</p>
+<p>My lab is going to be my playground, where I can deploy whatever I want and learn the technologies that interest me at that particular moment.</p>
+<h1 id="hardware-parts">Hardware: Parts</h1>
+<p>For some reason the Raspberry Pi has become synonymous with homelabs. I get that it&rsquo;s fun to run a cluster on something that is not much larger than a 1kg pack of sugar. But I never really caught on to that whole scene yet. Maybe it&rsquo;s because I&rsquo;m a bit late to the party and the Pi&rsquo;s have been scarce and very expensive lately?</p>
+<p>In any case, I&rsquo;ve been thankfully accepting old computers that friends were going to get rid of, and I&rsquo;ve been keeping some of my own old hardware as well. I have enough motherboards and other parts to assemble around 3 nodes, which will probably have around 8GB RAM each, but possibilities to attach storage.</p>
+<p>This is also what has been keeping me back for a while I think. There is quite a bit of work that I need to do to get these machines going, and probably I&rsquo;ll have to purchase a couple of other parts. However, I also have some functional hardware.</p>
+<h2 id="gaming-desktop">Gaming Desktop</h2>
+<p>I have an old gaming desktop with 16GB RAM, an Intel 6700K Skylake, 1070 video card and a couple of TB of storage.</p>
+<p>This has been my Arch Linux desktop for the past year, but now that I switched to my new MacBook, I&rsquo;m not using it as much. I want to keep it as it is right now, but I could run a few Virtual Machines on there, and maybe consider turning it into a ProxMox server.</p>
+<h2 id="old-laptops">Old Laptops</h2>
+<p>I have two old laptops. One Asus with 4GB of RAM and a Thinkpad T430 with 8GB RAM. The Thinkpad is actually surprisingly powerful. As a weekend project I installed Arch on it and I fitted it with a refurbished keyboard, and it is a very pleasant machine to work with. However, now that I have a very powerful laptop that I use as a desktop and portable device, it has become redundant.</p>
+<h1 id="old-laptops-as-raspberri-pis">Old Laptops as Raspberri Pi&rsquo;s</h1>
+<p>Having these two old laptops lying around, it occurred to me that these machines were basically Raspberri Pi&rsquo;s with a large form factor and a higher power usage. Why would I need to spend hundreds of euros on these smaller computers if I could just use these laptops as a starting point for my lab?</p>
+<p>Using laptops has the following advantages:</p>
+<ul>
+<li>No additional costs</li>
+<li>No building needed</li>
+<li>Easy to install Linux on them</li>
+<li>Built-in screen and keyboard for quick access when SSH does not work out</li>
+<li>Built-in batteries to handle short power disruptions (rare but possible)</li>
+<li>Can get going very quickly</li>
+</ul>
+<h1 id="choices-and-goals">Choices and Goals</h1>
+<h2 id="kubernetes">Kubernetes</h2>
+<p>The first goal is to get a Kubernetes cluster running. I will do bare metal kubeadm installs, and later I want to learn more about Talos. Fortunately I feel very comfortable installing Kubernetes with kubeadm. I did plenty of practice for my CKA, and I recently installed it on free Oracle VM&rsquo;s. I&rsquo;ve experimented a bit with K9S earlier, but I want to learn how to maintain on-prem Kubernetes.</p>
+<p>My goals is to learn to maintain production-grade clusters properly.</p>
+<h2 id="linux">Linux</h2>
+<p>Naturally I&rsquo;ll be using Linux as my base OS. After some consideration I chose to use Ubuntu Server 22. Some notes on that choice:</p>
+<ul>
+<li>I already have years of Ubuntu Server experience</li>
+<li>Good to keep building on what I have</li>
+<li>Working with managed Kubernetes on my day job requires me to keep Linux admin skills fresh</li>
+<li>Still the <a href="https://www.enterpriseappstoday.com/stats/linux-statistics.html">most popular Linux distro</a></li>
+<li>Google uses Ubuntu Server</li>
+<li>Well documented and plenty of questions on StackOverflow</li>
+</ul>
+<h2 id="infrastructure-as-code--gitops">Infrastructure as Code &amp; GitOps</h2>
+<p>Initially I&rsquo;ll configure the servers by hand, but I want to have the server configuration as code as Ansible playbooks eventually. However, I&rsquo;ll be using ArgoCD for all of my deployments on Kubernetes itself, so the server configuration is only a very small part of the setup. Just get Kubernetes running and do the rest with ArgoCD.</p>
+<p>Perhaps I will expand with larger servers that run multiple VM&rsquo;s. Then it will be very relevant to start provisioning these with Ansible.</p>
+<h2 id="networking">Networking</h2>
+<p>I want to learn more about networking and use static IP addresses for my servers. I need to figure out how my home network works exactly. Surprisingly, I&rsquo;ve never taken the effort to actually know how the devices on my network get their IP addresses and how they communicate, even though I&rsquo;ve learned plenty about it for my day job and do networking in an enterprise environment daily.</p>
+<p>For Kubernetes I&rsquo;ll use Flannel to start out with, but I want to learn more about Cilium, Istio and other service mesh implementations.</p>
+<p>Another goal is to host my own DNS server for internal name resolution, probably CoreDNS.</p>
+<h2 id="deployment">Deployment</h2>
+<p>I want to host my own container registry (Harbor) and use Tekton pipelines to for CI/CD, and I&rsquo;m playing with the thought to host my own GitLab instance as well.</p>
+<h1 id="lets-go">Let&rsquo;s Go!</h1>
+<p>Another realization was that I don&rsquo;t need to have everything figured out before I begin. The beauty of cluster computing is that you can add to it as you go. I can start with a small cluster of two nodes and build it out as my needs grow. I don&rsquo;t expect to need more than a few GB of RAM in the foreseeable future, so these two laptops will be plenty to get going.</p>
+<p><img loading="lazy" src="/cluster-laptops.png" type="" alt=""  /></p>
+<h2 id="links">Links:</h2>
+<p>2023041213</p>
+<p>[[homelab]]</p>
+<p>[[homelab-network]]</p>
+<p>[[linux]]</p>
+<p>[[homelab-ubuntu-server]]</p>
+<p>[[kubernetes]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Structs In Go - Similar To Classes In Python?</title>
+      <link>https://mischavandenburg.com/zet/go-struct-python-class/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-struct-python-class/</guid>
+      <description>The Tour of Go is very clear:
+Go does not have classes.
+One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</description>
+      <content:encoded><![CDATA[<p>The Tour of Go is very clear:</p>
+<blockquote>
+<p>Go does not have classes.</p>
+</blockquote>
+<p>One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</p>
+<p>Even though Go does not have classes, my understanding of Python classes did help me to understand structs much more quickly.</p>
+<h1 id="go-structs">Go Structs</h1>
+<p>A struct is a collection of fields, and they are accessed using a dot.</p>
+<p>Each data field in a struct has its own type, either user defined or built in.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">name</span>    <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">address</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">person1</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span><span class="s">&#34;Mischa&#34;</span><span class="p">,</span> <span class="s">&#34;Amsterdam&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">person1</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">person1</span><span class="p">.</span><span class="nx">address</span><span class="p">)</span>
+</span></span></code></pre></div><p>When creating a struct, you can use the <code>Name:</code> syntax to set the values. Otherwise, you need to populate the fields in order.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Computer</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">os</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ram</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">macBook</span> <span class="o">:=</span> <span class="nx">Computer</span><span class="p">{</span><span class="nx">os</span><span class="p">:</span> <span class="s">&#34;MacOs&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">macBook</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">thinkPad</span> <span class="o">:=</span> <span class="nx">Computer</span><span class="p">{</span><span class="s">&#34;Arch Linux&#34;</span><span class="p">,</span> <span class="mi">16</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">thinkPad</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>This produces the output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{</span><span class="nx">MacOs</span> <span class="mi">0</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="nx">Arch</span> <span class="nx">Linux</span> <span class="mi">16</span><span class="p">}</span>
+</span></span></code></pre></div><p>In the first line, the ram is 0 because I only set the <code>os</code> field, and unset fields get a <code>0</code> value by default.</p>
+<h1 id="struct-methods">Struct Methods</h1>
+<p>Classes in Python can contain methods. What about Go structs?</p>
+<p>Structs can have methods, but they are not contained in the struct definition, like you would see in Python. Methods are defined on types, and the type does not need to be a struct. Therefore, methods are defined after you create the struct.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Computer</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">os</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ram</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="nx">Computer</span><span class="p">)</span> <span class="nf">doubleRam</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;If you would double your ram, you would have %v GB of ram.&#34;</span><span class="p">,</span> <span class="nx">c</span><span class="p">.</span><span class="nx">ram</span>  <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="nx">macBook</span> <span class="o">:=</span> <span class="nx">Computer</span><span class="p">{</span><span class="s">&#34;MacOs&#34;</span><span class="p">,</span> <span class="mi">32</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">macBook</span><span class="p">.</span><span class="nf">doubleRam</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Output:</p>
+<p><code>If you would double your ram, you would have 64 GB of ram.</code></p>
+<p>In this example, <code>doubleRam()</code> is my method of the <code>Computer</code> type. Methods take a special receiver argument, written between the <code>func</code> keyword and the method name. The <code>doubleRam</code> method has a receiver of type <code>Computer</code>, named <code>c</code>.</p>
+<h1 id="struct-literal">Struct Literal</h1>
+<p>A struct literal is a struct which has its contents defined in the source code itself. The opposite would be to generate the contents of the struct through computation or reading memory during the execution of the program.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In conclusion, here are the similarities and differences that stood out to me in this morning&rsquo;s study of Go structs.</p>
+<h2 id="similarities">Similarities</h2>
+<ul>
+<li>Both can have fields to hold values of different types</li>
+<li>Both can have methods</li>
+</ul>
+<h2 id="differences">Differences</h2>
+<ul>
+<li>Go structs are used for data structures, classes in Python are used for OOP</li>
+<li>Go struct fields have static types</li>
+<li>Methods are defined separately from the struct definition</li>
+</ul>
+<h1 id="links">Links:</h1>
+<p>202304100704</p>
+<p>[[go]]</p>
+<p>[[data-types]]</p>
+<p><a href="https://go.dev/tour/moretypes/2">https://go.dev/tour/moretypes/2</a></p>
+<p><a href="https://go.dev/tour/methods/1">https://go.dev/tour/methods/1</a></p>
+<p><a href="https://articles.wesionary.team/map-vs-struct-in-golang-when-to-use-b0b66446627a">https://articles.wesionary.team/map-vs-struct-in-golang-when-to-use-b0b66446627a</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Go - Skillstak Beginner Boost Week 17 and 18 Notes</title>
+      <link>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</guid>
+      <description>Beginner Boost Week 17 and 18 Notes Link to video
+Don&amp;rsquo;t forget to set GOBIN=~/.local/bin, GOPRIVATE, CGO_ENABLED=0 Go Testing - Example Tests func ExampleFoo() { foo() // Output: // Foo } The ExampleFoo indicates the test here. It needs to match the name exactly after Example. But it is capitalized.
+It runs that function and will compare the output to what is specified.
+It says &amp;ldquo;see if the program generates this output in std out&amp;rdquo;.</description>
+      <content:encoded><![CDATA[<h1 id="beginner-boost-week-17-and-18-notes">Beginner Boost Week 17 and 18 Notes</h1>
+<p><a href="https://www.youtube.com/watch?v=WMH5ENF_Xvo">Link to video</a></p>
+<ul>
+<li>Don&rsquo;t forget to set <code>GOBIN=~/.local/bin</code>, <code>GOPRIVATE</code>, <code>CGO_ENABLED=0</code></li>
+</ul>
+<h1 id="go-testing---example-tests">Go Testing - Example Tests</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">ExampleFoo</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">foo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// Foo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The ExampleFoo indicates the test here. It needs to match the name exactly after Example. But it is capitalized.</p>
+<p>It runs that function and will compare the output to what is specified.</p>
+<p>It says &ldquo;see if the program generates this output in std out&rdquo;.</p>
+<p>These are called example tests.</p>
+<p>To export a function the first letter should be a capital. Everything that has a capital as first letter is exported.</p>
+<p>When you are writing example tests you are providing readable automatic documentation to your end users.</p>
+<p>You can use <code>// Unordered Output</code> if you don&rsquo;t care about the order.</p>
+<h2 id="printf">Printf</h2>
+<p>use <code>printf %q</code> to see all of the characters. <code>%q</code> escapes all of the invisible characters. So you can see \r or \n for example. This is the only way to check for empty values in Example tests.</p>
+<h1 id="how-to-learn-go">How to Learn Go</h1>
+<p>Don&rsquo;t go to the books. Stay with the spec, write your own projects, and find one or two or 10 Go projects and study the crap out of them.</p>
+<p>Study the code bases. Kind is a good codebase.</p>
+<p>Read the Go codebase!</p>
+<p><a href="https://youtu.be/9hEnzD-bNy4?t=8467">https://youtu.be/9hEnzD-bNy4?t=8467</a></p>
+<p>Read other people&rsquo;s code and see if your code looks like that.</p>
+<p>&ldquo;Good artists copy, great artists steal.&rdquo; - quote accredited to Steve Jobs but it has its origin in T.S. Eliot and even further back.</p>
+<p><strong>Start with the tests! Read the tests first.</strong></p>
+<h1 id="searching-go-documentation">Searching Go Documentation</h1>
+<p>Always search for golang when searching on the net. Preferably text based searching.</p>
+<p>Then you use <code>go doc os.Stderr</code> - for example.</p>
+<h1 id="variable-names">Variable Names</h1>
+<p>Long variable names are frowned upon in the Go community. They should be as short as they need to be.</p>
+<p>If using in a tight scope, a single letter is fine. In a block two or three characters is more than enough. It distracts from reading the code if they have very long names.</p>
+<p>The more remote the variable is, the more descriptive it should be.</p>
+<h1 id="the-art-of-coding">The Art of Coding</h1>
+<ul>
+<li>breaking everything down into small 1 task functions</li>
+<li>don&rsquo;t repeat yourself</li>
+</ul>
+<p>See <a href="#stuttering">stuttering</a></p>
+<h1 id="top-level-libraries">Top Level Libraries</h1>
+<p>It&rsquo;s not common to make a single utility at a top-level GitHub repo.</p>
+<p>It&rsquo;s very likely that you are going to want to reuse code somewhere.</p>
+<p>You should start thinking of things as composition. &ldquo;How is this code going to be used by other people&rdquo;.</p>
+<p>Go is different than bash: you will use this code elsewhere.</p>
+<ul>
+<li>What is the function of what I&rsquo;m creating?</li>
+<li>Create these as small composable blocks</li>
+<li>So you can use them later</li>
+</ul>
+<h1 id="example-based-testing">Example Based Testing</h1>
+<p><a href="https://pkg.go.dev/testing">https://pkg.go.dev/testing</a></p>
+<blockquote>
+<p>The package also runs and verifies example code. Example functions may include a
+concluding line comment that begins with &ldquo;Output:&rdquo; and is compared with the
+standard output of the function when the tests are run. (The comparison ignores
+leading and trailing space.) These are examples of an example:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">ExampleHello</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Output: hello
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">ExampleSalutations</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;hello, and&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;goodbye&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// hello, and
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// goodbye
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><h1 id="searching-information">Searching Information</h1>
+<p>Being able to look up information quickly and taking notes about them is just as important as the coding itself.</p>
+<h1 id="packages-or-libraries">Packages or Libraries</h1>
+<p>You can either have a command, which will be a main package, or you can have an importable library named <!-- raw HTML omitted -->.go. Should have any other name besides main.</p>
+<p>You rarely want your top level of your module to be a package.</p>
+<p>Convention: cmd directory.</p>
+<p>This is specifically for separate commands.</p>
+<h2 id="stuttering">Stuttering</h2>
+<p><code>greet.Greet()</code> is called stuttering in go. Don&rsquo;t do this.</p>
+<h1 id="modules">Modules</h1>
+<p>A module can be defined as &ldquo;a GitHub repo with a go.mod&rdquo; in it.</p>
+<p>&ldquo;A collection of Go packages stored in a file tree with a go.mod file at its root&rdquo;</p>
+<p>The go.mod contains the import path of the module.</p>
+<h2 id="what-module-does-greet-belong-to">What Module Does Greet Belong To?</h2>
+<p>In the case of our greet command, it belongs to the greet module located at:</p>
+<p><code>github.com/mischavandenburg/go/rwxrob/boost2022/challenges/greet</code></p>
+<p>Greet has a main package which is part of the greet module.</p>
+<p>Now we will add another command with another main package to this module.</p>
+<h1 id="cli">CLI</h1>
+<p>Stuff that has to do with interacting with the user on the command line should never be in the package library. The package library should be written to be solid no matter what.</p>
+<p>The &ldquo;name&rdquo; for our greet program should be able to come to anywhere.</p>
+<h1 id="avoid-interactive-input">Avoid Interactive Input</h1>
+<p>You generally want to avoid interactive input. Prefer arguments, env variables or file inputs.</p>
+<p>If you call your program from another script it will stall if it waits for interactive input.</p>
+<p>A good example is forgetting &ldquo;-y&rdquo; when running apt-get.</p>
+<p>An interactive story game is a different use case than a CLI tool.</p>
+<p>UNIX filters are specifically designed to read input and generate an output based on the input. Here it is expected behaviour to stall if no input is given.</p>
+<h1 id="runes">Runes</h1>
+<p>A rune is a single Unicode point.</p>
+<p>The same people who created Go, created the Unicode standard.</p>
+<p>Go has the best Unicode support.</p>
+<h1 id="writing-documentation">Writing Documentation</h1>
+<p>Convention is to always start with the name of the thing you are documenting. When documenting a function, always start with the function name. For example <code>// ReadLine reads from standard input</code></p>
+<p>Use <code>go doc --all</code> to see a print of all the documentation in your package.</p>
+<p>The same goes for packages. Always start with &ldquo;Package internal does bla bla&rdquo;</p>
+<h1 id="links">Links</h1>
+<p>202303261403</p>
+<p><a href="https://www.youtube.com/watch?v=WMH5ENF_Xvo">https://www.youtube.com/watch?v=WMH5ENF_Xvo</a></p>
+<p>[[go]]</p>
+<p>[[coding]]</p>
+<p>[[rwxrob]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Notes: Advanced Bicep</title>
+      <link>https://mischavandenburg.com/zet/advanced-bicep/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/advanced-bicep/</guid>
+      <description>Deploying to subscriptions and management groups To tell Bicep which scope to deploy to, use the targetScope keyword, for example, managementGroup.
+You&amp;rsquo;re not specifying which management group exactly, this is done during deployment of the template file.
+targetScope can be set to resourceGroup, subscription, managementGroup or tenant.
+If it is not set, Bicep assumes resourceGroup.
+create a resource group targetScope = &amp;#39;subscription&amp;#39; resource resourceGroup &amp;#39;Microsoft.Resources/resourceGroups@2021-01-01&amp;#39; = { name: &amp;#39;example-resource-group&amp;#39; location: &amp;#39;westus&amp;#39; } To deploy you use az deployment group create for resource groups, but you use az deployment sub create for subscriptions, mg for management group and tenant for tenant.</description>
+      <content:encoded><![CDATA[<h1 id="deploying-to-subscriptions-and-management-groups">Deploying to subscriptions and management groups</h1>
+<p>To tell Bicep which scope to deploy to, use the <code>targetScope</code> keyword, for example, managementGroup.</p>
+<p>You&rsquo;re not specifying which management group exactly, this is done during deployment of the template file.</p>
+<p>targetScope can be set to resourceGroup, subscription, managementGroup or tenant.</p>
+<p>If it is not set, Bicep assumes resourceGroup.</p>
+<h2 id="create-a-resource-group">create a resource group</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl">targetScope<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="si">&#39;subscription&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="w"> </span><span class="s">&#39;Microsoft.Resources/resourceGroups@2021-01-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;example-resource-group&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;westus&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>To deploy you use <code>az deployment group create</code> for resource groups, but you use <code>az deployment sub create</code> for subscriptions, <code>mg</code> for management group and <code>tenant</code> for tenant.</p>
+<h2 id="deployment-scripts">deployment scripts</h2>
+<blockquote>
+<p>deploymentScripts resources are either PowerShell or Bash scripts that run in a Docker container as part of your template deployment. The default container images have either the Azure CLI or Azure PowerShell available. These scripts run during the processing of the ARM template, so you can add custom behavior to the deployment process.</p>
+</blockquote>
+<p>Here is an example of a deployment script with some comments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>myFirstDeploymentScript<span class="w"> </span><span class="s">&#39;Microsoft.Resources/deploymentScripts@2020-10-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;myFirstDeploymentScript&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// can be AzurePowershell or Azure CLI</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;AzurePowerShell&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// the script will be run in a container. We need to provide a Managed Identity to give the script the required permissions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">identity</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">type</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;UserAssigned&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">userAssignedIdentities</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#39;/subscriptions/01234567-89AB-CDEF-0123-456789ABCDEF/resourcegroups/deploymenttest/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myscriptingid&#39;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">azPowerShellVersion</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;3.0&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// in Bicep we use &#39;&#39;&#39; to indicate a multi line string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">scriptContent</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="err">&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="err">$</span><span class="kd">output</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;Hello Learner!&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>Write-Output<span class="w"> </span><span class="err">$</span><span class="kd">output</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="c1">// the $DeploymentScriptOutputs variable is created to return output back to the Bicep template</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="c1">// It needs to be a hash table</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="err">$</span>DeploymentScriptOutputs<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">@{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="err">$</span>DeploymentScriptOutputs<span class="p">[</span><span class="si">&#39;text&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">$</span><span class="kd">output</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#39;&#39;</span><span class="err">&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">retentionInterval</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;P1D&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">output</span><span class="w"> </span>scriptResult<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span>myFirstDeploymentScript<span class="p">.</span>properties<span class="p">.</span>outputs<span class="p">.</span>text<span class="w">
+</span></span></span></code></pre></div><blockquote>
+<p>You can also write deployment scripts in Bash. To create outputs from a Bash script, you need to create a JSON file in a location specified by the AZ_SCRIPTS_OUTPUT_PATH environment variable.</p>
+</blockquote>
+<p>To include a script file, use the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">azPowerShellVersion</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;3.0&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scriptContent</span><span class="p">:</span><span class="w"> </span><span class="nf">loadTextContent</span><span class="p">(</span><span class="si">&#39;myscript.ps1&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">retentionInterval</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;P1D&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="deploying-a-managed-identity-and-assigning-a-role">deploying a managed identity and assigning a role</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span>userAssignedIdentityName<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="si">&#39;configDeployer&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>roleAssignmentName<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">guid</span><span class="p">(</span><span class="nf">resourceGroup</span><span class="p">().</span>id<span class="err">,</span><span class="w"> </span><span class="si">&#39;contributor&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>contributorRoleDefinitionId<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">resourceId</span><span class="p">(</span><span class="s">&#39;Microsoft.Authorization/roleDefinitions&#39;</span><span class="err">,</span><span class="w"> </span><span class="s">&#39;b24988ac-6180-42a0-ab88-20f7382dd24c&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>userAssignedIdentity<span class="w"> </span><span class="s">&#39;Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>userAssignedIdentityName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>roleAssignment<span class="w"> </span><span class="s">&#39;Microsoft.Authorization/roleAssignments@2020-04-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>roleAssignmentName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">roleDefinitionId</span><span class="p">:</span><span class="w"> </span>contributorRoleDefinitionId<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">principalId</span><span class="p">:</span><span class="w"> </span>userAssignedIdentity<span class="p">.</span>properties<span class="p">.</span>principalId<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">principalType</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;ServicePrincipal&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="template-specs">template specs</h2>
+<p>When you have a lot of reusable templates, you can use Template Specs to enable your entire organization to deploy them.</p>
+<p>You can convert a Bicep file to a template spec. The template spec is then deployed to Azure as a resource, and anybody with the right access and do deployments with the template spec from the portal or Azure CLI. Azure will handle the version control.</p>
+<p>You will lose any comments and whitespace.</p>
+<p>Bicep modules are intended to be combined into larger deployments. Template specs are for sets of resources with a certain configuration.</p>
+<p>Template specs can be used as a Bicep module. You use the following code to import it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">module</span><span class="w"> </span>storageAccountTemplateSpec<span class="w"> </span><span class="py">&#39;ts</span><span class="p">:</span>f0750bbe-ea75-4ae5-b24d-a92ca601da2c<span class="o">/</span>sharedTemplates<span class="o">/</span><span class="py">StorageWithoutSAS</span><span class="p">:</span>1<span class="p">.</span>0<span class="err">&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;storageAccountTemplateSpec&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Notes: Intermediate Bicep</title>
+      <link>https://mischavandenburg.com/zet/intermediate-bicep/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/intermediate-bicep/</guid>
+      <description>Today I finished the Intermediate Bicep module. Here are my notes.
+Child and Extension You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&amp;rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.</description>
+      <content:encoded><![CDATA[<p>Today I finished the Intermediate Bicep module. Here are my notes.</p>
+<h1 id="child-and-extension">Child and Extension</h1>
+<blockquote>
+<p>You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.</p>
+</blockquote>
+<p>Some resources are only deployed in context of their parent. For example:</p>
+<p>Virtual network subnets 	Microsoft.Network/virtualNetworks/subnets
+App Service configuration 	Microsoft.Web/sites/config
+SQL databases 	Microsoft.Sql/servers/databases
+Virtual machine extensions 	Microsoft.Compute/virtualMachines/extensions
+Storage blob containers 	Microsoft.Storage/storageAccounts/blobServices/containers
+Azure Cosmos DB containers</p>
+<p>It does not make sense for a container to exist without a storage account.</p>
+<h2 id="difference-between-child-and-extension">Difference between child and extension</h2>
+<p>In summary, you define extensions with the <code>scope</code> keyword, and child resources are defined by nesting them or by using the <code>parent</code> keyword.</p>
+<p>An extension resource is a resource that modifies another resource. For example, assigning a role to a resource.</p>
+<p>A child resource is a resource that exists only within the context of another resource, such as a subnet existing only within a vnet.</p>
+<h2 id="nested-resource">Nested resource</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>vm<span class="w"> </span><span class="s">&#39;Microsoft.Compute/virtualMachines@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>vmName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">resource</span><span class="w"> </span>installCustomScriptExtension<span class="w"> </span><span class="si">&#39;extensions&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;InstallCustomScript&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Here the extension resource is within the vm resource. The fully qualified domain name is <code>Microsoft.Compute/virtualMachines/extensions</code>, but it is not necessary because it inherits it from the parent. Therefore we only need to specify &rsquo;extensions&rsquo; here.</p>
+<p>No API version is specified either, this is also inherited.</p>
+<blockquote>
+<p>You can refer to a nested resource by using the :: operator. For example, you could create an output that will return the full resource ID of the extension:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">output</span><span class="w"> </span>childResourceId<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="py">vm</span><span class="p">::</span>installCustomScriptExtension<span class="p">.</span>id<span class="w">
+</span></span></span></code></pre></div><h2 id="parent-property">Parent property</h2>
+<p>This is the second way to declare a child resource.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>vm<span class="w"> </span><span class="s">&#39;Microsoft.Compute/virtualMachines@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>vmName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>installCustomScriptExtension<span class="w"> </span><span class="s">&#39;Microsoft.Compute/virtualMachines/extensions@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span>vm<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;InstallCustomScript&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="dependson">dependsOn</h2>
+<p>use dependsOn to indicate a dependency.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="py">dependsOn</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>vm<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><h2 id="extension-resources">Extension resources</h2>
+<p>Extension resources are always attached to other Azure resources. They extend them with extra functionality. Some examples are role assignments, locks, and policy assignments.</p>
+<p>It doesn&rsquo;t make sense to deploy a lock by itself. It always has to be deployed to another resource, because it prevents deletion or modification of a resource.</p>
+<p>Resources are defined almost the same way as normal resources, but you add the <code>scope</code> property to tell Bicep that it is attached to another resource in the template.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>cosmosDBAccount<span class="w"> </span><span class="s">&#39;Microsoft.DocumentDB/databaseAccounts@2020-04-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>cosmosDBAccountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>lockResource<span class="w"> </span><span class="s">&#39;Microsoft.Authorization/locks@2016-09-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scope</span><span class="p">:</span><span class="w"> </span>cosmosDBAccount<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;DontDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">level</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;CanNotDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">notes</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Prevents deletion of the toy data Cosmos DB account.&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Extensions have slightly different resource ID&rsquo;s. They consist of the parent resource ID, the separator <code>/providers/</code>, and the extension resource ID.</p>
+<blockquote>
+<p>If you see a resource ID that starts with a normal resource ID and then adds /providers/ and another resource type and name, it means that you&rsquo;re looking at an extension resource ID.</p>
+</blockquote>
+<h3 id="existing-resources">Existing resources</h3>
+<p>Bicep files often need to refer to resources that have been already created elswewhere. They might have been created in the portal or by another Bicep file.</p>
+<p>Here you use the <code>existing</code> keyword in Bicep. You are defining a resource that already exists, and therefore you are telling Bicep that it shouldn&rsquo;t try to deploy it. Think of it as a placeholder resource.</p>
+<p>You can do the same for nested or child resources.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccount<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2019-06-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;toydesigndocs&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="existing-resources-outside-of-the-resource-group-and-subscription">Existing resources outside of the resource group and subscription</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>vnet<span class="w"> </span><span class="s">&#39;Microsoft.Network/virtualNetworks@2020-11-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scope</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">(</span><span class="s">&#39;f0750bbe-ea75-4ae5-b24d-a92ca601da2c&#39;</span><span class="err">,</span><span class="w"> </span><span class="s">&#39;networking-rg&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;toy-design-vnet&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>You can refer to these as long as they are within your Azure AD tenant.</p>
+<h2 id="add-child-and-extension-resources-to-an-existing-resource">Add child and extension resources to an existing resource</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>server<span class="w"> </span><span class="s">&#39;Microsoft.Sql/servers@2020-11-01-preview&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>serverName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>database<span class="w"> </span><span class="s">&#39;Microsoft.Sql/servers/databases@2020-11-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">parent</span><span class="p">:</span><span class="w"> </span>server<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>databaseName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">tier</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Use the <code>existing</code> keyword to refer to the resource, and then you add the child by specifying the <code>parent</code> property.</p>
+<p>Finally, to deploy an extension resource to an existing resource, use the <code>scope</code> keyword:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccount<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2019-06-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;toydesigndocs&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>lockResource<span class="w"> </span><span class="s">&#39;Microsoft.Authorization/locks@2016-09-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scope</span><span class="p">:</span><span class="w"> </span>storageAccount<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;DontDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">level</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;CanNotDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">notes</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Prevents deletion of the toy design documents storage account.&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="referring-to-an-existing-resources-properties">Referring to an existing resource&rsquo;s properties</h2>
+<p>Define the resource and you can refer to its properties if the prperty isn&rsquo;t secure.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>applicationInsights<span class="w"> </span><span class="s">&#39;Microsoft.Insights/components@2018-05-01-preview&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>applicationInsightsName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>functionApp<span class="w"> </span><span class="s">&#39;Microsoft.Web/sites@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>functionAppName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;functionapp&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">siteConfig</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">appSettings</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;APPINSIGHTS_INSTRUMENTATIONKEY&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="py">value</span><span class="p">:</span><span class="w"> </span>applicationInsights<span class="p">.</span>properties<span class="p">.</span>InstrumentationKey<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>When you need to access secure data, use the listKeys() function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccount<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2019-06-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>storageAccountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>functionApp<span class="w"> </span><span class="s">&#39;Microsoft.Web/sites@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>functionAppName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;functionapp&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">siteConfig</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">appSettings</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageAccountKey&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="py">value</span><span class="p">:</span><span class="w"> </span>storageAccount<span class="p">.</span><span class="nf">listKeys</span><span class="p">().</span>keys<span class="p">[</span>0<span class="p">].</span>value<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The VScode extension will show hints to help you understand the data this function returns.</p>
+<p>You need to have sufficient permissions to use the listKeys function.</p>
+<h2 id="child-and-extension-1">Child and extension</h2>
+<p>In this example we are attaching an extension to a child resource.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccount<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2019-06-01&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>storageAccountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">resource</span><span class="w"> </span>blobService<span class="w"> </span><span class="si">&#39;blobServices&#39;</span><span class="w"> </span>existing<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;default&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/* Note: Here we are attaching to blobServices which itself is a child resource. So we are attaching an extension to a child resource. */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>storageAccountBlobDiagnostics<span class="w"> </span><span class="s">&#39;Microsoft.Insights/diagnosticSettings@2017-05-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">scope</span><span class="p">:</span><span class="w"> </span><span class="py">storageAccount</span><span class="p">::</span>blobService<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>storageAccountBlobDiagnosticSettingsName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">workspaceId</span><span class="p">:</span><span class="w"> </span>logAnalyticsWorkspace<span class="p">.</span>id<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">logs</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">category</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageRead&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">enabled</span><span class="p">:</span><span class="w"> </span>true<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">category</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageWrite&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">enabled</span><span class="p">:</span><span class="w"> </span>true<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">category</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageDelete&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">enabled</span><span class="p">:</span><span class="w"> </span>true<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h1 id="structuring-bicep-for-collaboration">Structuring Bicep for Collaboration</h1>
+<h2 id="configuration-maps">configuration maps</h2>
+<p>Using many different parameters can be confusing to the user of the template you&rsquo;re writing. One way of solving this is by creating a config map:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">allowed</span><span class="p">([</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;Production&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;Test&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">])</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>environmentType<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="si">&#39;Test&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>environmentConfigurationMap<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">Production</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">appServicePlan</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;P2V3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span>3<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">storageAccount</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;ZRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">Test</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">appServicePlan</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;S2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span>1<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">storageAccount</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;LRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>appServicePlan<span class="w"> </span><span class="s">&#39;Microsoft.Web/serverfarms@2020-06-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServicePlanName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span>environmentConfigurationMap<span class="p">[</span>environmentType<span class="p">].</span>appServicePlan<span class="p">.</span>sku<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Here we are taking a parameter for the environment, but create an object that contains the settings for that particular environment. Note that we are accessing it like we&rsquo;d access a dictionary in python: <code>sku: environmentConfigurationMap[environmentType].appServicePlan.sku</code></p>
+<h2 id="naming">Naming</h2>
+<blockquote>
+<p>In Bicep, you ordinarily use camelCase capitalization style for the names of parameters, variables, and resource symbolic names.</p>
+</blockquote>
+<p>Resource names cannot be renamed after they&rsquo;re deployed in Azure.</p>
+<h2 id="comments">Comments</h2>
+<p>use // for single line comments, and /* */ for multi-line comments.</p>
+<p>When adding comments to JSON files, you might have to save the file as jsonc to let the code editor know that comments are allowed.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Notes: Fundamentals of Bicep</title>
+      <link>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</guid>
+      <description>I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.
+Why Bicep? Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ll be working with Bicep during my next contract, so I&rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.</p>
+<h1 id="why-bicep">Why Bicep?</h1>
+<p>Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.</p>
+<p>Bicep templates are transpiled into JSON objects, which are sent to the Azure API to create resources with the Azure Resource Manager.</p>
+<h1 id="fundamentals-of-bicep-notes">Fundamentals of Bicep Notes</h1>
+<blockquote>
+<p>A <em>parameter</em> lets you bring in values from outside the template file. For example, if someone is manually deploying the template by using the Azure CLI or Azure PowerShell, they&rsquo;ll be asked to provide values for each parameter. They can also create a <em>parameter file</em>, which lists all of the parameters and values they want to use for the deployment. If the template is deployed from an automated process like a deployment pipeline, the pipeline can provide the parameter values.</p>
+</blockquote>
+<blockquote>
+<p>A <em>variable</em> is defined and set within the template. Variables let you store important information in one place and refer to it throughout the template without having to copy and paste it.</p>
+</blockquote>
+<h2 id="generating-unique-names">generating unique names</h2>
+<blockquote>
+<p>Bicep has another function called <code>uniqueString()</code> that comes in handy when you&rsquo;re creating resource names. When you use this function, you need to provide a <em>seed value</em>, which should be different across different deployments but consistent across all deployments of the same resources.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>storageAccountName<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">uniqueString</span><span class="p">(</span><span class="nf">resourceGroup</span><span class="p">().</span>id<span class="p">)</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li>Every time you deploy the same resources, they&rsquo;ll go into the same resource group. The <code>uniqueString()</code> function will return the same value every time.</li>
+<li>If you deploy into two different resource groups in the Azure subscription, the <code>resourceGroup().id</code> value will be different, because the resource group names will be different. The <code>uniqueString()</code> function will give different values for each set of resources.</li>
+<li>If you deploy into two different Azure subscriptions, <em>even if you use the same resource group name</em>, the <code>resourceGroup().id</code> value will be different because the Azure subscription ID will be different. The <code>uniqueString()</code> function will again give different values for each set of resources.</li>
+</ul>
+<h3 id="combining-strings">combining strings</h3>
+<p>Can use string interpolation to generate a unique string with a recognizable hardcoded part:</p>
+<p><code>param storageAccountName string = 'toylaunch${uniqueString(resourceGroup().id)}'</code></p>
+<p>This can also be handy for generating correct names. For example, storage accounts may not begin with a number.</p>
+<h2 id="parameter-decorators">parameter decorators</h2>
+<h3 id="allowed-parameters">allowed parameters</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">allowed</span><span class="p">([</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;nonprod&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;prod&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">])</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>environmentType<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span></code></pre></div><p>The template cannot be deployed unless the nonprod or prod values are provided.</p>
+<p>@allowed is a <em>parameter decorator</em>: it gives Bicep information on what the parameter&rsquo;s value needs to be.</p>
+<p>You can also specify the allowed length of the parameter by using the following decorators:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">minLength</span><span class="p">(</span>5<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">maxLength</span><span class="p">(</span>24<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>storageAccountName<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span></code></pre></div><p>You can apply multiple decorators to a parameter by putting each on a separate line.</p>
+<p>These min and maxLength decorators can also be used to limit the length of an array.</p>
+<p>To limit int values:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">minValue</span><span class="p">(</span>1<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">maxValue</span><span class="p">(</span>10<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>appServicePlanInstanceCount<span class="w"> </span><span class="nf">int</span><span class="w">
+</span></span></span></code></pre></div><p>Finally, you can add descriptions to your parameters with the @description decorator:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">description</span><span class="p">(</span><span class="s">&#39;The locations into which this Cosmos DB account should be configured. This parameter needs to be a list of objects, each of which has a locationName property.&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>cosmosDBAccountLocations<span class="w"> </span><span class="nf">array</span><span class="w">
+</span></span></span></code></pre></div><h2 id="if-statements">if statements</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span>storageAccountSkuName<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span>environmentType<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="si">&#39;prod&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="si">&#39;Standard_GRS&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard_LRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>appServicePlanSkuName<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span>environmentType<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="si">&#39;prod&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="si">&#39;P2V3&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="si">&#39;F1&#39;</span><span class="w">
+</span></span></span></code></pre></div><p>Let&rsquo;s unpack this:</p>
+<p>? is a <em>ternary operator</em> and evaluates an if/then statement. The value after ? is used if the expression is true. If it&rsquo;s false, the value after : is used.</p>
+<p>So here, if the environmentType is prod, the SKU is set to Standard_GRS</p>
+<h2 id="objects-in-bicep">Objects in Bicep</h2>
+<p>You can use objects within resource definitions, within variables, or within expressions in your Bicep file.</p>
+<p>Objects are the same as dictionaries in python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>appServicePlanSku<span class="w"> </span><span class="kt">object</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;F1&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">tier</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Free&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span>1<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>These are called &ldquo;properties&rdquo; of type string and int. Note that they are line separated, not comma separated like in python.</p>
+<p>When referencing the parameter in the template, you can use dot notation to access the object properties:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>appServicePlan<span class="w"> </span><span class="s">&#39;Microsoft.Web/serverfarms@2022-03-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServicePlanName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServicePlanSku<span class="p">.</span>name<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">tier</span><span class="p">:</span><span class="w"> </span>appServicePlanSku<span class="p">.</span>tier<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">capacity</span><span class="p">:</span><span class="w"> </span>appServicePlanSku<span class="p">.</span>capacity<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><blockquote>
+<p>[!important]
+Keep in mind that you don&rsquo;t specify the type of each property within an object. However, when you use a property&rsquo;s value, its type must match what&rsquo;s expected. In the previous example, both the name and the tier of the App Service plan SKU must be strings.</p>
+</blockquote>
+<h3 id="example-tags">Example: tags</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>resourceTags<span class="w"> </span><span class="kt">object</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">EnvironmentName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Test&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">CostCenter</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;1000100&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">Team</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Human Resources&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>appServicePlan<span class="w"> </span><span class="s">&#39;Microsoft.Web/serverfarms@2022-03-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServicePlanName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">tags</span><span class="p">:</span><span class="w"> </span>resourceTags<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;S1&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>appServiceApp<span class="w"> </span><span class="s">&#39;Microsoft.Web/sites@&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>appServiceAppName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">tags</span><span class="p">:</span><span class="w"> </span>resourceTags<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;app&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">serverFarmId</span><span class="p">:</span><span class="w"> </span>appServicePlan<span class="p">.</span>id<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Here we take the tags for all the resources of the template as parameters. But we easily reuse all the tags for each resource by referencing the entire object.</p>
+<h2 id="arrays">Arrays</h2>
+<p>Arrays are not typed in Bicep. You cannot specify that it must contain strings.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>cosmosDBAccountLocations<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">locationName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;australiaeast&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">locationName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;southcentralus&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">locationName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;westeurope&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><p>This is an array of objects, which have an locationName property each.</p>
+<p>And you would access it by:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>account<span class="w"> </span><span class="s">&#39;Microsoft.DocumentDB/databaseAccounts@2022-08-15&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>accountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">locations</span><span class="p">:</span><span class="w"> </span>cosmosDBAccountLocations<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="specifying-parameter-values">Specifying parameter values</h2>
+<p>When deploying a template file there are three options:</p>
+<ol>
+<li>default values</li>
+<li>command line</li>
+<li>parameter file</li>
+</ol>
+<h3 id="parameter-file">Parameter file</h3>
+<p>This is a json file. To deploy a template with a paramter file, use:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">az deployment group create <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --template-file main.bicep <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --parameters main.parameters.json
+</span></span></code></pre></div><h3 id="priority">priority</h3>
+<p>The order of priority is this, from high to low priority:</p>
+<ol>
+<li>Parameters specified on the command line</li>
+<li>Parameter file</li>
+<li>Default values in template</li>
+</ol>
+<h2 id="securing-parameters">Securing parameters</h2>
+<p>It is best to use Managed Identities for Azure, but if you need to supply secret values to a deployment, use the @secure() decorator. These values aren&rsquo;t available in the deployment logs, and they won&rsquo;t be displayed on the screen when entered in the terminal.</p>
+<h2 id="loops">Loops</h2>
+<p>Defined with the for keyword. Usually you iterate over an array to create multiple instances of a resource.</p>
+<h3 id="copy-loops">Copy loops</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>storageAccountNames<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;saauditus&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;saauditeurope&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;saauditapac&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>storageAccountResources<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2021-09-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>storageAccountName<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="py">storageAccountNames</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>storageAccountName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageV2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard_LRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>Notice that bicep requires &ldquo;[&rdquo; before the for, and a closing bracket.</p>
+<h3 id="count-loops">count loops</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">resource</span><span class="w"> </span>storageAccountResources<span class="w"> </span><span class="s">&#39;Microsoft.Storage/storageAccounts@2021-09-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span>1<span class="err">,</span>4<span class="p">):</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;sa${i}&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">kind</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;StorageV2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Standard_LRS&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>The range function takes two arguments. The first one specifies the starting value, and the second tells Bicep the number of values you want.</p>
+<p>If you use range(3,4), you will get 3, 4, 5 and 6.</p>
+<h4 id="accessing-the-index">accessing the index</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>locations<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;westeurope&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;eastus2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;eastasia&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>sqlServers<span class="w"> </span><span class="s">&#39;Microsoft.Sql/servers@2021-11-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span><span class="p">(</span>location<span class="err">,</span><span class="w"> </span>i<span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="py">locations</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sqlserver-${i+1}&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">administratorLogin</span><span class="p">:</span><span class="w"> </span>administratorLogin<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">administratorLoginPassword</span><span class="p">:</span><span class="w"> </span>administratorLoginPassword<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>The first value is zero, so you can add 1 to i if you want your names to be sqlserver-1, sqlserver-2 etc.</p>
+<p>i is used here, but you can use any value you want.</p>
+<h3 id="filtering-with-loops">Filtering with loops</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>sqlServerDetails<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sqlserver-we&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;westeurope&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environmentName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Production&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sqlserver-eus2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;eastus2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environmentName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Development&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sqlserver-eas&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;eastasia&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environmentName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;Production&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>sqlServers<span class="w"> </span><span class="s">&#39;Microsoft.Sql/servers@2021-11-01-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>sqlServer<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="py">sqlServerDetails</span><span class="p">:</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span>sqlServer<span class="p">.</span>environmentName<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="si">&#39;Production&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>sqlServer<span class="p">.</span>name<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>sqlServer<span class="p">.</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">administratorLogin</span><span class="p">:</span><span class="w"> </span>administratorLogin<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">administratorLoginPassword</span><span class="p">:</span><span class="w"> </span>administratorLoginPassword<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">tags</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environment</span><span class="p">:</span><span class="w"> </span>sqlServer<span class="p">.</span>environmentName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>This will deploy -we and -eas, but not -eus2, because the environmentName does not match Production.</p>
+<h3 id="controlling-loop-execution">Controlling loop execution</h3>
+<p>By default all the iterations of a loop are executed simultaneously. However, you don&rsquo;t always want this to be happening.</p>
+<p>To control the amount you can use the @batchSize decorator.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">batchSize</span><span class="p">(</span>2<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>appServiceApp<span class="w"> </span><span class="s">&#39;Microsoft.Web/sites@2021-03-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span>1<span class="err">,</span>3<span class="p">):</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;app${i}&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span></code></pre></div><p>Here bicep will wait for the first two to be fully completed before it moves to the next.</p>
+<p>To loop sequentially, meaning one at a time in order, use @batchSize(1)</p>
+<h3 id="variable-loops">Variable loops</h3>
+<p>You can use loops to create arrays that you can use in the Bicep template.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span><span class="nf">items</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span>1<span class="err">,</span><span class="w"> </span>5<span class="p">):</span><span class="w"> </span><span class="si">&#39;item${i}&#39;</span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><p>This produces an array containing the values item1, item2 up to 5 stored in the items variable.</p>
+<p>Reminds me of list comprehensions in python.</p>
+<p>Here is an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>addressPrefix<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;10.10.0.0/16&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>subnets<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;frontend&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">ipAddressRange</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.10.0.0/24&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;backend&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">ipAddressRange</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.10.1.0/24&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">var</span><span class="w"> </span>subnetsProperty<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>subnet<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="py">subnets</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span>subnet<span class="p">.</span>name<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">addressPrefix</span><span class="p">:</span><span class="w"> </span>subnet<span class="p">.</span>ipAddressRange<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>virtualNetwork<span class="w"> </span><span class="s">&#39;Microsoft.Network/virtualNetworks@2021-08-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;teddybear&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">addressSpace</span><span class="p">:{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">addressPrefixes</span><span class="p">:[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>addressPrefix<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">subnets</span><span class="p">:</span><span class="w"> </span>subnetsProperty<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The content of the subnetsProperty array would look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;frontend&#39;</span><span class="err">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">addressPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.10.0.0/24&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;backend&#39;</span><span class="err">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">addressPrefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10.10.1.0/24&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><h3 id="output-loops">Output loops</h3>
+<p>To output the contents of the array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span><span class="nf">items</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item1&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item2&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item4&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="si">&#39;item5&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">output</span><span class="w"> </span>outputItems<span class="w"> </span><span class="nf">array</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span>0<span class="err">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">items</span><span class="p">)):</span><span class="w"> </span><span class="nf">items</span><span class="p">[</span>i<span class="p">]]</span><span class="w">
+</span></span></span></code></pre></div><h2 id="modules">Modules</h2>
+<p>You can create modules in Bicep so the code becomes reusable. You can share the modules with other teams and use them for different outcomes.</p>
+<blockquote>
+<p>Generally, it&rsquo;s not a good practice to create a module for every resource that you deploy. A good Bicep module typically defines multiple related resources. However, if you have a particularly complex resource with a lot of configuration, it might make sense to create a single module to encapsulate the complexity. This approach keeps your main templates simple and uncluttered.</p>
+</blockquote>
+<p>So for example it would make sense to write a networking module and a database module that handles these resources.</p>
+<p>Modules can be nested, but it can quickly become very complex.</p>
+<p>To call a module in a template:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">module</span><span class="w"> </span>appModule<span class="w"> </span><span class="s">&#39;modules/app.bicep&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;myApp&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">appServiceAppName</span><span class="p">:</span><span class="w"> </span>appServiceAppName<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">environmentType</span><span class="p">:</span><span class="w"> </span>environmentType<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>The modules are stored in the modules folder in your root directory.</p>
+<h3 id="parameters">Parameters</h3>
+<p>Modules will take parameters, but it is good practice to leave out default values for parameters in modules. In templates it&rsquo;s good practice to add defaults wherever you can. Therefore it is best to leave them out in modules because templates usually have their own default values. This can get confusing if you have similar default values in the templates and modules.</p>
+<h3 id="module-dependency">Module dependency</h3>
+<p>Bicep will figure out automatically if there is a dependency between modules. For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">description</span><span class="p">(</span><span class="s">&#39;Username for the virtual machine.&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>adminUsername<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">description</span><span class="p">(</span><span class="s">&#39;Password for the virtual machine.&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">minLength</span><span class="p">(</span>12<span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">secure</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>adminPassword<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">module</span><span class="w"> </span>virtualNetwork<span class="w"> </span><span class="s">&#39;modules/vnet.bicep&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;virtual-network&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">module</span><span class="w"> </span>virtualMachine<span class="w"> </span><span class="s">&#39;modules/vm.bicep&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;virtual-machine&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">adminUsername</span><span class="p">:</span><span class="w"> </span>adminUsername<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">adminPassword</span><span class="p">:</span><span class="w"> </span>adminPassword<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">subnetResourceId</span><span class="p">:</span><span class="w"> </span>virtualNetwork<span class="p">.</span>outputs<span class="p">.</span>subnetResourceId<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>Here the virtualMachine module takes the subnetResourceId from the virtualNetwork module outputs.</p>
+<p>Because it is defined like this, Bicep will wait with deploying the virtualMachine modul until the virtualNetwork module is finished, and pass in the required parameter.</p>
+<p>It is important to note that this means that it will wait until the virtualNetwork module is completely finished. If it takes a long time to deploy the previous module, all the subsequent modules will have to wait until it&rsquo;s finished.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Learning Go Day 1: Notes</title>
+      <link>https://mischavandenburg.com/zet/go-day-1/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-day-1/</guid>
+      <description>The CTO of my new company recommended the Udemy course &amp;ldquo;Go: The Complete Developer&amp;rsquo;s Guide (Golang)&amp;rdquo;. I started today and here are some notes I made.
+Hello World in Go We start by writing a Hello World and studying all the elements.
+package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } How do we run code? go run main.go runs the program go build main.go compiles it to an executable</description>
+      <content:encoded><![CDATA[<p>The CTO of my new company recommended the Udemy course &ldquo;Go: The Complete Developer&rsquo;s Guide (Golang)&rdquo;. I started today and here are some notes I made.</p>
+<h1 id="hello-world-in-go">Hello World in Go</h1>
+<p>We start by writing a Hello World and studying all the elements.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello World!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="how-do-we-run-code">How do we run code?</h3>
+<p><code>go run main.go</code> runs the program
+<code>go build main.go</code> compiles it to an executable</p>
+<h3 id="what-does-package-main-mean">What does package main mean?</h3>
+<p><code>package main</code></p>
+<p>A package is a collection of common source code files.</p>
+<p>One app is a package. If you have multiple files in a folder, such as helper.go or support.go, they should have <code>package main</code> to indicate that they belong to package main.</p>
+<p>*Why do we call it main?</p>
+<p>There are two types of packages.</p>
+<ul>
+<li>executable
+<ul>
+<li>generates file that can be run</li>
+</ul>
+</li>
+<li>reusable
+<ul>
+<li>used as &ldquo;helpers&rdquo;</li>
+<li>reusable logic</li>
+</ul>
+</li>
+</ul>
+<p>When you call the package <code>main</code>, you are telling the compiler it needs to be compiled as an executable. If it  has a different name, it won&rsquo;t generate an executable. Main is sacred.</p>
+<p>Any other name is a reusable or dependency type package (helper code).</p>
+<p>Another important point is that whenever you create an executable package, it must always have a func called &lsquo;main&rsquo;.</p>
+<h3 id="what-does-import-fmt-mean">What does import fmt mean?</h3>
+<p>The import statement is used to give our package access to code written in another package.  You are saying &ldquo;give access to all code in fmt&rdquo;. Fmt is a standard library package included in Go. Short for format. Used to print out information to the terminal.</p>
+<p>Other packages included in the standard library of go are debug, math, encoding, crypto, io.</p>
+<p>golang.org/pkg for documentation on standard library packages for Go.</p>
+<p>A lot of learning go is learning the standard packages and how they work.</p>
+<h3 id="organizing-the-maingo-file">Organizing the main.go file</h3>
+<p>It is the same for every go file, just like the code example at the top of the page. Package main, import fmt, and func main.</p>
+<h1 id="variable-declarations">variable declarations</h1>
+<p><code>var card string = &quot;Ace of Spades&quot;</code></p>
+<p>var: we are about to create a new variable</p>
+<p>card: name</p>
+<p>string = telling the go compiler that only strings will be assigned to this variable</p>
+<h3 id="alternatively">Alternatively:</h3>
+<p><code>card := &quot;Ace of Spades&quot;</code></p>
+<p>Here you are relying on the compiler to figure out what type it is.</p>
+<p>Compiler will infer the type.</p>
+<p>We only use this := assignment for <strong>new variables</strong></p>
+<p>If you want to assign a value to a variable after it is declared, you just do <code>card = &quot;Five of Diamonds&quot;</code></p>
+<h3 id="go-types">Go types</h3>
+<p>Go is  a statically typed language.</p>
+<p>Javascript, python are dynamically typed language. We don&rsquo;t care what value is assigned to a variable.</p>
+<p>You always a assign a type to a variable in Go.</p>
+<p>Basic go types:</p>
+<ul>
+<li>bool</li>
+<li>string</li>
+<li>into</li>
+<li>float64 : a number with a decimal after it.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>I passed the AZ-400 DevOps Expert today</title>
+      <link>https://mischavandenburg.com/zet/passed-az-400/</link>
+      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/passed-az-400/</guid>
+      <description>I&amp;rsquo;m typing this 30 minutes after I passed my AZ-400 exam. I&amp;rsquo;m sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust. This one took about 70 hours of study.
+I started preparing immediately after passing my AZ-104 exam, which was a good move. The AZ-400 requires you to know many details about Azure services and how to access them. For example, Shared Access Signatures are only used for accessing storage accounts, but they came up quite often as alternative answers to the questions.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;m typing this 30 minutes after I passed my AZ-400 exam. I&rsquo;m sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust. This one took about 70 hours of study.</p>
+<p>I started preparing immediately after passing my AZ-104 exam, which was a good move. The AZ-400 requires you to know many details about Azure services and how to access them. For example, Shared Access Signatures are only used for accessing storage accounts, but they came up quite often as alternative answers to the questions.</p>
+<p>The exam itself was difficult, but the AZ-104 was harder. The AZ-104 exam was more challenging because the questions were complicated and required you to simultaneously balance many different factors in the mind. The AZ-400 was difficult because the answer alternatives that are provided are incredibly similar to each other, and they make you very insecure about what the right choice might be. As a result, I changed my answers many times.</p>
+<p>I will do another study guide for this certification soon and publish my notes and Anki deck too. Now it&rsquo;s time to celebrate and relax a little.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>The Pomodoro technique has won me over</title>
+      <link>https://mischavandenburg.com/zet/pomodoro/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/pomodoro/</guid>
+      <description>I did a lot of studying last year, and I achieved a few tough certifications. I&amp;rsquo;ve always been good at studying and never struggled with getting decent grades in university. As a result, I never felt the need to use particular techniques to pass my tests. However, now that I need to do my studies combined with a full-time job, I did some optimization and looked into study techniques.
+One technique I&amp;rsquo;ve become very fond of is the Pomodoro Technique.</description>
+      <content:encoded><![CDATA[<p>I did a lot of studying last year, and I achieved a few tough certifications. I&rsquo;ve always been good at studying and never struggled with getting decent grades in university. As a result, I never felt the need to use particular techniques to pass my tests. However, now that I need to do my studies combined with a full-time job, I did some optimization and looked into study techniques.</p>
+<p>One technique I&rsquo;ve become very fond of is the Pomodoro Technique. I don&rsquo;t have any problems focusing for long periods, but I still decided to try it. I use the standard 25-minute study with a 5-minute break routine, and after four cycles, I take a 30-minute break.</p>
+<p>The Pomodoro technique has been a way to force myself to take breaks, which I wasn&rsquo;t used to. I used to chip away at a specific task for hours. However, I discovered that when I take a break, walk around for five minutes, and apply myself to the task again, my mind is in a fresh state and much more receptive to the information. Perhaps the time I spend studying after a break is actually more productive because the mind had a little rest.</p>
+<p>The technique also pushed my limits a bit more. I study more hours a day, considering that I also work full time. There is this moment where I want to quit studying, but I ask myself, &ldquo;do I have another Pomodoro in me?&rdquo;</p>
+<p>Now that I&rsquo;ve gotten used to breaking things up into 25-minute chunks of time, I started using the Pomodoro technique for other areas in life as well, such as blog writing or coding projects.</p>
+<p>You can use any tool you like to start using the Pomodoro technique and pick any break schedule that suits you. I&rsquo;ll link some resources below. All you need is some sort of timer. You can use a timer on your computer or a physical timer. I use the Forest app on my iPhone because it integrates with the iOs &ldquo;do not disturb&rdquo; and &ldquo;focus&rdquo; modes, so  I don&rsquo;t get any distracting notifications when I&rsquo;m on a Pomodoro.</p>
+<p><a href="https://science.nichd.nih.gov/confluence/display/newsletter/2020/05/07/The+Pomodoro+Technique%3A+An+Effective+Time+Management+Tool">https://science.nichd.nih.gov/confluence/display/newsletter/2020/05/07/The+Pomodoro+Technique%3A+An+Effective+Time+Management+Tool</a></p>
+<p><a href="https://www.youtube.com/watch?v=5WRO79zuJ4U">https://www.youtube.com/watch?v=5WRO79zuJ4U</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Obsidian: A Note Taking App For DevOps Engineers</title>
+      <link>https://mischavandenburg.com/zet/articles/obsidian-introduction/</link>
+      <pubDate>Sun, 01 Jan 2023 19:05:13 +0100</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/obsidian-introduction/</guid>
+      <description>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.
+Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</description>
+      <content:encoded><![CDATA[<p>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.</p>
+<p>Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</p>
+<p>It can be challenging to keep everything memorized at all times. However, when I started my journey to become a DevOps engineer, I kept meticulous notes of everything I learned, and this practice has been highly beneficial so far. This blog is a result of the notes I keep every day.</p>
+<p>Note-taking is an essential part of the DevOps engineer&rsquo;s toolkit. It allows you to stay organized, track changes, document processes, and keep track of important information. Using a powerful note-taking app like Obsidian can streamline your note-taking process and work more efficiently.</p>
+<h1 id="obsidian-for-devops-engineers">Obsidian for DevOps engineers</h1>
+<p>Having a reliable and efficient system in place for managing your notes and documentation is crucial. That&rsquo;s where <a href="https://obsidian.md/">Obsidian</a> comes in. Obsidian is a powerful note-taking app that can help you organize and manage your notes more efficiently.</p>
+<p>One of the main features of Obsidian is its use of &ldquo;vaults.&rdquo; A vault is a folder containing your notes as markdown text files. Your notes are stored on your machine rather than in the cloud. This gives you complete control over your data. You always have access to your local text files and can interact with them or back them up as you see fit.</p>
+<p>Because your notes are stored as markdown files, you can use different tools to write or edit your notes. I mostly use neovim for editing, but I use the Obsidian application for making new links and visualization. Moreover, storing your notes as files allows you to run python scripts on your notes and customize your workflow as needed. This can be especially useful for automating tasks, streamlining your work, or making bulk updates.</p>
+<h1 id="links-and-graph-view">Links and graph view</h1>
+<p>In addition to its local storage capabilities, Obsidian also offers several other valuable features for DevOps engineers. For example, you can use the &ldquo;graph view&rdquo; to visualize your notes and see how they&rsquo;re related to one another. This can be particularly useful for understanding complex systems and tracking changes over time.</p>
+<p><img loading="lazy" src="/graph-view.png" type="" alt=""  /></p>
+<p>These relations between notes are created by &ldquo;[[markdown links]]&rdquo;. When a note receives many links, its dot size will increase on the graph view, and in this manner, it is easy to see which notes or topics are significant in your vault and play an important role in your life.</p>
+<p><img loading="lazy" src="/local-graph.png" type="" alt=""  /></p>
+<p>This is the local graph view, showing all the linked notes to my Linux note.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Many note-taking apps, such as Evernote, Notion, or Roam research, are available. I tried a few of these, but Obsidian was the best solution for me. Mainly because your notes are stored as markdown files on your machine and because they offer a syncing service with end-to-end encryption. Their graph view provides an interesting way to navigate your notes and discover unexpected connections.</p>
+<p>Give it a try. It&rsquo;s free.</p>
+<p><a href="https://obsidian.md/">Obsidian website</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Study Guide: AZ-104 Azure Administrator Associate</title>
+      <link>https://mischavandenburg.com/zet/articles/az-104-study-guide/</link>
+      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
+      <description>TLDR It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck: GitHub repo
+Introduction When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.
+That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.</description>
+      <content:encoded><![CDATA[<h1 id="tldr">TLDR</h1>
+<p>It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck:
+<a href="https://github.com/mischavandenburg/az-104-azure-administrator">GitHub repo</a></p>
+<h1 id="introduction">Introduction</h1>
+<p>When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.</p>
+<p>That opinion has changed since I&rsquo;ve obtained a few IT certifications. These tests are hard! I&rsquo;m typing this while sitting on the bus on my way home from my AZ-104 exam. I passed with an 860 score of 1000, where 700 or higher is a pass. But it was an astonishingly tough exam. Usually, I finish quickly and spend at least half an hour reviewing my answers. I had only 5 minutes to review my questions this time because I had used up all of the available time. The questions required intense concentration and were time-consuming because I needed to compare many options which were very similar to each other. There were no easy questions.</p>
+<h1 id="preparation">Preparation</h1>
+<p>I studied 80 hours for this exam in a month. I work full-time as a DevOps Engineer, so I study in the evenings and on weekends. I have my Azure Fundamentals and CKA, but I only work with Azure occasionally in my current role.</p>
+<p>Here is what I did to prepare for my exam:</p>
+<ul>
+<li>Go through all of the <a href="https://learn.microsoft.com/en-us/certifications/exams/az-104">Microsoft Learn modules for the AZ-104</a></li>
+<li>Watch the entire <a href="https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs">AZ-104 study list by John Savill</a></li>
+<li>Practice exams on <a href="https://tutorialsdojo.com/">TutorialsDojo</a> until I could pass them with 90%+ scores</li>
+<li>Microsoft ESI practice exams</li>
+<li><a href="https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-az-104-manage-azure-identities-and-governance-1-of-5">Microsoft AZ-104 Exam prep videos</a></li>
+</ul>
+<h2 id="microsoft-learn">Microsoft Learn</h2>
+<p>You really need to master all of the subject matter. Only completing the Microsoft Learn modules is not enough preparation. They are more like summaries. At the end of each module, they provide links to the documentation for the subject for further study. Unfortunately, Microsoft does not go easy on you. It expects you to know obscure details of nearly every service this exam covers. Therefore, I advise going beyond the Microsoft Learn modules and studying the linked articles after each module.</p>
+<h2 id="youtube-az-104-study-playlist-by-john-savill">YouTube AZ-104 Study Playlist by John Savill</h2>
+<p>I&rsquo;m not sure if it&rsquo;s better to watch this playlist first and then do the Microsoft modules or the other way around. I did the Microsoft modules first, but for my next exam (AZ-400 DevOps Expert), I&rsquo;ll start with the videos and then do the Microsoft Learn modules.</p>
+<h2 id="tutorialsdojo">Tutorialsdojo</h2>
+<p>These practice exams are excellent. I used them in preparation for my fundamentals exam.</p>
+<p>The best thing about them is that they provide extensive documentation and explanation of the questions. So after you finish the exam, you can study a lot with these examples.</p>
+<h2 id="esi-practice-exams">ESI Practice Exams</h2>
+<p>You&rsquo;re lucky if your organization participates in Microsoft&rsquo;s <a href="esi.microsoft.com/">Enterprise Skills Initiative</a>. The practice exams provided in the ESI environment give you a good indication of what you can expect at the exam. I first did the Tutorialsdojo exams and then moved on to the ESI exams, and I was humiliated. The ESI questions are very complex and hard to solve, and I learned a lot from these exams.</p>
+<p>There are 210 questions total, and I worked through all of them, and whenever I failed a question, I did a deeper dive into the question&rsquo;s theme.</p>
+<h1 id="studying">studying</h1>
+<p>I take notes in Obsidian, and I use Anki for spaced repetition. I highly recommend keeping a deck of Anki cards and continuously testing yourself. You will need to memorize a lot of details. For example, you are expected to remember that storage accounts of the FileStorage type do not support Geo Redundant Storage. You can find my Anki deck in the <a href="https://github.com/mischavandenburg/az-104-azure-administrator">GitHub repo.</a></p>
+<h1 id="links">links</h1>
+<p><a href="https://learn.microsoft.com/en-us/certifications/exams/az-104">AZ-104 Exam page with learning modules</a></p>
+<p><a href="https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs">John Savill&rsquo;s AZ-104 Study playlist</a></p>
+<p><a href="https://github.com/mischavandenburg/az-104-azure-administrator">GitHub repo containing my notes and Anki deck</a></p>
+<p><a href="https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-az-104-manage-azure-identities-and-governance-1-of-5">Microsoft AZ-104 Exam prep videos</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Certified Kubernetes Administrator (CKA) Exam Tips</title>
+      <link>https://mischavandenburg.com/zet/articles/cka-tips/</link>
+      <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/cka-tips/</guid>
+      <description>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily.</description>
+      <content:encoded><![CDATA[<p>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.</p>
+<h3 id="my-preparation">My preparation</h3>
+<ul>
+<li><a href="https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/">KodeKloud CKA Course</a></li>
+<li><a href="https://killer.sh/">Killer.sh Mock Exam</a></li>
+<li><a href="https://killercoda.com/killer-shell-cka">Killercoda</a></li>
+</ul>
+<p>I kept track of the time I spent on this certification. In total, I spent 80 hours on study and practice.</p>
+<h3 id="in-hindsight">In Hindsight</h3>
+<p>I spent too much time repeating things during the KodeKloud course. This is the one thing I would do differently if I could start over. I went over some modules multiple times and kept meticulous notes. However, I have hardly used any of those notes. But they will be nice to have for the future.</p>
+<p>I learned most from the killer.sh exams. So I would advise you to go through the KodeKloud course and do all the exercises, but don&rsquo;t spend too much time repeating stuff. If you don&rsquo;t understand the topic at all, it is, of course, necessary to repeat it. But you don&rsquo;t need to know all the details.</p>
+<h3 id="killersh">Killer.sh</h3>
+<p>After I finished the KodeKloud course, I purchased the exam voucher and started the killer.sh on Saturday morning. I wanted to simulate the exam experience as much as possible, so I set the timer and did not allow myself to stand up for two hours. My first round was humiliating. I only managed to get 24 out of 125 points. A little shocked by the experience, I spent the whole Saturday going through all the solutions of the exercises that killer.sh provides. The explanations they give are extensive, and I found them helpful. Saturday evening, I went out for dinner with friends, and on Sunday morning, I passed killer.sh. I spent the whole Sunday studying the solutions more and more, and on my last try on Sunday evening, I scored 115 out of 125.</p>
+<h2 id="tips">Tips:</h2>
+<ul>
+<li>
+<p>I know tmux quite well and used it extensively during the killer.sh, but it was not necessary during the exam. No need to learn it if you don&rsquo;t know it already.</p>
+</li>
+<li>
+<p>Knowing vim well will save you a lot of time at the exam. For example, dG to delete all lines until the end of the file from your current location. Run &ldquo;vimtutor&rdquo; on a Linux system to learn the basics.</p>
+</li>
+<li>
+<p>You cannot use bookmarks. Learn how to search the docs efficiently. One handy one I figured out was to control + F and enter &ldquo;kind: Pod&rdquo; or &ldquo;kind: PersistentVolume&rdquo; to immediately go to the example YAML.</p>
+</li>
+<li>
+<p>my exam environment did not need much extra configuration. All I added to my .bashrc was alias v=vim and export do=&quot;&ndash;dry-run=client -o yaml&quot; so you can use &ldquo;k run Nginx $do &gt; Nginx.YAML&rdquo;</p>
+</li>
+<li>
+<p>The exam environment is not as bad as people make it out to be on the internet. There is a little delay while scrolling through the docs in the browser, but working in the terminal didn&rsquo;t give me any problems. Get used to the environment on killer.sh, and there should not be any surprises in the real exam environment.</p>
+</li>
+<li>
+<p>Skip questions you cannot solve immediately. But don&rsquo;t spend time reviewing all the questions, sorting by the highest % and doing those first. You will lose a lot of time evaluating all of these questions. It is much better to solve the questions during your first pass through and skip the ones you cannot immediately solve.</p>
+</li>
+<li>
+<p>When the 120-minute timer ran out, I was presented with a screen that said &ldquo;quit&rdquo; or &ldquo;request more time.&rdquo; I was pretty sure I could not get more time for this exam, so I just pressed &ldquo;quit.&rdquo; After I pressed quit, the application closed immediately, and there was no confirmation whatsoever that they received my exam results or anything. This was extremely disorienting, and I was left doubting if I had done it correctly. Eventually, I could see in the Linux Foundation portal that my exam was in Grading status.</p>
+</li>
+<li>
+<p>Speed is of the essence. An hour before my exam, I used killercoda to get into the mood and get things up to speed. Learn to solve things quickly and don&rsquo;t spend time having to arrange terminal windows on your screen or stumbling around in vim. You cannot afford to lose time on these things.</p>
+</li>
+<li>
+<p>Finally, this video is an excellent summary of all the necessary tips and information: <a href="https://www.youtube.com/watch?v=8VK9NJ3pObU"></a></p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>LPIC-1 Study Guide</title>
+      <link>https://mischavandenburg.com/lpic-1-study-guide/</link>
+      <pubDate>Wed, 16 Mar 2022 21:20:19 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/lpic-1-study-guide/</guid>
+      <description>I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me. This article offers a beginner’s perspective on the LPIC-1 certification. Is the LPIC-1 hard to pass? Keep reading to find out.
+Before this certification, I had only a little bit of experience.</description>
+      <content:encoded><![CDATA[<p>I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me. This article offers a beginner’s perspective on the LPIC-1 certification. Is the LPIC-1 hard to pass? Keep reading to find out.</p>
+<p>Before this certification, I had only a little bit of experience. I deployed LAMP stacks using Ansible and configured VMs to be able to communicate with each other using only the command line. I also did a “Linux Fundamentals” video training. I could navigate the filesystem, edit text files and work in the terminal, but that was about it.</p>
+<p><img loading="lazy" src="/hard.jpg" type="" alt=""  /></p>
+<h3 id="is-it-hard">Is it hard?</h3>
+<p>For a beginner: yes, it was hard! But if you are a Linux administrator with a few years of experience, these exams probably are not very difficult to pass. However, even if you are experienced, be prepared to do a lot of memorization. Even though the requirements on the website seem very basic and straightforward, when you dig into the study resources, you will soon discover that you need to learn a large host of commands and many of their accompanying parameters. For example, you will need to know what grep -H does precisely, the difference between passwd -l, chage -l, and chage -L, the location of the directory that contains all the timezones, and the directory that contains the printer configurations for CUPS.</p>
+<h3 id="the-certification">The certification</h3>
+<p>The LPIC-1 certificate requires candidates to pass the LPI 101-500 and 102-500 exams. These exams test the candidates on various subjects, such as file management, boot loaders, networking fundamentals, user and group management, file systems and partitioning, and much more.</p>
+<p>Each exam has a 600-page syllabus, so to get your LPIC-1 certification, you need to work through 1200 pages and memorize a few hundred commands and parameters. However, if you work as a Linux sysadmin, you’ll probably know many of these commands and concepts.</p>
+<h3 id="study-materials">Study Materials</h3>
+<p>I attended a 4-day course that covered both exams. However, because of the large amount of information that needs to be covered, the teacher could only address the subjects on a superficial level. Therefore, I would advise you to be suspicious of any courses that promise to prep you for the exams in 4 days if you are a beginner. I estimate that you need at least double that amount to get some proper explanation of the material.</p>
+<h4 id="lpi-syllabus">LPI Syllabus</h4>
+<p>After finishing the course, it became clear that I needed a lot of studying to pass the exams. Fortunately, LPI has created a syllabus for each exam. These are available for free on the <a href="https://www.lpi.org/our-certifications/lpic-1-overview">LPI.org website.</a></p>
+<h4 id="lpi-practice-exams">LPI Practice Exams</h4>
+<p>It is crucial to test your knowledge. This is the resource I used:</p>
+<p><a href="https://amzn.to/3KHAkCZ">LPIC-1 Linux Professional Institute Certification Practice Tests: Exam 101-500 and Exam 102-500 </a></p>
+<p>If you are a member of O’Reilly’s, you can read the book there. It contains around 90 practice questions for every chapter in the LPI syllabus. The questions test your knowledge in detail and are a great way to determine whether you have fully grasped the material.</p>
+<p>However, the book was written in 2019 and contains questions about certain subjects that have since been removed from the exams. So if you suddenly encounter questions that do not seem familiar at all, make sure to double-check that it is actually an exam objective.</p>
+<p>Lastly, I used <a href="https://www.udemy.com/share/1029gO3@XonS1Jh2QkFmIV_mN-r8Rbx04vCYiyykPhTpewu5iLZQVNIYMVe4z53YFSxp2tly/">these practice exams on Udemy</a>.</p>
+<h3 id="memorization">Memorization</h3>
+<p>As I have stated before, the exams require you to do a lot of memorization. Fortunately, we have some tools and techniques available to help us with this task.</p>
+<p>The primary tool is Anki. If you are not familiar with it, Anki is a very simple and free program that allows you to create flashcards that you can use to study and test your knowledge. The best thing about Anki is that it implements spaced repetition. You can download and learn more about Anki here: <a href="https://apps.ankiweb.net/">https://apps.ankiweb.net</a></p>
+<p>Secondly, I am fond of memory techniques. You can remember things much more quickly by visualizing them in your mind or utilizing techniques such as Memory Palaces or the Method of Loci. If you are interested in learning more about memory techniques, I highly recommend Dr. Anthony Metivier’s <a href="https://www.youtube.com/c/AnthonyMetivierMMM/featured">YouTube channel.</a></p>
+<p><img loading="lazy" src="/palace.jpg" type="" alt=""  /></p>
+<h3 id="strategy">Strategy</h3>
+<p>Here is the strategy that I used to pass the exams:</p>
+<ul>
+<li>Read through a chapter and take notes.</li>
+<li>Make Anki flashcards for all the commands and flags that you do not know yet</li>
+<li>Do the exercises at the end of the chapter</li>
+<li>Do the practice exam for your chapter from the exam book, which should give you a good indication of how well you have grasped the material.</li>
+<li>Make flashcards of all the questions that you answered wrong (trust me, there will be quite a few)</li>
+<li>Use Anki to test yourself and memorize all of the commands and exam questions</li>
+</ul>
+<h3 id="tips">Tips:</h3>
+<ul>
+<li>Do your Anki reviews every day. On some days I was adding more than 100 new cards, which will lead to a lot of reviews in the coming days</li>
+<li>Although the syllabus for exam 101 explained things very well, the 102 syllabus sometimes is very meager in its explanations and you might need to supplement with reading man pages, YouTube videos, and other tutorials. For example, I needed to find quite a bit of supplementary material for chapter 109 Networking Fundamentals.</li>
+<li>Ask for help if you don’t understand a certain topic</li>
+<li>Don’t think you can get away with skipping a topic. You will be tested on absolutely everything that’s in the syllabus, trust me.</li>
+<li>Try doing it together with someone else. I was doing it together with my friend and colleague, and it was extremely useful to be able to share things I struggled with and to discuss things with him to understand them better. Thank you for the good times, Gino!</li>
+</ul>
+<h3 id="my-thoughts-on-the-certification">My thoughts on the certification</h3>
+<p>The subject matter is extensive, and I know my way around Linux much better now. Therefore, if I encounter a problem, I am better positioned to assess where the cause might be and then solve the problem from there. I also feel I have a much better grasp of basic networking concepts, which will prove to be very useful in many situations in my work as a DevOps Engineer.</p>
+<p>However, there are also a few drawbacks to this certification. I think there is too much emphasis on memorizing commands and their flags. I think it is not necessary to memorize all of the possible parameters of the chage command because, in the real world, I would take a quick look at the man page to find the parameter that I need. The exams force you to memorize many parameters in a short time, and to be honest, you will probably forget about them very quickly anyway.</p>
+<p>But overall, I am pleased and grateful to my employer that I was able to obtain this certification, and it has made me hungry for more, and I am very eager to continue my learning in this domain.</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

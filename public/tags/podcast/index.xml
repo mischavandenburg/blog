@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Podcast on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/podcast/</link>
+    <description>Recent content in Podcast on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Podcast Notes - Optimal Water Intake</title>
+      <link>https://mischavandenburg.com/zet/optimal-hydration/</link>
+      <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/optimal-hydration/</guid>
+      <description>Hydration Notes from Huberman Podcast For the first 10 hours of the day, consume 236ml for every hour awake
+During exercise, follow Galpin equation: 2ml per kg of bodyweight every 15-20 minutes on average.
+This does not mean you need to stop exercising and drink this amount. You can also consume it in a larger amount afterwards. It is recommended to drink during exercise though.
+Use the normal recommendation to hydrate before exercise, this establishes a good baseline for heading into exercise.</description>
+      <content:encoded><![CDATA[<h1 id="hydration-notes-from-huberman-podcast">Hydration Notes from Huberman Podcast</h1>
+<p>For the first 10 hours of the day, consume 236ml for every hour awake</p>
+<p>During exercise, follow Galpin equation: 2ml per kg of bodyweight every 15-20 minutes on average.</p>
+<p>This does not mean you need to stop exercising and drink this amount. You can also consume it in a larger amount afterwards. It is recommended to drink during exercise though.</p>
+<p>Use the normal recommendation to hydrate before exercise, this establishes a good baseline for heading into exercise.</p>
+<h2 id="is-this-amount-of-water-on-top-of-the-baseline-hydration">Is this amount of water on top of the baseline hydration?</h2>
+<p>If you exercise about an hour you can replace the number with the number from the Galpin equation.</p>
+<p>In my case, 1 hour of exercise = 77 * 2 = 154ml every 20 minutes</p>
+<p>154 * 3 = 462ml for 1 hour of exercise</p>
+<h2 id="caffeine">Caffeine</h2>
+<p>Offset caffeine drinks with a 2:1 water ratio.</p>
+<p>So 1 240ml cup of coffee should be followed by 480ml of water.</p>
+<h2 id="reducing-nightly-urination">Reducing Nightly Urination</h2>
+<p>Urine secretion / filtration in the kidneys is highly dependent on the circadian rhythm.</p>
+<p>It is normal to wake up once or twice to urinate during the night.</p>
+<p>To reduce nighttime waking for urination:</p>
+<ul>
+<li>Ensure sufficient hydration during the day so you are not thirsty in the evening</li>
+<li>Reduce fluid intake at night (provided you hydrated sufficiently during the day)</li>
+<li>Consume no more than 180-240ml between 10 hours after waking and bedtime</li>
+</ul>
+<p>This means, waking up at 6am, only drink 1 cup of tea after 4pm.</p>
+<p>But I drink 500ml at dinner time, so I should probably never drink after dinner from here on out, or just one cup of tea.</p>
+<p>How quickly you secrete fluid is also partially determined by how quickly you drink that fluid. Gulping down a lot of fluid wil lead to quicker secretion.</p>
+<h1 id="my-typical-day">My Typical Day</h1>
+<p>1 hour exercise = 500ml</p>
+<p>2 cups of coffee 500ml</p>
+<p>10 hours = 2,4l</p>
+<p>So I should be drinking about 3,25L in total a day!</p>
+<h2 id="links">Links:</h2>
+<p>202305301905</p>
+<p><a href="https://podcasts.apple.com/gb/podcast/huberman-lab/id1545953110?i=1000602925839">https://podcasts.apple.com/gb/podcast/huberman-lab/id1545953110?i=1000602925839</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>AI Does Not Grow Exponentially, Thus, Less Scary</title>
+      <link>https://mischavandenburg.com/zet/ai-does-not-grow-exponentially/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/ai-does-not-grow-exponentially/</guid>
+      <description>I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.
+In this Rich Roll podcast, Kevin Kelly argues that AI does not grow exponentially. It grows linearly, but not exponentially, because it is constrained by the infrastrucutre that we give it, and are able to give it.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/EKba_awaAkk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.</p>
+<p>In this Rich Roll podcast, Kevin Kelly argues that AI does not grow exponentially. It grows linearly, but not exponentially, because it is constrained by the infrastrucutre that we give it, and are able to give it. AI cannot grow by itself. We simply cannot provide enough computing power to enable exponential growth because the technology is not advanced enough yet, which means the growth is stunted.</p>
+<p>This makes the doomsday image of an all-powerful single AI that takes over the world and exterminates all humans a lot less likely.</p>
+<h2 id="links">Links:</h2>
+<p>202305152005</p>
+<p><a href="https://www.youtube.com/watch?v=EKba_awaAkk">https://www.youtube.com/watch?v=EKba_awaAkk</a></p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

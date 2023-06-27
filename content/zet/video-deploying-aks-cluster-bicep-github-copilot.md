@@ -1,5 +1,5 @@
 ---
-title: Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim
+title: "Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim"
 date: 2023-06-27
 tags:
 - AKS
