@@ -59,6 +59,9 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
 <p><a href="https://youtu.be/6Gav1JpGAzo">https://youtu.be/6Gav1JpGAzo</a></p>
+<p><a href="https://github.com/Azure/bicep/releases/tag/v0.18.4">https://github.com/Azure/bicep/releases/tag/v0.18.4</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/parameter-files?tabs=Bicep">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/parameter-files?tabs=Bicep</a></p>
+<p><a href="https://github.com/mischavandenburg/lab/tree/main/bicep/keyvault-parameters">https://github.com/mischavandenburg/lab/tree/main/bicep/keyvault-parameters</a></p>
 <p>[[AKS]]
 [[bicep]]
 [[coding]]

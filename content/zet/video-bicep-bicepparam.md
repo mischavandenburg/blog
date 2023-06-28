@@ -8,6 +8,7 @@ tags:
 - Kubernetes
 - Azure
 - Neovim
+- Video
 ---
 
 The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:
@@ -28,6 +29,12 @@ Yes, you read that right, you'll be seeing a hardcore vim user switch to VSCode 
 202306271706
 
 https://youtu.be/6Gav1JpGAzo
+
+https://github.com/Azure/bicep/releases/tag/v0.18.4
+
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/parameter-files?tabs=Bicep
+
+https://github.com/mischavandenburg/lab/tree/main/bicep/keyvault-parameters
 
 [[AKS]]
 [[bicep]]
