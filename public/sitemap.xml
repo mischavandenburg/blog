@@ -5,13 +5,28 @@
     <loc>https://mischavandenburg.com/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/aks/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/devops/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/interesting-facts-azure/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/video/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/</loc>
@@ -26,22 +41,13 @@
     <loc>https://mischavandenburg.com/zet/chatgpt-buddha-hunger/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/aks/</loc>
-    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/bicep/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/coding/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
-    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/neovim/</loc>
-    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/video/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</loc>
@@ -67,9 +73,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/2023-week-24/</loc>
     <lastmod>2023-06-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/devops/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/networking/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>

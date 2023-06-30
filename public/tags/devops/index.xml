@@ -6,7 +6,38 @@
     <description>Recent content in DevOps on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: Setting Up A Simple Azure Pipeline To Deploy A Keyvault</title>
+      <link>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
+      <description>Setting Up A Simple Azure Pipeline To Deploy A Keyvault Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
+https://youtu.be/WnA8V3uq7P8</description>
+      <content:encoded><![CDATA[<h1 id="setting-up-a-simple-azure-pipeline-to-deploy-a-keyvault">Setting Up A Simple Azure Pipeline To Deploy A Keyvault</h1>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/WnA8V3uq7P8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<ul>
+<li>Write KeyVault template</li>
+<li>Write pipeline code</li>
+<li>set up Azure DevOps pipeline</li>
+</ul>
+<h1 id="lessons-learned">Lessons Learned</h1>
+<ul>
+<li>Always make sure to use <code>az deployment group</code> instead of <code>az group deployment</code></li>
+<li>Because it has older Bicep version and will be deprecated</li>
+<li>Make sure to be in correct Directory to be able to sync subscriptions for service connection</li>
+</ul>
+<h2 id="links">Links:</h2>
+<p>202306302206</p>
+<p><a href="https://youtu.be/WnA8V3uq7P8">https://youtu.be/WnA8V3uq7P8</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>What is Azure CNI Overlay for AKS?</title>
       <link>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</link>
