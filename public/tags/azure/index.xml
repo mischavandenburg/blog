@@ -6,7 +6,30 @@
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some Interesting Facts About Azure</title>
+      <link>https://mischavandenburg.com/zet/interesting-facts-azure/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/interesting-facts-azure/</guid>
+      <description>Some interesting facts about Azure from this Reddit post by Denis Kazakov, Microsoft MVP
+Things that stand out to me:
+85% of Fortune 500 companies use Microsoft Azure Cloud Azure generated a revenue of 75,3 billion in 2022 which is 38% of whole Microsoft&amp;rsquo;s revenue. It is x3 in compare to 2017. The project name was Red Dog internally, which you can sometimes see as DNS or as cloud service VM hostnames like RDxxxxx https://www.</description>
+      <content:encoded><![CDATA[<p>Some interesting facts about Azure from this Reddit post by Denis Kazakov, Microsoft MVP</p>
+<p>Things that stand out to me:</p>
+<ul>
+<li>85% of Fortune 500 companies use Microsoft Azure Cloud</li>
+<li>Azure generated a revenue of 75,3 billion in 2022 which is 38% of whole Microsoft&rsquo;s revenue. It is x3 in compare to 2017.</li>
+<li>The project name was Red Dog internally, which you can sometimes see as DNS or as cloud service VM hostnames like RDxxxxx</li>
+</ul>
+<p><a href="https://www.reddit.com/r/AZURE/comments/14mcuoy/some_interesting_facts_about_azure/?utm_source=share&amp;utm_medium=web2x&amp;context=3">https://www.reddit.com/r/AZURE/comments/14mcuoy/some_interesting_facts_about_azure/?utm_source=share&amp;utm_medium=web2x&amp;context=3</a></p>
+<h2 id="links">Links:</h2>
+<p>202306300706</p>
+<p><a href="https://www.reddit.com/r/AZURE/comments/14mcuoy/some_interesting_facts_about_azure/?utm_source=share&amp;utm_medium=web2x&amp;context=3">https://www.reddit.com/r/AZURE/comments/14mcuoy/some_interesting_facts_about_azure/?utm_source=share&amp;utm_medium=web2x&amp;context=3</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim</title>
       <link>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</link>

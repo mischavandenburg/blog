@@ -26,3 +26,11 @@ Remember, noble layperson, the path to liberation extends beyond the mere satisf
 ## Links:
 
 202306281806
+
+[[health]]
+[[buddhist-practice]]
+[[use hunger as awareness practice]]
+[[its-not-working-if-not-hungry]]
+[[AI]]
+[[chatgpt]]
+
