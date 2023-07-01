@@ -6,7 +6,84 @@
     <description>Recent content in Bicep on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/bicep/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/bicep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: Finishing Pipeline Setup  &amp; Working on KeyVault Template - Azure Kubernetes Lab Series</title>
+      <link>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</guid>
+      <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
+acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/eooZ3OHl5Mc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<ul>
+<li>Finish deploying keyvault using pipeline</li>
+<li>Get the random name generation to work</li>
+</ul>
+<h1 id="lessons-learned">Lessons Learned</h1>
+<ul>
+<li>Subscriptions need to be registered with resource providers, apparently</li>
+</ul>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli">https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli</a></p>
+<ul>
+<li>acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled</li>
+<li>Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline</li>
+</ul>
+<h1 id="achieved">Achieved</h1>
+<ul>
+<li>Setting up connection between pipeline and Azure subscription</li>
+<li>Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources)</li>
+<li>Learned about provider registrations</li>
+<li>Made progress on creating unique names for resources</li>
+<li>Successfully deployed new resource group and key vault from the pipeline</li>
+</ul>
+<h1 id="next-time">Next time:</h1>
+<p>Look into random string creation with utcNow</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-date#utcnow">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-date#utcnow</a></p>
+<p>or newGuid</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-string#newguid">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-string#newguid</a></p>
+<p>Links:</p>
+<p>202306281806</p>
+<h2 id="links">Links:</h2>
+<p>202306302206</p>
+<p><a href="https://youtu.be/eooZ3OHl5Mc">https://youtu.be/eooZ3OHl5Mc</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: Setting Up A Simple Azure Pipeline To Deploy A Keyvault</title>
+      <link>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
+      <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
+https://youtu.be/WnA8V3uq7P8</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/WnA8V3uq7P8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<ul>
+<li>Write KeyVault template</li>
+<li>Write pipeline code</li>
+<li>set up Azure DevOps pipeline</li>
+</ul>
+<h1 id="lessons-learned">Lessons Learned</h1>
+<ul>
+<li>Always make sure to use <code>az deployment group</code> instead of <code>az group deployment</code></li>
+<li>Because it has older Bicep version and will be deprecated</li>
+<li>Make sure to be in correct Directory to be able to sync subscriptions for service connection</li>
+</ul>
+<h2 id="links">Links:</h2>
+<p>202306302206</p>
+<p><a href="https://youtu.be/WnA8V3uq7P8">https://youtu.be/WnA8V3uq7P8</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim</title>
       <link>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</link>

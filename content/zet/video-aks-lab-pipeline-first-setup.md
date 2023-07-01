@@ -7,9 +7,9 @@ tags:
 - Kubernetes
 - Azure
 - DevOps
+- Bicep
+- Coding
 ---
-
-# Setting Up A Simple Azure Pipeline To Deploy A Keyvault
 
 {{< youtube WnA8V3uq7P8 >}}
 
