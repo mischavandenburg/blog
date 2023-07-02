@@ -13,23 +13,23 @@
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/bicep-random-strings/</guid>
-      <description>In this video I explain how to generate random strings in Bicep.
+      <description>In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.
 I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:
-param keyVaultName string = &amp;lsquo;key-vault-${uniqueString(resourceGroup().id, utcNow())}&amp;rsquo;
-I demonstrate with a few deployments.
-Links: 202307022107
-[[bicep]] [[coding]]</description>
+param keyVaultName string = &#39;key-vault-${uniqueString(resourceGroup().id, utcNow())}&#39;
+uniqueString() doesn&amp;rsquo;t really generate a unique string. It is a hash function which generates a 13 character string based on the input you give it.</description>
       <content:encoded><![CDATA[
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/n9MRNnAJjZY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<p>In this video I explain how to generate random strings in Bicep.</p>
+<p>In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.</p>
 <p>I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:</p>
-<p>param keyVaultName string = &lsquo;key-vault-${uniqueString(resourceGroup().id, utcNow())}&rsquo;</p>
-<p>I demonstrate with a few deployments.</p>
+<p><code>param keyVaultName string = 'key-vault-${uniqueString(resourceGroup().id, utcNow())}'</code></p>
+<p><code>uniqueString()</code> doesn&rsquo;t really generate a unique string. It is a hash function which generates a 13 character string based on the input you give it. so <code>uniqueString('coffee')</code> will always have the same output.</p>
+<p>To generate a truly unique string, you pass in the <code>utcNow()</code> function which generates a UNIX timestamp. However, Bicep does not allow you to use this function everywhere. It may only be used as a default value for a parameter.</p>
 <h2 id="links">Links:</h2>
 <p>202307022107</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-string#uniquestring">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-string#uniquestring</a></p>
 <p>[[bicep]]
 [[coding]]</p>
 ]]></content:encoded>
