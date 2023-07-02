@@ -6,7 +6,35 @@
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Generate Random Strings In Bicep</title>
+      <link>https://mischavandenburg.com/zet/bicep-random-strings/</link>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/bicep-random-strings/</guid>
+      <description>In this video I explain how to generate random strings in Bicep.
+I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:
+param keyVaultName string = &amp;lsquo;key-vault-${uniqueString(resourceGroup().id, utcNow())}&amp;rsquo;
+I demonstrate with a few deployments.
+Links: 202307022107
+[[bicep]] [[coding]]</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/n9MRNnAJjZY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>In this video I explain how to generate random strings in Bicep.</p>
+<p>I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:</p>
+<p>param keyVaultName string = &lsquo;key-vault-${uniqueString(resourceGroup().id, utcNow())}&rsquo;</p>
+<p>I demonstrate with a few deployments.</p>
+<h2 id="links">Links:</h2>
+<p>202307022107</p>
+<p>[[bicep]]
+[[coding]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Finishing Pipeline Setup  &amp; Working on KeyVault Template - Azure Kubernetes Lab Series</title>
       <link>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</link>
