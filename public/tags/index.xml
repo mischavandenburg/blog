@@ -28,6 +28,16 @@
     </item>
     
     <item>
+      <title>Book-Notes</title>
+      <link>https://mischavandenburg.com/tags/book-notes/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/book-notes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Career</title>
       <link>https://mischavandenburg.com/tags/career/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
@@ -43,6 +53,16 @@
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/devops/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Finance</title>
+      <link>https://mischavandenburg.com/tags/finance/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/finance/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -523,16 +543,6 @@
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/terraform/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Book-Notes</title>
-      <link>https://mischavandenburg.com/tags/book-notes/</link>
-      <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/book-notes/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
