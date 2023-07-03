@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-07-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/article/</loc>
+    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
-    <lastmod>2023-07-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/career/</loc>
+    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/choosing-a-cloud-provider-and-specialization/</loc>
+    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/devops/</loc>
+    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/bicep/</loc>
     <lastmod>2023-07-02T00:00:00+00:00</lastmod>
@@ -17,19 +35,10 @@
     <loc>https://mischavandenburg.com/zet/bicep-random-strings/</loc>
     <lastmod>2023-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-07-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2023-07-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/azure-lowlands/</loc>
     <lastmod>2023-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/aks/</loc>
-    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/devops/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
@@ -197,9 +206,6 @@
     <loc>https://mischavandenburg.com/tags/weight-loss/</loc>
     <lastmod>2023-05-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/career/</loc>
-    <lastmod>2023-05-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/gaming/</loc>
     <lastmod>2023-05-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -220,9 +226,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/vacations-in-soviet-union/</loc>
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/article/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/notetaking/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>

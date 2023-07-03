@@ -6,13 +6,43 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Article</title>
+      <link>https://mischavandenburg.com/tags/article/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/article/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Azure</title>
       <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/azure/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Career</title>
+      <link>https://mischavandenburg.com/tags/career/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/career/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://mischavandenburg.com/tags/devops/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/devops/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -43,16 +73,6 @@
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/aks/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>https://mischavandenburg.com/tags/devops/</link>
-      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/devops/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -278,16 +298,6 @@
     </item>
     
     <item>
-      <title>Career</title>
-      <link>https://mischavandenburg.com/tags/career/</link>
-      <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/career/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Gaming</title>
       <link>https://mischavandenburg.com/tags/gaming/</link>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
@@ -313,16 +323,6 @@
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/reading/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Article</title>
-      <link>https://mischavandenburg.com/tags/article/</link>
-      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/article/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
