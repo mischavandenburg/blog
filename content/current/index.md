@@ -4,6 +4,12 @@ title: Current
 
 On this page I share the things I'm currently focused on, which habits I'm tracking, and what my goals are.
 
+# Reading
+
+Currenlty reading Eat and Run by Jurek
+
+[Here is a list of all the books I've read](/zet/books-i-have-read)
+
 # Stats
 
 Last updated 2023-06-26
@@ -106,3 +112,10 @@ I don't drink alcohol or use any other mind-altering drugs. On 2023-07-04 I'll b
 # Spirituality
 
 I'm a practicing Buddhist. I found my religion in Therevadan Buddhism, and I found that the Thai Forest Tradition of Ajahn Chah suits me best. I've been on the 5 precepts for nearly 5 years now. 
+
+# Quotes that Inspire me
+
+>"“I’m only a scribe,” I mumbled. “All I know is clay tablets.” “Nonsense!” he interjected. “You’re skilled in language and communication, which puts you far ahead of most. And remember this—the best investment you can make is in yourself. Continue to educate yourself and seek out wisdom, adding new skills and experiences that will make you more valuable." - location: 169 ^ref-57645 - The Richest Man in Babylon
+
+>"The Fifth Law of Wealth: Invest in yourself. Gain knowledge and skills to increase your earning power." - location: 184 ^ref-12741 - The Richest Man in Babylon
+
