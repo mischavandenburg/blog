@@ -134,6 +134,14 @@ The Subtle Art of Not Giving A F*ck</description>
 <p>The Word of the Buddha - Nyanatiloka</p>
 <p>The Dhammapada</p>
 <p>Dependent Origination</p>
+<p>Xu Yun: Dharma Words</p>
+<p>The Phoenix Project</p>
+<p>Why We Sleep</p>
+<p>How to remember your Dreams</p>
+<p>Solomon&rsquo;s Memory Palace</p>
+<p>The Complete Guide to Fasting</p>
+<p>Direct Realization - Ajahn Sumedho</p>
+<p>Peace is a Simple Step - Ajahn Sumedho</p>
 <h2 id="links">Links:</h2>
 <p>202307062007</p>
 ]]></content:encoded>
@@ -217,6 +225,8 @@ Key takeaways Save half your income After building an emergency fund, invest you
 <h1 id="why-i-chose-azure">Why I chose Azure</h1>
 <p>I chose Azure because Microsoft is already very established in the Dutch market. Governments and large corporations typically have their entire user base stored in Active Directory and they use Microsoft Office licenses already. When they decide to move to the cloud, Microsoft offers them very good terms if they choose Microsoft instead of AWS, for example.</p>
 <p>Azure’s strong presence in the Dutch market and their ability to offer attractive terms to existing Microsoft customers make them a popular choice for companies looking to move to the cloud. With 73 percent, Microsoft Azure took most of the market share for cloud computing in the Netherlands in 2020. Azure had within the healthcare sector the highest share with 90 percent. Microsoft has some very substantial clients within government, health care, and the corporate world.</p>
+<p>These previous reasons are all related with job security and the assurance that there will be a long career in Azure ahead of me. But it&rsquo;s not only because of these reasons why I chose Azure. After gaining experience with Azure as a consultant, I&rsquo;ve discovered that the cloud ecosystem Microsoft has created suits me very well. I&rsquo;m very impressed with the different solutions that Azure is able to provide to solve business needs. Not every business is interested or capable of running everything on virtual machines, and Azure&rsquo;s PAAS and SAAS offerings provide level of of abstraction which can be tailored to any business out there.</p>
+<p>Moreover, I really like the tooling. Although I really wanted to gain more experience with Terraform when I started my current contract, I&rsquo;ve fallen a little bit in love with Bicep after I started to work with it every day. I love the fact that Bicep uses Azure itself as a state file, rather than having to manage a state file which can be a pain when using it from pipelines or with multiple people. The Bicep language server (which can be used in Neovim as well) is a very pleasant editing experience. Azure DevOps really nailed it with being a &ldquo;one stop shop&rdquo; for everything from project management and tickets to CI/CD with Azure Pipelines. Although it has its quirks, Azure DevOps is a real pleasure to work with. And I also think that the Azure CLI is a very well-designed interface to the cloud platform.</p>
 <h1 id="beyond-blue">Beyond Blue</h1>
 <p>After I made my choice, I decided to join Beyond Blue. I was already working for Fullstaq, and Beyond Blue is a sister company of Fullstaq. Beyond Blue is a team of Azure Experts who love to go deep and who have a huge amount of experience and knowledge on Microsoft Azure. We help start-ups, scale-ups, and enterprises in both the public and private sector create scalable, flexible, and secure cloud-native solutions build on Microsoft Azure.</p>
 <p>We have Microsoft Valued Professionals (MVP), Microsoft Certified Trainers (MCT), Azure Kubernetes Service and containerization experts on board who are ready to tackle each and every challenge for our clients.</p>

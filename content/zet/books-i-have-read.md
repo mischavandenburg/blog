@@ -235,6 +235,22 @@ The Dhammapada
 
 Dependent Origination
 
+Xu Yun: Dharma Words
+
+The Phoenix Project
+
+Why We Sleep
+
+How to remember your Dreams
+
+Solomon's Memory Palace
+
+The Complete Guide to Fasting
+
+Direct Realization - Ajahn Sumedho
+
+Peace is a Simple Step - Ajahn Sumedho
+
 ## Links:
 
 202307062007
