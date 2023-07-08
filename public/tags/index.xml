@@ -6,7 +6,47 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure</title>
+      <link>https://mischavandenburg.com/tags/azure/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/azure/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>https://mischavandenburg.com/tags/bash/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/bash/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Coding</title>
+      <link>https://mischavandenburg.com/tags/coding/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/coding/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://mischavandenburg.com/tags/devops/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/devops/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Weeknotes</title>
       <link>https://mischavandenburg.com/tags/weeknotes/</link>
@@ -38,31 +78,11 @@
     </item>
     
     <item>
-      <title>Azure</title>
-      <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/azure/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Career</title>
       <link>https://mischavandenburg.com/tags/career/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/career/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>https://mischavandenburg.com/tags/devops/</link>
-      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/devops/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -83,16 +103,6 @@
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/bicep/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Coding</title>
-      <link>https://mischavandenburg.com/tags/coding/</link>
-      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/coding/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -273,16 +283,6 @@
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/travel/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Bash</title>
-      <link>https://mischavandenburg.com/tags/bash/</link>
-      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/bash/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

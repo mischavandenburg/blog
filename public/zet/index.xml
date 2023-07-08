@@ -6,7 +6,54 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wrote A Script To Delete All Resource Groups In An Azure Subscription</title>
+      <link>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</guid>
+      <description>In the Azure portal you can&amp;rsquo;t select multiple resource groups for deletion.
+I have a sponsored subscription to play around in which I sometimes wish to clean completely.
+I wrote this script to delete all resource groups using bash.
+#!/bin/bash # script to delete all resource groups in a subscription using Azure CLI # get the current subscription name to confirm subscription=$(az account show --query name -o tsv) echo &amp;#34;Use this script with caution!</description>
+      <content:encoded><![CDATA[<p>In the Azure portal you can&rsquo;t select multiple resource groups for deletion.</p>
+<p>I have a sponsored subscription to play around in which I sometimes wish to clean completely.</p>
+<p>I wrote this script to delete all resource groups using bash.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># script to delete all resource groups in a subscription using Azure CLI</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># get the current subscription name to confirm</span>
+</span></span><span class="line"><span class="cl"><span class="nv">subscription</span><span class="o">=</span><span class="k">$(</span>az account show --query name -o tsv<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Use this script with caution!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;You are about to delete all resource groups in the subscription: </span><span class="nv">$subscription</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># prompt for confirmation</span>
+</span></span><span class="line"><span class="cl"><span class="nb">read</span> -p <span class="s2">&#34;Are you sure? (y/n) &#34;</span> will_delete
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$will_delete</span> <span class="o">==</span> <span class="o">[</span>Yy<span class="o">]</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> <span class="s2">&#34;Deleting resource groups...&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nv">groups</span><span class="o">=</span><span class="k">$(</span>az group list --query <span class="s2">&#34;[].name&#34;</span> -o tsv<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1"># Loop through each group name and delete it</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> group in <span class="nv">$groups</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">		az group delete --name <span class="s2">&#34;</span><span class="nv">$group</span><span class="s2">&#34;</span> --yes --no-wait
+</span></span><span class="line"><span class="cl">	<span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> <span class="s2">&#34;All resource groups have been deleted.&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Exiting without deleting any resource groups.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Probably wise.&#34;</span>
+</span></span></code></pre></div><h2 id="links">Links:</h2>
+<p>202307081507</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>2023 week 26</title>
       <link>https://mischavandenburg.com/zet/2023-week-26/</link>
