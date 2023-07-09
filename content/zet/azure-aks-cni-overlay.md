@@ -25,7 +25,7 @@ Let's say Azure is assigned the following ranges:
 
 10.62.0.0/16
 
-This means that the networks in each of these ranges would have a maximum posisble amount of 65534 addresses per range.
+This means that the networks in each of these ranges would have a maximum possible amount of 65534 addresses per range.
 
 With the current Azure CNI (i.e. the non-overlay version), all pods are assigned an IP address from one of these ranges. It also uses direct VNet routing.  Since the pods use VNet IP's, there is a maximum of 65.000 pods per cluster. In other words, there is a risk for IP exhaustion, which limits the scalability of your workloads. Moreover, pod subnets cannot be shared across clusters.
 

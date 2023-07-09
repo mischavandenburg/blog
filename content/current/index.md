@@ -8,6 +8,12 @@ On this page I share the things I'm currently focused on, which habits I'm track
 
 Currenlty reading Eat and Run by Jurek
 
+Also started reading the Polity series by Neal Asher, now reading the first book Gridlinked.
+
+I have never read much science fiction but I'm broadening my horizon a bit. 
+
+With the current AI craze going on it seemed like an interesting AI themed series.
+
 [Here is a list of all the books I've read](/zet/books-i-have-read)
 
 # Stats

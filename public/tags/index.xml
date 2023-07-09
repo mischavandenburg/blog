@@ -48,6 +48,36 @@
     </item>
     
     <item>
+      <title>AKS</title>
+      <link>https://mischavandenburg.com/tags/aks/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/aks/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Bicep</title>
+      <link>https://mischavandenburg.com/tags/bicep/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/bicep/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://mischavandenburg.com/tags/kubernetes/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Weeknotes</title>
       <link>https://mischavandenburg.com/tags/weeknotes/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
@@ -93,36 +123,6 @@
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/finance/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Bicep</title>
-      <link>https://mischavandenburg.com/tags/bicep/</link>
-      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/bicep/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>AKS</title>
-      <link>https://mischavandenburg.com/tags/aks/</link>
-      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/aks/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

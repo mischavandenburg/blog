@@ -6,7 +6,59 @@
     <description>Recent content in Kubernetes on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: Deploying AKS Cluster With Azure CNI Using Bicep</title>
+      <link>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</guid>
+      <description>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.
+Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.
+I use Neovim and the Azure CLI for my coding and deployment.
+You will learn how to:
+Implement dev/test prefix to create multiple clusters with the same template Plan a VNet range for an Azure CNI cluster and be mindful of overlaps Deploy a VNet and subnet for the cluster using Bicep Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node Validate your Bicep template and troubleshoot errors Explore the results of your deployment in the Azure portal Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/_U3HichIJ0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.</p>
+<p>Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.</p>
+<p>I use Neovim and the Azure CLI for my coding and deployment.</p>
+<p>You will learn how to:</p>
+<ul>
+<li>Implement dev/test prefix to create multiple clusters with the same template</li>
+<li>Plan a VNet range for an Azure CNI cluster and be mindful of overlaps</li>
+<li>Deploy a VNet and subnet for the cluster using Bicep</li>
+<li>Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node</li>
+<li>Validate your Bicep template and troubleshoot errors</li>
+<li>Explore the results of your deployment in the Azure portal</li>
+<li>Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps</li>
+</ul>
+<p>This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</p>
+<h1 id="excalidraw">Excalidraw</h1>
+<p><img loading="lazy" src="/excni.png" type="" alt=""  /></p>
+<h1 id="bullet-points">Bullet Points</h1>
+<ul>
+<li>Introduction to Azure CNI</li>
+<li>Implement dev/test prefix</li>
+<li>Deploy VNET and one subnet for the cluster</li>
+<li>Deploy cluster with Azure CNI enabled</li>
+</ul>
+<h1 id="vnet-planning">VNet planning</h1>
+<p>VNet cidr: 10.108.0.0/16</p>
+<p>Subnet cidr:</p>
+<p>10.108.0.0/16 - 65,536 addresses</p>
+<p>Service cidr 10.0.0.0/16
+DNS service ip addres 10.0.0.10</p>
+<h2 id="links">Links:</h2>
+<p>202307071807</p>
+<p><a href="https://youtu.be/_U3HichIJ0Q">https://youtu.be/_U3HichIJ0Q</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/aks/configure-azure-cni">https://learn.microsoft.com/en-us/azure/aks/configure-azure-cni</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Finishing Pipeline Setup  &amp; Working on KeyVault Template - Azure Kubernetes Lab Series</title>
       <link>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</link>
@@ -164,7 +216,7 @@ Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have 
 <p>10.60.0.0/16</p>
 <p>10.61.0.0/16</p>
 <p>10.62.0.0/16</p>
-<p>This means that the networks in each of these ranges would have a maximum posisble amount of 65534 addresses per range.</p>
+<p>This means that the networks in each of these ranges would have a maximum possible amount of 65534 addresses per range.</p>
 <p>With the current Azure CNI (i.e. the non-overlay version), all pods are assigned an IP address from one of these ranges. It also uses direct VNet routing.  Since the pods use VNet IP&rsquo;s, there is a maximum of 65.000 pods per cluster. In other words, there is a risk for IP exhaustion, which limits the scalability of your workloads. Moreover, pod subnets cannot be shared across clusters.</p>
 <p>It is crucial to carefully plan the number of pods you expect to deploy. If the required number of IP addresses exceeds the available addresses in the subnet, you will not be able to run your pods.</p>
 <p>Now, these ranges are large and you can anticipate the growth of your resources. For now we are fine. But to design an infrastructure which is truly scalable and extendable, you will need to look into different options. This is where the Azure CNI Overlay comes in.</p>
