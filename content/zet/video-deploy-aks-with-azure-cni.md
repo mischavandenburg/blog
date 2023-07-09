@@ -1,6 +1,6 @@
 ---
 Title: "Video: Deploying AKS Cluster With Azure CNI Using Bicep"
-date: 2023-07-07
+date: 2023-07-09
 tags:
 - Kubernetes
 - Coding

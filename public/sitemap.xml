@@ -3,42 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-07-08T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/aks/</loc>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
-    <lastmod>2023-07-08T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/bash/</loc>
-    <lastmod>2023-07-08T00:00:00+00:00</lastmod>
+    <loc>https://mischavandenburg.com/tags/bicep/</loc>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/coding/</loc>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</loc>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-07-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/bash/</loc>
     <lastmod>2023-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/devops/</loc>
     <lastmod>2023-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-07-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</loc>
     <lastmod>2023-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2023-07-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/2023-week-26/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/aks/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/bicep/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
-    <lastmod>2023-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</loc>
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/weeknotes/</loc>
