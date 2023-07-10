@@ -6,7 +6,58 @@
     <description>Recent content in Weeknotes on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/weeknotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/weeknotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 week 28</title>
+      <link>https://mischavandenburg.com/zet/2023-week-28/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/2023-week-28/</guid>
+      <description>I feel calmer now, because I didn&amp;rsquo;t have any meetups or social events this week. I&amp;rsquo;ve been less busy and had more time for meditation and yoga and I can notice the effects instantly. I&amp;rsquo;m feeling more relaxed and I allow myself more time for reading.
+On the other hand I&amp;rsquo;ve been quite productive on the content creation side. And to create the content, I experiment on my Lab subscription in Azure, which bring me a lot of learning and experience at the same time, so it is a great win-win situation.</description>
+      <content:encoded><![CDATA[<p>I feel calmer now, because I didn&rsquo;t have any meetups or social events this week. I&rsquo;ve been less busy and had more time for meditation and yoga and I can notice the effects instantly. I&rsquo;m feeling more relaxed and I allow myself more time for reading.</p>
+<p>On the other hand I&rsquo;ve been quite productive on the content creation side. And to create the content, I experiment on my Lab subscription in Azure, which bring me a lot of learning and experience at the same time, so it is a great win-win situation.</p>
+<p>I released a few YouTube videos and blog posts and I notice that it brings me energy. It feels good to be able to give something back to the community.</p>
+<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
+<p>Running is going well now. Increased my weekly distance with 4km for a total of 31,35km this week. Went for a 55m long run, 8,5km yesterday and felt good! I started reading &lsquo;Eat and Run&rsquo; and watching some motivational videos which helped me find more pleasure in running again.</p>
+<p>Weight has remained stable.</p>
+<h2 id="content-consumption">Content Consumption</h2>
+<h3 id="reading">Reading</h3>
+<h4 id="books">Books</h4>
+<p>I finished Finding Ultra and A Simple Path to Wealth. Some notes can be found <a href="/zet/book-notes-simple-path-to-wealth/">here</a>.</p>
+<p>Started reading &ldquo;Eat and Run&rdquo; by Jurek, another vegan ultrarunner. I&rsquo;m abot 30% in already and it is an inspiring story so far, with a lot of practical advice added in between.</p>
+<p>Also, I&rsquo;m branching out my fiction reading. I haven&rsquo;t been reading much fiction these past few years. I never read any science fiction but now I felt like exploring that world, especially around AI.</p>
+<p>After some Reddit searches I ended up with the Polity series by Neal Asher which received a lot of praise.</p>
+<p>I&rsquo;ve only started reading it but it is well written so far and I find myself getting into it and wanting to read more. Let&rsquo;s see where this goes!</p>
+<p><a href="https://www.reddit.com/r/sciencefiction/comments/11mylxr/sane_ai_in_science_fiction/">https://www.reddit.com/r/sciencefiction/comments/11mylxr/sane_ai_in_science_fiction/</a></p>
+<h4 id="articles">Articles</h4>
+<p>Some articles on the evolution of &ldquo;three meals a day&rdquo;, and discovered that the Romans usually ate only one meal a day:</p>
+<p><a href="https://www.bbc.com/news/magazine-20243692">https://www.bbc.com/news/magazine-20243692</a></p>
+<p><a href="https://www.smithsonianmag.com/smart-news/mostly-old-and-ill-ate-breakfast-until-rise-working-man-180954041/">https://www.smithsonianmag.com/smart-news/mostly-old-and-ill-ate-breakfast-until-rise-working-man-180954041/</a></p>
+<p>A very interesting and thorough article on Azure Deployment stacks &amp; Bicep by Frank Berson</p>
+<p><a href="https://www.linkedin.com/pulse/deployment-stacks-bicep-awesome-full-walkthrough-sneak-freek-berson?trackingId=Z2rxbNbsCmV86FWNfeSfZg%3D%3D&amp;lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_all%3BgoyYJLCwTVmW0QDmTE1ngA%3D%3D">https://www.linkedin.com/pulse/deployment-stacks-bicep-awesome-full-walkthrough-sneak-freek-berson?trackingId=Z2rxbNbsCmV86FWNfeSfZg%3D%3D&amp;lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_all%3BgoyYJLCwTVmW0QDmTE1ngA%3D%3D</a></p>
+<p>Infrastructure as Code on Azure: Bicep vs. Terraform vs. Pulumi</p>
+<p>An awesome objective comparison between &ldquo;the Big Three&rdquo; of Infrastructrue as Code. Pulumi looks really interesting.</p>
+<p><a href="https://xpirit.com/infrastructure-as-code-on-azure-bicep-vs-terraform-vs-pulumi/?utm_campaign=2023-Global-Press+releases+%2526+news+items-Brand+Communication-Awareness-All+retargeting-Various-Visuals-Non-LGF&amp;utm_source=linkedin&amp;utm_medium=paid&amp;hsa_acc=504073990&amp;hsa_cam=631587553&amp;hsa_grp=216573473&amp;hsa_ad=253172693&amp;hsa_net=linkedin&amp;hsa_ver=3">https://xpirit.com/infrastructure-as-code-on-azure-bicep-vs-terraform-vs-pulumi/?utm_campaign=2023-Global-Press+releases+%2526+news+items-Brand+Communication-Awareness-All+retargeting-Various-Visuals-Non-LGF&amp;utm_source=linkedin&amp;utm_medium=paid&amp;hsa_acc=504073990&amp;hsa_cam=631587553&amp;hsa_grp=216573473&amp;hsa_ad=253172693&amp;hsa_net=linkedin&amp;hsa_ver=3</a></p>
+<h3 id="watching">Watching</h3>
+<p>Watching hardly any youtube this week.</p>
+<h3 id="listening">Listening</h3>
+<p>Not much listening either.</p>
+<h2 id="links">Links</h2>
+<h1 id="next-week">Next Week</h1>
+<h2 id="goals--intentions">Goals &amp; Intentions</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
+<li><input disabled="" type="checkbox"> 60min long run</li>
+<li><input disabled="" type="checkbox"> Two morning runs of 6km+</li>
+<li><input disabled="" type="checkbox"> Full Blueprint adherence</li>
+<li><input disabled="" type="checkbox"> 1 video, 1 blog post</li>
+</ul>
+<h2 id="links-1">Links:</h2>
+<p>202307100807</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>2023 week 26</title>
       <link>https://mischavandenburg.com/zet/2023-week-26/</link>
