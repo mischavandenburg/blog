@@ -15,6 +15,8 @@ A Simple Path to Wealth
 
 The Richest Man in Babylon
 
+Can't Hurt Me
+
 How to Win Friends and Influence People
 
 The Subtle Art of Not Giving A F*ck

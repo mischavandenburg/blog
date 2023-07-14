@@ -6,7 +6,37 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://mischavandenburg.com/tags/ai/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/ai/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>https://mischavandenburg.com/tags/azure/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/azure/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Podcast</title>
+      <link>https://mischavandenburg.com/tags/podcast/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/podcast/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Weeknotes</title>
       <link>https://mischavandenburg.com/tags/weeknotes/</link>
@@ -23,16 +53,6 @@
       <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/aks/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Azure</title>
-      <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/azure/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -138,16 +158,6 @@
     </item>
     
     <item>
-      <title>AI</title>
-      <link>https://mischavandenburg.com/tags/ai/</link>
-      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/ai/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Buddhism</title>
       <link>https://mischavandenburg.com/tags/buddhism/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
@@ -203,16 +213,6 @@
       <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/health/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Podcast</title>
-      <link>https://mischavandenburg.com/tags/podcast/</link>
-      <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/podcast/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

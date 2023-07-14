@@ -6,7 +6,43 @@
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Podcast Notes - Azure OpenAI with Dr. Linda Sharer</title>
+      <link>https://mischavandenburg.com/zet/podcast-azure-openai/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/podcast-azure-openai/</guid>
+      <description>Key points I&amp;rsquo;ve learned LLM models are not malleable. A generative AI model is a static thing which took an enormous amount of compute to get it to the state that it is For example ChatGPT 3.5, 4. They are as they are, they don&amp;rsquo;t change. The models won&amp;rsquo;t remember your previous data. The only way to have a continuous interaction with the model is to feed all of the data into it every time.</description>
+      <content:encoded><![CDATA[<h1 id="key-points-ive-learned">Key points I&rsquo;ve learned</h1>
+<ul>
+<li>LLM models are not malleable. A generative AI model is a static thing which took an enormous amount of compute to get it to the state that it is</li>
+<li>For example ChatGPT 3.5, 4. They are as they are, they don&rsquo;t change.</li>
+<li>The models won&rsquo;t remember your previous data. The only way to have a continuous interaction with the model is to feed all of the data into it every time.</li>
+</ul>
+<h1 id="summary">Summary</h1>
+<p>This podcast is about OpenAI with Dr. Linda Sharer, a senior cloud solution architect for data and AI at Microsoft. The main topic of the episode is Azure Open AI, a service that allows users to interact with powerful generative AI models using natural language. The guest explains the concepts and capabilities of Open AI, such as prompt engineering, one-shot and few-shot learning, fine-tuning, vectorization, and retrieval-augmented generation. She also discusses the design choices and challenges of building applications with Open AI, as well as the integration with other Azure services such as Cognitive Search and ML. The host and the co-host ask questions and share their experiences with using Open AI for various use cases, such as transcribing podcasts, generating code, and searching documents. The web page also provides links to the podcast website, Twitter account, and relevant resources on Open AI.</p>
+<h1 id="some-more-bullet-points">Some more bullet points</h1>
+<ul>
+<li>Open AI models are static and do not change as users interact with them, but they can be influenced by providing examples, instructions, or additional context</li>
+<li>One-shot and few-shot learning are techniques to provide examples in the prompt to guide the model&rsquo;s output</li>
+<li>Fine-tuning is a technique to train additional layers on top of the model using a file of prompt-completion pairs for a specific use case</li>
+<li>Vectorization is a technique to convert language into a numeric representation that captures meaning and allows for semantic search</li>
+<li>Retrieval-augmented generation is a technique to combine Open AI with a knowledge store that can provide relevant search results as context for the model&rsquo;s output</li>
+</ul>
+<ul>
+<li>Open AI can be integrated with other Azure services such as Cognitive Search and ML to build applications that leverage different types of data and media</li>
+</ul>
+<p>If you are interested in learning more about Open AI, you can check out the following resources:</p>
+<p>The Azure Podcast episode #466: <a href="https://azpodcast.com/episode-466-azure-openai">https://azpodcast.com/episode-466-azure-openai</a>
+The Azure Open AI service: <a href="https://azure.microsoft.com/en-us/services/openai/">https://azure.microsoft.com/en-us/services/openai/</a>
+The Open AI Playground: <a href="https://playground.openai.com/">https://playground.openai.com/</a>
+The Open AI documentation: <a href="https://docs.openai.com/">https://docs.openai.com/</a></p>
+<h2 id="links">Links:</h2>
+<p>202307140707</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Deploying AKS Cluster With Azure CNI Using Bicep</title>
       <link>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</link>
