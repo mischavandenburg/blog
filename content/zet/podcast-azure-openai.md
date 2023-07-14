@@ -28,9 +28,12 @@ This podcast is about OpenAI with Dr. Linda Sharer, a senior cloud solution arch
 
 If you are interested in learning more about Open AI, you can check out the following resources:
 
-The Azure Podcast episode #466: https://azpodcast.com/episode-466-azure-openai
+The Azure Podcast episode #466: https://azpodcast.azurewebsites.net/post/Episode-466-Open-AI
+
 The Azure Open AI service: https://azure.microsoft.com/en-us/services/openai/
+
 The Open AI Playground: https://playground.openai.com/
+
 The Open AI documentation: https://docs.openai.com/
 
 ## Links:
