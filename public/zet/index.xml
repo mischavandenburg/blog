@@ -8,6 +8,48 @@
     <language>en</language>
     <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>2023 week 28</title>
+      <link>https://mischavandenburg.com/zet/2023-week-28/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/2023-week-28/</guid>
+      <description>It&amp;rsquo;s been a very busy week at work, but I&amp;rsquo;m doing interesting things. I&amp;rsquo;ve deployed a new Application Gateway from scratch, and I&amp;rsquo;m setting up new workloads from the bottom up. This means I have to set up the pipelines and write all the code for the required infrastructure such as virtual networks and private dns zones. When that is deployed I deploy a new AKS cluster for the workload which also involves quite a lot of steps because I need to make a bunch of network peerings and add new firewall rules.</description>
+      <content:encoded><![CDATA[<p>It&rsquo;s been a very busy week at work, but I&rsquo;m doing interesting things. I&rsquo;ve deployed a new Application Gateway from scratch, and I&rsquo;m setting up new workloads from the bottom up. This means I have to set up the pipelines and write all the code for the required infrastructure such as virtual networks and private dns zones. When that is deployed I deploy a new AKS cluster for the workload which also involves quite a lot of steps because I need to make a bunch of network peerings and add new firewall rules. But it&rsquo;s quite exciting work and it is fun to set things up from scratch.</p>
+<p>On Thursday I traveled to the Fullstaq office to attend an all-company meeting, where the leadership announced that we&rsquo;re becoming a part of <a href="https://www.thedigitalneighborhood.com/">The Digital Neighborhood</a>, which is an interesting development. I think it can lead to even more knowledge sharing and career opportunities within the group.</p>
+<p>On Friday I started expermenting with using ChatGPT and Azure OpenAI with my own data. I listened to an <a href="/zet/podcast-azure-openai/">interesting podcast</a> which inspired me to try out Azure OpenAI and build something myself.</p>
+<p>I created a fun project where I took the Collected Teachings of Ajahn Chah and fed it to my custom ChatGPT instance. I made <a href="/zet/video-azure-openai-chah-first-demo/">a video about the project.</a></p>
+<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
+<p>I set a new 10K PR this Saturday and I&rsquo;ve been going out for my morning runs steadily this week.</p>
+<p>I&rsquo;m struggling a bit with the weight loss. On the company meeting there was tasty food being offered and I overate, and on Saturday I attended a meeting where there was junk food available and I ate some sugary treats and carbohydrate rich foods. This immediately led to poorer sleep as well, so it was a valuable lesson that it is always better to stick to the programme.</p>
+<h2 id="content-consumption">Content Consumption</h2>
+<h3 id="reading">Reading</h3>
+<p>I&rsquo;m making progress in Gridlinked. It is an interesting story so far and I&rsquo;m enjoying my relaxation time in the evenings by reading fiction again.</p>
+<h3 id="watching">Watching</h3>
+<p>Almost no YouTube watching this week, but on Friday I started to experiment with using ChatGPT with your own data.</p>
+<p><a href="https://youtu.be/9AXP7tCI9PI">https://youtu.be/9AXP7tCI9PI</a></p>
+<h3 id="listening">Listening</h3>
+<p>Working through this interesting conversation between Lex Fridman and Marc Andreessen</p>
+<p><a href="https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000617915020">https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000617915020</a></p>
+<p><a href="/zet/podcast-azure-openai/">Azure OpenAi</a></p>
+<h2 id="links">Links</h2>
+<h1 id="next-week">Next Week</h1>
+<h2 id="goals--intentions">Goals &amp; Intentions</h2>
+<ul>
+<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
+<li><input disabled="" type="checkbox"> 65min long run</li>
+<li><input disabled="" type="checkbox"> Two morning runs of 6km+</li>
+<li><input disabled="" type="checkbox"> Full Blueprint adherence</li>
+<li><input disabled="" type="checkbox"> 1 video, 1 blog post</li>
+</ul>
+<ul>
+<li><input disabled="" type="checkbox"> Reduce perceived work stress</li>
+</ul>
+<h2 id="links-1">Links:</h2>
+<p>202307160907</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>I used Azure OpenAI to create an AI model of my late meditation teacher</title>
       <link>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
@@ -71,10 +113,10 @@ I decided to use this service to create an AI model of my late meditation teache
     
     <item>
       <title>2023 week 28</title>
-      <link>https://mischavandenburg.com/zet/2023-week-28/</link>
+      <link>https://mischavandenburg.com/zet/2023-week-27/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/zet/2023-week-28/</guid>
+      <guid>https://mischavandenburg.com/zet/2023-week-27/</guid>
       <description>I feel calmer now, because I didn&amp;rsquo;t have any meetups or social events this week. I&amp;rsquo;ve been less busy and had more time for meditation and yoga and I can notice the effects instantly. I&amp;rsquo;m feeling more relaxed and I allow myself more time for reading.
 On the other hand I&amp;rsquo;ve been quite productive on the content creation side. And to create the content, I experiment on my Lab subscription in Azure, which bring me a lot of learning and experience at the same time, so it is a great win-win situation.</description>
       <content:encoded><![CDATA[<p>I feel calmer now, because I didn&rsquo;t have any meetups or social events this week. I&rsquo;ve been less busy and had more time for meditation and yoga and I can notice the effects instantly. I&rsquo;m feeling more relaxed and I allow myself more time for reading.</p>
