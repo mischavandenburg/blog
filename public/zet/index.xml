@@ -6,7 +6,33 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I used Azure OpenAI to create an AI model of my late meditation teacher</title>
+      <link>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</guid>
+      <description>With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.
+I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/jZTJaUncbWc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.</p>
+<p>I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness. He passed away in 1992, but his legacy lives on through his books, recordings, and disciples.</p>
+<p>Many of his teachings were recorded and transcribed, and they are publically available. I prepared the data and fed it to my own ChatGPT instance, and I was not disappointed!</p>
+<p>The AI actually answers questions based on the given data and I look forward to fine tuning it and having more conversations.</p>
+<p>I would love to hear your feedback and thoughts on this project. What do you think of the AI model? How did it make you feel? What other questions would you like to ask him? Or maybe you have another person or topic that you would like to see modeled by AI. Let me know in the comments below.</p>
+<p>Thank you for reading and watching. May you be well and happy. 🙏</p>
+<h2 id="links">Links:</h2>
+<p>202307160807</p>
+<p><a href="https://youtu.be/jZTJaUncbWc">https://youtu.be/jZTJaUncbWc</a></p>
+<p><a href="https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/">https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Podcast Notes - Azure OpenAI with Dr. Linda Sharer</title>
       <link>https://mischavandenburg.com/zet/podcast-azure-openai/</link>
