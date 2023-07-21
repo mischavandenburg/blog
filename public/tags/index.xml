@@ -6,13 +6,23 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
       <link>https://mischavandenburg.com/tags/ai/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/ai/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Podcast</title>
+      <link>https://mischavandenburg.com/tags/podcast/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/podcast/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -43,16 +53,6 @@
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/weeknotes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Podcast</title>
-      <link>https://mischavandenburg.com/tags/podcast/</link>
-      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/podcast/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
