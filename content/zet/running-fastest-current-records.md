@@ -9,7 +9,7 @@ tags:
 
 ## The Fastest Runners in the World
 
-Running is one of the most popular and accessible sports in the world. Millions of people run for fun, fitness, or competition. But who are the fastest runners in the world? How fast can they run different distances, such as 10km, 5km, or marathon? And how do their speeds compare to the average runner?
+Today I set another record for myself, I ran 12kilometers in 70 minutes. Usually I run at a 6:30 / km pace, but today somehow I managed to run at 5:53. This had me wondering, what is the pace of the pro's? Who are the fastest runners in the world? How fast can they run different distances, such as 10km, 5km, or marathon? And how do their speeds compare to the average runner?
 
 In this blog post, I will look at the current world records for these three distances. I will also convert them to minutes per km speed, which is a common way to measure running pace. 
 
