@@ -5,7 +5,7 @@ tags:
 - Zettelkasten
 - Productivity
 - Second-Brain
-- Note-Taking
+- Notetaking
 - Article
 ---
 
