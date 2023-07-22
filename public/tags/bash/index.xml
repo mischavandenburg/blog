@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bash on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/bash/</link>
+    <description>Recent content in Bash on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wrote A Script To Delete All Resource Groups In An Azure Subscription</title>
+      <link>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</guid>
+      <description>In the Azure portal you can&amp;rsquo;t select multiple resource groups for deletion.
+I have a sponsored subscription to play around in which I sometimes wish to clean completely.
+I wrote this script to delete all resource groups using bash.
+#!/bin/bash # script to delete all resource groups in a subscription using Azure CLI # get the current subscription name to confirm subscription=$(az account show --query name -o tsv) echo &amp;#34;Use this script with caution!</description>
+      <content:encoded><![CDATA[<p>In the Azure portal you can&rsquo;t select multiple resource groups for deletion.</p>
+<p>I have a sponsored subscription to play around in which I sometimes wish to clean completely.</p>
+<p>I wrote this script to delete all resource groups using bash.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># script to delete all resource groups in a subscription using Azure CLI</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># get the current subscription name to confirm</span>
+</span></span><span class="line"><span class="cl"><span class="nv">subscription</span><span class="o">=</span><span class="k">$(</span>az account show --query name -o tsv<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Use this script with caution!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;You are about to delete all resource groups in the subscription: </span><span class="nv">$subscription</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># prompt for confirmation</span>
+</span></span><span class="line"><span class="cl"><span class="nb">read</span> -p <span class="s2">&#34;Are you sure? (y/n) &#34;</span> will_delete
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$will_delete</span> <span class="o">==</span> <span class="o">[</span>Yy<span class="o">]</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> <span class="s2">&#34;Deleting resource groups...&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nv">groups</span><span class="o">=</span><span class="k">$(</span>az group list --query <span class="s2">&#34;[].name&#34;</span> -o tsv<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1"># Loop through each group name and delete it</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> group in <span class="nv">$groups</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">		az group delete --name <span class="s2">&#34;</span><span class="nv">$group</span><span class="s2">&#34;</span> --yes --no-wait
+</span></span><span class="line"><span class="cl">	<span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nb">echo</span> <span class="s2">&#34;All resource groups have been deleted.&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Exiting without deleting any resource groups.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Probably wise.&#34;</span>
+</span></span></code></pre></div><h2 id="links">Links:</h2>
+<p>202307081507</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: How I Write &amp; Publish My Blog Using Neovim &amp; Hugo From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/blogging-from-command-line/</link>
+      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/blogging-from-command-line/</guid>
+      <description>I show my workflow to publish my Hugo blog from the command line using neovim and bash
+Links: 202305091705</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/bzkrmkGDQJA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>I show my workflow to publish my Hugo blog from the command line using neovim and bash</p>
+<h2 id="links">Links:</h2>
+<p>202305091705</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Generating Markdown Headings with YYYY-MM-DD Date Format Using Bash</title>
+      <link>https://mischavandenburg.com/zet/generate-markdown-headings-date/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/generate-markdown-headings-date/</guid>
+      <description>A couple of weeks ago I created a simple bash script to generate a date in format YYY-MM-DD to use with the magic !! wands in vim.
+Just now I wanted to expand this with being able to create a markdown header with this date.
+#!/bin/bash # Gendate generates the date in YYY-MM-DD format # Can be called with arguments h and number to generate a markdown heading # For example: &amp;#39;gendate h 3&amp;#39; will generate &amp;#39;### 2023-03-29&amp;#39; header=&amp;#34;&amp;#34; date=$(date +&amp;#34;%Y-%m-%d&amp;#34;) if [[ $# -gt 0 ]]; then # handling wrong arguments if [[ $# -eq 1 || &amp;#34;$1&amp;#34; !</description>
+      <content:encoded><![CDATA[<p>A couple of weeks ago I created a simple bash script to generate a date in format YYY-MM-DD to use with the magic !! wands in vim.</p>
+<p>Just now I wanted to expand this with being able to create a markdown header with this date.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Gendate generates the date in YYY-MM-DD format</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Can be called with arguments h and number to generate a markdown heading</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># For example: &#39;gendate h 3&#39; will generate &#39;### 2023-03-29&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">header</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">date</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> <span class="nv">$#</span> -gt <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># handling wrong arguments</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">||</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;h&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Usage: gendate h 2 to generate with markdown heading ##&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># format markdown heading if arguments h, n are given</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$#</span> -eq <span class="m">2</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$2</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">header</span><span class="o">+=</span><span class="s2">&#34;#&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">done</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">header</span><span class="o">+=</span><span class="s2">&#34; &#34;</span><span class="nv">$date</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$header</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># if no arguments given, generate the date</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$date</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h2 id="links">Links:</h2>
+<p>202304011104</p>
+<p><a href="https://github.com/mischavandenburg/dotfiles/tree/main/scripts">https://github.com/mischavandenburg/dotfiles/tree/main/scripts</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Using parameter expansion as search and replace</title>
+      <link>https://mischavandenburg.com/zet/slash-syntax-replace/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/slash-syntax-replace/</guid>
+      <description>Last modified: 2023-01-10
+In this evening&amp;rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:
+!#/bin/bash echo -e ${PATH//:/\\n} I could not make heads or tails of all these slashes and curly braces, since the output clearly indicated that search and replacement was being performed. I&amp;rsquo;m used to the sed / vim syntax: s/foo/bar
+After some research I learned that &amp;lsquo;//&amp;rsquo; is a global search and replace syntax of several text processing programs.</description>
+      <content:encoded><![CDATA[<p><em>Last modified: 2023-01-10</em></p>
+<p>In this evening&rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">!#/bin/bash
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="si">${</span><span class="nv">PATH</span><span class="p">//:/</span><span class="se">\\</span><span class="nv">n</span><span class="si">}</span>
+</span></span></code></pre></div><p>I could not make heads or tails of all these slashes and curly braces, since the output clearly indicated that search and replacement was being performed. I&rsquo;m used to the sed / vim syntax: <code>s/foo/bar</code></p>
+<p>After some research I learned that &lsquo;//&rsquo; is a global search and replace syntax of several text processing programs. It is known as parameter expansion in bash.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">foo</span><span class="o">=</span><span class="s2">&#34;1234567890&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">foo</span><span class="p">//[0-9]/x</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>This replaces all the digits in the $foo variable with &lsquo;x&rsquo;, so the output would be xxxxxxxxxx</p>
+<p>To do this with sed, you would do:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$foo</span><span class="s2">&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;s/[0-9]/x/g&#39;</span>
+</span></span></code></pre></div><p>For more info:</p>
+<p><code>man bash</code></p>
+<p><code>/parameter expansion</code></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Back to Bas(h)ics: leaving zsh for now</title>
+      <link>https://mischavandenburg.com/zet/back-to-bashics/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/back-to-bashics/</guid>
+      <description>I&amp;rsquo;ve used zsh for nearly two years now. I have a custom setup with autocompletion and a good looking prompt.
+Recently I&amp;rsquo;ve been diving deeper into bash scripting, following tutorials by rwxrob. He emphasizes all the time that it is much better to stick to bash instead of zsh.
+Advantages of using bash:
+the default Linux shell available on any Linux system full documentation available anywhere at all times with man bash free software less dependent on external plugins and configurations more portable practice by working on the command line The fact that working on the commandline is already coding convinced me to leave my beloved customized prompt behind (for now) and go back to the basics.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ve used zsh for nearly two years now. I have a custom setup with autocompletion and a good looking prompt.</p>
+<p>Recently I&rsquo;ve been diving deeper into bash scripting, following tutorials by rwxrob. He emphasizes all the time that it is much better to stick to bash instead of zsh.</p>
+<p>Advantages of using bash:</p>
+<ul>
+<li>the default Linux shell</li>
+<li>available on any Linux system</li>
+<li>full documentation available anywhere at all times with <code>man bash</code></li>
+<li>free software</li>
+<li>less dependent on external plugins and configurations</li>
+<li>more portable</li>
+<li>practice by working on the command line</li>
+</ul>
+<p>The fact that <a href="/content/zet/bash-cmdline-is-coding.md">working on the commandline is already coding</a> convinced me to leave my beloved customized prompt behind (for now) and go back to the basics.</p>
+<p>I want to improve my bash scripting, and working in the bash shell will improve that just by virtue of doing my daily tasks on the command line.</p>
+<p>Also I noticed I&rsquo;ve gotten used to zsh&rsquo;s excellent autocompletion and menu navigation. When I log in to servers at work, there is always this little moment of &ldquo;oh, I don&rsquo;t have that here&rdquo;. I want to get better at bash so I&rsquo;m not dependent on these external crutches anymore.</p>
+<p>Also, I&rsquo;m going to port my zsh configuration to bash. My current zsh configuration loads a bunch of plugins, and it is more of a hassle to get set up on a new system.</p>
+<p>I want to be able to pull my dotfiles repo and do very few steps to configure my environment.</p>
+<p>But I&rsquo;m going to miss that good-looking prompt with all the lovely icons!</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kubernetes on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: Deploying AKS Cluster With Azure CNI Using Bicep</title>
+      <link>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</link>
+      <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</guid>
+      <description>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.
+Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.
+I use Neovim and the Azure CLI for my coding and deployment.
+You will learn how to:
+Implement dev/test prefix to create multiple clusters with the same template Plan a VNet range for an Azure CNI cluster and be mindful of overlaps Deploy a VNet and subnet for the cluster using Bicep Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node Validate your Bicep template and troubleshoot errors Explore the results of your deployment in the Azure portal Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/_U3HichIJ0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.</p>
+<p>Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.</p>
+<p>I use Neovim and the Azure CLI for my coding and deployment.</p>
+<p>You will learn how to:</p>
+<ul>
+<li>Implement dev/test prefix to create multiple clusters with the same template</li>
+<li>Plan a VNet range for an Azure CNI cluster and be mindful of overlaps</li>
+<li>Deploy a VNet and subnet for the cluster using Bicep</li>
+<li>Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node</li>
+<li>Validate your Bicep template and troubleshoot errors</li>
+<li>Explore the results of your deployment in the Azure portal</li>
+<li>Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps</li>
+</ul>
+<p>This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</p>
+<h1 id="excalidraw">Excalidraw</h1>
+<p><img loading="lazy" src="/excni.png" type="" alt=""  /></p>
+<h1 id="bullet-points">Bullet Points</h1>
+<ul>
+<li>Introduction to Azure CNI</li>
+<li>Implement dev/test prefix</li>
+<li>Deploy VNET and one subnet for the cluster</li>
+<li>Deploy cluster with Azure CNI enabled</li>
+</ul>
+<h1 id="vnet-planning">VNet planning</h1>
+<p>VNet cidr: 10.108.0.0/16</p>
+<p>Subnet cidr:</p>
+<p>10.108.0.0/16 - 65,536 addresses</p>
+<p>Service cidr 10.0.0.0/16
+DNS service ip addres 10.0.0.10</p>
+<h2 id="links">Links:</h2>
+<p>202307071807</p>
+<p><a href="https://youtu.be/_U3HichIJ0Q">https://youtu.be/_U3HichIJ0Q</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/aks/configure-azure-cni">https://learn.microsoft.com/en-us/azure/aks/configure-azure-cni</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: Finishing Pipeline Setup  &amp; Working on KeyVault Template - Azure Kubernetes Lab Series</title>
+      <link>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</guid>
+      <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
+acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/eooZ3OHl5Mc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<ul>
+<li>Finish deploying keyvault using pipeline</li>
+<li>Get the random name generation to work</li>
+</ul>
+<h1 id="lessons-learned">Lessons Learned</h1>
+<ul>
+<li>Subscriptions need to be registered with resource providers, apparently</li>
+</ul>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli">https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli</a></p>
+<ul>
+<li>acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled</li>
+<li>Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline</li>
+</ul>
+<h1 id="achieved">Achieved</h1>
+<ul>
+<li>Setting up connection between pipeline and Azure subscription</li>
+<li>Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources)</li>
+<li>Learned about provider registrations</li>
+<li>Made progress on creating unique names for resources</li>
+<li>Successfully deployed new resource group and key vault from the pipeline</li>
+</ul>
+<h1 id="next-time">Next time:</h1>
+<p>Look into random string creation with utcNow</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-date#utcnow">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-date#utcnow</a></p>
+<p>or newGuid</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-string#newguid">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-functions-string#newguid</a></p>
+<p>Links:</p>
+<p>202306281806</p>
+<h2 id="links">Links:</h2>
+<p>202306302206</p>
+<p><a href="https://youtu.be/eooZ3OHl5Mc">https://youtu.be/eooZ3OHl5Mc</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: Setting Up A Simple Azure Pipeline To Deploy A Keyvault</title>
+      <link>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
+      <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
+https://youtu.be/WnA8V3uq7P8</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/WnA8V3uq7P8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<ul>
+<li>Write KeyVault template</li>
+<li>Write pipeline code</li>
+<li>set up Azure DevOps pipeline</li>
+</ul>
+<h1 id="lessons-learned">Lessons Learned</h1>
+<ul>
+<li>Always make sure to use <code>az deployment group</code> instead of <code>az group deployment</code></li>
+<li>Because it has older Bicep version and will be deprecated</li>
+<li>Make sure to be in correct Directory to be able to sync subscriptions for service connection</li>
+</ul>
+<h2 id="links">Links:</h2>
+<p>202306302206</p>
+<p><a href="https://youtu.be/WnA8V3uq7P8">https://youtu.be/WnA8V3uq7P8</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim</title>
+      <link>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</guid>
+      <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
+Links: 202306271706
+https://www.youtube.com/watch?v=l0B65FUfNBU
+[[aks]] [[kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+      <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/l0B65FUfNBU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="links">Links:</h2>
+<p>202306271706</p>
+<p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
+<p>[[aks]]
+[[kubernetes]]
+[[neovim]]
+[[bicep]]
+[[coding]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: Introducing New Bicep Parameter Files - .bicepparam - No more JSON!</title>
+      <link>https://mischavandenburg.com/zet/video-bicep-bicepparam/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-bicep-bicepparam/</guid>
+      <description>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:
+More readable and editor friendly Cleaner and less lines of code VSCode integration Quickly convert from JSON or template file using VSCode In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .</description>
+      <content:encoded><![CDATA[<p>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:</p>
+<ul>
+<li>More readable and editor friendly</li>
+<li>Cleaner and less lines of code</li>
+<li>VSCode integration</li>
+<li>Quickly convert from JSON or template file using VSCode</li>
+</ul>
+<p>In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.</p>
+<p>Yes, you read that right, you&rsquo;ll be seeing a hardcore vim user switch to VSCode for this particular task!</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/6Gav1JpGAzo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="links">Links:</h2>
+<p>202306271706</p>
+<p><a href="https://youtu.be/6Gav1JpGAzo">https://youtu.be/6Gav1JpGAzo</a></p>
+<p><a href="https://github.com/Azure/bicep/releases/tag/v0.18.4">https://github.com/Azure/bicep/releases/tag/v0.18.4</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/parameter-files?tabs=Bicep">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/parameter-files?tabs=Bicep</a></p>
+<p><a href="https://github.com/mischavandenburg/lab/tree/main/bicep/keyvault-parameters">https://github.com/mischavandenburg/lab/tree/main/bicep/keyvault-parameters</a></p>
+<p>[[AKS]]
+[[bicep]]
+[[coding]]
+[[kubernetes]]
+[[azure]]
+[[neovim]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>What is Azure CNI Overlay for AKS?</title>
+      <link>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</guid>
+      <description>CNI? CNI stands for Container Network Interface. It allows communication between pods and services.
+Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have an enterprise environment where a large network is utilized, spanning multiple clouds and on-prem infrastructure hubs. To enable seamless communication across these sections, they must belong to the same network. As a result, specific IP address ranges are assigned to each section, with AWS, On-Prem A, and Azure each having their respective ranges.</description>
+      <content:encoded><![CDATA[<h1 id="cni">CNI?</h1>
+<p>CNI stands for Container Network Interface. It allows communication between pods and services.</p>
+<h2 id="current-azure-cni-limitations">Current Azure CNI limitations</h2>
+<p>Let&rsquo;s take a practical example. We have an enterprise environment where a large network is utilized, spanning multiple clouds and on-prem infrastructure hubs. To enable seamless communication across these sections, they must belong to the same network. As a result, specific IP address ranges are assigned to each section, with AWS, On-Prem A, and Azure each having their respective ranges.</p>
+<p>Let&rsquo;s say Azure is assigned the following ranges:</p>
+<p>10.60.0.0/16</p>
+<p>10.61.0.0/16</p>
+<p>10.62.0.0/16</p>
+<p>This means that the networks in each of these ranges would have a maximum possible amount of 65534 addresses per range.</p>
+<p>With the current Azure CNI (i.e. the non-overlay version), all pods are assigned an IP address from one of these ranges. It also uses direct VNet routing.  Since the pods use VNet IP&rsquo;s, there is a maximum of 65.000 pods per cluster. In other words, there is a risk for IP exhaustion, which limits the scalability of your workloads. Moreover, pod subnets cannot be shared across clusters.</p>
+<p>It is crucial to carefully plan the number of pods you expect to deploy. If the required number of IP addresses exceeds the available addresses in the subnet, you will not be able to run your pods.</p>
+<p>Now, these ranges are large and you can anticipate the growth of your resources. For now we are fine. But to design an infrastructure which is truly scalable and extendable, you will need to look into different options. This is where the Azure CNI Overlay comes in.</p>
+<h2 id="benefits-of-azure-cni-overlay">Benefits of Azure CNI Overlay</h2>
+<p>An Overlay network is an abstracted, virtual network which is put on top of your current network infrastructure. Nodes are assigned IP addresses from the VNets that they are deployed in, but pods get assigned IP addresses from the Overlay network.</p>
+<p>Pods are assigned addresses from a private CIDR which is logically separate from the VNet hosting the nodes. They do not use up the IP addressess of the VNets, which means that your workloads become nearly infinitely scalable within your assigned IP address ranges when you are operating in this type of corporate networking infrastructure with IP range limitations. You can scale up to literally thousands of nodes without worrying about IP exhaustion.</p>
+<p><img loading="lazy" src="/cnioverlay.png" type="" alt=""  /></p>
+<p>Additionally, the Overlay network can also span across multiple AKS clusters. This opens up a whole world of possibilities where pods from separate workloads on separate clusters could communicate with each other directly using the high speed native direct routing of the Azure network.</p>
+<h2 id="limitations">Limitations</h2>
+<p>Azure CNI Overlay also comes with some limitations. A big one is that you cannot use Application Gateway as an Ingress Controller (AGIC) for an Overlay cluster.</p>
+<p>Other notable limitations:</p>
+<ul>
+<li>Windows support is still in Preview</li>
+<li>Virtual Machine Availability Sets (VMAS) are not supported for Overlay</li>
+<li>Dualstack networking is not supported in Overlay</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, the Azure CNI Overlay provides a powerful solution to address the challenges of IP exhaustion and scalability in Azure AKS. By implementing the overlay network, organizations can overcome the limitations of the non-overlay version of Azure CNI and achieve a truly scalable and manageable infrastructure.</p>
+<p>Azure CNI Overlay is currently in preview for Windows and GA for Linux nodes, but I&rsquo;m very excited about the developments. I&rsquo;ll be following them closely and I hope to be a part of its implementation at my current contract.</p>
+<h1 id="links">Links:</h1>
+<p><a href="https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay">https://learn.microsoft.com/en-us/azure/aks/azure-cni-overlay</a></p>
+<p><a href="https://www.youtube.com/watch?v=kLBLaCC_dNs">https://www.youtube.com/watch?v=kLBLaCC_dNs</a></p>
+<p><a href="https://azure.microsoft.com/en-us/updates/generally-available-azure-cni-overlay-for-linux/">https://azure.microsoft.com/en-us/updates/generally-available-azure-cni-overlay-for-linux/</a></p>
+<p>202306131506</p>
+<p>[[aks-networking-essentials]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Deploying Simple Applications to AKS with Draft</title>
+      <link>https://mischavandenburg.com/zet/deploy-draft-azure/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/deploy-draft-azure/</guid>
+      <description>Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&amp;rsquo;m curious to see how far Microsoft will take this!
+Links: 202306092006</description>
+      <content:encoded><![CDATA[<p>Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&rsquo;m curious to see how far Microsoft will take this!</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/PqhdX8-SZYw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="links">Links:</h2>
+<p>202306092006</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>You Can Abort Operations on AKS Clusters Now</title>
+      <link>https://mischavandenburg.com/zet/aks-abort-operation/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/aks-abort-operation/</guid>
+      <description>It&amp;rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.
+For example:
+az aks operation-abort --name myAKSCluster --resource-group myResourceGroup
+Links: 202304270704
+https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/
+https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli</description>
+      <content:encoded><![CDATA[<p>It&rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.</p>
+<p>For example:</p>
+<p><code>az aks operation-abort --name myAKSCluster --resource-group myResourceGroup</code></p>
+<h2 id="links">Links:</h2>
+<p>202304270704</p>
+<p><a href="https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/">https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/</a></p>
+<p><a href="https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli">https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Starting My Homelab</title>
+      <link>https://mischavandenburg.com/zet/starting-my-homelab/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/starting-my-homelab/</guid>
+      <description>This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s Homelab Init playlist on YouTube which I&amp;rsquo;m working on.
+There are a few reasons why I haven&amp;rsquo;t started up until now:</description>
+      <content:encoded><![CDATA[<p>This week I started a project which I&rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&rsquo;ve been collecting hardware here and there, and I&rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&rsquo;s <a href="https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J">Homelab Init</a> playlist on YouTube which I&rsquo;m working on.</p>
+<p>There are a few reasons why I haven&rsquo;t started up until now:</p>
+<ul>
+<li>Focused on switching jobs and certifications</li>
+<li>Not knowing what to run on the cluster</li>
+<li>High electricity costs</li>
+</ul>
+<p>Now that I found a new job with a great employer, I&rsquo;ve changed my focus towards doing more hands-on learning in my free time by learning Go and diving deeper into Cloud Native technology. Energy prices have come down in the meantime as well.</p>
+<p>I&rsquo;ve reached a stage in my Go learning journey where I&rsquo;m actually able to start making small deployable applications, and I want an environment where I can do that without high costs or without fearing to break something. I want to learn more about databases on Kubernetes, and I want to start writing small microservices and API&rsquo;s that are able to query these databases.</p>
+<p>My lab is going to be my playground, where I can deploy whatever I want and learn the technologies that interest me at that particular moment.</p>
+<h1 id="hardware-parts">Hardware: Parts</h1>
+<p>For some reason the Raspberry Pi has become synonymous with homelabs. I get that it&rsquo;s fun to run a cluster on something that is not much larger than a 1kg pack of sugar. But I never really caught on to that whole scene yet. Maybe it&rsquo;s because I&rsquo;m a bit late to the party and the Pi&rsquo;s have been scarce and very expensive lately?</p>
+<p>In any case, I&rsquo;ve been thankfully accepting old computers that friends were going to get rid of, and I&rsquo;ve been keeping some of my own old hardware as well. I have enough motherboards and other parts to assemble around 3 nodes, which will probably have around 8GB RAM each, but possibilities to attach storage.</p>
+<p>This is also what has been keeping me back for a while I think. There is quite a bit of work that I need to do to get these machines going, and probably I&rsquo;ll have to purchase a couple of other parts. However, I also have some functional hardware.</p>
+<h2 id="gaming-desktop">Gaming Desktop</h2>
+<p>I have an old gaming desktop with 16GB RAM, an Intel 6700K Skylake, 1070 video card and a couple of TB of storage.</p>
+<p>This has been my Arch Linux desktop for the past year, but now that I switched to my new MacBook, I&rsquo;m not using it as much. I want to keep it as it is right now, but I could run a few Virtual Machines on there, and maybe consider turning it into a ProxMox server.</p>
+<h2 id="old-laptops">Old Laptops</h2>
+<p>I have two old laptops. One Asus with 4GB of RAM and a Thinkpad T430 with 8GB RAM. The Thinkpad is actually surprisingly powerful. As a weekend project I installed Arch on it and I fitted it with a refurbished keyboard, and it is a very pleasant machine to work with. However, now that I have a very powerful laptop that I use as a desktop and portable device, it has become redundant.</p>
+<h1 id="old-laptops-as-raspberri-pis">Old Laptops as Raspberri Pi&rsquo;s</h1>
+<p>Having these two old laptops lying around, it occurred to me that these machines were basically Raspberri Pi&rsquo;s with a large form factor and a higher power usage. Why would I need to spend hundreds of euros on these smaller computers if I could just use these laptops as a starting point for my lab?</p>
+<p>Using laptops has the following advantages:</p>
+<ul>
+<li>No additional costs</li>
+<li>No building needed</li>
+<li>Easy to install Linux on them</li>
+<li>Built-in screen and keyboard for quick access when SSH does not work out</li>
+<li>Built-in batteries to handle short power disruptions (rare but possible)</li>
+<li>Can get going very quickly</li>
+</ul>
+<h1 id="choices-and-goals">Choices and Goals</h1>
+<h2 id="kubernetes">Kubernetes</h2>
+<p>The first goal is to get a Kubernetes cluster running. I will do bare metal kubeadm installs, and later I want to learn more about Talos. Fortunately I feel very comfortable installing Kubernetes with kubeadm. I did plenty of practice for my CKA, and I recently installed it on free Oracle VM&rsquo;s. I&rsquo;ve experimented a bit with K9S earlier, but I want to learn how to maintain on-prem Kubernetes.</p>
+<p>My goals is to learn to maintain production-grade clusters properly.</p>
+<h2 id="linux">Linux</h2>
+<p>Naturally I&rsquo;ll be using Linux as my base OS. After some consideration I chose to use Ubuntu Server 22. Some notes on that choice:</p>
+<ul>
+<li>I already have years of Ubuntu Server experience</li>
+<li>Good to keep building on what I have</li>
+<li>Working with managed Kubernetes on my day job requires me to keep Linux admin skills fresh</li>
+<li>Still the <a href="https://www.enterpriseappstoday.com/stats/linux-statistics.html">most popular Linux distro</a></li>
+<li>Google uses Ubuntu Server</li>
+<li>Well documented and plenty of questions on StackOverflow</li>
+</ul>
+<h2 id="infrastructure-as-code--gitops">Infrastructure as Code &amp; GitOps</h2>
+<p>Initially I&rsquo;ll configure the servers by hand, but I want to have the server configuration as code as Ansible playbooks eventually. However, I&rsquo;ll be using ArgoCD for all of my deployments on Kubernetes itself, so the server configuration is only a very small part of the setup. Just get Kubernetes running and do the rest with ArgoCD.</p>
+<p>Perhaps I will expand with larger servers that run multiple VM&rsquo;s. Then it will be very relevant to start provisioning these with Ansible.</p>
+<h2 id="networking">Networking</h2>
+<p>I want to learn more about networking and use static IP addresses for my servers. I need to figure out how my home network works exactly. Surprisingly, I&rsquo;ve never taken the effort to actually know how the devices on my network get their IP addresses and how they communicate, even though I&rsquo;ve learned plenty about it for my day job and do networking in an enterprise environment daily.</p>
+<p>For Kubernetes I&rsquo;ll use Flannel to start out with, but I want to learn more about Cilium, Istio and other service mesh implementations.</p>
+<p>Another goal is to host my own DNS server for internal name resolution, probably CoreDNS.</p>
+<h2 id="deployment">Deployment</h2>
+<p>I want to host my own container registry (Harbor) and use Tekton pipelines to for CI/CD, and I&rsquo;m playing with the thought to host my own GitLab instance as well.</p>
+<h1 id="lets-go">Let&rsquo;s Go!</h1>
+<p>Another realization was that I don&rsquo;t need to have everything figured out before I begin. The beauty of cluster computing is that you can add to it as you go. I can start with a small cluster of two nodes and build it out as my needs grow. I don&rsquo;t expect to need more than a few GB of RAM in the foreseeable future, so these two laptops will be plenty to get going.</p>
+<p><img loading="lazy" src="/cluster-laptops.png" type="" alt=""  /></p>
+<h2 id="links">Links:</h2>
+<p>2023041213</p>
+<p>[[homelab]]</p>
+<p>[[homelab-network]]</p>
+<p>[[linux]]</p>
+<p>[[homelab-ubuntu-server]]</p>
+<p>[[kubernetes]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Outlining My First Go Project</title>
+      <link>https://mischavandenburg.com/zet/go-twitter-cli-project/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-twitter-cli-project/</guid>
+      <description>When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.
+Over the past few months I&amp;rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.
+https://github.com/mischavandenburg/twitter-cli
+https://twitter.com/mischa_vdburg
+Twitter CLI Programs should solve a problem.</description>
+      <content:encoded><![CDATA[<p>When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.</p>
+<p>Over the past few months I&rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.</p>
+<p><a href="https://github.com/mischavandenburg/twitter-cli">https://github.com/mischavandenburg/twitter-cli</a></p>
+<p><a href="https://twitter.com/mischa_vdburg">https://twitter.com/mischa_vdburg</a></p>
+<h1 id="twitter-cli">Twitter CLI</h1>
+<p>Programs should solve a problem. My problem has to do with Twitter. I recently created a Twitter account, and I want to make a tweet whenever I publish something new on my website. I&rsquo;m currently doing this by hand, and that needs to stop, obviously.</p>
+<p>There are bots out there for this, but I want to build it myself. I&rsquo;ve created the following user stories for my project.</p>
+<h2 id="user-story-1">User Story 1</h2>
+<blockquote>
+<p>As a user, I need a command that I can run from a bash shell that will post the standard input to my Twitter account</p>
+</blockquote>
+<h2 id="user-story-2">User Story 2</h2>
+<blockquote>
+<p>As a user, I need a command that I can run from a bash shell that will take the latest post from the RSS feed generated by my blog and post it to Twitter</p>
+</blockquote>
+<h2 id="concepts">Concepts</h2>
+<p>By writing this program I&rsquo;ll need to figure out the following problems in Go:</p>
+<ul>
+<li>Taking input from the command line</li>
+<li>Authenticating to the Twitter API</li>
+<li>Making a POST request to the Twitter API</li>
+<li>Curling an RSS feed</li>
+<li>Looping over / reading XML / HTML data</li>
+<li>Transforming that data to a suitable format to post to Twitter</li>
+</ul>
+<h1 id="expansion">Expansion</h1>
+<p>This will be a good start for my project and will keep me busy for a while. When I solved the previous problems I can use the result and expand further. Some thoughts about further expansion:</p>
+<h2 id="rss-feeds">RSS Feeds</h2>
+<p>I can use the skills I learn to start crawling Reddit feeds and filter them for keywords. I can automatically generate a curated selection from Reddit which will be easier to consume and will save me time by only serving me content that I might think is interesting to me, based on keywords.</p>
+<h2 id="database">Database</h2>
+<p>I want to learn more about using databases on Kubernetes and how to interact with databases using Go. For this I&rsquo;d like to store my RSS feed into a database and keep track of information in the database. I could track whether an article has been posted to Twitter and when.</p>
+<h2 id="bot">Bot</h2>
+<p>Rather than posting my latest blog post to Twitter by manually running a command, I should have a bot scanning my blog and posting to Twitter when it detects a new article. Or I could trigger the bot whenever I make a push to my blog repo.</p>
+<p>In any case, I want to have an application running on a server. I&rsquo;m making plans to start up a proper home lab and this will be a perfect use case to start running on my home Kubernetes cluster.</p>
+<h2 id="links">Links:</h2>
+<p>202304081304</p>
+<p><a href="https://github.com/mischavandenburg/twitter-cli">https://github.com/mischavandenburg/twitter-cli</a></p>
+<p><a href="https://twitter.com/mischa_vdburg">https://twitter.com/mischa_vdburg</a></p>
+<p>[[go]]</p>
+<p>[[go-twitter-cli-project]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Kubernetes Resource Management for Pods and Containers - CPU and Memory</title>
+      <link>https://mischavandenburg.com/zet/kubernetes-resource-management-pods-containers/</link>
+      <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/kubernetes-resource-management-pods-containers/</guid>
+      <description>Pods have containers, and limits can be set on those containers.
+Requests used by the kube-scheduler to determine where the Pod will be placed containers can use more than requested resources if it is available on node If a limit is specified, but no request, Kubernetes will use the limit value as the request value.
+Limits containers may never use more than the set limit
+enforced by kubelet and container</description>
+      <content:encoded><![CDATA[<p>Pods have containers, and limits can be set on those containers.</p>
+<h1 id="requests">Requests</h1>
+<ul>
+<li>used by the kube-scheduler to determine where the Pod will be placed</li>
+<li>containers can use more than requested resources if it is available on node</li>
+</ul>
+<p>If a limit is specified, but no request, Kubernetes will use the limit value as the request value.</p>
+<h1 id="limits">Limits</h1>
+<ul>
+<li>
+<p>containers may never use more than the set limit</p>
+</li>
+<li>
+<p>enforced by kubelet and container</p>
+</li>
+<li>
+<p>host kernel will kill processes that attempt to allocate more than limit (OOM error)</p>
+</li>
+<li>
+<p>reactively: killed when exceeded</p>
+</li>
+<li>
+<p>enforcement: system prevents container to ever exceed limit</p>
+</li>
+<li>
+<p>If the node runs out of memory and the container exceeds its memory request, the pod will be evicted</p>
+</li>
+<li>
+<p>container runtimes don&rsquo;t terminate Pods or containers for excessive CPU usage</p>
+</li>
+</ul>
+<h1 id="pods">Pods</h1>
+<p>The pod resource request and limit is the sum of the resource requests of the containers in the pod.</p>
+<h1 id="cpu-units">CPU Units</h1>
+<p>Defined as an absolute amount of resource. 1000m = 1 CPU.</p>
+<p>This is always the same unit, regardless whether the host has 4 or 48 CPU&rsquo;s.</p>
+<p>500m CPU = 0.5 CPU</p>
+<h1 id="memory-units">Memory Units</h1>
+<p>Can use P, T, G, M etc.</p>
+<p>Note that &ldquo;m&rdquo; is not megabyte. 0.8m = 0.8 bytes.</p>
+<p>Use mebibytes Mi or megabytes M.</p>
+<h1 id="definiton-example">Definiton Example</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l">100Mi</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l">250m</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">limits</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l">200Mi</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l">500m</span><span class="w">
+</span></span></span></code></pre></div><h1 id="scheduling">Scheduling</h1>
+<p>The scheduler ensures that the sum of requests of the pods on the node does not exceed the available resources.</p>
+<p>Even if a node has low resource usage, it will not accept pods that have requests which exceed the available resources.</p>
+<h1 id="nodes">Nodes</h1>
+<p>use <code>k describe node</code> to see the resource status of the node.</p>
+<h2 id="links">Links:</h2>
+<p>202303281903</p>
+<p><a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/">https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>The Difference Between DevOps, Cloud and Cloud Native</title>
+      <link>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</guid>
+      <description>I found an excellent video by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.
+Cloud These are primarily cloud services. The external cloud.
+&amp;ldquo;Something as a Service&amp;rdquo;.
+Amazon Azure GCP Cloud Native This is Cloud Native: The CNCF Landscape
+Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.
+Computing Edge Computing
+High Performance Computing</description>
+      <content:encoded><![CDATA[<p>I found <a href="https://youtu.be/gyjRriOyw-k">an excellent video</a> by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.</p>
+<h1 id="cloud">Cloud</h1>
+<p>These are primarily <em>cloud services</em>. The external cloud.</p>
+<p>&ldquo;Something as a Service&rdquo;.</p>
+<ul>
+<li>Amazon</li>
+<li>Azure</li>
+<li>GCP</li>
+</ul>
+<h1 id="cloud-native">Cloud Native</h1>
+<p>This is Cloud Native: <a href="https://landscape.cncf.io/">The CNCF Landscape</a></p>
+<p>Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.</p>
+<h2 id="computing">Computing</h2>
+<ul>
+<li>
+<p>Edge Computing</p>
+</li>
+<li>
+<p>High Performance Computing</p>
+</li>
+<li>
+<p>Encapsulates all of the technologies that are involved with containerization of work, jobs and nodes</p>
+</li>
+<li>
+<p>Deployment of compute resources as nodes</p>
+</li>
+<li>
+<p>This is why Google&rsquo;s Borg was called Borg</p>
+</li>
+<li>
+<p>Computers are drones of a larger collective</p>
+</li>
+<li>
+<p>Every node puts all the resources into the collective.</p>
+</li>
+</ul>
+<p>The collective is all the nodes combined, and Kubernetes is the Borg that orchestrates everything. It sees available resources and allocates the work that needs to be done.</p>
+<p>Borg is the internal system developed at Google to run their infrastructure. You can read about it in the <a href="https://sre.google/books/">Site Reliability Engineering</a> books and I highly recommend them.</p>
+<blockquote>
+<p>Kubernetes is /proc for the cloud</p>
+</blockquote>
+<blockquote>
+<p>Rob Muhlenstein</p>
+</blockquote>
+<h2 id="most-important-technologies">Most Important Technologies</h2>
+<ul>
+<li>
+<p>Docker, Dockerfiles</p>
+</li>
+<li>
+<p>Kubernetes</p>
+</li>
+<li>
+<p>Helm</p>
+</li>
+<li>
+<p>Harbor</p>
+</li>
+<li>
+<p>Different registries, harbor, quay</p>
+</li>
+<li>
+<p>It is a lot of Python and POSIX shell</p>
+</li>
+<li>
+<p>Go for infrastructure application development</p>
+</li>
+<li>
+<p>Kubernetes and Helm have won the game</p>
+</li>
+</ul>
+<h2 id="containers-size-matters">Containers: Size Matters</h2>
+<ul>
+<li>Size matters (again) in the cloud</li>
+<li>The smaller your container the better, because it takes less resources and less costs</li>
+</ul>
+<h1 id="devops">DevOps</h1>
+<p>DevOps is not the same as Cloud Native. It is one piece of it, a specific set of practices and actions that can be done within Cloud Native.</p>
+<ul>
+<li>How you write software and release it</li>
+<li>CI/CD</li>
+<li>Focused on getting the software out</li>
+<li>GitLab has become the one stop shop</li>
+<li>Purpose is to write software and get it published fast</li>
+<li>GitOps</li>
+</ul>
+<h1 id="summary">Summary</h1>
+<p>In summary, &ldquo;cloud&rdquo; stands for the services offered by cloud providers such as AWS, Azure and GCP. Cloud Native stands for all of the technology that makes these cloud services possible. DevOps is part of Cloud Native, but definitely not the same thing. DevOps is concerned with how software is written and released.</p>
+<h1 id="links">Links:</h1>
+<p>202303262003</p>
+<p><a href="https://youtu.be/gyjRriOyw-k">https://youtu.be/gyjRriOyw-k</a></p>
+<p><a href="https://landscape.cncf.io/">https://landscape.cncf.io/</a></p>
+<p><a href="https://sre.google/books/">https://sre.google/books/</a></p>
+<p>[[rwxrob]]</p>
+<p>[[devops]]</p>
+<p>[[kubernetes]]</p>
+<p>[[cloud-native]]</p>
+<p>[[cncf]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Running Docker and Kubernetes on Mac M2</title>
+      <link>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</guid>
+      <description>The past few days I&amp;rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.
+Unfortunately you can&amp;rsquo;t just run brew install docker and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.
+Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&amp;rsquo;t tried any of the other alternatives because I found something better.</description>
+      <content:encoded><![CDATA[<p>The past few days I&rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.</p>
+<p>Unfortunately you can&rsquo;t just run <code>brew install docker</code> and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.</p>
+<p>Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&rsquo;t tried any of the other alternatives because I found something better.</p>
+<p>Rancher Desktop provides everything that you need. It sets up a local VM where it will run a Kubernetes cluster using k3s. It will configure the containerd container engine for you which you can interact with using <code>nerdctl</code>.</p>
+<p>To install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install rancher
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#after installing rancher, start it up and wait for it to boot the VM.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">docker</span><span class="o">=</span>nerdctl
+</span></span><span class="line"><span class="cl">docker run hello-world
+</span></span></code></pre></div><p>And you&rsquo;re good to go. Rancher will add the rancher-desktop to your kube context.</p>
+<p>To test your Kubernetes cluster:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k get pods
+</span></span><span class="line"><span class="cl">k get nodes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># test running a pod</span>
+</span></span><span class="line"><span class="cl">k run nginx --image<span class="o">=</span>nginx
+</span></span><span class="line"><span class="cl">k expose pod nginx --port<span class="o">=</span><span class="m">80</span> --type<span class="o">=</span>NodePort
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># inspect your services and look for 80:31066/TCP under PORT(S)</span>
+</span></span><span class="line"><span class="cl">k get svc
+</span></span><span class="line"><span class="cl">curl localhost:31066
+</span></span></code></pre></div><p>Or visit localhost:31066 in your browser. Replace 31066 with the port you found listed under your services.</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Lab VM project - Install ArgoCD to your Kubernetes cluster</title>
+      <link>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</guid>
+      <description>This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.
+Install argocd and argocd cli kubectl create namespace argocd kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml My VM is running on arm architecture, so I need these commands to install the argocd cli on ubuntu.
+curl -sSL -o argocd-linux-arm64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64 sudo install -m 555 argocd-linux-arm64 /usr/local/bin/argocd rm argocd-linux-arm64 Change the service type to LoadBalancer</description>
+      <content:encoded><![CDATA[<p>This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.</p>
+<h2 id="install-argocd-and-argocd-cli">Install argocd and argocd cli</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create namespace argocd
+</span></span><span class="line"><span class="cl">kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+</span></span></code></pre></div><p>My VM is running on arm architecture, so I need these commands to install the argocd cli on ubuntu.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -sSL -o argocd-linux-arm64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64
+</span></span><span class="line"><span class="cl">sudo install -m <span class="m">555</span> argocd-linux-arm64 /usr/local/bin/argocd
+</span></span><span class="line"><span class="cl">rm argocd-linux-arm64
+</span></span></code></pre></div><p>Change the service type to LoadBalancer</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl patch svc argocd-server -n argocd -p <span class="s1">&#39;{&#34;spec&#34;: {&#34;type&#34;: &#34;LoadBalancer&#34;}}&#39;</span>
+</span></span></code></pre></div><p>Retrieve your passsword</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl -n argocd get secret argocd-initial-admin-secret -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&#34;{.data.password}&#34;</span> <span class="p">|</span> base64 -d<span class="p">;</span> <span class="nb">echo</span>
+</span></span></code></pre></div><p>Find out which port argocd-server is running on</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k get svc -A
+</span></span></code></pre></div><p>Look for the argocd-server and see where port 80 is mapped to. In my case, it is 80:31372.</p>
+<p>Open this port in your network security group for your VM, and you should be able to log in on ArgoCD in the browser by entering the VM ip followed by the port:</p>
+<p><code>http://143.44.179.11:31372</code></p>
+<h2 id="links">Links</h2>
+<p><a href="https://argo-cd.readthedocs.io/en/stable/getting_started/">https://argo-cd.readthedocs.io/en/stable/getting_started/</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Setting up a Kubernetes cluster on an Ubuntu 20.04 VM with containerd and flannel</title>
+      <link>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</guid>
+      <description>You can get a free 24GB ram VM from Oracle. What better place for your own Kubernetes lab that is always available? See this article to create your VM.
+Here are the steps I took to install a single node kubernetes cluster on the Ubuntu VM.
+Installation sudo apt-get update sudo apt install apt-transport-https curl Install containerd
+sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg echo &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.</description>
+      <content:encoded><![CDATA[<p>You can get a free 24GB ram VM from Oracle. What better place for your own Kubernetes lab that is always available? See <a href="/zet/free-oracle-vm.md">this article</a> to create your VM.</p>
+<p>Here are the steps I took to install a single node kubernetes cluster on the Ubuntu VM.</p>
+<h2 id="installation">Installation</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt install apt-transport-https curl
+</span></span></code></pre></div><p>Install containerd</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /etc/apt/keyrings
+</span></span><span class="line"><span class="cl">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&#34;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install containerd.io
+</span></span></code></pre></div><p>Remove the default containerd configuration, because it creates errors when running kubeadm init.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rm -f /etc/containerd/config.toml
+</span></span><span class="line"><span class="cl">sudo systemctl status containerd.service
+</span></span></code></pre></div><p>Install Kubernetes</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main&#34;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/kubernetes.list
+</span></span><span class="line"><span class="cl">sudo apt install kubeadm kubelet kubectl kubernetes-cni
+</span></span></code></pre></div><p>Avoid the error &ldquo;/proc/sys/net/bridge/bridge-nf-call-iptables does not exist&rdquo; on kubeinit (reference <a href="https://github.com/kubernetes/kubeadm/issues/1062)">https://github.com/kubernetes/kubeadm/issues/1062)</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo modprobe br_netfilter
+</span></span><span class="line"><span class="cl">sudo <span class="nb">echo</span> <span class="m">1</span> &gt; /proc/sys/net/ipv4/ip_forward
+</span></span></code></pre></div><h2 id="start-the-cluster">Start the cluster</h2>
+<p>Initialize the Kubernetes cluster for use with Flannel</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo kubeadm init --pod-network-cidr<span class="o">=</span>10.244.0.0/16
+</span></span></code></pre></div><p>Copy to config as kubadm command says</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p <span class="nv">$HOME</span>/.kube
+</span></span><span class="line"><span class="cl">sudo cp -i /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
+</span></span><span class="line"><span class="cl">sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="nv">$HOME</span>/.kube/config
+</span></span></code></pre></div><p>Usually you wouldn&rsquo;t run pods on your control-plane node. However, since we are running a lab environment on a single VM, it&rsquo;s ok. To be able to schedule pods on the control-plane node, we need to remove the NoSchedule taint:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl taint node instance-20230205-0909 node-role.kubernetes.io/control-plane:NoSchedule-
+</span></span></code></pre></div><h2 id="add-a-container-networking-interface">Add a Container Networking Interface</h2>
+<p>Install Flannel to the cluster (reference <a href="https://github.com/flannel-io/flannel">https://github.com/flannel-io/flannel</a>)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+</span></span></code></pre></div><h2 id="configure-the-server-firewall">Configure the server firewall</h2>
+<p>We use Uncomplicated Firewall. Run these commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw allow <span class="m">22</span>
+</span></span><span class="line"><span class="cl">sudo ufw allow 6443/tcp
+</span></span><span class="line"><span class="cl">sudo ufw allow 2379:2380/tcp
+</span></span><span class="line"><span class="cl">sudo ufw allow 10250/tcp
+</span></span><span class="line"><span class="cl">sudo ufw allow 10259/tcp
+</span></span><span class="line"><span class="cl">sudo ufw allow 10257/tcp
+</span></span><span class="line"><span class="cl">sudo ufw <span class="nb">enable</span>
+</span></span><span class="line"><span class="cl">sudo ufw status
+</span></span></code></pre></div><h2 id="set-up-bashrc">Set up bashrc</h2>
+<p>Next, edit your bashrc with <code>vim ~/.bashrc</code> and add these lines:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> &lt;<span class="o">(</span>kubectl completion bash<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">k</span><span class="o">=</span>kubectl
+</span></span><span class="line"><span class="cl"><span class="nb">complete</span> -o default -F __start_kubectl k
+</span></span></code></pre></div><p>Then run <code>source ~/.bashrc</code></p>
+<p>This configures autocompletion for kubectl, and sets up &ldquo;k&rdquo; as an alias for kubectl.</p>
+<h2 id="lets-run-a-pod">Let&rsquo;s run a pod!</h2>
+<p>To see all pods running on your cluster:</p>
+<p><code>k get pods -A</code></p>
+<p>Now let&rsquo;s run a simple nginx pod and expose it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k run nginx --image<span class="o">=</span>nginx
+</span></span><span class="line"><span class="cl">k expose pod nginx --port<span class="o">=</span><span class="m">80</span> --type<span class="o">=</span>NodePort
+</span></span></code></pre></div><p>To find out which port it&rsquo;s running on, run <code>k get service</code>. In the PORT(S) column, there will be an nginx service exposing port 80 to a random port on the node in the range of 30000-32767.</p>
+<p>In my case, it says &ldquo;80:31878/TCP&rdquo;</p>
+<p>To see if we can reach the container, run:</p>
+<p><code>curl localhost:31878</code></p>
+<p>If everything went well, you will get back the HTML of the default index page served by NGINX:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ubuntu@instance-20230205-0909:~$ curl localhost:31878
+</span></span><span class="line"><span class="cl">&lt;!DOCTYPE html&gt;
+</span></span><span class="line"><span class="cl">&lt;html&gt;
+</span></span><span class="line"><span class="cl">&lt;head&gt;
+</span></span><span class="line"><span class="cl">&lt;title&gt;Welcome to nginx!&lt;/title&gt;
+</span></span><span class="line"><span class="cl">&lt;style&gt;
+</span></span><span class="line"><span class="cl">html <span class="o">{</span> color-scheme: light dark<span class="p">;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">body <span class="o">{</span> width: 35em<span class="p">;</span> margin: <span class="m">0</span> auto<span class="p">;</span>
+</span></span><span class="line"><span class="cl">font-family: Tahoma, Verdana, Arial, sans-serif<span class="p">;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">&lt;/style&gt;
+</span></span><span class="line"><span class="cl">&lt;/head&gt;
+</span></span><span class="line"><span class="cl">&lt;body&gt;
+</span></span><span class="line"><span class="cl">&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
+</span></span><span class="line"><span class="cl">&lt;p&gt;If you see this page, the nginx web server is successfully installed and
+</span></span><span class="line"><span class="cl">working. Further configuration is required.&lt;/p&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;p&gt;For online documentation and support please refer to
+</span></span><span class="line"><span class="cl">&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;http://nginx.org/&#34;</span>&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;
+</span></span><span class="line"><span class="cl">Commercial support is available at
+</span></span><span class="line"><span class="cl">&lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;http://nginx.com/&#34;</span>&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;p&gt;&lt;em&gt;Thank you <span class="k">for</span> using nginx.&lt;/em&gt;&lt;/p&gt;
+</span></span><span class="line"><span class="cl">&lt;/body&gt;
+</span></span><span class="line"><span class="cl">&lt;/html&gt;
+</span></span></code></pre></div><p>To reach the pod from the browser, open your port in the security group configured for the subnet of your VM.</p>
+<p>Good luck with your new lab environment!</p>
+<h2 id="links">Links</h2>
+<p><a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/</a></p>
+<p><a href="https://kubernetes.io/docs/concepts/services-networking/service/">https://kubernetes.io/docs/concepts/services-networking/service/</a></p>
+<p><a href="https://github.com/flannel-io/flannel">https://github.com/flannel-io/flannel</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Get a free 4 CPU 24GB Ram VM on from Oracle</title>
+      <link>https://mischavandenburg.com/zet/free-oracle-vm/</link>
+      <pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/free-oracle-vm/</guid>
+      <description>A few weeks ago someone gave me a tip. Oracle actually has a really good free tier offering.
+You can host a 4CPU 24GB VM for free!
+This is perfect for a lab environment.
+I spent my evening creating the VM and setting up a kubernetes cluster from scratch.
+Use this video to claim your free vm:
+https://www.youtube.com/watch?v=NKc3k7xceT8</description>
+      <content:encoded><![CDATA[<p>A few weeks ago someone gave me a tip. Oracle actually has a really good free tier offering.</p>
+<p>You can host a 4CPU 24GB VM for free!</p>
+<p>This is perfect for a lab environment.</p>
+<p>I spent my evening creating the VM and setting up a kubernetes cluster from scratch.</p>
+<p>Use this video to claim your free vm:</p>
+<p><a href="https://www.youtube.com/watch?v=NKc3k7xceT8">https://www.youtube.com/watch?v=NKc3k7xceT8</a></p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

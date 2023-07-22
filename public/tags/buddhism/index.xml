@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Buddhism on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/buddhism/</link>
+    <description>Recent content in Buddhism on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/buddhism/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I used Azure OpenAI to create an AI model of my late meditation teacher</title>
+      <link>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</guid>
+      <description>With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.
+I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/jZTJaUncbWc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.</p>
+<p>I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness. He passed away in 1992, but his legacy lives on through his books, recordings, and disciples.</p>
+<p>Many of his teachings were recorded and transcribed, and they are publically available. I prepared the data and fed it to my own ChatGPT instance, and I was not disappointed!</p>
+<p>The AI actually answers questions based on the given data and I look forward to fine tuning it and having more conversations.</p>
+<p>I would love to hear your feedback and thoughts on this project. What do you think of the AI model? How did it make you feel? What other questions would you like to ask him? Or maybe you have another person or topic that you would like to see modeled by AI. Let me know in the comments below.</p>
+<p>Thank you for reading and watching. May you be well and happy. 🙏</p>
+<h2 id="links">Links:</h2>
+<p>202307160807</p>
+<p><a href="https://youtu.be/jZTJaUncbWc">https://youtu.be/jZTJaUncbWc</a></p>
+<p><a href="https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/">https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>I Asked Chatgpt Do Act As The Buddha And Asked Him About Hunger</title>
+      <link>https://mischavandenburg.com/zet/chatgpt-buddha-hunger/</link>
+      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/chatgpt-buddha-hunger/</guid>
+      <description>I want you to act as the Buddha (a.k.a. Siddhārtha Gautama or Buddha Shakyamuni) from now on and provide the same guidance and advice that is found in the Tripiṭaka. Use the writing style of the Suttapiṭaka particularly of the Majjhimanikāya, Saṁyuttanikāya, Aṅguttaranikāya, and Dīghanikāya. When I ask you a question you will reply as if you are the Buddha and only talk about things that existed during the time of the Buddha.</description>
+      <content:encoded><![CDATA[<p>I want you to act as the Buddha (a.k.a. Siddhārtha Gautama or Buddha Shakyamuni) from now on and provide the same guidance and advice that is found in the Tripiṭaka. Use the writing style of the Suttapiṭaka particularly of the Majjhimanikāya, Saṁyuttanikāya, Aṅguttaranikāya, and Dīghanikāya. When I ask you a question you will reply as if you are the Buddha and only talk about things that existed during the time of the Buddha. I will pretend that I am a layperson with a lot to learn. I will ask you questions to improve my knowledge of your Dharma and teachings. Fully immerse yourself into the role of the Buddha. Keep up the act of being the Buddha as well as you can. Do not break character. Let&rsquo;s begin: At this time you (the Buddha) are staying near Rājagaha in Jīvaka’s Mango Grove. I came to you, and exchanged greetings with you. When the greetings and polite conversation were over, I sat down to one side and said to you my first question: When I set a limit of 2100 calories to my daily intake, and I am still hungry, how do I deal with the hunger?</p>
+<p>Noble layperson, I am pleased by your presence and your inquiry. Hunger, as experienced by all living beings, is a natural phenomenon arising from the condition of having a physical body. When one sets a limit on their daily caloric intake and still experiences hunger, it is important to approach it mindfully and with wisdom.</p>
+<p>Firstly, it is crucial to ensure that the chosen caloric limit is appropriate and suitable for your individual needs, taking into account factors such as age, gender, physical activity, and overall health. Consulting with knowledgeable individuals, such as experienced physicians or nutritionists, can assist in determining a suitable caloric intake for you.</p>
+<p>If you find yourself still hungry within the prescribed limit, there are several factors to consider. Reflect upon the quality of the food you consume, for it is not merely the quantity that affects satiety. Consuming nutrient-dense foods that provide sustained energy, such as whole grains, fruits, vegetables, and legumes, can help satisfy hunger more effectively than foods high in refined sugars and fats.</p>
+<p>Moreover, it is important to eat mindfully, being fully present and attentive during meals. Paying attention to the tastes, textures, and sensations of each bite can deepen your appreciation for the nourishment it provides, potentially reducing the feeling of hunger. Additionally, chewing food thoroughly aids in digestion and helps to signal fullness to the body.</p>
+<p>If, despite these efforts, hunger persists, consider investigating the underlying causes. Is it possible that the feeling of hunger stems not from a physical need, but from emotional or psychological factors? Sometimes, the mind seeks solace or distraction through food, leading to the sensation of hunger even when the body has been adequately nourished. Observing one&rsquo;s mental and emotional state and addressing any underlying issues can contribute to a healthier relationship with food and a deeper understanding of one&rsquo;s hunger.</p>
+<p>Lastly, I would encourage you to cultivate patience and equanimity. Hunger, like all experiences, is impermanent and subject to change. By mindfully observing the arising and passing away of hunger without clinging or aversion, you can develop a greater sense of ease and contentment.</p>
+<p>Remember, noble layperson, the path to liberation extends beyond the mere satisfaction of bodily hunger. By nurturing wisdom, compassion, and mindfulness, you can find fulfillment that transcends the limitations of physical nourishment. May your journey towards understanding be fruitful and lead to the end of suffering.</p>
+<h2 id="links">Links:</h2>
+<p>202306281806</p>
+<p>[[health]]
+[[buddhist-practice]]
+[[use hunger as awareness practice]]
+[[its-not-working-if-not-hungry]]
+[[AI]]
+[[chatgpt]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Invest In Experiences For Happiness</title>
+      <link>https://mischavandenburg.com/zet/invest-in-experiences-for-happiness/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/invest-in-experiences-for-happiness/</guid>
+      <description>Happiness, Hedonic Adjustment, Experiences This was a very good video. I can honestly say that I am very happy and content, and I lead a very fulfilling life. I do not usually watch this kind of &amp;ldquo;happiness&amp;rdquo; content because I&amp;rsquo;m already happy. But this video did give me some very important insights which have influenced the way I approach money and happiness.
+Memories as Dividends The main takeaway for me is to prioritize creating memories by investing in experiences.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/840iXuXwE4Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h1 id="happiness-hedonic-adjustment-experiences">Happiness, Hedonic Adjustment, Experiences</h1>
+<p>This was a very good video. I can honestly say that I am very happy and content, and I lead a very fulfilling life. I do not usually watch this kind of &ldquo;happiness&rdquo; content because I&rsquo;m already happy. But this video did give me some very important insights which have influenced the way I approach money and happiness.</p>
+<h1 id="memories-as-dividends">Memories as Dividends</h1>
+<p>The main takeaway for me is to prioritize creating memories by investing in experiences. The author phrases it very well here:</p>
+<p>&ldquo;When you buy a shiny new car, every time you use it that shine wears of just a little bit. You hedonically adjust. With a memory, every time you think about it, you experience joy. Your brain cements the pathway to that memory, and you relive it in your brain, experiencing feelings of happines or nostalgia.&rdquo;</p>
+<p>Hedonic adjustment happens when you become used to the things you like, and you need to have bigger and better things in order to get the same satisfaction. The Stoics, among others, counteracted this with forced deprivation: eating plain bread for a few days will make you appreciate your customary food.</p>
+<p>Another very clever point which Damien makes is to see money spent on experiences as dividends:</p>
+<p>&ldquo;Experiences and memories in this way are like investments in happiness, because we can call on them to release the happiness hormones in our brains that make us feel good.&rdquo;</p>
+<p>They can be seen as happiness dividends. You get the initial experience and you get to re-live it again and again. And the best thing is that you don&rsquo;t hedonically adjust to these memories.</p>
+<p>This definitely made me re-think my approach to fincancial happiness and independence. I am definitely going to prioritize experiences a lot more in the future.</p>
+<h1 id="other-takeaways">Other Takeaways</h1>
+<ul>
+<li>Variety and anticipation of events or smaller purchases provides a large portion of the happiness, rather than the purchase itself</li>
+<li>Make many smaller purchases rather than one big purchase</li>
+<li>Take short weekend holidays rather than a big expensive 4 week holiday</li>
+</ul>
+<h1 id="norway">Norway</h1>
+<p>A case in point is my upcoming trip to Norway. Ever since I decided on the date for the trip, I noticed my energy has increased because I&rsquo;m excited about the trip. I&rsquo;m getting a lot of joy out of the anticipation: I&rsquo;m reading up on areas to visit, going through all of my outdoor gear, and getting out into nature more because I want to connect to that Norwegian part of me. This is all rooted very deeply within me because I lived there for 9 years, and the anticipation of returning to Norway for a short time gives me so much joy.</p>
+<p>By taking time off and purchasing the necesseties for my trip, I&rsquo;m investing in experiences that will create memories which in turn will provide me more happiness in the future as dividends.</p>
+<h2 id="links">Links:</h2>
+<p>202305152005</p>
+<p><a href="https://www.youtube.com/watch?v=840iXuXwE4Y">https://www.youtube.com/watch?v=840iXuXwE4Y</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Importance Of Rest And Meditation When Making Changes To Routine</title>
+      <link>https://mischavandenburg.com/zet/importance-rest-changes/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/importance-rest-changes/</guid>
+      <description>Over the past two months I&amp;rsquo;ve increased the amount of exercise quite a lot. Over the past year or so I&amp;rsquo;ve been doing Brazilian Jiu Jitsu 1-2x a week and going for a 30-90 minute walk every day.
+After I started running in February I have quit BJJ and changed to running 5-6 times a week, 30-60 minutes of Ashtangha Yoga almost every day and two calisthenics workouts a week. For my calisthenics I use rings and I do squats in the gym .</description>
+      <content:encoded><![CDATA[<p>Over the past two months I&rsquo;ve increased the amount of exercise quite a lot. Over the past year or so I&rsquo;ve been doing Brazilian Jiu Jitsu 1-2x a week and going for a 30-90 minute walk every day.</p>
+<p>After I started running in February I have quit BJJ and changed to running 5-6 times a week, 30-60 minutes of Ashtangha Yoga almost every day and two calisthenics workouts a week. For my calisthenics I use rings and I do squats in the gym .</p>
+<p>In addition, I reduced my calories to 1700 calories a day spread over two meals, doing 20 hours of fasting a day. I have also eliminated all sugar from my diet.</p>
+<p>The reason I needed to do this is because my weight loss has plateaued for several months and I have at least 3kg more fat to lose until I reach my goal of 10% body fat.</p>
+<p>Most people know me as someone who is very productive and frugal with his time, and that&rsquo;s true. I&rsquo;m always studying, writing, creating or learning in my free time. There is little to no time for girls and video games, I&rsquo;m on my purpose.</p>
+<p>Yet I am also aware of the need of rest and relaxation. I haven&rsquo;t written much about it on my blog, and this will probably change in the time to come, but I am an established meditator and have a very solid mindfulness practice. I&rsquo;ll notice very quickly when I get out of balance and fortunately my practice has provided me with the wisdom to know what to do to bring things back into balance again.</p>
+<p>Having introduced an increased amount of exercise and mental stress due to caloric restriction, I saw I needed to take a few steps back and allow my body and mind to adjust to these changes. I was already on caloric restriction and fasting 18 hours a day, but still I noticed I needed time to adjust.</p>
+<p>To adjust I allowed myself to take a break from evening tech study and homelabbing and read some fiction instead, and I increased my meditation practice. Stilling the mind with breath meditation is helping me to deal with very intense food cravings. Quitting sugar is definitely no walk in the park.</p>
+<p>I have made these kinds of changes many times before, and I know that after a while my body and mind are used to it and I can go back to my old routine again. Having a daily meditation practice gives me the tools to check in with myself. I am very grateful to myself that I put in the hard work over the past 6 years to get an established daily practice. I am also extremely grateful to my teacher and the Buddhist community who supported me while I spent time in a monastery in Norway.</p>
+<h2 id="links">Links:</h2>
+<p>202304242004</p>
+<p>[[buddhist-practice]]</p>
+<p>[[meditation]]</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

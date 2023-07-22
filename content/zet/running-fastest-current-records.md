@@ -2,7 +2,7 @@
 title: "The Fastest Runners in the World: An Overview of the Current World Records"
 date: 2023-07-22
 tags:
-- Articles
+- Article
 - Running
 - Health
 ---
