@@ -6,7 +6,67 @@
     <description>Recent content in Weeknotes on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/weeknotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/weeknotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 week 29</title>
+      <link>https://mischavandenburg.com/zet/2023-week-29/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/2023-week-29/</guid>
+      <description>My Week It&amp;rsquo;s been a nice week. Work has been very busy again, there are no signs of things slowing down because of the summer holidays. I deployed an AKS cluster in the North Europe region for the first time for my team, which needed additional networking configuration and I&amp;rsquo;ve had to set up all the firewall rules for AKS deployments which was a task that I learned a lot from.</description>
+      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
+<p>It&rsquo;s been a nice week. Work has been very busy again, there are no signs of things slowing down because of the summer holidays. I deployed an AKS cluster in the North Europe region for the first time for my team, which needed additional networking configuration and I&rsquo;ve had to set up all the firewall rules for AKS deployments which was a task that I learned a lot from.</p>
+<p>On Thursday I went to the office where I met Bjorn from Delegate to learn more about what they are doing in the Netherlands. There might be opportunities to work on international projects through Delegate which is an interesting prospect.</p>
+<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
+<p>I&rsquo;ve done well on the running front. Ran 12K for the first time yesterday! [[running-record-12km]] A couple of weeks ago I wrote that I needed to bring more joy and motivation into the running again, and it is happening. After building my base back up with an emphasis on SPM, increasing it from 150 to 171SPM average, I&rsquo;m now reaching my distance limits and therefore able to make more progress again by increasing the weekly distance slightly every week. This sense of progression is addictive and makes me very motivated to keep on training like I&rsquo;m doing now.</p>
+<p>In terms of weight loss, I seem to have ended up on a maintenance plateau. I&rsquo;m hovering around 77kg and perhaps I&rsquo;ll stay here for now. I&rsquo;m focussing more on proper recovery for my running, and perhaps I should not force a caloric deficit right now. Also, I have my holidays coming up in a month, and it seems a bit of wasted effort to enter another weight loss sprint while I know that I&rsquo;ll probably start a new one after I return from my holidays.</p>
+<h2 id="content-consumption">Content Consumption</h2>
+<h3 id="reading">Reading</h3>
+<p>I&rsquo;m making steady progress on Gridlinked and enjoying the book a lot.</p>
+<p>When I don&rsquo;t feel like reading fiction I&rsquo;m still reading Eat and Run by Scott Jurek.</p>
+<h3 id="watching">Watching</h3>
+<p>I&rsquo;ve watched a lot more youtube content this week, especially in the weekend.</p>
+<p>A very inspiring interview with Eliud Kipchoge, the fastest marathon runner in the world. <a href="/zet/podcast-kipchoge-marathon-running/">My notes are here.</a></p>
+<p>Watched Satcha Nadella&rsquo;s full keynote from Microsoft inspire. Very interesting to observe that the entire keynote revolves around AI.</p>
+<p><a href="https://youtu.be/RhwVMt_XCUE">https://youtu.be/RhwVMt_XCUE</a></p>
+<p>PERFECT RUNNING FORM - Why Do PRO Runners Kick Their Feet So High?</p>
+<p><a href="https://www.youtube.com/watch?v=sIxAoC8P8zg">https://www.youtube.com/watch?v=sIxAoC8P8zg</a></p>
+<p>Essential Running Technique Tips for Proper Form &amp; How to Run Faster! | Sage Running</p>
+<p><a href="https://www.youtube.com/watch?v=3RlvKMxPMr0">https://www.youtube.com/watch?v=3RlvKMxPMr0</a></p>
+<h1 id="running-form-when-running-slow">Running form when running slow</h1>
+<p>Good vs Bad Running Form @ 10:00/mile (6:13/km)</p>
+<p><a href="https://youtu.be/ZxbZIvSWOZs">https://youtu.be/ZxbZIvSWOZs</a></p>
+<h1 id="perfect-running-form-demonstration">Perfect running form demonstration</h1>
+<p>first few minutes</p>
+<p><a href="https://www.youtube.com/watch?v=ZCARH83vZpw">https://www.youtube.com/watch?v=ZCARH83vZpw</a></p>
+<h3 id="listening">Listening</h3>
+<p>Ive listened to a bunch of podcasts.</p>
+<p>Lex Fridman with Mark Andreessen on the future of AI. <a href="/zet/podcast-fridman-andreessen-future-of-ai/">here are my notes</a></p>
+<p>George Hotz: Tiny Corp, Twitter, AI Safety
+<a href="https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000618818540">https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000618818540</a></p>
+<p>Sam Altman: OpenAI CEO on GPT4- ChatGPT
+<a href="https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000605876923">https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000605876923</a></p>
+<p>Max Tegmark: The Case for Halting AI Development
+<a href="https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000608828204">https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000608828204</a></p>
+<h2 id="links">Links</h2>
+<h1 id="next-week">Next Week</h1>
+<p>I have an office day on Tuesday and production maintenance windows on Wednesday and Thursday evening. Otherwise it seems like a fairly standard week and not very socially demanding.</p>
+<p>I&rsquo;m going to try something I picked up from the interview with Kipchoge: not looking at the phone or news until the morning run is finished. Wake up, have my run, and then connect with the world.</p>
+<h2 id="goals--intentions">Goals &amp; Intentions</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Don&rsquo;t look at phone until morning run is finished</li>
+<li><input disabled="" type="checkbox"> 5 runs</li>
+<li><input disabled="" type="checkbox"> 75 minute long run</li>
+<li><input disabled="" type="checkbox"> 1 blog post, 1 video</li>
+<li><input disabled="" type="checkbox"> Daily yoga and meditation</li>
+<li><input disabled="" type="checkbox"> </li>
+<li><input disabled="" type="checkbox"> </li>
+</ul>
+<h2 id="links-1">Links:</h2>
+<p>202307240807</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>2023 week 28</title>
       <link>https://mischavandenburg.com/zet/2023-week-28/</link>
