@@ -6,7 +6,80 @@
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 week 30</title>
+      <link>https://mischavandenburg.com/zet/2023-week-30/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/2023-week-30/</guid>
+      <description>It&amp;rsquo;s been a calmer week. Work has been busy, but I&amp;rsquo;m taking my time to relax in the evenings. I notice it is time to take a break from work. My holidays are aproaching: in three weeks I&amp;rsquo;ll have three weeks off. So I&amp;rsquo;m intentionally winding down the productivity.
+I hardly ever watch series. I don&amp;rsquo;t have a TV. But to get into the mood for my Norway trip, I&amp;rsquo;m watching some shows I used to watch when I lived in Norway.</description>
+      <content:encoded><![CDATA[<p>It&rsquo;s been a calmer week. Work has been busy, but I&rsquo;m taking my time to relax in the evenings. I notice it is time to take a break from work. My holidays are aproaching: in three weeks I&rsquo;ll have three weeks off. So I&rsquo;m intentionally winding down the productivity.</p>
+<p>I hardly ever watch series. I don&rsquo;t have a TV. But to get into the mood for my Norway trip, I&rsquo;m watching some shows I used to watch when I lived in Norway. It is very relaxing to just do nothing in the evenings afer work, instead of studying or creating content.</p>
+<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
+<p>I set a 5k PR this week, and on Saturday I had a great long run. I drove to the coastal area and ran 13km in 82 minutes, 1km farther than last week. Amazing to think that I&rsquo;ve built up the endurance to run almost one and a half hour straight!</p>
+<h2 id="content-consumption">Content Consumption</h2>
+<h3 id="reading">Reading</h3>
+<p>Making progress in Eat and Run, haven&rsquo;t read Gridlinked this week.</p>
+<h3 id="watching">Watching</h3>
+<p>Watching the Norwegian shows &ldquo;Der Ingen Skulle Tru at Nokon Kunne Bu&rdquo; and &ldquo;Med Monsen Pa Villspor&rdquo;.</p>
+<p>Very nostalgic to see this content again and it is really getting me excited for my upcoming Norway trip.</p>
+<h3 id="listening">Listening</h3>
+<p><a href="https://lexfridman.com/yuval-noah-harari/">https://lexfridman.com/yuval-noah-harari/</a></p>
+<h2 id="links">Links</h2>
+<h1 id="next-week">Next Week</h1>
+<h2 id="goals--intentions">Goals &amp; Intentions</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Don&rsquo;t look at phone until morning run is finished</li>
+<li><input disabled="" type="checkbox"> 5 runs</li>
+<li><input disabled="" type="checkbox"> 90 minute long run</li>
+<li><input disabled="" type="checkbox"> Daily yoga and meditation</li>
+</ul>
+<h2 id="links-1">Links:</h2>
+<p>202307301607</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: Deploying MkDocs To Azure Using With Azure DevOps</title>
+      <link>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</guid>
+      <description>In this video, I will walk you through the following steps:
+Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure portal and link it to the repo Configure the Azure DevOps pipeline for MkDocs deployment Configure a custom theme for the website Demonstrate the pull request workflow for updating the docs By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/_-D1Qz6jtEU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>In this video, I will walk you through the following steps:</p>
+<ul>
+<li>Set up a repo in Azure DevOps with MkDocs files</li>
+<li>Set up a Static Web App in Azure portal and link it to the repo</li>
+<li>Configure the Azure DevOps pipeline for MkDocs deployment</li>
+<li>Configure a custom theme for the website</li>
+<li>Demonstrate the pull request workflow for updating the docs</li>
+</ul>
+<p>By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps. You will also learn how to use Azure DevOps and Static Web Apps to collaborate on your documentation projects.</p>
+<p>MkDocs is a tool that lets you create beautiful documentation websites from plain text files. You can write your docs in Markdown, a simple and easy-to-use markup language, and MkDocs will convert them into a static HTML site. You can also customize the look and feel of your site with themes and plugins.</p>
+<p>Azure Static Web Apps is a service that hosts static web content and serverless APIs. It automatically builds and deploys your web app from a GitHub or Azure DevOps repository. It also provides features such as authentication, authorization, custom domains, and SSL certificates.</p>
+<p>Timestamps:</p>
+<p>0:00 Intro
+0:40 What is MkDocs?
+2:00 Set up the repo
+5:00 Create web app
+9:25 Configure the pipeline
+11:30 Adding a few documents
+15:25 Adding a custom theme
+18:00 Adding docs with a pull request
+21:30 Outro</p>
+<h2 id="links">Links:</h2>
+<p>202307281307</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>2023 week 29</title>
       <link>https://mischavandenburg.com/zet/2023-week-29/</link>

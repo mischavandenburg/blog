@@ -6,7 +6,46 @@
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: Deploying MkDocs To Azure Using With Azure DevOps</title>
+      <link>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</guid>
+      <description>In this video, I will walk you through the following steps:
+Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure portal and link it to the repo Configure the Azure DevOps pipeline for MkDocs deployment Configure a custom theme for the website Demonstrate the pull request workflow for updating the docs By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/_-D1Qz6jtEU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>In this video, I will walk you through the following steps:</p>
+<ul>
+<li>Set up a repo in Azure DevOps with MkDocs files</li>
+<li>Set up a Static Web App in Azure portal and link it to the repo</li>
+<li>Configure the Azure DevOps pipeline for MkDocs deployment</li>
+<li>Configure a custom theme for the website</li>
+<li>Demonstrate the pull request workflow for updating the docs</li>
+</ul>
+<p>By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps. You will also learn how to use Azure DevOps and Static Web Apps to collaborate on your documentation projects.</p>
+<p>MkDocs is a tool that lets you create beautiful documentation websites from plain text files. You can write your docs in Markdown, a simple and easy-to-use markup language, and MkDocs will convert them into a static HTML site. You can also customize the look and feel of your site with themes and plugins.</p>
+<p>Azure Static Web Apps is a service that hosts static web content and serverless APIs. It automatically builds and deploys your web app from a GitHub or Azure DevOps repository. It also provides features such as authentication, authorization, custom domains, and SSL certificates.</p>
+<p>Timestamps:</p>
+<p>0:00 Intro
+0:40 What is MkDocs?
+2:00 Set up the repo
+5:00 Create web app
+9:25 Configure the pipeline
+11:30 Adding a few documents
+15:25 Adding a custom theme
+18:00 Adding docs with a pull request
+21:30 Outro</p>
+<h2 id="links">Links:</h2>
+<p>202307281307</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>I used Azure OpenAI to create an AI model of my late meditation teacher</title>
       <link>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</link>
