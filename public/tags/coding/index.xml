@@ -6,7 +6,92 @@
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Driven Development for Bicep is In The Works!</title>
+      <link>https://mischavandenburg.com/zet/bicep-testing-assertions/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/bicep-testing-assertions/</guid>
+      <description>During the Bicep Community Call of July 2023 I was introduced to the new experimental testing framework that the Bicep team is working on. After learning the fundamentals of the Go programming language I saw the value of test driven software development, and it will be an advantageous improvement if we can start applying this methodology to Infrastructure as Code as well.
+Test driven software development is a software development practice that involves writing unit tests before writing the actual code, and then refactoring the code to pass the tests.</description>
+      <content:encoded><![CDATA[<p>During the <a href="https://youtu.be/UuwhLi-Xe2U">Bicep Community Call of July 2023</a> I was introduced to the new experimental testing framework that the Bicep team is working on. After learning the fundamentals of the Go programming language I saw the value of test driven software development, and it will be an advantageous improvement if we can start applying this methodology to Infrastructure as Code as well.</p>
+<p>Test driven software development is a software development practice that involves writing unit tests before writing the actual code, and then refactoring the code to pass the tests. Some of the advantages of test driven software development are:</p>
+<ul>
+<li>It improves the code quality and design by making it more modular, maintainable, and extensible.</li>
+<li>It reduces the number of bugs and defects by catching them early in the development process.</li>
+<li>It enhances the documentation of the code by providing a clear specification of what each function or module does.</li>
+<li>It increases the productivity and efficiency of the developers by providing immediate feedback and reducing debugging time.</li>
+<li>It ensures high test coverage and makes it easier to add new features or refactor the code in the future.</li>
+</ul>
+<h1 id="enabling-the-bicep-testing-framework">Enabling the Bicep testing framework</h1>
+<p>To make the &ldquo;test&rdquo; keyword available in your Bicep editor, you need to enable some experimental features.</p>
+<p>If you&rsquo;re using VScode, open or generate your bicepconfig.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;experimentalFeaturesEnabled&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;testFramework&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;asserts&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now the &ldquo;test&rdquo; keyword should work.</p>
+<p>For more information, check out this link:</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-config">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-config</a></p>
+<h1 id="asserts">Asserts</h1>
+<p>The assert keyword will be used to verify output prior to deployment.</p>
+<p>Let&rsquo;s say I have this very simple key vault template:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">param</span><span class="w"> </span>location<span class="w"> </span><span class="nf">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">resourceGroup</span><span class="p">().</span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>kv<span class="w"> </span><span class="s">&#39;Microsoft.KeyVault/vaults@2023-02-01&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;mischa-key-vault-138&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">properties</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">sku</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;standard&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="py">family</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;A&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">tenantId</span><span class="p">:</span><span class="w"> </span><span class="nf">subscription</span><span class="p">().</span>tenantId<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">enableRbacAuthorization</span><span class="p">:</span><span class="w"> </span>true<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>assert<span class="w"> </span>kvSKU<span class="w"> </span><span class="p">=</span><span class="w"> </span>kv<span class="p">.</span>sku<span class="p">.</span>name<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="si">&#39;standard&#39;</span><span class="w">
+</span></span></span></code></pre></div><p>In this example, the assertion would run before the actual deployment happens, and if the assertion fails, the deployment is stopped. This is of course a rather silly example, but you hopefully get the idea.</p>
+<p>Why is this useful? When you are running larger deployments from files that contain a lot of resources, sometimes the deployment will fail halfway through the template because there was some unexpected error, and a lot of time is wasted waiting for the preceding resources to be deployed. In the future we can hopefully use assertions to make sure the output will be as expected at compile time.</p>
+<h1 id="unit-tests-in-bicep">Unit Tests in Bicep</h1>
+<p>Unit tests are a type of software testing where individual units or components of a software are tested to verify that they work as expected. A unit can be a function, a method, a module, or an object. In the Bicep testing framework, we can run unit tests on resources as well. Unit tests are usually written and run by the developers during the coding phase of the software development process. Unit tests help to improve the quality, design, and documentation of the code, as well as to catch bugs and defects early.</p>
+<p>Now I&rsquo;ll provide an example of a unit test in Bicep. Let&rsquo;s say we have this Bicep template for an AKS cluster:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="p">@</span><span class="nd">description</span><span class="p">(</span><span class="s">&#39;Name of the AKS cluster&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>clusterName<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">@</span><span class="nd">description</span><span class="p">(</span><span class="s">&#39;Prefix for deployment&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">param</span><span class="w"> </span>prefix<span class="w"> </span><span class="nf">string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">resource</span><span class="w"> </span>aksCluster<span class="w"> </span><span class="s">&#39;Microsoft.ContainerService/managedClusters@2023-03-02-preview&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;${prefix}-${clusterName}&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">location</span><span class="p">:</span><span class="w"> </span>location<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">...</span><span class="w">
+</span></span></span></code></pre></div><p>To use a simple example, let&rsquo;s say I want to make sure that my cluster name will be as expected. I would write a unit test as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl">test<span class="w"> </span>testAKS<span class="w"> </span><span class="si">&#39;aks.bicep&#39;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="py">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">clusterName</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;coffee&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="py">prefix</span><span class="p">:</span><span class="w"> </span><span class="si">&#39;prod&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>assert<span class="w"> </span>testAKS<span class="w"> </span><span class="p">=</span><span class="w"> </span>testAKS<span class="p">.</span>resources<span class="p">.</span>aksCluster<span class="p">.</span>name<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;prod-coffee&#39;</span><span class="w">
+</span></span></span></code></pre></div><p>When I run this test.bicep file, it will take the aks.bicep file and feed the &lsquo;coffee&rsquo; and &lsquo;prod&rsquo; parameters to it. My aks.bicep file will create the string from the parameters and output the name. Then, I use the &ldquo;assert&rdquo; keyword to verify that the string is composed according to my expectations.</p>
+<p>Note: at the time of writing 2023-08-03, the &ldquo;assert&rdquo; keyword was still not available in Bicep 0.20.4, but there might be a problem with my local configuration which I&rsquo;ve asked the team about.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I believe it will be a great development to apply test driven software development to Infrastructure as Code by implementing a test framework into Bicep. When I&rsquo;m able to use this approach, I would begin with writing all of the tests for the template that I have in mind, and then I can continue to write the Bicep template itself. By using the tests I can become much more productive because I can speed up my development by using tests without having to do what-if deployments which can be rather slow and involve a lot of waiting.</p>
+<p>It is great to see how the Bicep language is maturing and how it continues to introduce new features that make the lives of developers easier. I was really stoked about the new .bicepparam files, but I&rsquo;m even more excited by the new testing framework.</p>
+<h2 id="links">Links:</h2>
+<p>202308030808</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-config">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-config</a></p>
+<p><a href="https://youtu.be/UuwhLi-Xe2U">https://youtu.be/UuwhLi-Xe2U</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Deploying MkDocs To Azure Using With Azure DevOps</title>
       <link>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</link>
