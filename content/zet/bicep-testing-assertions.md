@@ -20,7 +20,7 @@ Test driven software development is a software development practice that involve
 
 To make the "test" keyword available in your Bicep editor, you need to enable some experimental features.
 
-If you're using VScode, open or generate your bicepconfig.
+If you're using VScode, open or generate your bicepconfig.json file and add the following code:
 
 ```json
 {
@@ -96,7 +96,7 @@ test testAKS 'aks.bicep' = {
   }
 }
 
-assert testAKS = testAKS.resources.aksCluster.name == 'prod-coffee'
+assert assertClusterName = testAKS.resources.aksCluster.name == 'prod-coffee'
 ```
 
 When I run this test.bicep file, it will take the aks.bicep file and feed the 'coffee' and 'prod' parameters to it. My aks.bicep file will create the string from the parameters and output the name. Then, I use the "assert" keyword to verify that the string is composed according to my expectations.
@@ -109,6 +109,8 @@ I believe it will be a great development to apply test driven software developme
 
 It is great to see how the Bicep language is maturing and how it continues to introduce new features that make the lives of developers easier. I was really stoked about the new .bicepparam files, but I'm even more excited by the new testing framework.
 
+However, please note that this is still an experimental feature. I haven't found much other information, and I'm not part of the Bicep development community (yet). There might be a chance that this feature isn't implemented at all in the end. That being said, I would love to participate in this community and perhaps I'd be able to provide some costumer feedback, and I'm currently looking into this and I've reached out to a few acquaintances.
+
 ## Links:
 
 202308030808 
@@ -116,4 +118,3 @@ It is great to see how the Bicep language is maturing and how it continues to in
 https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/bicep-config
 
 https://youtu.be/UuwhLi-Xe2U
-
