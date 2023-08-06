@@ -18,7 +18,10 @@ The bottom line is that blending fruits and vegetables does not destroy their fi
 
 202308061008
 
-Dietary fiber: Essential for a healthy diet - Mayo Clinic. https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/fiber/art-20043983.
-Does Blending Destroy Fiber: 5 Blending Myths Busted. https://kitchenhabit.com/does-blending-destroy-fiber/.
-Does Blending Destroy Fiber? - Quick and Dirty Tips. https://www.quickanddirtytips.com/articles/does-blending-destroy-fiber/.
-Does Blending Destroy Fiber and Nutrients? Myth Busted! - World of Blenders. https://worldofblenders.com/does-blending-fruit-destroy-fiber-nutrients/.
+Dietary fiber: Essential for a healthy diet - Mayo Clinic. https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/fiber/art-20043983
+
+Does Blending Destroy Fiber: 5 Blending Myths Busted. https://kitchenhabit.com/does-blending-destroy-fiber/
+
+Does Blending Destroy Fiber? - Quick and Dirty Tips. https://www.quickanddirtytips.com/articles/does-blending-destroy-fiber/
+
+Does Blending Destroy Fiber and Nutrients? Myth Busted! - World of Blenders. https://worldofblenders.com/does-blending-fruit-destroy-fiber-nutrients/
