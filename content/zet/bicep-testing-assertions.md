@@ -103,6 +103,14 @@ When I run this test.bicep file, it will take the aks.bicep file and feed the 'c
 
 Note: at the time of writing 2023-08-03, the "assert" keyword was still not available in Bicep 0.20.4, but there might be a problem with my local configuration which I've asked the team about.
 
+### 2023-08-08 update: 
+
+I've been in touch with the Bicep team and they responded as follows:
+
+>?Regarding your ability to access "test" but not "assert", both key words are still only in a demo phase and not yet intended for customer use. Please hold off on trying them out for now. We will be in touch with folks who have indicated interest through the form and/or on a Community Call when there is a preview available. Thank you for your patience and sorry for any confusion.
+
+I guess I was a little eager with testing the keywords so soon! 😀 🚀
+
 # Conclusion
 
 I believe it will be a great development to apply test driven software development to Infrastructure as Code by implementing a test framework into Bicep. When I'm able to use this approach, I would begin with writing all of the tests for the template that I have in mind, and then I can continue to write the Bicep template itself. By using the tests I can become much more productive because I can speed up my development by using tests without having to do what-if deployments which can be rather slow and involve a lot of waiting.

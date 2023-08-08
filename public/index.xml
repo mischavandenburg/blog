@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>2023 week 31</title>
       <link>https://mischavandenburg.com/zet/2023-week-31/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
       
@@ -157,6 +157,12 @@ Test driven software development is a software development practice that involve
 </span></span></span><span class="line"><span class="cl"><span class="w"></span>assert<span class="w"> </span>assertClusterName<span class="w"> </span><span class="p">=</span><span class="w"> </span>testAKS<span class="p">.</span>resources<span class="p">.</span>aksCluster<span class="p">.</span>name<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&#39;prod-coffee&#39;</span><span class="w">
 </span></span></span></code></pre></div><p>When I run this test.bicep file, it will take the aks.bicep file and feed the &lsquo;coffee&rsquo; and &lsquo;prod&rsquo; parameters to it. My aks.bicep file will create the string from the parameters and output the name. Then, I use the &ldquo;assert&rdquo; keyword to verify that the string is composed according to my expectations.</p>
 <p>Note: at the time of writing 2023-08-03, the &ldquo;assert&rdquo; keyword was still not available in Bicep 0.20.4, but there might be a problem with my local configuration which I&rsquo;ve asked the team about.</p>
+<h3 id="2023-08-08-update">2023-08-08 update:</h3>
+<p>I&rsquo;ve been in touch with the Bicep team and they responded as follows:</p>
+<blockquote>
+<p>?Regarding your ability to access &ldquo;test&rdquo; but not &ldquo;assert&rdquo;, both key words are still only in a demo phase and not yet intended for customer use. Please hold off on trying them out for now. We will be in touch with folks who have indicated interest through the form and/or on a Community Call when there is a preview available. Thank you for your patience and sorry for any confusion.</p>
+</blockquote>
+<p>I guess I was a little eager with testing the keywords so soon! 😀 🚀</p>
 <h1 id="conclusion">Conclusion</h1>
 <p>I believe it will be a great development to apply test driven software development to Infrastructure as Code by implementing a test framework into Bicep. When I&rsquo;m able to use this approach, I would begin with writing all of the tests for the template that I have in mind, and then I can continue to write the Bicep template itself. By using the tests I can become much more productive because I can speed up my development by using tests without having to do what-if deployments which can be rather slow and involve a lot of waiting.</p>
 <p>It is great to see how the Bicep language is maturing and how it continues to introduce new features that make the lives of developers easier. I was really stoked about the new .bicepparam files, but I&rsquo;m even more excited by the new testing framework.</p>
