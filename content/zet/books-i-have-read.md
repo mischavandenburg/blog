@@ -11,7 +11,7 @@ I'm an avid reader, and this list is far from complete. But I wanted to start wr
 
 The Plantpower Way - Rich Roll
 
-Eat and Run - Scott Jurek
+[Eat and Run - Scott Jurek](/zet/book-notes-eat-and-run/)
 
 Finding Ultra - Rich Roll
 
