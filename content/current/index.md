@@ -6,7 +6,7 @@ On this page I share the things I'm currently focused on, which habits I'm track
 
 # Reading
 
-Currenlty reading Eat and Run by Jurek
+Currenlty reading The Longevity Diet
 
 Also started reading the Polity series by Neal Asher, now reading the first book Gridlinked.
 
@@ -15,20 +15,6 @@ I have never read much science fiction but I'm broadening my horizon a bit.
 With the current AI craze going on it seemed like an interesting AI themed series.
 
 [Here is a list of all the books I've read](/zet/books-i-have-read)
-
-# Stats
-
-Last updated 2023-06-26
-
-Calorie target: 2100 [(~700 deficit)](https://tdeecalculator.net/result.php?s=metric&age=33&g=male&cm=190&kg=77&act=1.55&bf=12&f=1)
-
-Current Weight: 77,59 (weekly average)
-
-Current bodyfat: 13,6% (weekly average according to Withings)
-
-{{< rawhtml >}}
-<iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/116768345/latest-rides/fcfe43e3d240fd35d0d3ae7f11eb2e924744d987'></iframe>
-{{< /rawhtml >}}
 
 ## Weekly Activity
 
