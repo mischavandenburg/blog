@@ -13,9 +13,9 @@ The Plantpower Way - Rich Roll
 
 [Eat and Run - Scott Jurek](/zet/book-notes-eat-and-run/)
 
-Finding Ultra - Rich Roll
+[Finding Ultra - Rich Roll](/zet/book-notes-finding-ultra-rich-roll/)
 
-A Simple Path to Wealth
+[A Simple Path to Wealth](/zet/book-notes-simple-path-to-wealth/)
 
 The Richest Man in Babylon
 
@@ -27,7 +27,7 @@ The Subtle Art of Not Giving A F*ck
 
 Never Split the Difference
 
-Ikigai
+[Ikigai](/zet/articles/ikigai-book/)
 
 Building A Second Brain
 
@@ -35,7 +35,7 @@ On Writing Well
 
 Fat Loss Forever - Layne Norton
 
-The Unicorn Project
+[The Unicorn Project](/zet/articles/unicorn-project/)
 
 The Clean Coder
 
@@ -243,7 +243,7 @@ Dependent Origination
 
 Xu Yun: Dharma Words
 
-The Phoenix Project
+[The Phoenix Project](/zet/articles/phoenix-project/)
 
 Why We Sleep
 
