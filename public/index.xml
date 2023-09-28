@@ -26,6 +26,41 @@ Usually I only use Microsoft Learn and practice exams, but this time around I wa
     </item>
     
     <item>
+      <title>Some Interesting Features went GA on Azure</title>
+      <link>https://mischavandenburg.com/zet/azure-updates-sept-23/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/azure-updates-sept-23/</guid>
+      <description>Yesterday a few interesting AKS related features became Generally Available on Azure.
+KEDA add-on makes it easier to scale your applications on AKS cluster.
+https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/
+You can have a flexible and customized strategy for node-level OS security updates.
+https://azure.microsoft.com/en-us/updates/ga-node-os-patching-nodeimage-feature-in-aks/
+Use Vertical Pod Autoscaling add-on for AKS to improve cost-efficiency, and cluster utilization for your workloads
+https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-aks/
+Preview Public preview: AKS support for Kubernetes version 1.28
+https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/
+Links: 202309281009
+[[azure]]
+[[kubernetes]]</description>
+      <content:encoded><![CDATA[<p>Yesterday a few interesting AKS related features became Generally Available on Azure.</p>
+<p>KEDA add-on makes it easier to scale your applications on AKS cluster.</p>
+<p><a href="https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/">https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/</a></p>
+<p>You can have a flexible and customized strategy for node-level OS security updates.</p>
+<p><a href="https://azure.microsoft.com/en-us/updates/ga-node-os-patching-nodeimage-feature-in-aks/">https://azure.microsoft.com/en-us/updates/ga-node-os-patching-nodeimage-feature-in-aks/</a></p>
+<p>Use Vertical Pod Autoscaling add-on for AKS to improve cost-efficiency, and cluster utilization for your workloads</p>
+<p><a href="https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-aks/">https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-aks/</a></p>
+<h1 id="preview">Preview</h1>
+<p>Public preview: AKS support for Kubernetes version 1.28</p>
+<p><a href="https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/">https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/</a></p>
+<h2 id="links">Links:</h2>
+<p>202309281009</p>
+<p>[[azure]]</p>
+<p>[[kubernetes]]</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Back From Vacation - 2023</title>
       <link>https://mischavandenburg.com/zet/back-from-vacation-2023/</link>
       <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
