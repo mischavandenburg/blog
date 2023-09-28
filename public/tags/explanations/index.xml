@@ -192,7 +192,12 @@ SDKs contain all the tools you need to get started. They typically contain a com
       <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
       <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
-      <content:encoded><![CDATA[<p>As I alluded to in my <a href="/zet/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/bzkrmkGDQJA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>As I alluded to in my <a href="/zet/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
 <p>Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</p>
 <p>I discovered <a href="https://gohugo.io/">Hugo</a> and I fell in love with it immediately.</p>
 <p>Hugo is a static site generator based on markdown files. My entire blog is written in markdown files which are stored <a href="https://github.com/mischavandenburg/blog">in a GitHub repo.</a>. I write my blog posts in vim and when I&rsquo;m done I use Hugo to generate the updated website.</p>

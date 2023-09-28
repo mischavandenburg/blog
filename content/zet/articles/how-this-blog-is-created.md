@@ -8,6 +8,9 @@ tags:
 - Explanations
 - Linux
 ---
+
+{{< youtube bzkrmkGDQJA >}}
+
 As I alluded to in my [article about Obsidian,](/zet/articles/obsidian-introduction) I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.
