@@ -6,7 +6,31 @@
     <description>Recent content in AKS on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/aks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/aks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pod Disruption Budgets Can Mess With Your AKS Updates</title>
+      <link>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</guid>
+      <description>Past week we&amp;rsquo;ve been struggling a bit with poorly configured pod disruption budgets. When you do an AKS upgrade, a new node is created and one of the old nodes is drained.
+If a deployment has a pod disruption budget which is incorrectly configured, it might show up as ALLOWED DISRUPTIONS: 0. When this happens, the node cannot be drained and you will get an error message in your events.</description>
+      <content:encoded><![CDATA[<p>Past week we&rsquo;ve been struggling a bit with poorly configured pod disruption budgets. When you do an AKS upgrade, a new node is created and one of the old nodes is drained.</p>
+<p>If a deployment has a pod disruption budget which is incorrectly configured, it might show up as <code>ALLOWED DISRUPTIONS: 0</code>. When this happens, the node cannot be drained and you will get an error message in your events.</p>
+<p><code>k get poddisruptionbudgets.policy</code></p>
+<p><code>k get events</code></p>
+<p>The error message will say something like &ldquo;Too man eviction attempts, usually a pdb&rdquo; (I lost the shell output so can&rsquo;t copy atm).</p>
+<p>Kubernetes is in a situation where it needs to schedule the pod on another node, but it is unable to do do so because we are telling Kubernetes that it is not allowed to have any disruptions on the deployment.</p>
+<p>Kubernetes is logical, it&rsquo;s doing like it&rsquo;s told. But it&rsquo;s frustrating because you can be sitting there waiting for 20 minutes wondering why your node isn&rsquo;t draining.</p>
+<p>At my current gig we are not responsible for the content on the clusters and we should not meddle with the application teams&rsquo; namespaces.</p>
+<p>However, one solution is to either kill the pod manually or scale up the deployment to more replicas so there will be a higher amount of allowed disruptions.</p>
+<h2 id="links">Links:</h2>
+<p>202309271809</p>
+<p>[[kubernetes]]</p>
+<p>[[azure]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Deploying AKS Cluster With Azure CNI Using Bicep</title>
       <link>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</link>

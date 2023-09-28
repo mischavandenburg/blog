@@ -6,7 +6,25 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Began studying for AZ-700 Designing and Implementing Microsoft Azure Networking Solutions</title>
+      <link>https://mischavandenburg.com/zet/starting-az-700/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/starting-az-700/</guid>
+      <description>Before I went on holiday I formed the intention to begin studying again after I came back.
+During my current gig I&amp;rsquo;m configuring a fair bit of networking, VNets, peerings, firewall rules and set up a full hub-spoke network from scratch, so I&amp;rsquo;ve had a fair bit of practical experience. Now that the experience is still fresh in the mind I figured I&amp;rsquo;d go for this certification.
+Usually I only use Microsoft Learn and practice exams, but this time around I want to try out a video course.</description>
+      <content:encoded><![CDATA[<p>Before I went on holiday I formed the intention to begin studying again after I came back.</p>
+<p>During my current gig I&rsquo;m configuring a fair bit of networking, VNets, peerings, firewall rules and set up a full hub-spoke network from scratch, so I&rsquo;ve had a fair bit of practical experience. Now that the experience is still fresh in the mind I figured I&rsquo;d go for this certification.</p>
+<p>Usually I only use Microsoft Learn and practice exams, but this time around I want to try out a video course. I purchased a year of A Cloud Guru access and so far it has been a good experience.</p>
+<p>I&rsquo;ll publish my notes as I go along.</p>
+<h2 id="links">Links:</h2>
+<p>202309280909</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Back From Vacation - 2023</title>
       <link>https://mischavandenburg.com/zet/back-from-vacation-2023/</link>
@@ -73,6 +91,30 @@ But the main event was a 8 day thru hike of Trollheimen. I hiked 20-25km a day f
 <p>Even if you are not into running or plant based nutrition, this book can be an interesting read. I think there is something fascinating about powering yourself through 100 miles, fighting the pain and suffering and finding energy from nowhere that anybody can appreciate.</p>
 <h2 id="links">Links:</h2>
 <p>202309270609</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Pod Disruption Budgets Can Mess With Your AKS Updates</title>
+      <link>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</guid>
+      <description>Past week we&amp;rsquo;ve been struggling a bit with poorly configured pod disruption budgets. When you do an AKS upgrade, a new node is created and one of the old nodes is drained.
+If a deployment has a pod disruption budget which is incorrectly configured, it might show up as ALLOWED DISRUPTIONS: 0. When this happens, the node cannot be drained and you will get an error message in your events.</description>
+      <content:encoded><![CDATA[<p>Past week we&rsquo;ve been struggling a bit with poorly configured pod disruption budgets. When you do an AKS upgrade, a new node is created and one of the old nodes is drained.</p>
+<p>If a deployment has a pod disruption budget which is incorrectly configured, it might show up as <code>ALLOWED DISRUPTIONS: 0</code>. When this happens, the node cannot be drained and you will get an error message in your events.</p>
+<p><code>k get poddisruptionbudgets.policy</code></p>
+<p><code>k get events</code></p>
+<p>The error message will say something like &ldquo;Too man eviction attempts, usually a pdb&rdquo; (I lost the shell output so can&rsquo;t copy atm).</p>
+<p>Kubernetes is in a situation where it needs to schedule the pod on another node, but it is unable to do do so because we are telling Kubernetes that it is not allowed to have any disruptions on the deployment.</p>
+<p>Kubernetes is logical, it&rsquo;s doing like it&rsquo;s told. But it&rsquo;s frustrating because you can be sitting there waiting for 20 minutes wondering why your node isn&rsquo;t draining.</p>
+<p>At my current gig we are not responsible for the content on the clusters and we should not meddle with the application teams&rsquo; namespaces.</p>
+<p>However, one solution is to either kill the pod manually or scale up the deployment to more replicas so there will be a higher amount of allowed disruptions.</p>
+<h2 id="links">Links:</h2>
+<p>202309271809</p>
+<p>[[kubernetes]]</p>
+<p>[[azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -992,13 +1034,15 @@ Although I&amp;rsquo;m back on track with the running I start noticing a dip in 
       
       <guid>https://mischavandenburg.com/zet/books-i-have-read/</guid>
       <description>I&amp;rsquo;m an avid reader, and this list is far from complete. But I wanted to start writing down the ones I&amp;rsquo;m reading now, and the ones I&amp;rsquo;ve read in the past. I&amp;rsquo;m mostly writing down titles but I&amp;rsquo;ll include the author when I remember the name.
-2023 The Plantpower Way - Rich Roll
+2023 Born to Run
+Four Thousand Weeks
+The Plantpower Way - Rich Roll
 Eat and Run - Scott Jurek
-Finding Ultra - Rich Roll
-A Simple Path to Wealth
-The Richest Man in Babylon</description>
+Finding Ultra - Rich Roll</description>
       <content:encoded><![CDATA[<p>I&rsquo;m an avid reader, and this list is far from complete. But I wanted to start writing down the ones I&rsquo;m reading now, and the ones I&rsquo;ve read in the past. I&rsquo;m mostly writing down titles but I&rsquo;ll include the author when I remember the name.</p>
 <h1 id="2023">2023</h1>
+<p>Born to Run</p>
+<p>Four Thousand Weeks</p>
 <p>The Plantpower Way - Rich Roll</p>
 <p><a href="/zet/book-notes-eat-and-run/">Eat and Run - Scott Jurek</a></p>
 <p><a href="/zet/book-notes-finding-ultra-rich-roll/">Finding Ultra - Rich Roll</a></p>
