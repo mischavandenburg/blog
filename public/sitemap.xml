@@ -14,10 +14,16 @@
     <loc>https://mischavandenburg.com/zet/starting-az-700/</loc>
     <lastmod>2023-09-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/zet/not-journaling-as-often/</loc>
+    <lastmod>2023-09-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
     <lastmod>2023-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/networking/</loc>
+    <lastmod>2023-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/personal/</loc>
     <lastmod>2023-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/azure-updates-sept-23/</loc>
@@ -27,6 +33,9 @@
     <lastmod>2023-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/writing/</loc>
     <lastmod>2023-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/</loc>
@@ -42,9 +51,6 @@
     <lastmod>2023-09-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/health/</loc>
-    <lastmod>2023-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/personal/</loc>
     <lastmod>2023-09-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</loc>
@@ -267,9 +273,6 @@
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/why-personal-website/</loc>
-    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/writing/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/2023-week-19/</loc>
