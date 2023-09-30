@@ -8,6 +8,16 @@
     <language>en</language>
     <lastBuildDate>Sat, 30 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Azure</title>
+      <link>https://mischavandenburg.com/tags/azure/</link>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/azure/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Book-notes</title>
       <link>https://mischavandenburg.com/tags/book-notes/</link>
       <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
@@ -38,29 +48,9 @@
     </item>
     
     <item>
-      <title>AKS</title>
-      <link>https://mischavandenburg.com/tags/aks/</link>
-      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/aks/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Azure</title>
-      <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/azure/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Kubernetes</title>
       <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
       <description></description>
@@ -68,11 +58,31 @@
     </item>
     
     <item>
+      <title>Longevity</title>
+      <link>https://mischavandenburg.com/tags/longevity/</link>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/longevity/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Networking</title>
       <link>https://mischavandenburg.com/tags/networking/</link>
-      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/networking/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>AKS</title>
+      <link>https://mischavandenburg.com/tags/aks/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/aks/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
