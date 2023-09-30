@@ -19,7 +19,12 @@ Data plane: association with kubernetes pods.
 The association is made to the subnet in the Azure VNet.
 Each association is in one subnet, and the subnet should at least have /24 or 256 addresses.
 Kubernetes ALB controller consists of two pods.</description>
-      <content:encoded><![CDATA[<h1 id="frontend">Frontend</h1>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/iXjb_L722VvqAjHZ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h1 id="frontend">Frontend</h1>
 <h2 id="azure">Azure</h2>
 <p>You can have multiple frontends in one gateway to save money. Teams could share the app gateway but use different frontend IP addresses or FQDNs.</p>
 <p>Control plane: Azure App Gateway for Containers</p>

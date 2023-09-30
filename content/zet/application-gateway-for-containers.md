@@ -7,6 +7,8 @@ tags:
 - Kubernetes
 ---
 
+{{< youtube iXjb_L722VvqAjHZ >}}
+
 # Frontend
 
 ## Azure
