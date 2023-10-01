@@ -8,7 +8,7 @@
     <language>en</language>
     <lastBuildDate>Sat, 30 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Application Gateway for Containers</title>
+      <title>Video notes - Application Gateway for Containers</title>
       <link>https://mischavandenburg.com/zet/application-gateway-for-containers/</link>
       <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
       
@@ -21,7 +21,7 @@ Each association is in one subnet, and the subnet should at least have /24 or 25
 Kubernetes ALB controller consists of two pods.</description>
       <content:encoded><![CDATA[
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/iXjb_L722VvqAjHZ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/slCjHV8z9Wk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 <h1 id="frontend">Frontend</h1>

@@ -1,5 +1,5 @@
 ---
-title: Application Gateway for Containers
+title: Video notes - Application Gateway for Containers
 date: 2023-09-30
 tags:
 - Azure
@@ -7,7 +7,7 @@ tags:
 - Kubernetes
 ---
 
-{{< youtube iXjb_L722VvqAjHZ >}}
+{{< youtube slCjHV8z9Wk >}}
 
 # Frontend
 

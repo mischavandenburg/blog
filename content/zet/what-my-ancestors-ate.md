@@ -1,6 +1,6 @@
 ---
 title: What My Ancestors Ate
-date: 2023-09-30
+date: 2023-10-01
 tags:
 - Diet
 - Health
