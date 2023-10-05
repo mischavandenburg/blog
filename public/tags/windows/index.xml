@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Windows on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/windows/</link>
+    <description>Recent content in Windows on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dont Use Question Marks in Windows Filenames</title>
+      <link>https://mischavandenburg.com/zet/windows-filenames-invalid/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/windows-filenames-invalid/</guid>
+      <description>Ran into a problem when cloning my second brain repository on a new windows machine which I need to use for work. Also trying to get familiar with VSCode although I&amp;rsquo;m doing my best to get a good WSL setup going on my new windows setup.
+One problem I was running into was that I could not for the life of me clone my repository at all on Windows. Eventually I realized that it kept failing on a file that had a question mark in its filename.</description>
+      <content:encoded><![CDATA[<p>Ran into a problem when cloning my second brain repository on a new windows machine which I need to use for work. Also trying to get familiar with VSCode although I&rsquo;m doing my best to get a good WSL setup going on my new windows setup.</p>
+<p>One problem I was running into was that I could not for the life of me clone my repository at all on Windows. Eventually I realized that it kept failing on a file that had a question mark in its filename.</p>
+<p>I renamed all the files that had invalid characters.</p>
+<p>It also failed because apparently I had a file in the repo named &ldquo;&quot;. It didn&rsquo;t like that at all.</p>
+<p>After changing the filenames it worked.</p>
+<p>It is good to keep my second brain compatible with all operating systems so this is actually a good practice session.</p>
+<h2 id="links">Links:</h2>
+<p>202310052010</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
