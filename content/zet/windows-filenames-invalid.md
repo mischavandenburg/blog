@@ -4,7 +4,7 @@ date: 2023-10-05
 tags:
 - Windows
 - second-brain
-- note-taking
+- notetaking
 ---
 
 Ran into a problem when cloning my second brain repository on a new windows machine which I need to use for work. Also trying to get familiar with VSCode although I'm doing my best to get a good WSL setup going on my new windows setup.

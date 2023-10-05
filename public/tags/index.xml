@@ -8,17 +8,47 @@
     <language>en</language>
     <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>note-taking</title>
-      <link>https://mischavandenburg.com/tags/note-taking/</link>
+      <title>Command-Line</title>
+      <link>https://mischavandenburg.com/tags/command-line/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/note-taking/</guid>
+      <guid>https://mischavandenburg.com/tags/command-line/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
-      <title>Second-Brain</title>
+      <title>Linux</title>
+      <link>https://mischavandenburg.com/tags/linux/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/linux/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Neovim</title>
+      <link>https://mischavandenburg.com/tags/neovim/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/neovim/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>notetaking</title>
+      <link>https://mischavandenburg.com/tags/notetaking/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/notetaking/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>second-brain</title>
       <link>https://mischavandenburg.com/tags/second-brain/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       
@@ -338,16 +368,6 @@
     </item>
     
     <item>
-      <title>Neovim</title>
-      <link>https://mischavandenburg.com/tags/neovim/</link>
-      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/neovim/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Microsoft</title>
       <link>https://mischavandenburg.com/tags/microsoft/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
@@ -388,26 +408,6 @@
     </item>
     
     <item>
-      <title>Command-Line</title>
-      <link>https://mischavandenburg.com/tags/command-line/</link>
-      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/command-line/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://mischavandenburg.com/tags/linux/</link>
-      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/linux/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Gaming</title>
       <link>https://mischavandenburg.com/tags/gaming/</link>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
@@ -433,16 +433,6 @@
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/reading/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Notetaking</title>
-      <link>https://mischavandenburg.com/tags/notetaking/</link>
-      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/notetaking/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

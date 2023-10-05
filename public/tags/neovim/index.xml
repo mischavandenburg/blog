@@ -6,7 +6,27 @@
     <description>Recent content in Neovim on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>It is good to keep your second brain compatible with Obsidian</title>
+      <link>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</guid>
+      <description>Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.
+I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.
+For my new gig at work I&amp;rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault.</description>
+      <content:encoded><![CDATA[<p>Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.</p>
+<p>I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.</p>
+<p>For my new gig at work I&rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault. Then it is a godsend to be able to install Obsidian and use that to interact with my second brain.</p>
+<p>It is very good to keep it compatible with obsidian so I can use the software for synching and interacting with my second brain on other operating systems conveniently.</p>
+<h2 id="links">Links:</h2>
+<p>202310052010</p>
+<p>[[second-brain]]
+[[notetaking]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim</title>
       <link>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</link>

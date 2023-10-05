@@ -5,10 +5,22 @@
     <loc>https://mischavandenburg.com/</loc>
     <lastmod>2023-10-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/command-line/</loc>
+    <lastmod>2023-10-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/zet/windows-filenames-invalid/</loc>
     <lastmod>2023-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/note-taking/</loc>
+    <loc>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</loc>
+    <lastmod>2023-10-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2023-10-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/neovim/</loc>
+    <lastmod>2023-10-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/notetaking/</loc>
     <lastmod>2023-10-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/second-brain/</loc>
@@ -242,9 +254,6 @@
     <loc>https://mischavandenburg.com/zet/chatgpt-buddha-hunger/</loc>
     <lastmod>2023-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/neovim/</loc>
-    <lastmod>2023-06-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</loc>
     <lastmod>2023-06-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -326,12 +335,6 @@
     <loc>https://mischavandenburg.com/zet/why-post-on-social-media/</loc>
     <lastmod>2023-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/command-line/</loc>
-    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
-    <lastmod>2023-05-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/everything-nothing-blog/</loc>
     <lastmod>2023-05-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -370,9 +373,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/vacations-in-soviet-union/</loc>
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/notetaking/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/power-of-writing/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
