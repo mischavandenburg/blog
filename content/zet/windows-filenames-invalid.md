@@ -2,8 +2,9 @@
 title: Dont Use Question Marks in Windows Filenames
 date: 2023-10-05
 tags:
-- Obsidian
 - Windows
+- second-brain
+- note-taking
 ---
 
 Ran into a problem when cloning my second brain repository on a new windows machine which I need to use for work. Also trying to get familiar with VSCode although I'm doing my best to get a good WSL setup going on my new windows setup.
