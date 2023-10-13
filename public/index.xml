@@ -6,7 +6,93 @@
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixed an issue with akv2k8s overriding security context</title>
+      <link>https://mischavandenburg.com/zet/akv2k8s-edb-initcontainer-securitycontext/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/akv2k8s-edb-initcontainer-securitycontext/</guid>
+      <description>This week I&amp;rsquo;ve been tackling an issue at work with akv2k8s.
+We are running CloudnativePG, similar to EnterpriseDB. After upgrading akv2k8s to v2.5.0 our database pods were not coming up anymore due to an error with the initcontainer:
+Error: container has runAsNonRoot and image has non-numeric user (nonroot), cannot verify user is non-root (pod: &amp;#34;vcs-pooler-rw-858bf7c954-vjzr4_vcs(e19bfa4c-26d8-4a6d-b4ad-bba8b52c01e6)&amp;#34;, container: bootstrap-controller) Pods have a security context where you specify how the containers in the pod should be run.</description>
+      <content:encoded><![CDATA[<p>This week I&rsquo;ve been tackling an issue at work with akv2k8s.</p>
+<p>We are running CloudnativePG, similar to EnterpriseDB. After upgrading akv2k8s to v2.5.0 our database pods were not coming up anymore due to an error with the initcontainer:</p>
+<pre tabindex="0"><code>Error: container has runAsNonRoot and image has non-numeric user (nonroot), cannot verify user is non-root (pod: &#34;vcs-pooler-rw-858bf7c954-vjzr4_vcs(e19bfa4c-26d8-4a6d-b4ad-bba8b52c01e6)&#34;, container: bootstrap-controller)
+</code></pre><p>Pods have a security context where you specify how the containers in the pod should be run.</p>
+<pre tabindex="0"><code>securityContext:
+    runAsUser: 998
+    runAsGroup: 996
+    runAsNonRoot: true
+    fsGroup: 996
+</code></pre><p>Here we are telling the pod that we may not run as the root user and that we will run as user 998.</p>
+<p>My error states that it cannot verify whether it is running as root or not because we are using a non-numeric user.</p>
+<p>We were dumbfounded by this because the deployment and ReplicaSet neatly had their securitycontexts configured and the pods should inherit them. After a lot of searching I figured out that the securitycontext of the pods was actually empty, so somehow it must be overridden somewhere.</p>
+<p>The culprit was the akv2k8s envinjector. This tool injects the secrets into the environment of the pods. It took a lot of experimentation but we managed to narrow it down to the akv2k8s upgrade and eventually we found this GitHub issue:</p>
+<p><a href="https://github.com/SparebankenVest/azure-key-vault-to-kubernetes/issues/605">https://github.com/SparebankenVest/azure-key-vault-to-kubernetes/issues/605</a></p>
+<p>For some reason the envinjector is overriding the securitycontext of the pods. The issue was fixed by downgrading the helm chart back to 2.4.2</p>
+<p>I did learn a lot in the process though!</p>
+<h2 id="links">Links:</h2>
+<p>202310130610</p>
+<p><a href="https://www.enterprisedb.com/docs/postgres_for_kubernetes/latest/installation_upgrade/">https://www.enterprisedb.com/docs/postgres_for_kubernetes/latest/installation_upgrade/</a></p>
+<p><a href="https://github.com/SparebankenVest/azure-key-vault-to-kubernetes/issues/605">https://github.com/SparebankenVest/azure-key-vault-to-kubernetes/issues/605</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Forcing a new cert from letsencrypt when too many have been issued</title>
+      <link>https://mischavandenburg.com/zet/forcing-new-cert-letsencrypt-timeout/</link>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/forcing-new-cert-letsencrypt-timeout/</guid>
+      <description>Learned a new trick to force a new cert from letsencrypt. Had this error message:
+The certificate request has failed to complete and will be retried: Failed to wait for order resource &amp;#34;vcs-secret-j8gnj-3121219202&amp;#34; to become ready: order is in &amp;#34;errored&amp;#34; state: Failed to create Order: 429 urn:ietf:params:acme:error:rateLimited: Error creating new order :: too many certificates (5) already issued for this exact set of domains in the last 168 hours: sadfsadf.com, retry after 2023-10-12T18:54:27Z: see https://letsencrypt.</description>
+      <content:encoded><![CDATA[<p>Learned a new trick to force a new cert from letsencrypt. Had this error message:</p>
+<pre tabindex="0"><code>The certificate request has failed to complete and will be retried: Failed to wait for order resource &#34;vcs-secret-j8gnj-3121219202&#34; to become ready: order is in &#34;errored&#34; state: Failed to create Order: 429 urn:ietf:params:acme:error:rateLimited: Error creating new order :: too many certificates (5) already issued for this exact set of domains in the last 168 hours: sadfsadf.com, retry after 2023-10-12T18:54:27Z: see https://letsencrypt.org/docs/duplicate-certificate-limit/
+</code></pre><p>I asked for too many certificates during a 168 hour period. However, there is a really easy fix. Just add a new subdomain and LetsEncrypt will treat it as an entirely new certificate!</p>
+<p>For example, when using cert-manager:</p>
+<pre tabindex="0"><code>apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  creationTimestamp: &#39;2023-10-12T11:09:36Z&#39;
+  generation: 2
+  labels:
+    argocd.argoproj.io/instance: vcs-dev
+  name: vcs-secret
+  namespace: vcs
+  ownerReferences:
+    - apiVersion: networking.k8s.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Ingress
+      name: vcs-ingress
+      uid: xxxxx
+      resourceVersion: &#39;226558404&#39;
+  uid: xxxx
+spec:
+  dnsNames:
+    - vcs.mischavandenburg.com
+    - test.mischavandenburg.com
+  issuerRef:
+    group: cert-manager.io
+    kind: ClusterIssuer
+    name: letsencrypt-prod
+  secretName: vcs-secret
+  usages:
+    - digital signature
+    - key encipherment
+</code></pre><p>Just add another domain under spec.dnsNames and it will treat it as a new cert.</p>
+<pre tabindex="0"><code>spec:
+  dnsNames:
+    - vcs.mischavandenburg.com
+    - test.mischavandenburg.com
+    - hello.mischavandenburg.com
+</code></pre><h2 id="links">Links:</h2>
+<p>202310121310</p>
+<p>[[kubernetes]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>2023 week 40</title>
       <link>https://mischavandenburg.com/zet/2023-week-40/</link>
