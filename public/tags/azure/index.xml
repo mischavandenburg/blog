@@ -6,7 +6,29 @@
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backing up AKS Clusters with Azure Backup is now in preview</title>
+      <link>https://mischavandenburg.com/zet/aks-azure-backup-preview/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/aks-azure-backup-preview/</guid>
+      <description>You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.
+https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup
+Links: 202310130610
+[[aks]]
+[[kubernetes]]
+[[azure]]</description>
+      <content:encoded><![CDATA[<p>You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup">https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup</a></p>
+<h2 id="links">Links:</h2>
+<p>202310130610</p>
+<p>[[aks]]</p>
+<p>[[kubernetes]]</p>
+<p>[[azure]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video notes - Application Gateway for Containers</title>
       <link>https://mischavandenburg.com/zet/application-gateway-for-containers/</link>

@@ -44,3 +44,7 @@ I did learn a lot in the process though!
 https://www.enterprisedb.com/docs/postgres_for_kubernetes/latest/installation_upgrade/
 
 https://github.com/SparebankenVest/azure-key-vault-to-kubernetes/issues/605
+
+https://stackoverflow.com/questions/53949329/kubernetes-runasnonroot-failing-createcontainerconfigerror
+
+https://github.com/cloudnative-pg/cloudnative-pg

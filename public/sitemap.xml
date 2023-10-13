@@ -5,6 +5,15 @@
     <loc>https://mischavandenburg.com/</loc>
     <lastmod>2023-10-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/aks/</loc>
+    <lastmod>2023-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/azure/</loc>
+    <lastmod>2023-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/aks-azure-backup-preview/</loc>
+    <lastmod>2023-10-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/zet/akv2k8s-edb-initcontainer-securitycontext/</loc>
     <lastmod>2023-10-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -77,9 +86,6 @@
     <loc>https://mischavandenburg.com/zet/what-my-ancestors-ate/</loc>
     <lastmod>2023-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/azure/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/book-notes/</loc>
     <lastmod>2023-09-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -91,9 +97,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/application-gateway-for-containers/</loc>
     <lastmod>2023-09-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/aks/</loc>
-    <lastmod>2023-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/starting-az-700/</loc>
     <lastmod>2023-09-28T00:00:00+00:00</lastmod>
