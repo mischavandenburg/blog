@@ -6,7 +6,46 @@
     <description>Recent content in Kubernetes on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some notes on upgrading AKS clusters running EnterpriseDB</title>
+      <link>https://mischavandenburg.com/zet/edb-cluster-notes/</link>
+      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/edb-cluster-notes/</guid>
+      <description>Upgrading clusters with databases When upgrading this type of cluster it is better to upgrade the control plane first and then upgrade the node pools one by one.
+The EDB operator prevents you to drain nodes with databases on them with PodDisruptionBudgets.
+In order to be able to run the AKS upgrade you will need to set the following:
+k cnp maintenance set --all-namespaces --reusePVC
+cnp is a kubectl plugin which you need to install to manage the EDB operator --reusePVC can only be used if all the nodes are in the same availability zone use this command to list all the zones: kubectl describe nodes | grep -e &amp;quot;Name:&amp;quot; -e &amp;quot;topology.</description>
+      <content:encoded><![CDATA[<h1 id="upgrading-clusters-with-databases">Upgrading clusters with databases</h1>
+<p>When upgrading this type of cluster it is better to upgrade the control plane first and then upgrade the node pools one by one.</p>
+<p>The EDB operator prevents you to drain nodes with databases on them with PodDisruptionBudgets.</p>
+<p>In order to be able to run the AKS upgrade you will need to set the following:</p>
+<p><code>k cnp maintenance set --all-namespaces --reusePVC</code></p>
+<ul>
+<li>cnp is a kubectl plugin which you need to install to manage the EDB operator</li>
+<li><code>--reusePVC</code> can only be used if all the nodes are in the same availability zone</li>
+<li>use this command to list all the zones: <code>kubectl describe nodes | grep -e &quot;Name:&quot; -e &quot;topology.kubernetes.io/zone&quot;</code></li>
+</ul>
+<p>When the upgrade is complete, run <code>k cnp maintenance set --all-namespaces</code></p>
+<h2 id="getting-the-status">Getting the status</h2>
+<p>You can get all information about the database cluster:</p>
+<p><code>k cnp status pyramid-cluster-database -n mycommodity</code></p>
+<p>Most deployments have the same name pyramid-cluster-database.</p>
+<h2 id="problems">Problems</h2>
+<p>Sometimes a database replica will not come up properly and you can get the following error message:</p>
+<p><code>(FATAL: the database system is starting up (SQLSTATE 57P03))</code></p>
+<p>To fix this, first disable reusing PVC by running:</p>
+<p><code>k cnp maintenance set -n problemdatabase</code></p>
+<p>&ldquo;problemdatabase&rdquo; is the namespace where the database cluster is deployed.</p>
+<p>Then delete the PVC of the problematic pod. This should trigger a new replica to be created from scratch. Depending on the size of the DB it can take a lot of time.</p>
+<h2 id="links">Links:</h2>
+<p>202310171410</p>
+<p>[[kubernetes]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Backing up AKS Clusters with Azure Backup is now in preview</title>
       <link>https://mischavandenburg.com/zet/aks-azure-backup-preview/</link>
