@@ -6,7 +6,41 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 week 42</title>
+      <link>https://mischavandenburg.com/zet/2023-week-42/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/2023-week-42/</guid>
+      <description>My Week It has been a good and active week. Tuesday I went to my friend&amp;rsquo;s place to do my first evening of Magic: The Gathering. We were four guys and they all have been playing magic for many years, so it was impressive to see their playing speed and the complexity of their decks. I learned a lot and had a good time.
+Doing interesting things at work, upgrading clusters with databases running on them provides lots of challenges but I managed to figure it all out and I did a few successful production upgrades this week.</description>
+      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
+<p>It has been a good and active week. Tuesday I went to my friend&rsquo;s place to do my first evening of Magic: The Gathering. We were four guys and they all have been playing magic for many years, so it was impressive to see their playing speed and the complexity of their decks. I learned a lot and had a good time.</p>
+<p>Doing interesting things at work, upgrading clusters with databases running on them provides lots of challenges but I managed to figure it all out and I did a few successful production upgrades this week. I&rsquo;m starting to get into the groove with my new assignment.</p>
+<p>In the weekend I went out in Amsterdam with friends to have dinner at Troost and on Sunday I played magic with my brother.</p>
+<p>All in all I am being much more socially active than I&rsquo;m used to but I&rsquo;m surprised that my energy levels are not being drained that much. I think it&rsquo;s because playing Magic gives me energy because it stimulates my brain and forces me to think strategically</p>
+<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
+<p>Running 5km daily again on the minimalist shoes and it feels great. No pains or injuries so far so I think I can say I&rsquo;m successfully transitioned and now I can start slowly to build up to 15km again.</p>
+<p>My diet has degraded over the past few weeks due to stress of the new assignment and I&rsquo;m not eating as much healthy fresh leafy greens but eating a lot of bread instead.</p>
+<p>Now the season has turned, the weather is getting cold and wet so it will be good to do a 5 day cleansing fast where I&rsquo;ll eat 800 calories a day (Fasting Mimicking Diet).</p>
+<h2 id="content-consumption">Content Consumption</h2>
+<h3 id="reading">Reading</h3>
+<p>Making good progress in The Pale Horseman. The Danes have attacked Wessex and king Alfred has fled into the marshes near the Saefern Sea where Uthred is protecting him. They are building up a fort and rebuilding an army because Alfred wants to strike before the Danes receive reinforcements from abroad.</p>
+<h3 id="watching">Watching</h3>
+<p>Watched the MTG Standard Final match while looking at the contender&rsquo;s decks lists and I was surprised that I could understand most of what was going on.</p>
+<h3 id="playing">Playing</h3>
+<p>Grinding daily wins and daily quests on MTG Arena. I have about 25k gold and 4k gems now.</p>
+<p>Did my first Quick Draft and won 3 games before I lost three times, so it was not bad at all. I ended up making a funny little rat deck because black was not being picked by the others.</p>
+<h3 id="listening">Listening</h3>
+<p>Listened to this podcast with Neri Oxman. Some very though provoking ideas of linking nature with AI and giving it access to our computing power and bandwith.</p>
+<p><a href="https://youtu.be/XbPHojL_61U?si=Zl7RjdbGtW-FXTJG">https://youtu.be/XbPHojL_61U?si=Zl7RjdbGtW-FXTJG</a></p>
+<h2 id="links">Links:</h2>
+<p>202310230710</p>
+<p>[[weeknotes]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Some notes on upgrading AKS clusters running EnterpriseDB</title>
       <link>https://mischavandenburg.com/zet/edb-cluster-notes/</link>
