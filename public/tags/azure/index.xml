@@ -6,7 +6,100 @@
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AZ-700 Notes - Virtual WAN</title>
+      <link>https://mischavandenburg.com/zet/az-700-virtual-wan/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/az-700-virtual-wan/</guid>
+      <description>Chapter 11 Virtual WAN Easy Mode Hub-Spoke
+incorporates multiple hybrid connections (vpn/expressroute) incorporates multiple VNets Dynamically handles routing easily deploys NVA/Firewall Use case You technically don&amp;rsquo;t need to use it for anything, you can do the same with a normal hub-spoke built using VNets.
+However, when you do, you&amp;rsquo;re in charge of:
+add/update routes network gateway connections integration with virtual appliances / firewalls Virtual WAN makes these tasks easier.
+Components Virtual Wan</description>
+      <content:encoded><![CDATA[<h1 id="chapter-11-virtual-wan">Chapter 11 Virtual WAN</h1>
+<p><strong>Easy Mode Hub-Spoke</strong></p>
+<ul>
+<li>incorporates multiple hybrid connections (vpn/expressroute)</li>
+<li>incorporates multiple VNets</li>
+<li>Dynamically handles routing</li>
+<li>easily deploys NVA/Firewall</li>
+</ul>
+<h2 id="use-case">Use case</h2>
+<p>You technically don&rsquo;t need to use it for anything, you can do the same with a normal hub-spoke built using VNets.</p>
+<p>However, when you do, you&rsquo;re in charge of:</p>
+<ul>
+<li>add/update routes</li>
+<li>network gateway connections</li>
+<li>integration with virtual appliances / firewalls</li>
+</ul>
+<p>Virtual WAN makes these tasks easier.</p>
+<h2 id="components">Components</h2>
+<p>Virtual Wan</p>
+<ul>
+<li>overlay of entire WAN infrastructure</li>
+<li>includes 1 or more hubs</li>
+</ul>
+<p>Hub</p>
+<ul>
+<li>managed VNet</li>
+<li>core of v wan</li>
+<li>main connection point of vnets, vpn, er circuits</li>
+</ul>
+<p>Hybrid connections: s2s vpn, p2s vpn, er circuits</p>
+<p>Other connections</p>
+<ul>
+<li>VNet connections</li>
+<li>hub-to-hub</li>
+</ul>
+<h2 id="transitive-networking">Transitive networking</h2>
+<p>In VWAN transitive is possible.</p>
+<p>VNets can communicate with other VNEts through hubs with standard WAN SKU. Not the basic sku.</p>
+<p>Has managed router that forwards traffic between spokes.</p>
+<p>Transitive across hubs in the same WAN.</p>
+<p>Normally you have to explicitly create all the peerings, but in the WAN all VNets can communicate with eachother by default.</p>
+<h2 id="skus">SKUS</h2>
+<p>Basic: only s2s vpn. Not transitive.</p>
+<p>Standard: all the rest
+Transitive natworking, NVA in WAN</p>
+<h2 id="virtual-hub-routing">Virtual Hub Routing</h2>
+<p>Virtual hubs contain their own route tables.</p>
+<p>Hub connections (all types) associate and propagate routes to the hub&rsquo;s Default route table.</p>
+<p>Static (custom) routes can be added.</p>
+<p>Each network connected to a hub can either associate or propagate its routes.</p>
+<h3 id="association">Association</h3>
+<p>The connection and its network can learn the routes and adopt those routes for its own connection.</p>
+<p>An association is learning the virtual hub&rsquo;s routes and then taking on those routes for its own network routing table.</p>
+<p>All connections associate to the Default route table. Propagation to the Default route table is optional to enable further isolation.</p>
+<p>All connections will learn the hub&rsquo;s default routes, but not all connections will contribute to the Default route table.</p>
+<h3 id="propagation">Propagation</h3>
+<p>A connection, or more specifically, the network behind its connection, adds its own network routing table to the hub&rsquo;s route table.</p>
+<p>It is providing or propagating routes to the hub.</p>
+<p>There is a Default and None route table. Propagating to the None route table does not add VNet routes.</p>
+<p>This isolates the the network because its routes are not published to the hub.</p>
+<h3 id="custom-route-tables">Custom Route Tables</h3>
+<p>Additional route tables alongside the hub&rsquo;s Default table.</p>
+<p>Choose which connections associate (learn) and propagate (add to) custom route tables.</p>
+<p>Useful for:</p>
+<ul>
+<li>isolating groups of networks from other networks</li>
+<li>routing traffic through several NVA&rsquo;s attached to the hub</li>
+</ul>
+<p><strong>Custom route tables will take priority over custom route tables</strong></p>
+<h2 id="virtual-wan-hybrid-connections">Virtual WAN Hybrid Connections</h2>
+<p>Merging the WAN with on-site networks through S2S/P2S/VPN and ExpressRoute.</p>
+<h3 id="scale-units">Scale Units</h3>
+<p>Important for exam.</p>
+<p>Think of these as a &ldquo;bandwith SKU&rdquo;.</p>
+<p>Assigns the aggregate througput (bandwith) to the connection unit. Expressed in Mbps or Gbps.</p>
+<p>VPN and ExpressRoute connections use different scale units.</p>
+<h2 id="links">Links:</h2>
+<p>202310290910</p>
+<p>[[az-700]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Backing up AKS Clusters with Azure Backup is now in preview</title>
       <link>https://mischavandenburg.com/zet/aks-azure-backup-preview/</link>

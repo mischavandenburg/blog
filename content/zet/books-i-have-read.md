@@ -1,6 +1,6 @@
 ---
 Title: A List Of All The Books I Have Read In My Life
-date: 2023-07-06
+date: 2023-10-28
 tags:
 - Book-Notes
 ---
@@ -8,6 +8,10 @@ tags:
 I'm an avid reader, and this list is far from complete. But I wanted to start writing down the ones I'm reading now, and the ones I've read in the past. I'm mostly writing down titles but I'll include the author when I remember the name. 
 
 # 2023
+
+The Pale Horseman
+
+The Last Kingdom
 
 Born to Run 2
 
