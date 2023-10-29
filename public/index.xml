@@ -8,6 +8,39 @@
     <language>en</language>
     <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>2023 week 43</title>
+      <link>https://mischavandenburg.com/zet/2023-week-43/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/2023-week-43/</guid>
+      <description>My Week Autumn has come to Holland and I&amp;rsquo;m really enjoying it. I had a good week at work finishing up the last cluster upgrades and I wrote my first helm charts to deploy monitoring with custom secrets.
+I&amp;rsquo;m meditating every morning. My mind is buzzing with all of the new activities that I&amp;rsquo;m doing and the new things I&amp;rsquo;m learning at work, but that is all part of life. The point in meditation is not to force your mind to be calm.</description>
+      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
+<p>Autumn has come to Holland and I&rsquo;m really enjoying it. I had a good week at work finishing up the last cluster upgrades and I wrote my first helm charts to deploy monitoring with custom secrets.</p>
+<p>I&rsquo;m meditating every morning. My mind is buzzing with all of the new activities that I&rsquo;m doing and the new things I&rsquo;m learning at work, but that is all part of life. The point in meditation is not to force your mind to be calm. Rather, it is embracing your mind state with awareness and allowing everything to be. Calm, not calm, active, not active, it&rsquo;s like this. Just noticing and being mindful of the mind states as they come and go, rather than wishing that it should be calm.</p>
+<p>Had Friday Night Magic with my brother and two friends and I had a good time. I notice that it is giving me energy.</p>
+<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
+<p>I did a 5 day Fasting Mimicking Diet eating 800 calories a day. Now that I finished it I feel leaner and the body feels clean. I should do this more often. The hunger was actually not too bad this time around, dr. Longo mentions in his book that the hunger gets less when you get experience with it.</p>
+<p>I went from 82.08 to 80.62 (after refeeding) so I think I&rsquo;m down 1kg.</p>
+<p>I did take a break from running during my fasting week and now I look forward to go for my first run again.</p>
+<h3 id="learning">Learning</h3>
+<p>Doing about 30 minutes of AZ-700 studies on the days I don&rsquo;t have other engagements.</p>
+<p>Did 60 minutes on Saturday and 60 minutes on Sunday.</p>
+<h3 id="reading">Reading</h3>
+<p>Finished The Pale Horseman and continuing the series with The Lords of the North. After hiding in the swamp for a few weeks, King Alfred assembled the fyrd (the army of peasants) and managed to drive off the Danes. Even though the Danes outnumbered them they fled, and it is not clear to me why, because the Danes were occupying a fort of the old people.</p>
+<p>I read these books years ago and now that I&rsquo;m re-reading them the tale is even more exciting and gripping. Cornwell is a fantastic author and I really enjoy his writing and character development.</p>
+<h3 id="watching">Watching</h3>
+<p>Watched the Lost Caverns of Ixalan preview videos and I like the new set&rsquo;s mechanics. I think it will be a fun one to play, I love the exploring theme. Not into dinosaurs very much but they might be fun to play with.</p>
+<h3 id="playing">Playing</h3>
+<p>Grinding MTG Arena, still playing the mono-red burn deck. It is a hit and miss but it is really fun when it works out. I&rsquo;m itching to play another deck and I think I might craft a mono blue tempo.</p>
+<h3 id="listening">Listening</h3>
+<p>Haven&rsquo;t been listening to any podcasts.</p>
+<h2 id="links">Links:</h2>
+<p>202310291810</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>AZ-700 Notes - Virtual WAN</title>
       <link>https://mischavandenburg.com/zet/az-700-virtual-wan/</link>
       <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
