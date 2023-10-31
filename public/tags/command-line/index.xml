@@ -6,7 +6,29 @@
     <description>Recent content in Command-Line on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting A Secret from an Azure Key Vault From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/list-azure-key-vault-secret/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/list-azure-key-vault-secret/</guid>
+      <description>I use this bash code to get secrets from Azure key vaults using the Azure CLI.
+Make sure to set your subscription with az account set -s 12321424
+kvname=kv-vo-rea-prd-weu-001 secretname=worker-ad-client-secret az keyvault secret show --vault-name $kvname --name $secretname --query value -o tsv Links: 202310312010
+[[azure]]</description>
+      <content:encoded><![CDATA[<p>I use this bash code to get secrets from Azure key vaults using the Azure CLI.</p>
+<p>Make sure to set your subscription with <code>az account set -s 12321424</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">kvname</span><span class="o">=</span>kv-vo-rea-prd-weu-001
+</span></span><span class="line"><span class="cl"><span class="nv">secretname</span><span class="o">=</span>worker-ad-client-secret
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">az keyvault secret show --vault-name <span class="nv">$kvname</span> --name <span class="nv">$secretname</span>  --query value -o tsv
+</span></span></code></pre></div><h2 id="links">Links:</h2>
+<p>202310312010</p>
+<p>[[azure]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>It is good to keep your second brain compatible with Obsidian</title>
       <link>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</link>
