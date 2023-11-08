@@ -6,7 +6,23 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KEDA went GA for AKS!</title>
+      <link>https://mischavandenburg.com/zet/keda-ga/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/keda-ga/</guid>
+      <description>Great news! KEDA finally went GA for AKS.
+https://learn.microsoft.com/en-us/azure/aks/keda-about
+Links: 202311081711</description>
+      <content:encoded><![CDATA[<p>Great news! KEDA finally went GA for AKS.</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/aks/keda-about">https://learn.microsoft.com/en-us/azure/aks/keda-about</a></p>
+<h2 id="links">Links:</h2>
+<p>202311081711</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>2023 week 44</title>
       <link>https://mischavandenburg.com/zet/2023-week-44/</link>
@@ -39,22 +55,6 @@ Learning Making steady progress with my AZ-700 course.</description>
 <h2 id="links">Links:</h2>
 <p>202311080511</p>
 <p>[[weeknotes]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>KEDA went GA for AKS!</title>
-      <link>https://mischavandenburg.com/zet/keda-ga/</link>
-      <pubDate>Wed, 08 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/keda-ga/</guid>
-      <description>Great news! KEDA finally went GA for AKS.
-https://learn.microsoft.com/en-us/azure/aks/keda-about
-Links: 202311081711</description>
-      <content:encoded><![CDATA[<p>Great news! KEDA finally went GA for AKS.</p>
-<p><a href="https://learn.microsoft.com/en-us/azure/aks/keda-about">https://learn.microsoft.com/en-us/azure/aks/keda-about</a></p>
-<h2 id="links">Links:</h2>
-<p>202311081711</p>
 ]]></content:encoded>
     </item>
     

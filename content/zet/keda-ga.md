@@ -1,6 +1,6 @@
 ---
 title: KEDA went GA for AKS!
-date: 2023-11-08
+date: 2023-11-09
 tags:
 - AKS
 - Kubernetes
