@@ -9,6 +9,8 @@ I'm an avid reader, and this list is far from complete. But I wanted to start wr
 
 # 2023
 
+The Lords of the North
+
 The Pale Horseman
 
 The Last Kingdom

@@ -6,7 +6,17 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weeknotes</title>
+      <link>https://mischavandenburg.com/tags/weeknotes/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/weeknotes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Azure</title>
       <link>https://mischavandenburg.com/tags/azure/</link>
@@ -33,16 +43,6 @@
       <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/study/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Weeknotes</title>
-      <link>https://mischavandenburg.com/tags/weeknotes/</link>
-      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/weeknotes/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

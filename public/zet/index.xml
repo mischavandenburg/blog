@@ -6,7 +6,42 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 week 44</title>
+      <link>https://mischavandenburg.com/zet/2023-week-44/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/2023-week-44/</guid>
+      <description>My Week Quite a busy week with a lot of social interactions and volunteer work that took up a chunk of time and energy.
+In the weekend I did my first MTG draft with friends which was a great experience.
+Exercise &amp;amp; Weight Loss Steadily doing 5k&amp;rsquo;s on minimal footwear. Holiday season is leading to an increase of eating foods which I should not be eating.
+Learning Making steady progress with my AZ-700 course.</description>
+      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
+<p>Quite a busy week with a lot of social interactions and volunteer work that took up a chunk of time and energy.</p>
+<p>In the weekend I did my first MTG draft with friends which was a great experience.</p>
+<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
+<p>Steadily doing 5k&rsquo;s on minimal footwear. Holiday season is leading to an increase of eating foods which I should not be eating.</p>
+<h2 id="learning">Learning</h2>
+<p>Making steady progress with my AZ-700 course. I&rsquo;m at 75% now and will be planning my exam soon.</p>
+<p>Also learning a lot at work. I wrote custom helm charts for Azure Metrics Exporter so we can deploy it with akv2k8s secrets, and I&rsquo;m digging in to the NGINX Ingress Controller because it needs updates due to new CVE&rsquo;s.</p>
+<h2 id="playing">Playing</h2>
+<p>Steady grinding on MTG Arena and did my first paper draft with friends. It was a great experience and I was glad that I took the time to prepare myself in the past few weeks by studying drafting, watching draft guides and doing a few drafts online.</p>
+<p>I won 7 games and lost 6 which is actually much better than I expected because these guys have been playing this game for a very long time.</p>
+<p>Next week I&rsquo;ll be participating in my first prerelease event.</p>
+<h2 id="reading">Reading</h2>
+<p>Finished the Lords of the North and now continuing into Sword Song. I&rsquo;m reading at least an hour a day and I look forward to it every day, it is such an amazingly engaging story.</p>
+<h2 id="watching">Watching</h2>
+<p>Watching draft guides and MTG content about the upcoming set release of Lost Caverns of Ixalan.</p>
+<p>I got a channel tip from a friend at the draft: NumotTheNummy. I&rsquo;m learning a lot by watching his drafts and he uploads consistently so I think I&rsquo;ll follow him for a while to see how he approaches the new set.</p>
+<h2 id="listening">Listening</h2>
+<p>Not listening to any podcasts lately.</p>
+<h2 id="links">Links:</h2>
+<p>202311080511</p>
+<p>[[weeknotes]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Getting A Secret from an Azure Key Vault From The Command Line</title>
       <link>https://mischavandenburg.com/zet/list-azure-key-vault-secret/</link>
@@ -162,15 +197,16 @@ Transitive natworking, NVA in WAN</p>
       
       <guid>https://mischavandenburg.com/zet/books-i-have-read/</guid>
       <description>I&amp;rsquo;m an avid reader, and this list is far from complete. But I wanted to start writing down the ones I&amp;rsquo;m reading now, and the ones I&amp;rsquo;ve read in the past. I&amp;rsquo;m mostly writing down titles but I&amp;rsquo;ll include the author when I remember the name.
-2023 The Pale Horseman
+2023 The Lords of the North
+The Pale Horseman
 The Last Kingdom
 Born to Run 2
 Born to Run
 Four Thousand Weeks
-The Plantpower Way - Rich Roll
-Eat and Run - Scott Jurek</description>
+The Plantpower Way - Rich Roll</description>
       <content:encoded><![CDATA[<p>I&rsquo;m an avid reader, and this list is far from complete. But I wanted to start writing down the ones I&rsquo;m reading now, and the ones I&rsquo;ve read in the past. I&rsquo;m mostly writing down titles but I&rsquo;ll include the author when I remember the name.</p>
 <h1 id="2023">2023</h1>
+<p>The Lords of the North</p>
 <p>The Pale Horseman</p>
 <p>The Last Kingdom</p>
 <p>Born to Run 2</p>
