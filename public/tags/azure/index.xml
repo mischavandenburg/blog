@@ -6,7 +6,109 @@
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Grafana Cloud with Entra ID authentication using Terraform</title>
+      <link>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</guid>
+      <description>Been working on a nice project lately. My current client has chosen to run Grafana Cloud and the instance was running in West US, which was leading to slower performance. I took up the project of provisioning a new instance in West Europe. Although I would have preferred to host Grafana ourselves or use Azure Managed Grafana, this is what the client has chosen so I that is what I&amp;rsquo;ll have to work with.</description>
+      <content:encoded><![CDATA[<p>Been working on a nice project lately. My current client has chosen to run Grafana Cloud and the instance was running in West US, which was leading to slower performance. I took up the project of provisioning a new instance in West Europe. Although I would have preferred to host Grafana ourselves or use Azure Managed Grafana, this is what the client has chosen so I that is what I&rsquo;ll have to work with.</p>
+<p>Also taking the opportunity to refactor the IaC and review our authrozation methods. We were using LBAC but I would rather use RBAC.</p>
+<p>A few goals for the configuration:</p>
+<ul>
+<li>Authentication to the Grafana Cloud instance must happen through Entra ID</li>
+<li>User management is based on Entra ID groups</li>
+<li>Teams within Grafana are automatically syched with Entra ID groups</li>
+<li>In other words, if a new user is added to an Entra ID group, it must automatically be added to the team in Grafana</li>
+</ul>
+<p>To provision the instance I used the following terraform code. First we need the providers.tf:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-terraform" data-lang="terraform"><span class="line"><span class="cl"><span class="nx">terraform</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">required_version</span> = <span class="s2">&#34;~&gt; 1.4&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">required_providers</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">grafana</span> = <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="na">source</span>  = <span class="s2">&#34;grafana/grafana&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">version</span> = <span class="s2">&#34;&gt;= 1.40.1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">
+</span></span></span><span class="line"><span class="cl"><span class="kr">provider</span> <span class="s2">&#34;grafana&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">alias</span>         = <span class="s2">&#34;grafana_cloud&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">cloud_api_key</span> = <span class="nb">var</span><span class="p">.</span><span class="nx">grafana_api_key</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="c1">
+</span></span></span><span class="line"><span class="cl"><span class="c1">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Provider for managing the content of the Grafana Cloud instance
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">provider</span> <span class="s2">&#34;grafana&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">alias</span> = <span class="s2">&#34;content&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">url</span>   = <span class="nx">grafana_cloud_stack</span><span class="p">.</span><span class="nx">vanoord_stack</span><span class="p">.</span><span class="nx">url</span>
+</span></span><span class="line"><span class="cl">  <span class="na">auth</span>  = <span class="nx">grafana_cloud_stack_service_account_token</span><span class="p">.</span><span class="nx">cloud_sa</span><span class="p">.</span><span class="nx">key</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Here I&rsquo;m declaring a provider for provisioning the cloud instance itself, &ldquo;grafana_cloud&rdquo;, and a second one to manage the content.</p>
+<p>Next we provision the instance and service accounts, in cloud-instance.tf :</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-terraform" data-lang="terraform"><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;grafana_cloud_stack&#34;</span> <span class="s2">&#34;vanoord_stack&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">  provider</span> <span class="o">=</span> <span class="nx">grafana</span><span class="p">.</span><span class="nx">grafana_cloud</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="na">name</span>        = <span class="s2">&#34;vanoord&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">slug</span>        = <span class="s2">&#34;vanoord&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">region_slug</span> = <span class="s2">&#34;prod-eu-west-3&#34;</span><span class="c1"> # Example &#34;us&#34;,&#34;eu&#34; etc
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">
+</span></span></span><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;grafana_cloud_stack_service_account&#34;</span> <span class="s2">&#34;cloud_sa&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">  provider</span>   <span class="o">=</span> <span class="nx">grafana</span><span class="p">.</span><span class="nx">grafana_cloud</span>
+</span></span><span class="line"><span class="cl">  <span class="na">stack_slug</span> = <span class="nx">grafana_cloud_stack</span><span class="p">.</span><span class="nx">vanoord_stack</span><span class="p">.</span><span class="nx">slug</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="na">name</span>        = <span class="s2">&#34;terraform-serviceaccount&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">role</span>        = <span class="s2">&#34;Admin&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">is_disabled</span> = <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">
+</span></span></span><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;grafana_cloud_stack_service_account_token&#34;</span> <span class="s2">&#34;cloud_sa&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">  provider</span>   <span class="o">=</span> <span class="nx">grafana</span><span class="p">.</span><span class="nx">grafana_cloud</span>
+</span></span><span class="line"><span class="cl">  <span class="na">stack_slug</span> = <span class="nx">grafana_cloud_stack</span><span class="p">.</span><span class="nx">vanoord_stack</span><span class="p">.</span><span class="nx">slug</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="na">name</span>               = <span class="s2">&#34;terraform-serviceaccount-key&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">service_account_id</span> = <span class="nx">grafana_cloud_stack_service_account</span><span class="p">.</span><span class="nx">cloud_sa</span><span class="p">.</span><span class="nx">id</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">
+</span></span></span><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;grafana_folder&#34;</span> <span class="s2">&#34;mischa&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">  provider</span> <span class="o">=</span> <span class="nx">grafana</span><span class="p">.</span><span class="nx">content</span>
+</span></span><span class="line"><span class="cl">  <span class="na">title</span>    = <span class="s2">&#34;Mischa Test Folder&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Next I configured the instance to enable authentication with Entra ID. The process was quite straight forward and I used this documentation:</p>
+<p><a href="https://grafana.com/docs/grafana-cloud/account-management/authentication-and-permissions/authorization/#configure-oauth-with-microsoft-azure-ad">https://grafana.com/docs/grafana-cloud/account-management/authentication-and-permissions/authorization/#configure-oauth-with-microsoft-azure-ad</a></p>
+<p>However, make sure to add this configuration under &ldquo;Token Configuration&rdquo; in the App Registration:</p>
+<p><img loading="lazy" src="/grafad1.png" type="" alt=""  /></p>
+<p>And add the following Graph API permissions:</p>
+<p><img loading="lazy" src="/grafad2.png" type="" alt=""  /></p>
+<p>When adding a new team, the group ID&rsquo;s of the Entra ID groups must also be added to the Grafana Cloud instance in Grafana Cloud under Security -&gt; Advanced Auth -&gt; Azure AD -&gt; Configure -&gt; Allowed Groups.</p>
+<p>Finally, to automatically synch the memebers of the Entra ID groups to teams in the Grafana Cloud instance, I wrote the following code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-terraform" data-lang="terraform"><span class="line"><span class="cl"><span class="nx">locals</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">teams</span> = <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;team1&#34;</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;AADGroupObjectIds&#34;</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;id1&#34;</span><span class="p">]</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;team2&#34;</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;AADGroupObjectIds&#34;</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;id2&#34;</span><span class="p">]</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">
+</span></span></span><span class="line"><span class="cl"><span class="kr">resource</span> <span class="s2">&#34;grafana_team&#34;</span> <span class="s2">&#34;teams&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">  provider</span>                         <span class="o">=</span> <span class="nx">grafana</span><span class="p">.</span><span class="nx">content</span>
+</span></span><span class="line"><span class="cl">  <span class="na">for_each</span>                         = <span class="nx">local</span><span class="p">.</span><span class="nx">teams</span>
+</span></span><span class="line"><span class="cl">  <span class="na">name</span>                             = <span class="nb">each</span><span class="p">.</span><span class="nx">key</span>
+</span></span><span class="line"><span class="cl">  <span class="na">ignore_externally_synced_members</span> = <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">team_sync</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">groups</span> = <span class="nb">each</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">AADGroupObjectIds</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>With this setup the members of the Entra ID groups are automatically synched to the teams in Grafana Cloud.</p>
+<p>In the next article I&rsquo;ll add data sources and authorize teams to data sources and other resources within Grafana.</p>
+<h2 id="links">Links:</h2>
+<p>202311171711</p>
+<p>[[azure]]</p>
+<p>[[grafana]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>KEDA went GA for AKS!</title>
       <link>https://mischavandenburg.com/zet/keda-ga/</link>
