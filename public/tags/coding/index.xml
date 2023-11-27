@@ -13,12 +13,13 @@
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/implementing-poddisruptionbudgets/</guid>
-      <description>We&amp;rsquo;re using a Helm chart to deploy with ArgoCD. I&amp;rsquo;m adding this to the templates directory:
-apiVersion: policy/v1 kind: PodDisruptionBudget metadata: name: pyramid-backend-pdb spec: minAvailable: 1 selector: matchLabels: tier: backend I&amp;rsquo;m selecing all the pods that have the label &amp;ldquo;tier: backend&amp;rdquo;.
-To verify that I&amp;rsquo;m targeting the right pods, I run:
-kubectl get pods -l tier=backend
-Currently my deployment has only two replicas: (ins)$ k get deploy NAME READY UP-TO-DATE AVAILABLE AGE pyramid-deployment-backend 1/1 1 1 297d So when I check my PDB it will show no allowed disruptions.</description>
-      <content:encoded><![CDATA[<p>We&rsquo;re using a Helm chart to deploy with ArgoCD. I&rsquo;m adding this to the templates directory:</p>
+      <description>When I was doing the first round of cluster upgrades ever at my current client, I noticed we were running a lot of pods with only 1 replica. I always try to lift my clients to the next level by leveraging Cloud Native technologies as much as possible. I&amp;rsquo;m therefore starting a project to always run applications with multiple replicas.
+However, running multiple replicas is not the only necessary improvement here.</description>
+      <content:encoded><![CDATA[<p>When I was doing the first round of cluster upgrades ever at my current client, I noticed we were running a lot of pods with only 1 replica. I always try to lift my clients to the next level by leveraging Cloud Native technologies as much as possible. I&rsquo;m therefore starting a project to always run applications with multiple replicas.</p>
+<p>However, running multiple replicas is not the only necessary improvement here. Even though a pod is running with multiple replicas, that does not mean that Kubernetes will always keep them alive. When you do an AKS cluster upgrade, nodes are drained one by one and the pods are moved to a node with the higher k8s version. Technically, when draining a node, Kubernetes could kill both of the pods at the same time if they are running on the same node.</p>
+<p>To prevent this we use <a href="https://kubernetes.io/docs/tasks/run-application/configure-pdb/">pod disruption budgets</a></p>
+<h1 id="helm">Helm</h1>
+<p>We&rsquo;re using a Helm chart to deploy with ArgoCD. I&rsquo;m adding this to the templates directory:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">policy/v1</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">PodDisruptionBudget</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
@@ -31,9 +32,8 @@ Currently my deployment has only two replicas: (ins)$ k get deploy NAME READY UP
 </span></span></span></code></pre></div><p>I&rsquo;m selecing all the pods that have the label &ldquo;tier: backend&rdquo;.</p>
 <p>To verify that I&rsquo;m targeting the right pods, I run:</p>
 <p><code>kubectl get pods -l tier=backend</code></p>
-<pre tabindex="0"><code>Currently my deployment has only two replicas:
-
-(ins)$ k get deploy
+<p>Currently my deployment has only two replicas:</p>
+<pre tabindex="0"><code>(ins)$ k get deploy
 NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
 pyramid-deployment-backend   1/1     1            1           297d
 </code></pre><p>So when I check my PDB it will show no allowed disruptions.</p>
@@ -50,6 +50,7 @@ NAME                  MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AG
 pyramid-backend-pdb   1               N/A               1                     15m
 </code></pre><p>With this configuration, Kubernetes will never kill all of the pods simultaneously in case a node needs to be drained. It will make sure that one of the pods keeps running when it is rescheduling pods for an upgrade.</p>
 <h2 id="links">Links:</h2>
+<p><a href="https://kubernetes.io/docs/tasks/run-application/configure-pdb/">https://kubernetes.io/docs/tasks/run-application/configure-pdb/</a></p>
 <p>202311271411</p>
 ]]></content:encoded>
     </item>
