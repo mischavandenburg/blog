@@ -6,7 +6,54 @@
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing Pod Disruption Budgets</title>
+      <link>https://mischavandenburg.com/zet/implementing-poddisruptionbudgets/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/implementing-poddisruptionbudgets/</guid>
+      <description>We&amp;rsquo;re using a Helm chart to deploy with ArgoCD. I&amp;rsquo;m adding this to the templates directory:
+apiVersion: policy/v1 kind: PodDisruptionBudget metadata: name: pyramid-backend-pdb spec: minAvailable: 1 selector: matchLabels: tier: backend I&amp;rsquo;m selecing all the pods that have the label &amp;ldquo;tier: backend&amp;rdquo;.
+To verify that I&amp;rsquo;m targeting the right pods, I run:
+kubectl get pods -l tier=backend
+Currently my deployment has only two replicas: (ins)$ k get deploy NAME READY UP-TO-DATE AVAILABLE AGE pyramid-deployment-backend 1/1 1 1 297d So when I check my PDB it will show no allowed disruptions.</description>
+      <content:encoded><![CDATA[<p>We&rsquo;re using a Helm chart to deploy with ArgoCD. I&rsquo;m adding this to the templates directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">policy/v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">PodDisruptionBudget</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pyramid-backend-pdb</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">minAvailable</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">tier</span><span class="p">:</span><span class="w"> </span><span class="l">backend</span><span class="w">
+</span></span></span></code></pre></div><p>I&rsquo;m selecing all the pods that have the label &ldquo;tier: backend&rdquo;.</p>
+<p>To verify that I&rsquo;m targeting the right pods, I run:</p>
+<p><code>kubectl get pods -l tier=backend</code></p>
+<pre tabindex="0"><code>Currently my deployment has only two replicas:
+
+(ins)$ k get deploy
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
+pyramid-deployment-backend   1/1     1            1           297d
+</code></pre><p>So when I check my PDB it will show no allowed disruptions.</p>
+<pre tabindex="0"><code>(ins)$ k get pdb
+NAME                  MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+pyramid-backend-pdb   1               N/A               0                     13m
+</code></pre><p>This is good, this is the expected behaviour. Kubernetes will now prevent me from draining the node because there are no allowed disruptions.</p>
+<p>Then I scale up the deployment:</p>
+<pre tabindex="0"><code>(ins)$ k scale deploy --replicas=2 pyramid-deployment-backend
+deployment.apps/pyramid-deployment-backend scaled
+</code></pre><p>And then I get an allowed disruption of 1:</p>
+<pre tabindex="0"><code>(ins)$ k get pdb
+NAME                  MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+pyramid-backend-pdb   1               N/A               1                     15m
+</code></pre><p>With this configuration, Kubernetes will never kill all of the pods simultaneously in case a node needs to be drained. It will make sure that one of the pods keeps running when it is rescheduling pods for an upgrade.</p>
+<h2 id="links">Links:</h2>
+<p>202311271411</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Setting up Grafana Cloud with Entra ID authentication using Terraform</title>
       <link>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</link>
