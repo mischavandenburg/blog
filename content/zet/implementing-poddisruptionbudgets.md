@@ -7,7 +7,7 @@ tags:
 - Coding
 ---
 
-When I was doing the first round of cluster upgrades ever at my current client, I noticed we were running a lot of pods with only 1 replica. I always try to lift my clients to the next level by leveraging Cloud Native technologies as much as possible. I'm therefore starting a project to always run applications with multiple replicas.
+When I was doing the first round of AKS cluster upgrades at my current client, I noticed we were running a lot of pods with only 1 replica. I always try to lift my clients to the next level by leveraging Cloud Native technologies as much as possible. I'm therefore starting a project to always run applications with multiple replicas.
 
 However, running multiple replicas is not the only necessary improvement here. Even though a pod is running with multiple replicas, that does not mean that Kubernetes will always keep them alive. When you do an AKS cluster upgrade, nodes are drained one by one and the pods are moved to a node with the higher k8s version. Technically, when draining a node, Kubernetes could kill both of the pods at the same time if they are running on the same node.
 
