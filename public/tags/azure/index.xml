@@ -6,7 +6,126 @@
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying Grafana Agent With Custom Secrets From Azure Key Vault Using Akv2k8s And K8s-Monitoring Helm Chart</title>
+      <link>https://mischavandenburg.com/zet/grafana-agent-with-custom-secrets-akv2k8s/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/grafana-agent-with-custom-secrets-akv2k8s/</guid>
+      <description>Grafana has developed a Helm chart which greatly simplifies the deployment of a monitoring stack to your Kubernetes clusters.
+It contains:
+kube-state-metrics, which gathers metrics about Kubernetes objects Node exporter, which gathers metrics about Kubernetes nodes OpenCost, which interprets the above to create cost metrics for the cluster, and Grafana Agent, which scrapes the above services to forward metrics to Prometheus and logs to Loki The Prometheus and Loki services may be hosted on the same cluster, or remotely (e.</description>
+      <content:encoded><![CDATA[<p>Grafana has developed a Helm chart which greatly simplifies the deployment of a monitoring stack to your Kubernetes clusters.</p>
+<p>It contains:</p>
+<ul>
+<li>kube-state-metrics, which gathers metrics about Kubernetes objects</li>
+<li>Node exporter, which gathers metrics about Kubernetes nodes</li>
+<li>OpenCost, which interprets the above to create cost metrics for the cluster, and</li>
+<li>Grafana Agent, which scrapes the above services to forward metrics to Prometheus and logs to Loki</li>
+</ul>
+<p>The Prometheus and Loki services may be hosted on the same cluster, or remotely (e.g. on Grafana Cloud).</p>
+<p>For my current project I&rsquo;m setting it up to a Grafana Cloud stack, but as stated above it can also be used with a local or other remote Prometheus instance.</p>
+<h1 id="akv2k8s">akv2k8s</h1>
+<p>We use akv2k8s on our clusters to synch secrets from Azure Key Vaults to Kubernetes secrets or injecting them as environment variables. This way we can prevent checking in secrets to our code.</p>
+<p>However, when I first tried to deploy this chart, external secrets were not supported. They have now been fixed by Pete Wall and I managed to deploy the k8s-monitoring by writing a wrapper Helm chart with the external secret objects.</p>
+<h1 id="code">code</h1>
+<p>All code is available in my <a href="https://github.com/mischavandenburg/lab/tree/main/kubernetes/k8smonitoring-secrets">lab repo</a>. I wrote the following Chart.yaml:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">k8s-monitoring</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">1.0.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">This chart deploys the k8s-monitoring chart with custom secrets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">dependencies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">k8s-monitoring</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="m">0.5.1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l">https://grafana.github.io/helm-charts/</span><span class="w">
+</span></span></span></code></pre></div><p>Then I created a templates directory and added secrets.yaml:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">spv.no/v1alpha1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">AzureKeyVaultSecret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">vault</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span>{{<span class="w"> </span><span class="l">.Values.keyVault }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">object</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">secret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">output</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">secret</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">grafana-agent-credentials-akv2k8s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">dataKey</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">spv.no/v1alpha1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">AzureKeyVaultSecret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">vault</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span>{{<span class="w"> </span><span class="l">.Values.keyVault }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">object</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">secret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">output</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">secret</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">grafana-agent-credentials-akv2k8s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">dataKey</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">spv.no/v1alpha1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">AzureKeyVaultSecret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">vault</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span>{{<span class="w"> </span><span class="l">.Values.keyVault }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">object</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">secret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">output</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">secret</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">grafana-agent-credentials-akv2k8s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">dataKey</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><p>Then, to use the external secrets in the values file, I used the following configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">keyVault</span><span class="p">:</span><span class="w"> </span><span class="l">kv-123-hello</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">k8s-monitoring</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cluster</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">aks-123-hello</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">externalServices</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">prometheus</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">hostKey</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-host</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">basicAuth</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">usernameKey</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-user</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">passwordKey</span><span class="p">:</span><span class="w"> </span><span class="l">prometheus-password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">secret</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">create</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">grafana-agent-credentials-akv2k8s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">k8s-monitoring</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">extraConfig</span><span class="p">:</span><span class="w"> </span><span class="p">|-</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">    logging {
+</span></span></span><span class="line"><span class="cl"><span class="sd">      level  = &#34;info&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">      format = &#34;logfmt&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">    }</span><span class="w">    
+</span></span></span></code></pre></div><p>This chart can be deployed using <code>helm install</code> but we are using GitOps like the gods intended. When this is configured in ArgoCD, the chart will be deployed with the secrets templates. These templates will retreive the secrets from the Azure Key Vault and synch them to the <code>grafana-agent-credentials-akv2k8s</code> secret.</p>
+<h1 id="bug">bug</h1>
+<p>Althoug this might have been a slight bug during the first implementation of this chart, I did run into the following error in my first attempts. The logs of the Grafana Agent showed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">unsupported protocol scheme <span class="se">\&#34;\&#34;</span><span class="s2">&#34;
+</span></span></span></code></pre></div><p>After a lot of debugging I decided to completely rebuild the deployment from scratch, and then I found out that I had put the externalServices.prometheus and externalServices.keys objects in a different order which messed up the rest of the values file. <strong>It is important to keep the order that is given in the values.yaml in the k8s-monitoring repo.</strong></p>
+<h2 id="links">Links:</h2>
+<p>Helm chart:</p>
+<p><a href="https://github.com/grafana/k8s-monitoring-helm/tree/main/charts/k8s-monitoring">https://github.com/grafana/k8s-monitoring-helm/tree/main/charts/k8s-monitoring</a></p>
+<p>GitHub issue:</p>
+<p><a href="https://github.com/grafana/k8s-monitoring-helm/issues/81#issuecomment-1828771508">https://github.com/grafana/k8s-monitoring-helm/issues/81#issuecomment-1828771508</a></p>
+<p>Link to example code in my lab repo:</p>
+<p><a href="https://github.com/mischavandenburg/lab/tree/main/kubernetes/k8smonitoring-secrets">https://github.com/mischavandenburg/lab/tree/main/kubernetes/k8smonitoring-secrets</a></p>
+<p>202311281011</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Setting up Grafana Cloud with Entra ID authentication using Terraform</title>
       <link>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</link>
