@@ -114,7 +114,7 @@ kube-state-metrics, which gathers metrics about Kubernetes objects Node exporter
 <h1 id="bug">bug</h1>
 <p>Althoug this might have been a slight bug during the first implementation of this chart, I did run into the following error in my first attempts. The logs of the Grafana Agent showed:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">unsupported protocol scheme <span class="se">\&#34;\&#34;</span><span class="s2">&#34;
-</span></span></span></code></pre></div><p>After a lot of debugging I decided to completely rebuild the deployment from scratch, and then I found out that I had put the externalServices.prometheus and externalServices.keys objects in a different order which messed up the rest of the values file. <strong>It is important to keep the order that is given in the values.yaml in the k8s-monitoring repo.</strong></p>
+</span></span></span></code></pre></div><p>After a lot of debugging I decided to completely rebuild the deployment from scratch, and then I found out that I had put the externalServices.prometheus and externalServices.secret objects in a different order which messed up the rest of the values file. <strong>It is important to keep the order that is given in the values.yaml in the k8s-monitoring repo.</strong></p>
 <h2 id="links">Links:</h2>
 <p>Helm chart:</p>
 <p><a href="https://github.com/grafana/k8s-monitoring-helm/tree/main/charts/k8s-monitoring">https://github.com/grafana/k8s-monitoring-helm/tree/main/charts/k8s-monitoring</a></p>

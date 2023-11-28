@@ -130,7 +130,7 @@ Althoug this might have been a slight bug during the first implementation of thi
 unsupported protocol scheme \"\""
 ```
 
-After a lot of debugging I decided to completely rebuild the deployment from scratch, and then I found out that I had put the externalServices.prometheus and externalServices.keys objects in a different order which messed up the rest of the values file. **It is important to keep the order that is given in the values.yaml in the k8s-monitoring repo.**
+After a lot of debugging I decided to completely rebuild the deployment from scratch, and then I found out that I had put the externalServices.prometheus and externalServices.secret objects in a different order which messed up the rest of the values file. **It is important to keep the order that is given in the values.yaml in the k8s-monitoring repo.**
 
 ## Links:
 
