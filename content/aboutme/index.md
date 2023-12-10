@@ -2,6 +2,8 @@
 title: "Welcome!"
 ---
 
+![](/drawing.jpeg)
+
 Why bother with a personal website? Why not just write on social media?
 
 [This post captures it beautifully.](https://matthiasott.com/notes/simple-truths-about-personal-websites)

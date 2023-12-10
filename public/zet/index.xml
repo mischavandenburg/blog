@@ -6,7 +6,25 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What&#39;s so hard in Kubernetes?</title>
+      <link>https://mischavandenburg.com/zet/whats-so-hard-about-kubernetes/</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/whats-so-hard-about-kubernetes/</guid>
+      <description>Read an interesting Reddit thread today where commenters explained the complexities of running Kubernetes. Indeed it is easy to set up, but that is only the beginning.
+The real art is to build distributed systems on top of it, and it is dauntingly complex. That&amp;rsquo;s why I&amp;rsquo;m so attracted to it.
+It does make clear just how great Azure&amp;rsquo;s AKS offering actually is. So much of the administrative overhead is automated, and so far I&amp;rsquo;m under the impression it is done really well.</description>
+      <content:encoded><![CDATA[<p>Read an interesting Reddit thread today where commenters explained the complexities of running Kubernetes. Indeed it is easy to set up, but that is only the beginning.</p>
+<p>The real art is to build distributed systems on top of it, and it is dauntingly complex. That&rsquo;s why I&rsquo;m so attracted to it.</p>
+<p>It does make clear just how great Azure&rsquo;s AKS offering actually is. So much of the administrative overhead is automated, and so far I&rsquo;m under the impression it is done really well. Which is why I&rsquo;m on a mission to become an AKS expert.</p>
+<p><a href="https://www.reddit.com/r/devops/comments/18e4nuw/whats_so_hard_in_kubernetes/?utm_source=share&amp;utm_medium=web2x&amp;context=3">https://www.reddit.com/r/devops/comments/18e4nuw/whats_so_hard_in_kubernetes/?utm_source=share&amp;utm_medium=web2x&amp;context=3</a></p>
+<h2 id="links">Links:</h2>
+<p>202312101012</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Deploying Grafana Agent With Custom Secrets From Azure Key Vault Using Akv2k8s And K8s-Monitoring Helm Chart</title>
       <link>https://mischavandenburg.com/zet/grafana-agent-with-custom-secrets-akv2k8s/</link>
