@@ -6,7 +6,23 @@
     <description>Recent content in Azure on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ensure Cgroupsv2 compatiblity when containerizing old apps</title>
+      <link>https://mischavandenburg.com/zet/ensure-cgroupsv2-compatibility/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/ensure-cgroupsv2-compatibility/</guid>
+      <description>Are you currently working with containerizing older Java or .NET applications? From Kubernetes 1.29, the default cgroups implementation on Azure Linux AKS nodes will be cgroupsv2. Older versions of Java, .NET and NodeJS do not support memory querying v2 memory constraints and this will lead to out of memory (OOM) issues for workloads.
+Please make sure that your older containerized applications are compatible with cgroupsv2 or you might be in quite some pain in the future.</description>
+      <content:encoded><![CDATA[<p>Are you currently working with containerizing older Java or .NET applications? From Kubernetes 1.29, the default cgroups implementation on Azure Linux AKS nodes will be cgroupsv2. Older versions of Java, .NET and NodeJS do not support memory querying v2 memory constraints and this will lead to out of memory (OOM) issues for workloads.</p>
+<p>Please make sure that your older containerized applications are compatible with cgroupsv2 or you might be in quite some pain in the future.</p>
+<p><a href="https://github.com/Azure/AKS/releases/tag/2023-11-28">https://github.com/Azure/AKS/releases/tag/2023-11-28</a></p>
+<h2 id="links">Links:</h2>
+<p>202312120812</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Deploying Grafana Agent With Custom Secrets From Azure Key Vault Using Akv2k8s And K8s-Monitoring Helm Chart</title>
       <link>https://mischavandenburg.com/zet/grafana-agent-with-custom-secrets-akv2k8s/</link>
