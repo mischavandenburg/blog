@@ -6,7 +6,23 @@
     <description>Recent content on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Link: Rediscovering The Small Web</title>
+      <link>https://mischavandenburg.com/zet/rediscovering-the-small-web/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/rediscovering-the-small-web/</guid>
+      <description>A great essay about small personal websites coded in HTML. Brings me back.
+https://neustadt.fr/essays/the-small-web/
+Links: 202312150812</description>
+      <content:encoded><![CDATA[<p>A great essay about small personal websites coded in HTML. Brings me back.</p>
+<p><a href="https://neustadt.fr/essays/the-small-web/">https://neustadt.fr/essays/the-small-web/</a></p>
+<h2 id="links">Links:</h2>
+<p>202312150812</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Ensure Cgroupsv2 compatiblity when containerizing old apps</title>
       <link>https://mischavandenburg.com/zet/ensure-cgroupsv2-compatibility/</link>

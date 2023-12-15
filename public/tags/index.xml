@@ -6,7 +6,27 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Links</title>
+      <link>https://mischavandenburg.com/tags/links/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/links/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>https://mischavandenburg.com/tags/writing/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/writing/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Azure</title>
       <link>https://mischavandenburg.com/tags/azure/</link>
@@ -73,16 +93,6 @@
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/terraform/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Writing</title>
-      <link>https://mischavandenburg.com/tags/writing/</link>
-      <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/writing/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
