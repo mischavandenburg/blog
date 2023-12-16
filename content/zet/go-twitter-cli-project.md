@@ -6,7 +6,6 @@ tags:
 - Coding
 - Kubernetes
 - Cloud-Native
-- Agile
 ---
 
 When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience. 

@@ -2,7 +2,6 @@
 title: Started Using Tumblr for Travel Blogging
 date: 2023-05-14
 tags:
-- Travel
 - Personal
 - Writing
 - Outdoors

@@ -4,8 +4,6 @@ date: 2023-02-05
 tags:
 - Article
 - Kubernetes
-- ArgoCD
-- GitOps
 ---
 
 This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.

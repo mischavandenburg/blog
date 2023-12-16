@@ -2,8 +2,7 @@
 Title: Vacations In The Soviet Union
 date: 2023-05-02
 tags:
-- History
-- Reading
+- Personal
 ---
 
 Read an interesting article this morning. Apparently the Soviet Union introduced paid time off well before other industrialized countries.
