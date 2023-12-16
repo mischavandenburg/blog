@@ -1,0 +1,4 @@
+{{ $taxonomy := "tags" }}
+{{ range first 5 (index site.Taxonomies $taxonomy).ByCount }}
+  <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a> ({{ .Count }})<br>
+{{ end }}

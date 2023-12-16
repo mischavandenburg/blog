@@ -40,6 +40,7 @@ body.type-newsletter {
   --signature: #CB3A56;
   --signature-bg: rgba(203, 58, 87, 0.239);
   --signature-bg-dim: rgba(203, 58, 87, 0.147);
+  --signature-bg-dimmer: rgba(203, 58, 87, 0.084);
   --main-border: 5px solid var(--signature);
   --icon-length: 50px;
   --icon-font-size: 32px;
@@ -60,39 +61,65 @@ body.type-newsletter {
     body.type-newsletter.kind-section .main .content a:hover, body.type-newsletter.layout-archives .main .content a:hover, body.type-newsletter.kind-page .post-content a:hover {
       color: var(--link-hover-color);
       box-shadow: var(--link-hover-underline-shadow); }
-  body.type-newsletter .sub-form {
-    display: flex;
-    flex-direction: column;
-    margin: calc(var(--content-gap) * 1.5) 0; }
-    body.type-newsletter .sub-form form {
+  body.type-newsletter .subscribe-form {
+    margin: calc(var(--content-gap) * 2) 0; }
+    body.type-newsletter .subscribe-form form {
       display: flex;
+      flex-direction: column;
       line-height: 1.2em;
       flex-wrap: wrap; }
-    body.type-newsletter .sub-form input {
+    body.type-newsletter .subscribe-form .input-group {
+      display: flex;
+      flex-wrap: wrap; }
+    body.type-newsletter .subscribe-form .subscribe-option {
+      margin-top: 8px; }
+    body.type-newsletter .subscribe-form input[type=text] {
       border: 3px solid var(--signature-bg-dim);
       color: var(--secondary);
       border-radius: 0px;
+      border-color: var(--signature-bg);
       appearance: none;
       outline: none;
       background-color: var(--theme);
       flex-grow: 1;
       padding: 9px 15px;
       transition: var(--link-transition); }
-      body.type-newsletter .sub-form input:focus {
+      body.type-newsletter .subscribe-form input[type=text]:focus {
         color: var(--primary);
         border-color: var(--signature); }
-    body.type-newsletter .sub-form button {
+    body.type-newsletter .subscribe-form button {
       display: block;
       background-color: var(--signature);
       color: var(--theme);
       padding: 12px 15px;
       margin-left: var(--content-gap);
       white-space: nowrap; }
-  @media screen and (max-width: 500px) {
-    body.type-newsletter .sub-form button {
+    body.type-newsletter .subscribe-form label, body.type-newsletter .subscribe-form .label {
+      font-size: .85em;
+      margin-right: 16px; }
+    body.type-newsletter .subscribe-form .label {
+      color: var(--secondary);
+      line-height: 1.2; }
+    body.type-newsletter .subscribe-form input[type=radio] {
       margin-left: 0;
-      margin-top: calc(var(--content-gap)/2);
-      flex-grow: 1; } }
+      margin-top: 0; }
+  @media screen and (max-width: 500px) {
+    body.type-newsletter .subscribe-form {
+      font-size: .9em; }
+      body.type-newsletter .subscribe-form input[type=text] {
+        padding-left: 8px;
+        padding-right: 8px; }
+      body.type-newsletter .subscribe-form button {
+        width: 96px;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0; }
+      body.type-newsletter .subscribe-form .hide-for-sm {
+        display: none; }
+      body.type-newsletter .subscribe-form .label {
+        display: block;
+        width: 100%;
+        margin-bottom: 4px; } }
 body.type-newsletter.kind-section,
 body.type-newsletter.layout-archives {
   /* section/archives page */ }
@@ -258,13 +285,12 @@ body.type-newsletter.kind-page .post-footer {
 
 body.type-newsletter.kind-page .newsletter-sub {
   margin-top: calc(var(--content-gap) * 1.5);
-  background-color: var(--signature-bg-dim);
-  padding: 1em; }
+  background-color: var(--signature-bg-dimmer);
+  padding: var(--content-gap) var(--gap); }
   body.type-newsletter.kind-page .newsletter-sub .notice {
-    font-size: .8em;
+    font-size: .9em;
+    font-weight: bold;
     color: var(--signature);
     line-height: 1.6; }
-  body.type-newsletter.kind-page .newsletter-sub .sub-form {
-    margin: 1em 0; }
-    body.type-newsletter.kind-page .newsletter-sub .sub-form input {
-      border-color: var(--signature-bg); }
+  body.type-newsletter.kind-page .newsletter-sub .subscribe-form {
+    margin: var(--content-gap) 0 0; }
