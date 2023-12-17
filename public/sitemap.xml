@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mischavandenburg.com/tags/career/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/splitting-to-personal-blog/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/personal/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/writing/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/rediscovering-the-small-web/</loc>
     <lastmod>2023-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/links/</loc>
-    <lastmod>2023-12-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-12-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/writing/</loc>
-    <lastmod>2023-12-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-12-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
@@ -66,9 +75,6 @@
     <lastmod>2023-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/mtg/</loc>
-    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/personal/</loc>
     <lastmod>2023-11-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/weeknotes/</loc>
@@ -312,9 +318,6 @@
     <lastmod>2023-07-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/book-notes-simple-path-to-wealth/</loc>
-    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/career/</loc>
     <lastmod>2023-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/choosing-a-cloud-provider-and-specialization/</loc>
