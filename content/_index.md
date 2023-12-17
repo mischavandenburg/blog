@@ -5,13 +5,7 @@ title: Home
 Welcome to my website. I’m Mischa, a Cloud Engineer from Amsterdam.
 This is my public Zettelkasten where I publish notes about the topics that interest me.
 
-I'm one of those lucky people who was able to turn [my hobby into my work](/zet/articles/jiro-sushi/). My personal interests overlap with my professional interests. This is a blessing and a burden, because it makes separating them on a personal website quite a challenge. Should I make a technical blog and a personal blog? [I decided to mix them.](/zet/everything-nothing-blog/)
-
-On my blog I share thoughts and learnings about technical topics such as Microsoft Azure, Kubernetes, Cloud Native technologies, DevOps and Linux.
-
-Sprinkled between these technical notes and articles, you will see personal thoughts, notes on barefoot running and healthy eating, fasting, meditation, personal development, writing, productivity, Magic the Gathering, and anything that catches my interest.
-
-However, to make things a bit easier for you, I'm using a content generator that supports [tags](/tags/). If you are interested in reading more personal stuff, you can check out the [personal tag](/tags/personal/).
+Here I share thoughts and learnings about technical topics such as Microsoft Azure, Kubernetes, Cloud Native technologies, DevOps and Linux.
 
 These are the most used tags on this website:
 
