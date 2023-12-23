@@ -35,7 +35,7 @@ params:
       unix,
     ]
   author: Mischa van den Burg
-  images: ["https://mischavandenburg.com/drawing.jpeg"]
+  images: ["https://mischavandenburg.com/cloud-blue-logo.jpeg"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
