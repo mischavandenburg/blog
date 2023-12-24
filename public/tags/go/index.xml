@@ -6,7 +6,26 @@
     <description>Recent content in Go on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wrote A Go Program That Posts To Mastodon</title>
+      <link>https://mischavandenburg.com/zet/go-mastodon-post/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/go-mastodon-post/</guid>
+      <description>This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my twitter cli I wrote a while ago.
+It was fun to write some Go again, it has been far too long. I&amp;rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&amp;rsquo;t been doing any projects at home that required programming.</description>
+      <content:encoded><![CDATA[<p>This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my <a href="https://github.com/mischavandenburg/twitter-cli">twitter cli</a> I wrote a while ago.</p>
+<p>It was fun to write some Go again, it has been far too long. I&rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&rsquo;t been doing any projects at home that required programming. But recently I started up my personal blog and completely re-architected my social media setup.</p>
+<p>I&rsquo;m going to post all of my personal stuff on Mastodon from here on out, not on X. However, I still wanted to post my tech content on Mastodon as well and I needed a tool to help me with that.</p>
+<p>I have this program installed as a binary on my computer and I call it from my <a href="https://github.com/mischavandenburg/dotfiles/blob/main/scripts/blog">blog script</a> which I use to generate my website with Hugo and publish it to my web hosting solution. Now it can post to Twitter / X and Mastodon as well.</p>
+<p>The Go code I wrote is available here:</p>
+<p><a href="https://github.com/mischavandenburg/mastodon">https://github.com/mischavandenburg/mastodon</a></p>
+<h2 id="links">Links:</h2>
+<p>202312241112</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Structs In Go - Similar To Classes In Python?</title>
       <link>https://mischavandenburg.com/zet/go-struct-python-class/</link>

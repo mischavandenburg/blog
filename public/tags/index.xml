@@ -6,7 +6,37 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 23 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding</title>
+      <link>https://mischavandenburg.com/tags/coding/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/coding/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://mischavandenburg.com/tags/devops/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/devops/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://mischavandenburg.com/tags/go/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/go/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Architecture</title>
       <link>https://mischavandenburg.com/tags/architecture/</link>
@@ -103,16 +133,6 @@
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/aks/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Coding</title>
-      <link>https://mischavandenburg.com/tags/coding/</link>
-      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/coding/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -358,16 +378,6 @@
     </item>
     
     <item>
-      <title>DevOps</title>
-      <link>https://mischavandenburg.com/tags/devops/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/devops/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Video</title>
       <link>https://mischavandenburg.com/tags/video/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
@@ -503,16 +513,6 @@
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/homelab/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://mischavandenburg.com/tags/go/</link>
-      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/go/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
