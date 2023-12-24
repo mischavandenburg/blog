@@ -79,3 +79,5 @@ To organize my notes for the website I use [tags](/tags/), but in my personal no
 If you're curious about the writing and publishing process of this blog, see [this note.](/zet/articles/how-this-blog-is-created/)
 
 You can find the source code of the blog at [github.com/mischavandenburg/blog](https://github.com/mischavandenburg/blog), and the contents of the zettelkasten are hosted in the [zet directory at /blog/content/zet/](https://github.com/mischavandenburg/blog/tree/main/content/zet)
+
+![](/cloud-blue-logo.jpeg)
