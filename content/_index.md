@@ -2,6 +2,8 @@
 title: Home
 ---
 
+<a rel="me" href="https://toot.community/@mischavandenburg"></a>
+
 Welcome to my website. I’m Mischa, a Cloud Engineer from Amsterdam.
 This is my public Zettelkasten where I publish notes about the topics that interest me.
 
