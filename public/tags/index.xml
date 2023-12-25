@@ -6,7 +6,37 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grafana</title>
+      <link>https://mischavandenburg.com/tags/grafana/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/grafana/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Homelab</title>
+      <link>https://mischavandenburg.com/tags/homelab/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/homelab/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://mischavandenburg.com/tags/kubernetes/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Coding</title>
       <link>https://mischavandenburg.com/tags/coding/</link>
@@ -68,16 +98,6 @@
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Career</title>
       <link>https://mischavandenburg.com/tags/career/</link>
       <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
@@ -113,16 +133,6 @@
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/links/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Grafana</title>
-      <link>https://mischavandenburg.com/tags/grafana/</link>
-      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/grafana/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -503,16 +513,6 @@
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/hardware/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Homelab</title>
-      <link>https://mischavandenburg.com/tags/homelab/</link>
-      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/homelab/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
