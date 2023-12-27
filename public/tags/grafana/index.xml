@@ -6,9 +6,37 @@
     <description>Recent content in Grafana on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Video - How To Install Prometheus &amp; Grafana In Your Homelab</title>
+      <title>Video: Viewing Strava Data In Grafana Dashboards</title>
+      <link>https://mischavandenburg.com/zet/video-strava-grafana/</link>
+      <pubDate>Wed, 27 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-strava-grafana/</guid>
+      <description>In this video I&amp;rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:
+creating an application in Strava installing the Strava plugin in Grafana adding the Strava data source importing dashboards exploring data and creating custom dashboard Links: 202312250812
+https://youtu.be/CgP9hs9UDzA</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/CgP9hs9UDzA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>In this video I&rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:</p>
+<ul>
+<li>creating an application in Strava</li>
+<li>installing the Strava plugin in Grafana</li>
+<li>adding the Strava data source</li>
+<li>importing dashboards</li>
+<li>exploring data and creating custom dashboard</li>
+</ul>
+<h2 id="links">Links:</h2>
+<p>202312250812</p>
+<p><a href="https://youtu.be/CgP9hs9UDzA">https://youtu.be/CgP9hs9UDzA</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: How To Install Prometheus &amp; Grafana In Your Homelab</title>
       <link>https://mischavandenburg.com/zet/video-install-prometheus-grafana-homelab/</link>
       <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
       

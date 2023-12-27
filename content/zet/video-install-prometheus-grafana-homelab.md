@@ -1,5 +1,5 @@
 ---
-Title: "Video - How To Install Prometheus & Grafana In Your Homelab"
+Title: "Video: How To Install Prometheus & Grafana In Your Homelab"
 date: 2023-12-25
 tags:
 - Kubernetes
