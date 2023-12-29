@@ -6,7 +6,105 @@
     <description>Recent content in Home on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab Secret Management With GitOps and Azure Key Vault</title>
+      <link>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</guid>
+      <description>In this blog post, I want to share with you how I set up secrets management for my home lab. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.</description>
+      <content:encoded><![CDATA[<p>In this blog post, I want to share with you how I set up secrets management for my <a href="https://github.com/mischavandenburg/homelab/">home lab</a>. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.</p>
+<p>Since Flux is the integrated solution for GitOps in Azure Kubernetes Service I also adopted it for my home lab. Flux supports and recommends encrypting secrets in git using SOPS, which is a tool that uses asymmetric encryption to protect secrets. This means that you can store encrypted secrets in your git repository and only decrypt them when they are applied to the cluster. This sounds like a convenient and secure way to manage secrets, right?</p>
+<p>Well, not quite. After doing some research, I decided to use a different approach: storing my secrets in Azure Key Vault and syncing them to my cluster with the Azure Key Vault Provider. This is the recommended best practice by Microsoft, as explained in this article:</p>
+<blockquote>
+<p>TLDR: Referencing secrets in an external key vault is the recommended approach. It is easier to orchestrate secret rotation and more scalable with multiple clusters and/or teams.</p>
+</blockquote>
+<p><a href="https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/gitops/secret-management/secret-management-gitops/">https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/gitops/secret-management/secret-management-gitops/</a></p>
+<p>SOPS has some drawbacks that made me choose the Azure Key Vault route for my home lab. First of all, SOPS requires you to encrypt each secret value manually in the command line, which can be tedious and error-prone. Secondly, SOPS relies on a single encryption key that is stored in your local machine or in a cloud KMS. If you lose this key, you will lose access to all your encrypted secrets in your Git repo. Thirdly, SOPS does not provide a backup or recovery mechanism for your secrets, nor does it offer fine-grained access control or auditing capabilities.</p>
+<p>Here are some of the reasons why I chose this approach over SOPS:</p>
+<ul>
+<li>Secrets are stored in an external source, which means that they are not exposed in git, even if encrypted.</li>
+<li>Azure Key Vault provides backup and recovery features, such as soft delete and restore, which can help in case of accidental deletion or corruption of secrets.</li>
+<li>Azure Key Vault allows fine-grained authentication and authorization to the vaults, using Entra ID identities and policies. This means that I can control who can access or modify my secrets, and audit their actions.</li>
+<li>I don&rsquo;t need to encrypt or decrypt values in the command line, which can be error-prone or leak information. I can use the Azure CLI or the Azure Portal to manage my secrets in the vault.</li>
+<li>If I lose my encryption key, all my encrypted secrets in git are useless with SOPS. With Azure Key Vault, I can still access my secrets using my Entra ID or recover them from backup.</li>
+<li>This approach mimics a solution that I would use for an enterprise production environment</li>
+</ul>
+<h1 id="azure-key-vault-provider">Azure Key Vault Provider</h1>
+<p>To sync my secrets from Azure Key Vault to my AKS cluster, I used the Azure Key Vault Provider for Secrets Store CSI Driver. This is an open source project that enables you to mount secrets from external sources (such as Azure Key Vault) as volumes in your pods using the Container Storage Interface (CSI) specification.</p>
+<p>I followed <a href="https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/">the provider documentation</a> to install the provider in my local cluster using a Flux HelmRelease.</p>
+<p>With the provider installed I can use the following configuration to sync a secret named grafana-admin-password from my Key Vault and make it available as a volume and environment variable in an example busybox pod:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store.csi.x-k8s.io/v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">SecretProviderClass</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">azure-kv-secrets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">monitoring</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l">azure</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">parameters</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">keyvaultName</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mischa-homelab-k8s&#34;</span><span class="w"> </span><span class="c"># the name of the KeyVault</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">objects</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">      array:
+</span></span></span><span class="line"><span class="cl"><span class="sd">        - |
+</span></span></span><span class="line"><span class="cl"><span class="sd">          objectName: grafana-admin-password
+</span></span></span><span class="line"><span class="cl"><span class="sd">          objectType: secret              # object types: secret, key, or cert</span><span class="w">      
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l">6ddecc48-41b1-48de-bfde-2efd29fae9c7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">secretObjects</span><span class="p">:</span><span class="w"> </span><span class="c"># [OPTIONAL] SecretObjects defines the desired state of synced Kubernetes secret objects</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">data</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">password</span><span class="w"> </span><span class="c"># data field to populate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">objectName</span><span class="p">:</span><span class="w"> </span><span class="l">grafana-admin-password</span><span class="w"> </span><span class="c"># name of the mounted content to sync; this could be the object name or the object alias</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l">grafana-custom-secret</span><span class="w"> </span><span class="c"># name of the Kubernetes secret object</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">Opaque</span><span class="w"> </span><span class="c"># type of Kubernetes secret object (for example, Opaque, kubernetes.io/tls)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">busybox-secrets-store-inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">monitoring</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">busybox</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">registry.k8s.io/e2e-test-images/busybox:1.29-1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;/bin/sleep&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;10000&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store01-inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/mnt/secrets-store&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">SECRET_USERNAME</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">secretKeyRef</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">grafana-custom-secret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">password</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store01-inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">csi</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store.csi.k8s.io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">volumeAttributes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">secretProviderClass</span><span class="p">:</span><span class="w"> </span><span class="l">azure-kv-secrets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">nodePublishSecretRef</span><span class="p">:</span><span class="w"> </span><span class="c"># Only required when using service principal mode</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store-creds</span><span class="w"> </span><span class="c"># Only required when using service principal mode. The name of the Kubernetes secret that contains the service principal credentials to access keyvault.</span><span class="w">
+</span></span></span></code></pre></div><p>I hope you found this blog post useful and informative. If you have any questions or feedback, please feel free to leave a comment below or contact me on Twitter @mischa_vdburg</p>
+<h2 id="links">Links:</h2>
+<p>202312290912</p>
+<p><a href="https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/gitops/secret-management/secret-management-gitops/">https://microsoft.github.io/code-with-engineering-playbook/continuous-delivery/gitops/secret-management/secret-management-gitops/</a></p>
+<p><a href="https://github.com/mischavandenburg/homelab/">https://github.com/mischavandenburg/homelab/</a></p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/key-vault/">Azure Key Vault documentation</a></li>
+<li><a href="https://fluxcd.io/docs/">Flux documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver">Azure Key Vault Provider for Secrets Store CSI Driver documentation</a></li>
+</ul>
+<p><a href="https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/">https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Viewing Strava Data In Grafana Dashboards</title>
       <link>https://mischavandenburg.com/zet/video-strava-grafana/</link>

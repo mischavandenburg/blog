@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Homelab on Mischa van den Burg</title>
-    <link>https://mischavandenburg.com/tags/homelab/</link>
-    <description>Recent content in Homelab on Mischa van den Burg</description>
+    <title>Flux on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/flux/</link>
+    <description>Recent content in Flux on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/flux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homelab Secret Management With GitOps and Azure Key Vault</title>
       <link>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</link>
@@ -102,113 +102,6 @@
 <li><a href="https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver">Azure Key Vault Provider for Secrets Store CSI Driver documentation</a></li>
 </ul>
 <p><a href="https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/">https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Video: How To Install Prometheus &amp; Grafana In Your Homelab</title>
-      <link>https://mischavandenburg.com/zet/video-install-prometheus-grafana-homelab/</link>
-      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/video-install-prometheus-grafana-homelab/</guid>
-      <description>In this video I&amp;rsquo;ll be installing Prometheus and Grafana in a Kubernetes cluster running in Rancher Desktop on my MacBook.
-There are many options available out there but this is the easiest one I found to get up and running quickly.
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts helm repo update helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace=prometheus-stack --create-namespace
-helm show values prometheus-community/kube-prometheus-stack &amp;gt; prometheus-default-values.yaml
-Opening the Grafana UI k port-forward svc/prometheus-stack-grafana 3000:80</description>
-      <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/3AINqaBwOYs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<p>In this video I&rsquo;ll be installing Prometheus and Grafana in a Kubernetes cluster running in Rancher Desktop on my MacBook.</p>
-<p>There are many options available out there but this is the easiest one I found to get up and running quickly.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-</span></span><span class="line"><span class="cl">helm repo update
-</span></span></code></pre></div><p><code>helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace=prometheus-stack --create-namespace</code></p>
-<p><code>helm show values prometheus-community/kube-prometheus-stack &gt; prometheus-default-values.yaml</code></p>
-<h2 id="opening-the-grafana-ui">Opening the Grafana UI</h2>
-<p><code>k port-forward svc/prometheus-stack-grafana 3000:80</code></p>
-<p>Then you can open it by entering <code>localhost:3000</code> in your browser.</p>
-<p>The default credentials are admin:prom-operator</p>
-<h2 id="links">Links:</h2>
-<p>202312250812</p>
-<p><a href="https://youtu.be/3AINqaBwOYs?si=maN1rfbg4pzBc3xI">https://youtu.be/3AINqaBwOYs?si=maN1rfbg4pzBc3xI</a></p>
-<p><a href="https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#configuration">https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#configuration</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Starting My Homelab</title>
-      <link>https://mischavandenburg.com/zet/starting-my-homelab/</link>
-      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/starting-my-homelab/</guid>
-      <description>This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s Homelab Init playlist on YouTube which I&amp;rsquo;m working on.
-There are a few reasons why I haven&amp;rsquo;t started up until now:</description>
-      <content:encoded><![CDATA[<p>This week I started a project which I&rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&rsquo;ve been collecting hardware here and there, and I&rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&rsquo;s <a href="https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J">Homelab Init</a> playlist on YouTube which I&rsquo;m working on.</p>
-<p>There are a few reasons why I haven&rsquo;t started up until now:</p>
-<ul>
-<li>Focused on switching jobs and certifications</li>
-<li>Not knowing what to run on the cluster</li>
-<li>High electricity costs</li>
-</ul>
-<p>Now that I found a new job with a great employer, I&rsquo;ve changed my focus towards doing more hands-on learning in my free time by learning Go and diving deeper into Cloud Native technology. Energy prices have come down in the meantime as well.</p>
-<p>I&rsquo;ve reached a stage in my Go learning journey where I&rsquo;m actually able to start making small deployable applications, and I want an environment where I can do that without high costs or without fearing to break something. I want to learn more about databases on Kubernetes, and I want to start writing small microservices and API&rsquo;s that are able to query these databases.</p>
-<p>My lab is going to be my playground, where I can deploy whatever I want and learn the technologies that interest me at that particular moment.</p>
-<h1 id="hardware-parts">Hardware: Parts</h1>
-<p>For some reason the Raspberry Pi has become synonymous with homelabs. I get that it&rsquo;s fun to run a cluster on something that is not much larger than a 1kg pack of sugar. But I never really caught on to that whole scene yet. Maybe it&rsquo;s because I&rsquo;m a bit late to the party and the Pi&rsquo;s have been scarce and very expensive lately?</p>
-<p>In any case, I&rsquo;ve been thankfully accepting old computers that friends were going to get rid of, and I&rsquo;ve been keeping some of my own old hardware as well. I have enough motherboards and other parts to assemble around 3 nodes, which will probably have around 8GB RAM each, but possibilities to attach storage.</p>
-<p>This is also what has been keeping me back for a while I think. There is quite a bit of work that I need to do to get these machines going, and probably I&rsquo;ll have to purchase a couple of other parts. However, I also have some functional hardware.</p>
-<h2 id="gaming-desktop">Gaming Desktop</h2>
-<p>I have an old gaming desktop with 16GB RAM, an Intel 6700K Skylake, 1070 video card and a couple of TB of storage.</p>
-<p>This has been my Arch Linux desktop for the past year, but now that I switched to my new MacBook, I&rsquo;m not using it as much. I want to keep it as it is right now, but I could run a few Virtual Machines on there, and maybe consider turning it into a ProxMox server.</p>
-<h2 id="old-laptops">Old Laptops</h2>
-<p>I have two old laptops. One Asus with 4GB of RAM and a Thinkpad T430 with 8GB RAM. The Thinkpad is actually surprisingly powerful. As a weekend project I installed Arch on it and I fitted it with a refurbished keyboard, and it is a very pleasant machine to work with. However, now that I have a very powerful laptop that I use as a desktop and portable device, it has become redundant.</p>
-<h1 id="old-laptops-as-raspberri-pis">Old Laptops as Raspberri Pi&rsquo;s</h1>
-<p>Having these two old laptops lying around, it occurred to me that these machines were basically Raspberri Pi&rsquo;s with a large form factor and a higher power usage. Why would I need to spend hundreds of euros on these smaller computers if I could just use these laptops as a starting point for my lab?</p>
-<p>Using laptops has the following advantages:</p>
-<ul>
-<li>No additional costs</li>
-<li>No building needed</li>
-<li>Easy to install Linux on them</li>
-<li>Built-in screen and keyboard for quick access when SSH does not work out</li>
-<li>Built-in batteries to handle short power disruptions (rare but possible)</li>
-<li>Can get going very quickly</li>
-</ul>
-<h1 id="choices-and-goals">Choices and Goals</h1>
-<h2 id="kubernetes">Kubernetes</h2>
-<p>The first goal is to get a Kubernetes cluster running. I will do bare metal kubeadm installs, and later I want to learn more about Talos. Fortunately I feel very comfortable installing Kubernetes with kubeadm. I did plenty of practice for my CKA, and I recently installed it on free Oracle VM&rsquo;s. I&rsquo;ve experimented a bit with K9S earlier, but I want to learn how to maintain on-prem Kubernetes.</p>
-<p>My goals is to learn to maintain production-grade clusters properly.</p>
-<h2 id="linux">Linux</h2>
-<p>Naturally I&rsquo;ll be using Linux as my base OS. After some consideration I chose to use Ubuntu Server 22. Some notes on that choice:</p>
-<ul>
-<li>I already have years of Ubuntu Server experience</li>
-<li>Good to keep building on what I have</li>
-<li>Working with managed Kubernetes on my day job requires me to keep Linux admin skills fresh</li>
-<li>Still the <a href="https://www.enterpriseappstoday.com/stats/linux-statistics.html">most popular Linux distro</a></li>
-<li>Google uses Ubuntu Server</li>
-<li>Well documented and plenty of questions on StackOverflow</li>
-</ul>
-<h2 id="infrastructure-as-code--gitops">Infrastructure as Code &amp; GitOps</h2>
-<p>Initially I&rsquo;ll configure the servers by hand, but I want to have the server configuration as code as Ansible playbooks eventually. However, I&rsquo;ll be using ArgoCD for all of my deployments on Kubernetes itself, so the server configuration is only a very small part of the setup. Just get Kubernetes running and do the rest with ArgoCD.</p>
-<p>Perhaps I will expand with larger servers that run multiple VM&rsquo;s. Then it will be very relevant to start provisioning these with Ansible.</p>
-<h2 id="networking">Networking</h2>
-<p>I want to learn more about networking and use static IP addresses for my servers. I need to figure out how my home network works exactly. Surprisingly, I&rsquo;ve never taken the effort to actually know how the devices on my network get their IP addresses and how they communicate, even though I&rsquo;ve learned plenty about it for my day job and do networking in an enterprise environment daily.</p>
-<p>For Kubernetes I&rsquo;ll use Flannel to start out with, but I want to learn more about Cilium, Istio and other service mesh implementations.</p>
-<p>Another goal is to host my own DNS server for internal name resolution, probably CoreDNS.</p>
-<h2 id="deployment">Deployment</h2>
-<p>I want to host my own container registry (Harbor) and use Tekton pipelines to for CI/CD, and I&rsquo;m playing with the thought to host my own GitLab instance as well.</p>
-<h1 id="lets-go">Let&rsquo;s Go!</h1>
-<p>Another realization was that I don&rsquo;t need to have everything figured out before I begin. The beauty of cluster computing is that you can add to it as you go. I can start with a small cluster of two nodes and build it out as my needs grow. I don&rsquo;t expect to need more than a few GB of RAM in the foreseeable future, so these two laptops will be plenty to get going.</p>
-<p><img loading="lazy" src="/cluster-laptops.png" type="" alt=""  /></p>
-<h2 id="links">Links:</h2>
-<p>2023041213</p>
-<p>[[homelab]]</p>
-<p>[[homelab-network]]</p>
-<p>[[linux]]</p>
-<p>[[homelab-ubuntu-server]]</p>
-<p>[[kubernetes]]</p>
 ]]></content:encoded>
     </item>
     
