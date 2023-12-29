@@ -31,6 +31,7 @@
 <li>If I lose my encryption key, all my encrypted secrets in git are useless with SOPS. With Azure Key Vault, I can still access my secrets using my Entra ID or recover them from backup.</li>
 <li>This approach mimics a solution that I would use for an enterprise production environment</li>
 </ul>
+<p>However, this does not mean that I will not use SOPS at all. Sometimes Helm charts or other configurations need values to be hardcoded due to incorrect implementation. This is where SOPS truly shines. You can safely check in your secret values to source code. Additionally, the SOPS keys can also be stored in Azure Key Vault. Tools should be used where they are most useful, so I&rsquo;m not saying I won&rsquo;t use SOPS at all, but I&rsquo;m choosing Azure Key Vaults and the accompanying CSI Store provider for my main solution.</p>
 <h1 id="azure-key-vault-provider">Azure Key Vault Provider</h1>
 <p>To sync my secrets from Azure Key Vault to my AKS cluster, I used the Azure Key Vault Provider for Secrets Store CSI Driver. This is an open source project that enables you to mount secrets from external sources (such as Azure Key Vault) as volumes in your pods using the Container Storage Interface (CSI) specification.</p>
 <p>I followed <a href="https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/">the provider documentation</a> to install the provider in my local cluster using a Flux HelmRelease.</p>

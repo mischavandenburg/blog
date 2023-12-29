@@ -32,6 +32,8 @@ Here are some of the reasons why I chose this approach over SOPS:
 * If I lose my encryption key, all my encrypted secrets in git are useless with SOPS. With Azure Key Vault, I can still access my secrets using my Entra ID or recover them from backup.
 * This approach mimics a solution that I would use for an enterprise production environment
 
+However, this does not mean that I will not use SOPS at all. Sometimes Helm charts or other configurations need values to be hardcoded due to incorrect implementation. This is where SOPS truly shines. You can safely check in your secret values to source code. Additionally, the SOPS keys can also be stored in Azure Key Vault. Tools should be used where they are most useful, so I'm not saying I won't use SOPS at all, but I'm choosing Azure Key Vaults and the accompanying CSI Store provider for my main solution.
+
 # Azure Key Vault Provider
 
 To sync my secrets from Azure Key Vault to my AKS cluster, I used the Azure Key Vault Provider for Secrets Store CSI Driver. This is an open source project that enables you to mount secrets from external sources (such as Azure Key Vault) as volumes in your pods using the Container Storage Interface (CSI) specification.
