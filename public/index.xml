@@ -6,7 +6,25 @@
     <description>Recent content in Home on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discovered a simple CLI to backup and upload Grafana dashboards</title>
+      <link>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</guid>
+      <description>This is a super useful tool to list, download and upload Grafana dashboards as json.
+Currently using this to occasionally take extra-extra backups of my Grafana creations
+https://software.es.net/gdg/
+Links: 202312301612</description>
+      <content:encoded><![CDATA[<p>This is a super useful tool to list, download and upload Grafana dashboards as json.</p>
+<p>Currently using this to occasionally take extra-extra backups of my Grafana creations</p>
+<p><a href="https://software.es.net/gdg/">https://software.es.net/gdg/</a></p>
+<h2 id="links">Links:</h2>
+<p>202312301612</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Homelab Secret Management With GitOps and Azure Key Vault</title>
       <link>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</link>
@@ -103,6 +121,25 @@
 <li><a href="https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver">Azure Key Vault Provider for Secrets Store CSI Driver documentation</a></li>
 </ul>
 <p><a href="https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/">https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/</a></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Homelab weave tls new node</title>
+      <link>https://mischavandenburg.com/zet/video-homelab-new-node-weave-tls/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-homelab-new-node-weave-tls/</guid>
+      <description>added a new node to k3s cluster thinkpad 8gb configured a tls certificate for weave Struggled because cloudflare for some reason didn&amp;rsquo;t resolve the DNS record when I first configured it. It was fixed when I added another dummy record just to test it with nslookup.
+Links: 202312291812</description>
+      <content:encoded><![CDATA[<ul>
+<li>added a new node to k3s cluster thinkpad 8gb</li>
+<li>configured a tls certificate for weave</li>
+</ul>
+<p>Struggled because cloudflare for some reason didn&rsquo;t resolve the DNS record when I first configured it.
+It was fixed when I added another dummy record just to test it with nslookup.</p>
+<h2 id="links">Links:</h2>
+<p>202312291812</p>
 ]]></content:encoded>
     </item>
     

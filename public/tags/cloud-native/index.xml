@@ -6,7 +6,25 @@
     <description>Recent content in Cloud-Native on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/cloud-native/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/cloud-native/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discovered a simple CLI to backup and upload Grafana dashboards</title>
+      <link>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</guid>
+      <description>This is a super useful tool to list, download and upload Grafana dashboards as json.
+Currently using this to occasionally take extra-extra backups of my Grafana creations
+https://software.es.net/gdg/
+Links: 202312301612</description>
+      <content:encoded><![CDATA[<p>This is a super useful tool to list, download and upload Grafana dashboards as json.</p>
+<p>Currently using this to occasionally take extra-extra backups of my Grafana creations</p>
+<p><a href="https://software.es.net/gdg/">https://software.es.net/gdg/</a></p>
+<h2 id="links">Links:</h2>
+<p>202312301612</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Viewing Strava Data In Grafana Dashboards</title>
       <link>https://mischavandenburg.com/zet/video-strava-grafana/</link>
