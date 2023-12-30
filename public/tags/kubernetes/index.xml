@@ -6,7 +6,32 @@
     <description>Recent content in Kubernetes on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab Episode 1</title>
+      <link>https://mischavandenburg.com/zet/homelab-episode-1/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/homelab-episode-1/</guid>
+      <description>This is the first video of my homelab series.
+I set up the repo for my project and do the initial installation of k3s on an old laptop I had lying around. I had a k8s cluster installed on there with kubeadm which I needed to clean up first.
+Links: 202312301912
+https://youtu.be/X40gNPZ2xP4
+[[homelab]]</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/X40gNPZ2xP4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>This is the first video of my homelab series.</p>
+<p>I set up the repo for my project and do the initial installation of k3s on an old laptop I had lying around. I had a k8s cluster installed on there with kubeadm which I needed to clean up first.</p>
+<h2 id="links">Links:</h2>
+<p>202312301912</p>
+<p><a href="https://youtu.be/X40gNPZ2xP4">https://youtu.be/X40gNPZ2xP4</a></p>
+<p>[[homelab]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Discovered a simple CLI to backup and upload Grafana dashboards</title>
       <link>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</link>
