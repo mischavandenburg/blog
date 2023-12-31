@@ -8,7 +8,23 @@
     <language>en</language>
     <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Homelab Episode 1</title>
+      <title>Found a Mastodon CLI</title>
+      <link>https://mischavandenburg.com/zet/toot-mastodon-cli/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/toot-mastodon-cli/</guid>
+      <description>Last week I created my own Go program to send toots to Mastodon but now I stumbled across a full fledged CLI with a TUI
+https://toot.bezdomni.net/
+Links: 202312311312</description>
+      <content:encoded><![CDATA[<p>Last week I created my own Go program to send toots to Mastodon but now I stumbled across a full fledged CLI with a TUI</p>
+<p><a href="https://toot.bezdomni.net/">https://toot.bezdomni.net/</a></p>
+<h2 id="links">Links:</h2>
+<p>202312311312</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video: Homelab Episode 1</title>
       <link>https://mischavandenburg.com/zet/homelab-episode-1/</link>
       <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
       

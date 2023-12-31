@@ -1,10 +1,11 @@
 ---
-title: Homelab Episode 1
+title: "Video: Homelab Episode 1"
 date: 2023-12-31
 tags:
 - Homelab
 - kubernetes
 - linux
+- video
 ---
 
 {{< youtube X40gNPZ2xP4 >}}

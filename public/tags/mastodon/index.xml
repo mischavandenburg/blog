@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mastodon on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/mastodon/</link>
+    <description>Recent content in Mastodon on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/mastodon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Found a Mastodon CLI</title>
+      <link>https://mischavandenburg.com/zet/toot-mastodon-cli/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/toot-mastodon-cli/</guid>
+      <description>Last week I created my own Go program to send toots to Mastodon but now I stumbled across a full fledged CLI with a TUI
+https://toot.bezdomni.net/
+Links: 202312311312</description>
+      <content:encoded><![CDATA[<p>Last week I created my own Go program to send toots to Mastodon but now I stumbled across a full fledged CLI with a TUI</p>
+<p><a href="https://toot.bezdomni.net/">https://toot.bezdomni.net/</a></p>
+<h2 id="links">Links:</h2>
+<p>202312311312</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

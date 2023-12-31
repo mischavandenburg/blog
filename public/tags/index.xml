@@ -8,6 +8,16 @@
     <language>en</language>
     <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Command-Line</title>
+      <link>https://mischavandenburg.com/tags/command-line/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/command-line/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Homelab</title>
       <link>https://mischavandenburg.com/tags/homelab/</link>
       <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
@@ -38,21 +48,31 @@
     </item>
     
     <item>
-      <title>Cloud-Native</title>
-      <link>https://mischavandenburg.com/tags/cloud-native/</link>
-      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <title>Mastodon</title>
+      <link>https://mischavandenburg.com/tags/mastodon/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/cloud-native/</guid>
+      <guid>https://mischavandenburg.com/tags/mastodon/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
-      <title>Command-Line</title>
-      <link>https://mischavandenburg.com/tags/command-line/</link>
+      <title>Video</title>
+      <link>https://mischavandenburg.com/tags/video/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/video/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Cloud-Native</title>
+      <link>https://mischavandenburg.com/tags/cloud-native/</link>
       <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/command-line/</guid>
+      <guid>https://mischavandenburg.com/tags/cloud-native/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -413,16 +433,6 @@
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/bicep/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Video</title>
-      <link>https://mischavandenburg.com/tags/video/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/video/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
