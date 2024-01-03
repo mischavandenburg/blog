@@ -166,25 +166,6 @@ Links: 202312301612</description>
     </item>
     
     <item>
-      <title>Homelab weave tls new node</title>
-      <link>https://mischavandenburg.com/zet/video-homelab-new-node-weave-tls/</link>
-      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/video-homelab-new-node-weave-tls/</guid>
-      <description>added a new node to k3s cluster thinkpad 8gb configured a tls certificate for weave Struggled because cloudflare for some reason didn&amp;rsquo;t resolve the DNS record when I first configured it. It was fixed when I added another dummy record just to test it with nslookup.
-Links: 202312291812</description>
-      <content:encoded><![CDATA[<ul>
-<li>added a new node to k3s cluster thinkpad 8gb</li>
-<li>configured a tls certificate for weave</li>
-</ul>
-<p>Struggled because cloudflare for some reason didn&rsquo;t resolve the DNS record when I first configured it.
-It was fixed when I added another dummy record just to test it with nslookup.</p>
-<h2 id="links">Links:</h2>
-<p>202312291812</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Video: Viewing Strava Data In Grafana Dashboards</title>
       <link>https://mischavandenburg.com/zet/video-strava-grafana/</link>
       <pubDate>Wed, 27 Dec 2023 00:00:00 +0000</pubDate>

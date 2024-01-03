@@ -3,6 +3,8 @@ title: Homelab weave tls new node
 date: 2023-12-29
 tags:
 - 
+
+draft: true
 ---
 
 * added a new node to k3s cluster thinkpad 8gb
