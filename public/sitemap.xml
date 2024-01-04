@@ -2,19 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mischavandenburg.com/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/homelab/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/networking/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/video/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/video-homelab-3-k3s-networking/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-01-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/command-line/</loc>
     <lastmod>2023-12-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/toot-mastodon-cli/</loc>
-    <lastmod>2023-12-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2023-12-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/homelab/</loc>
-    <lastmod>2023-12-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
     <lastmod>2023-12-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/linux/</loc>
@@ -23,16 +38,7 @@
     <loc>https://mischavandenburg.com/tags/mastodon/</loc>
     <lastmod>2023-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2023-12-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/video/</loc>
-    <lastmod>2023-12-31T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/homelab-episode-1/</loc>
-    <lastmod>2023-12-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2023-12-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/cloud-native/</loc>
@@ -229,9 +235,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/what-my-ancestors-ate/</loc>
     <lastmod>2023-10-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/networking/</loc>
-    <lastmod>2023-09-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/longevity-diet/</loc>
     <lastmod>2023-09-30T00:00:00+00:00</lastmod>

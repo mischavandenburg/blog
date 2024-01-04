@@ -1,16 +1,16 @@
 ---
-title: "Video: Homelab Episode 2 - Install Monitoring and Learning k3s Networking"
-date: 2023-12-26
+title: "Video: Homelab E2 - Setting Up Monitoring + Studying k3s Networking  & Configuring Ingress"
+date: 2024-01-04
 tags:
 - Kubernetes
 - Homelab
 - Video
 - Networking
-
-draft: true
 ---
 
-In this video I installed prometheus and grafana using helm and studied k3s networking.
+{{< youtube JjIB65CVXAo >}}
+
+In this video I installed Prometheus and Grafana using helm and studied k3s networking.
 
 My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.
 
@@ -25,3 +25,5 @@ My goal was to make Grafana approachable via ingress using a fake domain and aft
 ## Links:
 
 202312261012
+
+https://youtu.be/JjIB65CVXAo
