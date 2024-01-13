@@ -25,7 +25,7 @@ I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</descr
 <p>I&rsquo;m also going to have some fun with the naming strategy. I love Nordic mythology so I picked that as a theme.</p>
 <h2 id="network-name">Network Name:</h2>
 <ul>
-<li><strong>AsgardNet</strong>: A reference to the home of the gods in Norse mythology, symbolizing a powerful and central network.</li>
+<li><strong>Asgard</strong>: A reference to the home of the gods in Norse mythology, symbolizing a powerful and central network.</li>
 </ul>
 <h3 id="vlan-naming-strategy">VLAN Naming Strategy:</h3>
 <ol>
@@ -33,8 +33,9 @@ I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</descr
 <li><strong>Staging Kubernetes Cluster</strong>: <code>Midgard</code> - Midgard, the world of humans in Norse mythology, can symbolize a testing ground that&rsquo;s closer to the &lsquo;real world&rsquo; scenarios.</li>
 <li><strong>Main VLAN (Work &amp; Personal Devices)</strong>: <code>Yggdrasil</code> - Named after the great tree that connects all the worlds, symbolizing the connectivity and central role of this VLAN in the network.</li>
 <li><strong>IoT VLAN</strong>: <code>Niflheim</code> - The realm of fog and mist, a metaphor for the mysterious and ubiquitous nature of IoT devices.</li>
-<li><strong>Guest Network VLAN</strong>: <code>Folkvangr</code> - Folkvangr, where the goddess Freya hosts half of those who die in battle, signifying a place for visitors.</li>
+<li><strong>Guest Network VLAN</strong>: <code>Jotunheim</code> - Inspired by the realm of giants in Norse mythology, this guest network embodies the vastness and mystery of Jotunheim. It&rsquo;s a separate, secure space for visitors, representing the outer layers of my realm.</li>
 </ol>
+<p><img loading="lazy" src="/jotunheim.png" type="" alt=""  /></p>
 <h2 id="links">Links:</h2>
 <p>202401130601</p>
 ]]></content:encoded>

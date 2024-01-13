@@ -24,7 +24,7 @@ I'm also going to have some fun with the naming strategy. I love Nordic mytholog
 
 ## Network Name:
 
-- **AsgardNet**: A reference to the home of the gods in Norse mythology, symbolizing a powerful and central network.
+- **Asgard**: A reference to the home of the gods in Norse mythology, symbolizing a powerful and central network.
 
 ### VLAN Naming Strategy:
 
@@ -32,7 +32,9 @@ I'm also going to have some fun with the naming strategy. I love Nordic mytholog
 2. **Staging Kubernetes Cluster**: `Midgard` - Midgard, the world of humans in Norse mythology, can symbolize a testing ground that's closer to the 'real world' scenarios.
 3. **Main VLAN (Work & Personal Devices)**: `Yggdrasil` - Named after the great tree that connects all the worlds, symbolizing the connectivity and central role of this VLAN in the network.
 4. **IoT VLAN**: `Niflheim` - The realm of fog and mist, a metaphor for the mysterious and ubiquitous nature of IoT devices.
-5. **Guest Network VLAN**: `Folkvangr` - Folkvangr, where the goddess Freya hosts half of those who die in battle, signifying a place for visitors.
+5. **Guest Network VLAN**: `Jotunheim` - Inspired by the realm of giants in Norse mythology, this guest network embodies the vastness and mystery of Jotunheim. It's a separate, secure space for visitors, representing the outer layers of my realm.
+
+![](/jotunheim.png)
 
 ## Links:
 
