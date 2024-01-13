@@ -13,6 +13,8 @@ draft: true
 Struggled because cloudflare for some reason didn't resolve the DNS record when I first configured it.
 It was fixed when I added another dummy record just to test it with nslookup.
 
+* split off grafana from the kube-prometheus-stack helm chart
+
 
 ## Links:
 

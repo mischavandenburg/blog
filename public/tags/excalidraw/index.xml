@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Excalidraw on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/excalidraw/</link>
+    <description>Recent content in Excalidraw on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/excalidraw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Designed The Network For My Homelab</title>
+      <link>https://mischavandenburg.com/zet/homelab-network-design/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/homelab-network-design/</guid>
+      <description>My ISP router only allowed me to assign 200 IP addresses and it didn&amp;rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.
+Now that I&amp;rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.
+I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</description>
+      <content:encoded><![CDATA[<p>My ISP router only allowed me to assign 200 IP addresses and it didn&rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.</p>
+<p>Now that I&rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.</p>
+<p>I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</p>
+<p>The gateway will function as the main portal to the internet and the WiFi access point. The switch will be located in my pantry where all the devices for my homelab are currently.</p>
+<p><img loading="lazy" src="/homelab-network.png" type="" alt=""  /></p>
+<h2 id="links">Links:</h2>
+<p>202401130601</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

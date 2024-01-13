@@ -6,11 +6,21 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Excalidraw</title>
+      <link>https://mischavandenburg.com/tags/excalidraw/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/excalidraw/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Homelab</title>
       <link>https://mischavandenburg.com/tags/homelab/</link>
-      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/homelab/</guid>
       <description></description>
@@ -18,21 +28,31 @@
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <title>Networking</title>
+      <link>https://mischavandenburg.com/tags/networking/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <guid>https://mischavandenburg.com/tags/networking/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
-      <title>Networking</title>
-      <link>https://mischavandenburg.com/tags/networking/</link>
-      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <title>Azure</title>
+      <link>https://mischavandenburg.com/tags/azure/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/networking/</guid>
+      <guid>https://mischavandenburg.com/tags/azure/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://mischavandenburg.com/tags/kubernetes/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -103,16 +123,6 @@
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/aks/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Azure</title>
-      <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/azure/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

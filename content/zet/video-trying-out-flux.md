@@ -8,19 +8,12 @@ tags:
 draft: true
 ---
 
-
-video files:
-
-flux-azure-1
-flux-azure-2
-
 In the first part of the video I tried out Flux for the first time in combination with an AKS cluster. I was a little overwhelmed. I expected it to be very similar to ArgoCD but found things are done quite differently in Flux.
 
 * flux requires Kustomization files
 * not as straight forward to deploy helm charts directly from repo compared to ArgoCD
 * no separate flux UI, azure portal IS the flux ui
 * azure portal UI significantly slower than ArgoCD
-
 
 Powerful:
 

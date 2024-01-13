@@ -2,12 +2,10 @@
 title: Installing Certmanage
 date: 2023-12-27
 tags:
-- 
-
+- homelab
+- kubernetes
 draft: true
 ---
-
-done:
 
 * configured external domains for weave and grafana
 * configured staging clustter issuer

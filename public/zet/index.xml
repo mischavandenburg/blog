@@ -6,7 +6,91 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Designed The Network For My Homelab</title>
+      <link>https://mischavandenburg.com/zet/homelab-network-design/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/homelab-network-design/</guid>
+      <description>My ISP router only allowed me to assign 200 IP addresses and it didn&amp;rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.
+Now that I&amp;rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.
+I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</description>
+      <content:encoded><![CDATA[<p>My ISP router only allowed me to assign 200 IP addresses and it didn&rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.</p>
+<p>Now that I&rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.</p>
+<p>I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</p>
+<p>The gateway will function as the main portal to the internet and the WiFi access point. The switch will be located in my pantry where all the devices for my homelab are currently.</p>
+<p><img loading="lazy" src="/homelab-network.png" type="" alt=""  /></p>
+<h2 id="links">Links:</h2>
+<p>202401130601</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Video notes - Application Gateway for Containers</title>
+      <link>https://mischavandenburg.com/zet/application-gateway-for-containers/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/application-gateway-for-containers/</guid>
+      <description>App Gateway It has App Gateway in the name, but it is an entirely new solution. The App Gateway is the only thing it has in common with Azure Application Gateway.
+Resources Two types of resources. Azure resources and k8s resources.
+The App Gateway for Container is an azure resource which listens to changes in k8s resources through the ALB controller. AGWFC is the control plane.
+Frontend Azure Frontend is a public IP and fqdn.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/slCjHV8z9Wk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h1 id="app-gateway">App Gateway</h1>
+<p>It has App Gateway in the name, but it is an entirely new solution. The App Gateway is the only thing it has in common with Azure Application Gateway.</p>
+<h1 id="resources">Resources</h1>
+<p>Two types of resources. Azure resources and k8s resources.</p>
+<p>The App Gateway for Container is an azure resource which listens to changes in k8s resources through the ALB controller. AGWFC is the control plane.</p>
+<h1 id="frontend">Frontend</h1>
+<h2 id="azure">Azure</h2>
+<p>Frontend is a public IP and fqdn. Both are managed resources, you don&rsquo;t see them in your subscription.</p>
+<p>You can have multiple frontends in one gateway to save money. Teams could share the app gateway but use different frontend IP addresses or FQDNs.</p>
+<p>Control plane: Azure App Gateway for Containers</p>
+<p>Data plane: association with kubernetes pods.</p>
+<p>The association is made to the subnet in the Azure VNet.</p>
+<p>Each association is in one subnet, and the subnet should at least have /24 or 256 addresses.</p>
+<h1 id="kubernetes">Kubernetes</h1>
+<p>ALB controller consists of two pods. Controller pod and a bootstrap pod.</p>
+<p>Controller communicates to the Azure gateway resource. It talks directly to the App Gateway, not to the Azure Resource Manager, which is why you&rsquo;re able to have sub-second updates.</p>
+<p>The bootstrap contains the CRDs etc, it does not do very much.</p>
+<h2 id="creating-resources">Creating resources</h2>
+<p>There is a managed option that will talk to ARM and create the resources for you. Or you can choose to deploy them yourself. It depends whether you want to control everything from Kubernetes. If you have all your Azure resources in Infrastructure as Code it probably makes more sense to create the App Gateway resources from there instead of from Kubernetes.</p>
+<h1 id="association">Association</h1>
+<p>Links frontend with a subnet in a VNet. This will typically be the same vnet that the AKS cluster is in. Could technically be a peered VNet but probably uncommon.</p>
+<p>This is an Azure resource. It lives in the VNet and handles TLS and makes the connections to and from the pods and frontend IP. This is the data path.</p>
+<p>The traffic is not routed within the cluster, but in Azure by the association.</p>
+<p>Client talks to the front end, passes to the association, the association is doing the work, and then routing it to the cluster.</p>
+<h1 id="support">Support</h1>
+<p>Azure CNI. Does not support kubenet or Azure CNI overlay yet, but it will support in the future.</p>
+<h1 id="kubernetes-resources">Kubernetes Resources</h1>
+<p>Application Load Balancer: this name was chosen because k8s people don&rsquo;t know the concept of app gateway.</p>
+<h1 id="benefits">Benefits</h1>
+<ul>
+<li>ssl offloading</li>
+<li>traffic splitting</li>
+<li>clearer separation between platform team and app team</li>
+<li>platform team manages the gateway itself</li>
+<li>automatic default health probes</li>
+</ul>
+<h1 id="benefits-of-azure">Benefits of Azure</h1>
+<ul>
+<li>not suing cluster resources for load balancing. this happens in azure</li>
+<li>native azure metrics available</li>
+</ul>
+<h1 id="misc">misc</h1>
+<ul>
+<li>AGIC does not support ingress</li>
+</ul>
+<h2 id="links">Links:</h2>
+<p>202309301009</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: Homelab E2 - Setting Up Monitoring &#43; Studying k3s Networking  &amp; Configuring Ingress</title>
       <link>https://mischavandenburg.com/zet/video-homelab-3-k3s-networking/</link>
@@ -1533,46 +1617,6 @@ I&amp;rsquo;m always experimenting with diet protols and this one seems interest
 <p>202309300809</p>
 <p><a href="https://www.menshealth.com/nutrition/a19513749/rich-roll-vegan-diet/">https://www.menshealth.com/nutrition/a19513749/rich-roll-vegan-diet/</a></p>
 <p><a href="https://www.valterlongo.com/daily-longevity-diet-for-adults/">https://www.valterlongo.com/daily-longevity-diet-for-adults/</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Video notes - Application Gateway for Containers</title>
-      <link>https://mischavandenburg.com/zet/application-gateway-for-containers/</link>
-      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/application-gateway-for-containers/</guid>
-      <description>Frontend Azure You can have multiple frontends in one gateway to save money. Teams could share the app gateway but use different frontend IP addresses or FQDNs.
-Control plane: Azure App Gateway for Containers
-Data plane: association with kubernetes pods.
-The association is made to the subnet in the Azure VNet.
-Each association is in one subnet, and the subnet should at least have /24 or 256 addresses.
-Kubernetes ALB controller consists of two pods.</description>
-      <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/slCjHV8z9Wk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<h1 id="frontend">Frontend</h1>
-<h2 id="azure">Azure</h2>
-<p>You can have multiple frontends in one gateway to save money. Teams could share the app gateway but use different frontend IP addresses or FQDNs.</p>
-<p>Control plane: Azure App Gateway for Containers</p>
-<p>Data plane: association with kubernetes pods.</p>
-<p>The association is made to the subnet in the Azure VNet.</p>
-<p>Each association is in one subnet, and the subnet should at least have /24 or 256 addresses.</p>
-<h1 id="kubernetes">Kubernetes</h1>
-<p>ALB controller consists of two pods. Controller pod and a bootstrap pod.</p>
-<p>Controller communicates to the Azure gateway resource. It talks directly to the App Gateway, not to the Azure Resource Manager, which is why you&rsquo;re able to have sub-second updates.</p>
-<p>The bootstrap contains the CRDs etc, it does not do very much.</p>
-<h2 id="creating-resources">Creating resources</h2>
-<p>There is a managed option that will talk to ARM and create the resources for you. Or you can choose to deploy them yourself. It depends whether you want to control everything from Kubernetes. If you have all your Azure resources in Infrastructure as Code it probably makes more sense to create the App Gateway resources from there instead of from Kubernetes.</p>
-<h1 id="association">Association</h1>
-<p>This is an Azure resource. It lives in the VNet and handles TLS and makes the connections to and from the pods and frontend IP. This is the data path.</p>
-<h1 id="support">Support</h1>
-<p>Azure CNI. Does not support kubenet or Azure CNI overlay yet, but it will support in the future.</p>
-<h1 id="backend">Backend</h1>
-<h2 id="links">Links:</h2>
-<p>202309301009</p>
 ]]></content:encoded>
     </item>
     
