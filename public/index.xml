@@ -21,6 +21,20 @@ I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</descr
 <p>I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</p>
 <p>The gateway will function as the main portal to the internet and the WiFi access point. The switch will be located in my pantry where all the devices for my homelab are currently.</p>
 <p><img loading="lazy" src="/homelab-network.png" type="" alt=""  /></p>
+<h1 id="naming-strategy">Naming Strategy</h1>
+<p>I&rsquo;m also going to have some fun with the naming strategy. I love Nordic mythology so I picked that as a theme.</p>
+<h2 id="network-name">Network Name:</h2>
+<ul>
+<li><strong>AsgardNet</strong>: A reference to the home of the gods in Norse mythology, symbolizing a powerful and central network.</li>
+</ul>
+<h3 id="vlan-naming-strategy">VLAN Naming Strategy:</h3>
+<ol>
+<li><strong>Production Kubernetes Cluster</strong>: <code>Valhalla</code> - Named after the majestic hall where heroes reside, representing the strength and importance of the production environment.</li>
+<li><strong>Staging Kubernetes Cluster</strong>: <code>Midgard</code> - Midgard, the world of humans in Norse mythology, can symbolize a testing ground that&rsquo;s closer to the &lsquo;real world&rsquo; scenarios.</li>
+<li><strong>Main VLAN (Work &amp; Personal Devices)</strong>: <code>Yggdrasil</code> - Named after the great tree that connects all the worlds, symbolizing the connectivity and central role of this VLAN in the network.</li>
+<li><strong>IoT VLAN</strong>: <code>Niflheim</code> - The realm of fog and mist, a metaphor for the mysterious and ubiquitous nature of IoT devices.</li>
+<li><strong>Guest Network VLAN</strong>: <code>Folkvangr</code> - Folkvangr, where the goddess Freya hosts half of those who die in battle, signifying a place for visitors.</li>
+</ol>
 <h2 id="links">Links:</h2>
 <p>202401130601</p>
 ]]></content:encoded>
