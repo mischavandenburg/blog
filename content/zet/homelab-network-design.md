@@ -15,7 +15,7 @@ I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.
 
 The gateway will function as the main portal to the internet and the WiFi access point. The switch will be located in my pantry where all the devices for my homelab are currently.
 
-![](/homelab-network.png)
+![](/home-network-design.png)
 
 
 # Naming Strategy
@@ -35,6 +35,16 @@ I'm also going to have some fun with the naming strategy. I love Nordic mytholog
 5. **Guest Network VLAN**: `Jotunheim` - Inspired by the realm of giants in Norse mythology, this guest network embodies the vastness and mystery of Jotunheim. It's a separate, secure space for visitors, representing the outer layers of my realm.
 
 ![](/jotunheim.png)
+
+## Why UniFi?
+
+* a colleague of mine has it and is very satisfied with it
+* saw a few videos of Techno Tim and was very impressed by his setup
+* looks like a very easy way to manage the network
+* provides insight into traffic flow
+* beautiful dashboard and UI
+* I like ecosystems with good documentation
+* allows expanding within the same ecosystem
 
 ## Links:
 
