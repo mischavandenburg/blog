@@ -2,31 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mischavandenburg.com/tags/cilium/</loc>
+    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/</loc>
+    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
+    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/cilium-network-policies/</loc>
+    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/networking/</loc>
+    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/zet/homelab-network-design/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/excalidraw/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/homelab/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/networking/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/application-gateway-for-containers/</loc>
