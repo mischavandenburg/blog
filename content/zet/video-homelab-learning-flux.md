@@ -1,12 +1,16 @@
 ---
 title: "Video: Learning Flux and Installing To Homelab"
-date: 2023-12-26
+date: 2024-01-17
 tags:
 - Flux
 - Kubernetes
 - Homelab
-draft: true
+- GitOps
+- Colearning
+- Study
 ---
+
+{{< youtube BtuqzsyztBc >}}
 
 In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.
 
@@ -63,5 +67,5 @@ https://github.com/fluxcd/flux2-kustomize-helm-example
 
 https://kubernetes.io/docs/concepts/architecture/controller/
 
-
+https://youtu.be/BtuqzsyztBc
 

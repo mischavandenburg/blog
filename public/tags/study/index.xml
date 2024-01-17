@@ -6,7 +6,84 @@
     <description>Recent content in Study on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: Learning Flux and Installing To Homelab</title>
+      <link>https://mischavandenburg.com/zet/video-homelab-learning-flux/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-homelab-learning-flux/</guid>
+      <description>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/BtuqzsyztBc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</p>
+<p>Notes:</p>
+<ul>
+<li>
+<p>kustomization resources live in the cluster</p>
+</li>
+<li>
+<p>source resources also live in the cluster</p>
+</li>
+<li>
+<p>To suspend updates for a kustomization, run the command flux suspend kustomization <!-- raw HTML omitted -->.</p>
+</li>
+<li>
+<p>To resume updates run the command flux resume kustomization <!-- raw HTML omitted -->.</p>
+</li>
+<li>
+<p>use <code>flux reconcile source git podinfo</code> to force a sync, nn waiting</p>
+</li>
+<li>
+<p>love the fact that helm releases are still accessible and visible on the cluster</p>
+</li>
+<li>
+<p>flux is just managing helm for you based on code</p>
+</li>
+<li>
+<p>love the fact that weave dashboard is also part of the cluster manifests</p>
+</li>
+<li>
+<p>learned about Kubernetes controllers</p>
+</li>
+<li>
+<p>an operator is a controller</p>
+</li>
+<li>
+<p>basically everything that enables CRD&rsquo;s to run is a controller</p>
+</li>
+</ul>
+<p>&ldquo;A kubernetes controller is a control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state&rdquo;</p>
+<h2 id="sources">Sources</h2>
+<blockquote>
+<p>A Source defines the origin of a repository containing the desired state of the system and the requirements to obtain it (e.g. credentials, version selectors). For example, the latest 1.x tag available from a Git repository over SSH.</p>
+</blockquote>
+<blockquote>
+<p>All sources are specified as Custom Resources in a Kubernetes cluster, examples of sources are GitRepository, OCIRepository, HelmRepository and Bucket resources.</p>
+</blockquote>
+<p><a href="https://fluxcd.io/flux/concepts/#sources">https://fluxcd.io/flux/concepts/#sources</a></p>
+<h2 id="weave-ui">Weave UI</h2>
+<p>Follow this guide</p>
+<p><a href="https://docs.gitops.weave.works/docs/installation/weave-gitops/">https://docs.gitops.weave.works/docs/installation/weave-gitops/</a></p>
+<ul>
+<li>sources are located in the clusters directory in a monorepo structure</li>
+</ul>
+<h2 id="repo">Repo</h2>
+<p>Decided to fully commit to Flux and their practices.</p>
+<p>Set up the repo according to this guide:</p>
+<p><a href="https://fluxcd.io/flux/guides/repository-structure/">https://fluxcd.io/flux/guides/repository-structure/</a></p>
+<p>And following this example:</p>
+<p><a href="https://github.com/fluxcd/flux2-kustomize-helm-example">https://github.com/fluxcd/flux2-kustomize-helm-example</a></p>
+<h2 id="links">Links:</h2>
+<p>202312261612</p>
+<p><a href="https://kubernetes.io/docs/concepts/architecture/controller/">https://kubernetes.io/docs/concepts/architecture/controller/</a></p>
+<p><a href="https://youtu.be/BtuqzsyztBc">https://youtu.be/BtuqzsyztBc</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>AZ-700 Notes - Virtual WAN</title>
       <link>https://mischavandenburg.com/zet/az-700-virtual-wan/</link>

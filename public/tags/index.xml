@@ -6,13 +6,43 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cilium</title>
-      <link>https://mischavandenburg.com/tags/cilium/</link>
-      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <title>Colearning</title>
+      <link>https://mischavandenburg.com/tags/colearning/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://mischavandenburg.com/tags/cilium/</guid>
+      <guid>https://mischavandenburg.com/tags/colearning/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Flux</title>
+      <link>https://mischavandenburg.com/tags/flux/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/flux/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>GitOps</title>
+      <link>https://mischavandenburg.com/tags/gitops/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/gitops/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Homelab</title>
+      <link>https://mischavandenburg.com/tags/homelab/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/homelab/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -20,9 +50,29 @@
     <item>
       <title>Kubernetes</title>
       <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Study</title>
+      <link>https://mischavandenburg.com/tags/study/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/study/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Cilium</title>
+      <link>https://mischavandenburg.com/tags/cilium/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/cilium/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -43,16 +93,6 @@
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/excalidraw/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Homelab</title>
-      <link>https://mischavandenburg.com/tags/homelab/</link>
-      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/homelab/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -133,26 +173,6 @@
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/aks/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Flux</title>
-      <link>https://mischavandenburg.com/tags/flux/</link>
-      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/flux/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>GitOps</title>
-      <link>https://mischavandenburg.com/tags/gitops/</link>
-      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/gitops/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -273,16 +293,6 @@
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/weeknotes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Study</title>
-      <link>https://mischavandenburg.com/tags/study/</link>
-      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/study/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
