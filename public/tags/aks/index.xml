@@ -6,7 +6,39 @@
     <description>Recent content in AKS on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/aks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/aks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PersistentVolumeClaims Lifecycle in Kubernetes</title>
+      <link>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</guid>
+      <description>I always thought that Persistent Volume Claims where deleted when you delete the pod which they are associated with. I was wrong. The lifecycle of PVCs is independent of Pods, and their behavior is largely governed by the Reclaim Policy set on the PVs. Here&amp;rsquo;s what you need to know:
+PVCs: These are requests for storage, akin to how Pods request resources like CPU and memory. They exist independently and can be bound to Pods when needed.</description>
+      <content:encoded><![CDATA[<p>I always thought that Persistent Volume Claims where deleted when you delete the pod which they are associated with. I was wrong. The lifecycle of PVCs is independent of Pods, and their behavior is largely governed by the Reclaim Policy set on the PVs. Here&rsquo;s what you need to know:</p>
+<ul>
+<li><strong>PVCs</strong>: These are requests for storage, akin to how Pods request resources like CPU and memory. They exist independently and can be bound to Pods when needed.</li>
+<li><strong>PVs</strong>: Provisioned by administrators or dynamically through Storage Classes, PVs provide the actual storage resources. Their lifecycle is not tied to any specific Pod.</li>
+</ul>
+<h1 id="understanding-reclaim-policies">Understanding Reclaim Policies</h1>
+<p>The Reclaim Policy on a PV dictates its fate after a PVC is released. There are three policies to be aware of:</p>
+<ol>
+<li><strong>Delete</strong>: The PV and its underlying storage are deleted when the PVC is deleted. Importantly, if the PVC is not deleted, the PV remains.</li>
+<li><strong>Retain</strong>: When a PVC is deleted, the PV is not. Instead, it transitions to a <code>Released</code> state, but the data remains intact until manually deleted or repurposed.</li>
+<li><strong>Recycle (Deprecated)</strong>: The volume is scrubbed clean and made available for a new claim. Note: this policy is no longer recommended.</li>
+</ol>
+<h1 id="practical-implications">Practical Implications</h1>
+<ul>
+<li>PVCs won&rsquo;t cause PV deletion unless they themselves are deleted. This is crucial to understand, especially with a <code>Delete</code> Reclaim Policy, as it leads to the deletion of both the PV and the underlying storage, resulting in data loss.</li>
+<li>Carefully manage PVCs, especially in production environments. Ensure you have backups and fully understand the implications of deleting PVCs, especially when using a <code>Delete</code> Reclaim Policy.</li>
+</ul>
+<h2 id="links">Links:</h2>
+<p>202401180901</p>
+<p>[[kubernetes]]</p>
+<p>[[storage]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Homelab Secret Management With GitOps and Azure Key Vault</title>
       <link>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</link>
