@@ -6,7 +6,30 @@
     <description>Recent content in Coding on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video: My Entire Neovim &#43; Tmux Workflow As A DevOps Engineer On MacOS</title>
+      <link>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</guid>
+      <description>I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.</description>
+      <content:encoded><![CDATA[
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/iagjeLuxnMs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>I&rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&rsquo;m excited that I can finally share it with you.</p>
+<p>My workflow is completely based on the command line.
+I therefore have very little programs or tools running on the graphical side of the OS, whether it be MacOS or Linux. All I need is the terminal and a web browser, but a window manager is a big bonus to my productivity.</p>
+<p>My main philosophy is to have a minimalistic workflow which uses very little resources. It should be a distraction-free,
+keyboard centered and efficient environment to do my best work.</p>
+<h2 id="links">Links:</h2>
+<p>202401211901</p>
+<p><a href="https://youtu.be/iagjeLuxnMs">https://youtu.be/iagjeLuxnMs</a></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Wrote A Go Program That Posts To Mastodon</title>
       <link>https://mischavandenburg.com/zet/go-mastodon-post/</link>

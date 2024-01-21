@@ -22,5 +22,5 @@ draft: true
 202304271204
 
 [[productivity]]
-[[youtube channel]]
+[[youtube-channel]]
 
