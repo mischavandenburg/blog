@@ -6,21 +6,7 @@
     <description>Recent content in Home on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>A Test Title For My Blog Post</title>
-      <link>https://mischavandenburg.com/zet/test-for-video/</link>
-      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/test-for-video/</guid>
-      <description>This is my blog post
-Links: 202401231901</description>
-      <content:encoded><![CDATA[<p>This is my blog post</p>
-<h2 id="links">Links:</h2>
-<p>202401231901</p>
-]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Video: My Entire Neovim &#43; Tmux Workflow As A DevOps Engineer On MacOS</title>
       <link>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</link>
@@ -1046,32 +1032,6 @@ Links: 202311150711</description>
     </item>
     
     <item>
-      <title>2023 week 45</title>
-      <link>https://mischavandenburg.com/zet/2023-week-45/</link>
-      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-45/</guid>
-      <description>A very rainy week where I was feeling quite tired in the evenings. Highlight of the week was my first Magic: The Gathering pre-release event. I spent quite some time ramping up to it by watching videos to get familiar with the set&amp;rsquo;s mechanics. It took up quite some time but it was enjoyable to do and I was glad I went into the event prepared. I wrote a post with some details about my experience.</description>
-      <content:encoded><![CDATA[<p>A very rainy week where I was feeling quite tired in the evenings. Highlight of the week was <a href="/zet/mtg-first-prerelease-ixalan/">my first Magic: The Gathering pre-release event</a>. I spent quite some time ramping up to it by watching videos to get familiar with the set&rsquo;s mechanics. It took up quite some time but it was enjoyable to do and I was glad I went into the event prepared. I wrote a post with some details about my experience.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>Diet has trainwrecked and I&rsquo;ve been eating a lot of bread and peanut butter, snacks and havent&rsquo; been tracking calories. Next week it&rsquo;s time for a 6 day FMD again to reset.</p>
-<h2 id="learning">Learning</h2>
-<p>I did make some progress in the AZ700 course, now at 82.5% and getting into the last chapters. I think I want to do the exam on 27 november.</p>
-<p>Also getting into the new MTG set was quite a lot of new stuff to learn.</p>
-<h2 id="playing">Playing</h2>
-<p>Did the MTG event and steady grinding on MTG arena.</p>
-<h2 id="reading">Reading</h2>
-<p>Making good progress in Sword Song.</p>
-<h2 id="watching">Watching</h2>
-<p>Mostly been watching MTG related content to get familiar with the new set and I&rsquo;ve been enjoying Numot&rsquo;s streams of the early access he received to the set.</p>
-<h2 id="listening">Listening</h2>
-<p>No podcasts.</p>
-<h2 id="links">Links:</h2>
-<p>202311121011</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>I went to my first Magic The Gathering pre-release</title>
       <link>https://mischavandenburg.com/zet/mtg-first-prerelease-ixalan/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
@@ -1113,41 +1073,6 @@ Links: 202311081711</description>
     </item>
     
     <item>
-      <title>2023 week 44</title>
-      <link>https://mischavandenburg.com/zet/2023-week-44/</link>
-      <pubDate>Wed, 08 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-44/</guid>
-      <description>My Week Quite a busy week with a lot of social interactions and volunteer work that took up a chunk of time and energy.
-In the weekend I did my first MTG draft with friends which was a great experience.
-Exercise &amp;amp; Weight Loss Steadily doing 5k&amp;rsquo;s on minimal footwear. Holiday season is leading to an increase of eating foods which I should not be eating.
-Learning Making steady progress with my AZ-700 course.</description>
-      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
-<p>Quite a busy week with a lot of social interactions and volunteer work that took up a chunk of time and energy.</p>
-<p>In the weekend I did my first MTG draft with friends which was a great experience.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>Steadily doing 5k&rsquo;s on minimal footwear. Holiday season is leading to an increase of eating foods which I should not be eating.</p>
-<h2 id="learning">Learning</h2>
-<p>Making steady progress with my AZ-700 course. I&rsquo;m at 75% now and will be planning my exam soon.</p>
-<p>Also learning a lot at work. I wrote custom helm charts for Azure Metrics Exporter so we can deploy it with akv2k8s secrets, and I&rsquo;m digging in to the NGINX Ingress Controller because it needs updates due to new CVE&rsquo;s.</p>
-<h2 id="playing">Playing</h2>
-<p>Steady grinding on MTG Arena and did my first paper draft with friends. It was a great experience and I was glad that I took the time to prepare myself in the past few weeks by studying drafting, watching draft guides and doing a few drafts online.</p>
-<p>I won 7 games and lost 6 which is actually much better than I expected because these guys have been playing this game for a very long time.</p>
-<p>Next week I&rsquo;ll be participating in my first prerelease event.</p>
-<h2 id="reading">Reading</h2>
-<p>Finished the Lords of the North and now continuing into Sword Song. I&rsquo;m reading at least an hour a day and I look forward to it every day, it is such an amazingly engaging story.</p>
-<h2 id="watching">Watching</h2>
-<p>Watching draft guides and MTG content about the upcoming set release of Lost Caverns of Ixalan.</p>
-<p>I got a channel tip from a friend at the draft: NumotTheNummy. I&rsquo;m learning a lot by watching his drafts and he uploads consistently so I think I&rsquo;ll follow him for a while to see how he approaches the new set.</p>
-<h2 id="listening">Listening</h2>
-<p>Not listening to any podcasts lately.</p>
-<h2 id="links">Links:</h2>
-<p>202311080511</p>
-<p>[[weeknotes]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Getting A Secret from an Azure Key Vault From The Command Line</title>
       <link>https://mischavandenburg.com/zet/list-azure-key-vault-secret/</link>
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
@@ -1166,39 +1091,6 @@ kvname=kv-vo-rea-prd-weu-001 secretname=worker-ad-client-secret az keyvault secr
 </span></span></code></pre></div><h2 id="links">Links:</h2>
 <p>202310312010</p>
 <p>[[azure]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 43</title>
-      <link>https://mischavandenburg.com/zet/2023-week-43/</link>
-      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-43/</guid>
-      <description>My Week Autumn has come to Holland and I&amp;rsquo;m really enjoying it. I had a good week at work finishing up the last cluster upgrades and I wrote my first helm charts to deploy monitoring with custom secrets.
-I&amp;rsquo;m meditating every morning. My mind is buzzing with all of the new activities that I&amp;rsquo;m doing and the new things I&amp;rsquo;m learning at work, but that is all part of life. The point in meditation is not to force your mind to be calm.</description>
-      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
-<p>Autumn has come to Holland and I&rsquo;m really enjoying it. I had a good week at work finishing up the last cluster upgrades and I wrote my first helm charts to deploy monitoring with custom secrets.</p>
-<p>I&rsquo;m meditating every morning. My mind is buzzing with all of the new activities that I&rsquo;m doing and the new things I&rsquo;m learning at work, but that is all part of life. The point in meditation is not to force your mind to be calm. Rather, it is embracing your mind state with awareness and allowing everything to be. Calm, not calm, active, not active, it&rsquo;s like this. Just noticing and being mindful of the mind states as they come and go, rather than wishing that it should be calm.</p>
-<p>Had Friday Night Magic with my brother and two friends and I had a good time. I notice that it is giving me energy.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I did a 5 day Fasting Mimicking Diet eating 800 calories a day. Now that I finished it I feel leaner and the body feels clean. I should do this more often. The hunger was actually not too bad this time around, dr. Longo mentions in his book that the hunger gets less when you get experience with it.</p>
-<p>I went from 82.08 to 80.62 (after refeeding) so I think I&rsquo;m down 1kg.</p>
-<p>I did take a break from running during my fasting week and now I look forward to go for my first run again.</p>
-<h3 id="learning">Learning</h3>
-<p>Doing about 30 minutes of AZ-700 studies on the days I don&rsquo;t have other engagements.</p>
-<p>Did 60 minutes on Saturday and 60 minutes on Sunday.</p>
-<h3 id="reading">Reading</h3>
-<p>Finished The Pale Horseman and continuing the series with The Lords of the North. After hiding in the swamp for a few weeks, King Alfred assembled the fyrd (the army of peasants) and managed to drive off the Danes. Even though the Danes outnumbered them they fled, and it is not clear to me why, because the Danes were occupying a fort of the old people.</p>
-<p>I read these books years ago and now that I&rsquo;m re-reading them the tale is even more exciting and gripping. Cornwell is a fantastic author and I really enjoy his writing and character development.</p>
-<h3 id="watching">Watching</h3>
-<p>Watched the Lost Caverns of Ixalan preview videos and I like the new set&rsquo;s mechanics. I think it will be a fun one to play, I love the exploring theme. Not into dinosaurs very much but they might be fun to play with.</p>
-<h3 id="playing">Playing</h3>
-<p>Grinding MTG Arena, still playing the mono-red burn deck. It is a hit and miss but it is really fun when it works out. I&rsquo;m itching to play another deck and I think I might craft a mono blue tempo.</p>
-<h3 id="listening">Listening</h3>
-<p>Haven&rsquo;t been listening to any podcasts.</p>
-<h2 id="links">Links:</h2>
-<p>202310291810</p>
 ]]></content:encoded>
     </item>
     
@@ -1447,40 +1339,6 @@ The Plantpower Way - Rich Roll</description>
     </item>
     
     <item>
-      <title>2023 week 42</title>
-      <link>https://mischavandenburg.com/zet/2023-week-42/</link>
-      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-42/</guid>
-      <description>My Week It has been a good and active week. Tuesday I went to my friend&amp;rsquo;s place to do my first evening of Magic: The Gathering. We were four guys and they all have been playing magic for many years, so it was impressive to see their playing speed and the complexity of their decks. I learned a lot and had a good time.
-Doing interesting things at work, upgrading clusters with databases running on them provides lots of challenges but I managed to figure it all out and I did a few successful production upgrades this week.</description>
-      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
-<p>It has been a good and active week. Tuesday I went to my friend&rsquo;s place to do my first evening of Magic: The Gathering. We were four guys and they all have been playing magic for many years, so it was impressive to see their playing speed and the complexity of their decks. I learned a lot and had a good time.</p>
-<p>Doing interesting things at work, upgrading clusters with databases running on them provides lots of challenges but I managed to figure it all out and I did a few successful production upgrades this week. I&rsquo;m starting to get into the groove with my new assignment.</p>
-<p>In the weekend I went out in Amsterdam with friends to have dinner at Troost and on Sunday I played magic with my brother.</p>
-<p>All in all I am being much more socially active than I&rsquo;m used to but I&rsquo;m surprised that my energy levels are not being drained that much. I think it&rsquo;s because playing Magic gives me energy because it stimulates my brain and forces me to think strategically</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>Running 5km daily again on the minimalist shoes and it feels great. No pains or injuries so far so I think I can say I&rsquo;m successfully transitioned and now I can start slowly to build up to 15km again.</p>
-<p>My diet has degraded over the past few weeks due to stress of the new assignment and I&rsquo;m not eating as much healthy fresh leafy greens but eating a lot of bread instead.</p>
-<p>Now the season has turned, the weather is getting cold and wet so it will be good to do a 5 day cleansing fast where I&rsquo;ll eat 800 calories a day (Fasting Mimicking Diet).</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Making good progress in The Pale Horseman. The Danes have attacked Wessex and king Alfred has fled into the marshes near the Saefern Sea where Uthred is protecting him. They are building up a fort and rebuilding an army because Alfred wants to strike before the Danes receive reinforcements from abroad.</p>
-<h3 id="watching">Watching</h3>
-<p>Watched the MTG Standard Final match while looking at the contender&rsquo;s decks lists and I was surprised that I could understand most of what was going on.</p>
-<h3 id="playing">Playing</h3>
-<p>Grinding daily wins and daily quests on MTG Arena. I have about 25k gold and 4k gems now.</p>
-<p>Did my first Quick Draft and won 3 games before I lost three times, so it was not bad at all. I ended up making a funny little rat deck because black was not being picked by the others.</p>
-<h3 id="listening">Listening</h3>
-<p>Listened to this podcast with Neri Oxman. Some very though provoking ideas of linking nature with AI and giving it access to our computing power and bandwith.</p>
-<p><a href="https://youtu.be/XbPHojL_61U?si=Zl7RjdbGtW-FXTJG">https://youtu.be/XbPHojL_61U?si=Zl7RjdbGtW-FXTJG</a></p>
-<h2 id="links">Links:</h2>
-<p>202310230710</p>
-<p>[[weeknotes]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Some notes on upgrading AKS clusters running EnterpriseDB</title>
       <link>https://mischavandenburg.com/zet/edb-cluster-notes/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
@@ -1516,34 +1374,6 @@ cnp is a kubectl plugin which you need to install to manage the EDB operator --r
 <h2 id="links">Links:</h2>
 <p>202310171410</p>
 <p>[[kubernetes]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 41</title>
-      <link>https://mischavandenburg.com/zet/2023-week-41/</link>
-      <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-41/</guid>
-      <description>The second week on my new assignment and now that I have my accounts and everything is up and running I can start being productive. I took up a story to upgrade all the AKS clusters to the latest version and it is posing all sorts of interesting challenges.
-I&amp;rsquo;m tempted to just work non stop because it is interesting but I&amp;rsquo;m trying to stop myself and do something else instead.</description>
-      <content:encoded><![CDATA[<p>The second week on my new assignment and now that I have my accounts and everything is up and running I can start being productive. I took up a story to upgrade all the AKS clusters to the latest version and it is posing all sorts of interesting challenges.</p>
-<p>I&rsquo;m tempted to just work non stop because it is interesting but I&rsquo;m trying to stop myself and do something else instead.</p>
-<p>I&rsquo;m playing MTG: Arena almost every day now for about an hour to grind out the daily quests and I&rsquo;m getting a lot of enjoyment out of it.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>The transition to minimalist footwear is going strong, did 5 runs of about 4.7km without any problems so I can bump it up to daily 5k&rsquo;s again next week.</p>
-<p>I&rsquo;m also slowly but consistently losing weight again.  I was 83kg when I came back from holiday and I averaged 81,15 this week.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Finished the Last Kingdom and progressed into The Pale Horseman. The tale is just as gripping as the first time I read it and I look forward to going to bed every night and reading about Uthred&rsquo;s adventures.</p>
-<h3 id="watching">Watching</h3>
-<p>Watching quite a lot of MTG Arena content. 4-11 I have my first IRL drafting event so I&rsquo;m trying to prepare by learning the basics of limited play and drafting, and studying the current Wilds of Enraine set.</p>
-<h3 id="listening">Listening</h3>
-<p>Listened to this podcast episode with [Lex Fridman](<a href="https://www.linkedin.com/in">https://www.linkedin.com/in</a> ACoAAAB0ur4B2dLbFAHKCLO0VHtal_ilBhaBFxM) and Mark Zuckerberg.</p>
-<p>After 2 minutes I realised I had to see the video and I was amazed by how far VR technology has come. Although I&rsquo;m not a particularly big fan of VR yet, I can appreciate its value and it will be interesting to see further development. Mark has undergone a lot of ridicule and criticism for the change to Meta and his persistence on the Metaverse despite declining revenue, but as you can see in the YouTube comments on the episode, people now think it is promising.</p>
-<p><a href="https://youtu.be/MVYrJJNdrEg?si=IrqgVPSe_KbCZUSN">https://youtu.be/MVYrJJNdrEg?si=IrqgVPSe_KbCZUSN</a></p>
-<h2 id="links">Links:</h2>
-<p>202310160710</p>
 ]]></content:encoded>
     </item>
     
@@ -1713,32 +1543,6 @@ spec:
 </code></pre><h2 id="links">Links:</h2>
 <p>202310121310</p>
 <p>[[kubernetes]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 40</title>
-      <link>https://mischavandenburg.com/zet/2023-week-40/</link>
-      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-40/</guid>
-      <description>Missed a few weeknotes due to holidays but today I felt like writing one again.
-I started a new consultancy gig at Van Oord this week. They gave me a warm welcome and after a few days of setting everything up and waiting for some accounts I look forward to get productive next monday. I&amp;rsquo;ll be working in an Azure environment with Kubernetes clusters that need some love and there will be much room to develop my skillset while making contributions to the company.</description>
-      <content:encoded><![CDATA[<p>Missed a few weeknotes due to holidays but today I felt like writing one again.</p>
-<p>I started a new consultancy gig at Van Oord this week. They gave me a warm welcome and after a few days of setting everything up and waiting for some accounts I look forward to get productive next monday. I&rsquo;ll be working in an Azure environment with Kubernetes clusters that need some love and there will be much room to develop my skillset while making contributions to the company.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>After transitioning to barefoot shoes I&rsquo;m now running 4km about 3-4 times a week. My achilles tendons hurt a bit but otherwise the transition is going well.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>I abaondoned the Polity series and sci-fi project for know and started re-reading The Last Kingdom series instead. I love reading about Uthred and his adventures in England around 860AD. It&rsquo;s been years since I&rsquo;ve read them and I&rsquo;ve forgotton most of the story. I find myself particulary interested by King Alfred the Great.</p>
-<h3 id="gaming">Gaming</h3>
-<p>Last week I met an old friend and he showed me the Magic The Gathering collection that he amassed over the years. I used to play when I was a kid and it spawned a wave of nostalgia. He invited me to some tabletop / magic game nights that he regularly does with his friends which was very kind of him. It&rsquo;s something I&rsquo;ve always wanted to discover but I never found the right group.</p>
-<p>When I came home I started searching the internet about MTG and I discovered MTG Arena and I&rsquo;ve been re-learning the game and it has been quite fun.</p>
-<p>This Sunday I still felt very tired from the first week at the new workplace. It&rsquo;s always a lot of stimualtion and impulses to process for me and I forced myself to do absolutely nothing this weekend. So this sunday I played MTG Arena all day and now that I&rsquo;m writing these weeknotes on sunday evening I feel very calm, relaxed and recharged, ready for the new work week.</p>
-<h3 id="listening">Listening</h3>
-<p>Listening to Tyr a lot.</p>
-<h2 id="links">Links:</h2>
-<p>202310082110</p>
 ]]></content:encoded>
     </item>
     
@@ -2112,110 +1916,6 @@ Now it&amp;rsquo;s time for lots of fresh air, mountains, many kilometres on the
     </item>
     
     <item>
-      <title>2023 week 33</title>
-      <link>https://mischavandenburg.com/zet/2023-week-33/</link>
-      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-33/</guid>
-      <description>My Week The last full week until my holiday! All week I&amp;rsquo;ve been busy with preparations in the evenings.
-Exercise &amp;amp; Weight Loss I&amp;rsquo;m transitioning my running into barefoot running. The Norway trip will be an upheaval of the routine anyway so it is a good moment to start. Been doing walks in minimal footwear for over a week now and on Sunday I did my first barefoot run/walk. Calves are on fire!</description>
-      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
-<p>The last full week until my holiday! All week I&rsquo;ve been busy with preparations in the evenings.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I&rsquo;m transitioning my running into barefoot running. The Norway trip will be an upheaval of the routine anyway so it is a good moment to start. Been doing walks in minimal footwear for over a week now and on Sunday I did my first barefoot run/walk. Calves are on fire!</p>
-<p>I also ordered a 16kg kettlebell and set up a pull up bar to incorporate some more strength work into my exercise routine. Starting fully after the holiday.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Almost finished reading Born To Run and been dipping into The Longevity Diet a few times too</p>
-<h3 id="watching">Watching</h3>
-<p>Mostly watching barefoot runnning related content. Also watching some content related to functional strenght training. Favourite channels are Strenght Side and the Bioneer.</p>
-<h3 id="listening">Listening</h3>
-<p>SECRETS From The Lost Tribe of Barefoot Runners: Christopher McDougall &amp; Eric Orton</p>
-<p><a href="https://www.youtube.com/watch?v=cCfs7rLZeSk">https://www.youtube.com/watch?v=cCfs7rLZeSk</a></p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Thursday: HOLIDAY!</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202308210708</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 32</title>
-      <link>https://mischavandenburg.com/zet/2023-week-32/</link>
-      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-32/</guid>
-      <description>One week closer to my Norwegian Holiday Adventure and it&amp;rsquo;s noticable that it occupies my thoughts a lot, in a positive sense. I&amp;rsquo;ve felt very energetic all week, only sleeping 6 hours or less whereas I usually need 7-8 hours, but still feeling great. I&amp;rsquo;ve started to make big smoothies in the morning again with lots of raw veggies, leafy greens and fruits, and I think it is the right thing for my body right now.</description>
-      <content:encoded><![CDATA[<p>One week closer to my Norwegian Holiday Adventure and it&rsquo;s noticable that it occupies my thoughts a lot, in a positive sense. I&rsquo;ve felt very energetic all week, only sleeping 6 hours or less whereas I usually need 7-8 hours, but still feeling great. I&rsquo;ve started to make big smoothies in the morning again with lots of raw veggies, leafy greens and fruits, and I think it is the right thing for my body right now. Running also went well, I ran 15km in 1 hour 40 minutes in the coastal woods. It started raining very heavily about halfway through the run and it was an amazing experience to feel the forest soak up the rain as I ran through.</p>
-<p>I&rsquo;m making significant breakthroughs in my personal practice. I&rsquo;m starting an approach of intuitive eating and listening to hunger signals which has been quite liberating and beneficial so far. I&rsquo;m curious to see where this will take me.</p>
-<p>Another very positive thing this week is that my meditation practice has increased significantly all by itself. It is related to the sleep as well. Either I meditate more because I sleep less, or I sleep less because I meditate. Meditation can be incredibly restorative and I&rsquo;ve had periods in the past where I slept only 4,5 hours a day when the meditation was going well. This week i&rsquo;ve been sitting 1-3 hours a day and it feels great. Waking up feeling you <strong>need</strong> to meditate is such a lovely experience.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Making progress in Born to Run. Haven&rsquo;t read any sci-fi.</p>
-<p>Also scanned through &ldquo;The PlantPower Way&rdquo; by Rich Roll and &ldquo;The Longevity Diet&rdquo; by Dr. Longo</p>
-<p>Very interesting material that I look forward to explore further in the coming weeks.</p>
-<h3 id="watching">Watching</h3>
-<p>Watching a lot of barefoot running content. I had a stint of barefoot running several years ago but I miss it a lot and I want to get back into it.</p>
-<h3 id="listening">Listening</h3>
-<p>Listened to some very inspirational podcasts by Tony Riddle on the Rich Roll podcast</p>
-<p><a href="https://www.richroll.com/podcast/tony-riddle-717/">https://www.richroll.com/podcast/tony-riddle-717/</a></p>
-<p><a href="https://www.richroll.com/podcast/tony-riddle-463/">https://www.richroll.com/podcast/tony-riddle-463/</a></p>
-<p>These came just at the right time. I think my Norwegian holiday will be the perfect time to start rewilding again. In Norway I was very much connected with Nature, always out and about and often walking barefoot in the forests.</p>
-<p>I lost touch with that side of my after I moved back to the Netherlands because I focused so hard on my IT career. Now that my career is on track, I want to move my life in a more natural direction again.</p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Finish all Norwegian holiday preparations</li>
-<li><input disabled="" type="checkbox"> Hang several times a day</li>
-<li><input disabled="" type="checkbox"> Squat several times a day (resting squat)</li>
-<li><input disabled="" type="checkbox"> Take mindful walks in minimalist footwear</li>
-<li><input disabled="" type="checkbox"> Keep meditation quantity up</li>
-<li><input disabled="" type="checkbox"> Run 5 times, 16km on Saturday</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202308130908</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 31</title>
-      <link>https://mischavandenburg.com/zet/2023-week-31/</link>
-      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-31/</guid>
-      <description>My Week This week has been a lot calmer. Spending my evenings watching Norwegian nature programmes which inspire me for my upcoming holidays. Some good developments in my private life.
-I&amp;rsquo;m meditating more and doing more yoga as well.
-Exercise &amp;amp; Weight Loss I&amp;rsquo;m not bringing my phone on my runs and it feels nice to have that period in the morning with a clean mind and not looking at any notifications.</description>
-      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
-<p>This week has been a lot calmer. Spending my evenings watching Norwegian nature programmes which inspire me for my upcoming holidays. Some good developments in my private life.</p>
-<p>I&rsquo;m meditating more and doing more yoga as well.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I&rsquo;m not bringing my phone on my runs and it feels nice to have that period in the morning with a clean mind and not looking at any notifications.</p>
-<p>I ran 14 kilometres on Sunday, another record. And I felt like I could have kept going too.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Finished reading Eat and Run, started reading Born to Run.</p>
-<h3 id="watching">Watching</h3>
-<p>Still enjoying Norwegian nature programmes.</p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> 5 runs</li>
-<li><input disabled="" type="checkbox"> 100 minute long run</li>
-<li><input disabled="" type="checkbox"> Daily yoga and meditation</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202308081708</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Podcast Notes: An Interview With A Vegan 100 Year Old Who Ran Marathons In His Nineties</title>
       <link>https://mischavandenburg.com/zet/podcast-interview-100-year-old-vegan-marathoner/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
@@ -2350,40 +2050,6 @@ Test driven software development is a software development practice that involve
     </item>
     
     <item>
-      <title>2023 week 30</title>
-      <link>https://mischavandenburg.com/zet/2023-week-30/</link>
-      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-30/</guid>
-      <description>It&amp;rsquo;s been a calmer week. Work has been busy, but I&amp;rsquo;m taking my time to relax in the evenings. I notice it is time to take a break from work. My holidays are aproaching: in three weeks I&amp;rsquo;ll have three weeks off. So I&amp;rsquo;m intentionally winding down the productivity.
-I hardly ever watch series. I don&amp;rsquo;t have a TV. But to get into the mood for my Norway trip, I&amp;rsquo;m watching some shows I used to watch when I lived in Norway.</description>
-      <content:encoded><![CDATA[<p>It&rsquo;s been a calmer week. Work has been busy, but I&rsquo;m taking my time to relax in the evenings. I notice it is time to take a break from work. My holidays are aproaching: in three weeks I&rsquo;ll have three weeks off. So I&rsquo;m intentionally winding down the productivity.</p>
-<p>I hardly ever watch series. I don&rsquo;t have a TV. But to get into the mood for my Norway trip, I&rsquo;m watching some shows I used to watch when I lived in Norway. It is very relaxing to just do nothing in the evenings afer work, instead of studying or creating content.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I set a 5k PR this week, and on Saturday I had a great long run. I drove to the coastal area and ran 13km in 82 minutes, 1km farther than last week. Amazing to think that I&rsquo;ve built up the endurance to run almost one and a half hour straight!</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Making progress in Eat and Run, haven&rsquo;t read Gridlinked this week.</p>
-<h3 id="watching">Watching</h3>
-<p>Watching the Norwegian shows &ldquo;Der Ingen Skulle Tru at Nokon Kunne Bu&rdquo; and &ldquo;Med Monsen Pa Villspor&rdquo;.</p>
-<p>Very nostalgic to see this content again and it is really getting me excited for my upcoming Norway trip.</p>
-<h3 id="listening">Listening</h3>
-<p><a href="https://lexfridman.com/yuval-noah-harari/">https://lexfridman.com/yuval-noah-harari/</a></p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Don&rsquo;t look at phone until morning run is finished</li>
-<li><input disabled="" type="checkbox"> 5 runs</li>
-<li><input disabled="" type="checkbox"> 90 minute long run</li>
-<li><input disabled="" type="checkbox"> Daily yoga and meditation</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202307301607</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Video: Deploying MkDocs To Azure Using With Azure DevOps</title>
       <link>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
@@ -2419,66 +2085,6 @@ Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure
 21:30 Outro</p>
 <h2 id="links">Links:</h2>
 <p>202307281307</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 29</title>
-      <link>https://mischavandenburg.com/zet/2023-week-29/</link>
-      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-29/</guid>
-      <description>My Week It&amp;rsquo;s been a nice week. Work has been very busy again, there are no signs of things slowing down because of the summer holidays. I deployed an AKS cluster in the North Europe region for the first time for my team, which needed additional networking configuration and I&amp;rsquo;ve had to set up all the firewall rules for AKS deployments which was a task that I learned a lot from.</description>
-      <content:encoded><![CDATA[<h1 id="my-week">My Week</h1>
-<p>It&rsquo;s been a nice week. Work has been very busy again, there are no signs of things slowing down because of the summer holidays. I deployed an AKS cluster in the North Europe region for the first time for my team, which needed additional networking configuration and I&rsquo;ve had to set up all the firewall rules for AKS deployments which was a task that I learned a lot from.</p>
-<p>On Thursday I went to the office where I met Bjorn from Delegate to learn more about what they are doing in the Netherlands. There might be opportunities to work on international projects through Delegate which is an interesting prospect.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I&rsquo;ve done well on the running front. Ran 12K for the first time yesterday! [[running-record-12km]] A couple of weeks ago I wrote that I needed to bring more joy and motivation into the running again, and it is happening. After building my base back up with an emphasis on SPM, increasing it from 150 to 171SPM average, I&rsquo;m now reaching my distance limits and therefore able to make more progress again by increasing the weekly distance slightly every week. This sense of progression is addictive and makes me very motivated to keep on training like I&rsquo;m doing now.</p>
-<p>In terms of weight loss, I seem to have ended up on a maintenance plateau. I&rsquo;m hovering around 77kg and perhaps I&rsquo;ll stay here for now. I&rsquo;m focussing more on proper recovery for my running, and perhaps I should not force a caloric deficit right now. Also, I have my holidays coming up in a month, and it seems a bit of wasted effort to enter another weight loss sprint while I know that I&rsquo;ll probably start a new one after I return from my holidays.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>I&rsquo;m making steady progress on Gridlinked and enjoying the book a lot.</p>
-<p>When I don&rsquo;t feel like reading fiction I&rsquo;m still reading Eat and Run by Scott Jurek.</p>
-<h3 id="watching">Watching</h3>
-<p>I&rsquo;ve watched a lot more youtube content this week, especially in the weekend.</p>
-<p>A very inspiring interview with Eliud Kipchoge, the fastest marathon runner in the world. <a href="/zet/podcast-kipchoge-marathon-running/">My notes are here.</a></p>
-<p>Watched Satcha Nadella&rsquo;s full keynote from Microsoft inspire. Very interesting to observe that the entire keynote revolves around AI.</p>
-<p><a href="https://youtu.be/RhwVMt_XCUE">https://youtu.be/RhwVMt_XCUE</a></p>
-<p>PERFECT RUNNING FORM - Why Do PRO Runners Kick Their Feet So High?</p>
-<p><a href="https://www.youtube.com/watch?v=sIxAoC8P8zg">https://www.youtube.com/watch?v=sIxAoC8P8zg</a></p>
-<p>Essential Running Technique Tips for Proper Form &amp; How to Run Faster! | Sage Running</p>
-<p><a href="https://www.youtube.com/watch?v=3RlvKMxPMr0">https://www.youtube.com/watch?v=3RlvKMxPMr0</a></p>
-<h1 id="running-form-when-running-slow">Running form when running slow</h1>
-<p>Good vs Bad Running Form @ 10:00/mile (6:13/km)</p>
-<p><a href="https://youtu.be/ZxbZIvSWOZs">https://youtu.be/ZxbZIvSWOZs</a></p>
-<h1 id="perfect-running-form-demonstration">Perfect running form demonstration</h1>
-<p>first few minutes</p>
-<p><a href="https://www.youtube.com/watch?v=ZCARH83vZpw">https://www.youtube.com/watch?v=ZCARH83vZpw</a></p>
-<h3 id="listening">Listening</h3>
-<p>Ive listened to a bunch of podcasts.</p>
-<p>Lex Fridman with Mark Andreessen on the future of AI. <a href="/zet/podcast-fridman-andreessen-future-of-ai/">here are my notes</a></p>
-<p>George Hotz: Tiny Corp, Twitter, AI Safety
-<a href="https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000618818540">https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000618818540</a></p>
-<p>Sam Altman: OpenAI CEO on GPT4- ChatGPT
-<a href="https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000605876923">https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000605876923</a></p>
-<p>Max Tegmark: The Case for Halting AI Development
-<a href="https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000608828204">https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000608828204</a></p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<p>I have an office day on Tuesday and production maintenance windows on Wednesday and Thursday evening. Otherwise it seems like a fairly standard week and not very socially demanding.</p>
-<p>I&rsquo;m going to try something I picked up from the interview with Kipchoge: not looking at the phone or news until the morning run is finished. Wake up, have my run, and then connect with the world.</p>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Don&rsquo;t look at phone until morning run is finished</li>
-<li><input disabled="" type="checkbox"> 5 runs</li>
-<li><input disabled="" type="checkbox"> 75 minute long run</li>
-<li><input disabled="" type="checkbox"> 1 blog post, 1 video</li>
-<li><input disabled="" type="checkbox"> Daily yoga and meditation</li>
-<li><input disabled="" type="checkbox"> </li>
-<li><input disabled="" type="checkbox"> </li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202307240807</p>
 ]]></content:encoded>
     </item>
     
@@ -2679,48 +2285,6 @@ This morning it was time for my long run, and while I was drinking my coffee I d
     </item>
     
     <item>
-      <title>2023 week 28</title>
-      <link>https://mischavandenburg.com/zet/2023-week-28/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-28/</guid>
-      <description>It&amp;rsquo;s been a very busy week at work, but I&amp;rsquo;m doing interesting things. I&amp;rsquo;ve deployed a new Application Gateway from scratch, and I&amp;rsquo;m setting up new workloads from the bottom up. This means I have to set up the pipelines and write all the code for the required infrastructure such as virtual networks and private dns zones. When that is deployed I deploy a new AKS cluster for the workload which also involves quite a lot of steps because I need to make a bunch of network peerings and add new firewall rules.</description>
-      <content:encoded><![CDATA[<p>It&rsquo;s been a very busy week at work, but I&rsquo;m doing interesting things. I&rsquo;ve deployed a new Application Gateway from scratch, and I&rsquo;m setting up new workloads from the bottom up. This means I have to set up the pipelines and write all the code for the required infrastructure such as virtual networks and private dns zones. When that is deployed I deploy a new AKS cluster for the workload which also involves quite a lot of steps because I need to make a bunch of network peerings and add new firewall rules. But it&rsquo;s quite exciting work and it is fun to set things up from scratch.</p>
-<p>On Thursday I traveled to the Fullstaq office to attend an all-company meeting, where the leadership announced that we&rsquo;re becoming a part of <a href="https://www.thedigitalneighborhood.com/">The Digital Neighborhood</a>, which is an interesting development. I think it can lead to even more knowledge sharing and career opportunities within the group.</p>
-<p>On Friday I started expermenting with using ChatGPT and Azure OpenAI with my own data. I listened to an <a href="/zet/podcast-azure-openai/">interesting podcast</a> which inspired me to try out Azure OpenAI and build something myself.</p>
-<p>I created a fun project where I took the Collected Teachings of Ajahn Chah and fed it to my custom ChatGPT instance. I made <a href="/zet/video-azure-openai-chah-first-demo/">a video about the project.</a></p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I set a new 10K PR this Saturday and I&rsquo;ve been going out for my morning runs steadily this week.</p>
-<p>I&rsquo;m struggling a bit with the weight loss. On the company meeting there was tasty food being offered and I overate, and on Saturday I attended a meeting where there was junk food available and I ate some sugary treats and carbohydrate rich foods. This immediately led to poorer sleep as well, so it was a valuable lesson that it is always better to stick to the programme.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>I&rsquo;m making progress in Gridlinked. It is an interesting story so far and I&rsquo;m enjoying my relaxation time in the evenings by reading fiction again.</p>
-<h3 id="watching">Watching</h3>
-<p>Almost no YouTube watching this week, but on Friday I started to experiment with using ChatGPT with your own data.</p>
-<p><a href="https://youtu.be/9AXP7tCI9PI">https://youtu.be/9AXP7tCI9PI</a></p>
-<h3 id="listening">Listening</h3>
-<p>Working through this interesting conversation between Lex Fridman and Marc Andreessen</p>
-<p><a href="https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000617915020">https://podcasts.apple.com/nl/podcast/lex-fridman-podcast/id1434243584?i=1000617915020</a></p>
-<p><a href="/zet/podcast-azure-openai/">Azure OpenAi</a></p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
-<li><input disabled="" type="checkbox"> 65min long run</li>
-<li><input disabled="" type="checkbox"> Two morning runs of 6km+</li>
-<li><input disabled="" type="checkbox"> Full Blueprint adherence</li>
-<li><input disabled="" type="checkbox"> 1 video, 1 blog post</li>
-</ul>
-<ul>
-<li><input disabled="" type="checkbox"> Reduce perceived work stress</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202307160907</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>I used Azure OpenAI to create an AI model of my late meditation teacher</title>
       <link>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
@@ -2779,57 +2343,6 @@ I decided to use this service to create an AI model of my late meditation teache
 <p>The Open AI documentation: <a href="https://docs.openai.com/">https://docs.openai.com/</a></p>
 <h2 id="links">Links:</h2>
 <p>202307140707</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 27</title>
-      <link>https://mischavandenburg.com/zet/2023-week-27/</link>
-      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-27/</guid>
-      <description>I feel calmer now, because I didn&amp;rsquo;t have any meetups or social events this week. I&amp;rsquo;ve been less busy and had more time for meditation and yoga and I can notice the effects instantly. I&amp;rsquo;m feeling more relaxed and I allow myself more time for reading.
-On the other hand I&amp;rsquo;ve been quite productive on the content creation side. And to create the content, I experiment on my Lab subscription in Azure, which bring me a lot of learning and experience at the same time, so it is a great win-win situation.</description>
-      <content:encoded><![CDATA[<p>I feel calmer now, because I didn&rsquo;t have any meetups or social events this week. I&rsquo;ve been less busy and had more time for meditation and yoga and I can notice the effects instantly. I&rsquo;m feeling more relaxed and I allow myself more time for reading.</p>
-<p>On the other hand I&rsquo;ve been quite productive on the content creation side. And to create the content, I experiment on my Lab subscription in Azure, which bring me a lot of learning and experience at the same time, so it is a great win-win situation.</p>
-<p>I released a few YouTube videos and blog posts and I notice that it brings me energy. It feels good to be able to give something back to the community.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>Running is going well now. Increased my weekly distance with 4km for a total of 31,35km this week. Went for a 55m long run, 8,5km yesterday and felt good! I started reading &lsquo;Eat and Run&rsquo; and watching some motivational videos which helped me find more pleasure in running again.</p>
-<p>Weight has remained stable.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<h4 id="books">Books</h4>
-<p>I finished Finding Ultra and A Simple Path to Wealth. Some notes can be found <a href="/zet/book-notes-simple-path-to-wealth/">here</a>.</p>
-<p>Started reading &ldquo;Eat and Run&rdquo; by Jurek, another vegan ultrarunner. I&rsquo;m abot 30% in already and it is an inspiring story so far, with a lot of practical advice added in between.</p>
-<p>Also, I&rsquo;m branching out my fiction reading. I haven&rsquo;t been reading much fiction these past few years. I never read any science fiction but now I felt like exploring that world, especially around AI.</p>
-<p>After some Reddit searches I ended up with the Polity series by Neal Asher which received a lot of praise.</p>
-<p>I&rsquo;ve only started reading it but it is well written so far and I find myself getting into it and wanting to read more. Let&rsquo;s see where this goes!</p>
-<p><a href="https://www.reddit.com/r/sciencefiction/comments/11mylxr/sane_ai_in_science_fiction/">https://www.reddit.com/r/sciencefiction/comments/11mylxr/sane_ai_in_science_fiction/</a></p>
-<h4 id="articles">Articles</h4>
-<p>Some articles on the evolution of &ldquo;three meals a day&rdquo;, and discovered that the Romans usually ate only one meal a day:</p>
-<p><a href="https://www.bbc.com/news/magazine-20243692">https://www.bbc.com/news/magazine-20243692</a></p>
-<p><a href="https://www.smithsonianmag.com/smart-news/mostly-old-and-ill-ate-breakfast-until-rise-working-man-180954041/">https://www.smithsonianmag.com/smart-news/mostly-old-and-ill-ate-breakfast-until-rise-working-man-180954041/</a></p>
-<p>A very interesting and thorough article on Azure Deployment stacks &amp; Bicep by Frank Berson</p>
-<p><a href="https://www.linkedin.com/pulse/deployment-stacks-bicep-awesome-full-walkthrough-sneak-freek-berson?trackingId=Z2rxbNbsCmV86FWNfeSfZg%3D%3D&amp;lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_all%3BgoyYJLCwTVmW0QDmTE1ngA%3D%3D">https://www.linkedin.com/pulse/deployment-stacks-bicep-awesome-full-walkthrough-sneak-freek-berson?trackingId=Z2rxbNbsCmV86FWNfeSfZg%3D%3D&amp;lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_all%3BgoyYJLCwTVmW0QDmTE1ngA%3D%3D</a></p>
-<p>Infrastructure as Code on Azure: Bicep vs. Terraform vs. Pulumi</p>
-<p>An awesome objective comparison between &ldquo;the Big Three&rdquo; of Infrastructrue as Code. Pulumi looks really interesting.</p>
-<p><a href="https://xpirit.com/infrastructure-as-code-on-azure-bicep-vs-terraform-vs-pulumi/?utm_campaign=2023-Global-Press+releases+%2526+news+items-Brand+Communication-Awareness-All+retargeting-Various-Visuals-Non-LGF&amp;utm_source=linkedin&amp;utm_medium=paid&amp;hsa_acc=504073990&amp;hsa_cam=631587553&amp;hsa_grp=216573473&amp;hsa_ad=253172693&amp;hsa_net=linkedin&amp;hsa_ver=3">https://xpirit.com/infrastructure-as-code-on-azure-bicep-vs-terraform-vs-pulumi/?utm_campaign=2023-Global-Press+releases+%2526+news+items-Brand+Communication-Awareness-All+retargeting-Various-Visuals-Non-LGF&amp;utm_source=linkedin&amp;utm_medium=paid&amp;hsa_acc=504073990&amp;hsa_cam=631587553&amp;hsa_grp=216573473&amp;hsa_ad=253172693&amp;hsa_net=linkedin&amp;hsa_ver=3</a></p>
-<h3 id="watching">Watching</h3>
-<p>Watching hardly any youtube this week.</p>
-<h3 id="listening">Listening</h3>
-<p>Not much listening either.</p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
-<li><input disabled="" type="checkbox"> 60min long run</li>
-<li><input disabled="" type="checkbox"> Two morning runs of 6km+</li>
-<li><input disabled="" type="checkbox"> Full Blueprint adherence</li>
-<li><input disabled="" type="checkbox"> 1 video, 1 blog post</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202307100807</p>
 ]]></content:encoded>
     </item>
     
@@ -2929,58 +2442,6 @@ I wrote this script to delete all resource groups using bash.
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Probably wise.&#34;</span>
 </span></span></code></pre></div><h2 id="links">Links:</h2>
 <p>202307081507</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 26</title>
-      <link>https://mischavandenburg.com/zet/2023-week-26/</link>
-      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-26/</guid>
-      <description>It&amp;rsquo;s been a pretty good week, less busy than last week. I went to Azure Lowlands and I&amp;rsquo;ve been creating a lot of YouTube videos.
-Exercise &amp;amp; Weight Loss I went out for runs 5 times a week.
-My long run was 50 minutes and 8,24km, which is 5m more than last week. Improvement!
-The morning runs were all 5k every time, except for monday which was 4,16km.
-Although I&amp;rsquo;m back on track with the running I start noticing a dip in the motivation now that I have a good baseline established.</description>
-      <content:encoded><![CDATA[<p>It&rsquo;s been a pretty good week, less busy than last week. I went to Azure Lowlands and I&rsquo;ve been creating a lot of YouTube videos.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I went out for runs 5 times a week.</p>
-<p>My long run was 50 minutes and 8,24km, which is 5m more than last week. Improvement!</p>
-<p>The morning runs were all 5k every time, except for monday which was 4,16km.</p>
-<p>Although I&rsquo;m back on track with the running I start noticing a dip in the motivation now that I have a good baseline established. I need to find some new inspiration and motivation.</p>
-<p>I think I should start logging weekly distance again. During May my weekly distance hovered around 33km, but then I started working on increasing my cadence to 170+ spm, so the distances became shorter as expected. Additionally, pulling an all-nighter for Graspop really deregulated my schedule and training, but now I&rsquo;m back on track.</p>
-<p>Last week total was 20km, this week total was 27km.</p>
-<p>To get more motivation I&rsquo;ll start tracking weekly totals again and try to keep increasing them again. Maybe try to have acouple of 6K morning runs this week.</p>
-<p>My weight was down 1kg from last week.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Finished reading &ldquo;Finding Ultra&rdquo;. Very inspiring book.</p>
-<p>Also finished The Simple Path to Wealth by JJ Collins. It was an inspiring read, assuring me of my investing strategy of putting everything in index funds.</p>
-<h3 id="watching">Watching</h3>
-<p>I haven&rsquo;t watched much YouTube this week. I&rsquo;ve been focused on creating them!</p>
-<p>An inspring video from the Caloric Restriction society from 2004. Motivating to see these trim healthy people discuss their caloric restriction habits:</p>
-<p><a href="https://youtu.be/zFBMlRgjG7o">https://youtu.be/zFBMlRgjG7o</a></p>
-<p>A very good Azure Bicep course, Bicep for Real:</p>
-<p><a href="https://www.youtube.com/playlist?list=PLeh9xH-kbPPY-6hUKuLKhFu_w2tKFVpl3">https://www.youtube.com/playlist?list=PLeh9xH-kbPPY-6hUKuLKhFu_w2tKFVpl3</a></p>
-<h3 id="listening">Listening</h3>
-<p>No podcasts were listened to.</p>
-<p>But I&rsquo;m really enjoying the album <a href="https://www.metalmusicarchives.com/artist/heljareyga">Heljareyga</a> by Heri Joensen from Tyr</p>
-<h2 id="links">Links</h2>
-<p><a href="https://www.reddit.com/r/AZURE/comments/14mcuoy/some_interesting_facts_about_azure/?utm_source=share&amp;utm_medium=web2x&amp;context=3">https://www.reddit.com/r/AZURE/comments/14mcuoy/some_interesting_facts_about_azure/?utm_source=share&amp;utm_medium=web2x&amp;context=3</a></p>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
-<li><input disabled="" type="checkbox"> 55min long run</li>
-<li><input disabled="" type="checkbox"> One morning run of 6km+</li>
-<li><input disabled="" type="checkbox"> Try to increase running motivation and pleasure</li>
-<li><input disabled="" type="checkbox"> Reduce perceived stress and time pressure</li>
-<li><input disabled="" type="checkbox"> Full Blueprint adherence</li>
-<li><input disabled="" type="checkbox"> keep writing blog posts / make youtube videos, brings me energy</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202307071407</p>
 ]]></content:encoded>
     </item>
     
@@ -3341,45 +2802,6 @@ https://cloudblogs.microsoft.com/quantum/2023/06/21/microsoft-achieves-first-mil
     </item>
     
     <item>
-      <title>2023 Week 25</title>
-      <link>https://mischavandenburg.com/zet/2023-week-25/</link>
-      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-25/</guid>
-      <description>Week 25 My Week It has been a very busy week! On Tuesday I attended the Dutch Azure Meetup where I saw a presentation of the Azure Cloud Journey of the NS, which is the national Dutch train company, where I currently work. It was very insightful and nice to connect with colleagues and meet new people.
-Went to the Beyond Blue office on Wednesday, and on Thursday I attended a Knowledge Atrium session at Microsoft Headquarters in Amsterdam.</description>
-      <content:encoded><![CDATA[<h1 id="week-25">Week 25</h1>
-<h2 id="my-week">My Week</h2>
-<p>It has been a very busy week! On Tuesday I attended the Dutch Azure Meetup where I saw a presentation of the Azure Cloud Journey of the NS, which is the national Dutch train company, where I currently work. It was very insightful and nice to connect with colleagues and meet new people.</p>
-<p>Went to the Beyond Blue office on Wednesday, and on Thursday I attended a Knowledge Atrium session at Microsoft Headquarters in Amsterdam. What an experience! I witnessed a really cool demonstration of GitHub Copilot, and received other presentations about Azure Always On and Virtual Network Manager. I was very inspired by all of the new features and upcoming changes, and I felt the energy to start producing some more content again on my blog and YouTube channel.</p>
-<p>I managed to create two videos and I typed out a couple of blog posts which I will release next week probably.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>After the festival and routine disruption from last week, it was hard getting back into the regime because I was having such a busy week at the same time.</p>
-<p>However, I managed to go for 4 runs in the early mornings nonetheless, and I did a 45 minute long run of 7km on Saturday morning. So I&rsquo;m definitely getting back on track.</p>
-<p>My weight has dropped a bit from losing water weight, but I&rsquo;ve stalled otherwise. The meetups and social engagments all had delicious food offerings, but I&rsquo;ve been very strong and I completely prepped out all of my food beforehand and I stuck to that program. However, I did eat a few extra handfuls of nuts here and there, so I have been in a caloric deficit for only half the week. Still adjusting.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Started reading &ldquo;The Simple Path to Wealth&rdquo;. Very insightful so far. Also finished reading &ldquo;The Richest Man in Babylon&rdquo;</p>
-<h3 id="watching">Watching</h3>
-<p>Not much time to watch videos. But I did create two videos after quite a break from my YouTube channel.</p>
-<h3 id="listening">Listening</h3>
-<p>Mostly listening to Dutch personal finance podcasts.</p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<p>I will attend Azure Lowlands on Thursday and I&rsquo;m really looking forward to that! Otherwise the week seems much more quiet and I don&rsquo;t have any other engagements planned for a change. I hope to finish up on some lingering chores and maybe create some more content.</p>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Focus on caloric deficit</li>
-<li><input disabled="" type="checkbox"> 5 runs, 50min long run</li>
-<li><input disabled="" type="checkbox"> Reduce stress</li>
-<li><input disabled="" type="checkbox"> Improve sleep</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202306251806</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>How To Get The Id Of An Existing Subnet In Bicep</title>
       <link>https://mischavandenburg.com/zet/bicep-getting-subnet-id/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
@@ -3424,57 +2846,6 @@ WARNING: D:\a\1\a\drop\Generic-templates\containers\azure-kubernetes-service\v4.
 <p>[[bicep]]
 [[coding]]
 [[azure]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 Week 24</title>
-      <link>https://mischavandenburg.com/zet/2023-week-24/</link>
-      <pubDate>Mon, 19 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-24/</guid>
-      <description>Week 24 My Week This weeks main event was Graspop! I went there on Friday together with my brother. The main reason for going was seeing Meshuggah live for the first time.
-It was an amazing experience. I&amp;rsquo;ve been listening to Meshuggah since I was 16 years old so it was awesome to see them live. They are getting pretty old so it was good that I managed to see them now.</description>
-      <content:encoded><![CDATA[<h1 id="week-24">Week 24</h1>
-<h2 id="my-week">My Week</h2>
-<p>This weeks main event was Graspop! I went there on Friday together with my brother. The main reason for going was seeing Meshuggah live for the first time.</p>
-<p>It was an amazing experience. I&rsquo;ve been listening to Meshuggah since I was 16 years old so it was awesome to see them live. They are getting pretty old so it was good that I managed to see them now. Perhaps they quit in a year or two?</p>
-<p>We left at noon on Friday, drove to Belgium and attended the festival. Meshuggah started playing at midnight, so it was a long day! I was back home at 4:30 in the morning. This hasn&rsquo;t happened for years. I didn&rsquo;t sleep at all, and this lack of sleep and the unusuallly high stimulation of the concert has had a lot of impact on my sleep, mood and weight.</p>
-<p>I completely derailed my schedule and routines, but it was all worth it.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>After ending my 2 month challenge and reaching my goal of 75kg, I had a week of less strict adherence.</p>
-<p>I ate more calories, more carbs, and I even bought some junk food again. Not good. My average weight climbed back up to 77,63kg in a single week!</p>
-<p>Now, a lot of this weight will be water weight because I ate more carbs. But still it&rsquo;s shocking to see how quickly the scale moves upward after loosening the reigns a bit.</p>
-<p>I feel quite disappointed about that and it definitely wasn&rsquo;t worth the pleasure of the junk food and eating more. It actually feels good to get back in control and to start tracking and planning my nutrition very carefully again starting Monday.</p>
-<p>I went for two 5k runs this week. Far less than I would like. The festival has completely derailed my usual routines and schedule. I didn&rsquo;t sleep for an entire night which left me completely incapable the next two days, so I missed two exercise opportunities there. But it was all worth it. I look forward to get back into my Program and usual routine again next week.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>No reading this week.</p>
-<h3 id="watching">Watching</h3>
-<p>Azure AKS networking Essentials</p>
-<p><a href="https://www.youtube.com/watch?v=kLBLaCC_dNs">https://www.youtube.com/watch?v=kLBLaCC_dNs</a></p>
-<p>I went into a personal finance rabbit hole, especially watched a lot of content by Dave Ramsey. Researching buying vs renting, and whether I should purchase a house or apartment.</p>
-<p>Dave Ramseys Baby Steps to Wealth</p>
-<p><a href="https://www.youtube.com/watch?v=OO25TrVo_dU&amp;pp=ygURcmFtc2V5IGJhYnkgc3RlcHM%3D">https://www.youtube.com/watch?v=OO25TrVo_dU&amp;pp=ygURcmFtc2V5IGJhYnkgc3RlcHM%3D</a></p>
-<p>How To INVEST In Your 30&rsquo;s To Be WEALTHY In Your 40&rsquo;s | Lewis Howes</p>
-<p><a href="https://www.youtube.com/watch?v=UNJhP_zgc7A&amp;t=2840s">https://www.youtube.com/watch?v=UNJhP_zgc7A&amp;t=2840s</a></p>
-<h3 id="listening">Listening</h3>
-<p>Mostly been listening to the &ldquo;Goed Met Geld&rdquo; podcast, a Dutch finance podcast.</p>
-<h1 id="next-week">Next Week</h1>
-<p>I have a very busy week coming up. I have an interesting Azure meetup on Tuesday about the journey to Azure by the NS, the train company I currently work for.</p>
-<p>On Wednesday I&rsquo;ll have an office day at Fullstaq, and I&rsquo;ll be attending an event at Microsoft on Thursday.</p>
-<p>So lots lof traveling and social activity. That will take up a lot of energy, but I&rsquo;m prepared for it.</p>
-<p>I spent my sunday preparing almost all of my nutrition for the week so I won&rsquo;t make any bad food choices when I&rsquo;m tired.</p>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Blueprint adherence</li>
-<li><input disabled="" type="checkbox"> Focus on sleeping well</li>
-<li><input disabled="" type="checkbox"> Reduce perceived stress and time pressure</li>
-<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
-<li><input disabled="" type="checkbox"> 50min long run</li>
-</ul>
-<h2 id="links">Links:</h2>
-<p>202306191806</p>
 ]]></content:encoded>
     </item>
     
@@ -3524,52 +2895,6 @@ Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have 
     </item>
     
     <item>
-      <title>2023 Week 23</title>
-      <link>https://mischavandenburg.com/zet/2023-week-23/</link>
-      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-23/</guid>
-      <description>Week 23 My Week It&amp;rsquo;s been a busy week with a lot of social engagements. I had a nice dinner with my colleagues and I was supposed to do a Mud Run on Friday. Unfortunately I got stuck in massive traffic and I missed the start.
-4 months ago I joined Fullstaq, and they have a related company called Beyond Blue, who focus on Microsoft Azure. After some conversations with my colleagues I decided to go all-in on Azure and join Beyond Blue instead.</description>
-      <content:encoded><![CDATA[<h1 id="week-23">Week 23</h1>
-<h2 id="my-week">My Week</h2>
-<p>It&rsquo;s been a busy week with a lot of social engagements. I had a nice dinner with my colleagues and I was supposed to do a Mud Run on Friday. Unfortunately I got stuck in massive traffic and I missed the start.</p>
-<p>4 months ago I joined Fullstaq, and they have a related company called Beyond Blue, who focus on Microsoft Azure. After some conversations with my colleagues I decided to go all-in on Azure and join Beyond Blue instead. Feels goood!</p>
-<p>I&rsquo;m also doing a lot of thinking about renting versus buying and planning my financial future.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>2 months ago I set up my 2 month challenge, and on Sunday I weighed in at 75,2kg. I made it! I had been stuck on the 76kg plateau for over 6 months, but I finally managed to break through.</p>
-<p>My average SPM has increased to 170 during my morning runs. I did fewer runs becuase of the engagements.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Continuing with Finding Ultra by Rich Roll. Extremely inpsiring to read about the pain he went through, and that he did it all on a plant based diet.</p>
-<h3 id="watching">Watching</h3>
-<p>A nice summary of Microsoft&rsquo;s efforts on Open Source and their change in culture:</p>
-<p><a href="https://www.youtube.com/watch?v=knuNp2S1_z0">https://www.youtube.com/watch?v=knuNp2S1_z0</a></p>
-<p>Containerize and deploy your app with automated deployments for AKS:</p>
-<p><a href="https://www.youtube.com/watch?v=PqhdX8-SZYw">https://www.youtube.com/watch?v=PqhdX8-SZYw</a></p>
-<p>Useful reflections by Gordon Ramsey on home ownership:</p>
-<p><a href="https://youtu.be/82y16IqFApI">https://youtu.be/82y16IqFApI</a></p>
-<p>Baby steps for buying a house:</p>
-<p><a href="https://www.youtube.com/watch?v=-Y6HaK-6yyA">https://www.youtube.com/watch?v=-Y6HaK-6yyA</a></p>
-<p>Reasons for paying off a mortgage:</p>
-<p><a href="https://youtu.be/yrCP3IEKVLE">https://youtu.be/yrCP3IEKVLE</a></p>
-<h3 id="listening">Listening</h3>
-<p>I&rsquo;m listening more to the Goed Met Geld podcast, a Dutch podcast about personal fincance. They have some very useful episodes on mortgages and purchasing a house.</p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Increase average sleep to 8h, anything above 7h is acceptable</li>
-<li><input disabled="" type="checkbox"> Stick to new meal prep routine</li>
-<li><input disabled="" type="checkbox"> Reduce perceived stress and time pressure</li>
-<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202306120806</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Deploying Simple Applications to AKS with Draft</title>
       <link>https://mischavandenburg.com/zet/deploy-draft-azure/</link>
       <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
@@ -3585,135 +2910,6 @@ Links: 202306092006</description>
 
 <h2 id="links">Links:</h2>
 <p>202306092006</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 22</title>
-      <link>https://mischavandenburg.com/zet/2023-week-22/</link>
-      <pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-22/</guid>
-      <description>Week 22 My Week It has been a busy week with two office days. Committing to an exercise routine of at least 1 hour a day before work and ensuring optimal nutrition is taking up a lot of time, but it is of course all worth it.
-To ensure appropriate nutrient intake, and inspired by Bryan Johnson&amp;rsquo;s Blueprint, I started meal prepping again. I was resistant to this because I prefer my food to be freshly prepared every day, but it is time consuming and the increased business of my schedule does not allow for this currently.</description>
-      <content:encoded><![CDATA[<h1 id="week-22">Week 22</h1>
-<h2 id="my-week">My Week</h2>
-<p>It has been a busy week with two office days. Committing to an exercise routine of at least 1 hour a day before work and ensuring optimal nutrition is taking up a lot of time, but it is of course all worth it.</p>
-<p>To ensure appropriate nutrient intake, and inspired by Bryan Johnson&rsquo;s Blueprint, I started meal prepping again. I was resistant to this because I prefer my food to be freshly prepared every day, but it is time consuming and the increased business of my schedule does not allow for this currently.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I&rsquo;m making good progress. I lost 0.4kg this week, average weight: 76.23kg</p>
-<p>Adjusting my macros to higher fats and less carbohydrates seems to leave me more satiated after meals.</p>
-<p>In terms of running, I&rsquo;m making good progress too.</p>
-<h1 id="week-22---7">Week 22 - 7</h1>
-<ul>
-<li>Easy Run 1 Mon 32min</li>
-<li>Easy Run 2 Tue 31min</li>
-<li>Easy Run 3 Thu 31min</li>
-<li>Easy Run 4 Fri 30min</li>
-<li>Long Run   Sat 43min</li>
-</ul>
-<ul>
-<li>Total distance: 26,06km</li>
-</ul>
-<p>I started focusing on staying in the right HR zone (131 -141, zone 2) and increasing my cadence. And it worked! Most runs this week were at an average SPM between 162 and 167. I have to run a lot faster than I&rsquo;m used to in order to get to this HR/cadence, and I need to put in a lot more effort, but it does give good results. The runs are shorter because of this, but I now do a 15 minutes of warming up with walking and 10 minutes of cooling down walking, which are not added to these numbers. It now feels more like running than jogging. As expected a lower total distance this week, this is now my new baseline to build on.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>I started reading &ldquo;Finding Ultra&rdquo;, Rich Roll&rsquo;s biography a few weeks ago, but I picked it up again.</p>
-<p>The Endurance Handbook, dr. Phil Maffetone</p>
-<h3 id="watching">Watching</h3>
-<p>The Anti-Aging Protocol To REVERSE AGING &amp; Live Over 120+ YEARS OLD | Bryan Johnson</p>
-<p><a href="https://youtu.be/j_AtQ6N4jQc">https://youtu.be/j_AtQ6N4jQc</a></p>
-<h3 id="listening">Listening</h3>
-<p>Eat To Win with dr. Phil Maffetone</p>
-<ul>
-<li>eating fat will make you feel more satisfied</li>
-<li>eating refined carbohydrates with meal will make you feel hungry very quickly again. I noticed this myself!</li>
-</ul>
-<p><a href="https://trailrunnernation.com/2013/05/dr-phil-maffetone/">https://trailrunnernation.com/2013/05/dr-phil-maffetone/</a></p>
-<p>Crush It As A Plant-Based Athlete | Rich Roll Podcast</p>
-<ul>
-<li>not very enlightening, but inpirational to hear their achievements</li>
-<li>nice to hear how much the plant based community has grown since the early days</li>
-</ul>
-<p><a href="https://www.youtube.com/watch?v=DLQWsa_Of8o">https://www.youtube.com/watch?v=DLQWsa_Of8o</a></p>
-<p>Tackle Goals Like A Navy SEAL: Chadd Wright | Rich Roll Podcast</p>
-<ul>
-<li>inspiring to hear his full dedication to his goal to become a navy seal</li>
-<li>breaking things up in smaller chunks: running from telephone pole to telephone pole</li>
-<li>he applies this to everything in life</li>
-</ul>
-<p><a href="https://youtu.be/vPktBJzi88g">https://youtu.be/vPktBJzi88g</a></p>
-<h2 id="links">Links</h2>
-<p><a href="https://blueprint.bryanjohnson.co/#step-1-meal-prep">https://blueprint.bryanjohnson.co/#step-1-meal-prep</a></p>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Increase average sleep to 8h, anything above 7h is acceptable</li>
-<li><input disabled="" type="checkbox"> Stick to new meal prep routine</li>
-<li><input disabled="" type="checkbox"> Reduce time spent on preparing / thinking about food, let the system handle it</li>
-<li><input disabled="" type="checkbox"> Reduce perceived stress and time pressure</li>
-<li><input disabled="" type="checkbox"> 5 runs in MAF zone</li>
-<li><input disabled="" type="checkbox"> 5Omin long run</li>
-<li><input disabled="" type="checkbox"> More meditation</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202306040906</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 Week 21</title>
-      <link>https://mischavandenburg.com/zet/2023-week-21/</link>
-      <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-21/</guid>
-      <description>Week 21 My Week This week was a bit busier with two planned office days. Had an insightful conversation about my pension and future financial situation which made me think about whether I should consider purchasing property or keep renting.
-Had a fun pizza workshop at work where we made original Napolitan pizza. They also offered a &amp;ldquo;Pizza Marinara&amp;rdquo; option which only used tomato sauce, oregano and olive oil. Perfect for plant-based me, and it was delicious!</description>
-      <content:encoded><![CDATA[<h1 id="week-21">Week 21</h1>
-<h2 id="my-week">My Week</h2>
-<p>This week was a bit busier with two planned office days. Had an insightful conversation about my pension and future financial situation which made me think about whether I should consider purchasing property or keep renting.</p>
-<p>Had a fun pizza workshop at work where we made original Napolitan pizza. They also offered a &ldquo;Pizza Marinara&rdquo; option which only used tomato sauce, oregano and olive oil. Perfect for plant-based me, and it was delicious!</p>
-<p>Another adventure happened. Recently I&rsquo;ve been following Samurai Matcha on YouTube and I became very inspired by his content. I saw that he was making a trip through Europe, and I invited him to stay with me if he was in the neighborhood. To my great surprise he emailed me the next day!</p>
-<p>He stayed with me and we had a great time together. He performed a tea ceremony with delicious matcha tea for me, and we visited the Japanese Fair in Leiden together. Good times!</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I discovered MAF training and it has been a gamechanger! My buddy Patriek nudged me in the right direction by commenting on my relatively low heart rate during training, and I started researching more.</p>
-<p>I wrote <a href="/zet/discovered-maf-training/">this artcile</a> on the topic.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Started reading &ldquo;The Endurance Handbook&rdquo; by Dr. Maffetone</p>
-<h3 id="watching">Watching</h3>
-<p>This video was super insightful for my running:</p>
-<p><a href="https://youtu.be/P_VNQ6UIbS8">https://youtu.be/P_VNQ6UIbS8</a></p>
-<p>This video is super inspiring because he actually runs a 3 hour marathon while recording!</p>
-<p>Podcast interview with dr. Maffetone about Heart Rate Training, Nutrition and Recovery</p>
-<p><a href="https://youtu.be/_TPrenWWK9U">https://youtu.be/_TPrenWWK9U</a></p>
-<p>Very inspiring to see what a Japanese person usually eats, especially the portion sizes:</p>
-<p><a href="https://youtu.be/-jDsUyquBxI">https://youtu.be/-jDsUyquBxI</a></p>
-<h3 id="listening">Listening</h3>
-<p>An insightful podcast on the toxicity of materials that we use every day:</p>
-<p><a href="https://youtu.be/945iqkuHxB8">https://youtu.be/945iqkuHxB8</a></p>
-<p>Run Longer, Go Further! Unlock Your Potential.</p>
-<blockquote>
-<p>Consistency is the key to endurance. We all have unlimited potential.</p>
-</blockquote>
-<p><a href="https://youtu.be/cgi-WvN7LWQ">https://youtu.be/cgi-WvN7LWQ</a></p>
-<h2 id="links">Links</h2>
-<p><a href="https://blueprint.bryanjohnson.co/#blueprint-starter-guide">https://blueprint.bryanjohnson.co/#blueprint-starter-guide</a></p>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Look more into hydration</li>
-<li><input disabled="" type="checkbox"> Start tracking sodium intake</li>
-<li><input disabled="" type="checkbox"> Improve sleep score: prioritize sleep at all times</li>
-<li><input disabled="" type="checkbox"> Test out meal prep and repetitive meals routine</li>
-<li><input disabled="" type="checkbox"> 21:00 wind down time</li>
-<li><input disabled="" type="checkbox"> 5 runs all in MAF zone</li>
-<li><input disabled="" type="checkbox"> 160+ average SPM</li>
-<li><input disabled="" type="checkbox"> Make food calculation sheet</li>
-<li><input disabled="" type="checkbox"> No Refined Carbs</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202305301905</p>
 ]]></content:encoded>
     </item>
     
@@ -3815,68 +3011,6 @@ I was already doing base training for my running which I discovered through the 
     </item>
     
     <item>
-      <title>2023 week 20</title>
-      <link>https://mischavandenburg.com/zet/2023-week-20/</link>
-      <pubDate>Tue, 23 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-20/</guid>
-      <description>Week 20 My Week It was a nice week. I had an extra day off on Asenscion day and I decided to go for a camping trip for the first time after I moved back to the Netherlands.
-It was a great experience, and I wrote a couple of Tumblr posts with photos:
-https://www.tumblr.com/mischavandenburg/718093517925367808/first-trip-in-the-netherlands-part-1?source=share
-https://www.tumblr.com/mischavandenburg/718098930739593216/part-2?source=share
-Exercise &amp;amp; Weight Loss Went on a 12km hike on my camping trip.
-But I also managed to get my 5 runs in.</description>
-      <content:encoded><![CDATA[<h1 id="week-20">Week 20</h1>
-<h2 id="my-week">My Week</h2>
-<p>It was a nice week. I had an extra day off on Asenscion day and I decided to go for a camping trip for the first time after I moved back to the Netherlands.</p>
-<p>It was a great experience, and I wrote a couple of Tumblr posts with photos:</p>
-<p><a href="https://www.tumblr.com/mischavandenburg/718093517925367808/first-trip-in-the-netherlands-part-1?source=share">https://www.tumblr.com/mischavandenburg/718093517925367808/first-trip-in-the-netherlands-part-1?source=share</a></p>
-<p><a href="https://www.tumblr.com/mischavandenburg/718098930739593216/part-2?source=share">https://www.tumblr.com/mischavandenburg/718098930739593216/part-2?source=share</a></p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>Went on a 12km hike on my camping trip.</p>
-<p>
-  <img loading="lazy" src="https://64.media.tumblr.com/367c8cf46a5fdb8da612cff940e0a518/14d791b71c6209c9-fa/s1280x1920/e9c218d15016a7ac6eaa7397e14510db581c0016.jpg" alt=""  /></p>
-<p>But I also managed to get my 5 runs in. One of them on Sunday morning, in the woods on my camping trip. It is going well and I am progressing nicely with my base building. Weekly distance increased with 0.5km.</p>
-<h1 id="week-20---5">Week 20 - 5</h1>
-<ul>
-<li>Easy Run 1 Tue 44min</li>
-<li>Easy Run 2 Wed 55min</li>
-<li>Easy Run 3 Thu 47min</li>
-<li>Easy Run 4 Sun 42min</li>
-<li>Long Run   Fri 86min</li>
-</ul>
-<ul>
-<li>Total distance: 32,8km</li>
-</ul>
-<p>Weight loss is also progressing well. I missed a couple of weigh-ins because of the camping trip so I don&rsquo;t have a reliable weekly average. But on Monday I weighed 75.5kg, due to a lot of lost water weight from the trip. This is the first time I see the 75 on the scale, after being on a 76kg plateau for more than 6 months, so it was a big moment. But since it was water weight, I bumped back to 76.6kg the next day, which is still a good progression from last week.</p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Interesting article on making the web human again, because so much is being generated by AI, including emails. Why bother writing?</p>
-<p><a href="https://michal.sapka.me/2023/human-web/">https://michal.sapka.me/2023/human-web/</a></p>
-<h3 id="watching">Watching</h3>
-<p>An awesome video on spending money on experiences:</p>
-<p><a href="https://www.youtube.com/watch?v=840iXuXwE4Y">https://www.youtube.com/watch?v=840iXuXwE4Y</a></p>
-<p><a href="/zet/invest-in-experiences-for-happiness/">I wrote a zet about this video</a></p>
-<p>I discovered Aki&rsquo;s channel called Samurai Matcha and I&rsquo;ve watching a lot of his content.</p>
-<p>Being a minimalist myself, I find it his content hugely inspiring.</p>
-<p>Minimalist habits:</p>
-<p><a href="https://www.youtube.com/watch?v=YwtevWXMHog">https://www.youtube.com/watch?v=YwtevWXMHog</a></p>
-<h2 id="links">Links</h2>
-<p><a href="https://matthiasott.com/notes/simple-truths-about-personal-websites">https://matthiasott.com/notes/simple-truths-about-personal-websites</a></p>
-<h1 id="next-week">Next Week</h1>
-<p>A relatively busy week, I have a couple of office days and some social events coming up.</p>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Maintain weight loss discipline despite office days and social events</li>
-<li><input disabled="" type="checkbox"> 5 runs</li>
-<li><input disabled="" type="checkbox"> Mindful eating</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202305232005</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Went on My First Camping Trip After Moving Back to NL From Norway</title>
       <link>https://mischavandenburg.com/zet/first-camping-trip-in-netherlands/</link>
       <pubDate>Tue, 23 May 2023 00:00:00 +0000</pubDate>
@@ -3915,83 +3049,6 @@ https://matthiasott.com/notes/simple-truths-about-personal-websites</description
 <h2 id="links">Links:</h2>
 <p>202305171305</p>
 <p><a href="https://matthiasott.com/notes/simple-truths-about-personal-websites">https://matthiasott.com/notes/simple-truths-about-personal-websites</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 19</title>
-      <link>https://mischavandenburg.com/zet/2023-week-19/</link>
-      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-19/</guid>
-      <description>Week 19 It has been a good week. Very busy at work with AKS cluster maintenance, and I&amp;rsquo;ve been working some evenings.
-On Saturday I had a lovely dinner with a good friend from Norway who was passing through Amsterdam on his way back to Oslo from a trip to France.
-Recently I started planning my holiday to Norway, and this has awakened the outdoorsman in me again. In my 9 years in Norway I became a seasoned traveler of mountains and forests, often staying out for weeks, but after I moved back to the Netherlands and focused on changing my career to IT, this outdoorsman has lain dormant.</description>
-      <content:encoded><![CDATA[<h1 id="week-19">Week 19</h1>
-<p>It has been a good week. Very busy at work with AKS cluster maintenance, and I&rsquo;ve been working some evenings.</p>
-<p>On Saturday I had a lovely dinner with a good friend from Norway who was passing through Amsterdam on his way back to Oslo from a trip to France.</p>
-<p>Recently I started planning my holiday to Norway, and this has awakened the outdoorsman in me again. In my 9 years in Norway I became a seasoned traveler of mountains and forests, often staying out for weeks, but after I moved back to the Netherlands and focused on changing my career to IT, this outdoorsman has lain dormant.</p>
-<p>Now I&rsquo;m going through all my gear again and purchasing some missing pieces, because I donated some gear when I left Norway. Planning to do camping trips in the Netherlands as well!</p>
-<p>I&rsquo;ll be <a href="/zet/started-using-tumblr/">logging these trips on Tumblr.</a></p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>After last week&rsquo;s plateau I increased the strictness of my protocols. I was very strict with counting calories this week and kept strictly to One Meal A Day, and it has had good effects. I lost 0,64kg this week and my average weight is 76,91 now. My goal is 75kg for this weight loss bout.</p>
-<h2 id="running">Running</h2>
-<h1 id="week-19-1">Week 19</h1>
-<ul>
-<li>Easy Run 1 Mon 43min</li>
-<li>Easy Run 2 Wed 41min</li>
-<li>Easy Run 3 Thu 44min</li>
-<li>Easy Run 4 Fri 47min</li>
-<li>Long Run Sun 77min - 10km for the first time!</li>
-</ul>
-<ul>
-<li>Total distance: 32,2km</li>
-</ul>
-<p>I did 5 runs this week and I broke my personal record by running a <a href="/zet/running-first-10k/">10k for the first time!</a></p>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Came across this reddit post:</p>
-<p><a href="https://www.reddit.com/r/omad/comments/13a20pi/seneca_knew/?utm_source=share&amp;utm_medium=ios_app&amp;utm_name=ioscss&amp;utm_content=1&amp;utm_term=3">https://www.reddit.com/r/omad/comments/13a20pi/seneca_knew/?utm_source=share&amp;utm_medium=ios_app&amp;utm_name=ioscss&amp;utm_content=1&amp;utm_term=3</a></p>
-<p>This rekindled my interest in Stoicism. I&rsquo;ve always been charmed by the Stoic philosophy and I implemented many elements of it in my own spiritual practice, consciously and unconsciously. But I now feel like taking a bit more structured approach towards an exploration of Stoicism. I&rsquo;m particularly interested in seeing how it overlaps with my Buddhist practice.</p>
-<p>The Daily Stoic website has been on my radar for a while, but I did some reading this week and it seems like a great resource. I signed up for the daily email:</p>
-<p><a href="https://dailystoic.com/dailyemail">https://dailystoic.com/dailyemail</a></p>
-<p>I started reading Meditations by Marcus Aurelius.</p>
-<h4 id="daily-stoic">Daily Stoic</h4>
-<p>The Daily Stoic emails have been very informative and provided an excellent reading list.</p>
-<p>Introduction to Stoicism:</p>
-<p>&ldquo;A brief synopsis on this particular school of
-Hellenistic philosophy: Stoicism was founded in Athens
-by Zeno of Citium in the early 3rd century BC, but
-was famously practiced by the likes of Epictetus, Cato,
-Seneca and Marcus Aurelius. The philosophy asserts
-that virtue (such as wisdom) is happiness and judgment
-should be based on behavior, rather than words. That
-we don’t control and cannot rely on external events,
-only ourselves and our responses.&rdquo;</p>
-<h4 id="other">Other</h4>
-<p>Voluntary poverty:</p>
-<p><a href="https://stoicjourney.org/2017/01/05/seneca-part-18-voluntary-poverty/">https://stoicjourney.org/2017/01/05/seneca-part-18-voluntary-poverty/</a></p>
-<h3 id="watching">Watching</h3>
-<p>An interesting video series about the Fjallraven brand:</p>
-<p><a href="https://youtu.be/4mSsYK7pAow">https://youtu.be/4mSsYK7pAow</a></p>
-<p>I&rsquo;ve always been a fan of Norrona, but I&rsquo;m falling head over heels in love with Fjallraven. I love the fact that they create products to last for generations. There are many instances of grandchildren inheriting pieces of gear from their grandfathers and continuing to use them.</p>
-<p>9 Stoic Rules For A Better Life (From Marcus Aurelius)</p>
-<p><a href="https://youtu.be/heh5XLwZVOY">https://youtu.be/heh5XLwZVOY</a></p>
-<h3 id="listening">Listening</h3>
-<p>Ajahn Amaro&rsquo;s reading of &ldquo;Being Dharma&rdquo; fro Ajahn Chah</p>
-<p>&ldquo;This is really all there is. To put the Dharma into concise, succinct terms, there is suffering born and suffering passing away. Outside of this, there is nothing else. Suffering arises; suffering passes away.&rdquo;</p>
-<h2 id="links">Links</h2>
-<p><a href="https://roytang.net/">https://roytang.net/</a></p>
-<p><a href="http://sawv.org/en.html">http://sawv.org/en.html</a></p>
-<h1 id="next-week">Next Week</h1>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> 5 runs</li>
-<li><input disabled="" type="checkbox"> Go for overnight camping trip</li>
-<li><input disabled="" type="checkbox"> OMAD</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202305162105</p>
 ]]></content:encoded>
     </item>
     
@@ -4211,81 +3268,6 @@ Links: 202305091705</description>
 <p>I show my workflow to publish my Hugo blog from the command line using neovim and bash</p>
 <h2 id="links">Links:</h2>
 <p>202305091705</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 week 18</title>
-      <link>https://mischavandenburg.com/zet/2023-week-18/</link>
-      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week-18/</guid>
-      <description>Week 18 My Week It has been a pretty good week. Rather busy at work with some unforeseen trouble for our production patching windows, which required rescheduling everything. Managed to clean up 2800 lines of code 🧹
-Went to see Sabaton and had a great time.
-Otherwise I&amp;rsquo;ve been preparing for the Diablo 2 Ladder Reset and played from Friday afternoon.
-Exercise &amp;amp; Weight Loss My weight loss plateaued this week.</description>
-      <content:encoded><![CDATA[<h1 id="week-18">Week 18</h1>
-<h2 id="my-week">My Week</h2>
-<p>It has been a pretty good week. Rather busy at work with some unforeseen trouble for our production patching windows, which required rescheduling everything. Managed to clean up 2800 lines of code 🧹</p>
-<p>Went to see Sabaton and had a great time.</p>
-<p>Otherwise I&rsquo;ve been preparing for the Diablo 2 Ladder Reset and played from Friday afternoon.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>My weight loss plateaued this week. I had two days where I overate, and I didn&rsquo;t do any 5:2 fasting this week. I&rsquo;m adjusting my daily calories downward to 1600 calories a day, eating only one meal a day.</p>
-<p>Before I sometimes had a smaller meal at 16:00 to tide me over to dinner and to increase the protein consumption. But now I&rsquo;m sticking to strict OMAD (One Meal A Day).</p>
-<p>I did keep up my exercise routine. The base building is going well, I set a new record by running 67 minutes today, and I didn&rsquo;t have any knee pain. I went for two strength workouts as well.</p>
-<h3 id="week-18---3">Week 18 - 3</h3>
-<ul>
-<li>Easy Run 1 Mon 41min</li>
-<li>Easy Run 2 Tue 27min</li>
-<li>Easy Run 3 Wed 45min</li>
-<li>Easy Run 4 Fri 46min</li>
-<li>Easy Run 5 Sat 44min</li>
-<li>Long Run   Sun 67min 8.5km</li>
-</ul>
-<ul>
-<li>Total distance: 34km</li>
-</ul>
-<h2 id="content-consumption">Content Consumption</h2>
-<h3 id="reading">Reading</h3>
-<p>Read an interesting article on vacation in the Soviet Union:</p>
-<p><a href="https://daily.jstor.org/workers-of-the-world-take-pto/">https://daily.jstor.org/workers-of-the-world-take-pto/</a></p>
-<p><a href="https://mischavandenburg.com/zet/vacations-in-soviet-union/">https://mischavandenburg.com/zet/vacations-in-soviet-union/</a></p>
-<p>Some inspiration on blog writing, and writing in general:</p>
-<p><a href="https://herman.bearblog.dev/on-writing-regularly/">https://herman.bearblog.dev/on-writing-regularly/</a></p>
-<p><a href="https://tiramisu.bearblog.dev/100-posts/">https://tiramisu.bearblog.dev/100-posts/</a></p>
-<p><a href="https://mischavandenburg.com/zet/power-of-writing/">https://mischavandenburg.com/zet/power-of-writing/</a></p>
-<p>Finally, an inspiring Stoic article about voluntarily simplyfying one&rsquo;s fare:</p>
-<p><a href="https://stoicjourney.org/2017/01/05/seneca-part-18-voluntary-poverty/">https://stoicjourney.org/2017/01/05/seneca-part-18-voluntary-poverty/</a></p>
-<h3 id="watching">Watching</h3>
-<p>Videos have been centered around Diablo 2.</p>
-<p>Fire Druid Guide:</p>
-<p><a href="https://www.youtube.com/watch?v=xPrpXS1OJ7M">https://www.youtube.com/watch?v=xPrpXS1OJ7M</a></p>
-<p>MRLlamaSC fire druid playthrough:</p>
-<p><a href="https://www.youtube.com/watch?v=46Toe6NF4SU">https://www.youtube.com/watch?v=46Toe6NF4SU</a></p>
-<h3 id="listening">Listening</h3>
-<p>Soy foods are safe to eat:</p>
-<p><a href="https://theproof.com/are-soy-foods-safe-mark-messina-phd/">https://theproof.com/are-soy-foods-safe-mark-messina-phd/</a></p>
-<p>Dhamma talks by Luang Por Sumedho and readings by Ajahn Amaro</p>
-<h2 id="gaming">Gaming</h2>
-<p>Having a lot of fun with the Diablo 2 reset. I haven&rsquo;t gamed for months, but it is fun to be back at it for a little bit. Everybody is poor and people are collaborating to finish the game.</p>
-<p>I have a lvl 83 druid now with some very basic gear and it&rsquo;s fun to learn how to use the character optimally and finding my playstyle.</p>
-<p>It is tempting to make another character because everybody is so collaborative, but perhaps it is best to just stick to one character.</p>
-<h1 id="next-week">Next Week</h1>
-<p>I&rsquo;ll have an office day on Tuesday and I have many cluster upgrades planned at work.</p>
-<p>I&rsquo;ll be meeting a friend from Norway for dinner on Saturday evening, looking forward to that.</p>
-<p>Planning on strict OMAD all week and keeping up the running base training. Otherwise I&rsquo;m allowed to play Diablo 2 whenever I feel like it.</p>
-<h2 id="goals--intentions">Goals &amp; Intentions</h2>
-<ul>
-<li><input disabled="" type="checkbox"> Strict OMAD</li>
-</ul>
-<ul>
-<li><input disabled="" type="checkbox"> Stricter food logging</li>
-</ul>
-<ul>
-<li><input disabled="" type="checkbox"> 5+ runs</li>
-</ul>
-<h2 id="links">Links:</h2>
-<p>202305071605</p>
 ]]></content:encoded>
     </item>
     
@@ -4594,89 +3576,6 @@ Eventually I plateaued, and there was no way around it: I needed to start tracki
 <p><a href="https://hubermanlab.com/the-science-of-setting-and-achieving-goals/">https://hubermanlab.com/the-science-of-setting-and-achieving-goals/</a></p>
 <p><a href="https://www.youtube.com/watch?v=zkY6MM_dLo4&amp;t=18s&amp;pp=ygUJdGFvIHJpbmdz">https://www.youtube.com/watch?v=zkY6MM_dLo4&amp;t=18s&amp;pp=ygUJdGFvIHJpbmdz</a></p>
 <p><a href="https://www.amazon.com/Fat-Loss-Forever-Lose-KEEP/dp/1794510109">https://www.amazon.com/Fat-Loss-Forever-Lose-KEEP/dp/1794510109</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>2023 Week 17</title>
-      <link>https://mischavandenburg.com/zet/2023-week17/</link>
-      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/2023-week17/</guid>
-      <description>Week 17 Reflection It has been a good week. Thursday was a public holiday: King&amp;rsquo;s Day. I spent it working on my new setup for making YouTube videos and doing a few chores. I let the festivities pass me by. I am more of a recluse. When I was younger I sometimes went to Amsterdam and joined the festivities. But now I derive no pleasure from large crowds of people consuming a lot of alcohol any longer.</description>
-      <content:encoded><![CDATA[<h1 id="week-17">Week 17</h1>
-<h2 id="reflection">Reflection</h2>
-<p>It has been a good week. Thursday was a public holiday: King&rsquo;s Day. I spent it working on my new setup for making YouTube videos and doing a few chores. I let the festivities pass me by. I am more of a recluse. When I was younger I sometimes went to Amsterdam and joined the festivities. But now I derive no pleasure from large crowds of people consuming a lot of alcohol any longer.</p>
-<h2 id="exercise--weight-loss">Exercise &amp; Weight Loss</h2>
-<p>I&rsquo;m making good progress on my current weight loss goal. Here are the results since I started my latest weight loss period:</p>
-<h3 id="2023-04-16">2023-04-16</h3>
-<p>Waist circumference: 83cm</p>
-<p>78.6kg</p>
-<p>17,5% Body Fat</p>
-<h3 id="2023-04-23">2023-04-23</h3>
-<p>82.3cm</p>
-<p>78.2kg</p>
-<p>16.9%</p>
-<h3 id="2023-04-30">2023-04-30</h3>
-<p>77.3kg</p>
-<p>81cm</p>
-<p>16,4%</p>
-<p>The weight loss goal is currently taking up most of my head space. It takes a lot of effort to stay on track, fight off cravings and to consistently plan and weigh all of my food. However, 2 weeks into the regime, these actions are now slowly starting to become more habitual. Eventually this will become the new norm, and it will start happening automatically, costing less energy.</p>
-<p>But I&rsquo;m very happy to see that I lost 1kg and 1cm from the waist.</p>
-<h3 id="running">Running</h3>
-<p>I completed week 2 of my base building schedule, and I&rsquo;m making progress.</p>
-<h4 id="week-16---1">Week 16 - 1</h4>
-<ul>
-<li>Easy Run 1 Mon 30min</li>
-<li>Easy Run 2 Wed 43min</li>
-<li>Easy Run 3 Thu 36,5min</li>
-<li>Easy Run 4 Sun 43min</li>
-<li>Long Run   Fri 50min</li>
-</ul>
-<ul>
-<li>Total distance: 26.15km</li>
-</ul>
-<h4 id="week-17---2">Week 17 - 2</h4>
-<ul>
-<li>Easy Run 1 Mon 37min</li>
-<li>Easy Run 2 Tue 40min</li>
-<li>Easy Run 3 Wed 44min</li>
-<li>Easy Run 4 Thu 36min</li>
-<li>Long Run 5 Sat 60min</li>
-</ul>
-<ul>
-<li>Total distance: 28.09km</li>
-</ul>
-<h2 id="content-consumed">Content Consumed</h2>
-<h3 id="reading">Reading</h3>
-<p>I recently finished Can&rsquo;t Hurt Me by David Goggins which was very inspirational. Should write some notes on that soon.</p>
-<p>Then I continued with Finding Ultra by Rich Roll. Enjoying it a lot so far.</p>
-<p>I also started re-reading one of the best books on Buddhist practice in my opinion: <a href="https://www.forestdhamma.org/ebooks/english/pdf/Uncommon_Wisdom.pdf">Uncommon Wisdom</a> by Ajahn Pannavadho. I&rsquo;ve read this book 4 times already, but it is gold every single time.</p>
-<p>I increased my meditation practice from 20 minutes to 40-90 minutes a day to help with food cravings and resting the mind. Ajahn Panna&rsquo;s emphasis on identifying discontentment and kilesas is a great aid in my practice currently.</p>
-<h3 id="watching">Watching</h3>
-<p>I saw <a href="https://youtu.be/OJ6n5wf84as">this video</a> a year ago and it (re-)kindled the desire to start running. I&rsquo;ve been watching it a few times for motivation and inspiration.</p>
-<p>I also watched a few videos on Diablo 2 Resurrected to prepare for the upcoming ladder reset. I don&rsquo;t really have time to game, but the ladder reset is always a fun time because everybody is poor and there is a better community spirit going on. I decided to make a character and do a playthrough to wind down a bit from the weight loss efforts.</p>
-<p>There have been many changes to the game and it is fun to catch up on Terror Zones and the new runewords, and the new builds they enable.</p>
-<h3 id="listening">Listening</h3>
-<p>I listened to <a href="https://www.artofmanliness.com/character/advice/podcast-887-the-golden-rules-of-success/">The Golden Rules of Success</a>, but not much to take away from there.</p>
-<p>Otherwise I&rsquo;m in a Dhamma phase, with increased meditation, so I&rsquo;ve only been listening to Ajahn Amaro&rsquo;s daily reflections and the most recent talks by Ajahn Sumedho.</p>
-<p><a href="https://podcasts.apple.com/nl/podcast/amaravati-podcast-latest-dhamma-talks/id336829720">https://podcasts.apple.com/nl/podcast/amaravati-podcast-latest-dhamma-talks/id336829720</a></p>
-<h2 id="links">Links</h2>
-<h1 id="next-week">Next Week</h1>
-<p>The upcoming week has a few intersting events:</p>
-<ul>
-<li>Sabaton concert on Wednesday evening. Looking forward to that!</li>
-<li>Diablo 2 Resurrected Ladder season 3 starts on Thursday</li>
-<li>rwxrob&rsquo;s 2023 Beginner Boost starts on Thursday</li>
-</ul>
-<p>Other than that my main goals and intentions are:</p>
-<ul>
-<li><input disabled="" type="checkbox"> Sticking to the program</li>
-<li><input disabled="" type="checkbox"> 5 runs: 4 short 1 long</li>
-<li><input disabled="" type="checkbox"> Continue meditating 40-90 minutes a day</li>
-</ul>
-<h2 id="links-1">Links:</h2>
-<p>202304301004</p>
 ]]></content:encoded>
     </item>
     
