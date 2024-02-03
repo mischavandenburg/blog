@@ -2,7 +2,7 @@
 Title: My Plan For The D2R Ladder Reset
 date: 2023-05-04
 tags:
-- Gaming
+- Personal
 ---
 
 Diablo 2: one of those games in life I keep returning to. Started playing it when I was 12, and I know it inside out. Roughly once every 1,5 years I'll have a phase where I want to play some. 

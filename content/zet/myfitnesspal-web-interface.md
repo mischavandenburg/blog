@@ -3,7 +3,6 @@ title: Apps with web interfaces win any day, switching to MyFitnessPal
 date: 2023-10-01
 tags:
 - Health
-- Diet
 - weight-loss
 ---
 
