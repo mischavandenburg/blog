@@ -318,7 +318,7 @@
     </item>
     
     <item>
-      <title>MTG</title>
+      <title>mtg</title>
       <link>https://mischavandenburg.com/tags/mtg/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
       
@@ -333,26 +333,6 @@
       <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/book-notes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Article</title>
-      <link>https://mischavandenburg.com/tags/article/</link>
-      <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/article/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Gaming</title>
-      <link>https://mischavandenburg.com/tags/gaming/</link>
-      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/gaming/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -403,16 +383,6 @@
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/health/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Longevity</title>
-      <link>https://mischavandenburg.com/tags/longevity/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/longevity/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -538,6 +508,16 @@
     </item>
     
     <item>
+      <title>Article</title>
+      <link>https://mischavandenburg.com/tags/article/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/article/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>Finance</title>
       <link>https://mischavandenburg.com/tags/finance/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
@@ -573,6 +553,16 @@
       <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/blogging/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Gaming</title>
+      <link>https://mischavandenburg.com/tags/gaming/</link>
+      <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/gaming/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
