@@ -173,12 +173,6 @@
     <loc>https://mischavandenburg.com/zet/link-on-writing-for-yourself-in-public/</loc>
     <lastmod>2023-11-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/mtg-first-prerelease-ixalan/</loc>
-    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/mtg/</loc>
-    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/keda-ga/</loc>
     <lastmod>2023-11-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -242,16 +236,7 @@
     <loc>https://mischavandenburg.com/zet/azure-updates-sept-23/</loc>
     <lastmod>2023-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/back-from-vacation-2023/</loc>
-    <lastmod>2023-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/book-notes-eat-and-run/</loc>
-    <lastmod>2023-09-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</loc>
-    <lastmod>2023-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/running/</loc>
     <lastmod>2023-09-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/azure-exams-open-book/</loc>
@@ -263,21 +248,6 @@
     <loc>https://mischavandenburg.com/tags/weeknotes/</loc>
     <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/happiness/</loc>
-    <lastmod>2023-08-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/nutrition/</loc>
-    <lastmod>2023-08-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/plant-based/</loc>
-    <lastmod>2023-08-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/podcast-interview-100-year-old-vegan-marathoner/</loc>
-    <lastmod>2023-08-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/blending-vegetables/</loc>
-    <lastmod>2023-08-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/bicep/</loc>
     <lastmod>2023-08-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -287,15 +257,6 @@
     <loc>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</loc>
     <lastmod>2023-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/book-notes-finding-ultra-rich-roll/</loc>
-    <lastmod>2023-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/exercise/</loc>
-    <lastmod>2023-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/kipchoge-marathon-diet/</loc>
-    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/running-record-12km/</loc>
     <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -303,6 +264,9 @@
     <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/podcast-kipchoge-marathon-running/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/running/</loc>
     <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/ai/</loc>
@@ -332,13 +296,7 @@
     <loc>https://mischavandenburg.com/tags/article/</loc>
     <lastmod>2023-07-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/zet/book-notes-simple-path-to-wealth/</loc>
-    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/choosing-a-cloud-provider-and-specialization/</loc>
-    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/finance/</loc>
     <lastmod>2023-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/bicep-random-strings/</loc>
@@ -380,6 +338,9 @@
     <loc>https://mischavandenburg.com/zet/deploy-draft-azure/</loc>
     <lastmod>2023-06-09T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mischavandenburg.com/tags/exercise/</loc>
+    <lastmod>2023-05-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/zet/optimal-hydration/</loc>
     <lastmod>2023-05-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -399,6 +360,9 @@
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/8-simple-japanese-habits/</loc>
+    <lastmod>2023-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/happiness/</loc>
     <lastmod>2023-05-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/ai-does-not-grow-exponentially/</loc>
