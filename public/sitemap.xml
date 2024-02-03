@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mischavandenburg.com/tags/coding/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+    <loc>https://mischavandenburg.com/zet/test-for-video/</loc>
+    <lastmod>2024-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/hello/</loc>
+    <lastmod>2024-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/</loc>
+    <lastmod>2024-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/coding/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/macos/</loc>
@@ -17,16 +29,10 @@
     <loc>https://mischavandenburg.com/tags/productivity/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/video/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/aks/</loc>

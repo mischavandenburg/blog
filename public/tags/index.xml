@@ -6,7 +6,17 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hello</title>
+      <link>https://mischavandenburg.com/tags/hello/</link>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/hello/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Coding</title>
       <link>https://mischavandenburg.com/tags/coding/</link>

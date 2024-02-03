@@ -32,12 +32,8 @@ I use the [Obsidian Kindle Highlights plugin](https://github.com/hadynz/obsidian
 
 This is how I have my highlights pages set up:
 
-![](/kindle-highlights.png)
-
 
 And I adjusted my kindle highlights template, so it always surrounds the quote with quotation marks ". This makes it easier to filter out the quotes themselves:
-
-![](/kindle-template.png)
 
 Now that we have an understanding of the components of the script, let's walk through each step in more detail.
 

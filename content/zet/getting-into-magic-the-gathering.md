@@ -87,7 +87,7 @@ It is proving to be a wonderful bonding activity between me and him because in-b
 
 ## Links:
 
-[[magic-the-gathering]]
+[[Magic the Gathering]]
 
 [[mtg-drafting]]
 

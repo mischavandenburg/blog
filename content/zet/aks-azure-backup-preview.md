@@ -16,7 +16,7 @@ https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-
 
 202310130610
 
-[[aks]]
+[[AKS]]
 
 [[kubernetes]]
 

@@ -6,7 +6,21 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Test Title For My Blog Post</title>
+      <link>https://mischavandenburg.com/zet/test-for-video/</link>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/test-for-video/</guid>
+      <description>This is my blog post
+Links: 202401231901</description>
+      <content:encoded><![CDATA[<p>This is my blog post</p>
+<h2 id="links">Links:</h2>
+<p>202401231901</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Video: My Entire Neovim &#43; Tmux Workflow As A DevOps Engineer On MacOS</title>
       <link>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</link>
@@ -1078,7 +1092,7 @@ I went to Almere because a colleague is a regular participant of the events that
 <p>When I drove home I realized that I had expected to be very tired after the event but actually I noticed I felt quite energized because of all the learning and mental stimulation I received. This is definitely something I am going to explore more. Thank you Beeldverhaal Almere!</p>
 <h2 id="links">Links:</h2>
 <p>202311121011</p>
-<p>[[magic-the-gathering]]</p>
+<p>[[Magic the Gathering]]</p>
 ]]></content:encoded>
     </item>
     
@@ -1586,7 +1600,7 @@ I started reading up on the internet and then I discovered MTG Arena where you c
 <p>Lastly, my brother also started getting into Magic when I showed it to him. We&rsquo;re playing online games together now, and for the past few weeks we&rsquo;ve been meeting up and playing our LOTR starter decks against each other.</p>
 <p>It is proving to be a wonderful bonding activity between me and him because in-between matches we are having conversations and enjoying spending time with each other.</p>
 <h2 id="links">Links:</h2>
-<p>[[magic-the-gathering]]</p>
+<p>[[Magic the Gathering]]</p>
 <p>[[mtg-drafting]]</p>
 <p>202310142110</p>
 ]]></content:encoded>
@@ -1601,14 +1615,14 @@ I started reading up on the internet and then I discovered MTG Arena where you c
       <description>You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.
 https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup
 Links: 202310130610
-[[aks]]
+[[AKS]]
 [[kubernetes]]
 [[azure]]</description>
       <content:encoded><![CDATA[<p>You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.</p>
 <p><a href="https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup">https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup</a></p>
 <h2 id="links">Links:</h2>
 <p>202310130610</p>
-<p>[[aks]]</p>
+<p>[[AKS]]</p>
 <p>[[kubernetes]]</p>
 <p>[[azure]]</p>
 ]]></content:encoded>
@@ -3250,7 +3264,7 @@ https://youtu.be/WnA8V3uq7P8</description>
       <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
 Links: 202306271706
 https://www.youtube.com/watch?v=l0B65FUfNBU
-[[aks]] [[kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+[[AKS]] [[kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -3260,7 +3274,7 @@ https://www.youtube.com/watch?v=l0B65FUfNBU
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
 <p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
-<p>[[aks]]
+<p>[[AKS]]
 [[kubernetes]]
 [[neovim]]
 [[bicep]]

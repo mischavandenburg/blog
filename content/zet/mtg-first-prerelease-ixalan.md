@@ -34,4 +34,4 @@ When I drove home I realized that I had expected to be very tired after the even
 
 202311121011
 
-[[magic-the-gathering]]
+[[Magic the Gathering]]
