@@ -22,7 +22,7 @@ Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to
 https://www.youtube.com/watch?v=l0B65FUfNBU
 
 [[AKS]]
-[[kubernetes]]
+[[Kubernetes]]
 [[neovim]]
 [[bicep]]
 [[coding]]

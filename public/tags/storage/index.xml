@@ -34,7 +34,7 @@ PVCs: These are requests for storage, akin to how Pods request resources like CP
 </ul>
 <h2 id="links">Links:</h2>
 <p>202401180901</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 <p>[[storage]]</p>
 ]]></content:encoded>
     </item>

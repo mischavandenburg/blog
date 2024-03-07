@@ -93,7 +93,7 @@ https://sre.google/books/
 
 [[devops]]
 
-[[kubernetes]]
+[[Kubernetes]]
 
 [[cloud-native]]
 

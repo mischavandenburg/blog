@@ -34,7 +34,7 @@ PVCs: These are requests for storage, akin to how Pods request resources like CP
 </ul>
 <h2 id="links">Links:</h2>
 <p>202401180901</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 <p>[[storage]]</p>
 ]]></content:encoded>
     </item>
@@ -823,7 +823,7 @@ cnp is a kubectl plugin which you need to install to manage the EDB operator --r
 <p>Then delete the PVC of the problematic pod. This should trigger a new replica to be created from scratch. Depending on the size of the DB it can take a lot of time.</p>
 <h2 id="links">Links:</h2>
 <p>202310171410</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 ]]></content:encoded>
     </item>
     
@@ -837,14 +837,14 @@ cnp is a kubectl plugin which you need to install to manage the EDB operator --r
 https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup
 Links: 202310130610
 [[AKS]]
-[[kubernetes]]
+[[Kubernetes]]
 [[azure]]</description>
       <content:encoded><![CDATA[<p>You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.</p>
 <p><a href="https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup">https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup</a></p>
 <h2 id="links">Links:</h2>
 <p>202310130610</p>
 <p>[[AKS]]</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 <p>[[azure]]</p>
 ]]></content:encoded>
     </item>
@@ -933,7 +933,7 @@ spec:
     - hello.mischavandenburg.com
 </code></pre><h2 id="links">Links:</h2>
 <p>202310121310</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 ]]></content:encoded>
     </item>
     
@@ -954,7 +954,7 @@ Preview Public preview: AKS support for Kubernetes version 1.28
 https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/
 Links: 202309281009
 [[azure]]
-[[kubernetes]]</description>
+[[Kubernetes]]</description>
       <content:encoded><![CDATA[<p>Yesterday a few interesting AKS related features became Generally Available on Azure.</p>
 <p>KEDA add-on makes it easier to scale your applications on AKS cluster.</p>
 <p><a href="https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/">https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/</a></p>
@@ -968,7 +968,7 @@ Links: 202309281009
 <h2 id="links">Links:</h2>
 <p>202309281009</p>
 <p>[[azure]]</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 ]]></content:encoded>
     </item>
     
@@ -991,7 +991,7 @@ If a deployment has a pod disruption budget which is incorrectly configured, it 
 <p>However, one solution is to either kill the pod manually or scale up the deployment to more replicas so there will be a higher amount of allowed disruptions.</p>
 <h2 id="links">Links:</h2>
 <p>202309271809</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 <p>[[azure]]</p>
 ]]></content:encoded>
     </item>
@@ -1134,7 +1134,7 @@ https://youtu.be/WnA8V3uq7P8</description>
       <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
 Links: 202306271706
 https://www.youtube.com/watch?v=l0B65FUfNBU
-[[AKS]] [[kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+[[AKS]] [[Kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -1145,7 +1145,7 @@ https://www.youtube.com/watch?v=l0B65FUfNBU
 <p>202306271706</p>
 <p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
 <p>[[AKS]]
-[[kubernetes]]
+[[Kubernetes]]
 [[neovim]]
 [[bicep]]
 [[coding]]</p>
@@ -1183,7 +1183,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 <p>[[AKS]]
 [[bicep]]
 [[coding]]
-[[kubernetes]]
+[[Kubernetes]]
 [[azure]]
 [[neovim]]</p>
 ]]></content:encoded>
@@ -1345,7 +1345,7 @@ There are a few reasons why I haven&amp;rsquo;t started up until now:</descripti
 <p>[[homelab-network]]</p>
 <p>[[linux]]</p>
 <p>[[homelab-ubuntu-server]]</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 ]]></content:encoded>
     </item>
     
@@ -1585,7 +1585,7 @@ High Performance Computing</description>
 <p><a href="https://sre.google/books/">https://sre.google/books/</a></p>
 <p>[[rwxrob]]</p>
 <p>[[devops]]</p>
-<p>[[kubernetes]]</p>
+<p>[[Kubernetes]]</p>
 <p>[[cloud-native]]</p>
 <p>[[cncf]]</p>
 ]]></content:encoded>

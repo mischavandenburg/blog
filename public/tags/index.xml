@@ -6,7 +6,17 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book-Notes</title>
+      <link>https://mischavandenburg.com/tags/book-notes/</link>
+      <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/book-notes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Coding</title>
       <link>https://mischavandenburg.com/tags/coding/</link>
@@ -318,17 +328,7 @@
     </item>
     
     <item>
-      <title>Book-Notes</title>
-      <link>https://mischavandenburg.com/tags/book-notes/</link>
-      <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/book-notes/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>notetaking</title>
+      <title>Notetaking</title>
       <link>https://mischavandenburg.com/tags/notetaking/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       
@@ -338,7 +338,7 @@
     </item>
     
     <item>
-      <title>second-brain</title>
+      <title>Second-Brain</title>
       <link>https://mischavandenburg.com/tags/second-brain/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       
@@ -363,16 +363,6 @@
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/health/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>weight-loss</title>
-      <link>https://mischavandenburg.com/tags/weight-loss/</link>
-      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/weight-loss/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

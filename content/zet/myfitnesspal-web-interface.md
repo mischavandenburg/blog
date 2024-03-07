@@ -3,7 +3,6 @@ title: Apps with web interfaces win any day, switching to MyFitnessPal
 date: 2023-10-01
 tags:
 - Health
-- weight-loss
 ---
 
 Recently I was comparing apps for navigation (TopoGPS and Outdooractive). Both apps are great, but the main perk of Outdooractive is that it has a web interface. You can plan routes from your computer and access them on the iPhone app, but TopoGPS is on the iPhone only.

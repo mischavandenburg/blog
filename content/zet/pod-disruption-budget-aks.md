@@ -29,6 +29,6 @@ However, one solution is to either kill the pod manually or scale up the deploym
 
 202309271809
 
-[[kubernetes]]
+[[Kubernetes]]
 
 [[azure]]

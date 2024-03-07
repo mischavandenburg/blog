@@ -30,6 +30,6 @@ The Reclaim Policy on a PV dictates its fate after a PVC is released. There are 
 
 202401180901
 
-[[kubernetes]]
+[[Kubernetes]]
 
 [[storage]]

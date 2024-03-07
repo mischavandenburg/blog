@@ -1,11 +1,18 @@
 ---
 Title: A List Of All The Books I Have Read In My Life
-date: 2023-10-28
+date: 2024-02-20
 tags:
 - Book-Notes
 ---
 
 I'm an avid reader, and this list is far from complete. But I wanted to start writing down the ones I'm reading now, and the ones I've read in the past. I'm mostly writing down titles but I'll include the author when I remember the name. 
+
+# 2024
+
+How To Take Smart Notes
+
+Getting Things Done
+
 
 # 2023
 

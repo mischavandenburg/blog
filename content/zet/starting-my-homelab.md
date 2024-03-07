@@ -111,7 +111,7 @@ Another realization was that I don't need to have everything figured out before 
 
 [[homelab-ubuntu-server]]
 
-[[kubernetes]]
+[[Kubernetes]]
 
 
 

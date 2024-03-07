@@ -57,7 +57,7 @@ I feel very fortunate that I succeeded at turning my passion into my career. The
 
 https://hubermanlab.com/leverage-dopamine-to-overcome-procrastination-and-optimize-effort/
 
-[[my ikigai and flow]]
+[[My Ikigai]]
 
 [[coding]]
 

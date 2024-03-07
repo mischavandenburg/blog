@@ -48,4 +48,4 @@ Then delete the PVC of the problematic pod. This should trigger a new replica to
 
 202310171410
 
-[[kubernetes]]
+[[Kubernetes]]

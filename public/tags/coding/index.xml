@@ -441,7 +441,7 @@ https://youtu.be/WnA8V3uq7P8</description>
       <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
 Links: 202306271706
 https://www.youtube.com/watch?v=l0B65FUfNBU
-[[AKS]] [[kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+[[AKS]] [[Kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -452,7 +452,7 @@ https://www.youtube.com/watch?v=l0B65FUfNBU
 <p>202306271706</p>
 <p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
 <p>[[AKS]]
-[[kubernetes]]
+[[Kubernetes]]
 [[neovim]]
 [[bicep]]
 [[coding]]</p>
@@ -490,7 +490,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 <p>[[AKS]]
 [[bicep]]
 [[coding]]
-[[kubernetes]]
+[[Kubernetes]]
 [[azure]]
 [[neovim]]</p>
 ]]></content:encoded>

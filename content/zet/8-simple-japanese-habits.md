@@ -53,7 +53,7 @@ This is absolutely true. I get up at 6 every day. At 10pm I usually start windin
 
 https://www.youtube.com/watch?v=04wZNnjdURE
 
-[[my ikigai and flow]]
+[[My Ikigai]]
 
 [[invest-in-experiences-for-happiness]]
 

@@ -39,6 +39,6 @@ https://github.com/mischavandenburg/lab/tree/main/bicep/keyvault-parameters
 [[AKS]]
 [[bicep]]
 [[coding]]
-[[kubernetes]]
+[[Kubernetes]]
 [[azure]]
 [[neovim]]
