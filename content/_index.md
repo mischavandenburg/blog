@@ -19,10 +19,10 @@ This blog is also available for your preferred RSS reader. Use [this link.](http
 
 | Places Online You Can Find Me |
 | --- | --- |
-| [GitHub](https://github.com/mischavandenburg/) | [LinkedIn](https://www.linkedin.com/in/mischavandenburg) |
-| [X](https://twitter.com/mischa_vdburg) | [Instagram](https://www.instagram.com/mischavandenburg) |
+| [My Skool Community](https://mischavandenburg.com/skool) | [LinkedIn](https://www.linkedin.com/in/mischavandenburg) |
+| [GitHub](https://github.com/mischavandenburg/) | [X](https://twitter.com/mischa_vdburg) |
 | [YouTube Channel](https://www.youtube.com/channel/UCDAck-gFPTrgTx_qp59-bQA) | [RSS Feed](https://mischavandenburg.com/index.xml) |
-| [Strava](https://www.strava.com/athletes/116768345) | [Personal Blog](https://mischavandenburg.blog) |
+| [Instagram](https://www.instagram.com/mischavandenburg) | [Personal Blog](https://mischavandenburg.blog) |
 | [Mastodon](https://toot.community/@mischavandenburg) | [Ko-fi](https://ko-fi.com/mischavandenburg) |
 
 # Most Recent Posts:
