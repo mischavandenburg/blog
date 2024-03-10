@@ -6,7 +6,18 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All Articles</title>
+      <link>https://mischavandenburg.com/zet/articles/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/</guid>
+      <description>These are long form articles.</description>
+      <content:encoded><![CDATA[<p>These are long form articles.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Using Hugo for Redirecting URLS</title>
       <link>https://mischavandenburg.com/zet/hugo-redirects/</link>
@@ -4113,17 +4124,6 @@ High Performance Computing</description>
 <p>[[Kubernetes]]</p>
 <p>[[cloud-native]]</p>
 <p>[[cncf]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>All Articles</title>
-      <link>https://mischavandenburg.com/zet/articles/</link>
-      <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/articles/</guid>
-      <description>These are long form articles.</description>
-      <content:encoded><![CDATA[<p>These are long form articles.</p>
 ]]></content:encoded>
     </item>
     

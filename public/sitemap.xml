@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mischavandenburg.com/zet/articles/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/article/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/azure/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/networking/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/blogging/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/hugo-redirects/</loc>
-    <lastmod>2024-03-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2024-03-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/books-i-have-read/</loc>
@@ -42,12 +60,6 @@
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/aks/</loc>
-    <lastmod>2024-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/azure/</loc>
-    <lastmod>2024-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</loc>
@@ -78,9 +90,6 @@
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/cilium-network-policies/</loc>
-    <lastmod>2024-01-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/networking/</loc>
     <lastmod>2024-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/homelab-network-design/</loc>
@@ -290,9 +299,6 @@
     <loc>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</loc>
     <lastmod>2023-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/article/</loc>
-    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/choosing-a-cloud-provider-and-specialization/</loc>
     <lastmod>2023-07-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -469,9 +475,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/articles/</loc>
-    <lastmod>2023-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</loc>
     <lastmod>2023-03-25T00:00:00+00:00</lastmod>

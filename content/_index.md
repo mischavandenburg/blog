@@ -7,15 +7,11 @@ This is my public Zettelkasten where I publish notes about the topics that inter
 
 Here I share thoughts and learnings about technical topics such as Microsoft Azure, Kubernetes, Cloud Native technologies, DevOps and Linux.
 
-These are the most used tags on this website:
-
-{{< most_used_tags >}}
-<br>
+I also run a [Skool Community](https://mischavandenburg.com/skool) which you can check out if you want to learn from me or get in touch with me directly.
 
 If this is your first time here, or if you'd like to know more about me and how I've set up this blog, I suggest you visit the [Start Here](/aboutme) page.
 
 This blog is also available for your preferred RSS reader. Use [this link.](https://mischavandenburg.com/index.xml)
-
 
 | Places Online You Can Find Me |
 | --- | --- |
