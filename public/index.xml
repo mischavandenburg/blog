@@ -6,7 +6,125 @@
     <description>Recent content in Home on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparing akv2k8s with Azure Key Vault Provider for Secret Store CSI Driver</title>
+      <link>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</guid>
+      <description>In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.
+Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges.</description>
+      <content:encoded><![CDATA[<p>In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.</p>
+<p>Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges. Notably, the latest version of akv2k8s has been problematic, especially concerning the deployment of Postgres databases on our AKS clusters using the EDB operator. Akv2k8s alters the SecurityContext of pods in a way that causes them to fail.</p>
+<p>Furthermore, upgrading akv2k8s to the latest version necessitates a transition to Workload Identity due to the deprecation of aad-pod-identity, a move that promises to be complex. Conversely, the Azure Key Vault Provider, directly offered by Microsoft, allows continued use of Managed Identities for authentication to Key Vaults, simplifying the integration process.</p>
+<p><a href="https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/configurations/identity-access-modes/">https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/configurations/identity-access-modes/</a></p>
+<h1 id="azure-key-vault-provider-for-secret-store-csi-driver">Azure Key Vault Provider for Secret Store CSI Driver</h1>
+<p>The Azure Key Vault Provider for Secret Store CSI Driver is the solution for syncing secrets offered by Microsoft Azure. It is based on the <a href="https://github.com/kubernetes-sigs/secrets-store-csi-driver">kubernetes-sigs/secrets-store-csi-driver</a>.</p>
+<h1 id="installation--maintenance">Installation &amp; Maintenance</h1>
+<p>The addon is installed with an Azure CLI command or from the portal for existing clusters. The addon can also be enabled from code when deploying a new cluster.</p>
+<p>The addon is automatically updated when an AKS upgrade to a new minor version is performed. <strong>Maintenance of the secret synching solution will not be required anymore and is handled by Azure Kubernetes Service.</strong></p>
+<p>If an emergency update is necessary, outside of the normal upgrade schedule, it can be updated with the Azure CLI as follows:</p>
+<p><code>az aks addon update --addon virtual-node --name MyManagedCluster --resource-group MyResourceGroup --subnet-name VirtualNodeSubnet</code></p>
+<p>Addons can also be patched by upgrading to the latest AKS node image.</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/aks/integrations">https://learn.microsoft.com/en-us/azure/aks/integrations</a>
+<a href="https://learn.microsoft.com/en-gb/azure/aks/node-image-upgrade">https://learn.microsoft.com/en-gb/azure/aks/node-image-upgrade</a></p>
+<h1 id="comparison">Comparison</h1>
+<h2 id="benefits-of-using-the-official-solution">Benefits Of Using The Official Solution</h2>
+<ul>
+<li>The tool is built and maintained by Microsoft and an integral part of the AKS offering</li>
+<li>Authentication using a managed identity is supported out of the box</li>
+<li>Supports RBAC based authentication on Key Vaults</li>
+<li>Automatically updated when performing AKS upgrades</li>
+<li>One less component for us to maintain</li>
+<li>Can run alongside akv2k8s</li>
+<li>We can implement automatic secret rotation</li>
+<li>We are not dependent on an external project for our secrets management</li>
+<li>Does not require an initcontainer to inject secrets</li>
+</ul>
+<h2 id="cons">Cons</h2>
+<ul>
+<li>Will take work to migrate all applications</li>
+</ul>
+<h1 id="migration-guide">Migration Guide</h1>
+<p>Steps that describe how to migrate from the use of akv2k8s to the CSI drivers.</p>
+<ul>
+<li>enable the addon using the Azure CLI</li>
+</ul>
+<p><code>az aks enable-addons --addons azure-keyvault-secrets-provider --name aks-vo-dcp-dev --resource-group rg-vo-dcp-aks-dev-weu-001</code></p>
+<p>This does not restart any existing pods or nodes, thus it does not impact the running setup. akv2k8s and the AKV Provider can run simultaneously on the cluster and the workloads can be migrated one by one.</p>
+<p>Enabling the addon creates a Managed Identity. This Managed Identity needs to get the Key Vault Administrator role on the desired Key Vault to be able to retrieve Secrets.</p>
+<p>To import the secrets, a SecretProviderClass resource is created:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store.csi.x-k8s.io/v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">SecretProviderClass</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">azure-sync</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l">azure</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">parameters</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">usePodIdentity</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;false&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">useVMManagedIdentity</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;true&#34;</span><span class="w"> </span><span class="c"># Set to true for using managed identity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">userAssignedIdentityID</span><span class="p">:</span><span class="w"> </span><span class="l">ceb19a0a-941a-4f33-839d-aeace8ffe205</span><span class="w"> </span><span class="c"># Set the clientID of the user-assigned managed identity to use</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">KeyvaultName</span><span class="p">:</span><span class="w"> </span><span class="l">mischakv01</span><span class="w"> </span><span class="c"># Set to the name of your Key Vault</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">cloudName</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="c"># [OPTIONAL for Azure] if not provided, the Azure environment defaults to AzurePublicCloud</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">objects</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">      array:
+</span></span></span><span class="line"><span class="cl"><span class="sd">        - |
+</span></span></span><span class="line"><span class="cl"><span class="sd">          objectName: ExampleSecret
+</span></span></span><span class="line"><span class="cl"><span class="sd">          objectType: secret              # object types: secret, key, or cert
+</span></span></span><span class="line"><span class="cl"><span class="sd">          objectVersion: &#34;&#34;               # [OPTIONAL] object versions, default to latest if empty
+</span></span></span><span class="line"><span class="cl"><span class="sd">        - |
+</span></span></span><span class="line"><span class="cl"><span class="sd">          objectName: env-secret
+</span></span></span><span class="line"><span class="cl"><span class="sd">          objectType: secret              # object types: secret, key, or cert</span><span class="w">      
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="l">d62ada1b-ca42-4fe2-b9e7-ceb843af0ad</span><span class="w"> </span><span class="c"># The tenant ID of the key vault</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">secretObjects</span><span class="p">:</span><span class="w"> </span><span class="c"># [OPTIONAL] SecretObjects defines the desired state of synced Kubernetes secret objects</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">data</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">username</span><span class="w"> </span><span class="c"># data field to populate</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">objectName</span><span class="p">:</span><span class="w"> </span><span class="l">env-secret</span><span class="w"> </span><span class="c"># name of the mounted content to sync; this could be the object name or the object alias</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l">foosecret</span><span class="w"> </span><span class="c"># name of the Kubernetes secret object</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">Opaque</span><span class="w"> </span><span class="c"># type of Kubernetes secret object (for example, Opaque, kubernetes.io/tls)</span><span class="w">
+</span></span></span></code></pre></div><p>The secret is then mounted in to the container during deployment.</p>
+<p>See this pod example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Pod</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">busybox-secrets-store-inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">busybox</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">registry.k8s.io/e2e-test-images/busybox:1.29-1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;/bin/sleep&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="s2">&#34;10000&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store01-inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/mnt/secrets-store&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">SECRET_USERNAME</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">secretKeyRef</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">foosecret</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">username</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store01-inline</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">csi</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">secrets-store.csi.k8s.io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">volumeAttributes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">secretProviderClass</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;azure-sync&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>In this example the secret is accessible as a text file at /mnt/secrets-store inside the container. It is also made available as an environment variable SECRET_USERNAME.</p>
+<p>The applications on our platform are already using environment variables when using akv2k8s.</p>
+<p>The application helm charts will need to be updated with the new SecredProviderClass, but the applications themselves don&rsquo;t need any changes. They will need to be redeployed with the updated configuration though.</p>
+<p>Another note is that the secret must always be mounted even it is only used as an environment variable.</p>
+<h1 id="conclusions">Conclusions</h1>
+<p>Migrating to the Azure Key Vault Provider for Secret Store CSI Driver presents no disadvantages. There will be one less component to maintain, and it will always be compatible with the AKS offering.</p>
+<p>It will require some work to convert the current workloads to use the CSI driver, but this is a one-time action which will not affect the applications while they are running. On the long term, this will pay itself back, because there is one less component to maintain.</p>
+<h2 id="links">Links:</h2>
+<p>202403111503</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Kubernetes Gateway API &amp; Azure Application Gateway for Containers</title>
       <link>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</link>

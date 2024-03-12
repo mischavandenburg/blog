@@ -6,11 +6,21 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AKS</title>
+      <link>https://mischavandenburg.com/tags/aks/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/aks/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Article</title>
       <link>https://mischavandenburg.com/tags/article/</link>
-      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/article/</guid>
       <description></description>
@@ -20,7 +30,7 @@
     <item>
       <title>Azure</title>
       <link>https://mischavandenburg.com/tags/azure/</link>
-      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/azure/</guid>
       <description></description>
@@ -30,9 +40,19 @@
     <item>
       <title>Kubernetes</title>
       <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://mischavandenburg.com/tags/security/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/security/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -113,16 +133,6 @@
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/video/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>AKS</title>
-      <link>https://mischavandenburg.com/tags/aks/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/aks/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -253,16 +263,6 @@
       <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/grafana/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://mischavandenburg.com/tags/security/</link>
-      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/security/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

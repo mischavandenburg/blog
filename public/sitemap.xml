@@ -2,31 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mischavandenburg.com/tags/aks/</loc>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/zet/articles/</loc>
-    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/article/</loc>
-    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>
-    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</loc>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
-    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/security/</loc>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</loc>
     <lastmod>2024-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/networking/</loc>
-    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2024-03-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/blogging/</loc>
@@ -58,9 +67,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/aks/</loc>
-    <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
@@ -129,9 +135,6 @@
     <lastmod>2023-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</loc>
-    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/security/</loc>
     <lastmod>2023-12-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/video-strava-grafana/</loc>
