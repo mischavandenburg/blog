@@ -6,7 +6,37 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blogging</title>
+      <link>https://mischavandenburg.com/tags/blogging/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/blogging/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>MacOS</title>
+      <link>https://mischavandenburg.com/tags/macos/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/macos/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Obsidian</title>
+      <link>https://mischavandenburg.com/tags/obsidian/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/obsidian/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>AKS</title>
       <link>https://mischavandenburg.com/tags/aks/</link>
@@ -68,16 +98,6 @@
     </item>
     
     <item>
-      <title>Blogging</title>
-      <link>https://mischavandenburg.com/tags/blogging/</link>
-      <pubDate>Thu, 07 Mar 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/blogging/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>Book-Notes</title>
       <link>https://mischavandenburg.com/tags/book-notes/</link>
       <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
@@ -93,16 +113,6 @@
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/coding/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>MacOS</title>
-      <link>https://mischavandenburg.com/tags/macos/</link>
-      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/macos/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

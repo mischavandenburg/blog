@@ -6,7 +6,26 @@
     <description>Recent content in Blogging on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remove Backgrounds from Images using MacOS Preview</title>
+      <link>https://mischavandenburg.com/zet/remove-background-image-macos/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/remove-background-image-macos/</guid>
+      <description>Removing backgrounds from images is always an annoying task which I always need to google. And every time I end up on a different website where you can upload an image and then download a low-resolution version without the background, and you&amp;rsquo;ll have to pay for the high-resolution.
+Turns out MacOS preview can do this just fine. I keep finding these little gems in MacOS that completely remove the need for any external app or saas.</description>
+      <content:encoded><![CDATA[<p>Removing backgrounds from images is always an annoying task which I always need to google. And every time I end up on a different website where you can upload an image and then download a low-resolution version without the background, and you&rsquo;ll have to pay for the high-resolution.</p>
+<p>Turns out MacOS preview can do this just fine. I keep finding these little gems in MacOS that completely remove the need for any external app or saas. Such as Apple Reminders.</p>
+<p>It worked really well</p>
+<h2 id="links">Links:</h2>
+<p><a href="https://support.apple.com/guide/preview/extract-an-image-or-remove-a-background-prvw15636/mac#:~:text=Remove%20the%20background%20from%20an%20image%201%20In,you%20have%20the%20image%20you%20want.%20See%20More">https://support.apple.com/guide/preview/extract-an-image-or-remove-a-background-prvw15636/mac#:~:text=Remove%20the%20background%20from%20an%20image%201%20In,you%20have%20the%20image%20you%20want.%20See%20More</a>.</p>
+<p>202403220803</p>
+<p>[[Visual Thinking]]
+[[obsidian]]</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Using Hugo for Redirecting URLS</title>
       <link>https://mischavandenburg.com/zet/hugo-redirects/</link>
