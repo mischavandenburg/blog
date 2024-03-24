@@ -7,7 +7,7 @@ tags:
 - Security
 ---
 
-It seems like I will have a couple of hours a day which I can allot to study in the coming month. This will be the perfect moment to start working on a goal I've had for a long time: getting my Certified Kubernetes Security Specialist certification. 
+It seems like I will have a couple of hours a day which I can allot to study in the coming month. This will be the perfect moment to start working on a goal I've had for a long time: getting my Certified Kubernetes Security Specialist certification.
 
 t's not going to be easy. I'm quite intimidated by all of the new things I'll have to learn. But that's a good sign. It's the way it works. Everybody would be doing this if it was easy, and I can only grow by doing hard things that seem intimidating at first.
 
