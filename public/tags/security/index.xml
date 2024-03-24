@@ -6,7 +6,34 @@
     <description>Recent content in Security on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Starting my CKS studies</title>
+      <link>https://mischavandenburg.com/zet/starting-cks-studies/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/starting-cks-studies/</guid>
+      <description>It seems like I will have a couple of hours a day which I can allot to study in the coming month. This will be the perfect moment to start working on a goal I&amp;rsquo;ve had for a long time: getting my Certified Kubernetes Security Specialist certification.
+t&amp;rsquo;s not going to be easy. I&amp;rsquo;m quite intimidated by all of the new things I&amp;rsquo;ll have to learn. But that&amp;rsquo;s a good sign.</description>
+      <content:encoded><![CDATA[<p>It seems like I will have a couple of hours a day which I can allot to study in the coming month. This will be the perfect moment to start working on a goal I&rsquo;ve had for a long time: getting my Certified Kubernetes Security Specialist certification.</p>
+<p>t&rsquo;s not going to be easy. I&rsquo;m quite intimidated by all of the new things I&rsquo;ll have to learn. But that&rsquo;s a good sign. It&rsquo;s the way it works. Everybody would be doing this if it was easy, and I can only grow by doing hard things that seem intimidating at first.</p>
+<h2 id="game-plan">Game Plan</h2>
+<ol>
+<li>Work through this 11 hour course:</li>
+</ol>
+<p><a href="https://www.youtube.com/watch?v=d9xfB5qaOfg&amp;t=3921s&amp;pp=ygUKY2tzIGNvdXJzZQ%3D%3D">https://www.youtube.com/watch?v=d9xfB5qaOfg&amp;t=3921s&amp;pp=ygUKY2tzIGNvdXJzZQ%3D%3D</a></p>
+<p>Now that I have a good homelab setup, I can also put things into practice much more conveniently. So, I&rsquo;ll make a rule for myself not to move to new chapters of the course until I have done extensive practice for the module and I feel I have it &ldquo;in the fingers&rdquo;.</p>
+<ol start="2">
+<li>Do practical exercises on RBAC and Network Policies every single day on Killercoda. These are my weakest points currently, and they will improve my security awareness on my own clusters but they will also be good ways to score points on the exam</li>
+</ol>
+<p>I&rsquo;m also planning to do live streams of my studies. One thing that kept me from streaming is that I cannot stream when I am watching courses. But as this course is published on YouTube, I won&rsquo;t get into copyright trouble. Secondly, I always thought that the chat would be distracting. But apparently non-interactive streaming is also a thing, and some people are content with just watching someone do their thing.</p>
+<p>We&rsquo;ll see, if anything it will be an interesting way to document my own learning on my YouTube channel. And it may also lead to surprises. Sometimes people in the chat are very helpful and they might even help me understand things better.</p>
+<p>Let&rsquo;s go!</p>
+<h2 id="links">Links:</h2>
+<p>202403241903</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Comparing akv2k8s with Azure Key Vault Provider for Secret Store CSI Driver</title>
       <link>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</link>
