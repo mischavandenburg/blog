@@ -6,7 +6,30 @@
     <description>Recent content in Study on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I&#39;m better at Network Policies than I thought</title>
+      <link>https://mischavandenburg.com/zet/im-better-at-network-policies-than-i-thought/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/im-better-at-network-policies-than-i-thought/</guid>
+      <description>There are two things which I&amp;rsquo;m dreading most for the CKS exam: writing Network Policies and configuring RBAC under heavy time pressure.
+I&amp;rsquo;ve heard from colleagues that the exam has many questions of this nature, so it will be a good way of scoring points. However, regardless of the exam, the fact that I&amp;rsquo;m dreading these topics also shows that I&amp;rsquo;m not familiar enough with them and therefore this is a point where I should improve.</description>
+      <content:encoded><![CDATA[<p>There are two things which I&rsquo;m dreading most for the CKS exam: writing Network Policies and configuring RBAC under heavy time pressure.</p>
+<p>I&rsquo;ve heard from colleagues that the exam has many questions of this nature, so it will be a good way of scoring points. However, regardless of the exam, the fact that I&rsquo;m dreading these topics also shows that I&rsquo;m not familiar enough with them and therefore this is a point where I should improve. It&rsquo;s not only about the exam, but also my growth of expertise as a Kubernetes Engineer.</p>
+<p>With the help of <a href="https://networkpolicy.io/">https://networkpolicy.io/</a> I&rsquo;ve created CiliumNetworkpolicies for my homelab and the publically available stuff is pretty well secured. It&rsquo;s not that I don&rsquo;t understand them, but I haven&rsquo;t practiced them enough to do them without having to spend a lot of time or relying on external tools. And the time pressure is the biggest challenge for the CKA / CKS exams.</p>
+<p>For the weeks in my preparation of the CKS exam I will do Network Policy and RBAC exercises on Killercoda every day. They have multiple scenarios for the CKS, but also CKA and CKAD so there are a few things I can practice every day. I&rsquo;m told that when I can solve these without problems, I know enough to do the exam questions without problem.</p>
+<h2 id="better-than-i-thought">Better than I thought</h2>
+<p>I <a href="https://youtube.com/live/1NJTM2ocdtM?feature=share">streamed my first 3 hour study session live</a> and after I worked through the video module about Network Policies I went ahead and tackled the practical scenarios.</p>
+<p>To my great surprise I was able to solve them without much trouble! I was slow and needed to talk myself through the code a few times, but I did manage to solve all of the challenges for the CKS on Killercoda. There was never a point where I was unsure of what to do, or a problem I couldn&rsquo;t fix.</p>
+<p>This was quite an eye opening experience because I had expected some weeks of struggle with this. Perhaps I&rsquo;m better at this stuff than I give myself credit for. In any case, I am still going to do daily practice with these scenarios and possibly thinking of a few of my own when I run out of Killercoda practice.</p>
+<p>Even though I managed to solve the challenges during this first round, being in an exam under heavy time pressure and feeling nervous is going to be a completely different experience. So I want to get this down to the point where I hardly have to think about it any more, I need to master these questions so I can spend my time on the big questions.</p>
+<p>This experience has me wondering how RBAC is going to go. We&rsquo;ll find out soon enough!</p>
+<h2 id="links">Links:</h2>
+<p>202403250703</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Starting my CKS studies</title>
       <link>https://mischavandenburg.com/zet/starting-cks-studies/</link>

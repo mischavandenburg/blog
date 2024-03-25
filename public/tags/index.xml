@@ -6,13 +6,33 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes</title>
       <link>https://mischavandenburg.com/tags/kubernetes/</link>
-      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/kubernetes/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://mischavandenburg.com/tags/networking/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/networking/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Study</title>
+      <link>https://mischavandenburg.com/tags/study/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/study/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -23,16 +43,6 @@
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/security/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Study</title>
-      <link>https://mischavandenburg.com/tags/study/</link>
-      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/study/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -93,16 +103,6 @@
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/azure/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Networking</title>
-      <link>https://mischavandenburg.com/tags/networking/</link>
-      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/networking/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
