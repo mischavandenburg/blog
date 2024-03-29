@@ -2,8 +2,9 @@
 title: Home
 ---
 
-Welcome to my website. I’m Mischa, a Cloud Engineer from Amsterdam.
-This is my public Zettelkasten where I publish notes about the topics that interest me.
+# Living on the Command Line
+
+Welcome to my website. I’m Mischa, a Cloud Native Engineer from Amsterdam.
 
 Here I share thoughts and learnings about technical topics such as Microsoft Azure, Kubernetes, Cloud Native technologies, DevOps and Linux.
 
@@ -18,7 +19,7 @@ This blog is also available for your preferred RSS reader. Use [this link.](http
 | [My Skool Community](https://mischavandenburg.com/skool) | [LinkedIn](https://www.linkedin.com/in/mischavandenburg) |
 | [GitHub](https://github.com/mischavandenburg/) | [X](https://twitter.com/mischa_vdburg) |
 | [YouTube Channel](https://www.youtube.com/channel/UCDAck-gFPTrgTx_qp59-bQA) | [RSS Feed](https://mischavandenburg.com/index.xml) |
-| [Instagram](https://www.instagram.com/mischavandenburg) | [Personal Blog](https://mischavandenburg.blog) |
+| [Public Zettelkasten](https://zettelkasten.mischavandenburg.net) | [Personal Blog](https://mischavandenburg.blog) |
 | [Mastodon](https://toot.community/@mischavandenburg) | [Ko-fi](https://ko-fi.com/mischavandenburg) |
 
 # Most Recent Posts:

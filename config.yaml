@@ -17,8 +17,8 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Mischa's Blog & Public Zettelkasten
-  description: "My public Zettelkasten where I publish the notes I write about the topics that interest me."
+  title: Mischa van den Burg - Blog
+  description: "Writing about the things I learn in my Cloud Native work: Kubernetes, Azure, Vim, Linux, Coding, Productivity"
   keywords:
     [
       Blog,
@@ -127,8 +127,8 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: Start Here
-      name: "Start Here"
+    - identifier: About
+      name: "About"
       url: /aboutme/
       weight: 10
     # - identifier: Current
@@ -139,8 +139,8 @@ menu:
       name: Tags
       url: /tags/
       weight: 20
-    - identifier: "Index (Zet)"
-      name: "Index (Zet)"
+    - identifier: "Index"
+      name: "Index"
       url: /archives/
       weight: 30
     - identifier: "Articles"
