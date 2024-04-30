@@ -27,7 +27,7 @@ Remember, noble layperson, the path to liberation extends beyond the mere satisf
 
 202306281806
 
-[[health]]
+[[Health]]
 [[buddhist-practice]]
 [[use hunger as awareness practice]]
 [[its-not-working-if-not-hungry]]

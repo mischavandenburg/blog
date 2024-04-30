@@ -123,6 +123,6 @@ In the next article I'll add data sources and authorize teams to data sources an
 
 202311171711
 
-[[azure]]
+[[Azure]]
 
 [[grafana]]

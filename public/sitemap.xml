@@ -2,10 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mischavandenburg.com/zet/alleviating-confusion-about-the-to-field-in-network-policies/</loc>
-    <lastmod>2024-03-25T00:00:00+00:00</lastmod>
+    <loc>https://mischavandenburg.com/zet/articles/</loc>
+    <lastmod>2024-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/article/</loc>
+    <lastmod>2024-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/articles/building-multiple-docker-images-using-automatic-versioning-using-github-actions/</loc>
+    <lastmod>2024-04-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/</loc>
+    <lastmod>2024-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/alleviating-confusion-about-the-to-field-in-network-policies/</loc>
     <lastmod>2024-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/im-better-at-network-policies-than-i-thought/</loc>
@@ -18,12 +33,6 @@
     <lastmod>2024-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/study/</loc>
-    <lastmod>2024-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-03-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2024-03-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/security/</loc>
@@ -45,12 +54,6 @@
     <lastmod>2024-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/aks/</loc>
-    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/articles/</loc>
-    <lastmod>2024-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/article/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/azure/</loc>

@@ -302,7 +302,7 @@ kube-state-metrics, which gathers metrics about Kubernetes objects Node exporter
 <p>In the next article I&rsquo;ll add data sources and authorize teams to data sources and other resources within Grafana.</p>
 <h2 id="links">Links:</h2>
 <p>202311171711</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 <p>[[grafana]]</p>
 ]]></content:encoded>
     </item>

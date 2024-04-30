@@ -22,7 +22,7 @@ I have a year's subscription on YAZIO until March so it is a bit of a waste, but
 
 202310011810
 
-[[health]]
+[[Health]]
 
 [[diet]]
 

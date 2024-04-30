@@ -6,7 +6,128 @@
     <description>Recent content in Home on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Multiple Docker Images Using Automatic Versioning Using GitHub Actions</title>
+      <link>https://mischavandenburg.com/zet/articles/building-multiple-docker-images-using-automatic-versioning-using-github-actions/</link>
+      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/building-multiple-docker-images-using-automatic-versioning-using-github-actions/</guid>
+      <description>Introduction I&amp;rsquo;m working on a project where I&amp;rsquo;m migrating an Azure Pipeline to GitHub Actions. So far I&amp;rsquo;ve found the GitHub Actions very intuitive to work with and it was a very easy transition from Azure Pipelines.
+One requirement was to increase the version with every build. In the previous setup they were using the build ID, but I&amp;rsquo;m an advocate of always using semantic versioning if possible, so I wondered if this could be done using the GitHub Actions.</description>
+      <content:encoded><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>I&rsquo;m working on a project where I&rsquo;m migrating an Azure Pipeline to GitHub Actions. So far I&rsquo;ve found the GitHub Actions very intuitive to work with and it was a very easy transition from Azure Pipelines.</p>
+<p>One requirement was to increase the version with every build. In the previous setup they were using the build ID, but I&rsquo;m an advocate of always using semantic versioning if possible, so I wondered if this could be done using the GitHub Actions.</p>
+<p>This setup increments all of the Docker images regardless if they have any changes. I did not like this way of deployment, but it was the requirement from the project so I had to implement it that way. I would have preferred to version each container image separately.</p>
+<h1 id="increasing-versions">Increasing Versions</h1>
+<p>The first problem I had to solve was to increase the tags on every commit.</p>
+<p>I used the following action from the marketplace for increasing the versions based on conventional commits:</p>
+<p><a href="https://github.com/marketplace/actions/semver-conventional-commits">Semver Conventional Commits · Actions · GitHub Marketplace</a></p>
+<p>In the example below, I&rsquo;m running a separate job to increase the version based on the latest tag of the repository. The job has an output which I can use later to tag the images themselves.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">prepare_tag</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">outputs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l">${{ steps.semver.outputs.next }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permissions</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l">write</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># Defaults to patch version, will bump minor on &#34;feat&#34; commit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Get Next Version</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">semver</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">ietf-tools/semver-action@v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l">master</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">patchAll</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Push tag</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">tag_version</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">mathieudutour/github-tag-action@v6.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">custom_tag</span><span class="p">:</span><span class="w"> </span><span class="l">${{ steps.semver.outputs.next }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">tag_prefix</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>The Get Next Version step increments the version based on the configuration provided. I used the <code>patchAll: true</code> setting to always default on a patch incrementation if the word &ldquo;feat&rdquo; is not in the commit. If the commit would contain &ldquo;BREAKING CHANGE&rdquo;, the major version would be incremented.</p>
+<p>To push the new version to the current repo, I used this action:</p>
+<p><a href="https://github.com/marketplace/actions/github-tag">GitHub Tag · Actions · GitHub Marketplace</a></p>
+<p>Since the semver-action already adds a &ldquo;v&rdquo; to the tag, I adjusted the <code>tag_prefix</code> to <code>&quot;&quot;</code>.</p>
+<h1 id="managing-permissions">Managing Permissions</h1>
+<ul>
+<li>On the main page of your organization, go to Packages</li>
+<li>Go to the package and open &ldquo;Package settings&rdquo; in the right sidebar</li>
+<li>Under Manage Actions access, add the repo as the source</li>
+<li>Make sure to allow Write acces</li>
+</ul>
+<p><img loading="lazy" src="/gha2.png" type="" alt=""  /></p>
+<p>In the source repo, where the GitHub Actions Workflow is running, go to settings, actions, select the workflow, and add write permission there too.</p>
+<p><img loading="lazy" src="/gha1.png" type="" alt=""  /></p>
+<p>Finally, we also need to add permissions in the workflow yaml:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">build_and_push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build image &amp; push</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permissions</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l">write</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">packages</span><span class="p">:</span><span class="w"> </span><span class="l">write</span><span class="w">
+</span></span></span></code></pre></div><p>See also:</p>
+<p><a href="https://stackoverflow.com/questions/76607955/error-denied-installation-not-allowed-to-create-organization-package">github actions - ERROR: denied: installation not allowed to Create organization package - Stack Overflow</a></p>
+<p><a href="https://github.com/docker/build-push-action/issues/606">denied: installation not allowed to Create organization package · Issue #606 · docker/build-push-action (github.com)</a></p>
+<h1 id="looping-over-multiple-dockerfiles">Looping over multiple Dockerfiles</h1>
+<p>The last problem I needed to solve was that I needed build multiple images. To make it a bit cleaner, I didn&rsquo;t want to have a code block for each. After some research I found a way to loop over multiple values in GitHub Actions using matrices.</p>
+<p>In the example below, I set three variables in the matrix and each of these are called in the Build and push step.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">build_and_push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permissions</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l">write</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">packages</span><span class="p">:</span><span class="w"> </span><span class="l">write</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">strategy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">matrix</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">include</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/ssi-dk/sap-web</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l">app/Dockerfile</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">app</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/ssi-dk/sap-api</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l">web/Dockerfile</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">web</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span>- <span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io/ssi-dk/bifrost-queue-broker</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l">bifrost/bifrost_queue_broker/Dockerfile</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">bifrost/bifrost_queue_broker</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Login to GitHub Container Registry</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">docker/login-action@v3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="l">ghcr.io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.actor }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># loops over all images in the matrix defined on top</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build and push</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">docker/build-push-action@v5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l">${{ matrix.path }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">platforms</span><span class="p">:</span><span class="w"> </span><span class="l">linux/amd64</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l">${{ matrix.image }}:${{ needs.prepare_tag.outputs.tag }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l">${{ matrix.dockerfile }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div><p>This was a very fun challenge to solve and I have learned a lot about GitHub actions. It didn&rsquo;t take much time at all to figure all of this out because all of the actions in the marketplace are open source and you can just read the code to see if they suit your needs. So far I&rsquo;m very impressed with GitHub Actions, coming from Azure Pipelines.</p>
+<h2 id="links">Links:</h2>
+<p>202404301804</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Alleviating Confusion About The To Field In Network Policies</title>
       <link>https://mischavandenburg.com/zet/alleviating-confusion-about-the-to-field-in-network-policies/</link>
@@ -1668,7 +1789,7 @@ pyramid-backend-pdb   1               N/A               1                     15
 <p>In the next article I&rsquo;ll add data sources and authorize teams to data sources and other resources within Grafana.</p>
 <h2 id="links">Links:</h2>
 <p>202311171711</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 <p>[[grafana]]</p>
 ]]></content:encoded>
     </item>
@@ -1714,7 +1835,7 @@ Links: 202311081711</description>
       <description>I use this bash code to get secrets from Azure key vaults using the Azure CLI.
 Make sure to set your subscription with az account set -s 12321424
 kvname=kv-vo-rea-prd-weu-001 secretname=worker-ad-client-secret az keyvault secret show --vault-name $kvname --name $secretname --query value -o tsv Links: 202310312010
-[[azure]]</description>
+[[Azure]]</description>
       <content:encoded><![CDATA[<p>I use this bash code to get secrets from Azure key vaults using the Azure CLI.</p>
 <p>Make sure to set your subscription with <code>az account set -s 12321424</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">kvname</span><span class="o">=</span>kv-vo-rea-prd-weu-001
@@ -1723,7 +1844,7 @@ kvname=kv-vo-rea-prd-weu-001 secretname=worker-ad-client-secret az keyvault secr
 </span></span><span class="line"><span class="cl">az keyvault secret show --vault-name <span class="nv">$kvname</span> --name <span class="nv">$secretname</span>  --query value -o tsv
 </span></span></code></pre></div><h2 id="links">Links:</h2>
 <p>202310312010</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -1870,14 +1991,14 @@ https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-
 Links: 202310130610
 [[AKS]]
 [[Kubernetes]]
-[[azure]]</description>
+[[Azure]]</description>
       <content:encoded><![CDATA[<p>You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.</p>
 <p><a href="https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup">https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup</a></p>
 <h2 id="links">Links:</h2>
 <p>202310130610</p>
 <p>[[AKS]]</p>
 <p>[[Kubernetes]]</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -2024,7 +2145,7 @@ The app I probably have the most interaction with during the day is my calorie t
 <p>I have a year&rsquo;s subscription on YAZIO until March so it is a bit of a waste, but I&rsquo;m already sold on the web interface of MFP. I have one free month of premium and I&rsquo;ll make the decision then.</p>
 <h2 id="links">Links:</h2>
 <p>202310011810</p>
-<p>[[health]]</p>
+<p>[[Health]]</p>
 <p>[[diet]]</p>
 <p>[[vegan]]</p>
 <p>[[weight-loss]]</p>
@@ -2085,7 +2206,7 @@ https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-
 Preview Public preview: AKS support for Kubernetes version 1.28
 https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/
 Links: 202309281009
-[[azure]]
+[[Azure]]
 [[Kubernetes]]</description>
       <content:encoded><![CDATA[<p>Yesterday a few interesting AKS related features became Generally Available on Azure.</p>
 <p>KEDA add-on makes it easier to scale your applications on AKS cluster.</p>
@@ -2099,7 +2220,7 @@ Links: 202309281009
 <p><a href="https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/">https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/</a></p>
 <h2 id="links">Links:</h2>
 <p>202309281009</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 <p>[[Kubernetes]]</p>
 ]]></content:encoded>
     </item>
@@ -2124,7 +2245,7 @@ If a deployment has a pod disruption budget which is incorrectly configured, it 
 <h2 id="links">Links:</h2>
 <p>202309271809</p>
 <p>[[Kubernetes]]</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -2742,7 +2863,7 @@ https://youtu.be/WnA8V3uq7P8</description>
 <p>Remember, noble layperson, the path to liberation extends beyond the mere satisfaction of bodily hunger. By nurturing wisdom, compassion, and mindfulness, you can find fulfillment that transcends the limitations of physical nourishment. May your journey towards understanding be fruitful and lead to the end of suffering.</p>
 <h2 id="links">Links:</h2>
 <p>202306281806</p>
-<p>[[health]]
+<p>[[Health]]
 [[buddhist-practice]]
 [[use hunger as awareness practice]]
 [[its-not-working-if-not-hungry]]
@@ -2810,7 +2931,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 [[bicep]]
 [[coding]]
 [[Kubernetes]]
-[[azure]]
+[[Azure]]
 [[neovim]]</p>
 ]]></content:encoded>
     </item>
@@ -2880,7 +3001,7 @@ WARNING: D:\a\1\a\drop\Generic-templates\containers\azure-kubernetes-service\v4.
 <p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/linter-rule-use-resource-id-functions">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/linter-rule-use-resource-id-functions</a></p>
 <p>[[bicep]]
 [[coding]]
-[[azure]]</p>
+[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -3642,7 +3763,7 @@ There are a few reasons why I haven&amp;rsquo;t started up until now:</descripti
 <p>2023041213</p>
 <p>[[homelab]]</p>
 <p>[[homelab-network]]</p>
-<p>[[linux]]</p>
+<p>[[Linux]]</p>
 <p>[[homelab-ubuntu-server]]</p>
 <p>[[Kubernetes]]</p>
 ]]></content:encoded>
@@ -3917,7 +4038,7 @@ Rewards Scientists did an experiment where they observed children of kindergarte
 <p>[[My Ikigai]]</p>
 <p>[[coding]]</p>
 <p>[[devops]]</p>
-<p>[[career]]</p>
+<p>[[Career]]</p>
 ]]></content:encoded>
     </item>
     
@@ -3936,7 +4057,7 @@ Although I don&amp;rsquo;t struggle with the motivation to get myself to the gym
 <h2 id="links">Links:</h2>
 <p>202304011104</p>
 <p>[[exercise]]</p>
-<p>[[health]]</p>
+<p>[[Health]]</p>
 <p>[[focus]]</p>
 <p>[[productivity]]</p>
 ]]></content:encoded>

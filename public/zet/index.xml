@@ -6,7 +6,18 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All Articles</title>
+      <link>https://mischavandenburg.com/zet/articles/</link>
+      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/articles/</guid>
+      <description>These are long form articles.</description>
+      <content:encoded><![CDATA[<p>These are long form articles.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Alleviating Confusion About The To Field In Network Policies</title>
       <link>https://mischavandenburg.com/zet/alleviating-confusion-about-the-to-field-in-network-policies/</link>
@@ -178,17 +189,6 @@ Turns out MacOS preview can do this just fine. I keep finding these little gems 
 <p>202403220803</p>
 <p>[[Visual Thinking]]
 [[obsidian]]</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>All Articles</title>
-      <link>https://mischavandenburg.com/zet/articles/</link>
-      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/zet/articles/</guid>
-      <description>These are long form articles.</description>
-      <content:encoded><![CDATA[<p>These are long form articles.</p>
 ]]></content:encoded>
     </item>
     
@@ -1364,7 +1364,7 @@ pyramid-backend-pdb   1               N/A               1                     15
 <p>In the next article I&rsquo;ll add data sources and authorize teams to data sources and other resources within Grafana.</p>
 <h2 id="links">Links:</h2>
 <p>202311171711</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 <p>[[grafana]]</p>
 ]]></content:encoded>
     </item>
@@ -1410,7 +1410,7 @@ Links: 202311081711</description>
       <description>I use this bash code to get secrets from Azure key vaults using the Azure CLI.
 Make sure to set your subscription with az account set -s 12321424
 kvname=kv-vo-rea-prd-weu-001 secretname=worker-ad-client-secret az keyvault secret show --vault-name $kvname --name $secretname --query value -o tsv Links: 202310312010
-[[azure]]</description>
+[[Azure]]</description>
       <content:encoded><![CDATA[<p>I use this bash code to get secrets from Azure key vaults using the Azure CLI.</p>
 <p>Make sure to set your subscription with <code>az account set -s 12321424</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">kvname</span><span class="o">=</span>kv-vo-rea-prd-weu-001
@@ -1419,7 +1419,7 @@ kvname=kv-vo-rea-prd-weu-001 secretname=worker-ad-client-secret az keyvault secr
 </span></span><span class="line"><span class="cl">az keyvault secret show --vault-name <span class="nv">$kvname</span> --name <span class="nv">$secretname</span>  --query value -o tsv
 </span></span></code></pre></div><h2 id="links">Links:</h2>
 <p>202310312010</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -1566,14 +1566,14 @@ https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-
 Links: 202310130610
 [[AKS]]
 [[Kubernetes]]
-[[azure]]</description>
+[[Azure]]</description>
       <content:encoded><![CDATA[<p>You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.</p>
 <p><a href="https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup">https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup</a></p>
 <h2 id="links">Links:</h2>
 <p>202310130610</p>
 <p>[[AKS]]</p>
 <p>[[Kubernetes]]</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -1720,7 +1720,7 @@ The app I probably have the most interaction with during the day is my calorie t
 <p>I have a year&rsquo;s subscription on YAZIO until March so it is a bit of a waste, but I&rsquo;m already sold on the web interface of MFP. I have one free month of premium and I&rsquo;ll make the decision then.</p>
 <h2 id="links">Links:</h2>
 <p>202310011810</p>
-<p>[[health]]</p>
+<p>[[Health]]</p>
 <p>[[diet]]</p>
 <p>[[vegan]]</p>
 <p>[[weight-loss]]</p>
@@ -1781,7 +1781,7 @@ https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-
 Preview Public preview: AKS support for Kubernetes version 1.28
 https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/
 Links: 202309281009
-[[azure]]
+[[Azure]]
 [[Kubernetes]]</description>
       <content:encoded><![CDATA[<p>Yesterday a few interesting AKS related features became Generally Available on Azure.</p>
 <p>KEDA add-on makes it easier to scale your applications on AKS cluster.</p>
@@ -1795,7 +1795,7 @@ Links: 202309281009
 <p><a href="https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/">https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/</a></p>
 <h2 id="links">Links:</h2>
 <p>202309281009</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 <p>[[Kubernetes]]</p>
 ]]></content:encoded>
     </item>
@@ -1820,7 +1820,7 @@ If a deployment has a pod disruption budget which is incorrectly configured, it 
 <h2 id="links">Links:</h2>
 <p>202309271809</p>
 <p>[[Kubernetes]]</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -2438,7 +2438,7 @@ https://youtu.be/WnA8V3uq7P8</description>
 <p>Remember, noble layperson, the path to liberation extends beyond the mere satisfaction of bodily hunger. By nurturing wisdom, compassion, and mindfulness, you can find fulfillment that transcends the limitations of physical nourishment. May your journey towards understanding be fruitful and lead to the end of suffering.</p>
 <h2 id="links">Links:</h2>
 <p>202306281806</p>
-<p>[[health]]
+<p>[[Health]]
 [[buddhist-practice]]
 [[use hunger as awareness practice]]
 [[its-not-working-if-not-hungry]]
@@ -2506,7 +2506,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 [[bicep]]
 [[coding]]
 [[Kubernetes]]
-[[azure]]
+[[Azure]]
 [[neovim]]</p>
 ]]></content:encoded>
     </item>
@@ -2576,7 +2576,7 @@ WARNING: D:\a\1\a\drop\Generic-templates\containers\azure-kubernetes-service\v4.
 <p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/linter-rule-use-resource-id-functions">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/linter-rule-use-resource-id-functions</a></p>
 <p>[[bicep]]
 [[coding]]
-[[azure]]</p>
+[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -3338,7 +3338,7 @@ There are a few reasons why I haven&amp;rsquo;t started up until now:</descripti
 <p>2023041213</p>
 <p>[[homelab]]</p>
 <p>[[homelab-network]]</p>
-<p>[[linux]]</p>
+<p>[[Linux]]</p>
 <p>[[homelab-ubuntu-server]]</p>
 <p>[[Kubernetes]]</p>
 ]]></content:encoded>
@@ -3613,7 +3613,7 @@ Rewards Scientists did an experiment where they observed children of kindergarte
 <p>[[My Ikigai]]</p>
 <p>[[coding]]</p>
 <p>[[devops]]</p>
-<p>[[career]]</p>
+<p>[[Career]]</p>
 ]]></content:encoded>
     </item>
     
@@ -3632,7 +3632,7 @@ Although I don&amp;rsquo;t struggle with the motivation to get myself to the gym
 <h2 id="links">Links:</h2>
 <p>202304011104</p>
 <p>[[exercise]]</p>
-<p>[[health]]</p>
+<p>[[Health]]</p>
 <p>[[focus]]</p>
 <p>[[productivity]]</p>
 ]]></content:encoded>

@@ -20,4 +20,4 @@ https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-
 
 [[Kubernetes]]
 
-[[azure]]
+[[Azure]]

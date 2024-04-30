@@ -32,6 +32,6 @@ https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kuberne
 
 202309281009
 
-[[azure]]
+[[Azure]]
 
 [[Kubernetes]]

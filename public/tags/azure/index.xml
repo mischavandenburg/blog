@@ -788,7 +788,7 @@ kube-state-metrics, which gathers metrics about Kubernetes objects Node exporter
 <p>In the next article I&rsquo;ll add data sources and authorize teams to data sources and other resources within Grafana.</p>
 <h2 id="links">Links:</h2>
 <p>202311171711</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 <p>[[grafana]]</p>
 ]]></content:encoded>
     </item>
@@ -818,7 +818,7 @@ Links: 202311081711</description>
       <description>I use this bash code to get secrets from Azure key vaults using the Azure CLI.
 Make sure to set your subscription with az account set -s 12321424
 kvname=kv-vo-rea-prd-weu-001 secretname=worker-ad-client-secret az keyvault secret show --vault-name $kvname --name $secretname --query value -o tsv Links: 202310312010
-[[azure]]</description>
+[[Azure]]</description>
       <content:encoded><![CDATA[<p>I use this bash code to get secrets from Azure key vaults using the Azure CLI.</p>
 <p>Make sure to set your subscription with <code>az account set -s 12321424</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">kvname</span><span class="o">=</span>kv-vo-rea-prd-weu-001
@@ -827,7 +827,7 @@ kvname=kv-vo-rea-prd-weu-001 secretname=worker-ad-client-secret az keyvault secr
 </span></span><span class="line"><span class="cl">az keyvault secret show --vault-name <span class="nv">$kvname</span> --name <span class="nv">$secretname</span>  --query value -o tsv
 </span></span></code></pre></div><h2 id="links">Links:</h2>
 <p>202310312010</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -935,14 +935,14 @@ https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-
 Links: 202310130610
 [[AKS]]
 [[Kubernetes]]
-[[azure]]</description>
+[[Azure]]</description>
       <content:encoded><![CDATA[<p>You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.</p>
 <p><a href="https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup">https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup</a></p>
 <h2 id="links">Links:</h2>
 <p>202310130610</p>
 <p>[[AKS]]</p>
 <p>[[Kubernetes]]</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -980,7 +980,7 @@ https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-
 Preview Public preview: AKS support for Kubernetes version 1.28
 https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/
 Links: 202309281009
-[[azure]]
+[[Azure]]
 [[Kubernetes]]</description>
       <content:encoded><![CDATA[<p>Yesterday a few interesting AKS related features became Generally Available on Azure.</p>
 <p>KEDA add-on makes it easier to scale your applications on AKS cluster.</p>
@@ -994,7 +994,7 @@ Links: 202309281009
 <p><a href="https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/">https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/</a></p>
 <h2 id="links">Links:</h2>
 <p>202309281009</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 <p>[[Kubernetes]]</p>
 ]]></content:encoded>
     </item>
@@ -1019,7 +1019,7 @@ If a deployment has a pod disruption budget which is incorrectly configured, it 
 <h2 id="links">Links:</h2>
 <p>202309271809</p>
 <p>[[Kubernetes]]</p>
-<p>[[azure]]</p>
+<p>[[Azure]]</p>
 ]]></content:encoded>
     </item>
     
@@ -1484,7 +1484,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 [[bicep]]
 [[coding]]
 [[Kubernetes]]
-[[azure]]
+[[Azure]]
 [[neovim]]</p>
 ]]></content:encoded>
     </item>
@@ -1554,7 +1554,7 @@ WARNING: D:\a\1\a\drop\Generic-templates\containers\azure-kubernetes-service\v4.
 <p><a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/linter-rule-use-resource-id-functions">https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/linter-rule-use-resource-id-functions</a></p>
 <p>[[bicep]]
 [[coding]]
-[[azure]]</p>
+[[Azure]]</p>
 ]]></content:encoded>
     </item>
     

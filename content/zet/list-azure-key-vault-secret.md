@@ -23,4 +23,4 @@ az keyvault secret show --vault-name $kvname --name $secretname  --query value -
 
 202310312010
 
-[[azure]]
+[[Azure]]

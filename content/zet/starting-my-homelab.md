@@ -107,7 +107,7 @@ Another realization was that I don't need to have everything figured out before 
 
 [[homelab-network]]
 
-[[linux]]
+[[Linux]]
 
 [[homelab-ubuntu-server]]
 
