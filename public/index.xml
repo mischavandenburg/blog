@@ -6,7 +6,25 @@
     <description>Recent content in Home on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Way To Download Youtube Videos From Cli</title>
+      <link>https://mischavandenburg.com/zet/best-way-to-download-youtube-videos-from-cli/</link>
+      <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/best-way-to-download-youtube-videos-from-cli/</guid>
+      <description>This is hands down the best CLI for downloading YouTube videos.
+I needed this to transfer some of my private videos to Vimeo. Don&amp;rsquo;t use this to break YouTube&amp;rsquo;s terms please.
+https://github.com/kkdai/youtube
+Links: 202405121505</description>
+      <content:encoded><![CDATA[<p>This is hands down the best CLI for downloading YouTube videos.</p>
+<p>I needed this to transfer some of my private videos to Vimeo. Don&rsquo;t use this to break YouTube&rsquo;s terms please.</p>
+<p><a href="https://github.com/kkdai/youtube">https://github.com/kkdai/youtube</a></p>
+<h2 id="links">Links:</h2>
+<p>202405121505</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Building Multiple Docker Images Using Automatic Versioning Using GitHub Actions</title>
       <link>https://mischavandenburg.com/zet/articles/building-multiple-docker-images-using-automatic-versioning-using-github-actions/</link>
