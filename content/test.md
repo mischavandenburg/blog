@@ -2,20 +2,16 @@
 title: Welcome!
 ---
 
-{{< rawhtml >}}
-<a href="https://www.skool.com/kubernetes-devops-cloud-3122/about">
-  <img src="/mvp.png" alt="MVP Logo">
-</a>
-{{< /rawhtml >}}
-
+![](/mvp.png)
 
 Hi, I’m Mischa, a Cloud Native Engineer from Amsterdam. I'm a Microsoft MVP and managed to turn my career from nurse to DevOps Engineer in record time. I've documented my journey on my blog and YouTube channel, and I've started a Skool community where I teach the skills I needed to aqcuire to realize my dream of a career in IT.
+
 
 [Click here to visit my Skool community!](https://www.skool.com/kubernetes-devops-cloud-3122/about)
 
 {{< rawhtml >}}
 <a href="https://www.skool.com/kubernetes-devops-cloud-3122/about">
-  <img src="/skool-logo.png" alt="HTML tutorial">
+  <img src="https://github.com/mischavandenburg/blog/blob/main/assets/skool-logo.png?raw=true" alt="Skool logo">
 </a>
 {{< /rawhtml >}}
 
@@ -52,7 +48,7 @@ Total value - $7,535. Lock in forever at just $19/mo.
 
 {{< rawhtml >}}
 <a href="https://www.skool.com/kubernetes-devops-cloud-3122/about">
-  <img src="/skool-logo.png" alt="HTML tutorial">
+  <img src="https://github.com/mischavandenburg/blog/blob/main/assets/skool-logo.png?raw=true" alt="Skool logo">
 </a>
 {{< /rawhtml >}}
 
@@ -89,9 +85,6 @@ Our community is such a nice place to hang out in, that people wish to join and 
 
 ![](/skool2.png)
 
-
-
-
 # Do you wish to level up your game as an engineer?
 
 My courses on Notetaking, productivity and soft skills can help you lift your career to the next level.
@@ -109,6 +102,6 @@ Connect with likeminded engineers. Get feedback on your solutions.
 
 {{< rawhtml >}}
 <a href="https://www.skool.com/kubernetes-devops-cloud-3122/about">
-  <img src="/skool-logo.png" alt="HTML tutorial">
+  <img src="https://github.com/mischavandenburg/blog/blob/main/assets/skool-logo.png?raw=true" alt="Skool logo">
 </a>
 {{< /rawhtml >}}
