@@ -95,6 +95,6 @@ https://sre.google/books/
 
 [[Kubernetes]]
 
-[[cloud-native]]
+[[Cloud Native]]
 
 [[cncf]]
