@@ -2,11 +2,23 @@
 title: "Welcome!"
 ---
 
-![](/drawing.jpeg)
+![](/banner.png)
 
-Why bother with a personal website? Why not just write on social media?
+# About me
 
-[This post captures it beautifully.](https://matthiasott.com/notes/simple-truths-about-personal-websites)
+I’m Mischa. I’ve worked across various fields ranging from project management in the oil industry to health care, but my driving passion has always been IT. Fascinated since childhood, I’ve always passionately worked on projects that leveraged computers and automation to reach my goals. 
+
+In 2007 I started learning to code to automate the video games I used to play and to build my own websites. In 2014 I taught myself to use Linux and utilized these skills to run large-scale video game and social media automation projects to drive traffic to the websites I coded at night. I lived in Norway for 9 years, and when I moved back home to the Netherlands, I succeeded in following my dream and turning my passion into my career, and I’ve been working as a full-time DevOps Engineer since 2021.
+
+I fell completely in love with Kubernetes the first time I used it, and I am obessed with learning as much about Kubernetes as possible and sharing it with my audience. I passionately believe that the future of software deployment lies in containers and I specialize in building platforms and environments that allow efficient deployment and maintenance of containerized workloads.
+
+I'm [in love with my work.](/zet/articles/jiro-sushi) After I finish my day's work, I usually sit down to study more about my field. There is always something new to learn. Learning can take many forms. Very often I read or watch videos and courses and take notes. But you cannot learn everything from the books alone. You also need to learn by doing. I work on coding projects or building my Kubernetes home lab. I created a [lab repo](https://github.com/mischavandenburg/lab/) where I store all the files I use to explore these topics.
+
+I also run an extensive Kubernetes homelab which I document on my [YouTube channel](https://www.youtube.com/@mischavandenburg) and all GitOps code can be found [in this repo](https://github.com/mischavandenburg/homelab)
+
+In 2024 I was awared the Microsoft MVP title for my efforts of sharing knowledge with the community.
+
+![](/mvp.png)
 
 # Favorites
 
@@ -16,13 +28,8 @@ These articles came out particularly well, and might provide some value to you, 
 * [My Neovim Zettelkasten: How I Take Notes in Markdown Using Vim and Bash](/zet/neovim-zettelkasten/)
 * [How and Why I Started Using Vim](/zet/articles/how-started-vim/)
 
-# About me
+![](/drawing.jpeg)
 
-I’m Mischa. I’ve worked across various fields ranging from project management in the oil industry to health care, but my driving passion has always been IT. Fascinated since childhood, I’ve always passionately worked on projects that leveraged computers and automation to reach my goals. 
-
-In 2007 I started learning to code to automate the video games I used to play and to build my own websites. In 2014 I taught myself to use Linux and utilized these skills to run large-scale video game and social media automation projects to drive traffic to the websites I coded at night. I lived in Norway for 9 years, and when I moved back home to the Netherlands, I succeeded in following my dream and turning my passion into my career, and I’ve been working as a full-time DevOps Engineer since 2021. 
-
-I'm [in love with my work.](/zet/articles/jiro-sushi) After I finish my day's work, I usually sit down to study more about my field. There is always something new to learn. Learning can take many forms. Very often I read or watch videos and courses and take notes. But you cannot learn everything from the books alone. You also need to learn by doing. I work on coding projects or building my Kubernetes home lab. I created a [lab repo](https://github.com/mischavandenburg/lab/) where I store all the files I use to explore these topics.
 
 # Living On The Command Line
 
@@ -37,6 +44,10 @@ In the words of Rob Muhlenstein, *"Using the Linux Bash terminal command-line is
 When I changed my career to DevOps, I started this blog to document the journey I was embarking on. I've been sharing my notes on this blog and started writing articles about the stuff I was learning, and found it to be a very enjoyable practice.
 
 My style is a mixture of micro-blogging where I share useful things and tricks I learn and long-form articles which are more refined.
+
+Why bother with a personal website? Why not just write on social media?
+
+[This post captures it beautifully.](https://matthiasott.com/notes/simple-truths-about-personal-websites)
 
 # Why Take Notes?
 
