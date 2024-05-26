@@ -6,7 +6,37 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dev-Environments</title>
+      <link>https://mischavandenburg.com/tags/dev-environments/</link>
+      <pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/dev-environments/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://mischavandenburg.com/tags/linux/</link>
+      <pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/linux/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Nix</title>
+      <link>https://mischavandenburg.com/tags/nix/</link>
+      <pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/nix/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Command-Line</title>
       <link>https://mischavandenburg.com/tags/command-line/</link>
@@ -233,16 +263,6 @@
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/excalidraw/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://mischavandenburg.com/tags/linux/</link>
-      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/linux/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

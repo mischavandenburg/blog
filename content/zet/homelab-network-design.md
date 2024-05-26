@@ -15,7 +15,7 @@ I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.
 
 The gateway will function as the main portal to the internet and the WiFi access point. The switch will be located in my pantry where all the devices for my homelab are currently.
 
-![](/home-network-design.png)
+![](home-network-design.png.md)
 
 
 # Naming Strategy

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nix on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/nix/</link>
+    <description>Recent content in Nix on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/nix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing packages in Devcontainers with Nix</title>
+      <link>https://mischavandenburg.com/zet/installing-packages-in-devcontainers-with-nix/</link>
+      <pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/installing-packages-in-devcontainers-with-nix/</guid>
+      <description>I&amp;rsquo;ve been obsessed with Devcontainers and Devpods recently, and I&amp;rsquo;m learning a lot about portable dev environments. This is truly the next level of config management and the future of dev environments in my opinion.
+I relied on brew as my package manager, however, I ran into problems when I wanted to run my Linux dev containers on my M2 Silicon Mac. Linux brew is not supported on ARM architecture.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ve been obsessed with Devcontainers and Devpods recently, and I&rsquo;m learning a lot about portable dev environments. This is truly the next level of config management and the future of dev environments in my opinion.</p>
+<p>I relied on brew as my package manager, however, I ran into problems when I wanted to run my Linux dev containers on my M2 Silicon Mac. Linux brew is not supported on ARM architecture.</p>
+<h1 id="use-case">Use case</h1>
+<p>I all I need to do is install a list of packages into a linux container. I was using brew because I need to install packages like k9s and flux which are sometimes not available in the standard package repositories.</p>
+<p>After some tinkering with Nix I managed to solve my problem.</p>
+<h1 id="nixpkgs">Nixpkgs</h1>
+<p>My dotfiles contains this setup script:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="nb">export</span> <span class="nv">XDG_CONFIG_HOME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">&#34;</span>/.config
+</span></span><span class="line"><span class="cl">    mkdir -p <span class="s2">&#34;</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    mkdir -p <span class="s2">&#34;</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">&#34;</span>/nixpkgs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ln -sf <span class="s2">&#34;</span><span class="nv">$PWD</span><span class="s2">/nvim&#34;</span> <span class="s2">&#34;</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">&#34;</span>/nvim
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ln -sf <span class="s2">&#34;</span><span class="nv">$PWD</span><span class="s2">/.bash_profile&#34;</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">&#34;</span>/.bash_profile
+</span></span><span class="line"><span class="cl">    ln -sf <span class="s2">&#34;</span><span class="nv">$PWD</span><span class="s2">/.bashrc&#34;</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">&#34;</span>/.bashrc
+</span></span><span class="line"><span class="cl">    ln -sf <span class="s2">&#34;</span><span class="nv">$PWD</span><span class="s2">/.inputrc&#34;</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">&#34;</span>/.inputrc
+</span></span><span class="line"><span class="cl">    ln -sf <span class="s2">&#34;</span><span class="nv">$PWD</span><span class="s2">/.tmux.conf&#34;</span> <span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">&#34;</span>/.tmux.conf
+</span></span><span class="line"><span class="cl">    ln -sf <span class="s2">&#34;</span><span class="nv">$PWD</span><span class="s2">/config.nix&#34;</span> <span class="s2">&#34;</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">&#34;</span>/nixpkgs/config.nix
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># install Nix packages from config.nix</span>
+</span></span><span class="line"><span class="cl">    nix-env -iA nixpkgs.myPackages
+</span></span></code></pre></div><p>It sets up the nixpkgs directory and the config.nix.</p>
+<p>The config.nix contains the packages I want to install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nix" data-lang="nix"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">packageOverrides</span> <span class="o">=</span> <span class="n">pkgs</span><span class="p">:</span> <span class="k">with</span> <span class="n">pkgs</span><span class="p">;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">myPackages</span> <span class="o">=</span> <span class="n">pkgs</span><span class="o">.</span><span class="n">buildEnv</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;mischa-tools&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="n">neovim</span>
+</span></span><span class="line"><span class="cl">        <span class="n">go</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nodejs_22</span>
+</span></span><span class="line"><span class="cl">        <span class="n">starship</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fd</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ripgrep</span>
+</span></span><span class="line"><span class="cl">        <span class="n">lazygit</span>
+</span></span><span class="line"><span class="cl">        <span class="n">kubectl</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k9s</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fluxcd</span>
+</span></span><span class="line"><span class="cl">      <span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Finally, the <code>nix-env -iA nixpkgs.myPackages</code> command installs all of the packages into my environment.</p>
+<p>I was lucky to find this in the Nix documentation:</p>
+<p><a href="https://nixos.org/manual/nixpkgs/stable/#sec-declarative-package-management">https://nixos.org/manual/nixpkgs/stable/#sec-declarative-package-management</a></p>
+<p>Had I not found this particular heading, I think I would have been lost in the weeds for a long time. But Nix has definitely piqued my interest and I look forward to learn more about it.</p>
+<h2 id="links">Links:</h2>
+<p>Devpod dotfiles: <a href="https://github.com/mischavandenburg/dotfiles-devpod">https://github.com/mischavandenburg/dotfiles-devpod</a></p>
+<p>202405261105</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
