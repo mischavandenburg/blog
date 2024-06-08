@@ -2,8 +2,6 @@
 title: Home
 ---
 
-![](/banner.png)
-
 # Living on the Command Line
 
 Welcome to my website. I’m Mischa, a Cloud Native Engineer from Amsterdam.
