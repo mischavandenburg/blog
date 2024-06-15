@@ -6,7 +6,28 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Got my CKS</title>
+      <link>https://mischavandenburg.com/zet/got-my-cks/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/got-my-cks/</guid>
+      <description>Just realized I never posted on the blog that I achieved the CKS a month ago.
+I even created a study guide for it:
+Links: 202406152006</description>
+      <content:encoded><![CDATA[<p>Just realized I never posted on the blog that I achieved the CKS a month ago.</p>
+<p>I even created a study guide for it:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/_l232KiJHNA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="links">Links:</h2>
+<p>202406152006</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Installing packages in Devcontainers with Nix</title>
       <link>https://mischavandenburg.com/zet/installing-packages-in-devcontainers-with-nix/</link>
