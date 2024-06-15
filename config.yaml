@@ -131,6 +131,10 @@ menu:
       name: "About"
       url: /aboutme/
       weight: 10
+    - identifier: Courses
+      name: "Courses"
+      url: /courses/
+      weight: 15
     # - identifier: Current
     #   name: "Current"
     #   url: /current/
