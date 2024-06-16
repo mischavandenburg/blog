@@ -131,10 +131,18 @@ menu:
       name: "About"
       url: /aboutme/
       weight: 10
+    - identifier: Services
+      name: "Services"
+      url: /services/
+      weight: 13
     - identifier: Courses
       name: "Courses"
       url: /courses/
       weight: 15
+    - identifier: Contact
+      name: "Contact"
+      url: /contact/
+      weight: 17
     # - identifier: Current
     #   name: "Current"
     #   url: /current/
@@ -147,12 +155,12 @@ menu:
       name: "Index"
       url: /archives/
       weight: 30
-    - identifier: "Articles"
-      name: "Articles"
-      url: /tags/article/
-      weight: 40
+    # - identifier: "Articles"
+    #   name: "Articles"
+    #   url: /tags/article/
+    #   weight: 40
     - identifier: Search
-      name: Search
+      name: 🔍
       url: /search/
       weight: 50
 

@@ -20,7 +20,7 @@ I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</descr
 <p>Now that I&rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.</p>
 <p>I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</p>
 <p>The gateway will function as the main portal to the internet and the WiFi access point. The switch will be located in my pantry where all the devices for my homelab are currently.</p>
-<p></p>
+<p><img loading="lazy" src="/home-network-design.png" type="" alt=""  /></p>
 <h1 id="naming-strategy">Naming Strategy</h1>
 <p>I&rsquo;m also going to have some fun with the naming strategy. I love Nordic mythology so I picked that as a theme.</p>
 <h2 id="network-name">Network Name:</h2>
