@@ -35,6 +35,61 @@ https://calendar.app.google/rHynGWsKXLb6GJwM6
 
 You may also email me: info [at] kubecraft.nl
 
+# Mentoring
+
+
+## 60 minute call
+
+{{< rawhtml >}}
+<!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3yWyRIAtrgbkFc2l306vdvU18slitG63t0AfBrs0WMJoRkUqRqVT5Dp_688cKS22qGQF9yRBgU?gv=true',
+      color: '#0B8043',
+      label: 'Book an appointment',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
+{{< /rawhtml >}}
+
+<br><br>
+
+You can also use [this link](https://calendar.google.com/calendar/appointments/schedules/AcZssZ3yWyRIAtrgbkFc2l306vdvU18slitG63t0AfBrs0WMJoRkUqRqVT5Dp_688cKS22qGQF9yRBgU)
+
+## 30 minute call
+
+{{< rawhtml >}}
+<!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2JD5qxyzJDpqkhgjQj7p8ees1G4T8PYZvi6ddqu9De1NWUaETnQvFEhwPac12OSGEWgrYe6veJ?gv=true',
+      color: '#0B8043',
+      label: 'Book an appointment',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
+{{< /rawhtml >}}
+
+<br><br>
+
+Or use [this link](https://calendar.google.com/calendar/appointments/schedules/AcZssZ2JD5qxyzJDpqkhgjQj7p8ees1G4T8PYZvi6ddqu9De1NWUaETnQvFEhwPac12OSGEWgrYe6veJ)
+
 # Social Media
 
 📚 [My Skool Community](https://mischavandenburg.com/skool)
