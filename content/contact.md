@@ -27,6 +27,10 @@ Let's get in touch!
 
 <br><br>
 
+If you're on mobile, use this link:
+
+https://calendar.app.google/rHynGWsKXLb6GJwM6
+
 # Email
 
 You may also email me: info [at] kubecraft.nl

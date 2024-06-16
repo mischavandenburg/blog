@@ -40,3 +40,9 @@ I can help you with:
 
 {{< /rawhtml >}}
 
+<br><br>
+
+If you're on mobile, use this link:
+
+https://calendar.app.google/rHynGWsKXLb6GJwM6
+
