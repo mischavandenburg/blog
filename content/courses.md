@@ -69,3 +69,21 @@ Over $4500 in value, Invest in yourself for less than $1/day.
 
 ![](/courses2.png)
 
+# Join Today
+
+You can get unlimited access to all of these courses, 20+ hours of Q&A recordings
+and a thriving community of learners and experts alike. 
+
+What are you waiting for? You can get all of this value for less than $1 a day.
+
+Cancel anytime.
+
+[Join Now.](https://mischavandenburg.com/skool)
+
+{{< rawhtml >}} <a
+  href="https://mischavandenburg.com/skool"> <img
+    src="https://github.com/mischavandenburg/blog/blob/main/assets/skool-logo.png?raw=true"
+    alt="Skool logo"> </a> 
+{{< /rawhtml >}}
+
+
