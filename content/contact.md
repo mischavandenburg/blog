@@ -1,10 +1,10 @@
 ---
-title: "Book a Meeting"
+title: Book a Meeting
 ---
-
 Let's get in touch!
 
-{{< rawhtml >}} 
+{{< rawhtml >}}
+
 <!-- Google Calendar Appointment Scheduling begin -->
 <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -29,7 +29,15 @@ Let's get in touch!
 
 If you're on mobile, use this link:
 
-https://calendar.app.google/rHynGWsKXLb6GJwM6
+<https://calendar.app.google/rHynGWsKXLb6GJwM6>
+
+# Sign Up For My Free Newsletter
+
+{{< rawhtml >}}
+
+<iframe src="https://mischavandenburg.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+
+{{< /rawhtml >}}
 
 # Email
 
@@ -37,10 +45,10 @@ You may also email me: info [at] kubecraft.nl
 
 # Mentoring
 
-
 ## 60 minute call
 
 {{< rawhtml >}}
+
 <!-- Google Calendar Appointment Scheduling begin -->
 <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -62,11 +70,13 @@ You may also email me: info [at] kubecraft.nl
 
 <br><br>
 
-You can also use [this link](https://calendar.google.com/calendar/appointments/schedules/AcZssZ3yWyRIAtrgbkFc2l306vdvU18slitG63t0AfBrs0WMJoRkUqRqVT5Dp_688cKS22qGQF9yRBgU)
+You can also use
+[this link](https://calendar.google.com/calendar/appointments/schedules/AcZssZ3yWyRIAtrgbkFc2l306vdvU18slitG63t0AfBrs0WMJoRkUqRqVT5Dp_688cKS22qGQF9yRBgU)
 
 ## 30 minute call
 
 {{< rawhtml >}}
+
 <!-- Google Calendar Appointment Scheduling begin -->
 <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -88,7 +98,8 @@ You can also use [this link](https://calendar.google.com/calendar/appointments/s
 
 <br><br>
 
-Or use [this link](https://calendar.google.com/calendar/appointments/schedules/AcZssZ2JD5qxyzJDpqkhgjQj7p8ees1G4T8PYZvi6ddqu9De1NWUaETnQvFEhwPac12OSGEWgrYe6veJ)
+Or use
+[this link](https://calendar.google.com/calendar/appointments/schedules/AcZssZ2JD5qxyzJDpqkhgjQj7p8ees1G4T8PYZvi6ddqu9De1NWUaETnQvFEhwPac12OSGEWgrYe6veJ)
 
 # Social Media
 
@@ -101,3 +112,4 @@ Or use [this link](https://calendar.google.com/calendar/appointments/schedules/A
 💾 [GitHub](https://github.com/mischavandenburg/)
 
 🎥 [YouTube](https://www.youtube.com/channel/UCDAck-gFPTrgTx_qp59-bQA)
+

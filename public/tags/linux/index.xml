@@ -80,9 +80,12 @@ Links: 202312301912
 https://youtu.be/X40gNPZ2xP4
 [[homelab]]</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/X40gNPZ2xP4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X40gNPZ2xP4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>This is the first video of my homelab series.</p>
 <p>I set up the repo for my project and do the initial installation of k3s on an old laptop I had lying around. I had a k8s cluster installed on there with kubeadm which I needed to clean up first.</p>
@@ -122,9 +125,12 @@ For my new gig at work I&amp;rsquo;m forced to use a windows laptop which means 
       <description>I show my workflow to publish my Hugo blog from the command line using neovim and bash
 Links: 202305091705</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/bzkrmkGDQJA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I show my workflow to publish my Hugo blog from the command line using neovim and bash</p>
 <h2 id="links">Links:</h2>
@@ -141,9 +147,12 @@ Links: 202305091705</description>
       <description>Links: 202305070805
 https://youtu.be/Q8dxoqqMHAg</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/Q8dxoqqMHAg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Q8dxoqqMHAg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202305070805</p>
@@ -1038,9 +1047,12 @@ Today I needed to update my /articles/ links to /zet/articles/ links because I&a
       <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
 Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/bzkrmkGDQJA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>As I alluded to in my <a href="/zet/articles/obsidian-introduction">article about Obsidian,</a> I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.</p>
 <p>Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</p>

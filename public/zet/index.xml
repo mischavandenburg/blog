@@ -6,7 +6,7 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Got my CKS</title>
       <link>https://mischavandenburg.com/zet/got-my-cks/</link>
@@ -19,9 +19,12 @@ Links: 202406152006</description>
       <content:encoded><![CDATA[<p>Just realized I never posted on the blog that I achieved the CKS a month ago.</p>
 <p>I even created a study guide for it:</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_l232KiJHNA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_l232KiJHNA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202406152006</p>
@@ -469,9 +472,12 @@ Born to Run 2</description>
       <guid>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</guid>
       <description>I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/iagjeLuxnMs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/iagjeLuxnMs?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I&rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&rsquo;m excited that I can finally share it with you.</p>
 <p>My workflow is completely based on the command line.
@@ -524,9 +530,12 @@ PVCs: These are requests for storage, akin to how Pods request resources like CP
       <guid>https://mischavandenburg.com/zet/video-homelab-learning-flux/</guid>
       <description>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/BtuqzsyztBc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BtuqzsyztBc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</p>
 <p>Notes:</p>
@@ -766,9 +775,12 @@ Resources Two types of resources. Azure resources and k8s resources.
 The App Gateway for Container is an azure resource which listens to changes in k8s resources through the ALB controller. AGWFC is the control plane.
 Frontend Azure Frontend is a public IP and fqdn.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/slCjHV8z9Wk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/slCjHV8z9Wk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h1 id="app-gateway">App Gateway</h1>
 <p>It has App Gateway in the name, but it is an entirely new solution. The App Gateway is the only thing it has in common with Azure Application Gateway.</p>
@@ -830,9 +842,12 @@ Frontend Azure Frontend is a public IP and fqdn.</description>
 My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.
 installed prometheus and grafana with kube-prometheus-stack helm chart reflected on why I use k3s gained understanding of k3s loadbalancing solution configured /etc/hosts file to resolve to fake domain configured k3s ingress to use fake local domain struggled with ingress but figured it out in the end successfully made grafana UI available on fake local domain grafana.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/JjIB65CVXAo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JjIB65CVXAo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I installed Prometheus and Grafana using helm and studied k3s networking.</p>
 <p>My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.</p>
@@ -879,9 +894,12 @@ Links: 202312301912
 https://youtu.be/X40gNPZ2xP4
 [[homelab]]</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/X40gNPZ2xP4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X40gNPZ2xP4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>This is the first video of my homelab series.</p>
 <p>I set up the repo for my project and do the initial installation of k3s on an old laptop I had lying around. I had a k8s cluster installed on there with kubeadm which I needed to clean up first.</p>
@@ -1019,9 +1037,12 @@ Links: 202312301612</description>
 creating an application in Strava installing the Strava plugin in Grafana adding the Strava data source importing dashboards exploring data and creating custom dashboard Links: 202312250812
 https://youtu.be/CgP9hs9UDzA</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/CgP9hs9UDzA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/CgP9hs9UDzA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I&rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:</p>
 <ul>
@@ -1049,9 +1070,12 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm show values prometheus-community/kube-prometheus-stack &amp;gt; prometheus-default-values.yaml
 Opening the Grafana UI k port-forward svc/prometheus-stack-grafana 3000:80</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/3AINqaBwOYs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3AINqaBwOYs?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I&rsquo;ll be installing Prometheus and Grafana in a Kubernetes cluster running in Rancher Desktop on my MacBook.</p>
 <p>There are many options available out there but this is the easiest one I found to get up and running quickly.</p>
@@ -1117,9 +1141,12 @@ microservices should be autonomous: they should have minimal dependencies on oth
 <p>Another powerful point he made is that the architecture is a reflection from the organization&rsquo;s structure. He explained that the company was organized in teams and that managers of teams were promoted based on the amount of people they managed. This meant that managers were making up services which needed people to build them, which led to a proliferation of services and dependencies.</p>
 <p>In order to have a correct software strucutre, the organization must be organized correctly first.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/gfh-VCTwMw8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gfh-VCTwMw8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202312231912</p>
@@ -1935,9 +1962,12 @@ Links: 202308231608
 https://youtu.be/iPiq3YuhnHc</description>
       <content:encoded><![CDATA[<p>From here on out you can access Microsoft Learn during the exams. This is great news! This is much more like the actual experience of an engineer&rsquo;s daily activities. It is arguably more important to look up things efficiently rather than memorizing everything for a test and forgetting it a few weeks later.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/iPiq3YuhnHc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/iPiq3YuhnHc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202308231608</p>
@@ -2061,9 +2091,12 @@ Test driven software development is a software development practice that involve
       <description>In this video, I will walk you through the following steps:
 Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure portal and link it to the repo Configure the Azure DevOps pipeline for MkDocs deployment Configure a custom theme for the website Demonstrate the pull request workflow for updating the docs By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_-D1Qz6jtEU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_-D1Qz6jtEU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video, I will walk you through the following steps:</p>
 <ul>
@@ -2134,9 +2167,12 @@ This morning it was time for my long run, and while I was drinking my coffee I d
 <p>When I started running I listened to music, but after I could run for more than 20 minutes, I started to see my runs as a form of active meditation. I deliberately avoid listening to music and podcasts so I can focus completely on the running experience and use the breath, body and movement as meditation objects. However, Kipchoge says that it is all right to listen to music or podcasts during easy runs. They will make the time pass by very quickly.</p>
 <p>I hope you enjoyed this blog post and learned something from Kipchoge&rsquo;s wisdom. If you want to listen to the full interview, you can find it here:</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/X4la2sHwZB0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X4la2sHwZB0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>Links:</p>
 <p>202307221407</p>
@@ -2188,9 +2224,12 @@ This morning it was time for my long run, and while I was drinking my coffee I d
       <description>With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.
 I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/jZTJaUncbWc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jZTJaUncbWc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.</p>
 <p>I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness. He passed away in 1992, but his legacy lives on through his books, recordings, and disciples.</p>
@@ -2253,9 +2292,12 @@ I use Neovim and the Azure CLI for my coding and deployment.
 You will learn how to:
 Implement dev/test prefix to create multiple clusters with the same template Plan a VNet range for an Azure CNI cluster and be mindful of overlaps Deploy a VNet and subnet for the cluster using Bicep Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node Validate your Bicep template and troubleshoot errors Explore the results of your deployment in the Azure portal Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_U3HichIJ0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_U3HichIJ0Q?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.</p>
 <p>Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.</p>
@@ -2386,9 +2428,12 @@ I use the uniqueString function combined with the utcNow function. But the cavea
 param keyVaultName string = &#39;key-vault-${uniqueString(resourceGroup().id, utcNow())}&#39;
 uniqueString() doesn&amp;rsquo;t really generate a unique string. It is a hash function which generates a 13 character string based on the input you give it.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/n9MRNnAJjZY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/n9MRNnAJjZY?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.</p>
 <p>I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:</p>
@@ -2453,9 +2498,12 @@ Things that stand out to me:
       <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
 acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/eooZ3OHl5Mc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Finish deploying keyvault using pipeline</li>
@@ -2500,9 +2548,12 @@ acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign c
       <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
 https://youtu.be/WnA8V3uq7P8</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/WnA8V3uq7P8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Write KeyVault template</li>
@@ -2556,19 +2607,22 @@ https://youtu.be/WnA8V3uq7P8</description>
       <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
 Links: 202306271706
 https://www.youtube.com/watch?v=l0B65FUfNBU
-[[AKS]] [[Kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+[[AKS]] [[Kubernetes]] [[Neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/l0B65FUfNBU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
 <p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
 <p>[[AKS]]
 [[Kubernetes]]
-[[neovim]]
+[[Neovim]]
 [[bicep]]
 [[coding]]</p>
 ]]></content:encoded>
@@ -2592,9 +2646,12 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 <p>In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.</p>
 <p>Yes, you read that right, you&rsquo;ll be seeing a hardcore vim user switch to VSCode for this particular task!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/6Gav1JpGAzo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6Gav1JpGAzo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
@@ -2607,7 +2664,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 [[coding]]
 [[Kubernetes]]
 [[Azure]]
-[[neovim]]</p>
+[[Neovim]]</p>
 ]]></content:encoded>
     </item>
     
@@ -2621,9 +2678,12 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 https://www.youtube.com/watch?v=7VQ7BZwuZkU
 https://cloudblogs.microsoft.com/quantum/2023/06/21/microsoft-achieves-first-milestone-towards-a-quantum-supercomputer/</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/7VQ7BZwuZkU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7VQ7BZwuZkU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306261006</p>
@@ -2735,9 +2795,12 @@ Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have 
 Links: 202306092006</description>
       <content:encoded><![CDATA[<p>Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&rsquo;m curious to see how far Microsoft will take this!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/PqhdX8-SZYw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/PqhdX8-SZYw?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306092006</p>
@@ -2800,9 +2863,12 @@ This video is super inspiring because he actually runs a 3 hour marathon while r
 I was already doing base training for my running which I discovered through the r/running Reddit. Here you focus on time instead of distance and do many runs on low intensity throughout the week, and one long run where you go 5 minutes more every week.</description>
       <content:encoded><![CDATA[<p>Although I was already doing something very similar, yesterday I discovered MAF training through this video:</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/P_VNQ6UIbS8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/P_VNQ6UIbS8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>This video is super inspiring because he actually runs a 3 hour marathon while recording!</p>
 <p>I was already doing <a href="/zet/base-training-running/">base training for my running</a> which I discovered through the r/running Reddit. Here you focus on time instead of distance and do many runs on low intensity throughout the week, and one long run where you go 5 minutes more every week.</p>
@@ -2892,9 +2958,12 @@ https://matthiasott.com/notes/simple-truths-about-personal-websites</description
       <description>Through YouTube I&amp;rsquo;ve been exposed to quite a bit of Japanese culture and I love many aspects of it. I love this list of habits, and I was surprised to see how many of them I already incorporate.
 Clean the Toilet Many successful businessmen clean the toilet every day. It humbles you. Ajahn Chah also talks about this a lot. Check out &amp;ldquo;Toilets on the Path&amp;rdquo;. I&amp;rsquo;m also very focused on cleanliness and especially emphasize keeping my toilet clean.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/04wZNnjdURE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/04wZNnjdURE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>Through YouTube I&rsquo;ve been exposed to quite a bit of Japanese culture and I love many aspects of it. I love this list of habits, and I was surprised to see how many of them I already incorporate.</p>
 <ol>
@@ -2952,9 +3021,12 @@ Clean the Toilet Many successful businessmen clean the toilet every day. It humb
       <description>I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.
 In this Rich Roll podcast, Kevin Kelly argues that AI does not grow exponentially. It grows linearly, but not exponentially, because it is constrained by the infrastrucutre that we give it, and are able to give it.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/EKba_awaAkk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EKba_awaAkk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.</p>
 <p>In this Rich Roll podcast, Kevin Kelly argues that AI does not grow exponentially. It grows linearly, but not exponentially, because it is constrained by the infrastrucutre that we give it, and are able to give it. AI cannot grow by itself. We simply cannot provide enough computing power to enable exponential growth because the technology is not advanced enough yet, which means the growth is stunted.</p>
@@ -2974,9 +3046,12 @@ In this Rich Roll podcast, Kevin Kelly argues that AI does not grow exponentiall
       <description>Happiness, Hedonic Adjustment, Experiences This was a very good video. I can honestly say that I am very happy and content, and I lead a very fulfilling life. I do not usually watch this kind of &amp;ldquo;happiness&amp;rdquo; content because I&amp;rsquo;m already happy. But this video did give me some very important insights which have influenced the way I approach money and happiness.
 Memories as Dividends The main takeaway for me is to prioritize creating memories by investing in experiences.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/840iXuXwE4Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/840iXuXwE4Y?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h1 id="happiness-hedonic-adjustment-experiences">Happiness, Hedonic Adjustment, Experiences</h1>
 <p>This was a very good video. I can honestly say that I am very happy and content, and I lead a very fulfilling life. I do not usually watch this kind of &ldquo;happiness&rdquo; content because I&rsquo;m already happy. But this video did give me some very important insights which have influenced the way I approach money and happiness.</p>
@@ -3092,9 +3167,12 @@ E/N description: The website&amp;rsquo;s author covers a myriad of topics. It&am
       <description>I show my workflow to publish my Hugo blog from the command line using neovim and bash
 Links: 202305091705</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/bzkrmkGDQJA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I show my workflow to publish my Hugo blog from the command line using neovim and bash</p>
 <h2 id="links">Links:</h2>
@@ -3131,9 +3209,12 @@ My base building schedule is giving me good results. I did this week&amp;rsquo;s
       <description>Links: 202305070805
 https://youtu.be/Q8dxoqqMHAg</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/Q8dxoqqMHAg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Q8dxoqqMHAg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202305070805</p>
@@ -3327,9 +3408,12 @@ To in stall on MacOS: brew install newsboat
 Integrate in already existing terminal workflow Free from distraction Control how content is rendered Carefully curate which content you consume Build your own &amp;ldquo;Social Media feed&amp;rdquo; No advertisements or suggested articles Newsboat uses RSS feeds which are generated by websites Links: 202304271004
 https://newsboat.org/</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/08SxwJ7ZVyo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/08SxwJ7ZVyo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I use RSS feeds to read the news, and I use Newsboat as a RSS reader.</p>
 <p>To in stall on MacOS: <code>brew install newsboat</code></p>
@@ -4422,6 +4506,12 @@ pandoc 00-zettelkasten/Fundamentals\ of\ Bicep.md --pdf-engine=wkhtmltopdf -o /t
 <p>To convert all markdown files in a directory you can use a wildcard:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pandoc 00-zettelkasten/*.md --pdf-engine<span class="o">=</span>wkhtmltopdf  -o /tmp/test.pdf
 </span></span></code></pre></div><p>Fun fact: converting my entire zettelkasten took a few seconds and generated a document of 80 pages with a font size of 10. Pretty fun to see it in a more regular format instead of the terminal.</p>
+<h1 id="pandoc">pandoc</h1>
+<p>Switched to pandoc for my vim markdown plugin and I&rsquo;m starting to like it a lot. I struggled a bit to get a working setup because of all the folding etc. But I figured it out and found out that rwxrob also hates folding haha.</p>
+<p><a href="https://www.youtube.com/watch?v=3NiBr3j-vMw">https://www.youtube.com/watch?v=3NiBr3j-vMw</a>
+<a href="https://www.youtube.com/watch?v=Efk2M77naFU&amp;list=TLPQMjQwMzIwMjPleFLT9W4o_Q&amp;index=3">https://www.youtube.com/watch?v=Efk2M77naFU&amp;list=TLPQMjQwMzIwMjPleFLT9W4o_Q&amp;index=3</a>
+<a href="https://www.youtube.com/watch?v=3NiBr3j-vMw&amp;list=TLPQMjQwMzIwMjPleFLT9W4o_Q&amp;index=1">https://www.youtube.com/watch?v=3NiBr3j-vMw&amp;list=TLPQMjQwMzIwMjPleFLT9W4o_Q&amp;index=1</a></p>
+<p>search rwxrobs channel for markdown</p>
 ]]></content:encoded>
     </item>
     
@@ -4494,13 +4584,13 @@ Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsid
       <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/surround-word-quotes-neovim/</guid>
-      <description>[[neovim]]
+      <description>[[Neovim]]
 I find myself quoting words very often in vim when I&amp;rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.
 I found this vim command:
 ciw&amp;quot;&amp;quot;&amp;lt;Esc&amp;gt;P
 &amp;ldquo;c&amp;rdquo; deletes into register and enters insert mode. &amp;ldquo;iw&amp;rdquo; stands for &amp;ldquo;inner word&amp;rdquo; and selects the word.
 So we delete the entire word and enter insert mode.</description>
-      <content:encoded><![CDATA[<p>[[neovim]]</p>
+      <content:encoded><![CDATA[<p>[[Neovim]]</p>
 <p>I find myself quoting words very often in vim when I&rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.</p>
 <p>I found this vim command:</p>
 <p><code>ciw&quot;&quot;&lt;Esc&gt;P</code></p>

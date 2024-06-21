@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mischavandenburg.com/</loc>
+    <lastmod>2024-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-06-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/tags/certification/</loc>
     <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/got-my-cks/</loc>
-    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/</loc>
     <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
@@ -21,9 +24,6 @@
     <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/video/</loc>
-    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/dev-environments/</loc>

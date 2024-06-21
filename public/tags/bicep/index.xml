@@ -111,9 +111,12 @@ I use Neovim and the Azure CLI for my coding and deployment.
 You will learn how to:
 Implement dev/test prefix to create multiple clusters with the same template Plan a VNet range for an Azure CNI cluster and be mindful of overlaps Deploy a VNet and subnet for the cluster using Bicep Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node Validate your Bicep template and troubleshoot errors Explore the results of your deployment in the Azure portal Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_U3HichIJ0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_U3HichIJ0Q?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.</p>
 <p>Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.</p>
@@ -162,9 +165,12 @@ I use the uniqueString function combined with the utcNow function. But the cavea
 param keyVaultName string = &#39;key-vault-${uniqueString(resourceGroup().id, utcNow())}&#39;
 uniqueString() doesn&amp;rsquo;t really generate a unique string. It is a hash function which generates a 13 character string based on the input you give it.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/n9MRNnAJjZY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/n9MRNnAJjZY?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.</p>
 <p>I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:</p>
@@ -188,9 +194,12 @@ uniqueString() doesn&amp;rsquo;t really generate a unique string. It is a hash f
       <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
 acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/eooZ3OHl5Mc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Finish deploying keyvault using pipeline</li>
@@ -235,9 +244,12 @@ acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign c
       <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
 https://youtu.be/WnA8V3uq7P8</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/WnA8V3uq7P8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Write KeyVault template</li>
@@ -265,19 +277,22 @@ https://youtu.be/WnA8V3uq7P8</description>
       <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
 Links: 202306271706
 https://www.youtube.com/watch?v=l0B65FUfNBU
-[[AKS]] [[Kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+[[AKS]] [[Kubernetes]] [[Neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/l0B65FUfNBU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
 <p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
 <p>[[AKS]]
 [[Kubernetes]]
-[[neovim]]
+[[Neovim]]
 [[bicep]]
 [[coding]]</p>
 ]]></content:encoded>
@@ -301,9 +316,12 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 <p>In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.</p>
 <p>Yes, you read that right, you&rsquo;ll be seeing a hardcore vim user switch to VSCode for this particular task!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/6Gav1JpGAzo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6Gav1JpGAzo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
@@ -316,7 +334,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 [[coding]]
 [[Kubernetes]]
 [[Azure]]
-[[neovim]]</p>
+[[Neovim]]</p>
 ]]></content:encoded>
     </item>
     

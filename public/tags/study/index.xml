@@ -19,9 +19,12 @@ Links: 202406152006</description>
       <content:encoded><![CDATA[<p>Just realized I never posted on the blog that I achieved the CKS a month ago.</p>
 <p>I even created a study guide for it:</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_l232KiJHNA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_l232KiJHNA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202406152006</p>
@@ -191,9 +194,12 @@ t&amp;rsquo;s not going to be easy. I&amp;rsquo;m quite intimidated by all of th
       <guid>https://mischavandenburg.com/zet/video-homelab-learning-flux/</guid>
       <description>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/BtuqzsyztBc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BtuqzsyztBc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</p>
 <p>Notes:</p>
@@ -382,9 +388,12 @@ Links: 202308231608
 https://youtu.be/iPiq3YuhnHc</description>
       <content:encoded><![CDATA[<p>From here on out you can access Microsoft Learn during the exams. This is great news! This is much more like the actual experience of an engineer&rsquo;s daily activities. It is arguably more important to look up things efficiently rather than memorizing everything for a test and forgetting it a few weeks later.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/iPiq3YuhnHc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/iPiq3YuhnHc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202308231608</p>

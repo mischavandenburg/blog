@@ -32,9 +32,12 @@
 <p>When I started running I listened to music, but after I could run for more than 20 minutes, I started to see my runs as a form of active meditation. I deliberately avoid listening to music and podcasts so I can focus completely on the running experience and use the breath, body and movement as meditation objects. However, Kipchoge says that it is all right to listen to music or podcasts during easy runs. They will make the time pass by very quickly.</p>
 <p>I hope you enjoyed this blog post and learned something from Kipchoge&rsquo;s wisdom. If you want to listen to the full interview, you can find it here:</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/X4la2sHwZB0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X4la2sHwZB0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>Links:</p>
 <p>202307221407</p>
@@ -167,9 +170,12 @@ Use the normal recommendation to hydrate before exercise, this establishes a goo
       <description>I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.
 In this Rich Roll podcast, Kevin Kelly argues that AI does not grow exponentially. It grows linearly, but not exponentially, because it is constrained by the infrastrucutre that we give it, and are able to give it.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/EKba_awaAkk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EKba_awaAkk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.</p>
 <p>In this Rich Roll podcast, Kevin Kelly argues that AI does not grow exponentially. It grows linearly, but not exponentially, because it is constrained by the infrastrucutre that we give it, and are able to give it. AI cannot grow by itself. We simply cannot provide enough computing power to enable exponential growth because the technology is not advanced enough yet, which means the growth is stunted.</p>

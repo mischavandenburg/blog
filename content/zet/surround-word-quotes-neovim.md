@@ -7,7 +7,7 @@ tags:
 - Coding
 ---
 
-[[neovim]]
+[[Neovim]]
 
 I find myself quoting words very often in vim when I'm writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.
 

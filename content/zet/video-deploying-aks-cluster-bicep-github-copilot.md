@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=l0B65FUfNBU
 
 [[AKS]]
 [[Kubernetes]]
-[[neovim]]
+[[Neovim]]
 [[bicep]]
 [[coding]]
 

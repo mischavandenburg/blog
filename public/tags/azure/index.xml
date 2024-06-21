@@ -365,9 +365,12 @@ Resources Two types of resources. Azure resources and k8s resources.
 The App Gateway for Container is an azure resource which listens to changes in k8s resources through the ALB controller. AGWFC is the control plane.
 Frontend Azure Frontend is a public IP and fqdn.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/slCjHV8z9Wk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/slCjHV8z9Wk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h1 id="app-gateway">App Gateway</h1>
 <p>It has App Gateway in the name, but it is an entirely new solution. The App Gateway is the only thing it has in common with Azure Application Gateway.</p>
@@ -546,9 +549,12 @@ microservices should be autonomous: they should have minimal dependencies on oth
 <p>Another powerful point he made is that the architecture is a reflection from the organization&rsquo;s structure. He explained that the company was organized in teams and that managers of teams were promoted based on the amount of people they managed. This meant that managers were making up services which needed people to build them, which led to a proliferation of services and dependencies.</p>
 <p>In order to have a correct software strucutre, the organization must be organized correctly first.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/gfh-VCTwMw8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gfh-VCTwMw8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202312231912</p>
@@ -1034,9 +1040,12 @@ Links: 202308231608
 https://youtu.be/iPiq3YuhnHc</description>
       <content:encoded><![CDATA[<p>From here on out you can access Microsoft Learn during the exams. This is great news! This is much more like the actual experience of an engineer&rsquo;s daily activities. It is arguably more important to look up things efficiently rather than memorizing everything for a test and forgetting it a few weeks later.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/iPiq3YuhnHc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/iPiq3YuhnHc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202308231608</p>
@@ -1053,9 +1062,12 @@ https://youtu.be/iPiq3YuhnHc</description>
       <description>In this video, I will walk you through the following steps:
 Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure portal and link it to the repo Configure the Azure DevOps pipeline for MkDocs deployment Configure a custom theme for the website Demonstrate the pull request workflow for updating the docs By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_-D1Qz6jtEU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_-D1Qz6jtEU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video, I will walk you through the following steps:</p>
 <ul>
@@ -1092,9 +1104,12 @@ Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure
       <description>With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.
 I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/jZTJaUncbWc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jZTJaUncbWc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.</p>
 <p>I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness. He passed away in 1992, but his legacy lives on through his books, recordings, and disciples.</p>
@@ -1157,9 +1172,12 @@ I use Neovim and the Azure CLI for my coding and deployment.
 You will learn how to:
 Implement dev/test prefix to create multiple clusters with the same template Plan a VNet range for an Azure CNI cluster and be mindful of overlaps Deploy a VNet and subnet for the cluster using Bicep Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node Validate your Bicep template and troubleshoot errors Explore the results of your deployment in the Azure portal Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_U3HichIJ0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_U3HichIJ0Q?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.</p>
 <p>Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.</p>
@@ -1290,9 +1308,12 @@ I use the uniqueString function combined with the utcNow function. But the cavea
 param keyVaultName string = &#39;key-vault-${uniqueString(resourceGroup().id, utcNow())}&#39;
 uniqueString() doesn&amp;rsquo;t really generate a unique string. It is a hash function which generates a 13 character string based on the input you give it.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/n9MRNnAJjZY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/n9MRNnAJjZY?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.</p>
 <p>I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:</p>
@@ -1357,9 +1378,12 @@ Things that stand out to me:
       <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
 acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/eooZ3OHl5Mc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Finish deploying keyvault using pipeline</li>
@@ -1404,9 +1428,12 @@ acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign c
       <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
 https://youtu.be/WnA8V3uq7P8</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/WnA8V3uq7P8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Write KeyVault template</li>
@@ -1434,19 +1461,22 @@ https://youtu.be/WnA8V3uq7P8</description>
       <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
 Links: 202306271706
 https://www.youtube.com/watch?v=l0B65FUfNBU
-[[AKS]] [[Kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+[[AKS]] [[Kubernetes]] [[Neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/l0B65FUfNBU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
 <p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
 <p>[[AKS]]
 [[Kubernetes]]
-[[neovim]]
+[[Neovim]]
 [[bicep]]
 [[coding]]</p>
 ]]></content:encoded>
@@ -1470,9 +1500,12 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 <p>In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.</p>
 <p>Yes, you read that right, you&rsquo;ll be seeing a hardcore vim user switch to VSCode for this particular task!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/6Gav1JpGAzo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6Gav1JpGAzo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
@@ -1485,7 +1518,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 [[coding]]
 [[Kubernetes]]
 [[Azure]]
-[[neovim]]</p>
+[[Neovim]]</p>
 ]]></content:encoded>
     </item>
     
@@ -1499,9 +1532,12 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 https://www.youtube.com/watch?v=7VQ7BZwuZkU
 https://cloudblogs.microsoft.com/quantum/2023/06/21/microsoft-achieves-first-milestone-towards-a-quantum-supercomputer/</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/7VQ7BZwuZkU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7VQ7BZwuZkU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306261006</p>
@@ -1613,9 +1649,12 @@ Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have 
 Links: 202306092006</description>
       <content:encoded><![CDATA[<p>Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&rsquo;m curious to see how far Microsoft will take this!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/PqhdX8-SZYw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/PqhdX8-SZYw?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306092006</p>

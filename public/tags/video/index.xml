@@ -19,9 +19,12 @@ Links: 202406152006</description>
       <content:encoded><![CDATA[<p>Just realized I never posted on the blog that I achieved the CKS a month ago.</p>
 <p>I even created a study guide for it:</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_l232KiJHNA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_l232KiJHNA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202406152006</p>
@@ -36,9 +39,12 @@ Links: 202406152006</description>
       <guid>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</guid>
       <description>I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/iagjeLuxnMs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/iagjeLuxnMs?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I&rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&rsquo;m excited that I can finally share it with you.</p>
 <p>My workflow is completely based on the command line.
@@ -61,9 +67,12 @@ keyboard centered and efficient environment to do my best work.</p>
 My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.
 installed prometheus and grafana with kube-prometheus-stack helm chart reflected on why I use k3s gained understanding of k3s loadbalancing solution configured /etc/hosts file to resolve to fake domain configured k3s ingress to use fake local domain struggled with ingress but figured it out in the end successfully made grafana UI available on fake local domain grafana.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/JjIB65CVXAo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JjIB65CVXAo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I installed Prometheus and Grafana using helm and studied k3s networking.</p>
 <p>My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.</p>
@@ -94,9 +103,12 @@ Links: 202312301912
 https://youtu.be/X40gNPZ2xP4
 [[homelab]]</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/X40gNPZ2xP4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X40gNPZ2xP4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>This is the first video of my homelab series.</p>
 <p>I set up the repo for my project and do the initial installation of k3s on an old laptop I had lying around. I had a k8s cluster installed on there with kubeadm which I needed to clean up first.</p>
@@ -116,9 +128,12 @@ https://youtu.be/X40gNPZ2xP4
       <description>In this video, I will walk you through the following steps:
 Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure portal and link it to the repo Configure the Azure DevOps pipeline for MkDocs deployment Configure a custom theme for the website Demonstrate the pull request workflow for updating the docs By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_-D1Qz6jtEU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_-D1Qz6jtEU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video, I will walk you through the following steps:</p>
 <ul>
@@ -155,9 +170,12 @@ Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure
       <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
 acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/eooZ3OHl5Mc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Finish deploying keyvault using pipeline</li>
@@ -202,9 +220,12 @@ acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign c
       <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
 https://youtu.be/WnA8V3uq7P8</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/WnA8V3uq7P8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Write KeyVault template</li>
@@ -232,19 +253,22 @@ https://youtu.be/WnA8V3uq7P8</description>
       <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
 Links: 202306271706
 https://www.youtube.com/watch?v=l0B65FUfNBU
-[[AKS]] [[Kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+[[AKS]] [[Kubernetes]] [[Neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/l0B65FUfNBU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
 <p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
 <p>[[AKS]]
 [[Kubernetes]]
-[[neovim]]
+[[Neovim]]
 [[bicep]]
 [[coding]]</p>
 ]]></content:encoded>
@@ -268,9 +292,12 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 <p>In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.</p>
 <p>Yes, you read that right, you&rsquo;ll be seeing a hardcore vim user switch to VSCode for this particular task!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/6Gav1JpGAzo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6Gav1JpGAzo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
@@ -283,7 +310,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 [[coding]]
 [[Kubernetes]]
 [[Azure]]
-[[neovim]]</p>
+[[Neovim]]</p>
 ]]></content:encoded>
     </item>
     
@@ -296,9 +323,12 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
       <description>Happiness, Hedonic Adjustment, Experiences This was a very good video. I can honestly say that I am very happy and content, and I lead a very fulfilling life. I do not usually watch this kind of &amp;ldquo;happiness&amp;rdquo; content because I&amp;rsquo;m already happy. But this video did give me some very important insights which have influenced the way I approach money and happiness.
 Memories as Dividends The main takeaway for me is to prioritize creating memories by investing in experiences.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/840iXuXwE4Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/840iXuXwE4Y?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h1 id="happiness-hedonic-adjustment-experiences">Happiness, Hedonic Adjustment, Experiences</h1>
 <p>This was a very good video. I can honestly say that I am very happy and content, and I lead a very fulfilling life. I do not usually watch this kind of &ldquo;happiness&rdquo; content because I&rsquo;m already happy. But this video did give me some very important insights which have influenced the way I approach money and happiness.</p>
@@ -334,9 +364,12 @@ Memories as Dividends The main takeaway for me is to prioritize creating memorie
       <description>I show my workflow to publish my Hugo blog from the command line using neovim and bash
 Links: 202305091705</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/bzkrmkGDQJA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I show my workflow to publish my Hugo blog from the command line using neovim and bash</p>
 <h2 id="links">Links:</h2>
@@ -353,9 +386,12 @@ Links: 202305091705</description>
       <description>Links: 202305070805
 https://youtu.be/Q8dxoqqMHAg</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/Q8dxoqqMHAg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Q8dxoqqMHAg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202305070805</p>
@@ -374,9 +410,12 @@ To in stall on MacOS: brew install newsboat
 Integrate in already existing terminal workflow Free from distraction Control how content is rendered Carefully curate which content you consume Build your own &amp;ldquo;Social Media feed&amp;rdquo; No advertisements or suggested articles Newsboat uses RSS feeds which are generated by websites Links: 202304271004
 https://newsboat.org/</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/08SxwJ7ZVyo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/08SxwJ7ZVyo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>I use RSS feeds to read the news, and I use Newsboat as a RSS reader.</p>
 <p>To in stall on MacOS: <code>brew install newsboat</code></p>

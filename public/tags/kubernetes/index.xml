@@ -19,9 +19,12 @@ Links: 202406152006</description>
       <content:encoded><![CDATA[<p>Just realized I never posted on the blog that I achieved the CKS a month ago.</p>
 <p>I even created a study guide for it:</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_l232KiJHNA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_l232KiJHNA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202406152006</p>
@@ -538,9 +541,12 @@ PVCs: These are requests for storage, akin to how Pods request resources like CP
       <guid>https://mischavandenburg.com/zet/video-homelab-learning-flux/</guid>
       <description>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/BtuqzsyztBc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BtuqzsyztBc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</p>
 <p>Notes:</p>
@@ -736,9 +742,12 @@ Resources Two types of resources. Azure resources and k8s resources.
 The App Gateway for Container is an azure resource which listens to changes in k8s resources through the ALB controller. AGWFC is the control plane.
 Frontend Azure Frontend is a public IP and fqdn.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/slCjHV8z9Wk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/slCjHV8z9Wk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h1 id="app-gateway">App Gateway</h1>
 <p>It has App Gateway in the name, but it is an entirely new solution. The App Gateway is the only thing it has in common with Azure Application Gateway.</p>
@@ -800,9 +809,12 @@ Frontend Azure Frontend is a public IP and fqdn.</description>
 My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.
 installed prometheus and grafana with kube-prometheus-stack helm chart reflected on why I use k3s gained understanding of k3s loadbalancing solution configured /etc/hosts file to resolve to fake domain configured k3s ingress to use fake local domain struggled with ingress but figured it out in the end successfully made grafana UI available on fake local domain grafana.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/JjIB65CVXAo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JjIB65CVXAo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I installed Prometheus and Grafana using helm and studied k3s networking.</p>
 <p>My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.</p>
@@ -833,9 +845,12 @@ Links: 202312301912
 https://youtu.be/X40gNPZ2xP4
 [[homelab]]</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/X40gNPZ2xP4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X40gNPZ2xP4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>This is the first video of my homelab series.</p>
 <p>I set up the repo for my project and do the initial installation of k3s on an old laptop I had lying around. I had a k8s cluster installed on there with kubeadm which I needed to clean up first.</p>
@@ -973,9 +988,12 @@ Links: 202312301612</description>
 creating an application in Strava installing the Strava plugin in Grafana adding the Strava data source importing dashboards exploring data and creating custom dashboard Links: 202312250812
 https://youtu.be/CgP9hs9UDzA</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/CgP9hs9UDzA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/CgP9hs9UDzA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I&rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:</p>
 <ul>
@@ -1003,9 +1021,12 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm show values prometheus-community/kube-prometheus-stack &amp;gt; prometheus-default-values.yaml
 Opening the Grafana UI k port-forward svc/prometheus-stack-grafana 3000:80</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/3AINqaBwOYs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3AINqaBwOYs?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I&rsquo;ll be installing Prometheus and Grafana in a Kubernetes cluster running in Rancher Desktop on my MacBook.</p>
 <p>There are many options available out there but this is the easiest one I found to get up and running quickly.</p>
@@ -1052,9 +1073,12 @@ microservices should be autonomous: they should have minimal dependencies on oth
 <p>Another powerful point he made is that the architecture is a reflection from the organization&rsquo;s structure. He explained that the company was organized in teams and that managers of teams were promoted based on the amount of people they managed. This meant that managers were making up services which needed people to build them, which led to a proliferation of services and dependencies.</p>
 <p>In order to have a correct software strucutre, the organization must be organized correctly first.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/gfh-VCTwMw8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gfh-VCTwMw8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202312231912</p>
@@ -1499,9 +1523,12 @@ I use Neovim and the Azure CLI for my coding and deployment.
 You will learn how to:
 Implement dev/test prefix to create multiple clusters with the same template Plan a VNet range for an Azure CNI cluster and be mindful of overlaps Deploy a VNet and subnet for the cluster using Bicep Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node Validate your Bicep template and troubleshoot errors Explore the results of your deployment in the Azure portal Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/_U3HichIJ0Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_U3HichIJ0Q?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.</p>
 <p>Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.</p>
@@ -1548,9 +1575,12 @@ DNS service ip addres 10.0.0.10</p>
       <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
 acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/eooZ3OHl5Mc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Finish deploying keyvault using pipeline</li>
@@ -1595,9 +1625,12 @@ acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign c
       <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
 https://youtu.be/WnA8V3uq7P8</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/WnA8V3uq7P8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <ul>
 <li>Write KeyVault template</li>
@@ -1625,19 +1658,22 @@ https://youtu.be/WnA8V3uq7P8</description>
       <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
 Links: 202306271706
 https://www.youtube.com/watch?v=l0B65FUfNBU
-[[AKS]] [[Kubernetes]] [[neovim]] [[bicep]] [[coding]]</description>
+[[AKS]] [[Kubernetes]] [[Neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/l0B65FUfNBU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
 <p><a href="https://www.youtube.com/watch?v=l0B65FUfNBU">https://www.youtube.com/watch?v=l0B65FUfNBU</a></p>
 <p>[[AKS]]
 [[Kubernetes]]
-[[neovim]]
+[[Neovim]]
 [[bicep]]
 [[coding]]</p>
 ]]></content:encoded>
@@ -1661,9 +1697,12 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 <p>In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.</p>
 <p>Yes, you read that right, you&rsquo;ll be seeing a hardcore vim user switch to VSCode for this particular task!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/6Gav1JpGAzo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6Gav1JpGAzo?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306271706</p>
@@ -1676,7 +1715,7 @@ More readable and editor friendly Cleaner and less lines of code VSCode integrat
 [[coding]]
 [[Kubernetes]]
 [[Azure]]
-[[neovim]]</p>
+[[Neovim]]</p>
 ]]></content:encoded>
     </item>
     
@@ -1735,9 +1774,12 @@ Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have 
 Links: 202306092006</description>
       <content:encoded><![CDATA[<p>Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&rsquo;m curious to see how far Microsoft will take this!</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/PqhdX8-SZYw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/PqhdX8-SZYw?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="links">Links:</h2>
 <p>202306092006</p>

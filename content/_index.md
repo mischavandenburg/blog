@@ -1,8 +1,7 @@
 ---
 title: Home
 ---
-
-# Living on the Command Line
+# The Cloud Native Craftsman
 
 Welcome to my website. I’m Mischa, a Cloud Native Engineer from Amsterdam.
 
@@ -12,7 +11,8 @@ interested in anything that increases my productivity, so you will also find
 writings on Zettelkasten, (Neo)vim, study techniques and anything that has to do
 with taking notes.
 
-In 2024 I was awared the Microsoft MVP title for my efforts of sharing knowledge with the community.
+In 2024 I was awared the Microsoft MVP title for my efforts of sharing knowledge
+with the community.
 
 Years of sharing knowledge on YouTube and this blog have uncovered a talent for
 tackling difficult technical topics and explaining them in simple terms to
@@ -27,9 +27,16 @@ My courses are also available on
 My courses have been received very well and I receive plenty of positive
 feedback.
 
+This blog is also available for your preferred RSS reader. Use
+[this link.](https://mischavandenburg.com/index.xml)
 
-This blog is also available for your preferred RSS reader. 
-Use [this link.](https://mischavandenburg.com/index.xml)
+## Sign Up For My Free Newsletter
+
+{{< rawhtml >}}
+
+<iframe src="https://mischavandenburg.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+
+{{< /rawhtml >}}
 
 # Socials
 
@@ -45,4 +52,5 @@ Use [this link.](https://mischavandenburg.com/index.xml)
 
 ![](/mvp.png)
 
-# Most Recent Posts:
+# Most Recent Posts
+

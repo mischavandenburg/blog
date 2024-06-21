@@ -35,9 +35,12 @@ Links: 202312301612</description>
 creating an application in Strava installing the Strava plugin in Grafana adding the Strava data source importing dashboards exploring data and creating custom dashboard Links: 202312250812
 https://youtu.be/CgP9hs9UDzA</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/CgP9hs9UDzA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/CgP9hs9UDzA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I&rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:</p>
 <ul>
@@ -65,9 +68,12 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm show values prometheus-community/kube-prometheus-stack &amp;gt; prometheus-default-values.yaml
 Opening the Grafana UI k port-forward svc/prometheus-stack-grafana 3000:80</description>
       <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/3AINqaBwOYs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3AINqaBwOYs?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>In this video I&rsquo;ll be installing Prometheus and Grafana in a Kubernetes cluster running in Rancher Desktop on my MacBook.</p>
 <p>There are many options available out there but this is the easiest one I found to get up and running quickly.</p>
