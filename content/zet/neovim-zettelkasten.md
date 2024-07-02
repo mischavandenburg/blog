@@ -32,7 +32,9 @@ Zettelkasten is a system of note taking and personal knowledge management. [Zett
 
 [Niklas Luhmann](https://en.wikipedia.org/wiki/Niklas_Luhmann), who was one of the most prolific scholars in history, used it extensively. He wrote 70 books and nearly 400 academic articles, and he credited the Zettelkasten with making his productivity possible. It contained around 90,000 index cards.
 
-I first came across this concept by reading the book [How to take Smart Notes](https://www.soenkeahrens.de/en/takesmartnotes) by Sönke Ahrens. 
+I first came across this concept by reading the book [How to take Smart Notes](https://amzn.to/49Pcimg) by Sönke Ahrens. 
+
+
 
 # Why Take Notes?
 
@@ -159,6 +161,32 @@ tags:
 ---
 ```
 
+# Learn about Zettelkasten
+
+If you're interested in learning more about the Zettelkasten Method, I created a course that will teach you everything you need to know about the method.
+
+We will build a Zettelkasten in Obsidian together. 
+
+And the best part?
+
+This Zettelkasten setup is fully compatible with (neo)vim. 
+
+You are in full control of your files, your data, and your editing experience.
+
+This course is my life's work. It's 2000 hours worth of research and practice condensed into 2 hours.
+
+[View the course on Udemy by clicking here](https://www.udemy.com/course/the-zettelkasten-method-in-obsidian/?referralCode=DD8063240FBC9F65E41E)
+
+It's getting 5 star reviews every day.
+
+![](/ureview1.png)
+
+Alternatively, you can get UNLIMITED access to ALL my courses on note-taking, productivity, obsidian, DevOps, Kubernetes and more by joining my Skool community.
+
+[Check out the community here.](https://mischavandenburg.com/skool)
+
+You will get direct access to me and the community, and the opportunity to ask questions by joining one of the 3 weekly Q&A calls or by making a post and connecting with fellow note-takers.
+
 # Conclusion
 
 That's about it. My system is a minimalistic set of tools utilized for maximum productivity. It's Neovim with a few plugins and a couple of helper scripts I wrote in bash that store markdown files in a directory structure that I find meaningful. After using many different applications and solutions, I'm extremely satisfied with the system I built for  myself which is very basic, free from distractions and tailored to my own needs.
@@ -172,6 +200,10 @@ I hope that this article may give you some inspiration to start building your ow
 # Links:
 
 202303270703
+
+[The Zettelkasten Method by Mischa van den Burg](https://www.udemy.com/course/the-zettelkasten-method-in-obsidian/?referralCode=DD8063240FBC9F65E41E)
+
+[My note-taking & command-line community](https://mischavandenburg.com/skool)
 
 https://fortelabs.com/blog/basboverview/
 

@@ -1985,6 +1985,7 @@ https://youtu.be/iPiq3YuhnHc</description>
 Now it&amp;rsquo;s time for lots of fresh air, mountains, many kilometres on the trails, and to pick up the connection to Nature I&amp;rsquo;ve made during the 9 years that I lived in the beautiful North.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ve just finished my last workday and tomorrow I&rsquo;m heading off to Norway! When I glance at the amount of posts I&rsquo;ve made on my blog recently it&rsquo;s obvious that it is time for a break from the entire routine. I&rsquo;ve been tapering down to this moment for a while now, toning down the studying and prioritizing relaxation so I can enter the holidays with a clear mind.</p>
 <p>Now it&rsquo;s time for lots of fresh air, mountains, many kilometres on the trails, and to pick up the connection to Nature I&rsquo;ve made during the 9 years that I lived in the beautiful North.</p>
+<p>[[The Norway holiday was an amazing experience]]</p>
 <h2 id="links">Links:</h2>
 <p>202308231608</p>
 ]]></content:encoded>
@@ -4061,7 +4062,7 @@ Searchability Collected in one place Can be converted to different output format
 <h1 id="what-is-a-zettelkasten">What is a Zettelkasten?</h1>
 <p>Zettelkasten is a system of note taking and personal knowledge management. <a href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a> means &ldquo;slip box&rdquo; in German. Traditionally it is a physical box of slips of paper or index cards containing smaller notes. Each of these cards have a unique identifier, and these identifiers are used to create links between the cards.</p>
 <p><a href="https://en.wikipedia.org/wiki/Niklas_Luhmann">Niklas Luhmann</a>, who was one of the most prolific scholars in history, used it extensively. He wrote 70 books and nearly 400 academic articles, and he credited the Zettelkasten with making his productivity possible. It contained around 90,000 index cards.</p>
-<p>I first came across this concept by reading the book <a href="https://www.soenkeahrens.de/en/takesmartnotes">How to take Smart Notes</a> by Sönke Ahrens.</p>
+<p>I first came across this concept by reading the book <a href="https://amzn.to/49Pcimg">How to take Smart Notes</a> by Sönke Ahrens.</p>
 <h1 id="why-take-notes">Why Take Notes?</h1>
 <blockquote>
 <p>&ldquo;Your professional success and quality of life depend directly on your ability to manage information effectively.&rdquo;</p>
@@ -4135,13 +4136,28 @@ Searchability Collected in one place Can be converted to different output format
 </span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Personal</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Article</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
-</span></span></span></code></pre></div><h1 id="conclusion">Conclusion</h1>
+</span></span></span></code></pre></div><h1 id="learn-about-zettelkasten">Learn about Zettelkasten</h1>
+<p>If you&rsquo;re interested in learning more about the Zettelkasten Method, I created a course that will teach you everything you need to know about the method.</p>
+<p>We will build a Zettelkasten in Obsidian together.</p>
+<p>And the best part?</p>
+<p>This Zettelkasten setup is fully compatible with (neo)vim.</p>
+<p>You are in full control of your files, your data, and your editing experience.</p>
+<p>This course is my life&rsquo;s work. It&rsquo;s 2000 hours worth of research and practice condensed into 2 hours.</p>
+<p><a href="https://www.udemy.com/course/the-zettelkasten-method-in-obsidian/?referralCode=DD8063240FBC9F65E41E">View the course on Udemy by clicking here</a></p>
+<p>It&rsquo;s getting 5 star reviews every day.</p>
+<p><img loading="lazy" src="/ureview1.png" type="" alt=""  /></p>
+<p>Alternatively, you can get UNLIMITED access to ALL my courses on note-taking, productivity, obsidian, DevOps, Kubernetes and more by joining my Skool community.</p>
+<p><a href="https://mischavandenburg.com/skool">Check out the community here.</a></p>
+<p>You will get direct access to me and the community, and the opportunity to ask questions by joining one of the 3 weekly Q&amp;A calls or by making a post and connecting with fellow note-takers.</p>
+<h1 id="conclusion">Conclusion</h1>
 <p>That&rsquo;s about it. My system is a minimalistic set of tools utilized for maximum productivity. It&rsquo;s Neovim with a few plugins and a couple of helper scripts I wrote in bash that store markdown files in a directory structure that I find meaningful. After using many different applications and solutions, I&rsquo;m extremely satisfied with the system I built for  myself which is very basic, free from distractions and tailored to my own needs.</p>
 <p>When I want to reflect on a certain topic or to write an article, I go through my collection of notes and link them together. Very often I find that the creation of these links will stimulate even more new connections and associations, and I end up with new ideas and more topics of study I want to explore and write about. I use my Zettelkasten as a vehicle for reflection, learning and creativity.</p>
 <p>I love the simplicity of my system. It enables me to capture notes very quickly while I&rsquo;m working or studying with very little effort. By storing my note collection on my iCloud drive and in GitHub, they can be accessed from all of my devices across all different operating systems.</p>
 <p>I hope that this article may give you some inspiration to start building your own note collection. You don&rsquo;t need to build your own system like I have done, any app that satisfies your needs can be used. Keeping notes on the things I encounter in life is one of the most enriching habits I&rsquo;ve acquired. It will be interesting to see how large my collection grows over the years!</p>
 <h1 id="links">Links:</h1>
 <p>202303270703</p>
+<p><a href="https://www.udemy.com/course/the-zettelkasten-method-in-obsidian/?referralCode=DD8063240FBC9F65E41E">The Zettelkasten Method by Mischa van den Burg</a></p>
+<p><a href="https://mischavandenburg.com/skool">My note-taking &amp; command-line community</a></p>
 <p><a href="https://fortelabs.com/blog/basboverview/">https://fortelabs.com/blog/basboverview/</a></p>
 <p><a href="https://fortelabs.com/blog/para/">https://fortelabs.com/blog/para/</a></p>
 <p><a href="https://rwx.gg/lang/md/">https://rwx.gg/lang/md/</a></p>

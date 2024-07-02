@@ -9,6 +9,8 @@ I've just finished my last workday and tomorrow I'm heading off to Norway! When 
 
 Now it's time for lots of fresh air, mountains, many kilometres on the trails, and to pick up the connection to Nature I've made during the 9 years that I lived in the beautiful North.
 
+[[The Norway holiday was an amazing experience]]
+
 ## Links:
 
 202308231608
