@@ -24,7 +24,7 @@ I should re-frame my thinking and actually put exercise as priority number 1. Ex
 
 [[Health]]
 
-[[focus]]
+[[Focus]]
 
 [[productivity]]
 
