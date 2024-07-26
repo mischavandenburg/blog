@@ -6,7 +6,40 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Return of Arch Linux</title>
+      <link>https://mischavandenburg.com/zet/the-return-of-arch-linux/</link>
+      <pubDate>Fri, 26 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/the-return-of-arch-linux/</guid>
+      <description>I&amp;rsquo;m planning to do a series on Linux on my YouTube channel. The idea is to cover the fundamentals of Linux, either by teaching them myself or to link to existing resources. When the basics are done, I will take over and we&amp;rsquo;ll build an Arch Linux desktop together.
+I use my MacBook for normal productive work and coding, and I have a Thinkpad T480 which I have for experimentation, and mostly for writing notes and browsing while I&amp;rsquo;m in the living room.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;m planning to do a series on Linux on my YouTube channel. The idea is to cover the fundamentals of Linux, either by teaching them myself or to link to existing resources. When the basics are done, I will take over and we&rsquo;ll build an Arch Linux desktop together.</p>
+<p>I use my MacBook for normal productive work and coding, and I have a Thinkpad T480 which I have for experimentation, and mostly for writing notes and browsing while I&rsquo;m in the living room. It was running Fedora using the Sway spin, and it worked fine.</p>
+<p>But Arch Linux has been gnawing at me ever since I started my community. We&rsquo;ve had some lovely discussions about distros and window managers, and I almost always commented that I enjoyed building my Arch Linux system.</p>
+<p>Well, I went back to it!</p>
+<p>This time I&rsquo;m going even more minimal. I took the challenge of not using NetworkManager, and I figured I would go with systemd-boot right away too.</p>
+<p>Some of you might remember the problems that happened with GRUB about 2 years ago. Systemd-boot feels so much more intuitive and straightforward to configure.</p>
+<p>So now I have a super clean and minimal system using system-boot and systemd-networkd with iwd.</p>
+<p>Getting internet to work was a bit of a challenge but figured it out eventually.</p>
+<p>Using systemd-resolved, I currently don&rsquo;t even have a /etc/hosts file on my Arch Linux system. That&rsquo;s a new one for me.</p>
+<p>This is the current pstree while ssh&rsquo;d into my Thinkpad from the MacBook.</p>
+<p>I&rsquo;m so happy with the current minimal state of it!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>mischa@thinkpad ~<span class="o">]</span>$ pstree
+</span></span><span class="line"><span class="cl">systemd─┬─dbus-broker-lau───dbus-broker
+</span></span><span class="line"><span class="cl">        ├─iwd
+</span></span><span class="line"><span class="cl">        ├─sshd───sshd-session───sshd-session───bash───pstree
+</span></span><span class="line"><span class="cl">        ├─systemd───<span class="o">(</span>sd-pam<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        ├─systemd-journal
+</span></span><span class="line"><span class="cl">        ├─systemd-logind
+</span></span><span class="line"><span class="cl">        ├─systemd-network
+</span></span><span class="line"><span class="cl">        ├─systemd-resolve
+</span></span><span class="line"><span class="cl">        ├─systemd-udevd
+</span></span><span class="line"><span class="cl">        └─systemd-userdbd───3*<span class="o">[</span>systemd-userwor<span class="o">]</span>
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>Got my CKS</title>
       <link>https://mischavandenburg.com/zet/got-my-cks/</link>

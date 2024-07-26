@@ -2,11 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mischavandenburg.com/tags/command-line/</loc>
+    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2024-06-19T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/linux/</loc>
+    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/the-return-of-arch-linux/</loc>
+    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2024-06-19T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/certification/</loc>
     <lastmod>2024-06-15T00:00:00+00:00</lastmod>
@@ -20,9 +32,6 @@
     <loc>https://mischavandenburg.com/tags/study/</loc>
     <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-06-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/video/</loc>
     <lastmod>2024-06-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -32,16 +41,10 @@
     <loc>https://mischavandenburg.com/zet/installing-packages-in-devcontainers-with-nix/</loc>
     <lastmod>2024-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/linux/</loc>
-    <lastmod>2024-05-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/nix/</loc>
     <lastmod>2024-05-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/best-way-to-download-youtube-videos-from-cli/</loc>
-    <lastmod>2024-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/command-line/</loc>
     <lastmod>2024-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/articles/</loc>
