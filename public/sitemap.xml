@@ -3,21 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/tags/command-line/</loc>
-    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/note-taking/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/productivity/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/zet/the-return-of-arch-linux/</loc>
-    <lastmod>2024-07-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2024-07-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/certification/</loc>
@@ -108,9 +120,6 @@
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/neovim/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/productivity/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</loc>
@@ -447,9 +456,6 @@
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/power-of-writing/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/zettelkasten/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/check-weather-terminal/</loc>

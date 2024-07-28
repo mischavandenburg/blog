@@ -6,13 +6,43 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Command-Line</title>
       <link>https://mischavandenburg.com/tags/command-line/</link>
-      <pubDate>Fri, 26 Jul 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/command-line/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Note-Taking</title>
+      <link>https://mischavandenburg.com/tags/note-taking/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/note-taking/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>https://mischavandenburg.com/tags/productivity/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/productivity/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Zettelkasten</title>
+      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -193,16 +223,6 @@
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/neovim/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Productivity</title>
-      <link>https://mischavandenburg.com/tags/productivity/</link>
-      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/productivity/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -523,16 +543,6 @@
       <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/happiness/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Zettelkasten</title>
-      <link>https://mischavandenburg.com/tags/zettelkasten/</link>
-      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/zettelkasten/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

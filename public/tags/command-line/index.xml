@@ -6,7 +6,54 @@
     <description>Recent content in Command-Line on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No More GitHub - My Updated Backup Setup For My Obsidian Zettelkasten</title>
+      <link>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</guid>
+      <description>I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.</description>
+      <content:encoded><![CDATA[<p>I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.</p>
+<p>These small frictions can become large irritations, even though I only use Obsidian on my iPad very occasionally.</p>
+<p>To alleviate this problem I switched to Obsidian Sync. It&rsquo;s 4 dollars a month, and a great way to support the project. I&rsquo;ve had Sync before, but switched to iCloud when I entered the Apple ecosystem.</p>
+<h2 id="git">Git</h2>
+<p>In addition to iCloud and Obsidian Sync, I&rsquo;ve also been backing up my vault to GitHub. I used this to sync my vault to Linux devices before I purchased Obsidian Sync again.</p>
+<p>Syncing with Git has often led to problems. I&rsquo;ve spent many hours reverting faulty commits where I was about to lose a bunch of data.</p>
+<p>Another glaring problem is that I&rsquo;m committing my entire web of knowledge, my deepest thoughts and reflections and personal information to GitHub. Even though it is in a private repository, it&rsquo;s likely that Microsoft can access it some way or other if they want to. I haven&rsquo;t researched it thoroughly, but using a free service like GitHub usually comes with privacy sacrifices.</p>
+<p>I didn&rsquo;t mind it that much, but it was something that was gnawing on the back of my mind for years.</p>
+<p>Today I pulled the plug on it. It felt strange to delete the repo, but it&rsquo;s gone now.</p>
+<h2 id="rsync--icloud">Rsync + iCloud</h2>
+<p>My notes are safely backed up using Obsidian Sync. It&rsquo;s all encrypted at rest and in transfer. But I also want to have my own backups.</p>
+<p>To be absolutely safe I&rsquo;m also backing up the vault to my iCloud drive.</p>
+<p>Yeah, now I&rsquo;m giving Apple potential access to my files. But I think my data is safer with Apple than with GitHub where it can probably be used for training AI models.</p>
+<p>The next step will be to back it up to my Synology NAS, but I&rsquo;m running into some problems with mounting the SMB share from the command line, so I&rsquo;ll save that for later.</p>
+<p>I&rsquo;m using the following script to back up my Zettelkasten to my iCloud drive. It runs twice a day using a cron job on my MacBook Pro.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">SOURCE_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/Zettelkasten&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DEST_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/Library/Mobile Documents/com~apple~CloudDocs/backup/Zettelkasten&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdir -p <span class="s2">&#34;</span><span class="nv">$DEST_DIR</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rsync -av --delete <span class="s2">&#34;</span><span class="nv">$SOURCE_DIR</span><span class="s2">/&#34;</span> <span class="s2">&#34;</span><span class="nv">$DEST_DIR</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;</span><span class="nv">$DEST_DIR</span><span class="s2">&#34;</span> <span class="o">||</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;Error: Unable to change to destination directory&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git add -A
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Automatic backup commit </span><span class="k">$(</span>date <span class="s1">&#39;+%Y-%m-%d %H:%M:%S&#39;</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Backup and commit completed successfully!&#34;</span>
+</span></span></code></pre></div><h2 id="keeping-git">Keeping Git</h2>
+<p>As you can see, I&rsquo;m still committing changes every time I back up. I&rsquo;m keeping it as a local Git repo so I can revert commits when something unexpected happens.</p>
+<p>If push comes to shove, I can always push (😏) it to a Git instance again, or even to GitHub.</p>
+<p>I considered running my private Git instance in my homelab cluster, but I also don&rsquo;t want my Zettelkasten to be available there in case someone manages to break into my cluster. Even though I&rsquo;m running enterprise grade security with Talos, there is always a risk because I&rsquo;m exposing some services to the internet.</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>The Return of Arch Linux</title>
       <link>https://mischavandenburg.com/zet/the-return-of-arch-linux/</link>
