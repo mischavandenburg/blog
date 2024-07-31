@@ -6,7 +6,95 @@
     <description>Recent content in Zettelkasten on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/zet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Talos Linux Upgrade Guide July</title>
+      <link>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</guid>
+      <description>I upgraded my homelab cluster using Talos Linux today.
+I made a mistake and forgot to use the custom-built image using iscsi-tools.
+Learning the hard way.
+Here are my notes:
+Talos upgrade [!IMPORTANT] Remember to create a custom image including iscsi-tools
+Set up CLI environment and set databases to maintenance mode export TALOS_CP=&amp;#34;192.168.100.107&amp;#34; export TALOS_W1=&amp;#34;192.168.100.245&amp;#34; export TALOS_W2=&amp;#34;192.168.100.60&amp;#34; k cnp maintenance set --all-namespaces [!WARNING] Use the --preserve flag on single-node control plane clusters.</description>
+      <content:encoded><![CDATA[<p>I upgraded my homelab cluster using Talos Linux today.</p>
+<p>I made a mistake and forgot to use the custom-built image using iscsi-tools.</p>
+<p>Learning the hard way.</p>
+<p>Here are my notes:</p>
+<h2 id="talos-upgrade">Talos upgrade</h2>
+<blockquote>
+<p>[!IMPORTANT]
+Remember to create a custom image including iscsi-tools</p>
+</blockquote>
+<h3 id="set-up-cli-environment-and-set-databases-to-maintenance-mode">Set up CLI environment and set databases to maintenance mode</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_CP</span><span class="o">=</span><span class="s2">&#34;192.168.100.107&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_W1</span><span class="o">=</span><span class="s2">&#34;192.168.100.245&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_W2</span><span class="o">=</span><span class="s2">&#34;192.168.100.60&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">k cnp maintenance <span class="nb">set</span> --all-namespaces
+</span></span></code></pre></div><blockquote>
+<p>[!WARNING]
+Use the <code>--preserve</code> flag on single-node control plane clusters.
+Only needed for the control plane node.</p>
+</blockquote>
+<h3 id="upgrade-path">Upgrade path:</h3>
+<ol>
+<li>from 1.6.4 to 1.6.8</li>
+<li>from 1.6.8 to 1.7.5</li>
+</ol>
+<h3 id="upgrade-1">Upgrade 1</h3>
+<blockquote>
+<p>[!NOTE]
+I made a mistake and did not update to the custom-built image including the iscsi-tools
+This caused my cluster storage to break.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">talosctl upgrade --preserve --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> --image ghcr.io/siderolabs/installer:v1.6.8
+</span></span><span class="line"><span class="cl">talosctl upgrade --nodes <span class="nv">$TALOS_W1</span> -e <span class="nv">$TALOS_CP</span> --image ghcr.io/siderolabs/installer:v1.6.8
+</span></span><span class="line"><span class="cl">talosctl upgrade --nodes <span class="nv">$TALOS_W2</span> -e <span class="nv">$TALOS_CP</span> --image ghcr.io/siderolabs/installer:v1.6.8
+</span></span></code></pre></div><h3 id="upgrade-2">Upgrade 2</h3>
+<p>I went to <a href="https://factory.talos.dev/">https://factory.talos.dev/</a> and created a new image including iscsi-tools.</p>
+<p>Everything worked fine after that.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">talosctl upgrade --preserve --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> --image factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac:v1.7.5
+</span></span><span class="line"><span class="cl">talosctl upgrade --nodes <span class="nv">$TALOS_W1</span> -e <span class="nv">$TALOS_CP</span> --image factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac:v1.7.5
+</span></span><span class="line"><span class="cl">talosctl upgrade --nodes <span class="nv">$TALOS_W2</span> -e <span class="nv">$TALOS_CP</span> --image factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac:v1.7.5
+</span></span></code></pre></div><h2 id="kubernetes-upgrade">Kubernetes Upgrade</h2>
+<blockquote>
+<p>[!WARNING]
+Make sure to upgrade the Talos CLI before proceeding.
+&ldquo;It is advisable to use the same version of talosctl as the version of the boot media used.&rdquo; - Talos Docs</p>
+</blockquote>
+<h3 id="upgrade-path-1">Upgrade Path</h3>
+<ol>
+<li>From 1.29.0 to 1.29.3</li>
+<li>From 1.29.3 to 1.30.3</li>
+</ol>
+<blockquote>
+<p>[!NOTE]</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE]
+To trigger a Kubernetes upgrade, issue a command specifying the version of Kubernetes to upgrade to, such as:
+talosctl &ndash;nodes <!-- raw HTML omitted --> upgrade-k8s &ndash;to 1.30.0
+Note that the &ndash;nodes parameter specifies the control plane node to send the API call to, but all members of the cluster will be upgraded.
+To check what will be upgraded you can run talosctl upgrade-k8s with the &ndash;dry-run flag</p>
+</blockquote>
+<h3 id="round-1">Round 1</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k cnp maintenance <span class="nb">set</span> --all-namespaces
+</span></span><span class="line"><span class="cl">kubent
+</span></span><span class="line"><span class="cl">talosctl --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> upgrade-k8s --to 1.29.3 --dry-run
+</span></span><span class="line"><span class="cl">talosctl --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> upgrade-k8s --to 1.29.3
+</span></span></code></pre></div><h3 id="round-2">Round 2</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k cnp maintenance <span class="nb">set</span> --all-namespaces
+</span></span><span class="line"><span class="cl">kubent
+</span></span><span class="line"><span class="cl">talosctl --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> upgrade-k8s --to 1.30.3 --dry-run
+</span></span><span class="line"><span class="cl">talosctl --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> upgrade-k8s --to 1.30.3
+</span></span></code></pre></div><h2 id="links">Links:</h2>
+<p>202407311407</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>No More GitHub - My Updated Backup Setup For My Obsidian Zettelkasten</title>
       <link>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</link>
