@@ -29,7 +29,7 @@ Very interesting to scroll through the query logs and see what's being blocked.
 
 At first, I had it set up like this:
 
-[Pi-hole in Container Manager on a Synology NAS (drfrankenstein.co.uk)](https://drfrankenstein.co.uk/pi-hole-in-container-manager-on-a-synology-nas/)
+[How to Run Pi-hole on a Synology NAS - Pi My Life Up](https://pimylifeup.com/pi-hole-synology-nas/)
 
 ```docker
 version: "3"
@@ -55,11 +55,11 @@ services:
     restart: unless-stopped
 ```
 
-[How to Run Pi-hole on a Synology NAS - Pi My Life Up](https://pimylifeup.com/pi-hole-synology-nas/)
-
 ## Using Macvlan
 
 Later I wanted it available on a separate IP. This allowed me to view the individual clients in Pi-hole. In other words, I can see exactly which device the requests are coming from. When running it on the same IP as the Synology, I only saw the IP address of the internal docker network on the Synology.
+
+[Pi-hole in Container Manager on a Synology NAS (drfrankenstein.co.uk)](https://drfrankenstein.co.uk/pi-hole-in-container-manager-on-a-synology-nas/)
 
 ```yaml
 services:

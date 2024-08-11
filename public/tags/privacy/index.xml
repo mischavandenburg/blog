@@ -26,7 +26,7 @@ Because of my transition from a mouse to a pen tablet, I&amp;rsquo;ve already be
 <p>Then I set the DNS server for the VLAN to point towards my Synology and done!</p>
 <p>Very interesting to scroll through the query logs and see what&rsquo;s being blocked.</p>
 <p>At first, I had it set up like this:</p>
-<p><a href="https://drfrankenstein.co.uk/pi-hole-in-container-manager-on-a-synology-nas/">Pi-hole in Container Manager on a Synology NAS (drfrankenstein.co.uk)</a></p>
+<p><a href="https://pimylifeup.com/pi-hole-synology-nas/">How to Run Pi-hole on a Synology NAS - Pi My Life Up</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">version: <span class="s2">&#34;3&#34;</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>services:<span class="err">
@@ -48,9 +48,9 @@ Because of my transition from a mouse to a pen tablet, I&amp;rsquo;ve already be
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>    cap_add:<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>      - NET_ADMIN<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span>    restart: unless-stopped<span class="err">
-</span></span></span></code></pre></div><p><a href="https://pimylifeup.com/pi-hole-synology-nas/">How to Run Pi-hole on a Synology NAS - Pi My Life Up</a></p>
-<h2 id="using-macvlan">Using Macvlan</h2>
+</span></span></span></code></pre></div><h2 id="using-macvlan">Using Macvlan</h2>
 <p>Later I wanted it available on a separate IP. This allowed me to view the individual clients in Pi-hole. In other words, I can see exactly which device the requests are coming from. When running it on the same IP as the Synology, I only saw the IP address of the internal docker network on the Synology.</p>
+<p><a href="https://drfrankenstein.co.uk/pi-hole-in-container-manager-on-a-synology-nas/">Pi-hole in Container Manager on a Synology NAS (drfrankenstein.co.uk)</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pihole-macvlan</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">pihole/pihole:latest</span><span class="w">
