@@ -6,7 +6,90 @@
     <description>Recent content in Home on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I set up Pi-hole on my Synology NAS</title>
+      <link>https://mischavandenburg.com/zet/i-set-up-pi-hole-on-my-synology-nas/</link>
+      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/i-set-up-pi-hole-on-my-synology-nas/</guid>
+      <description>Transition to manifest V3 is now starting and Ublock Origin might not be supported in Chrome in the future.
+Because of my transition from a mouse to a pen tablet, I&amp;rsquo;ve already been experimenting with Qutebrowser for the past couple of weeks and I really enjoy it. It feels much closer to vim because I can run commands like this: &amp;ldquo;:set darkmode&amp;rdquo; which feels familiar and I can search my history very easily.</description>
+      <content:encoded><![CDATA[<p>Transition to manifest V3 is now starting and Ublock Origin might not be supported in Chrome in the future.</p>
+<p>Because of my transition from a mouse to a pen tablet, I&rsquo;ve already been experimenting with Qutebrowser for the past couple of weeks and I really enjoy it. It feels much closer to vim because I can run commands like this: &ldquo;:set darkmode&rdquo; which feels familiar and I can search my history very easily.</p>
+<p>Though it uses elements from Brave&rsquo;s ad blocker, the QtWebEngine is based on Chromium so I expect this will be affected by the manifest V3 rollout as well. Which means that I need another way to block ads.</p>
+<p>So, I&rsquo;m setting up PiHole to add another layer of ad blocking to the setup and to give a hand to Qutebrowser.</p>
+<p>As I have a YouTube premium subscription I&rsquo;m already enjoying YouTube without ads. I happily pay for it because I also use it for YouTube music and it&rsquo;s a way to support musicians and creators without having to suffer ads.</p>
+<p>But I can&rsquo;t stand ads while I&rsquo;m reading blog posts.</p>
+<p>I&rsquo;m happy to report that I now have PiHole running and all my traffic is routed through it. Having a Synology and Unifi router made this a piece of cake.</p>
+<p>I didn&rsquo;t want the Pi-Hole in my Kubernetes cluster so I&rsquo;m just running it on my Synology in a docker container.</p>
+<p>Then I set the DNS server for the VLAN to point towards my Synology and done!</p>
+<p>Very interesting to scroll through the query logs and see what&rsquo;s being blocked.</p>
+<p>At first, I had it set up like this:</p>
+<p><a href="https://drfrankenstein.co.uk/pi-hole-in-container-manager-on-a-synology-nas/">Pi-hole in Container Manager on a Synology NAS (drfrankenstein.co.uk)</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">version: <span class="s2">&#34;3&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>services:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  pihole:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    container_name: pihole<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    image: pihole/pihole:latest<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    ports:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s2">&#34;53:53/tcp&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s2">&#34;53:53/udp&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s2">&#34;67:67/udp&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s2">&#34;3009:80/tcp&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    environment:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      TZ: <span class="s1">&#39;CET&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      WEBPASSWORD: <span class="s1">&#39;yum apple pie&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    volumes:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s1">&#39;./etc-pihole:/etc/pihole&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - <span class="s1">&#39;./etc-dnsmasq.d:/etc/dnsmasq.d&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    cap_add:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      - NET_ADMIN<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    restart: unless-stopped<span class="err">
+</span></span></span></code></pre></div><p><a href="https://pimylifeup.com/pi-hole-synology-nas/">How to Run Pi-hole on a Synology NAS - Pi My Life Up</a></p>
+<h2 id="using-macvlan">Using Macvlan</h2>
+<p>Later I wanted it available on a separate IP. This allowed me to view the individual clients in Pi-hole. In other words, I can see exactly which device the requests are coming from. When running it on the same IP as the Synology, I only saw the IP address of the internal docker network on the Synology.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pihole-macvlan</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">pihole/pihole:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">pihole-macvlan</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">cap_add</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">CAP_NET_RAW</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">CAP_NET_BIND_SERVICE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">CAP_CHOWN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PIHOLE_UID=1028</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">PIHOLE_GID=65536</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">TZ=CET</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">WEBPASSWORD=letseatsomemorepie</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">DNSMASQ_LISTENING=all</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">WEB_PORT=3001</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">DNSMASQ_USER=pihole</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">FTLCONF_LOCAL_IPV4=192.168.120.10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;./etc-pihole:/etc/pihole&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;./etc-dnsmasq.d:/etc/dnsmasq.d&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">macvlan</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">ipv4_address</span><span class="p">:</span><span class="w"> </span><span class="m">192.168.120.10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">always</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">macvlan</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">macvlan</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">macvlan</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver_opts</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">parent</span><span class="p">:</span><span class="w"> </span><span class="l">eth0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ipam</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">config</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">subnet</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;192.168.120.0/24&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">ip_range</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;192.168.120.254/24&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">gateway</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;192.168.120.1&#34;</span><span class="w">
+</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>Talos Linux Upgrade Guide July</title>
       <link>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</link>
