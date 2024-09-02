@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Qutebrowser on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/qutebrowser/</link>
+    <description>Recent content in Qutebrowser on Mischa van den Burg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/qutebrowser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding Articles to Wallabag From Qutebrowser</title>
+      <link>https://mischavandenburg.com/zet/adding-articles-to-wallabag-with-qutebrowser/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/adding-articles-to-wallabag-with-qutebrowser/</guid>
+      <description>I&amp;rsquo;ve been daily driving Qutebrowser for over a month now, and I&amp;rsquo;m starting to feel at home in it.
+Since it doesn&amp;rsquo;t have any extensions, you have to hack things together yourself, which is why I like it so much.
+Today I wanted to add an article to my Wallabag instance, which I usually did by using the browser extension.
+I installed this Wallabag CLI:
+https://github.com/artur-shaik/wallabag-client
+pipx install wallabag-client
+After setting up the config I can now add entries from the command line.</description>
+      <content:encoded><![CDATA[<p>I&rsquo;ve been daily driving Qutebrowser for over a month now, and I&rsquo;m starting to feel at home in it.</p>
+<p>Since it doesn&rsquo;t have any extensions, you have to hack things together yourself, which is why I like it so much.</p>
+<p>Today I wanted to add an article to my Wallabag instance, which I usually did by using the browser extension.</p>
+<p>I installed this Wallabag CLI:</p>
+<p><a href="https://github.com/artur-shaik/wallabag-client">https://github.com/artur-shaik/wallabag-client</a></p>
+<p><code>pipx install wallabag-client</code></p>
+<p>After setting up the config I can now add entries from the command line. By running <code>wallabag add [url]</code>. Neat!</p>
+<p>Next, we can use the <code>spawn</code> command from within Qutebrowser to call this CLI command:</p>
+<p><code>spawn -v -m wallabag add {url}</code></p>
+<h2 id="alias">Alias</h2>
+<p>And to make it easier, I added a <code>:wallabag</code> alias by adding this to my <code>config.py</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">c</span><span class="o">.</span><span class="n">aliases</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;w&#39;</span><span class="p">:</span> <span class="s1">&#39;session-save&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;close&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;qa&#39;</span><span class="p">:</span> <span class="s1">&#39;quit&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;wq&#39;</span><span class="p">:</span> <span class="s1">&#39;quit --save&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;wqa&#39;</span><span class="p">:</span> <span class="s1">&#39;quit --save&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;wallabag&#39;</span><span class="p">:</span> <span class="s1">&#39;spawn -v -m wallabag add </span><span class="si">{url}</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Now I can just run <code>:wallabag</code> from within Qutebrowser and it will add the article.</p>
+<h2 id="build-it-yourself">Build It Yourself</h2>
+<p>I&rsquo;m really starting to love Qutebrowser for much of the same reasons why I love (neo)vim so much. I can call CLI commands from within my editor (or browser) and interact with my system that way.</p>
+<p>Since you can do almost anything from the CLI, you can build some very powerful workflows this way.</p>
+<p>Next, I&rsquo;m going to do the same for my Linkding instance so I can add bookmarks from within Qutebrowser.</p>
+<p>Feels nice that I don&rsquo;t need any extensions for this!</p>
+<h2 id="links">Links</h2>
+<p><a href="https://www.reddit.com/r/qutebrowser/comments/fgc0ol/is_there_a_way_to_make_this_wallabag_bookmarklet/">https://www.reddit.com/r/qutebrowser/comments/fgc0ol/is_there_a_way_to_make_this_wallabag_bookmarklet/</a></p>
+<p>202409020809</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,27 @@
     <description>Recent content in Tags on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Command-Line</title>
+      <link>https://mischavandenburg.com/tags/command-line/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/command-line/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Qutebrowser</title>
+      <link>https://mischavandenburg.com/tags/qutebrowser/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/tags/qutebrowser/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>Homelab</title>
       <link>https://mischavandenburg.com/tags/homelab/</link>
@@ -53,16 +73,6 @@
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/tags/talos/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Command-Line</title>
-      <link>https://mischavandenburg.com/tags/command-line/</link>
-      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://mischavandenburg.com/tags/command-line/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

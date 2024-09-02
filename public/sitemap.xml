@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mischavandenburg.com/zet/adding-articles-to-wallabag-with-qutebrowser/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/command-line/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2024-08-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/qutebrowser/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/homelab/</loc>
     <lastmod>2024-08-11T00:00:00+00:00</lastmod>
@@ -17,12 +32,6 @@
     <loc>https://mischavandenburg.com/tags/security/</loc>
     <lastmod>2024-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-08-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
-    <lastmod>2024-08-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
     <lastmod>2024-07-31T00:00:00+00:00</lastmod>
   </url><url>
@@ -31,9 +40,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</loc>
     <lastmod>2024-07-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/command-line/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>

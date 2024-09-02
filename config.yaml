@@ -9,7 +9,9 @@ buildFuture: true
 buildExpired: true
 pygmentsUseClasses: true
 
-googleAnalytics: G-VLS3GJYW82
+services:
+  googleAnalytics:
+    ID: G-VLS3GJYW82
 
 minify:
   disableXML: true
