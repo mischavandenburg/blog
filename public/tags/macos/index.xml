@@ -13,8 +13,8 @@
       <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/remove-background-image-macos/</guid>
-      <description>Removing backgrounds from images is always an annoying task which I always need to google. And every time I end up on a different website where you can upload an image and then download a low-resolution version without the background, and you&amp;rsquo;ll have to pay for the high-resolution.
-Turns out MacOS preview can do this just fine. I keep finding these little gems in MacOS that completely remove the need for any external app or saas.</description>
+      <description>&lt;p&gt;Removing backgrounds from images is always an annoying task which I always need to google. And every time I end up on a different website where you can upload an image and then download a low-resolution version without the background, and you&amp;rsquo;ll have to pay for the high-resolution.&lt;/p&gt;
+&lt;p&gt;Turns out MacOS preview can do this just fine. I keep finding these little gems in MacOS that completely remove the need for any external app or saas. Such as Apple Reminders.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Removing backgrounds from images is always an annoying task which I always need to google. And every time I end up on a different website where you can upload an image and then download a low-resolution version without the background, and you&rsquo;ll have to pay for the high-resolution.</p>
 <p>Turns out MacOS preview can do this just fine. I keep finding these little gems in MacOS that completely remove the need for any external app or saas. Such as Apple Reminders.</p>
 <p>It worked really well</p>
@@ -32,7 +32,12 @@ Turns out MacOS preview can do this just fine. I keep finding these little gems 
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</guid>
-      <description>I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.</description>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/iagjeLuxnMs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.&lt;/p&gt;</description>
       <content:encoded><![CDATA[
 
     
@@ -58,11 +63,13 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</guid>
-      <description>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.
-This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.
-You need the pandoc and wkhtmltopdf packages.
-brew install pandoc wkhtmltopdf To convert:
-pandoc 00-zettelkasten/Fundamentals\ of\ Bicep.md --pdf-engine=wkhtmltopdf -o /tmp/test.pdf This will output a pdf to my /tmp/ directory and it looks pretty good.</description>
+      <description>&lt;p&gt;It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.&lt;/p&gt;
+&lt;p&gt;This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.&lt;/p&gt;
+&lt;p&gt;You need the pandoc and wkhtmltopdf packages.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pandoc wkhtmltopdf 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To convert:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pandoc 00-zettelkasten/Fundamentals&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;of&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;Bicep.md --pdf-engine&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;wkhtmltopdf  -o /tmp/test.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
       <content:encoded><![CDATA[<p>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.</p>
 <p>This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.</p>
 <p>You need the pandoc and wkhtmltopdf packages.</p>
@@ -88,9 +95,9 @@ pandoc 00-zettelkasten/Fundamentals\ of\ Bicep.md --pdf-engine=wkhtmltopdf -o /t
       <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</guid>
-      <description>The past few days I&amp;rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.
-Unfortunately you can&amp;rsquo;t just run brew install docker and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.
-Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&amp;rsquo;t tried any of the other alternatives because I found something better.</description>
+      <description>&lt;p&gt;The past few days I&amp;rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.&lt;/p&gt;
+&lt;p&gt;Unfortunately you can&amp;rsquo;t just run &lt;code&gt;brew install docker&lt;/code&gt; and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.&lt;/p&gt;
+&lt;p&gt;Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&amp;rsquo;t tried any of the other alternatives because I found something better.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>The past few days I&rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.</p>
 <p>Unfortunately you can&rsquo;t just run <code>brew install docker</code> and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.</p>
 <p>Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&rsquo;t tried any of the other alternatives because I found something better.</p>
@@ -124,8 +131,8 @@ Minikube works fine as well, but the networking driver for qemu is not fully sup
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/apple-music-hotkeys/</guid>
-      <description>I&amp;rsquo;m a little obsessed with controlling everything with my keyboard. That&amp;rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.
-One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m a little obsessed with controlling everything with my keyboard. That&amp;rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.&lt;/p&gt;
+&lt;p&gt;One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I&rsquo;m a little obsessed with controlling everything with my keyboard. That&rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.</p>
 <p>One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.</p>
 <p>I started using Apple Music as my music app but it does not have any global hotkeys, and it makes you use a widget with the mouse.</p>
@@ -151,8 +158,8 @@ One thing I loved about my setup was the ability to control my music from the ke
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/move-to-macos/</guid>
-      <description>My new employer kindly sponsored me with a new 16-inch MacBook Pro M2. I chose 32GB Ram and the base model with 12 CPU and 19 GPU cores and 1TB of hard disk. These specifications will suit my needs well.
-I&amp;rsquo;ve been daily driving Linux for a year now, and it has been such an incredible journey. Building my own Arch Linux system taught me much about Linux and what it means to maintain a system yourself.</description>
+      <description>&lt;p&gt;My new employer kindly sponsored me with a new 16-inch MacBook Pro M2. I chose 32GB Ram and the base model with 12 CPU and 19 GPU cores and 1TB of hard disk. These specifications will suit my needs well.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been daily driving Linux for a year now, and it has been such an incredible journey. Building my own Arch Linux system taught me much about Linux and what it means to maintain a system yourself. I will undoubtedly miss my custom AwesomeWM configuration and the freedom that Arch provides.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>My new employer kindly sponsored me with a new 16-inch MacBook Pro M2. I chose 32GB Ram and the base model with 12 CPU and 19 GPU cores and 1TB of hard disk. These specifications will suit my needs well.</p>
 <p>I&rsquo;ve been daily driving Linux for a year now, and it has been such an incredible journey. Building my own Arch Linux system taught me much about Linux and what it means to maintain a system yourself. I will undoubtedly miss my custom AwesomeWM configuration and the freedom that Arch provides.</p>
 <p>Technically I could have chosen a Windows laptop and installed Linux on it. But I went for a Mac for the following reasons:</p>

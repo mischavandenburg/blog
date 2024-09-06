@@ -13,12 +13,22 @@
       <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</guid>
-      <description>I upgraded my homelab cluster using Talos Linux today.
-I made a mistake and forgot to use the custom-built image using iscsi-tools.
-Learning the hard way.
-Here are my notes:
-Talos upgrade [!IMPORTANT] Remember to create a custom image including iscsi-tools
-Set up CLI environment and set databases to maintenance mode export TALOS_CP=&amp;#34;192.168.100.107&amp;#34; export TALOS_W1=&amp;#34;192.168.100.245&amp;#34; export TALOS_W2=&amp;#34;192.168.100.60&amp;#34; k cnp maintenance set --all-namespaces [!WARNING] Use the --preserve flag on single-node control plane clusters.</description>
+      <description>&lt;p&gt;I upgraded my homelab cluster using Talos Linux today.&lt;/p&gt;
+&lt;p&gt;I made a mistake and forgot to use the custom-built image using iscsi-tools.&lt;/p&gt;
+&lt;p&gt;Learning the hard way.&lt;/p&gt;
+&lt;p&gt;Here are my notes:&lt;/p&gt;
+&lt;h2 id=&#34;talos-upgrade&#34;&gt;Talos upgrade&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Remember to create a custom image including iscsi-tools&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;set-up-cli-environment-and-set-databases-to-maintenance-mode&#34;&gt;Set up CLI environment and set databases to maintenance mode&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_CP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.107&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.245&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.60&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;k cnp maintenance &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --all-namespaces
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
       <content:encoded><![CDATA[<p>I upgraded my homelab cluster using Talos Linux today.</p>
 <p>I made a mistake and forgot to use the custom-built image using iscsi-tools.</p>
 <p>Learning the hard way.</p>

@@ -13,8 +13,9 @@
       <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/building-multiple-docker-images-using-automatic-versioning-using-github-actions/</guid>
-      <description>Introduction I&amp;rsquo;m working on a project where I&amp;rsquo;m migrating an Azure Pipeline to GitHub Actions. So far I&amp;rsquo;ve found the GitHub Actions very intuitive to work with and it was a very easy transition from Azure Pipelines.
-One requirement was to increase the version with every build. In the previous setup they were using the build ID, but I&amp;rsquo;m an advocate of always using semantic versioning if possible, so I wondered if this could be done using the GitHub Actions.</description>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m working on a project where I&amp;rsquo;m migrating an Azure Pipeline to GitHub Actions. So far I&amp;rsquo;ve found the GitHub Actions very intuitive to work with and it was a very easy transition from Azure Pipelines.&lt;/p&gt;
+&lt;p&gt;One requirement was to increase the version with every build. In the previous setup they were using the build ID, but I&amp;rsquo;m an advocate of always using semantic versioning if possible, so I wondered if this could be done using the GitHub Actions.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<h1 id="introduction">Introduction</h1>
 <p>I&rsquo;m working on a project where I&rsquo;m migrating an Azure Pipeline to GitHub Actions. So far I&rsquo;ve found the GitHub Actions very intuitive to work with and it was a very easy transition from Azure Pipelines.</p>
 <p>One requirement was to increase the version with every build. In the previous setup they were using the build ID, but I&rsquo;m an advocate of always using semantic versioning if possible, so I wondered if this could be done using the GitHub Actions.</p>
@@ -134,8 +135,8 @@ One requirement was to increase the version with every build. In the previous se
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</guid>
-      <description>In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.
-Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges.</description>
+      <description>&lt;p&gt;In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.&lt;/p&gt;
+&lt;p&gt;Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges. Notably, the latest version of akv2k8s has been problematic, especially concerning the deployment of Postgres databases on our AKS clusters using the EDB operator. Akv2k8s alters the SecurityContext of pods in a way that causes them to fail.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.</p>
 <p>Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges. Notably, the latest version of akv2k8s has been problematic, especially concerning the deployment of Postgres databases on our AKS clusters using the EDB operator. Akv2k8s alters the SecurityContext of pods in a way that causes them to fail.</p>
 <p>Furthermore, upgrading akv2k8s to the latest version necessitates a transition to Workload Identity due to the deprecation of aad-pod-identity, a move that promises to be complex. Conversely, the Azure Key Vault Provider, directly offered by Microsoft, allows continued use of Managed Identities for authentication to Key Vaults, simplifying the integration process.</p>
@@ -252,8 +253,9 @@ Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the sync
       <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</guid>
-      <description>This document is the result of my research into the Gateway API. It aims to briefly describe the Gateway API for Kubernetes, a typical implementation of ingress traffic using NGINX in AKS and how this setup could benefit from implementing the Gateway API.
-Introduction Gateway API is an official Kubernetes project focused on L4 and L7 routing in Kubernetes. This project represents the next generation of Kubernetes Ingress, Load Balancing, and Service Mesh APIs.</description>
+      <description>&lt;p&gt;This document is the result of my research into the Gateway API. It aims to briefly describe the Gateway API for Kubernetes, a typical implementation of ingress traffic using NGINX in AKS and how this setup could benefit from implementing the Gateway API.&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Gateway API is an official Kubernetes project focused on L4 and L7 routing in Kubernetes. This project represents the next generation of Kubernetes Ingress, Load Balancing, and Service Mesh APIs. From the outset, it has been designed to be generic, expressive, and role-oriented.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This document is the result of my research into the Gateway API. It aims to briefly describe the Gateway API for Kubernetes, a typical implementation of ingress traffic using NGINX in AKS and how this setup could benefit from implementing the Gateway API.</p>
 <h1 id="introduction">Introduction</h1>
 <p>Gateway API is an official Kubernetes project focused on L4 and L7 routing in Kubernetes. This project represents the next generation of Kubernetes Ingress, Load Balancing, and Service Mesh APIs. From the outset, it has been designed to be generic, expressive, and role-oriented.</p>
@@ -449,7 +451,7 @@ Introduction Gateway API is an official Kubernetes project focused on L4 and L7 
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/choosing-a-cloud-provider-and-specialization/</guid>
-      <description>As a DevOps Engineer or Cloud Native Engineer, I think it’s important to specialize in one cloud provider in the beginning of your career. Specializing allows you to gain deep knowledge and expertise in the specific tools and services related to that cloud provider, making you a valuable asset to any company using that provider. Although cloud computing is similar in essence no matter which provider you choose, each cloud provider has its own vocabulary and way of structuring things.</description>
+      <description>&lt;p&gt;As a DevOps Engineer or Cloud Native Engineer, I think it’s important to specialize in one cloud provider in the beginning of your career. Specializing allows you to gain deep knowledge and expertise in the specific tools and services related to that cloud provider, making you a valuable asset to any company using that provider. Although cloud computing is similar in essence no matter which provider you choose, each cloud provider has its own vocabulary and way of structuring things.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>As a DevOps Engineer or Cloud Native Engineer, I think it’s important to specialize in one cloud provider in the beginning of your career. Specializing allows you to gain deep knowledge and expertise in the specific tools and services related to that cloud provider, making you a valuable asset to any company using that provider. Although cloud computing is similar in essence no matter which provider you choose, each cloud provider has its own vocabulary and way of structuring things.</p>
 <p>After my first year as a DevOps Engineer I was still trying to figure out which one to choose and which one would suit me best. With the rapid pace of innovation in the cloud computing industry, it can be challenging to stay up-to-date with the latest developments and features for multiple providers. I tried to keep up with the developments for each provider and tried to be a broad professional who could work with all of them. However, I think it is best to specialize early in your career, and then you can learn a different one after you have gained some significant experience with your first one.</p>
 <p>After several insightful conversations with my colleagues, and after working with Azure for a year as a consultant, I decided to go all-in on Azure, and it has been a liberating experience so far. By focusing solely on Azure, I am able to fully immerse myself in their ecosystem and gain a deep understanding of their tools and services. I feel I have a sense of direction now, and I can limit the content I consume and the news I read to this one particular ecosystem only. And that feels like a relief to me.</p>
@@ -484,8 +486,8 @@ Introduction Gateway API is an official Kubernetes project focused on L4 and L7 
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/power-of-writing/</guid>
-      <description>Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.
-However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post on writing regularly, and I was touched by his words:</description>
+      <description>&lt;p&gt;Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.&lt;/p&gt;
+&lt;p&gt;However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post &lt;a href=&#34;https://herman.bearblog.dev/on-writing-regularly/&#34;&gt;on writing regularly&lt;/a&gt;, and I was touched by his words:&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Ah, writing. It&rsquo;s one of the skills that I&rsquo;ve consistently been praised for throughout my life. I&rsquo;m pretty good at it, and I think that&rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.</p>
 <p>However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post <a href="https://herman.bearblog.dev/on-writing-regularly/">on writing regularly</a>, and I was touched by his words:</p>
 <blockquote>
@@ -514,8 +516,8 @@ However, just like any other skill, you can only become better at it through con
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/starting-my-homelab/</guid>
-      <description>This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s Homelab Init playlist on YouTube which I&amp;rsquo;m working on.
-There are a few reasons why I haven&amp;rsquo;t started up until now:</description>
+      <description>&lt;p&gt;This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J&#34;&gt;Homelab Init&lt;/a&gt; playlist on YouTube which I&amp;rsquo;m working on.&lt;/p&gt;
+&lt;p&gt;There are a few reasons why I haven&amp;rsquo;t started up until now:&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This week I started a project which I&rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&rsquo;ve been collecting hardware here and there, and I&rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&rsquo;s <a href="https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J">Homelab Init</a> playlist on YouTube which I&rsquo;m working on.</p>
 <p>There are a few reasons why I haven&rsquo;t started up until now:</p>
 <ul>
@@ -588,9 +590,17 @@ There are a few reasons why I haven&amp;rsquo;t started up until now:</descripti
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/neovim-zettelkasten/</guid>
-      <description>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.
-Digital note-taking provides the following advantages:
-Searchability Collected in one place Can be converted to different output formats Easier to share with others Does not take up physical space No risk of losing your notes in case of fire or other disaster I&amp;rsquo;ve gone through several iterations of my note-taking systems.</description>
+      <description>&lt;p&gt;I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.&lt;/p&gt;
+&lt;p&gt;Digital note-taking provides the following advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Searchability&lt;/li&gt;
+&lt;li&gt;Collected in one place&lt;/li&gt;
+&lt;li&gt;Can be converted to different output formats&lt;/li&gt;
+&lt;li&gt;Easier to share with others&lt;/li&gt;
+&lt;li&gt;Does not take up physical space&lt;/li&gt;
+&lt;li&gt;No risk of losing your notes in case of fire or other disaster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;rsquo;ve gone through several iterations of my note-taking systems. I started on Google Docs, moved on to Notion and eventually landed on Obsidian. However, as I became more proficient with UNIX systems and vim, I realized I did not need all of that distracting functionality, and I switched over to using Neovim and a few bash scripts. I occasionally open up Obsidian to look at my graph view or to make use of the Anki plugin, but I enjoy the trimmed-down version that I built myself. I don&amp;rsquo;t need to leave the command line to read my notes or to create a new one.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.</p>
 <p>Digital note-taking provides the following advantages:</p>
 <ul>
@@ -716,8 +726,9 @@ Searchability Collected in one place Can be converted to different output format
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</guid>
-      <description>I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.
-Why Bicep? Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.&lt;/p&gt;
+&lt;h1 id=&#34;why-bicep&#34;&gt;Why Bicep?&lt;/h1&gt;
+&lt;p&gt;Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I&rsquo;ll be working with Bicep during my next contract, so I&rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.</p>
 <h1 id="why-bicep">Why Bicep?</h1>
 <p>Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.</p>
@@ -1067,9 +1078,11 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</guid>
-      <description>This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.
-Install argocd and argocd cli kubectl create namespace argocd kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml My VM is running on arm architecture, so I need these commands to install the argocd cli on ubuntu.
-curl -sSL -o argocd-linux-arm64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64 sudo install -m 555 argocd-linux-arm64 /usr/local/bin/argocd rm argocd-linux-arm64 Change the service type to LoadBalancer</description>
+      <description>&lt;p&gt;This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.&lt;/p&gt;
+&lt;h2 id=&#34;install-argocd-and-argocd-cli&#34;&gt;Install argocd and argocd cli&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl create namespace argocd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;My VM is running on arm architecture, so I need these commands to install the argocd cli on ubuntu.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.</p>
 <h2 id="install-argocd-and-argocd-cli">Install argocd and argocd cli</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create namespace argocd
@@ -1098,10 +1111,12 @@ curl -sSL -o argocd-linux-arm64 https://github.com/argoproj/argo-cd/releases/lat
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</guid>
-      <description>You can get a free 24GB ram VM from Oracle. What better place for your own Kubernetes lab that is always available? See this article to create your VM.
-Here are the steps I took to install a single node kubernetes cluster on the Ubuntu VM.
-Installation sudo apt-get update sudo apt install apt-transport-https curl Install containerd
-sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg echo &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.</description>
+      <description>&lt;p&gt;You can get a free 24GB ram VM from Oracle. What better place for your own Kubernetes lab that is always available? See &lt;a href=&#34;https://mischavandenburg.com/zet/free-oracle-vm.md&#34;&gt;this article&lt;/a&gt; to create your VM.&lt;/p&gt;
+&lt;p&gt;Here are the steps I took to install a single node kubernetes cluster on the Ubuntu VM.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install apt-transport-https curl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install containerd&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>You can get a free 24GB ram VM from Oracle. What better place for your own Kubernetes lab that is always available? See <a href="/zet/free-oracle-vm.md">this article</a> to create your VM.</p>
 <p>Here are the steps I took to install a single node kubernetes cluster on the Ubuntu VM.</p>
 <h2 id="installation">Installation</h2>
@@ -1202,8 +1217,8 @@ sudo mkdir -p /etc/apt/keyrings curl -fsSL https://download.docker.com/linux/ubu
       <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</guid>
-      <description>Today I added a harddisk I had lying around because I needed some more space. On my Arch Linux system I have all my drives encrypted like a good boy. It can be a bit tricky when you are adding them because you need to configure a few different files and add different UUID&amp;rsquo;s in each of them.
-Here are the steps I follow to add a new disk. Note that this how to assumes that you already have set up your system with dm-crypt.</description>
+      <description>&lt;p&gt;Today I added a harddisk I had lying around because I needed some more space. On my Arch Linux system I have all my drives encrypted like a good boy. It can be a bit tricky when you are adding them because you need to configure a few different files and add different UUID&amp;rsquo;s in each of them.&lt;/p&gt;
+&lt;p&gt;Here are the steps I follow to add a new disk. Note that this how to assumes that you already have set up your system with dm-crypt.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Today I added a harddisk I had lying around because I needed some more space. On my Arch Linux system I have all my drives encrypted like a good boy. It can be a bit tricky when you are adding them because you need to configure a few different files and add different UUID&rsquo;s in each of them.</p>
 <p>Here are the steps I follow to add a new disk. Note that this how to assumes that you already have set up your system with dm-crypt.</p>
 <p>List out the disks with lsblk:</p>
@@ -1299,8 +1314,8 @@ Note that I&rsquo;m using the notation convention from the Arch Wiki where the &
       <pubDate>Sun, 01 Jan 2023 19:05:13 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/obsidian-introduction/</guid>
-      <description>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.
-Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</description>
+      <description>&lt;p&gt;As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.&lt;/p&gt;
+&lt;p&gt;Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.</p>
 <p>Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</p>
 <p>It can be challenging to keep everything memorized at all times. However, when I started my journey to become a DevOps engineer, I kept meticulous notes of everything I learned, and this practice has been highly beneficial so far. This blog is a result of the notes I keep every day.</p>
@@ -1328,8 +1343,9 @@ Not only are there many of these categories, but within these categories, there 
       <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
-      <description>When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.
-Virtualization To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.</description>
+      <description>&lt;p&gt;When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;
+&lt;h1 id=&#34;virtualization&#34;&gt;Virtualization&lt;/h1&gt;
+&lt;p&gt;To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
 <h1 id="virtualization">Virtualization</h1>
 <p>To understand containers, we need to understand virtualization. Virtualization is the process of creating &ldquo;fake computers&rdquo; or &ldquo;virtual computers&rdquo; on a physical computer.</p>
@@ -1361,9 +1377,11 @@ Virtualization To understand containers, we need to understand virtualization. V
       <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
-      <description>TLDR It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck: GitHub repo
-Introduction When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.
-That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.</description>
+      <description>&lt;h1 id=&#34;tldr&#34;&gt;TLDR&lt;/h1&gt;
+&lt;p&gt;It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck:
+&lt;a href=&#34;https://github.com/mischavandenburg/az-104-azure-administrator&#34;&gt;GitHub repo&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<h1 id="tldr">TLDR</h1>
 <p>It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck:
 <a href="https://github.com/mischavandenburg/az-104-azure-administrator">GitHub repo</a></p>
@@ -1406,8 +1424,8 @@ That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.<
       <pubDate>Sat, 24 Dec 2022 13:49:55 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</guid>
-      <description>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.
-My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure.</description>
+      <description>&lt;p&gt;This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.&lt;/p&gt;
+&lt;p&gt;My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure. I also wanted to try out ArgoCD and learn more about GitOps.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.</p>
 <p>My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure. I also wanted to try out ArgoCD and learn more about GitOps.</p>
 <p>The application is a simple web app that I wrote which displays a quote in the browser:</p>
@@ -1509,8 +1527,9 @@ My goal was to be able to deploy an application from a GitHub repo to my local K
       <pubDate>Sun, 18 Dec 2022 00:55:47 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/identity/</guid>
-      <description>Introduction Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?
-This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</description>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?&lt;/p&gt;
+&lt;p&gt;This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<h1 id="introduction">Introduction</h1>
 <p>Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&rsquo;s account?</p>
 <p>This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
@@ -1554,8 +1573,11 @@ This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to expla
       <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/ikigai-book/</guid>
-      <description>I came across this little book while doing some research for my Jiro Dreams of Sushi article. While scanning the book&amp;rsquo;s description, I was intrigued by this sentence: &amp;ldquo;the happiness of always being busy.&amp;rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?
-Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</description>
+      <description>&lt;p&gt;I came across this little book while doing some research for my &lt;a href=&#34;https://mischavandenburg.com/zet/articles/jiro-sushi&#34;&gt;Jiro Dreams of Sushi article.&lt;/a&gt; While scanning the book&amp;rsquo;s description, I was intrigued by this sentence: &amp;ldquo;the happiness of always being busy.&amp;rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?&lt;/p&gt;
+&lt;h2 id=&#34;ikigai&#34;&gt;Ikigai&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&amp;ldquo;He who has a why to live for can bear with almost any how.&amp;rdquo;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I came across this little book while doing some research for my <a href="/zet/articles/jiro-sushi">Jiro Dreams of Sushi article.</a> While scanning the book&rsquo;s description, I was intrigued by this sentence: &ldquo;the happiness of always being busy.&rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?</p>
 <h2 id="ikigai">Ikigai</h2>
 <blockquote>
@@ -1601,7 +1623,9 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
       <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/unicorn-project/</guid>
-      <description>This book is the sequel to the Phoenix project. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet.</description>
+      <description>&lt;p&gt;
+  &lt;img loading=&#34;lazy&#34; src=&#34;https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg&#34; alt=&#34;Unicorn Project&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;This book is the sequel to &lt;a href=&#34;https://mischavandenburg.com/zet/articles/phoenix-project&#34;&gt;the Phoenix project&lt;/a&gt;. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet. Phoenix will enable it to generate targeted marketing campaigns from the data when it&amp;rsquo;s finished.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg" alt="Unicorn Project"  /></p>
 <p>This book is the sequel to <a href="/zet/articles/phoenix-project">the Phoenix project</a>. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet. Phoenix will enable it to generate targeted marketing campaigns from the data when it&rsquo;s finished.</p>
@@ -1633,8 +1657,8 @@ Ikigai &amp;ldquo;He who has a why to live for can bear with almost any how.</de
       <pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/jiro-sushi/</guid>
-      <description>Last week I watched &amp;ldquo;Jiro Dreams of Sushi&amp;rdquo; again. It must be the eighth time I revisited this piece of art. I have very little interest in sushi, but there is much more to this documentary. It was first recommended to me by my good friend Anders more than five years ago, but I couldn&amp;rsquo;t grasp its underlying life lessons the first time around.
-Even though I couldn&amp;rsquo;t fully understand the message, I was intrigued by it and kept returning to the documentary.</description>
+      <description>&lt;p&gt;Last week I watched &amp;ldquo;Jiro Dreams of Sushi&amp;rdquo; again. It must be the eighth time I revisited this piece of art. I have very little interest in sushi, but there is much more to this documentary. It was first recommended to me by my good friend Anders more than five years ago, but I couldn&amp;rsquo;t grasp its underlying life lessons the first time around.&lt;/p&gt;
+&lt;p&gt;Even though I couldn&amp;rsquo;t fully understand the message, I was intrigued by it and kept returning to the documentary. Over the years, I managed to grasp more of its deeper meaning. The documentary is about Jiro: one of the best sushi chefs in the world. His tiny restaurant, located in a subway station, even received a 3 Michelin star rating. So how does a man operating from a subway restaurant become the best in the world? And what can a DevOps Engineer learn from a sushi chef?&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Last week I watched &ldquo;Jiro Dreams of Sushi&rdquo; again. It must be the eighth time I revisited this piece of art. I have very little interest in sushi, but there is much more to this documentary. It was first recommended to me by my good friend Anders more than five years ago, but I couldn&rsquo;t grasp its underlying life lessons the first time around.</p>
 <p>Even though I couldn&rsquo;t fully understand the message, I was intrigued by it and kept returning to the documentary. Over the years, I managed to grasp more of its deeper meaning. The documentary is about Jiro: one of the best sushi chefs in the world. His tiny restaurant, located in a subway station, even received a 3 Michelin star rating. So how does a man operating from a subway restaurant become the best in the world? And what can a DevOps Engineer learn from a sushi chef?</p>
 <p>
@@ -1709,8 +1733,9 @@ Even though I couldn&amp;rsquo;t fully understand the message, I was intrigued b
       <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/how-started-vim/</guid>
-      <description>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.
-The Beginning The reason why I started to use vim is rather practical.</description>
+      <description>&lt;p&gt;If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.&lt;/p&gt;
+&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;
+&lt;p&gt;The reason why I started to use vim is rather practical. When I was studying to become a Cloud Engineer, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs projects I did involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.</p>
 <h2 id="the-beginning">The Beginning</h2>
 <p>The reason why I started to use vim is rather practical. When I was studying to become a Cloud Engineer, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs projects I did involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.</p>
@@ -1747,8 +1772,10 @@ The Beginning The reason why I started to use vim is rather practical.</descript
       <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/phoenix-project/</guid>
-      <description>When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &amp;ldquo;the old way&amp;rdquo; of doing things and the merits of implementing DevOps principles.
-I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.</description>
+      <description>&lt;p&gt;
+  &lt;img loading=&#34;lazy&#34; src=&#34;https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/914-sUgELZL.jpg&#34; alt=&#34;Phoenix Project&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &amp;ldquo;the old way&amp;rdquo; of doing things and the merits of implementing DevOps principles.&lt;/p&gt;
+&lt;p&gt;I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/914-sUgELZL.jpg" alt="Phoenix Project"  /></p>
 <p>When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &ldquo;the old way&rdquo; of doing things and the merits of implementing DevOps principles.</p>
@@ -1794,7 +1821,7 @@ I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/cka-tips/</guid>
-      <description>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily.</description>
+      <description>&lt;p&gt;I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.</p>
 <h3 id="my-preparation">My preparation</h3>
 <ul>
@@ -1847,8 +1874,9 @@ I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many
       <pubDate>Sat, 10 Sep 2022 12:22:28 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/linux-creativity/</guid>
-      <description>NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.
-introduction I started using GNU/Linux as a daily driver about six months ago, and I have not regretted the decision ever since.</description>
+      <description>&lt;p&gt;&lt;em&gt;NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;introduction&lt;/h2&gt;
+&lt;p&gt;I started using GNU/Linux as a daily driver about six months ago, and I have not regretted the decision ever since. There has not been a single use case where I needed to use Windows for anything at all.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p><em>NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.</em></p>
 <h2 id="introduction">introduction</h2>
 <p>I started using GNU/Linux as a daily driver about six months ago, and I have not regretted the decision ever since. There has not been a single use case where I needed to use Windows for anything at all.</p>
@@ -1888,9 +1916,8 @@ Here I’m editing my window manager configuration file, while I have a browser 
       <pubDate>Tue, 19 Jul 2022 18:01:26 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/how-to-upgrade-java-and-jenkins-on-ubuntu-18-04/</guid>
-      <description>Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 will be required to run Jenkins. Also, the upcoming LTS release will require Java 11.
-This means that I also needed to update Java on our Jenkins servers. Here are the steps that I did to perform the Jenkins and Java upgrade.
-SSH into the server and stop the service.</description>
+      <description>&lt;p&gt;Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 &lt;a href=&#34;https://www.jenkins.io/blog/2022/06/28/require-java-11/&#34;&gt;will be required to run Jenkins&lt;/a&gt;. Also, the upcoming LTS release will require Java 11.&lt;/p&gt;
+&lt;p&gt;This means that I also needed to update Java on our Jenkins servers. Here are the steps that I did to perform the Jenkins and Java upgrade.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 <a href="https://www.jenkins.io/blog/2022/06/28/require-java-11/">will be required to run Jenkins</a>. Also, the upcoming LTS release will require Java 11.</p>
 <p>This means that I also needed to update Java on our Jenkins servers. Here are the steps that I did to perform the Jenkins and Java upgrade.</p>
 <p>SSH into the server and stop the service. Then get the latest upgrades for your server, which is good practice:</p>
@@ -1946,7 +1973,7 @@ SSH into the server and stop the service.</description>
       <pubDate>Mon, 04 Jul 2022 20:04:33 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/5-reasons-why-i-changed-my-career-to-it-in-my-thirties/</guid>
-      <description>In this post, I’d like to share the five main reasons why I changed my career to IT in my thirties. Making a career change can be daunting, especially when you are past your twenties, and employers can get more skeptical of hiring and training you. However, when I passed my twenties and became more serious and intentional about my life and career, I decided to take the plunge and hope for the best.</description>
+      <description>&lt;p&gt;In this post, I’d like to share the five main reasons why I changed my career to IT in my thirties. Making a career change can be daunting, especially when you are past your twenties, and employers can get more skeptical of hiring and training you. However, when I passed my twenties and became more serious and intentional about my life and career, I decided to take the plunge and hope for the best. These are listed in no particular order.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>In this post, I’d like to share the five main reasons why I changed my career to IT in my thirties. Making a career change can be daunting, especially when you are past your twenties, and employers can get more skeptical of hiring and training you. However, when I passed my twenties and became more serious and intentional about my life and career, I decided to take the plunge and hope for the best. These are listed in no particular order.</p>
 <h2 id="1-job-opportunities">#1 job opportunities</h2>
 <p>IT has always been a field with many job opportunities, and with the current movements of digitalization and automation, there is no sign that it will slow down.</p>
@@ -1977,8 +2004,8 @@ SSH into the server and stop the service.</description>
       <pubDate>Sat, 02 Apr 2022 09:55:03 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/yadm-keep-track-of-your-precious-dotfiles/</guid>
-      <description>This week I learned about yadm: yet another dotfile manager. It is the perfect way to keep track of all your custom configuration files, known as dotfiles.
-Even if you have only a little bit of experience with Linux, you know that everything is managed in files. All configuration parameters are set or changed in text files stored on the hard disk. These files are usually located in your home directory and are hidden by default.</description>
+      <description>&lt;p&gt;This week I learned about &lt;a href=&#34;https://yadm.io&#34;&gt;yadm: yet another dotfile manager&lt;/a&gt;. It is the perfect way to keep track of all your custom configuration files, known as dotfiles.&lt;/p&gt;
+&lt;p&gt;Even if you have only a little bit of experience with Linux, you know that everything is managed in files. All configuration parameters are set or changed in text files stored on the hard disk. These files are usually located in your home directory and are hidden by default. This is indicated by prefixing the file with a period. So the configuration file for the vim editor is .vimrc, and for zshell you use the .zshrc. This is why configuration files are referred to as dotfiles.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This week I learned about <a href="https://yadm.io">yadm: yet another dotfile manager</a>. It is the perfect way to keep track of all your custom configuration files, known as dotfiles.</p>
 <p>Even if you have only a little bit of experience with Linux, you know that everything is managed in files. All configuration parameters are set or changed in text files stored on the hard disk. These files are usually located in your home directory and are hidden by default. This is indicated by prefixing the file with a period. So the configuration file for the vim editor is .vimrc, and for zshell you use the .zshrc. This is why configuration files are referred to as dotfiles.</p>
 <h3 id="customisation">customisation</h3>
@@ -2031,8 +2058,8 @@ Even if you have only a little bit of experience with Linux, you know that every
       <pubDate>Wed, 16 Mar 2022 21:20:19 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/lpic-1-study-guide/</guid>
-      <description>I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me. This article offers a beginner’s perspective on the LPIC-1 certification. Is the LPIC-1 hard to pass? Keep reading to find out.
-Before this certification, I had only a little bit of experience.</description>
+      <description>&lt;p&gt;I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me. This article offers a beginner’s perspective on the LPIC-1 certification. Is the LPIC-1 hard to pass? Keep reading to find out.&lt;/p&gt;
+&lt;p&gt;Before this certification, I had only a little bit of experience. I deployed LAMP stacks using Ansible and configured VMs to be able to communicate with each other using only the command line. I also did a “Linux Fundamentals” video training. I could navigate the filesystem, edit text files and work in the terminal, but that was about it.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me. This article offers a beginner’s perspective on the LPIC-1 certification. Is the LPIC-1 hard to pass? Keep reading to find out.</p>
 <p>Before this certification, I had only a little bit of experience. I deployed LAMP stacks using Ansible and configured VMs to be able to communicate with each other using only the command line. I also did a “Linux Fundamentals” video training. I could navigate the filesystem, edit text files and work in the terminal, but that was about it.</p>
 <p><img loading="lazy" src="/hard.jpg" type="" alt=""  /></p>
@@ -2087,8 +2114,8 @@ Before this certification, I had only a little bit of experience.</description>
       <pubDate>Sun, 30 Jan 2022 11:53:21 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/why-i-chose-a-bear-for-my-logo/</guid>
-      <description>I always struggled with finding an online nickname for myself. I was never given one, and over the years I used a few here and there, ranging from Nordic gods to my favourite fantasy character: Gandalf the Grey.
-I intended to create a tech blog to document my journey ever since I started my career change. But for months I was stopped by trying to decide on a name. (That’s me in a nutshell), because it needed to be perfect.</description>
+      <description>&lt;p&gt;I always struggled with finding an online nickname for myself. I was never given one, and over the years I used a few here and there, ranging from Nordic gods to my favourite fantasy character: Gandalf the Grey.&lt;/p&gt;
+&lt;p&gt;I intended to create a tech blog to document my journey ever since I started my career change. But for months I was stopped by trying to decide on a name. (That’s me in a nutshell), because it needed to be perfect. Eventually I decided to just use my full name.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I always struggled with finding an online nickname for myself. I was never given one, and over the years I used a few here and there, ranging from Nordic gods to my favourite fantasy character: Gandalf the Grey.</p>
 <p>I intended to create a tech blog to document my journey ever since I started my career change. But for months I was stopped by trying to decide on a name. (That’s me in a nutshell), because it needed to be perfect. Eventually I decided to just use my full name.</p>
 <p>Although I have zero connections with Russia, neither genetically nor culturally, my parents decided to give me a name of Russian origin: Mischa.</p>
@@ -2116,7 +2143,7 @@ I intended to create a tech blog to document my journey ever since I started my 
       <pubDate>Fri, 28 Jan 2022 08:56:38 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/my-journey-into-devops-so-far/</guid>
-      <description>In 2021 I had reached a certain stage in my life where I had the liberty to make a choice. I was 31 years old and had just finished an important chapter of my life, and was ready to begin a new one. After thinking about where I wanted to steer my professional career, I decided to follow my passion for programming and automation and attempt to make a career out of my interests in tech and IT.</description>
+      <description>&lt;p&gt;In 2021 I had reached a certain stage in my life where I had the liberty to make a choice. I was 31 years old and had just finished an important chapter of my life, and was ready to begin a new one. After thinking about where I wanted to steer my professional career, I decided to follow my passion for programming and automation and attempt to make a career out of my interests in tech and IT.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>In 2021 I had reached a certain stage in my life where I had the liberty to make a choice. I was 31 years old and had just finished an important chapter of my life, and was ready to begin a new one. After thinking about where I wanted to steer my professional career, I decided to follow my passion for programming and automation and attempt to make a career out of my interests in tech and IT.</p>
 <p>I was in a fortunate situation, because there were large shortages of people on the IT job market in The Netherlands. Consequently, employers were much more willing to train their employees to perform the roles that they required to fulfill.</p>
 <h2 id="bots-and-scripts">Bots and Scripts</h2>

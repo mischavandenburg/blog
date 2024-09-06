@@ -13,9 +13,9 @@
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</guid>
-      <description>I&amp;rsquo;m working through the &amp;ldquo;greet&amp;rdquo; challenge by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.
-The program should take input from the user and print it out. I worked through the challenge together with Rob in his video but I&amp;rsquo;m going to talk (write) myself through these functions to fully understand what&amp;rsquo;s going on.
-We have the following function in main.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m working through the &amp;ldquo;greet&amp;rdquo; &lt;a href=&#34;https://rwx.gg/lang/cha/&#34;&gt;challenge&lt;/a&gt; by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.&lt;/p&gt;
+&lt;p&gt;The program should take input from the user and print it out. I worked through the challenge together with Rob &lt;a href=&#34;https://www.youtube.com/watch?v=WMH5ENF_Xvo&#34;&gt;in his video&lt;/a&gt; but I&amp;rsquo;m going to talk (write) myself through these functions to fully understand what&amp;rsquo;s going on.&lt;/p&gt;
+&lt;p&gt;We have the following function in main.go:&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I&rsquo;m working through the &ldquo;greet&rdquo; <a href="https://rwx.gg/lang/cha/">challenge</a> by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.</p>
 <p>The program should take input from the user and print it out. I worked through the challenge together with Rob <a href="https://www.youtube.com/watch?v=WMH5ENF_Xvo">in his video</a> but I&rsquo;m going to talk (write) myself through these functions to fully understand what&rsquo;s going on.</p>
 <p>We have the following function in main.go:</p>
@@ -77,11 +77,20 @@ We have the following function in main.</description>
       <pubDate>Tue, 03 Jan 2023 08:41:09 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/application-insights-sampling/</guid>
-      <description>Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.
-Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.
-For small and medium sized applications sampling is generally not necessary.
-Advantages of sampling:
-Throttling data when the application suddenly sends a high volume of telemetry in a short time This saves costs! Keeping a pricing tier quota Reduce network traffic from telemetry collection Three different kinds of sampling:</description>
+      <description>&lt;p&gt;Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.&lt;/p&gt;
+&lt;p&gt;Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.&lt;/p&gt;
+&lt;p&gt;For small and medium sized applications sampling is generally not necessary.&lt;/p&gt;
+&lt;p&gt;Advantages of sampling:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Throttling data when the application suddenly sends a high volume of telemetry in a short time
+&lt;ul&gt;
+&lt;li&gt;This saves costs!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Keeping a pricing tier quota&lt;/li&gt;
+&lt;li&gt;Reduce network traffic from telemetry collection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Three different kinds of sampling:&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.</p>
 <p>Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.</p>
 <p>For small and medium sized applications sampling is generally not necessary.</p>
@@ -147,8 +156,8 @@ Throttling data when the application suddenly sends a high volume of telemetry i
       <pubDate>Tue, 03 Jan 2023 08:30:03 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</guid>
-      <description>This term can be confusing. Initially I thought it meant monitoring of the pipelines themselves. However, in the context of Azure Release Pipelines, continuous monitoring refers to something else.
-Continuous monitoring leverages metrics from other services such as Application Insights. You can set up release gates based on these metrics. For example, you can set up a release gate to roll back the deployment if an alert is being fired for high CPU usage in the application.</description>
+      <description>&lt;p&gt;This term can be confusing. Initially I thought it meant monitoring of the pipelines themselves. However, in the context of Azure Release Pipelines, continuous monitoring refers to something else.&lt;/p&gt;
+&lt;p&gt;Continuous monitoring leverages metrics from other services such as Application Insights. You can set up release gates based on these metrics. For example, you can set up a release gate to roll back the deployment if an alert is being fired for high CPU usage in the application.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This term can be confusing. Initially I thought it meant monitoring of the pipelines themselves. However, in the context of Azure Release Pipelines, continuous monitoring refers to something else.</p>
 <p>Continuous monitoring leverages metrics from other services such as Application Insights. You can set up release gates based on these metrics. For example, you can set up a release gate to roll back the deployment if an alert is being fired for high CPU usage in the application.</p>
 <p>You can set up several of these checks. If all these checks pass, the pipeline can proceed.</p>
@@ -161,9 +170,9 @@ Continuous monitoring leverages metrics from other services such as Application 
       <pubDate>Tue, 03 Jan 2023 07:58:44 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/distributed-tracing/</guid>
-      <description>Debugging is done using call stacks in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.
-Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.
-Distributed tracing is an implementation of the call stack in the cloud.</description>
+      <description>&lt;p&gt;Debugging is done using &lt;a href=&#34;https://mischavandenburg.com/zet/call-stacks/&#34;&gt;call stacks&lt;/a&gt; in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.&lt;/p&gt;
+&lt;p&gt;Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.&lt;/p&gt;
+&lt;p&gt;Distributed tracing is an implementation of the call stack in the cloud. It is usually implemented by adding an agent, &lt;a href=&#34;https://mischavandenburg.com/zet/sdk/&#34;&gt;SDK&lt;/a&gt;, or library to the service. In Azure you can enable distributed tracing via Application Insights through auto-instrumentation or SDKs.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Debugging is done using <a href="/zet/call-stacks/">call stacks</a> in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.</p>
 <p>Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.</p>
 <p>Distributed tracing is an implementation of the call stack in the cloud. It is usually implemented by adding an agent, <a href="/zet/sdk/">SDK</a>, or library to the service. In Azure you can enable distributed tracing via Application Insights through auto-instrumentation or SDKs.</p>
@@ -177,8 +186,8 @@ Distributed tracing is an implementation of the call stack in the cloud.</descri
       <pubDate>Tue, 03 Jan 2023 07:50:55 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/sdk/</guid>
-      <description>A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.
-SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.</description>
+      <description>&lt;p&gt;A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.&lt;/p&gt;
+&lt;p&gt;SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.</p>
 <p>SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.</p>
 ]]></content:encoded>
@@ -190,8 +199,12 @@ SDKs contain all the tools you need to get started. They typically contain a com
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
-      <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
-Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;As I alluded to in my &lt;a href=&#34;https://mischavandenburg.com/zet/articles/obsidian-introduction&#34;&gt;article about Obsidian,&lt;/a&gt; I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.&lt;/p&gt;</description>
       <content:encoded><![CDATA[
 
     
@@ -225,8 +238,9 @@ Previously I was using WordPress, but the editing and writing experience became 
       <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
-      <description>When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.
-Virtualization To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.</description>
+      <description>&lt;p&gt;When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;
+&lt;h1 id=&#34;virtualization&#34;&gt;Virtualization&lt;/h1&gt;
+&lt;p&gt;To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
 <h1 id="virtualization">Virtualization</h1>
 <p>To understand containers, we need to understand virtualization. Virtualization is the process of creating &ldquo;fake computers&rdquo; or &ldquo;virtual computers&rdquo; on a physical computer.</p>
@@ -258,8 +272,9 @@ Virtualization To understand containers, we need to understand virtualization. V
       <pubDate>Sun, 18 Dec 2022 00:55:47 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/identity/</guid>
-      <description>Introduction Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?
-This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</description>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?&lt;/p&gt;
+&lt;p&gt;This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<h1 id="introduction">Introduction</h1>
 <p>Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&rsquo;s account?</p>
 <p>This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>

@@ -6,14 +6,40 @@
     <description>Recent content in Productivity on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running iCloud Web as a Desktop Application on Arch Linux with Hyprland</title>
+      <link>https://mischavandenburg.com/zet/running-icloud-web-as-a-desktop-application-on-arch-linux-with-hyprland/</link>
+      <pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/running-icloud-web-as-a-desktop-application-on-arch-linux-with-hyprland/</guid>
+      <description>&lt;p&gt;Now that I&amp;rsquo;m daily driving Arch Linux again, I&amp;rsquo;ve been thinking about how to handle my tasks. I use Apple Reminders because the iWatch functionality with Siri is so good. I&amp;rsquo;ve been thinking of setting up a self-hosted solution, but then I would lose the Siri integration.&lt;/p&gt;
+&lt;p&gt;In the meantime, I figured I would just try to access Apple Reminders from Linux. Using it from the browser worked surprisingly well.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Now that I&rsquo;m daily driving Arch Linux again, I&rsquo;ve been thinking about how to handle my tasks. I use Apple Reminders because the iWatch functionality with Siri is so good. I&rsquo;ve been thinking of setting up a self-hosted solution, but then I would lose the Siri integration.</p>
+<p>In the meantime, I figured I would just try to access Apple Reminders from Linux. Using it from the browser worked surprisingly well.</p>
+<p>Created a desktop file here with the name <code>icloud.desktop</code>:</p>
+<p><code>/home/mischa/.local/share/applications</code></p>
+<p>With these contents:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>Desktop Entry<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Name</span><span class="o">=</span>iCloud
+</span></span><span class="line"><span class="cl"><span class="nv">Exec</span><span class="o">=</span>firefox --new-instance --profile /home/mischa/.mozilla/firefox/icloud-profile --kiosk https://icloud.com
+</span></span><span class="line"><span class="cl"><span class="nv">Icon</span><span class="o">=</span>firefox
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>Application
+</span></span><span class="line"><span class="cl"><span class="nv">Categories</span><span class="o">=</span>Network<span class="p">;</span>WebBrowser<span class="p">;</span>
+</span></span></code></pre></div><p>Now I can run <code>wofi</code> and search for iCloud, and I have my iCloud applications running in a clean separate window within a workspace.</p>
+<p>Also, I can configure Hyprland to run this application in a specific workspace on startup.</p>
+<h2 id="links">Links</h2>
+<p>202409060909</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>No More GitHub - My Updated Backup Setup For My Obsidian Zettelkasten</title>
       <link>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</guid>
-      <description>I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.</description>
+      <description>&lt;p&gt;I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.</p>
 <p>These small frictions can become large irritations, even though I only use Obsidian on my iPad very occasionally.</p>
 <p>To alleviate this problem I switched to Obsidian Sync. It&rsquo;s 4 dollars a month, and a great way to support the project. I&rsquo;ve had Sync before, but switched to iCloud when I entered the Apple ecosystem.</p>
@@ -60,7 +86,12 @@
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</guid>
-      <description>I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.</description>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/iagjeLuxnMs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.&lt;/p&gt;</description>
       <content:encoded><![CDATA[
 
     
@@ -86,9 +117,17 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/azure-exams-open-book/</guid>
-      <description>From here on out you can access Microsoft Learn during the exams. This is great news! This is much more like the actual experience of an engineer&amp;rsquo;s daily activities. It is arguably more important to look up things efficiently rather than memorizing everything for a test and forgetting it a few weeks later.
-Links: 202308231608
-https://youtu.be/iPiq3YuhnHc</description>
+      <description>&lt;p&gt;From here on out you can access Microsoft Learn during the exams. This is great news! This is much more like the actual experience of an engineer&amp;rsquo;s daily activities. It is arguably more important to look up things efficiently rather than memorizing everything for a test and forgetting it a few weeks later.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/iPiq3YuhnHc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202308231608&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>From here on out you can access Microsoft Learn during the exams. This is great news! This is much more like the actual experience of an engineer&rsquo;s daily activities. It is arguably more important to look up things efficiently rather than memorizing everything for a test and forgetting it a few weeks later.</p>
 
 
@@ -110,8 +149,8 @@ https://youtu.be/iPiq3YuhnHc</description>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/power-of-writing/</guid>
-      <description>Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.
-However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post on writing regularly, and I was touched by his words:</description>
+      <description>&lt;p&gt;Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.&lt;/p&gt;
+&lt;p&gt;However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post &lt;a href=&#34;https://herman.bearblog.dev/on-writing-regularly/&#34;&gt;on writing regularly&lt;/a&gt;, and I was touched by his words:&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Ah, writing. It&rsquo;s one of the skills that I&rsquo;ve consistently been praised for throughout my life. I&rsquo;m pretty good at it, and I think that&rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.</p>
 <p>However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post <a href="https://herman.bearblog.dev/on-writing-regularly/">on writing regularly</a>, and I was touched by his words:</p>
 <blockquote>
@@ -140,12 +179,13 @@ However, just like any other skill, you can only become better at it through con
       <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/check-weather-terminal/</guid>
-      <description>For the past few months I&amp;rsquo;ve been using this neat API to check the weather from the command line. It&amp;rsquo;s very simple to use. Simply run:
-curl wttr.in
-This will show the weather based on your location, but you can also give a particular location and format.
-curl wttr.in/Amsterdam
-Links: 202304271504
-https://github.com/chubin/wttr.in</description>
+      <description>&lt;p&gt;For the past few months I&amp;rsquo;ve been using this neat API to check the weather from the command line. It&amp;rsquo;s very simple to use. Simply run:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl wttr.in&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This will show the weather based on your location, but you can also give a particular location and format.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl wttr.in/Amsterdam&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202304271504&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/chubin/wttr.in&#34;&gt;https://github.com/chubin/wttr.in&lt;/a&gt;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>For the past few months I&rsquo;ve been using this neat API to check the weather from the command line. It&rsquo;s very simple to use. Simply run:</p>
 <p><code>curl wttr.in</code></p>
 <p>This will show the weather based on your location, but you can also give a particular location and format.</p>
@@ -162,10 +202,12 @@ https://github.com/chubin/wttr.in</description>
       <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/reading-news-from-command-line/</guid>
-      <description>I use RSS feeds to read the news, and I use Newsboat as a RSS reader.
-To in stall on MacOS: brew install newsboat
-Integrate in already existing terminal workflow Free from distraction Control how content is rendered Carefully curate which content you consume Build your own &amp;ldquo;Social Media feed&amp;rdquo; No advertisements or suggested articles Newsboat uses RSS feeds which are generated by websites Links: 202304271004
-https://newsboat.org/</description>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/08SxwJ7ZVyo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;I use RSS feeds to read the news, and I use Newsboat as a RSS reader.&lt;/p&gt;</description>
       <content:encoded><![CDATA[
 
     
@@ -197,9 +239,11 @@ https://newsboat.org/</description>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/dopamine-and-motivation/</guid>
-      <description>Dopamine Listened to an interesting podcast on Dopamine by Andrew Huberman. I always enjoy his content because he is completely driven by science, not by personal opinion. He is truly objective as far as I can tell.
-Dopamine is often misunderstood. It is not necessarily associated with good feelings after you pursue an activity. It is more related to motivation to engage in certain behaviours.
-Rewards Scientists did an experiment where they observed children of kindergarten age, and later reproduced this in adults.</description>
+      <description>&lt;h1 id=&#34;dopamine&#34;&gt;Dopamine&lt;/h1&gt;
+&lt;p&gt;Listened to &lt;a href=&#34;https://hubermanlab.com/leverage-dopamine-to-overcome-procrastination-and-optimize-effort/&#34;&gt;an interesting podcast on Dopamine&lt;/a&gt; by Andrew Huberman. I always enjoy his content because he is completely driven by science, not by personal opinion. He is truly objective as far as I can tell.&lt;/p&gt;
+&lt;p&gt;Dopamine is often misunderstood. It is not necessarily associated with good feelings after you pursue an activity. It is more related to motivation to engage in certain behaviours.&lt;/p&gt;
+&lt;h1 id=&#34;rewards&#34;&gt;Rewards&lt;/h1&gt;
+&lt;p&gt;Scientists did an experiment where they observed children of kindergarten age, and later reproduced this in adults. The children were monitored during school days, where they had blocks of structured time and free time. During structured time their activities were managed. They had to sing or write, for example. Then they had blocks of free time where they could do whatever activity they liked.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<h1 id="dopamine">Dopamine</h1>
 <p>Listened to <a href="https://hubermanlab.com/leverage-dopamine-to-overcome-procrastination-and-optimize-effort/">an interesting podcast on Dopamine</a> by Andrew Huberman. I always enjoy his content because he is completely driven by science, not by personal opinion. He is truly objective as far as I can tell.</p>
 <p>Dopamine is often misunderstood. It is not necessarily associated with good feelings after you pursue an activity. It is more related to motivation to engage in certain behaviours.</p>
@@ -244,8 +288,8 @@ Rewards Scientists did an experiment where they observed children of kindergarte
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/exercise-stimulates-creativity-and-motivation/</guid>
-      <description>I noticed multiple times now that during my workouts my mind is generating lots of new ideas for coding projects or blog posts. It is a well known fact that walking stimulates areas in the brain that which will in turn stimulate creativity. But I&amp;rsquo;m noticing that it starts to happen with strength workouts as well.
-Although I don&amp;rsquo;t struggle with the motivation to get myself to the gym, I sometimes feel &amp;ldquo;guilty&amp;rdquo; for not spending that time on coding or studying.</description>
+      <description>&lt;p&gt;I noticed multiple times now that during my workouts my mind is generating lots of new ideas for coding projects or blog posts. It is a well known fact that walking stimulates areas in the brain that which will in turn stimulate creativity. But I&amp;rsquo;m noticing that it starts to happen with strength workouts as well.&lt;/p&gt;
+&lt;p&gt;Although I don&amp;rsquo;t struggle with the motivation to get myself to the gym, I sometimes feel &amp;ldquo;guilty&amp;rdquo; for not spending that time on coding or studying. I&amp;rsquo;m realizing now that this is a very irrational train of thought.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I noticed multiple times now that during my workouts my mind is generating lots of new ideas for coding projects or blog posts. It is a well known fact that walking stimulates areas in the brain that which will in turn stimulate creativity. But I&rsquo;m noticing that it starts to happen with strength workouts as well.</p>
 <p>Although I don&rsquo;t struggle with the motivation to get myself to the gym, I sometimes feel &ldquo;guilty&rdquo; for not spending that time on coding or studying. I&rsquo;m realizing now that this is a very irrational train of thought.</p>
 <p>Exercise actually stimulates my creativity and will help generating new ideas or help me understand concepts better in the unconscious. It is also massively beneficial for health and general well being. When general well-being is enhanced I&rsquo;ll also be able to focus better and absorb information more quickly.</p>
@@ -265,9 +309,17 @@ Although I don&amp;rsquo;t struggle with the motivation to get myself to the gym
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/neovim-zettelkasten/</guid>
-      <description>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.
-Digital note-taking provides the following advantages:
-Searchability Collected in one place Can be converted to different output formats Easier to share with others Does not take up physical space No risk of losing your notes in case of fire or other disaster I&amp;rsquo;ve gone through several iterations of my note-taking systems.</description>
+      <description>&lt;p&gt;I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.&lt;/p&gt;
+&lt;p&gt;Digital note-taking provides the following advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Searchability&lt;/li&gt;
+&lt;li&gt;Collected in one place&lt;/li&gt;
+&lt;li&gt;Can be converted to different output formats&lt;/li&gt;
+&lt;li&gt;Easier to share with others&lt;/li&gt;
+&lt;li&gt;Does not take up physical space&lt;/li&gt;
+&lt;li&gt;No risk of losing your notes in case of fire or other disaster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;rsquo;ve gone through several iterations of my note-taking systems. I started on Google Docs, moved on to Notion and eventually landed on Obsidian. However, as I became more proficient with UNIX systems and vim, I realized I did not need all of that distracting functionality, and I switched over to using Neovim and a few bash scripts. I occasionally open up Obsidian to look at my graph view or to make use of the Anki plugin, but I enjoy the trimmed-down version that I built myself. I don&amp;rsquo;t need to leave the command line to read my notes or to create a new one.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.</p>
 <p>Digital note-taking provides the following advantages:</p>
 <ul>
@@ -393,8 +445,8 @@ Searchability Collected in one place Can be converted to different output format
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/newsboat-in-zenmode/</guid>
-      <description>To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.
-However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&amp;rsquo;ll notice that the text is always located in a middle column of the window, so you don&amp;rsquo;t have to move your neck while reading.</description>
+      <description>&lt;p&gt;To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.&lt;/p&gt;
+&lt;p&gt;However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&amp;rsquo;ll notice that the text is always located in a middle column of the window, so you don&amp;rsquo;t have to move your neck while reading. At least, this is the case with well designed websites that serve text content.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.</p>
 <p>However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&rsquo;ll notice that the text is always located in a middle column of the window, so you don&rsquo;t have to move your neck while reading. At least, this is the case with well designed websites that serve text content.</p>
 <p>Vim has a plugin that achieves this and I use it extensively. It is called Zenmode. In Neovim I use a similar plugin called No Neckpain.</p>
@@ -423,8 +475,8 @@ However, one thing that annoyed me was that it would span across my entire scree
       <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/trying-out-pandoc/</guid>
-      <description>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.
-Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</description>
+      <description>&lt;p&gt;I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.&lt;/p&gt;
+&lt;p&gt;Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&rsquo;m studying, and my entire blog is written in markdown.</p>
 <p>Some of the writing is done in Obsidian but I&rsquo;m moving away from Obsidian step by step. I&rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</p>
 <p>I&rsquo;ve been using nvim-markdown for a while now and I was quite happy with it, but it was bothering me that <strong>bold text</strong> was not rendered in my editor.</p>
@@ -456,9 +508,9 @@ Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsid
       <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</guid>
-      <description>The past few days I&amp;rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.
-Unfortunately you can&amp;rsquo;t just run brew install docker and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.
-Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&amp;rsquo;t tried any of the other alternatives because I found something better.</description>
+      <description>&lt;p&gt;The past few days I&amp;rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.&lt;/p&gt;
+&lt;p&gt;Unfortunately you can&amp;rsquo;t just run &lt;code&gt;brew install docker&lt;/code&gt; and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.&lt;/p&gt;
+&lt;p&gt;Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&amp;rsquo;t tried any of the other alternatives because I found something better.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>The past few days I&rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.</p>
 <p>Unfortunately you can&rsquo;t just run <code>brew install docker</code> and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.</p>
 <p>Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&rsquo;t tried any of the other alternatives because I found something better.</p>
@@ -492,8 +544,8 @@ Minikube works fine as well, but the networking driver for qemu is not fully sup
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/apple-music-hotkeys/</guid>
-      <description>I&amp;rsquo;m a little obsessed with controlling everything with my keyboard. That&amp;rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.
-One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m a little obsessed with controlling everything with my keyboard. That&amp;rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.&lt;/p&gt;
+&lt;p&gt;One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I&rsquo;m a little obsessed with controlling everything with my keyboard. That&rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.</p>
 <p>One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.</p>
 <p>I started using Apple Music as my music app but it does not have any global hotkeys, and it makes you use a widget with the mouse.</p>
@@ -519,8 +571,8 @@ One thing I loved about my setup was the ability to control my music from the ke
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/move-to-macos/</guid>
-      <description>My new employer kindly sponsored me with a new 16-inch MacBook Pro M2. I chose 32GB Ram and the base model with 12 CPU and 19 GPU cores and 1TB of hard disk. These specifications will suit my needs well.
-I&amp;rsquo;ve been daily driving Linux for a year now, and it has been such an incredible journey. Building my own Arch Linux system taught me much about Linux and what it means to maintain a system yourself.</description>
+      <description>&lt;p&gt;My new employer kindly sponsored me with a new 16-inch MacBook Pro M2. I chose 32GB Ram and the base model with 12 CPU and 19 GPU cores and 1TB of hard disk. These specifications will suit my needs well.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been daily driving Linux for a year now, and it has been such an incredible journey. Building my own Arch Linux system taught me much about Linux and what it means to maintain a system yourself. I will undoubtedly miss my custom AwesomeWM configuration and the freedom that Arch provides.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>My new employer kindly sponsored me with a new 16-inch MacBook Pro M2. I chose 32GB Ram and the base model with 12 CPU and 19 GPU cores and 1TB of hard disk. These specifications will suit my needs well.</p>
 <p>I&rsquo;ve been daily driving Linux for a year now, and it has been such an incredible journey. Building my own Arch Linux system taught me much about Linux and what it means to maintain a system yourself. I will undoubtedly miss my custom AwesomeWM configuration and the freedom that Arch provides.</p>
 <p>Technically I could have chosen a Windows laptop and installed Linux on it. But I went for a Mac for the following reasons:</p>
@@ -539,8 +591,8 @@ I&amp;rsquo;ve been daily driving Linux for a year now, and it has been such an 
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/passed-az-400/</guid>
-      <description>I&amp;rsquo;m typing this 30 minutes after I passed my AZ-400 exam. I&amp;rsquo;m sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust. This one took about 70 hours of study.
-I started preparing immediately after passing my AZ-104 exam, which was a good move. The AZ-400 requires you to know many details about Azure services and how to access them. For example, Shared Access Signatures are only used for accessing storage accounts, but they came up quite often as alternative answers to the questions.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m typing this 30 minutes after I passed my AZ-400 exam. I&amp;rsquo;m sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust. This one took about 70 hours of study.&lt;/p&gt;
+&lt;p&gt;I started preparing immediately after passing my AZ-104 exam, which was a good move. The AZ-400 requires you to know many details about Azure services and how to access them. For example, Shared Access Signatures are only used for accessing storage accounts, but they came up quite often as alternative answers to the questions.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I&rsquo;m typing this 30 minutes after I passed my AZ-400 exam. I&rsquo;m sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust. This one took about 70 hours of study.</p>
 <p>I started preparing immediately after passing my AZ-104 exam, which was a good move. The AZ-400 requires you to know many details about Azure services and how to access them. For example, Shared Access Signatures are only used for accessing storage accounts, but they came up quite often as alternative answers to the questions.</p>
 <p>The exam itself was difficult, but the AZ-104 was harder. The AZ-104 exam was more challenging because the questions were complicated and required you to simultaneously balance many different factors in the mind. The AZ-400 was difficult because the answer alternatives that are provided are incredibly similar to each other, and they make you very insecure about what the right choice might be. As a result, I changed my answers many times.</p>
@@ -554,8 +606,8 @@ I started preparing immediately after passing my AZ-104 exam, which was a good m
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/pomodoro/</guid>
-      <description>I did a lot of studying last year, and I achieved a few tough certifications. I&amp;rsquo;ve always been good at studying and never struggled with getting decent grades in university. As a result, I never felt the need to use particular techniques to pass my tests. However, now that I need to do my studies combined with a full-time job, I did some optimization and looked into study techniques.
-One technique I&amp;rsquo;ve become very fond of is the Pomodoro Technique.</description>
+      <description>&lt;p&gt;I did a lot of studying last year, and I achieved a few tough certifications. I&amp;rsquo;ve always been good at studying and never struggled with getting decent grades in university. As a result, I never felt the need to use particular techniques to pass my tests. However, now that I need to do my studies combined with a full-time job, I did some optimization and looked into study techniques.&lt;/p&gt;
+&lt;p&gt;One technique I&amp;rsquo;ve become very fond of is the Pomodoro Technique. I don&amp;rsquo;t have any problems focusing for long periods, but I still decided to try it. I use the standard 25-minute study with a 5-minute break routine, and after four cycles, I take a 30-minute break.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I did a lot of studying last year, and I achieved a few tough certifications. I&rsquo;ve always been good at studying and never struggled with getting decent grades in university. As a result, I never felt the need to use particular techniques to pass my tests. However, now that I need to do my studies combined with a full-time job, I did some optimization and looked into study techniques.</p>
 <p>One technique I&rsquo;ve become very fond of is the Pomodoro Technique. I don&rsquo;t have any problems focusing for long periods, but I still decided to try it. I use the standard 25-minute study with a 5-minute break routine, and after four cycles, I take a 30-minute break.</p>
 <p>The Pomodoro technique has been a way to force myself to take breaks, which I wasn&rsquo;t used to. I used to chip away at a specific task for hours. However, I discovered that when I take a break, walk around for five minutes, and apply myself to the task again, my mind is in a fresh state and much more receptive to the information. Perhaps the time I spend studying after a break is actually more productive because the mind had a little rest.</p>
@@ -573,8 +625,8 @@ One technique I&amp;rsquo;ve become very fond of is the Pomodoro Technique.</des
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/fall-in-love-with-sed/</guid>
-      <description>Sed, it&amp;rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command.
-Today I needed to update my /articles/ links to /zet/articles/ links because I&amp;rsquo;m restructuring my website.</description>
+      <description>&lt;p&gt;Sed, it&amp;rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command.&lt;/p&gt;
+&lt;p&gt;Today I needed to update my /articles/ links to /zet/articles/ links because I&amp;rsquo;m restructuring my website. Here is the sed expression that is executed for every markdown file that is found by fd:&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Sed, it&rsquo;s so powerful. I remember I struggled with finding practical uses for it when I did my LPIC-1 certification. But now I find myself using it several times a week. It is so powerful to edit multiple files at a time. I use it for work, but also for making changes to my entire second brain in Obsidian with one command.</p>
 <p>Today I needed to update my /articles/ links to /zet/articles/ links because I&rsquo;m restructuring my website. Here is the sed expression that is executed for every markdown file that is found by fd:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/\/articles\//\/zet\/articles\//g&#39;</span> <span class="k">$(</span>fd .md<span class="k">)</span>
@@ -603,8 +655,12 @@ Today I needed to update my /articles/ links to /zet/articles/ links because I&a
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
-      <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
-Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;As I alluded to in my &lt;a href=&#34;https://mischavandenburg.com/zet/articles/obsidian-introduction&#34;&gt;article about Obsidian,&lt;/a&gt; I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.&lt;/p&gt;</description>
       <content:encoded><![CDATA[
 
     
@@ -638,8 +694,8 @@ Previously I was using WordPress, but the editing and writing experience became 
       <pubDate>Sun, 01 Jan 2023 19:05:13 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/obsidian-introduction/</guid>
-      <description>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.
-Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</description>
+      <description>&lt;p&gt;As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.&lt;/p&gt;
+&lt;p&gt;Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.</p>
 <p>Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.</p>
 <p>It can be challenging to keep everything memorized at all times. However, when I started my journey to become a DevOps engineer, I kept meticulous notes of everything I learned, and this practice has been highly beneficial so far. This blog is a result of the notes I keep every day.</p>

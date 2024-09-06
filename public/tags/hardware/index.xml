@@ -13,8 +13,8 @@
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/starting-my-homelab/</guid>
-      <description>This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s Homelab Init playlist on YouTube which I&amp;rsquo;m working on.
-There are a few reasons why I haven&amp;rsquo;t started up until now:</description>
+      <description>&lt;p&gt;This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J&#34;&gt;Homelab Init&lt;/a&gt; playlist on YouTube which I&amp;rsquo;m working on.&lt;/p&gt;
+&lt;p&gt;There are a few reasons why I haven&amp;rsquo;t started up until now:&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This week I started a project which I&rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&rsquo;ve been collecting hardware here and there, and I&rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&rsquo;s <a href="https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J">Homelab Init</a> playlist on YouTube which I&rsquo;m working on.</p>
 <p>There are a few reasons why I haven&rsquo;t started up until now:</p>
 <ul>

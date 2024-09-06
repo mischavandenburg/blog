@@ -13,10 +13,11 @@
       <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</guid>
-      <description>This is a super useful tool to list, download and upload Grafana dashboards as json.
-Currently using this to occasionally take extra-extra backups of my Grafana creations
-https://software.es.net/gdg/
-Links: 202312301612</description>
+      <description>&lt;p&gt;This is a super useful tool to list, download and upload Grafana dashboards as json.&lt;/p&gt;
+&lt;p&gt;Currently using this to occasionally take extra-extra backups of my Grafana creations&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://software.es.net/gdg/&#34;&gt;https://software.es.net/gdg/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312301612&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>This is a super useful tool to list, download and upload Grafana dashboards as json.</p>
 <p>Currently using this to occasionally take extra-extra backups of my Grafana creations</p>
 <p><a href="https://software.es.net/gdg/">https://software.es.net/gdg/</a></p>
@@ -31,9 +32,12 @@ Links: 202312301612</description>
       <pubDate>Wed, 27 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-strava-grafana/</guid>
-      <description>In this video I&amp;rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:
-creating an application in Strava installing the Strava plugin in Grafana adding the Strava data source importing dashboards exploring data and creating custom dashboard Links: 202312250812
-https://youtu.be/CgP9hs9UDzA</description>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/CgP9hs9UDzA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I&amp;rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:&lt;/p&gt;</description>
       <content:encoded><![CDATA[
 
     
@@ -62,9 +66,23 @@ https://youtu.be/CgP9hs9UDzA</description>
       <pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/talk-avoiding-microservice-disasters/</guid>
-      <description>Watched this very insightful talk on microservice architecture.
-Some things I learned:
-microservices should be autonomous: they should have minimal dependencies on other microservices if they have dependencies they should only be 1 layer deep a microservice should not be calling another microservice which calls another microservice dependencies can be reversed by pushing data towards the service for example: a pricing database can be dumped and pushed to a catalog service once a day data duplication is not a sin Another powerful point he made is that the architecture is a reflection from the organization&amp;rsquo;s structure.</description>
+      <description>&lt;p&gt;Watched this very insightful talk on microservice architecture.&lt;/p&gt;
+&lt;p&gt;Some things I learned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;microservices should be &lt;strong&gt;autonomous&lt;/strong&gt;: they should have minimal dependencies on other microservices&lt;/li&gt;
+&lt;li&gt;if they have dependencies they should only be 1 layer deep
+&lt;ul&gt;
+&lt;li&gt;a microservice should not be calling another microservice which calls another microservice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;dependencies can be reversed by pushing data towards the service
+&lt;ul&gt;
+&lt;li&gt;for example: a pricing database can be dumped and pushed to a catalog service once a day&lt;/li&gt;
+&lt;li&gt;data duplication is not a sin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another powerful point he made is that the architecture is a reflection from the organization&amp;rsquo;s structure. He explained that the company was organized in teams and that managers of teams were promoted based on the amount of people they managed. This meant that managers were making up services which needed people to build them, which led to a proliferation of services and dependencies.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Watched this very insightful talk on microservice architecture.</p>
 <p>Some things I learned:</p>
 <ul>
@@ -103,8 +121,8 @@ microservices should be autonomous: they should have minimal dependencies on oth
       <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/ensure-cgroupsv2-compatibility/</guid>
-      <description>Are you currently working with containerizing older Java or .NET applications? From Kubernetes 1.29, the default cgroups implementation on Azure Linux AKS nodes will be cgroupsv2. Older versions of Java, .NET and NodeJS do not support memory querying v2 memory constraints and this will lead to out of memory (OOM) issues for workloads.
-Please make sure that your older containerized applications are compatible with cgroupsv2 or you might be in quite some pain in the future.</description>
+      <description>&lt;p&gt;Are you currently working with containerizing older Java or .NET applications? From Kubernetes 1.29, the default cgroups implementation on Azure Linux AKS nodes will be cgroupsv2. Older versions of Java, .NET and NodeJS do not support memory querying v2 memory constraints and this will lead to out of memory (OOM) issues for workloads.&lt;/p&gt;
+&lt;p&gt;Please make sure that your older containerized applications are compatible with cgroupsv2 or you might be in quite some pain in the future.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Are you currently working with containerizing older Java or .NET applications? From Kubernetes 1.29, the default cgroups implementation on Azure Linux AKS nodes will be cgroupsv2. Older versions of Java, .NET and NodeJS do not support memory querying v2 memory constraints and this will lead to out of memory (OOM) issues for workloads.</p>
 <p>Please make sure that your older containerized applications are compatible with cgroupsv2 or you might be in quite some pain in the future.</p>
 <p><a href="https://github.com/Azure/AKS/releases/tag/2023-11-28">https://github.com/Azure/AKS/releases/tag/2023-11-28</a></p>
@@ -119,12 +137,13 @@ Please make sure that your older containerized applications are compatible with 
       <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/aks-abort-operation/</guid>
-      <description>It&amp;rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.
-For example:
-az aks operation-abort --name myAKSCluster --resource-group myResourceGroup
-Links: 202304270704
-https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/
-https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli</description>
+      <description>&lt;p&gt;It&amp;rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;az aks operation-abort --name myAKSCluster --resource-group myResourceGroup&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202304270704&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>It&rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.</p>
 <p>For example:</p>
 <p><code>az aks operation-abort --name myAKSCluster --resource-group myResourceGroup</code></p>
@@ -141,11 +160,9 @@ https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-c
       <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-twitter-cli-project/</guid>
-      <description>When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.
-Over the past few months I&amp;rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.
-https://github.com/mischavandenburg/twitter-cli
-https://twitter.com/mischa_vdburg
-Twitter CLI Programs should solve a problem.</description>
+      <description>&lt;p&gt;When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.&lt;/p&gt;
+&lt;p&gt;Over the past few months I&amp;rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mischavandenburg/twitter-cli&#34;&gt;https://github.com/mischavandenburg/twitter-cli&lt;/a&gt;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.</p>
 <p>Over the past few months I&rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.</p>
 <p><a href="https://github.com/mischavandenburg/twitter-cli">https://github.com/mischavandenburg/twitter-cli</a></p>
@@ -195,10 +212,17 @@ Twitter CLI Programs should solve a problem.</description>
       <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/kubernetes-resource-management-pods-containers/</guid>
-      <description>Pods have containers, and limits can be set on those containers.
-Requests used by the kube-scheduler to determine where the Pod will be placed containers can use more than requested resources if it is available on node If a limit is specified, but no request, Kubernetes will use the limit value as the request value.
-Limits containers may never use more than the set limit
-enforced by kubelet and container</description>
+      <description>&lt;p&gt;Pods have containers, and limits can be set on those containers.&lt;/p&gt;
+&lt;h1 id=&#34;requests&#34;&gt;Requests&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;used by the kube-scheduler to determine where the Pod will be placed&lt;/li&gt;
+&lt;li&gt;containers can use more than requested resources if it is available on node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If a limit is specified, but no request, Kubernetes will use the limit value as the request value.&lt;/p&gt;
+&lt;h1 id=&#34;limits&#34;&gt;Limits&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;containers may never use more than the set limit&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>Pods have containers, and limits can be set on those containers.</p>
 <h1 id="requests">Requests</h1>
 <ul>
@@ -269,13 +293,18 @@ enforced by kubelet and container</description>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</guid>
-      <description>I found an excellent video by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.
-Cloud These are primarily cloud services. The external cloud.
-&amp;ldquo;Something as a Service&amp;rdquo;.
-Amazon Azure GCP Cloud Native This is Cloud Native: The CNCF Landscape
-Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.
-Computing Edge Computing
-High Performance Computing</description>
+      <description>&lt;p&gt;I found &lt;a href=&#34;https://youtu.be/gyjRriOyw-k&#34;&gt;an excellent video&lt;/a&gt; by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.&lt;/p&gt;
+&lt;h1 id=&#34;cloud&#34;&gt;Cloud&lt;/h1&gt;
+&lt;p&gt;These are primarily &lt;em&gt;cloud services&lt;/em&gt;. The external cloud.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Something as a Service&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amazon&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;li&gt;GCP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;cloud-native&#34;&gt;Cloud Native&lt;/h1&gt;
+&lt;p&gt;This is Cloud Native: &lt;a href=&#34;https://landscape.cncf.io/&#34;&gt;The CNCF Landscape&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>I found <a href="https://youtu.be/gyjRriOyw-k">an excellent video</a> by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.</p>
 <h1 id="cloud">Cloud</h1>
 <p>These are primarily <em>cloud services</em>. The external cloud.</p>

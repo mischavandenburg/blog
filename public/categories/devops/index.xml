@@ -13,9 +13,9 @@
       <pubDate>Sun, 30 Jan 2022 16:20:24 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/docker-lemp-stack-deployed-with-ansible/</guid>
-      <description>In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.
-I wrote a playbook that installs Docker and deploys a fully containerised LEMP stack on a virtual machine.
-You can have a look at the Github repo with the result here.</description>
+      <description>&lt;p&gt;In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.&lt;/p&gt;
+&lt;p&gt;I wrote a playbook that installs Docker and deploys a fully containerised LEMP stack on a virtual machine.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mischavandenburg/lemp_docker_ansible&#34;&gt;You can have a look at the Github repo with the result here. &lt;/a&gt;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.</p>
 <p>I wrote a playbook that installs Docker and deploys a fully containerised LEMP stack on a virtual machine.</p>
 <p><a href="https://github.com/mischavandenburg/lemp_docker_ansible">You can have a look at the Github repo with the result here. </a></p>

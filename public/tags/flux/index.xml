@@ -13,7 +13,12 @@
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-homelab-learning-flux/</guid>
-      <description>In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.</description>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/BtuqzsyztBc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.&lt;/p&gt;</description>
       <content:encoded><![CDATA[
 
     
@@ -93,7 +98,7 @@
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</guid>
-      <description>In this blog post, I want to share with you how I set up secrets management for my home lab. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.</description>
+      <description>&lt;p&gt;In this blog post, I want to share with you how I set up secrets management for my &lt;a href=&#34;https://github.com/mischavandenburg/homelab/&#34;&gt;home lab&lt;/a&gt;. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>In this blog post, I want to share with you how I set up secrets management for my <a href="https://github.com/mischavandenburg/homelab/">home lab</a>. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.</p>
 <p>Since Flux is the integrated solution for GitOps in Azure Kubernetes Service I also adopted it for my home lab. Flux supports and recommends encrypting secrets in git using SOPS, which is a tool that uses asymmetric encryption to protect secrets. This means that you can store encrypted secrets in your git repository and only decrypt them when they are applied to the cluster. This sounds like a convenient and secure way to manage secrets, right?</p>
 <p>Well, not quite. After doing some research, I decided to use a different approach: storing my secrets in Azure Key Vault and syncing them to my cluster with the Azure Key Vault Provider. This is the recommended best practice by Microsoft, as explained in this article:</p>
