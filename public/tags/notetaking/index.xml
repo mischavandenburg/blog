@@ -13,8 +13,8 @@
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/windows-filenames-invalid/</guid>
-      <description>&lt;p&gt;Ran into a problem when cloning my second brain repository on a new windows machine which I need to use for work. Also trying to get familiar with VSCode although I&amp;rsquo;m doing my best to get a good WSL setup going on my new windows setup.&lt;/p&gt;
-&lt;p&gt;One problem I was running into was that I could not for the life of me clone my repository at all on Windows. Eventually I realized that it kept failing on a file that had a question mark in its filename.&lt;/p&gt;</description>
+      <description>Ran into a problem when cloning my second brain repository on a new windows machine which I need to use for work. Also trying to get familiar with VSCode although I&amp;rsquo;m doing my best to get a good WSL setup going on my new windows setup.
+One problem I was running into was that I could not for the life of me clone my repository at all on Windows. Eventually I realized that it kept failing on a file that had a question mark in its filename.</description>
       <content:encoded><![CDATA[<p>Ran into a problem when cloning my second brain repository on a new windows machine which I need to use for work. Also trying to get familiar with VSCode although I&rsquo;m doing my best to get a good WSL setup going on my new windows setup.</p>
 <p>One problem I was running into was that I could not for the life of me clone my repository at all on Windows. Eventually I realized that it kept failing on a file that had a question mark in its filename.</p>
 <p>I renamed all the files that had invalid characters.</p>
@@ -32,9 +32,9 @@
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</guid>
-      <description>&lt;p&gt;Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.&lt;/p&gt;
-&lt;p&gt;I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.&lt;/p&gt;
-&lt;p&gt;For my new gig at work I&amp;rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault. Then it is a godsend to be able to install Obsidian and use that to interact with my second brain.&lt;/p&gt;</description>
+      <description>Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.
+I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.
+For my new gig at work I&amp;rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault.</description>
       <content:encoded><![CDATA[<p>Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.</p>
 <p>I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.</p>
 <p>For my new gig at work I&rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault. Then it is a godsend to be able to install Obsidian and use that to interact with my second brain.</p>
@@ -52,8 +52,8 @@
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/power-of-writing/</guid>
-      <description>&lt;p&gt;Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.&lt;/p&gt;
-&lt;p&gt;However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post &lt;a href=&#34;https://herman.bearblog.dev/on-writing-regularly/&#34;&gt;on writing regularly&lt;/a&gt;, and I was touched by his words:&lt;/p&gt;</description>
+      <description>Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.
+However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post on writing regularly, and I was touched by his words:</description>
       <content:encoded><![CDATA[<p>Ah, writing. It&rsquo;s one of the skills that I&rsquo;ve consistently been praised for throughout my life. I&rsquo;m pretty good at it, and I think that&rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.</p>
 <p>However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post <a href="https://herman.bearblog.dev/on-writing-regularly/">on writing regularly</a>, and I was touched by his words:</p>
 <blockquote>
@@ -82,17 +82,9 @@
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/neovim-zettelkasten/</guid>
-      <description>&lt;p&gt;I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.&lt;/p&gt;
-&lt;p&gt;Digital note-taking provides the following advantages:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Searchability&lt;/li&gt;
-&lt;li&gt;Collected in one place&lt;/li&gt;
-&lt;li&gt;Can be converted to different output formats&lt;/li&gt;
-&lt;li&gt;Easier to share with others&lt;/li&gt;
-&lt;li&gt;Does not take up physical space&lt;/li&gt;
-&lt;li&gt;No risk of losing your notes in case of fire or other disaster&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I&amp;rsquo;ve gone through several iterations of my note-taking systems. I started on Google Docs, moved on to Notion and eventually landed on Obsidian. However, as I became more proficient with UNIX systems and vim, I realized I did not need all of that distracting functionality, and I switched over to using Neovim and a few bash scripts. I occasionally open up Obsidian to look at my graph view or to make use of the Anki plugin, but I enjoy the trimmed-down version that I built myself. I don&amp;rsquo;t need to leave the command line to read my notes or to create a new one.&lt;/p&gt;</description>
+      <description>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.
+Digital note-taking provides the following advantages:
+Searchability Collected in one place Can be converted to different output formats Easier to share with others Does not take up physical space No risk of losing your notes in case of fire or other disaster I&amp;rsquo;ve gone through several iterations of my note-taking systems.</description>
       <content:encoded><![CDATA[<p>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.</p>
 <p>Digital note-taking provides the following advantages:</p>
 <ul>
@@ -218,13 +210,11 @@
       <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</guid>
-      <description>&lt;p&gt;It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.&lt;/p&gt;
-&lt;p&gt;This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.&lt;/p&gt;
-&lt;p&gt;You need the pandoc and wkhtmltopdf packages.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pandoc wkhtmltopdf 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To convert:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pandoc 00-zettelkasten/Fundamentals&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;of&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;Bicep.md --pdf-engine&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;wkhtmltopdf  -o /tmp/test.pdf
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.
+This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.
+You need the pandoc and wkhtmltopdf packages.
+brew install pandoc wkhtmltopdf To convert:
+pandoc 00-zettelkasten/Fundamentals\ of\ Bicep.md --pdf-engine=wkhtmltopdf -o /tmp/test.pdf This will output a pdf to my /tmp/ directory and it looks pretty good.</description>
       <content:encoded><![CDATA[<p>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.</p>
 <p>This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.</p>
 <p>You need the pandoc and wkhtmltopdf packages.</p>
@@ -250,8 +240,8 @@
       <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/trying-out-pandoc/</guid>
-      <description>&lt;p&gt;I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.&lt;/p&gt;
-&lt;p&gt;Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.&lt;/p&gt;</description>
+      <description>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.
+Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</description>
       <content:encoded><![CDATA[<p>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&rsquo;m studying, and my entire blog is written in markdown.</p>
 <p>Some of the writing is done in Obsidian but I&rsquo;m moving away from Obsidian step by step. I&rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</p>
 <p>I&rsquo;ve been using nvim-markdown for a while now and I was quite happy with it, but it was bothering me that <strong>bold text</strong> was not rendered in my editor.</p>

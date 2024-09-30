@@ -13,8 +13,8 @@
       <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/i-set-up-pi-hole-on-my-synology-nas/</guid>
-      <description>&lt;p&gt;Transition to manifest V3 is now starting and Ublock Origin might not be supported in Chrome in the future.&lt;/p&gt;
-&lt;p&gt;Because of my transition from a mouse to a pen tablet, I&amp;rsquo;ve already been experimenting with Qutebrowser for the past couple of weeks and I really enjoy it. It feels much closer to vim because I can run commands like this: &amp;ldquo;:set darkmode&amp;rdquo; which feels familiar and I can search my history very easily.&lt;/p&gt;</description>
+      <description>Transition to manifest V3 is now starting and Ublock Origin might not be supported in Chrome in the future.
+Because of my transition from a mouse to a pen tablet, I&amp;rsquo;ve already been experimenting with Qutebrowser for the past couple of weeks and I really enjoy it. It feels much closer to vim because I can run commands like this: &amp;ldquo;:set darkmode&amp;rdquo; which feels familiar and I can search my history very easily.</description>
       <content:encoded><![CDATA[<p>Transition to manifest V3 is now starting and Ublock Origin might not be supported in Chrome in the future.</p>
 <p>Because of my transition from a mouse to a pen tablet, I&rsquo;ve already been experimenting with Qutebrowser for the past couple of weeks and I really enjoy it. It feels much closer to vim because I can run commands like this: &ldquo;:set darkmode&rdquo; which feels familiar and I can search my history very easily.</p>
 <p>Though it uses elements from Brave&rsquo;s ad blocker, the QtWebEngine is based on Chromium so I expect this will be affected by the manifest V3 rollout as well. Which means that I need another way to block ads.</p>

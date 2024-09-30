@@ -13,11 +13,13 @@
       <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/adding-articles-to-wallabag-with-qutebrowser/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been daily driving Qutebrowser for over a month now, and I&amp;rsquo;m starting to feel at home in it.&lt;/p&gt;
-&lt;p&gt;Since it doesn&amp;rsquo;t have any extensions, you have to hack things together yourself, which is why I like it so much.&lt;/p&gt;
-&lt;p&gt;Today I wanted to add an article to my Wallabag instance, which I usually did by using the browser extension.&lt;/p&gt;
-&lt;p&gt;I installed this Wallabag CLI:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/artur-shaik/wallabag-client&#34;&gt;https://github.com/artur-shaik/wallabag-client&lt;/a&gt;&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ve been daily driving Qutebrowser for over a month now, and I&amp;rsquo;m starting to feel at home in it.
+Since it doesn&amp;rsquo;t have any extensions, you have to hack things together yourself, which is why I like it so much.
+Today I wanted to add an article to my Wallabag instance, which I usually did by using the browser extension.
+I installed this Wallabag CLI:
+https://github.com/artur-shaik/wallabag-client
+pipx install wallabag-client
+After setting up the config I can now add entries from the command line.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ve been daily driving Qutebrowser for over a month now, and I&rsquo;m starting to feel at home in it.</p>
 <p>Since it doesn&rsquo;t have any extensions, you have to hack things together yourself, which is why I like it so much.</p>
 <p>Today I wanted to add an article to my Wallabag instance, which I usually did by using the browser extension.</p>

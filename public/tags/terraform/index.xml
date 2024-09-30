@@ -13,7 +13,7 @@
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</guid>
-      <description>&lt;p&gt;Been working on a nice project lately. My current client has chosen to run Grafana Cloud and the instance was running in West US, which was leading to slower performance. I took up the project of provisioning a new instance in West Europe. Although I would have preferred to host Grafana ourselves or use Azure Managed Grafana, this is what the client has chosen so I that is what I&amp;rsquo;ll have to work with.&lt;/p&gt;</description>
+      <description>Been working on a nice project lately. My current client has chosen to run Grafana Cloud and the instance was running in West US, which was leading to slower performance. I took up the project of provisioning a new instance in West Europe. Although I would have preferred to host Grafana ourselves or use Azure Managed Grafana, this is what the client has chosen so I that is what I&amp;rsquo;ll have to work with.</description>
       <content:encoded><![CDATA[<p>Been working on a nice project lately. My current client has chosen to run Grafana Cloud and the instance was running in West US, which was leading to slower performance. I took up the project of provisioning a new instance in West Europe. Although I would have preferred to host Grafana ourselves or use Azure Managed Grafana, this is what the client has chosen so I that is what I&rsquo;ll have to work with.</p>
 <p>Also taking the opportunity to refactor the IaC and review our authrozation methods. We were using LBAC but I would rather use RBAC.</p>
 <p>A few goals for the configuration:</p>
@@ -115,9 +115,9 @@
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/terraform-linux-vm/</guid>
-      <description>&lt;p&gt;For a project I&amp;rsquo;m setting up my environment with Terraform.&lt;/p&gt;
-&lt;p&gt;I used &lt;a href=&#34;https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform&#34;&gt;this tutorial&lt;/a&gt;, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.&lt;/p&gt;
-&lt;p&gt;I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;&lt;/p&gt;</description>
+      <description>For a project I&amp;rsquo;m setting up my environment with Terraform.
+I used this tutorial, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.
+I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at ~/.</description>
       <content:encoded><![CDATA[<p>For a project I&rsquo;m setting up my environment with Terraform.</p>
 <p>I used <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform">this tutorial</a>, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.</p>
 <p>I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at <code>~/.ssh/id_rsa.pub</code></p>

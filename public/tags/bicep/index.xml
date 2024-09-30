@@ -13,8 +13,8 @@
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/bicep-testing-assertions/</guid>
-      <description>&lt;p&gt;During the &lt;a href=&#34;https://youtu.be/UuwhLi-Xe2U&#34;&gt;Bicep Community Call of July 2023&lt;/a&gt; I was introduced to the new experimental testing framework that the Bicep team is working on. After learning the fundamentals of the Go programming language I saw the value of test driven software development, and it will be an advantageous improvement if we can start applying this methodology to Infrastructure as Code as well.&lt;/p&gt;
-&lt;p&gt;Test driven software development is a software development practice that involves writing unit tests before writing the actual code, and then refactoring the code to pass the tests. Some of the advantages of test driven software development are:&lt;/p&gt;</description>
+      <description>During the Bicep Community Call of July 2023 I was introduced to the new experimental testing framework that the Bicep team is working on. After learning the fundamentals of the Go programming language I saw the value of test driven software development, and it will be an advantageous improvement if we can start applying this methodology to Infrastructure as Code as well.
+Test driven software development is a software development practice that involves writing unit tests before writing the actual code, and then refactoring the code to pass the tests.</description>
       <content:encoded><![CDATA[<p>During the <a href="https://youtu.be/UuwhLi-Xe2U">Bicep Community Call of July 2023</a> I was introduced to the new experimental testing framework that the Bicep team is working on. After learning the fundamentals of the Go programming language I saw the value of test driven software development, and it will be an advantageous improvement if we can start applying this methodology to Infrastructure as Code as well.</p>
 <p>Test driven software development is a software development practice that involves writing unit tests before writing the actual code, and then refactoring the code to pass the tests. Some of the advantages of test driven software development are:</p>
 <ul>
@@ -105,12 +105,11 @@
       <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_U3HichIJ0Q?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.&lt;/p&gt;</description>
+      <description>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.
+Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.
+I use Neovim and the Azure CLI for my coding and deployment.
+You will learn how to:
+Implement dev/test prefix to create multiple clusters with the same template Plan a VNet range for an Azure CNI cluster and be mindful of overlaps Deploy a VNet and subnet for the cluster using Bicep Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node Validate your Bicep template and troubleshoot errors Explore the results of your deployment in the Azure portal Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</description>
       <content:encoded><![CDATA[
 
     
@@ -161,12 +160,10 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/bicep-random-strings/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/n9MRNnAJjZY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.&lt;/p&gt;</description>
+      <description>In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.
+I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:
+param keyVaultName string = &#39;key-vault-${uniqueString(resourceGroup().id, utcNow())}&#39;
+uniqueString() doesn&amp;rsquo;t really generate a unique string. It is a hash function which generates a 13 character string based on the input you give it.</description>
       <content:encoded><![CDATA[
 
     
@@ -194,20 +191,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Finish deploying keyvault using pipeline&lt;/li&gt;
-&lt;li&gt;Get the random name generation to work&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Subscriptions need to be registered with resource providers, apparently&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;</description>
+      <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
+acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
       <content:encoded><![CDATA[
 
     
@@ -256,24 +241,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Write KeyVault template&lt;/li&gt;
-&lt;li&gt;Write pipeline code&lt;/li&gt;
-&lt;li&gt;set up Azure DevOps pipeline&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Always make sure to use &lt;code&gt;az deployment group&lt;/code&gt; instead of &lt;code&gt;az group deployment&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Because it has older Bicep version and will be deprecated&lt;/li&gt;
-&lt;li&gt;Make sure to be in correct Directory to be able to sync subscriptions for service connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
-&lt;p&gt;202306302206&lt;/p&gt;</description>
+      <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
+https://youtu.be/WnA8V3uq7P8</description>
       <content:encoded><![CDATA[
 
     
@@ -305,17 +274,10 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</guid>
-      <description>&lt;p&gt;Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!&lt;/p&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
-&lt;p&gt;202306271706&lt;/p&gt;</description>
+      <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
+Links: 202306271706
+https://www.youtube.com/watch?v=l0B65FUfNBU
+[[AKS]] [[Kubernetes]] [[Neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
 
@@ -342,14 +304,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-bicep-bicepparam/</guid>
-      <description>&lt;p&gt;The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;More readable and editor friendly&lt;/li&gt;
-&lt;li&gt;Cleaner and less lines of code&lt;/li&gt;
-&lt;li&gt;VSCode integration&lt;/li&gt;
-&lt;li&gt;Quickly convert from JSON or template file using VSCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.&lt;/p&gt;</description>
+      <description>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:
+More readable and editor friendly Cleaner and less lines of code VSCode integration Quickly convert from JSON or template file using VSCode In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .</description>
       <content:encoded><![CDATA[<p>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:</p>
 <ul>
 <li>More readable and editor friendly</li>
@@ -388,10 +344,10 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/bicep-getting-subnet-id/</guid>
-      <description>&lt;p&gt;Did a refactor of some of our Bicep template code for our AKS clusters today.&lt;/p&gt;
-&lt;p&gt;Before, we were using a rather complicated line of code using string interpolation.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bicep&#34; data-lang=&#34;bicep&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetSubnetId&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;resourceId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetResourceGroupName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Microsoft.Network/virtualNetworks&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/subnets/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetSubnetName&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This was hard to read and the Bicep linter gave the following warning in my editor and during deployment:&lt;/p&gt;</description>
+      <description>Did a refactor of some of our Bicep template code for our AKS clusters today.
+Before, we were using a rather complicated line of code using string interpolation.
+var vnetSubnetId = &amp;#39;${resourceId(vnetResourceGroupName, &amp;#39;Microsoft.Network/virtualNetworks&amp;#39;, vnetName)}/subnets/${vnetSubnetName}&amp;#39; This was hard to read and the Bicep linter gave the following warning in my editor and during deployment:
+WARNING: D:\a\1\a\drop\Generic-templates\containers\azure-kubernetes-service\v4.0\templates\aks.bicep(117,7) : Warning use-resource-id-functions: If property &amp;ldquo;vnetSubnetID&amp;rdquo; represents a resource ID, it must use a symbolic resource reference, be a parameter or start with one of these functions: extensionResourceId, guid, if, reference, resourceId, subscription, subscriptionResourceId, tenantResourceId.</description>
       <content:encoded><![CDATA[<p>Did a refactor of some of our Bicep template code for our AKS clusters today.</p>
 <p>Before, we were using a rather complicated line of code using string interpolation.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span><span class="nv">vnetSubnetId</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;</span><span class="si">${</span><span class="nf">resourceId</span><span class="p">(</span><span class="nv">vnetResourceGroupName</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Microsoft.Network/virtualNetworks&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">vnetName</span><span class="p">)</span><span class="si">}</span><span class="s">/subnets/</span><span class="si">${</span><span class="nv">vnetSubnetName</span><span class="si">}</span><span class="s">&#39;</span><span class="w">
@@ -436,8 +392,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/ups-and-downs-of-devops-engineer/</guid>
-      <description>&lt;p&gt;Next winter I&amp;rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&amp;rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.&lt;/p&gt;
-&lt;p&gt;Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&amp;rsquo;t like. And now the first phases of overwhelm are confidently behind me, I&amp;rsquo;m starting to learn the things I prefer doing over others.&lt;/p&gt;</description>
+      <description>Next winter I&amp;rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&amp;rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.
+Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&amp;rsquo;t like.</description>
       <content:encoded><![CDATA[<p>Next winter I&rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.</p>
 <p>Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&rsquo;t like. And now the first phases of overwhelm are confidently behind me, I&rsquo;m starting to learn the things I prefer doing over others.</p>
 <p>Being a DevOps Engineer does not mean you get to write code all day. I&rsquo;m currently working in an organization where we&rsquo;re not working fully DevOps yet. Rather than deploying many times in small increments, we are still using patching windows. Managing infrastructure in this way means you&rsquo;ll need to communicate with teams to schedule the patching and submit changes to the approval board. It can involve a lot of emailing and talking back and forth. And sometimes things go wrong and everything needs to be rescheduled again. Although it is valuable experience, and I certainly have the communication skills to handle these kinds of situations, I&rsquo;m learning that I lean more towards the dev side of things.</p>
@@ -459,19 +415,11 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/advanced-bicep/</guid>
-      <description>&lt;h1 id=&#34;deploying-to-subscriptions-and-management-groups&#34;&gt;Deploying to subscriptions and management groups&lt;/h1&gt;
-&lt;p&gt;To tell Bicep which scope to deploy to, use the &lt;code&gt;targetScope&lt;/code&gt; keyword, for example, managementGroup.&lt;/p&gt;
-&lt;p&gt;You&amp;rsquo;re not specifying which management group exactly, this is done during deployment of the template file.&lt;/p&gt;
-&lt;p&gt;targetScope can be set to resourceGroup, subscription, managementGroup or tenant.&lt;/p&gt;
-&lt;p&gt;If it is not set, Bicep assumes resourceGroup.&lt;/p&gt;
-&lt;h2 id=&#34;create-a-resource-group&#34;&gt;create a resource group&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bicep&#34; data-lang=&#34;bicep&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;targetScope&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;subscription&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;resource&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;resourceGroup&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Microsoft.Resources/resourceGroups@2021-01-01&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;example-resource-group&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;westus&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>Deploying to subscriptions and management groups To tell Bicep which scope to deploy to, use the targetScope keyword, for example, managementGroup.
+You&amp;rsquo;re not specifying which management group exactly, this is done during deployment of the template file.
+targetScope can be set to resourceGroup, subscription, managementGroup or tenant.
+If it is not set, Bicep assumes resourceGroup.
+create a resource group targetScope = &amp;#39;subscription&amp;#39; resource resourceGroup &amp;#39;Microsoft.Resources/resourceGroups@2021-01-01&amp;#39; = { name: &amp;#39;example-resource-group&amp;#39; location: &amp;#39;westus&amp;#39; } To deploy you use az deployment group create for resource groups, but you use az deployment sub create for subscriptions, mg for management group and tenant for tenant.</description>
       <content:encoded><![CDATA[<h1 id="deploying-to-subscriptions-and-management-groups">Deploying to subscriptions and management groups</h1>
 <p>To tell Bicep which scope to deploy to, use the <code>targetScope</code> keyword, for example, managementGroup.</p>
 <p>You&rsquo;re not specifying which management group exactly, this is done during deployment of the template file.</p>
@@ -568,10 +516,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/intermediate-bicep/</guid>
-      <description>&lt;p&gt;Today I finished the Intermediate Bicep module. Here are my notes.&lt;/p&gt;
-&lt;h1 id=&#34;child-and-extension&#34;&gt;Child and Extension&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&amp;rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.&lt;/p&gt;</description>
+      <description>Today I finished the Intermediate Bicep module. Here are my notes.
+Child and Extension You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&amp;rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.</description>
       <content:encoded><![CDATA[<p>Today I finished the Intermediate Bicep module. Here are my notes.</p>
 <h1 id="child-and-extension">Child and Extension</h1>
 <blockquote>
@@ -837,9 +783,8 @@ Azure Cosmos DB containers</p>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.&lt;/p&gt;
-&lt;h1 id=&#34;why-bicep&#34;&gt;Why Bicep?&lt;/h1&gt;
-&lt;p&gt;Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.
+Why Bicep? Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ll be working with Bicep during my next contract, so I&rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.</p>
 <h1 id="why-bicep">Why Bicep?</h1>
 <p>Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.</p>

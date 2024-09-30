@@ -13,12 +13,7 @@
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/iagjeLuxnMs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.</description>
       <content:encoded><![CDATA[
 
     
@@ -44,8 +39,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-mastodon-post/</guid>
-      <description>&lt;p&gt;This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my &lt;a href=&#34;https://github.com/mischavandenburg/twitter-cli&#34;&gt;twitter cli&lt;/a&gt; I wrote a while ago.&lt;/p&gt;
-&lt;p&gt;It was fun to write some Go again, it has been far too long. I&amp;rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&amp;rsquo;t been doing any projects at home that required programming. But recently I started up my personal blog and completely re-architected my social media setup.&lt;/p&gt;</description>
+      <description>This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my twitter cli I wrote a while ago.
+It was fun to write some Go again, it has been far too long. I&amp;rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&amp;rsquo;t been doing any projects at home that required programming.</description>
       <content:encoded><![CDATA[<p>This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my <a href="https://github.com/mischavandenburg/twitter-cli">twitter cli</a> I wrote a while ago.</p>
 <p>It was fun to write some Go again, it has been far too long. I&rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&rsquo;t been doing any projects at home that required programming. But recently I started up my personal blog and completely re-architected my social media setup.</p>
 <p>I&rsquo;m going to post all of my personal stuff on Mastodon from here on out, not on X. However, I still wanted to post my tech content on Mastodon as well and I needed a tool to help me with that.</p>
@@ -63,8 +58,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/implementing-poddisruptionbudgets/</guid>
-      <description>&lt;p&gt;When I was doing the first round of AKS cluster upgrades at my current client, I noticed we were running a lot of pods with only 1 replica. I always try to lift my clients to the next level by leveraging Cloud Native technologies as much as possible. I&amp;rsquo;m therefore starting a project to always run applications with multiple replicas.&lt;/p&gt;
-&lt;p&gt;However, running multiple replicas is not the only necessary improvement here. Even though a pod is running with multiple replicas, that does not mean that Kubernetes will always keep them alive. When you do an AKS cluster upgrade, nodes are drained one by one and the pods are moved to a node with the higher k8s version. Technically, when draining a node, Kubernetes could kill both of the pods at the same time if they are running on the same node.&lt;/p&gt;</description>
+      <description>When I was doing the first round of AKS cluster upgrades at my current client, I noticed we were running a lot of pods with only 1 replica. I always try to lift my clients to the next level by leveraging Cloud Native technologies as much as possible. I&amp;rsquo;m therefore starting a project to always run applications with multiple replicas.
+However, running multiple replicas is not the only necessary improvement here.</description>
       <content:encoded><![CDATA[<p>When I was doing the first round of AKS cluster upgrades at my current client, I noticed we were running a lot of pods with only 1 replica. I always try to lift my clients to the next level by leveraging Cloud Native technologies as much as possible. I&rsquo;m therefore starting a project to always run applications with multiple replicas.</p>
 <p>However, running multiple replicas is not the only necessary improvement here. Even though a pod is running with multiple replicas, that does not mean that Kubernetes will always keep them alive. When you do an AKS cluster upgrade, nodes are drained one by one and the pods are moved to a node with the higher k8s version. Technically, when draining a node, Kubernetes could kill both of the pods at the same time if they are running on the same node.</p>
 <p>To prevent this we use <a href="https://kubernetes.io/docs/tasks/run-application/configure-pdb/">pod disruption budgets</a></p>
@@ -111,8 +106,8 @@ pyramid-backend-pdb   1               N/A               1                     15
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/bicep-testing-assertions/</guid>
-      <description>&lt;p&gt;During the &lt;a href=&#34;https://youtu.be/UuwhLi-Xe2U&#34;&gt;Bicep Community Call of July 2023&lt;/a&gt; I was introduced to the new experimental testing framework that the Bicep team is working on. After learning the fundamentals of the Go programming language I saw the value of test driven software development, and it will be an advantageous improvement if we can start applying this methodology to Infrastructure as Code as well.&lt;/p&gt;
-&lt;p&gt;Test driven software development is a software development practice that involves writing unit tests before writing the actual code, and then refactoring the code to pass the tests. Some of the advantages of test driven software development are:&lt;/p&gt;</description>
+      <description>During the Bicep Community Call of July 2023 I was introduced to the new experimental testing framework that the Bicep team is working on. After learning the fundamentals of the Go programming language I saw the value of test driven software development, and it will be an advantageous improvement if we can start applying this methodology to Infrastructure as Code as well.
+Test driven software development is a software development practice that involves writing unit tests before writing the actual code, and then refactoring the code to pass the tests.</description>
       <content:encoded><![CDATA[<p>During the <a href="https://youtu.be/UuwhLi-Xe2U">Bicep Community Call of July 2023</a> I was introduced to the new experimental testing framework that the Bicep team is working on. After learning the fundamentals of the Go programming language I saw the value of test driven software development, and it will be an advantageous improvement if we can start applying this methodology to Infrastructure as Code as well.</p>
 <p>Test driven software development is a software development practice that involves writing unit tests before writing the actual code, and then refactoring the code to pass the tests. Some of the advantages of test driven software development are:</p>
 <ul>
@@ -203,12 +198,8 @@ pyramid-backend-pdb   1               N/A               1                     15
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_-D1Qz6jtEU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;In this video, I will walk you through the following steps:&lt;/p&gt;</description>
+      <description>In this video, I will walk you through the following steps:
+Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure portal and link it to the repo Configure the Azure DevOps pipeline for MkDocs deployment Configure a custom theme for the website Demonstrate the pull request workflow for updating the docs By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps.</description>
       <content:encoded><![CDATA[
 
     
@@ -249,12 +240,11 @@ pyramid-backend-pdb   1               N/A               1                     15
       <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_U3HichIJ0Q?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.&lt;/p&gt;</description>
+      <description>In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.
+Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.
+I use Neovim and the Azure CLI for my coding and deployment.
+You will learn how to:
+Implement dev/test prefix to create multiple clusters with the same template Plan a VNet range for an Azure CNI cluster and be mindful of overlaps Deploy a VNet and subnet for the cluster using Bicep Deploy a cluster with Azure CNI enabled and configure the maximum number of pods per node Validate your Bicep template and troubleshoot errors Explore the results of your deployment in the Azure portal Understand the limitations of Azure CNI and why VNet peering is not supported in my configuration due to overlaps This video is suitable for anyone who wants to learn more about Azure CNI and how to use it in their Kubernetes deployments.</description>
       <content:encoded><![CDATA[
 
     
@@ -305,39 +295,10 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</guid>
-      <description>&lt;p&gt;In the Azure portal you can&amp;rsquo;t select multiple resource groups for deletion.&lt;/p&gt;
-&lt;p&gt;I have a sponsored subscription to play around in which I sometimes wish to clean completely.&lt;/p&gt;
-&lt;p&gt;I wrote this script to delete all resource groups using bash.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# script to delete all resource groups in a subscription using Azure CLI&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# get the current subscription name to confirm&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;subscription&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;az account show --query name -o tsv&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Use this script with caution!&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;You are about to delete all resource groups in the subscription: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$subscription&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# prompt for confirmation&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;Are you sure? (y/n) &amp;#34;&lt;/span&gt; will_delete
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$will_delete&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Yy&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;* &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Deleting resource groups...&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;groups&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;az group list --query &lt;span class=&#34;s2&#34;&gt;&amp;#34;[].name&amp;#34;&lt;/span&gt; -o tsv&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;# Loop through each group name and delete it&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; group in &lt;span class=&#34;nv&#34;&gt;$groups&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		az group delete --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$group&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; --yes --no-wait
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;All resource groups have been deleted.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Exiting without deleting any resource groups.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Probably wise.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>In the Azure portal you can&amp;rsquo;t select multiple resource groups for deletion.
+I have a sponsored subscription to play around in which I sometimes wish to clean completely.
+I wrote this script to delete all resource groups using bash.
+#!/bin/bash # script to delete all resource groups in a subscription using Azure CLI # get the current subscription name to confirm subscription=$(az account show --query name -o tsv) echo &amp;#34;Use this script with caution!</description>
       <content:encoded><![CDATA[<p>In the Azure portal you can&rsquo;t select multiple resource groups for deletion.</p>
 <p>I have a sponsored subscription to play around in which I sometimes wish to clean completely.</p>
 <p>I wrote this script to delete all resource groups using bash.</p>
@@ -381,12 +342,10 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/bicep-random-strings/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/n9MRNnAJjZY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.&lt;/p&gt;</description>
+      <description>In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.
+I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:
+param keyVaultName string = &#39;key-vault-${uniqueString(resourceGroup().id, utcNow())}&#39;
+uniqueString() doesn&amp;rsquo;t really generate a unique string. It is a hash function which generates a 13 character string based on the input you give it.</description>
       <content:encoded><![CDATA[
 
     
@@ -414,20 +373,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Finish deploying keyvault using pipeline&lt;/li&gt;
-&lt;li&gt;Get the random name generation to work&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Subscriptions need to be registered with resource providers, apparently&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;</description>
+      <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
+acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
       <content:encoded><![CDATA[
 
     
@@ -476,24 +423,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Write KeyVault template&lt;/li&gt;
-&lt;li&gt;Write pipeline code&lt;/li&gt;
-&lt;li&gt;set up Azure DevOps pipeline&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Always make sure to use &lt;code&gt;az deployment group&lt;/code&gt; instead of &lt;code&gt;az group deployment&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Because it has older Bicep version and will be deprecated&lt;/li&gt;
-&lt;li&gt;Make sure to be in correct Directory to be able to sync subscriptions for service connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
-&lt;p&gt;202306302206&lt;/p&gt;</description>
+      <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
+https://youtu.be/WnA8V3uq7P8</description>
       <content:encoded><![CDATA[
 
     
@@ -525,17 +456,10 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</guid>
-      <description>&lt;p&gt;Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!&lt;/p&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
-&lt;p&gt;202306271706&lt;/p&gt;</description>
+      <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
+Links: 202306271706
+https://www.youtube.com/watch?v=l0B65FUfNBU
+[[AKS]] [[Kubernetes]] [[Neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
 
@@ -562,14 +486,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-bicep-bicepparam/</guid>
-      <description>&lt;p&gt;The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;More readable and editor friendly&lt;/li&gt;
-&lt;li&gt;Cleaner and less lines of code&lt;/li&gt;
-&lt;li&gt;VSCode integration&lt;/li&gt;
-&lt;li&gt;Quickly convert from JSON or template file using VSCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.&lt;/p&gt;</description>
+      <description>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:
+More readable and editor friendly Cleaner and less lines of code VSCode integration Quickly convert from JSON or template file using VSCode In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .</description>
       <content:encoded><![CDATA[<p>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:</p>
 <ul>
 <li>More readable and editor friendly</li>
@@ -608,10 +526,10 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/bicep-getting-subnet-id/</guid>
-      <description>&lt;p&gt;Did a refactor of some of our Bicep template code for our AKS clusters today.&lt;/p&gt;
-&lt;p&gt;Before, we were using a rather complicated line of code using string interpolation.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bicep&#34; data-lang=&#34;bicep&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetSubnetId&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;resourceId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetResourceGroupName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Microsoft.Network/virtualNetworks&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/subnets/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetSubnetName&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This was hard to read and the Bicep linter gave the following warning in my editor and during deployment:&lt;/p&gt;</description>
+      <description>Did a refactor of some of our Bicep template code for our AKS clusters today.
+Before, we were using a rather complicated line of code using string interpolation.
+var vnetSubnetId = &amp;#39;${resourceId(vnetResourceGroupName, &amp;#39;Microsoft.Network/virtualNetworks&amp;#39;, vnetName)}/subnets/${vnetSubnetName}&amp;#39; This was hard to read and the Bicep linter gave the following warning in my editor and during deployment:
+WARNING: D:\a\1\a\drop\Generic-templates\containers\azure-kubernetes-service\v4.0\templates\aks.bicep(117,7) : Warning use-resource-id-functions: If property &amp;ldquo;vnetSubnetID&amp;rdquo; represents a resource ID, it must use a symbolic resource reference, be a parameter or start with one of these functions: extensionResourceId, guid, if, reference, resourceId, subscription, subscriptionResourceId, tenantResourceId.</description>
       <content:encoded><![CDATA[<p>Did a refactor of some of our Bicep template code for our AKS clusters today.</p>
 <p>Before, we were using a rather complicated line of code using string interpolation.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bicep" data-lang="bicep"><span class="line"><span class="cl"><span class="kd">var</span><span class="w"> </span><span class="nv">vnetSubnetId</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;</span><span class="si">${</span><span class="nf">resourceId</span><span class="p">(</span><span class="nv">vnetResourceGroupName</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Microsoft.Network/virtualNetworks&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">vnetName</span><span class="p">)</span><span class="si">}</span><span class="s">/subnets/</span><span class="si">${</span><span class="nv">vnetSubnetName</span><span class="si">}</span><span class="s">&#39;</span><span class="w">
@@ -656,12 +574,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/blogging-from-command-line/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;I show my workflow to publish my Hugo blog from the command line using neovim and bash&lt;/p&gt;</description>
+      <description>I show my workflow to publish my Hugo blog from the command line using neovim and bash
+Links: 202305091705</description>
       <content:encoded><![CDATA[
 
     
@@ -682,14 +596,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-custom-fontsize-command/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Q8dxoqqMHAg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
-&lt;p&gt;202305070805&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://youtu.be/Q8dxoqqMHAg&#34;&gt;https://youtu.be/Q8dxoqqMHAg&lt;/a&gt;&lt;/p&gt;</description>
+      <description>Links: 202305070805
+https://youtu.be/Q8dxoqqMHAg</description>
       <content:encoded><![CDATA[
 
     
@@ -710,8 +618,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/ups-and-downs-of-devops-engineer/</guid>
-      <description>&lt;p&gt;Next winter I&amp;rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&amp;rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.&lt;/p&gt;
-&lt;p&gt;Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&amp;rsquo;t like. And now the first phases of overwhelm are confidently behind me, I&amp;rsquo;m starting to learn the things I prefer doing over others.&lt;/p&gt;</description>
+      <description>Next winter I&amp;rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&amp;rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.
+Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&amp;rsquo;t like.</description>
       <content:encoded><![CDATA[<p>Next winter I&rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.</p>
 <p>Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&rsquo;t like. And now the first phases of overwhelm are confidently behind me, I&rsquo;m starting to learn the things I prefer doing over others.</p>
 <p>Being a DevOps Engineer does not mean you get to write code all day. I&rsquo;m currently working in an organization where we&rsquo;re not working fully DevOps yet. Rather than deploying many times in small increments, we are still using patching windows. Managing infrastructure in this way means you&rsquo;ll need to communicate with teams to schedule the patching and submit changes to the approval board. It can involve a lot of emailing and talking back and forth. And sometimes things go wrong and everything needs to be rescheduled again. Although it is valuable experience, and I certainly have the communication skills to handle these kinds of situations, I&rsquo;m learning that I lean more towards the dev side of things.</p>
@@ -733,11 +641,9 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-struct-python-class/</guid>
-      <description>&lt;p&gt;The Tour of Go is very clear:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Go does not have classes.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.&lt;/p&gt;</description>
+      <description>The Tour of Go is very clear:
+Go does not have classes.
+One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</description>
       <content:encoded><![CDATA[<p>The Tour of Go is very clear:</p>
 <blockquote>
 <p>Go does not have classes.</p>
@@ -824,11 +730,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-use-q-for-debugging/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m working on my twitter CLI and as I was writing a function to format the tweet I remembered something I picked up last week. After a quick search in my notes I remembered to use the &lt;code&gt;%q&lt;/code&gt; with printf.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;feed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;feed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;strings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Testing printf %q&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>I&amp;rsquo;m working on my twitter CLI and as I was writing a function to format the tweet I remembered something I picked up last week. After a quick search in my notes I remembered to use the %q with printf.
+slice := []string{feed.Items[0].Title, feed.Items[0].Link} result := strings.Join(slice, &amp;#34;\n&amp;#34;) fmt.Printf(&amp;#34;Testing printf %q&amp;#34;, result) This is very useful when formatting output. Now I can actually see whether it is inserting the new line characters correctly:</description>
       <content:encoded><![CDATA[<p>I&rsquo;m working on my twitter CLI and as I was writing a function to format the tweet I remembered something I picked up last week. After a quick search in my notes I remembered to use the <code>%q</code> with printf.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">slice</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="nx">feed</span><span class="p">.</span><span class="nx">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">Title</span><span class="p">,</span> <span class="nx">feed</span><span class="p">.</span><span class="nx">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">Link</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="nx">result</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Join</span><span class="p">(</span><span class="nx">slice</span><span class="p">,</span> <span class="s">&#34;\n&#34;</span><span class="p">)</span>
@@ -849,8 +752,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-first-tweet/</guid>
-      <description>&lt;p&gt;I spent the evening learning about the Twitter API. It was not as straight forward as I thought. My goal was to do this project using only the standard library, and I hoped to get away with a few simple curls, but since the API requires OAuth 1 to create tweets, I had to revise my strategy.&lt;/p&gt;
-&lt;p&gt;After struggling with Postman for a few hours to get the correct environment variables set up I managed to make my first tweet through Postman. Turns out that Twitter made some big changes in the free tier of their API, and it took me quite a while to figure out that the functions that are used as examples in the API documentation are not accessible to free accounts anymore.&lt;/p&gt;</description>
+      <description>I spent the evening learning about the Twitter API. It was not as straight forward as I thought. My goal was to do this project using only the standard library, and I hoped to get away with a few simple curls, but since the API requires OAuth 1 to create tweets, I had to revise my strategy.
+After struggling with Postman for a few hours to get the correct environment variables set up I managed to make my first tweet through Postman.</description>
       <content:encoded><![CDATA[<p>I spent the evening learning about the Twitter API. It was not as straight forward as I thought. My goal was to do this project using only the standard library, and I hoped to get away with a few simple curls, but since the API requires OAuth 1 to create tweets, I had to revise my strategy.</p>
 <p>After struggling with Postman for a few hours to get the correct environment variables set up I managed to make my first tweet through Postman. Turns out that Twitter made some big changes in the free tier of their API, and it took me quite a while to figure out that the functions that are used as examples in the API documentation are not accessible to free accounts anymore.</p>
 <p>When I realized I would not get away with a simple curl I looked into libraries, but many were deprecated. Eventually I discovered <a href="https://github.com/michimani/gotwi">gotwi</a> and it didn&rsquo;t take long to make my first tweet using Go.</p>
@@ -910,9 +813,11 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-twitter-cli-project/</guid>
-      <description>&lt;p&gt;When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.&lt;/p&gt;
-&lt;p&gt;Over the past few months I&amp;rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/mischavandenburg/twitter-cli&#34;&gt;https://github.com/mischavandenburg/twitter-cli&lt;/a&gt;&lt;/p&gt;</description>
+      <description>When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.
+Over the past few months I&amp;rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.
+https://github.com/mischavandenburg/twitter-cli
+https://twitter.com/mischa_vdburg
+Twitter CLI Programs should solve a problem.</description>
       <content:encoded><![CDATA[<p>When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.</p>
 <p>Over the past few months I&rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.</p>
 <p><a href="https://github.com/mischavandenburg/twitter-cli">https://github.com/mischavandenburg/twitter-cli</a></p>
@@ -962,8 +867,8 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/exercise-stimulates-creativity-and-motivation/</guid>
-      <description>&lt;p&gt;I noticed multiple times now that during my workouts my mind is generating lots of new ideas for coding projects or blog posts. It is a well known fact that walking stimulates areas in the brain that which will in turn stimulate creativity. But I&amp;rsquo;m noticing that it starts to happen with strength workouts as well.&lt;/p&gt;
-&lt;p&gt;Although I don&amp;rsquo;t struggle with the motivation to get myself to the gym, I sometimes feel &amp;ldquo;guilty&amp;rdquo; for not spending that time on coding or studying. I&amp;rsquo;m realizing now that this is a very irrational train of thought.&lt;/p&gt;</description>
+      <description>I noticed multiple times now that during my workouts my mind is generating lots of new ideas for coding projects or blog posts. It is a well known fact that walking stimulates areas in the brain that which will in turn stimulate creativity. But I&amp;rsquo;m noticing that it starts to happen with strength workouts as well.
+Although I don&amp;rsquo;t struggle with the motivation to get myself to the gym, I sometimes feel &amp;ldquo;guilty&amp;rdquo; for not spending that time on coding or studying.</description>
       <content:encoded><![CDATA[<p>I noticed multiple times now that during my workouts my mind is generating lots of new ideas for coding projects or blog posts. It is a well known fact that walking stimulates areas in the brain that which will in turn stimulate creativity. But I&rsquo;m noticing that it starts to happen with strength workouts as well.</p>
 <p>Although I don&rsquo;t struggle with the motivation to get myself to the gym, I sometimes feel &ldquo;guilty&rdquo; for not spending that time on coding or studying. I&rsquo;m realizing now that this is a very irrational train of thought.</p>
 <p>Exercise actually stimulates my creativity and will help generating new ideas or help me understand concepts better in the unconscious. It is also massively beneficial for health and general well being. When general well-being is enhanced I&rsquo;ll also be able to focus better and absorb information more quickly.</p>
@@ -983,38 +888,9 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/generate-markdown-headings-date/</guid>
-      <description>&lt;p&gt;A couple of weeks ago I created a simple bash script to generate a date in format YYY-MM-DD to use with the magic !! wands in vim.&lt;/p&gt;
-&lt;p&gt;Just now I wanted to expand this with being able to create a markdown header with this date.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Gendate generates the date in YYY-MM-DD format&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Can be called with arguments h and number to generate a markdown heading&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# For example: &amp;#39;gendate h 3&amp;#39; will generate &amp;#39;### 2023-03-29&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;header&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;date +&lt;span class=&#34;s2&#34;&gt;&amp;#34;%Y-%m-%d&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -gt &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# handling wrong arguments&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;h&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Usage: gendate h 2 to generate with markdown heading ##&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# format markdown heading if arguments h, n are given&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;seq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nv&#34;&gt;header&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nv&#34;&gt;header&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$date&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$header&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# if no arguments given, generate the date&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$date&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>A couple of weeks ago I created a simple bash script to generate a date in format YYY-MM-DD to use with the magic !! wands in vim.
+Just now I wanted to expand this with being able to create a markdown header with this date.
+#!/bin/bash # Gendate generates the date in YYY-MM-DD format # Can be called with arguments h and number to generate a markdown heading # For example: &amp;#39;gendate h 3&amp;#39; will generate &amp;#39;### 2023-03-29&amp;#39; header=&amp;#34;&amp;#34; date=$(date +&amp;#34;%Y-%m-%d&amp;#34;) if [[ $# -gt 0 ]]; then # handling wrong arguments if [[ $# -eq 1 || &amp;#34;$1&amp;#34; !</description>
       <content:encoded><![CDATA[<p>A couple of weeks ago I created a simple bash script to generate a date in format YYY-MM-DD to use with the magic !! wands in vim.</p>
 <p>Just now I wanted to expand this with being able to create a markdown header with this date.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
@@ -1058,9 +934,9 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/my-first-go-program/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&amp;rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.&lt;/p&gt;
-&lt;p&gt;The best thing to do is to write little programs that solve a problem that you have.&lt;/p&gt;
-&lt;p&gt;One problem I needed to solve was converting sentences to title case in vim. There are plugins for this, or elaborate macros, but I thought this was a nice opportunity to write my first program from scratch. You can view the program here: &lt;a href=&#34;https://github.com/mischavandenburg/go/tree/main/projects/title&#34;&gt;my go repo&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&amp;rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.
+The best thing to do is to write little programs that solve a problem that you have.
+One problem I needed to solve was converting sentences to title case in vim.</description>
       <content:encoded><![CDATA[<p>I&rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.</p>
 <p>The best thing to do is to write little programs that solve a problem that you have.</p>
 <p>One problem I needed to solve was converting sentences to title case in vim. There are plugins for this, or elaborate macros, but I thought this was a nice opportunity to write my first program from scratch. You can view the program here: <a href="https://github.com/mischavandenburg/go/tree/main/projects/title">my go repo</a>.</p>
@@ -1152,9 +1028,9 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m working through the &amp;ldquo;greet&amp;rdquo; &lt;a href=&#34;https://rwx.gg/lang/cha/&#34;&gt;challenge&lt;/a&gt; by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.&lt;/p&gt;
-&lt;p&gt;The program should take input from the user and print it out. I worked through the challenge together with Rob &lt;a href=&#34;https://www.youtube.com/watch?v=WMH5ENF_Xvo&#34;&gt;in his video&lt;/a&gt; but I&amp;rsquo;m going to talk (write) myself through these functions to fully understand what&amp;rsquo;s going on.&lt;/p&gt;
-&lt;p&gt;We have the following function in main.go:&lt;/p&gt;</description>
+      <description>I&amp;rsquo;m working through the &amp;ldquo;greet&amp;rdquo; challenge by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.
+The program should take input from the user and print it out. I worked through the challenge together with Rob in his video but I&amp;rsquo;m going to talk (write) myself through these functions to fully understand what&amp;rsquo;s going on.
+We have the following function in main.</description>
       <content:encoded><![CDATA[<p>I&rsquo;m working through the &ldquo;greet&rdquo; <a href="https://rwx.gg/lang/cha/">challenge</a> by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.</p>
 <p>The program should take input from the user and print it out. I worked through the challenge together with Rob <a href="https://www.youtube.com/watch?v=WMH5ENF_Xvo">in his video</a> but I&rsquo;m going to talk (write) myself through these functions to fully understand what&rsquo;s going on.</p>
 <p>We have the following function in main.go:</p>
@@ -1216,21 +1092,10 @@ DNS service ip addres 10.0.0.10</p>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</guid>
-      <description>&lt;h1 id=&#34;beginner-boost-week-17-and-18-notes&#34;&gt;Beginner Boost Week 17 and 18 Notes&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=WMH5ENF_Xvo&#34;&gt;Link to video&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Don&amp;rsquo;t forget to set &lt;code&gt;GOBIN=~/.local/bin&lt;/code&gt;, &lt;code&gt;GOPRIVATE&lt;/code&gt;, &lt;code&gt;CGO_ENABLED=0&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;go-testing---example-tests&#34;&gt;Go Testing - Example Tests&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ExampleFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// Output:
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;// Foo
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>Beginner Boost Week 17 and 18 Notes Link to video
+Don&amp;rsquo;t forget to set GOBIN=~/.local/bin, GOPRIVATE, CGO_ENABLED=0 Go Testing - Example Tests func ExampleFoo() { foo() // Output: // Foo } The ExampleFoo indicates the test here. It needs to match the name exactly after Example. But it is capitalized.
+It runs that function and will compare the output to what is specified.
+It says &amp;ldquo;see if the program generates this output in std out&amp;rdquo;.</description>
       <content:encoded><![CDATA[<h1 id="beginner-boost-week-17-and-18-notes">Beginner Boost Week 17 and 18 Notes</h1>
 <p><a href="https://www.youtube.com/watch?v=WMH5ENF_Xvo">Link to video</a></p>
 <ul>
@@ -1355,8 +1220,8 @@ leading and trailing space.) These are examples of an example:</p>
       <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/website-housekeeping/</guid>
-      <description>&lt;p&gt;Did some website housekeeping today. Spent the entire morning on a few tasks that I intended to do for a while. I added a search page and reorganized the menu, and I added a &amp;ldquo;Start Here&amp;rdquo; page.&lt;/p&gt;
-&lt;p&gt;I hope that the new &amp;ldquo;Start Here&amp;rdquo; page will do a better job of explaining the how and why of my website, and that the search function will help you nagivate my website better.&lt;/p&gt;</description>
+      <description>Did some website housekeeping today. Spent the entire morning on a few tasks that I intended to do for a while. I added a search page and reorganized the menu, and I added a &amp;ldquo;Start Here&amp;rdquo; page.
+I hope that the new &amp;ldquo;Start Here&amp;rdquo; page will do a better job of explaining the how and why of my website, and that the search function will help you nagivate my website better.</description>
       <content:encoded><![CDATA[<p>Did some website housekeeping today. Spent the entire morning on a few tasks that I intended to do for a while. I added a search page and reorganized the menu, and I added a &ldquo;Start Here&rdquo; page.</p>
 <p>I hope that the new &ldquo;Start Here&rdquo; page will do a better job of explaining the how and why of my website, and that the search function will help you nagivate my website better.</p>
 ]]></content:encoded>
@@ -1368,12 +1233,12 @@ leading and trailing space.) These are examples of an example:</p>
       <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/surround-word-quotes-neovim/</guid>
-      <description>&lt;p&gt;[[Neovim]]&lt;/p&gt;
-&lt;p&gt;I find myself quoting words very often in vim when I&amp;rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.&lt;/p&gt;
-&lt;p&gt;I found this vim command:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ciw&amp;quot;&amp;quot;&amp;lt;Esc&amp;gt;P&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;c&amp;rdquo; deletes into register and enters insert mode. &amp;ldquo;iw&amp;rdquo; stands for &amp;ldquo;inner word&amp;rdquo; and selects the word.&lt;/p&gt;
-&lt;p&gt;So we delete the entire word and enter insert mode. Then we type two quotes, and we press &amp;ldquo;P&amp;rdquo; to paste the register (containing the word) before the cursor.&lt;/p&gt;</description>
+      <description>[[Neovim]]
+I find myself quoting words very often in vim when I&amp;rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.
+I found this vim command:
+ciw&amp;quot;&amp;quot;&amp;lt;Esc&amp;gt;P
+&amp;ldquo;c&amp;rdquo; deletes into register and enters insert mode. &amp;ldquo;iw&amp;rdquo; stands for &amp;ldquo;inner word&amp;rdquo; and selects the word.
+So we delete the entire word and enter insert mode.</description>
       <content:encoded><![CDATA[<p>[[Neovim]]</p>
 <p>I find myself quoting words very often in vim when I&rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.</p>
 <p>I found this vim command:</p>
@@ -1393,13 +1258,11 @@ leading and trailing space.) These are examples of an example:</p>
       <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/package-module-go/</guid>
-      <description>&lt;p&gt;A module is generally associated with a single git repo.&lt;/p&gt;
-&lt;p&gt;You can have a module with multiple packages, and each package would get its own subdirectory.&lt;/p&gt;
-&lt;p&gt;You should always name your main file main.go&lt;/p&gt;
-&lt;h2 id=&#34;creating-a-module&#34;&gt;creating a module&lt;/h2&gt;
-&lt;p&gt;Use the &lt;code&gt;go mod init {{your path here}}&lt;/code&gt; command to initiate a module.&lt;/p&gt;
-&lt;h2 id=&#34;multiple-modules&#34;&gt;multiple modules&lt;/h2&gt;
-&lt;p&gt;I was running into some trouble with this because I want to have one big repo where I will store all my go projects.&lt;/p&gt;</description>
+      <description>A module is generally associated with a single git repo.
+You can have a module with multiple packages, and each package would get its own subdirectory.
+You should always name your main file main.go
+creating a module Use the go mod init {{your path here}} command to initiate a module.
+multiple modules I was running into some trouble with this because I want to have one big repo where I will store all my go projects.</description>
       <content:encoded><![CDATA[<p>A module is generally associated with a single git repo.</p>
 <p>You can have a module with multiple packages, and each package would get its own subdirectory.</p>
 <p>You should always name your main file main.go</p>
@@ -1424,10 +1287,10 @@ leading and trailing space.) These are examples of an example:</p>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/running-go-on-change/</guid>
-      <description>&lt;p&gt;I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.&lt;/p&gt;
-&lt;p&gt;You can use this command in a split window to keep running a Go file. It will update when you save the file.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;entr -c bash -c &amp;quot;go run main.go&amp;quot; &amp;lt;&amp;lt;&amp;lt; main.go&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Entr runs commands when files change. Here we are feeding it only one file, but you can also feed it a directory like so:&lt;/p&gt;</description>
+      <description>I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.
+You can use this command in a split window to keep running a Go file. It will update when you save the file.
+entr -c bash -c &amp;quot;go run main.go&amp;quot; &amp;lt;&amp;lt;&amp;lt; main.go
+Entr runs commands when files change. Here we are feeding it only one file, but you can also feed it a directory like so:</description>
       <content:encoded><![CDATA[<p>I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.</p>
 <p>You can use this command in a split window to keep running a Go file. It will update when you save the file.</p>
 <p><code>entr -c bash -c &quot;go run main.go&quot; &lt;&lt;&lt; main.go</code></p>
@@ -1447,19 +1310,11 @@ leading and trailing space.) These are examples of an example:</p>
       <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/advanced-bicep/</guid>
-      <description>&lt;h1 id=&#34;deploying-to-subscriptions-and-management-groups&#34;&gt;Deploying to subscriptions and management groups&lt;/h1&gt;
-&lt;p&gt;To tell Bicep which scope to deploy to, use the &lt;code&gt;targetScope&lt;/code&gt; keyword, for example, managementGroup.&lt;/p&gt;
-&lt;p&gt;You&amp;rsquo;re not specifying which management group exactly, this is done during deployment of the template file.&lt;/p&gt;
-&lt;p&gt;targetScope can be set to resourceGroup, subscription, managementGroup or tenant.&lt;/p&gt;
-&lt;p&gt;If it is not set, Bicep assumes resourceGroup.&lt;/p&gt;
-&lt;h2 id=&#34;create-a-resource-group&#34;&gt;create a resource group&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bicep&#34; data-lang=&#34;bicep&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;targetScope&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;subscription&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;resource&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;resourceGroup&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Microsoft.Resources/resourceGroups@2021-01-01&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;example-resource-group&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;westus&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>Deploying to subscriptions and management groups To tell Bicep which scope to deploy to, use the targetScope keyword, for example, managementGroup.
+You&amp;rsquo;re not specifying which management group exactly, this is done during deployment of the template file.
+targetScope can be set to resourceGroup, subscription, managementGroup or tenant.
+If it is not set, Bicep assumes resourceGroup.
+create a resource group targetScope = &amp;#39;subscription&amp;#39; resource resourceGroup &amp;#39;Microsoft.Resources/resourceGroups@2021-01-01&amp;#39; = { name: &amp;#39;example-resource-group&amp;#39; location: &amp;#39;westus&amp;#39; } To deploy you use az deployment group create for resource groups, but you use az deployment sub create for subscriptions, mg for management group and tenant for tenant.</description>
       <content:encoded><![CDATA[<h1 id="deploying-to-subscriptions-and-management-groups">Deploying to subscriptions and management groups</h1>
 <p>To tell Bicep which scope to deploy to, use the <code>targetScope</code> keyword, for example, managementGroup.</p>
 <p>You&rsquo;re not specifying which management group exactly, this is done during deployment of the template file.</p>
@@ -1556,10 +1411,8 @@ leading and trailing space.) These are examples of an example:</p>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/intermediate-bicep/</guid>
-      <description>&lt;p&gt;Today I finished the Intermediate Bicep module. Here are my notes.&lt;/p&gt;
-&lt;h1 id=&#34;child-and-extension&#34;&gt;Child and Extension&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&amp;rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.&lt;/p&gt;</description>
+      <description>Today I finished the Intermediate Bicep module. Here are my notes.
+Child and Extension You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&amp;rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.</description>
       <content:encoded><![CDATA[<p>Today I finished the Intermediate Bicep module. Here are my notes.</p>
 <h1 id="child-and-extension">Child and Extension</h1>
 <blockquote>
@@ -1825,9 +1678,8 @@ Azure Cosmos DB containers</p>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.&lt;/p&gt;
-&lt;h1 id=&#34;why-bicep&#34;&gt;Why Bicep?&lt;/h1&gt;
-&lt;p&gt;Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.
+Why Bicep? Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ll be working with Bicep during my next contract, so I&rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.</p>
 <h1 id="why-bicep">Why Bicep?</h1>
 <p>Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.</p>
@@ -2177,19 +2029,9 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-day-1/</guid>
-      <description>&lt;p&gt;The CTO of my new company recommended the Udemy course &amp;ldquo;Go: The Complete Developer&amp;rsquo;s Guide (Golang)&amp;rdquo;. I started today and here are some notes I made.&lt;/p&gt;
-&lt;h1 id=&#34;hello-world-in-go&#34;&gt;Hello World in Go&lt;/h1&gt;
-&lt;p&gt;We start by writing a Hello World and studying all the elements.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>The CTO of my new company recommended the Udemy course &amp;ldquo;Go: The Complete Developer&amp;rsquo;s Guide (Golang)&amp;rdquo;. I started today and here are some notes I made.
+Hello World in Go We start by writing a Hello World and studying all the elements.
+package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello World!&amp;#34;) } How do we run code? go run main.go runs the program go build main.go compiles it to an executable</description>
       <content:encoded><![CDATA[<p>The CTO of my new company recommended the Udemy course &ldquo;Go: The Complete Developer&rsquo;s Guide (Golang)&rdquo;. I started today and here are some notes I made.</p>
 <h1 id="hello-world-in-go">Hello World in Go</h1>
 <p>We start by writing a Hello World and studying all the elements.</p>
@@ -2265,8 +2107,8 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/start-learning-go/</guid>
-      <description>&lt;p&gt;For month&amp;rsquo;s I considered to learn Go, and today I finally started.&lt;/p&gt;
-&lt;p&gt;I doubted for a long time, because I figured it would be better to dive deeper into Python. However, when I reflected on it, I realized I&amp;rsquo;m able to do the things I want to do in Python. I can create scripts to manipulate data, and I can string different tools and libraries together if I need to. So how deep do I actually need to go as a DevOps Engineer?&lt;/p&gt;</description>
+      <description>For month&amp;rsquo;s I considered to learn Go, and today I finally started.
+I doubted for a long time, because I figured it would be better to dive deeper into Python. However, when I reflected on it, I realized I&amp;rsquo;m able to do the things I want to do in Python. I can create scripts to manipulate data, and I can string different tools and libraries together if I need to. So how deep do I actually need to go as a DevOps Engineer?</description>
       <content:encoded><![CDATA[<p>For month&rsquo;s I considered to learn Go, and today I finally started.</p>
 <p>I doubted for a long time, because I figured it would be better to dive deeper into Python. However, when I reflected on it, I realized I&rsquo;m able to do the things I want to do in Python. I can create scripts to manipulate data, and I can string different tools and libraries together if I need to. So how deep do I actually need to go as a DevOps Engineer?</p>
 <p>The breakthrough came when I discovered this website: <a href="https://goodfirstissue.dev/language/go">Good First Issue</a>. It&rsquo;s a collection of issues in open source projects which are suitable for people who are starting out. Scrolling through the available projects for Python and Go, I noticed I got a lot more energy from the things I saw in the Go list: Grafana, ArgoCD, Kubernetes. I probably have a long way to go before I can make any meaningful contributions, but my goal is to be able to contribute to open source in the future.</p>
@@ -2282,8 +2124,8 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/apple-music-hotkeys/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m a little obsessed with controlling everything with my keyboard. That&amp;rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.&lt;/p&gt;
-&lt;p&gt;One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;m a little obsessed with controlling everything with my keyboard. That&amp;rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.
+One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.</description>
       <content:encoded><![CDATA[<p>I&rsquo;m a little obsessed with controlling everything with my keyboard. That&rsquo;s why I loved AwesomeWM so much on my Arch Linux setup, I hardly used my mouse anymore.</p>
 <p>One thing I loved about my setup was the ability to control my music from the keyboard from anywhere. This is a feature I picked up from the awesome-copycats theme for AwesomeWM. This was one of the first things I missed when I made my switch to MacOS.</p>
 <p>I started using Apple Music as my music app but it does not have any global hotkeys, and it makes you use a widget with the mouse.</p>
@@ -2309,11 +2151,10 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/slash-syntax-replace/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Last modified: 2023-01-10&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;In this evening&amp;rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!#/bin/bash
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//:/&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I could not make heads or tails of all these slashes and curly braces, since the output clearly indicated that search and replacement was being performed. I&amp;rsquo;m used to the sed / vim syntax: &lt;code&gt;s/foo/bar&lt;/code&gt;&lt;/p&gt;</description>
+      <description>Last modified: 2023-01-10
+In this evening&amp;rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:
+!#/bin/bash echo -e ${PATH//:/\\n} I could not make heads or tails of all these slashes and curly braces, since the output clearly indicated that search and replacement was being performed. I&amp;rsquo;m used to the sed / vim syntax: s/foo/bar
+After some research I learned that &amp;lsquo;//&amp;rsquo; is a global search and replace syntax of several text processing programs.</description>
       <content:encoded><![CDATA[<p><em>Last modified: 2023-01-10</em></p>
 <p>In this evening&rsquo;s studies I came across this bash script in a tutorial by Rob Muhlenstein:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">!#/bin/bash
@@ -2338,9 +2179,9 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/adding-posts-github-readme/</guid>
-      <description>&lt;p&gt;My friend gave me a nice tip for customizing the readme on my personal GitHub page. I discovered there is a whole world of plugins and customizations out there.&lt;/p&gt;
-&lt;p&gt;I set up &lt;a href=&#34;https://github.com/abhisheknaiidu/awesome-github-profile-readme&#34;&gt;this one&lt;/a&gt; for my GitHub homepage. It uses a workflow to update the readme in my personal GitHub repo with the most recent posts from this blog, based on the RSS feed. Neat!&lt;/p&gt;
-&lt;p&gt;It was very easy to set up. If you don&amp;rsquo;t have your own blog, you could configure it with a different RSS feed. Hacker News for example.&lt;/p&gt;</description>
+      <description>My friend gave me a nice tip for customizing the readme on my personal GitHub page. I discovered there is a whole world of plugins and customizations out there.
+I set up this one for my GitHub homepage. It uses a workflow to update the readme in my personal GitHub repo with the most recent posts from this blog, based on the RSS feed. Neat!
+It was very easy to set up.</description>
       <content:encoded><![CDATA[<p>My friend gave me a nice tip for customizing the readme on my personal GitHub page. I discovered there is a whole world of plugins and customizations out there.</p>
 <p>I set up <a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">this one</a> for my GitHub homepage. It uses a workflow to update the readme in my personal GitHub repo with the most recent posts from this blog, based on the RSS feed. Neat!</p>
 <p>It was very easy to set up. If you don&rsquo;t have your own blog, you could configure it with a different RSS feed. Hacker News for example.</p>
@@ -2355,19 +2196,10 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/back-to-bashics/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve used zsh for nearly two years now. I have a custom setup with autocompletion and a good looking prompt.&lt;/p&gt;
-&lt;p&gt;Recently I&amp;rsquo;ve been diving deeper into bash scripting, following tutorials by rwxrob. He emphasizes all the time that it is much better to stick to bash instead of zsh.&lt;/p&gt;
-&lt;p&gt;Advantages of using bash:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the default Linux shell&lt;/li&gt;
-&lt;li&gt;available on any Linux system&lt;/li&gt;
-&lt;li&gt;full documentation available anywhere at all times with &lt;code&gt;man bash&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;free software&lt;/li&gt;
-&lt;li&gt;less dependent on external plugins and configurations&lt;/li&gt;
-&lt;li&gt;more portable&lt;/li&gt;
-&lt;li&gt;practice by working on the command line&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The fact that &lt;a href=&#34;https://mischavandenburg.com/content/zet/bash-cmdline-is-coding.md&#34;&gt;working on the commandline is already coding&lt;/a&gt; convinced me to leave my beloved customized prompt behind (for now) and go back to the basics.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ve used zsh for nearly two years now. I have a custom setup with autocompletion and a good looking prompt.
+Recently I&amp;rsquo;ve been diving deeper into bash scripting, following tutorials by rwxrob. He emphasizes all the time that it is much better to stick to bash instead of zsh.
+Advantages of using bash:
+the default Linux shell available on any Linux system full documentation available anywhere at all times with man bash free software less dependent on external plugins and configurations more portable practice by working on the command line The fact that working on the commandline is already coding convinced me to leave my beloved customized prompt behind (for now) and go back to the basics.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ve used zsh for nearly two years now. I have a custom setup with autocompletion and a good looking prompt.</p>
 <p>Recently I&rsquo;ve been diving deeper into bash scripting, following tutorials by rwxrob. He emphasizes all the time that it is much better to stick to bash instead of zsh.</p>
 <p>Advantages of using bash:</p>
@@ -2395,9 +2227,9 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/bash-cmdline-is-coding/</guid>
-      <description>&lt;p&gt;Rob Muhlenstein makes an interesting point that using bash on the command line is already coding. When you are running commands in the terminal, you are coding one line at a time.&lt;/p&gt;
-&lt;p&gt;When you put these commands in a file you have a bash script. Therefore, he argues that bash should be your first language.&lt;/p&gt;
-&lt;p&gt;I think this is such an interesting point. I&amp;rsquo;ve been using Linux and working on the command line for years but it never dawned on me that I, in fact, was coding while working on the command line. However, when I was writing bash scripts, I did consider myself to be coding. There is literally no difference. A bash script is just a string of commands that you would enter manually anyway.&lt;/p&gt;</description>
+      <description>Rob Muhlenstein makes an interesting point that using bash on the command line is already coding. When you are running commands in the terminal, you are coding one line at a time.
+When you put these commands in a file you have a bash script. Therefore, he argues that bash should be your first language.
+I think this is such an interesting point. I&amp;rsquo;ve been using Linux and working on the command line for years but it never dawned on me that I, in fact, was coding while working on the command line.</description>
       <content:encoded><![CDATA[<p>Rob Muhlenstein makes an interesting point that using bash on the command line is already coding. When you are running commands in the terminal, you are coding one line at a time.</p>
 <p>When you put these commands in a file you have a bash script. Therefore, he argues that bash should be your first language.</p>
 <p>I think this is such an interesting point. I&rsquo;ve been using Linux and working on the command line for years but it never dawned on me that I, in fact, was coding while working on the command line. However, when I was writing bash scripts, I did consider myself to be coding. There is literally no difference. A bash script is just a string of commands that you would enter manually anyway.</p>
@@ -2411,8 +2243,8 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Tue, 03 Jan 2023 07:50:55 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/sdk/</guid>
-      <description>&lt;p&gt;A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.&lt;/p&gt;
-&lt;p&gt;SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.&lt;/p&gt;</description>
+      <description>A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.
+SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.</description>
       <content:encoded><![CDATA[<p>A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.</p>
 <p>SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.</p>
 ]]></content:encoded>
@@ -2424,8 +2256,8 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Mon, 02 Jan 2023 21:11:26 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/call-stacks/</guid>
-      <description>&lt;p&gt;When you call a function, the system sets aside space in memory  for the function to do its work. Those chunks are called &amp;ldquo;stack frames&amp;rdquo; or &amp;ldquo;function frames.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;These frames are arranged in a stack. The frame for the most recently called function is always at the top of the stack. When a new function is called, it becomes the active frame, and it is on top of the stack.&lt;/p&gt;</description>
+      <description>When you call a function, the system sets aside space in memory for the function to do its work. Those chunks are called &amp;ldquo;stack frames&amp;rdquo; or &amp;ldquo;function frames.&amp;rdquo;
+These frames are arranged in a stack. The frame for the most recently called function is always at the top of the stack. When a new function is called, it becomes the active frame, and it is on top of the stack.</description>
       <content:encoded><![CDATA[<p>When you call a function, the system sets aside space in memory  for the function to do its work. Those chunks are called &ldquo;stack frames&rdquo; or &ldquo;function frames.&rdquo;</p>
 <p>These frames are arranged in a stack. The frame for the most recently called function is always at the top of the stack. When a new function is called, it becomes the active frame, and it is on top of the stack.</p>
 <p>The function that is actually doing something at the moment is on top of the stack and is known as the &ldquo;active frame.&rdquo;</p>
@@ -2441,8 +2273,8 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Sun, 01 Jan 2023 09:11:57 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/kickstart-nvim/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been using neovim for over a year now, and I&amp;rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.&lt;/p&gt;
-&lt;p&gt;I started with an empty vanilla vim config and slowly added the plugins as I went along. Videos by content creators such as ThePrimagen were also helpful in getting inspiration on which plugins I might like for my setup. But this might not be suitable for everyone. I was only editing yaml files and writing simple Python scripts at the time, whereas you might be looking for an IDE experience out of the box.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ve been using neovim for over a year now, and I&amp;rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.
+I started with an empty vanilla vim config and slowly added the plugins as I went along.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ve been using neovim for over a year now, and I&rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.</p>
 <p>I started with an empty vanilla vim config and slowly added the plugins as I went along. Videos by content creators such as ThePrimagen were also helpful in getting inspiration on which plugins I might like for my setup. But this might not be suitable for everyone. I was only editing yaml files and writing simple Python scripts at the time, whereas you might be looking for an IDE experience out of the box.</p>
 <p>Recently I discovered <a href="https://github.com/nvim-lua/kickstart.nvim">kickstart.nvim</a> by neovim core maintainer TJdeVries.</p>
@@ -2462,8 +2294,8 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Fri, 18 Feb 2022 16:21:12 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/my-first-contribution-to-open-source/</guid>
-      <description>&lt;p&gt;Two months ago I knew nothing about GitHub. This week my first pull request got merged into master!&lt;/p&gt;
-&lt;p&gt;Programming tutorials and books very often suggest that you should try to contribute to open source in order to practice your skills. Even though I am still on the beginner level in Python, I managed to find something I could contribute with. But there were a few things I needed to learn in order to be able to do so.&lt;/p&gt;</description>
+      <description>Two months ago I knew nothing about GitHub. This week my first pull request got merged into master!
+Programming tutorials and books very often suggest that you should try to contribute to open source in order to practice your skills. Even though I am still on the beginner level in Python, I managed to find something I could contribute with. But there were a few things I needed to learn in order to be able to do so.</description>
       <content:encoded><![CDATA[<p>Two months ago I knew nothing about GitHub. This week my first pull request got merged into master!</p>
 <p>Programming tutorials and books very often suggest that you should try to contribute to open source in order to practice your skills. Even though I am still on the beginner level in Python, I managed to find something I could contribute with. But there were a few things I needed to learn in order to be able to do so.</p>
 <p>GitHub is a place where many open source projects are hosted. Projects are hosted in “repositories” available to the public. Everyone can go in and take a look at the code. And the great thing about it is that everyone can contribute to the code as well.</p>
@@ -2498,7 +2330,7 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Sat, 05 Feb 2022 05:49:06 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/my-first-useful-python-script/</guid>
-      <description>&lt;p&gt;The best part of learning Python is trying to identify things in my life which I can automate by writing a script. Learning a programming language involves doing a lot of exercises that sometimes lack a connection with the real world. But after I decided to go for it, I am always on the lookout for projects. Not only for my job as a DevOps Engineer, but also for my private life. In this case, I needed to write a program that parses log files from a bot so I could get a total number of runs. You can have a look at the final result in my Diablo 2 &lt;a href=&#34;https://github.com/mischavandenburg/diablo2&#34;&gt;GitHub repo. &lt;/a&gt;&lt;/p&gt;</description>
+      <description>The best part of learning Python is trying to identify things in my life which I can automate by writing a script. Learning a programming language involves doing a lot of exercises that sometimes lack a connection with the real world. But after I decided to go for it, I am always on the lookout for projects. Not only for my job as a DevOps Engineer, but also for my private life.</description>
       <content:encoded><![CDATA[<p>The best part of learning Python is trying to identify things in my life which I can automate by writing a script. Learning a programming language involves doing a lot of exercises that sometimes lack a connection with the real world. But after I decided to go for it, I am always on the lookout for projects. Not only for my job as a DevOps Engineer, but also for my private life. In this case, I needed to write a program that parses log files from a bot so I could get a total number of runs. You can have a look at the final result in my Diablo 2 <a href="https://github.com/mischavandenburg/diablo2">GitHub repo. </a></p>
 <p>Like I wrote in my <a href="https://mischavandenburg.com/my-journey-into-devops-so-far/">journey into DevOps article</a>, I love automating games. Diablo 2 is a game that was originally released in 2002 and which recently was remastered. Diablo 2 always had a very strong presence of bots in the online game, and it didn’t take long before I also joined the ride.</p>
 <p>A few months after the remaster the first bots have started emerging as well. There is a a particularly good one written in Python which is an <a href="https://github.com/aeon0/botty">open source project</a>, which is a perfect opportunity for me to learn more about Python by trying to understand its code and solving problems. I was very excited to discover it because I was playing quite a few hours a week. Diablo 2 is a very grindy game and it takes a lot of time to find the needed gear. Now I could finally outsource my grinding to the computer again.</p>
@@ -2562,30 +2394,9 @@ Keep in mind that you don&rsquo;t specify the type of each property within an ob
       <pubDate>Tue, 01 Feb 2022 21:41:28 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/python-project-mad-libs/</guid>
-      <description>&lt;p&gt;I am currently working through the book &lt;a href=&#34;https://automatetheboringstuff.com&#34;&gt;Automate the Boring Stuff&lt;/a&gt; by Al Sweigart . I can already highly recommend it to anybody who is learning Python.&lt;/p&gt;
-&lt;p&gt;Chapter 9 is about reading and writing files, and there are two assignments at the end of the chapter. Here I’ll discuss my solution of the Mad Libs assignment.&lt;/p&gt;
-&lt;h3 id=&#34;here-is-the-full-assignment-text&#34;&gt;here is the full assignment text:&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Mad Libs
-Create a Mad Libs program that reads in text files and lets the user add their own text anywhere the word ADJECTIVE, NOUN, ADVERB, or VERB appears in the text file. For example, a text file may look like this:
-The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN was
-unaffected by these events.
-
-The program would find these occurrences and prompt the user to replace them.
-Enter an adjective:
-silly
-Enter a noun:
-chandelier
-Enter a verb:
-screamed
-Enter a noun:
-pickup truck
-
-The following text file would then be created:
-The silly panda walked to the chandelier and then screamed. A nearby pickup
-truck was unaffected by these events.
-
-The results should be printed to the screen and saved to a new text file.
-&lt;/code&gt;&lt;/pr</description>
+      <description>I am currently working through the book Automate the Boring Stuff by Al Sweigart . I can already highly recommend it to anybody who is learning Python.
+Chapter 9 is about reading and writing files, and there are two assignments at the end of the chapter. Here I’ll discuss my solution of the Mad Libs assignment.
+here is the full assignment text: Mad Libs Create a Mad Libs program that reads in text files and lets the user add their own text anywhere the word ADJECTIVE, NOUN, ADVERB, or VERB appears in the text file.</description>
       <content:encoded><![CDATA[<p>I am currently working through the book <a href="https://automatetheboringstuff.com">Automate the Boring Stuff</a> by Al Sweigart . I can already highly recommend it to anybody who is learning Python.</p>
 <p>Chapter 9 is about reading and writing files, and there are two assignments at the end of the chapter. Here I’ll discuss my solution of the Mad Libs assignment.</p>
 <h3 id="here-is-the-full-assignment-text">here is the full assignment text:</h3>

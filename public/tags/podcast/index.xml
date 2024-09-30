@@ -13,8 +13,7 @@
       <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/podcast-kipchoge-marathon-running/</guid>
-      <description>&lt;h1 id=&#34;what-i-learned-from-kipchoge-the-fastest-marathon-runner-in-the-world&#34;&gt;What I Learned from Kipchoge, the Fastest Marathon Runner in the World&lt;/h1&gt;
-&lt;p&gt;Kipchoge is not only a world-class athlete, but also a source of inspiration and wisdom for anyone who wants to improve their life. I recently listened to an interview with him on YouTube, and I was amazed by his insights on running, success, pain, discipline and happiness. Here are some of the key takeaways and a summary of what he shared.&lt;/p&gt;</description>
+      <description>What I Learned from Kipchoge, the Fastest Marathon Runner in the World Kipchoge is not only a world-class athlete, but also a source of inspiration and wisdom for anyone who wants to improve their life. I recently listened to an interview with him on YouTube, and I was amazed by his insights on running, success, pain, discipline and happiness. Here are some of the key takeaways and a summary of what he shared.</description>
       <content:encoded><![CDATA[<h1 id="what-i-learned-from-kipchoge-the-fastest-marathon-runner-in-the-world">What I Learned from Kipchoge, the Fastest Marathon Runner in the World</h1>
 <p>Kipchoge is not only a world-class athlete, but also a source of inspiration and wisdom for anyone who wants to improve their life. I recently listened to an interview with him on YouTube, and I was amazed by his insights on running, success, pain, discipline and happiness. Here are some of the key takeaways and a summary of what he shared.</p>
 <h2 id="preparation-and-planning-is-the-key">Preparation and Planning is the Key</h2>
@@ -54,7 +53,7 @@
       <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/podcast-fridman-andreessen-future-of-ai/</guid>
-      <description>&lt;p&gt;In this post, I want to share some of the highlights and insights from a recent podcast episode that I listened to. It was Lex Fridman Podcast #234, where Lex interviewed Marc Andreessen, the co-creator of Mosaic, the first widely used web browser, the co-founder of Netscape, and the co-founder of the legendary Silicon Valley venture capital firm Andreessen Horowitz. Marc is one of the most outspoken and visionary voices on the future of technology, and he recently wrote an article titled &amp;ldquo;Why AI Will Save the World&amp;rdquo; which I highly recommend.&lt;/p&gt;</description>
+      <description>In this post, I want to share some of the highlights and insights from a recent podcast episode that I listened to. It was Lex Fridman Podcast #234, where Lex interviewed Marc Andreessen, the co-creator of Mosaic, the first widely used web browser, the co-founder of Netscape, and the co-founder of the legendary Silicon Valley venture capital firm Andreessen Horowitz. Marc is one of the most outspoken and visionary voices on the future of technology, and he recently wrote an article titled &amp;ldquo;Why AI Will Save the World&amp;rdquo; which I highly recommend.</description>
       <content:encoded><![CDATA[<p>In this post, I want to share some of the highlights and insights from a recent podcast episode that I listened to. It was Lex Fridman Podcast #234, where Lex interviewed Marc Andreessen, the co-creator of Mosaic, the first widely used web browser, the co-founder of Netscape, and the co-founder of the legendary Silicon Valley venture capital firm Andreessen Horowitz. Marc is one of the most outspoken and visionary voices on the future of technology, and he recently wrote an article titled &ldquo;Why AI Will Save the World&rdquo; which I highly recommend.</p>
 <h2 id="the-internet-as-a-medium">The Internet as a Medium</h2>
 <p>One of the themes that Marc and Lex discussed was how the Internet is not just a network of computers, but a medium of communication and expression that incorporates and transcends all previous forms of media. Marc quoted Marshall McLuhan, who said that &ldquo;the content of each new medium is the old medium&rdquo;. For example, the content of movies was theater, the content of theater was written stories, and the content of written stories was spoken stories. Similarly, the content of the Internet is television, radio, books, essays, and every other form of prior media.</p>
@@ -87,14 +86,7 @@
       <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/podcast-azure-openai/</guid>
-      <description>&lt;h1 id=&#34;key-points-ive-learned&#34;&gt;Key points I&amp;rsquo;ve learned&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;LLM models are not malleable. A generative AI model is a static thing which took an enormous amount of compute to get it to the state that it is&lt;/li&gt;
-&lt;li&gt;For example ChatGPT 3.5, 4. They are as they are, they don&amp;rsquo;t change.&lt;/li&gt;
-&lt;li&gt;The models won&amp;rsquo;t remember your previous data. The only way to have a continuous interaction with the model is to feed all of the data into it every time.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
-&lt;p&gt;This podcast is about OpenAI with Dr. Linda Sharer, a senior cloud solution architect for data and AI at Microsoft. The main topic of the episode is Azure Open AI, a service that allows users to interact with powerful generative AI models using natural language. The guest explains the concepts and capabilities of Open AI, such as prompt engineering, one-shot and few-shot learning, fine-tuning, vectorization, and retrieval-augmented generation. She also discusses the design choices and challenges of building applications with Open AI, as well as the integration with other Azure services such as Cognitive Search and ML. The host and the co-host ask questions and share their experiences with using Open AI for various use cases, such as transcribing podcasts, generating code, and searching documents. The web page also provides links to the podcast website, Twitter account, and relevant resources on Open AI.&lt;/p&gt;</description>
+      <description>Key points I&amp;rsquo;ve learned LLM models are not malleable. A generative AI model is a static thing which took an enormous amount of compute to get it to the state that it is For example ChatGPT 3.5, 4. They are as they are, they don&amp;rsquo;t change. The models won&amp;rsquo;t remember your previous data. The only way to have a continuous interaction with the model is to feed all of the data into it every time.</description>
       <content:encoded><![CDATA[<h1 id="key-points-ive-learned">Key points I&rsquo;ve learned</h1>
 <ul>
 <li>LLM models are not malleable. A generative AI model is a static thing which took an enormous amount of compute to get it to the state that it is</li>
@@ -130,11 +122,10 @@
       <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/optimal-hydration/</guid>
-      <description>&lt;h1 id=&#34;hydration-notes-from-huberman-podcast&#34;&gt;Hydration Notes from Huberman Podcast&lt;/h1&gt;
-&lt;p&gt;For the first 10 hours of the day, consume 236ml for every hour awake&lt;/p&gt;
-&lt;p&gt;During exercise, follow Galpin equation: 2ml per kg of bodyweight every 15-20 minutes on average.&lt;/p&gt;
-&lt;p&gt;This does not mean you need to stop exercising and drink this amount. You can also consume it in a larger amount afterwards. It is recommended to drink during exercise though.&lt;/p&gt;
-&lt;p&gt;Use the normal recommendation to hydrate before exercise, this establishes a good baseline for heading into exercise.&lt;/p&gt;</description>
+      <description>Hydration Notes from Huberman Podcast For the first 10 hours of the day, consume 236ml for every hour awake
+During exercise, follow Galpin equation: 2ml per kg of bodyweight every 15-20 minutes on average.
+This does not mean you need to stop exercising and drink this amount. You can also consume it in a larger amount afterwards. It is recommended to drink during exercise though.
+Use the normal recommendation to hydrate before exercise, this establishes a good baseline for heading into exercise.</description>
       <content:encoded><![CDATA[<h1 id="hydration-notes-from-huberman-podcast">Hydration Notes from Huberman Podcast</h1>
 <p>For the first 10 hours of the day, consume 236ml for every hour awake</p>
 <p>During exercise, follow Galpin equation: 2ml per kg of bodyweight every 15-20 minutes on average.</p>
@@ -176,12 +167,8 @@
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/ai-does-not-grow-exponentially/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/EKba_awaAkk?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.&lt;/p&gt;</description>
+      <description>I watch the whole AI craze from the sideline: I am interested in it but I do not spend a lot of time investigating it. But I do pick up a few things here and there.
+In this Rich Roll podcast, Kevin Kelly argues that AI does not grow exponentially. It grows linearly, but not exponentially, because it is constrained by the infrastrucutre that we give it, and are able to give it.</description>
       <content:encoded><![CDATA[
 
     

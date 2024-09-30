@@ -13,12 +13,7 @@
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/iagjeLuxnMs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.</description>
       <content:encoded><![CDATA[
 
     
@@ -44,9 +39,9 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</guid>
-      <description>&lt;p&gt;Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.&lt;/p&gt;
-&lt;p&gt;I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.&lt;/p&gt;
-&lt;p&gt;For my new gig at work I&amp;rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault. Then it is a godsend to be able to install Obsidian and use that to interact with my second brain.&lt;/p&gt;</description>
+      <description>Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.
+I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.
+For my new gig at work I&amp;rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault.</description>
       <content:encoded><![CDATA[<p>Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.</p>
 <p>I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.</p>
 <p>For my new gig at work I&rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault. Then it is a godsend to be able to install Obsidian and use that to interact with my second brain.</p>
@@ -64,17 +59,10 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</guid>
-      <description>&lt;p&gt;Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!&lt;/p&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
-&lt;p&gt;202306271706&lt;/p&gt;</description>
+      <description>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!
+Links: 202306271706
+https://www.youtube.com/watch?v=l0B65FUfNBU
+[[AKS]] [[Kubernetes]] [[Neovim]] [[bicep]] [[coding]]</description>
       <content:encoded><![CDATA[<p>Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&rsquo;t disappointed!</p>
 
 
@@ -101,14 +89,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-bicep-bicepparam/</guid>
-      <description>&lt;p&gt;The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;More readable and editor friendly&lt;/li&gt;
-&lt;li&gt;Cleaner and less lines of code&lt;/li&gt;
-&lt;li&gt;VSCode integration&lt;/li&gt;
-&lt;li&gt;Quickly convert from JSON or template file using VSCode&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.&lt;/p&gt;</description>
+      <description>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:
+More readable and editor friendly Cleaner and less lines of code VSCode integration Quickly convert from JSON or template file using VSCode In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .</description>
       <content:encoded><![CDATA[<p>The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:</p>
 <ul>
 <li>More readable and editor friendly</li>
@@ -147,9 +129,9 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/my-first-go-program/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&amp;rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.&lt;/p&gt;
-&lt;p&gt;The best thing to do is to write little programs that solve a problem that you have.&lt;/p&gt;
-&lt;p&gt;One problem I needed to solve was converting sentences to title case in vim. There are plugins for this, or elaborate macros, but I thought this was a nice opportunity to write my first program from scratch. You can view the program here: &lt;a href=&#34;https://github.com/mischavandenburg/go/tree/main/projects/title&#34;&gt;my go repo&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&amp;rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.
+The best thing to do is to write little programs that solve a problem that you have.
+One problem I needed to solve was converting sentences to title case in vim.</description>
       <content:encoded><![CDATA[<p>I&rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.</p>
 <p>The best thing to do is to write little programs that solve a problem that you have.</p>
 <p>One problem I needed to solve was converting sentences to title case in vim. There are plugins for this, or elaborate macros, but I thought this was a nice opportunity to write my first program from scratch. You can view the program here: <a href="https://github.com/mischavandenburg/go/tree/main/projects/title">my go repo</a>.</p>
@@ -241,8 +223,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/newsboat-in-zenmode/</guid>
-      <description>&lt;p&gt;To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.&lt;/p&gt;
-&lt;p&gt;However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&amp;rsquo;ll notice that the text is always located in a middle column of the window, so you don&amp;rsquo;t have to move your neck while reading. At least, this is the case with well designed websites that serve text content.&lt;/p&gt;</description>
+      <description>To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.
+However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&amp;rsquo;ll notice that the text is always located in a middle column of the window, so you don&amp;rsquo;t have to move your neck while reading.</description>
       <content:encoded><![CDATA[<p>To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.</p>
 <p>However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&rsquo;ll notice that the text is always located in a middle column of the window, so you don&rsquo;t have to move your neck while reading. At least, this is the case with well designed websites that serve text content.</p>
 <p>Vim has a plugin that achieves this and I use it extensively. It is called Zenmode. In Neovim I use a similar plugin called No Neckpain.</p>
@@ -271,13 +253,11 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/pandoc-markdown-pdf-macos/</guid>
-      <description>&lt;p&gt;It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.&lt;/p&gt;
-&lt;p&gt;This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.&lt;/p&gt;
-&lt;p&gt;You need the pandoc and wkhtmltopdf packages.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install pandoc wkhtmltopdf 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To convert:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pandoc 00-zettelkasten/Fundamentals&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;of&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;Bicep.md --pdf-engine&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;wkhtmltopdf  -o /tmp/test.pdf
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.
+This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.
+You need the pandoc and wkhtmltopdf packages.
+brew install pandoc wkhtmltopdf To convert:
+pandoc 00-zettelkasten/Fundamentals\ of\ Bicep.md --pdf-engine=wkhtmltopdf -o /tmp/test.pdf This will output a pdf to my /tmp/ directory and it looks pretty good.</description>
       <content:encoded><![CDATA[<p>It happens that I want to share my notes with friends that just simply want a pdf instead of a markdown file.</p>
 <p>This morning I figured out a quick way to convert markdown to pdf on a M2 MacBook running MacOS Ventura.</p>
 <p>You need the pandoc and wkhtmltopdf packages.</p>
@@ -303,8 +283,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/trying-out-pandoc/</guid>
-      <description>&lt;p&gt;I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.&lt;/p&gt;
-&lt;p&gt;Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.&lt;/p&gt;</description>
+      <description>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.
+Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</description>
       <content:encoded><![CDATA[<p>I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&rsquo;m studying, and my entire blog is written in markdown.</p>
 <p>Some of the writing is done in Obsidian but I&rsquo;m moving away from Obsidian step by step. I&rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.</p>
 <p>I&rsquo;ve been using nvim-markdown for a while now and I was quite happy with it, but it was bothering me that <strong>bold text</strong> was not rendered in my editor.</p>
@@ -336,12 +316,12 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/surround-word-quotes-neovim/</guid>
-      <description>&lt;p&gt;[[Neovim]]&lt;/p&gt;
-&lt;p&gt;I find myself quoting words very often in vim when I&amp;rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.&lt;/p&gt;
-&lt;p&gt;I found this vim command:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ciw&amp;quot;&amp;quot;&amp;lt;Esc&amp;gt;P&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;c&amp;rdquo; deletes into register and enters insert mode. &amp;ldquo;iw&amp;rdquo; stands for &amp;ldquo;inner word&amp;rdquo; and selects the word.&lt;/p&gt;
-&lt;p&gt;So we delete the entire word and enter insert mode. Then we type two quotes, and we press &amp;ldquo;P&amp;rdquo; to paste the register (containing the word) before the cursor.&lt;/p&gt;</description>
+      <description>[[Neovim]]
+I find myself quoting words very often in vim when I&amp;rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.
+I found this vim command:
+ciw&amp;quot;&amp;quot;&amp;lt;Esc&amp;gt;P
+&amp;ldquo;c&amp;rdquo; deletes into register and enters insert mode. &amp;ldquo;iw&amp;rdquo; stands for &amp;ldquo;inner word&amp;rdquo; and selects the word.
+So we delete the entire word and enter insert mode.</description>
       <content:encoded><![CDATA[<p>[[Neovim]]</p>
 <p>I find myself quoting words very often in vim when I&rsquo;m writing bash code. I used to do this by simply navigating around the word and typing them, but I knew there had to be a better way.</p>
 <p>I found this vim command:</p>
@@ -361,10 +341,10 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/running-go-on-change/</guid>
-      <description>&lt;p&gt;I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.&lt;/p&gt;
-&lt;p&gt;You can use this command in a split window to keep running a Go file. It will update when you save the file.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;entr -c bash -c &amp;quot;go run main.go&amp;quot; &amp;lt;&amp;lt;&amp;lt; main.go&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Entr runs commands when files change. Here we are feeding it only one file, but you can also feed it a directory like so:&lt;/p&gt;</description>
+      <description>I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.
+You can use this command in a split window to keep running a Go file. It will update when you save the file.
+entr -c bash -c &amp;quot;go run main.go&amp;quot; &amp;lt;&amp;lt;&amp;lt; main.go
+Entr runs commands when files change. Here we are feeding it only one file, but you can also feed it a directory like so:</description>
       <content:encoded><![CDATA[<p>I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.</p>
 <p>You can use this command in a split window to keep running a Go file. It will update when you save the file.</p>
 <p><code>entr -c bash -c &quot;go run main.go&quot; &lt;&lt;&lt; main.go</code></p>
@@ -384,8 +364,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</guid>
-      <description>&lt;p&gt;I use the &lt;a href=&#34;https://mischavandenburg.com/zet/articles/obsidian-introduction/&#34;&gt;Obsidian&lt;/a&gt; app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched.&lt;/p&gt;
-&lt;p&gt;Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.&lt;/p&gt;</description>
+      <description>I use the Obsidian app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched.
+Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.</description>
       <content:encoded><![CDATA[<p>I use the <a href="/zet/articles/obsidian-introduction/">Obsidian</a> app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched.</p>
 <p>Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.</p>
 <p>To pass the -L flag, and some other flags, I added the following to my telescope config file:</p>
@@ -429,10 +409,10 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/ansible-lsp-fix/</guid>
-      <description>&lt;p&gt;When you have an Ansible language server installed, you might find that your yaml LSP will attach to your current buffer, but the ansible language server won&amp;rsquo;t attach.&lt;/p&gt;
-&lt;p&gt;You can fix this by setting the correct file type for the current buffer:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;:set ft=yaml.ansible&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;You could also adjust the Ansible LSP so it attaches to all yaml files. However, this does not work out for me, because I edit different yaml files for different purposes every day. Not all yaml files are to be used with Ansible.&lt;/p&gt;</description>
+      <description>When you have an Ansible language server installed, you might find that your yaml LSP will attach to your current buffer, but the ansible language server won&amp;rsquo;t attach.
+You can fix this by setting the correct file type for the current buffer:
+:set ft=yaml.ansible
+You could also adjust the Ansible LSP so it attaches to all yaml files. However, this does not work out for me, because I edit different yaml files for different purposes every day.</description>
       <content:encoded><![CDATA[<p>When you have an Ansible language server installed, you might find that your yaml LSP will attach to your current buffer, but the ansible language server won&rsquo;t attach.</p>
 <p>You can fix this by setting the correct file type for the current buffer:</p>
 <p><code>:set ft=yaml.ansible</code></p>
@@ -449,12 +429,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;As I alluded to in my &lt;a href=&#34;https://mischavandenburg.com/zet/articles/obsidian-introduction&#34;&gt;article about Obsidian,&lt;/a&gt; I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.&lt;/p&gt;</description>
+      <description>As I alluded to in my article about Obsidian, I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.
+Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.</description>
       <content:encoded><![CDATA[
 
     
@@ -488,8 +464,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Sun, 01 Jan 2023 09:11:57 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/kickstart-nvim/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been using neovim for over a year now, and I&amp;rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.&lt;/p&gt;
-&lt;p&gt;I started with an empty vanilla vim config and slowly added the plugins as I went along. Videos by content creators such as ThePrimagen were also helpful in getting inspiration on which plugins I might like for my setup. But this might not be suitable for everyone. I was only editing yaml files and writing simple Python scripts at the time, whereas you might be looking for an IDE experience out of the box.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ve been using neovim for over a year now, and I&amp;rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.
+I started with an empty vanilla vim config and slowly added the plugins as I went along.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ve been using neovim for over a year now, and I&rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.</p>
 <p>I started with an empty vanilla vim config and slowly added the plugins as I went along. Videos by content creators such as ThePrimagen were also helpful in getting inspiration on which plugins I might like for my setup. But this might not be suitable for everyone. I was only editing yaml files and writing simple Python scripts at the time, whereas you might be looking for an IDE experience out of the box.</p>
 <p>Recently I discovered <a href="https://github.com/nvim-lua/kickstart.nvim">kickstart.nvim</a> by neovim core maintainer TJdeVries.</p>
@@ -509,9 +485,8 @@ keyboard centered and efficient environment to do my best work.</p>
       <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/how-started-vim/</guid>
-      <description>&lt;p&gt;If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.&lt;/p&gt;
-&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;
-&lt;p&gt;The reason why I started to use vim is rather practical. When I was studying to become a Cloud Engineer, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs projects I did involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.&lt;/p&gt;</description>
+      <description>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.
+The Beginning The reason why I started to use vim is rather practical.</description>
       <content:encoded><![CDATA[<p>If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.</p>
 <h2 id="the-beginning">The Beginning</h2>
 <p>The reason why I started to use vim is rather practical. When I was studying to become a Cloud Engineer, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs projects I did involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.</p>

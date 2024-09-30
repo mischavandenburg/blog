@@ -13,8 +13,8 @@
       <pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/installing-packages-in-devcontainers-with-nix/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been obsessed with Devcontainers and Devpods recently, and I&amp;rsquo;m learning a lot about portable dev environments. This is truly the next level of config management and the future of dev environments in my opinion.&lt;/p&gt;
-&lt;p&gt;I relied on brew as my package manager, however, I ran into problems when I wanted to run my Linux dev containers on my M2 Silicon Mac. Linux brew is not supported on ARM architecture.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;ve been obsessed with Devcontainers and Devpods recently, and I&amp;rsquo;m learning a lot about portable dev environments. This is truly the next level of config management and the future of dev environments in my opinion.
+I relied on brew as my package manager, however, I ran into problems when I wanted to run my Linux dev containers on my M2 Silicon Mac. Linux brew is not supported on ARM architecture.</description>
       <content:encoded><![CDATA[<p>I&rsquo;ve been obsessed with Devcontainers and Devpods recently, and I&rsquo;m learning a lot about portable dev environments. This is truly the next level of config management and the future of dev environments in my opinion.</p>
 <p>I relied on brew as my package manager, however, I ran into problems when I wanted to run my Linux dev containers on my M2 Silicon Mac. Linux brew is not supported on ARM architecture.</p>
 <h1 id="use-case">Use case</h1>

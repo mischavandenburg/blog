@@ -13,8 +13,8 @@
       <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-mastodon-post/</guid>
-      <description>&lt;p&gt;This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my &lt;a href=&#34;https://github.com/mischavandenburg/twitter-cli&#34;&gt;twitter cli&lt;/a&gt; I wrote a while ago.&lt;/p&gt;
-&lt;p&gt;It was fun to write some Go again, it has been far too long. I&amp;rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&amp;rsquo;t been doing any projects at home that required programming. But recently I started up my personal blog and completely re-architected my social media setup.&lt;/p&gt;</description>
+      <description>This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my twitter cli I wrote a while ago.
+It was fun to write some Go again, it has been far too long. I&amp;rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&amp;rsquo;t been doing any projects at home that required programming.</description>
       <content:encoded><![CDATA[<p>This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my <a href="https://github.com/mischavandenburg/twitter-cli">twitter cli</a> I wrote a while ago.</p>
 <p>It was fun to write some Go again, it has been far too long. I&rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&rsquo;t been doing any projects at home that required programming. But recently I started up my personal blog and completely re-architected my social media setup.</p>
 <p>I&rsquo;m going to post all of my personal stuff on Mastodon from here on out, not on X. However, I still wanted to post my tech content on Mastodon as well and I needed a tool to help me with that.</p>
@@ -32,12 +32,8 @@
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_-D1Qz6jtEU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;In this video, I will walk you through the following steps:&lt;/p&gt;</description>
+      <description>In this video, I will walk you through the following steps:
+Set up a repo in Azure DevOps with MkDocs files Set up a Static Web App in Azure portal and link it to the repo Configure the Azure DevOps pipeline for MkDocs deployment Configure a custom theme for the website Demonstrate the pull request workflow for updating the docs By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps.</description>
       <content:encoded><![CDATA[
 
     
@@ -78,39 +74,10 @@
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</guid>
-      <description>&lt;p&gt;In the Azure portal you can&amp;rsquo;t select multiple resource groups for deletion.&lt;/p&gt;
-&lt;p&gt;I have a sponsored subscription to play around in which I sometimes wish to clean completely.&lt;/p&gt;
-&lt;p&gt;I wrote this script to delete all resource groups using bash.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# script to delete all resource groups in a subscription using Azure CLI&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# get the current subscription name to confirm&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;subscription&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;az account show --query name -o tsv&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Use this script with caution!&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;You are about to delete all resource groups in the subscription: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$subscription&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# prompt for confirmation&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;Are you sure? (y/n) &amp;#34;&lt;/span&gt; will_delete
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$will_delete&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Yy&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;* &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Deleting resource groups...&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;groups&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;az group list --query &lt;span class=&#34;s2&#34;&gt;&amp;#34;[].name&amp;#34;&lt;/span&gt; -o tsv&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;# Loop through each group name and delete it&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; group in &lt;span class=&#34;nv&#34;&gt;$groups&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		az group delete --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$group&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; --yes --no-wait
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;All resource groups have been deleted.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Exiting without deleting any resource groups.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Probably wise.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pr</description>
+      <description>In the Azure portal you can&amp;rsquo;t select multiple resource groups for deletion.
+I have a sponsored subscription to play around in which I sometimes wish to clean completely.
+I wrote this script to delete all resource groups using bash.
+#!/bin/bash # script to delete all resource groups in a subscription using Azure CLI # get the current subscription name to confirm subscription=$(az account show --query name -o tsv) echo &amp;#34;Use this script with caution!</description>
       <content:encoded><![CDATA[<p>In the Azure portal you can&rsquo;t select multiple resource groups for deletion.</p>
 <p>I have a sponsored subscription to play around in which I sometimes wish to clean completely.</p>
 <p>I wrote this script to delete all resource groups using bash.</p>
@@ -154,7 +121,7 @@
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/choosing-a-cloud-provider-and-specialization/</guid>
-      <description>&lt;p&gt;As a DevOps Engineer or Cloud Native Engineer, I think it’s important to specialize in one cloud provider in the beginning of your career. Specializing allows you to gain deep knowledge and expertise in the specific tools and services related to that cloud provider, making you a valuable asset to any company using that provider. Although cloud computing is similar in essence no matter which provider you choose, each cloud provider has its own vocabulary and way of structuring things.&lt;/p&gt;</description>
+      <description>As a DevOps Engineer or Cloud Native Engineer, I think it’s important to specialize in one cloud provider in the beginning of your career. Specializing allows you to gain deep knowledge and expertise in the specific tools and services related to that cloud provider, making you a valuable asset to any company using that provider. Although cloud computing is similar in essence no matter which provider you choose, each cloud provider has its own vocabulary and way of structuring things.</description>
       <content:encoded><![CDATA[<p>As a DevOps Engineer or Cloud Native Engineer, I think it’s important to specialize in one cloud provider in the beginning of your career. Specializing allows you to gain deep knowledge and expertise in the specific tools and services related to that cloud provider, making you a valuable asset to any company using that provider. Although cloud computing is similar in essence no matter which provider you choose, each cloud provider has its own vocabulary and way of structuring things.</p>
 <p>After my first year as a DevOps Engineer I was still trying to figure out which one to choose and which one would suit me best. With the rapid pace of innovation in the cloud computing industry, it can be challenging to stay up-to-date with the latest developments and features for multiple providers. I tried to keep up with the developments for each provider and tried to be a broad professional who could work with all of them. However, I think it is best to specialize early in your career, and then you can learn a different one after you have gained some significant experience with your first one.</p>
 <p>After several insightful conversations with my colleagues, and after working with Azure for a year as a consultant, I decided to go all-in on Azure, and it has been a liberating experience so far. By focusing solely on Azure, I am able to fully immerse myself in their ecosystem and gain a deep understanding of their tools and services. I feel I have a sense of direction now, and I can limit the content I consume and the news I read to this one particular ecosystem only. And that feels like a relief to me.</p>
@@ -189,20 +156,8 @@
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Finish deploying keyvault using pipeline&lt;/li&gt;
-&lt;li&gt;Get the random name generation to work&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Subscriptions need to be registered with resource providers, apparently&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;</description>
+      <description>Finish deploying keyvault using pipeline Get the random name generation to work Lessons Learned Subscriptions need to be registered with resource providers, apparently https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli
+acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline Achieved Setting up connection between pipeline and Azure subscription Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources) Learned about provider registrations Made progress on creating unique names for resources Successfully deployed new resource group and key vault from the pipeline Next time: Look into random string creation with utcNow</description>
       <content:encoded><![CDATA[
 
     
@@ -251,24 +206,8 @@
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Write KeyVault template&lt;/li&gt;
-&lt;li&gt;Write pipeline code&lt;/li&gt;
-&lt;li&gt;set up Azure DevOps pipeline&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Always make sure to use &lt;code&gt;az deployment group&lt;/code&gt; instead of &lt;code&gt;az group deployment&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Because it has older Bicep version and will be deprecated&lt;/li&gt;
-&lt;li&gt;Make sure to be in correct Directory to be able to sync subscriptions for service connection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
-&lt;p&gt;202306302206&lt;/p&gt;</description>
+      <description>Write KeyVault template Write pipeline code set up Azure DevOps pipeline Lessons Learned Always make sure to use az deployment group instead of az group deployment Because it has older Bicep version and will be deprecated Make sure to be in correct Directory to be able to sync subscriptions for service connection Links: 202306302206
+https://youtu.be/WnA8V3uq7P8</description>
       <content:encoded><![CDATA[
 
     
@@ -300,10 +239,8 @@
       <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</guid>
-      <description>&lt;h1 id=&#34;cni&#34;&gt;CNI?&lt;/h1&gt;
-&lt;p&gt;CNI stands for Container Network Interface. It allows communication between pods and services.&lt;/p&gt;
-&lt;h2 id=&#34;current-azure-cni-limitations&#34;&gt;Current Azure CNI limitations&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s take a practical example. We have an enterprise environment where a large network is utilized, spanning multiple clouds and on-prem infrastructure hubs. To enable seamless communication across these sections, they must belong to the same network. As a result, specific IP address ranges are assigned to each section, with AWS, On-Prem A, and Azure each having their respective ranges.&lt;/p&gt;</description>
+      <description>CNI? CNI stands for Container Network Interface. It allows communication between pods and services.
+Current Azure CNI limitations Let&amp;rsquo;s take a practical example. We have an enterprise environment where a large network is utilized, spanning multiple clouds and on-prem infrastructure hubs. To enable seamless communication across these sections, they must belong to the same network. As a result, specific IP address ranges are assigned to each section, with AWS, On-Prem A, and Azure each having their respective ranges.</description>
       <content:encoded><![CDATA[<h1 id="cni">CNI?</h1>
 <p>CNI stands for Container Network Interface. It allows communication between pods and services.</p>
 <h2 id="current-azure-cni-limitations">Current Azure CNI limitations</h2>
@@ -347,17 +284,8 @@
       <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/deploy-draft-azure/</guid>
-      <description>&lt;p&gt;Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&amp;rsquo;m curious to see how far Microsoft will take this!&lt;/p&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/PqhdX8-SZYw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
-&lt;p&gt;202306092006&lt;/p&gt;</description>
+      <description>Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&amp;rsquo;m curious to see how far Microsoft will take this!
+Links: 202306092006</description>
       <content:encoded><![CDATA[<p>Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&rsquo;m curious to see how far Microsoft will take this!</p>
 
 
@@ -378,8 +306,8 @@
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/ups-and-downs-of-devops-engineer/</guid>
-      <description>&lt;p&gt;Next winter I&amp;rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&amp;rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.&lt;/p&gt;
-&lt;p&gt;Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&amp;rsquo;t like. And now the first phases of overwhelm are confidently behind me, I&amp;rsquo;m starting to learn the things I prefer doing over others.&lt;/p&gt;</description>
+      <description>Next winter I&amp;rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&amp;rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.
+Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&amp;rsquo;t like.</description>
       <content:encoded><![CDATA[<p>Next winter I&rsquo;ll be entering my third year as a DevOps Engineer. When you first break into this field there is an overwhelming amount of things to learn. Frankly, this will always be the case. But I&rsquo;m reaching a point where I have gained experience with most of the main areas and tooling, and I can start seeing the relations between them and how they compare to one another.</p>
 <p>Just like any other job or activity, there are things that you like and that suit you well, and there are things that you don&rsquo;t like. And now the first phases of overwhelm are confidently behind me, I&rsquo;m starting to learn the things I prefer doing over others.</p>
 <p>Being a DevOps Engineer does not mean you get to write code all day. I&rsquo;m currently working in an organization where we&rsquo;re not working fully DevOps yet. Rather than deploying many times in small increments, we are still using patching windows. Managing infrastructure in this way means you&rsquo;ll need to communicate with teams to schedule the patching and submit changes to the approval board. It can involve a lot of emailing and talking back and forth. And sometimes things go wrong and everything needs to be rescheduled again. Although it is valuable experience, and I certainly have the communication skills to handle these kinds of situations, I&rsquo;m learning that I lean more towards the dev side of things.</p>
@@ -401,18 +329,13 @@
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</guid>
-      <description>&lt;p&gt;I found &lt;a href=&#34;https://youtu.be/gyjRriOyw-k&#34;&gt;an excellent video&lt;/a&gt; by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.&lt;/p&gt;
-&lt;h1 id=&#34;cloud&#34;&gt;Cloud&lt;/h1&gt;
-&lt;p&gt;These are primarily &lt;em&gt;cloud services&lt;/em&gt;. The external cloud.&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Something as a Service&amp;rdquo;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Amazon&lt;/li&gt;
-&lt;li&gt;Azure&lt;/li&gt;
-&lt;li&gt;GCP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;cloud-native&#34;&gt;Cloud Native&lt;/h1&gt;
-&lt;p&gt;This is Cloud Native: &lt;a href=&#34;https://landscape.cncf.io/&#34;&gt;The CNCF Landscape&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.&lt;/p&gt;</description>
+      <description>I found an excellent video by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.
+Cloud These are primarily cloud services. The external cloud.
+&amp;ldquo;Something as a Service&amp;rdquo;.
+Amazon Azure GCP Cloud Native This is Cloud Native: The CNCF Landscape
+Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.
+Computing Edge Computing
+High Performance Computing</description>
       <content:encoded><![CDATA[<p>I found <a href="https://youtu.be/gyjRriOyw-k">an excellent video</a> by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.</p>
 <h1 id="cloud">Cloud</h1>
 <p>These are primarily <em>cloud services</em>. The external cloud.</p>
@@ -520,9 +443,9 @@
       <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/docker-kubernetes-on-mac-m2/</guid>
-      <description>&lt;p&gt;The past few days I&amp;rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.&lt;/p&gt;
-&lt;p&gt;Unfortunately you can&amp;rsquo;t just run &lt;code&gt;brew install docker&lt;/code&gt; and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.&lt;/p&gt;
-&lt;p&gt;Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&amp;rsquo;t tried any of the other alternatives because I found something better.&lt;/p&gt;</description>
+      <description>The past few days I&amp;rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.
+Unfortunately you can&amp;rsquo;t just run brew install docker and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.
+Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&amp;rsquo;t tried any of the other alternatives because I found something better.</description>
       <content:encoded><![CDATA[<p>The past few days I&rsquo;ve been trying out a few options to run Docker containers and a Kubernetes clusters on my new MacBook Pro M2.</p>
 <p>Unfortunately you can&rsquo;t just run <code>brew install docker</code> and expect it to work. Additionally, Docker desktop requires that you purchase a license if you use it for work purposes.</p>
 <p>Minikube works fine as well, but the networking driver for qemu is not fully supported yet, and I haven&rsquo;t tried any of the other alternatives because I found something better.</p>
@@ -556,9 +479,9 @@
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/azure-personal-access-tokens/</guid>
-      <description>&lt;p&gt;The PAT (Personal Access Token) often comes up during practice tests for the AZ-400.&lt;/p&gt;
-&lt;p&gt;One way to remember when to use a PAT is that these are only for authenticating &lt;strong&gt;into&lt;/strong&gt; Azure DevOps, never to external services.&lt;/p&gt;
-&lt;p&gt;For example, you might get a question on connecting your Azure DevOps project with a GitHub account from Azure DevOps, and PAT will show up as one of the alternative answers. By remembering that PATs are only for authenticating into ADO, you can elminate this alternative, and make your choice easier.&lt;/p&gt;</description>
+      <description>The PAT (Personal Access Token) often comes up during practice tests for the AZ-400.
+One way to remember when to use a PAT is that these are only for authenticating into Azure DevOps, never to external services.
+For example, you might get a question on connecting your Azure DevOps project with a GitHub account from Azure DevOps, and PAT will show up as one of the alternative answers. By remembering that PATs are only for authenticating into ADO, you can elminate this alternative, and make your choice easier.</description>
       <content:encoded><![CDATA[<p>The PAT (Personal Access Token) often comes up during practice tests for the AZ-400.</p>
 <p>One way to remember when to use a PAT is that these are only for authenticating <strong>into</strong> Azure DevOps, never to external services.</p>
 <p>For example, you might get a question on connecting your Azure DevOps project with a GitHub account from Azure DevOps, and PAT will show up as one of the alternative answers. By remembering that PATs are only for authenticating into ADO, you can elminate this alternative, and make your choice easier.</p>
@@ -573,9 +496,9 @@
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/docker-to-azure-vm/</guid>
-      <description>&lt;p&gt;I wanted to build an application from a Dockerfile and deploy it to a VM. I used a default Svelte setup as an example app.&lt;/p&gt;
-&lt;p&gt;Naturally, Azure prefers that you deploy containers to services such as Azure Container Instances or App Services, so they don&amp;rsquo;t provide modules for the pipelines to deploy to docker servers as far as I could tell.&lt;/p&gt;
-&lt;p&gt;I searched for a long time but I could not find a solution. In the end I just ran shell commands from the pipeline to run the container on on the server.&lt;/p&gt;</description>
+      <description>I wanted to build an application from a Dockerfile and deploy it to a VM. I used a default Svelte setup as an example app.
+Naturally, Azure prefers that you deploy containers to services such as Azure Container Instances or App Services, so they don&amp;rsquo;t provide modules for the pipelines to deploy to docker servers as far as I could tell.
+I searched for a long time but I could not find a solution.</description>
       <content:encoded><![CDATA[<p>I wanted to build an application from a Dockerfile and deploy it to a VM. I used a default Svelte setup as an example app.</p>
 <p>Naturally, Azure prefers that you deploy containers to services such as Azure Container Instances or App Services, so they don&rsquo;t provide modules for the pipelines to deploy to docker servers as far as I could tell.</p>
 <p>I searched for a long time but I could not find a solution. In the end I just ran shell commands from the pipeline to run the container on on the server.</p>
@@ -595,13 +518,12 @@
       <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/azure-pipelines-deploy-vm/</guid>
-      <description>&lt;p&gt;To reach a VM from Azure Pipelines, you need to set up an environment.&lt;/p&gt;
-&lt;p&gt;Create your Linux VM in Azure.&lt;/p&gt;
-&lt;p&gt;In Azure DevOps, click envirnoments, new, and select the Virtual Machine option.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mischavandenburg.com/env1.png&#34; type=&#34;&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;
-&lt;p&gt;A command is generated for you. SSH into your VM and run the command.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mischavandenburg.com/env2.png&#34; type=&#34;&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;
-&lt;p&gt;Now the VM should show up under environments in Azure DevOps.&lt;/p&gt;</description>
+      <description>To reach a VM from Azure Pipelines, you need to set up an environment.
+Create your Linux VM in Azure.
+In Azure DevOps, click envirnoments, new, and select the Virtual Machine option.
+A command is generated for you. SSH into your VM and run the command.
+Now the VM should show up under environments in Azure DevOps.
+Set up a repo with an azure-pipelines.yml with these contents to test. under environment, set the same name as you did in Azure DevOps for your environment.</description>
       <content:encoded><![CDATA[<p>To reach a VM from Azure Pipelines, you need to set up an environment.</p>
 <p>Create your Linux VM in Azure.</p>
 <p>In Azure DevOps, click envirnoments, new, and select the Virtual Machine option.</p>
@@ -638,9 +560,9 @@
       <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/terraform-linux-vm/</guid>
-      <description>&lt;p&gt;For a project I&amp;rsquo;m setting up my environment with Terraform.&lt;/p&gt;
-&lt;p&gt;I used &lt;a href=&#34;https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform&#34;&gt;this tutorial&lt;/a&gt;, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.&lt;/p&gt;
-&lt;p&gt;I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;&lt;/p&gt;</description>
+      <description>For a project I&amp;rsquo;m setting up my environment with Terraform.
+I used this tutorial, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.
+I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at ~/.</description>
       <content:encoded><![CDATA[<p>For a project I&rsquo;m setting up my environment with Terraform.</p>
 <p>I used <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform">this tutorial</a>, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.</p>
 <p>I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at <code>~/.ssh/id_rsa.pub</code></p>
@@ -663,9 +585,9 @@
       <pubDate>Mon, 02 Jan 2023 21:00:11 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/starting-a-project/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m starting a project with a friend. Developing an application. We make a good team, he&amp;rsquo;s great at coding and knows the backend too.&lt;/p&gt;
-&lt;p&gt;He&amp;rsquo;ll do the development, I&amp;rsquo;m in charge of hosting. We&amp;rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&amp;rsquo;ve learned in my recently obtained &lt;a href=&#34;https://mischavandenburg.com/zet/articles/az-104-study-guide/&#34;&gt;AZ-104&lt;/a&gt; Azure Administrator certification.&lt;/p&gt;
-&lt;p&gt;Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application. I&amp;rsquo;ll set up a full CI/CD pipeline with testing in a secure manner. Credentials stored in an Azure key vault and images pushed to a private registry.&lt;/p&gt;</description>
+      <description>I&amp;rsquo;m starting a project with a friend. Developing an application. We make a good team, he&amp;rsquo;s great at coding and knows the backend too.
+He&amp;rsquo;ll do the development, I&amp;rsquo;m in charge of hosting. We&amp;rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&amp;rsquo;ve learned in my recently obtained AZ-104 Azure Administrator certification.
+Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application.</description>
       <content:encoded><![CDATA[<p>I&rsquo;m starting a project with a friend. Developing an application. We make a good team, he&rsquo;s great at coding and knows the backend too.</p>
 <p>He&rsquo;ll do the development, I&rsquo;m in charge of hosting. We&rsquo;re setting everything up in Azure DevOps, so it is a great way to practice my Azure skills and apply the things I&rsquo;ve learned in my recently obtained <a href="/zet/articles/az-104-study-guide/">AZ-104</a> Azure Administrator certification.</p>
 <p>Even though it is a small scale hobby project, I still plan to approach it as if it was an enterprise production application. I&rsquo;ll set up a full CI/CD pipeline with testing in a secure manner. Credentials stored in an Azure key vault and images pushed to a private registry.</p>
@@ -679,9 +601,8 @@
       <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
-      <description>&lt;p&gt;When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;
-&lt;h1 id=&#34;virtualization&#34;&gt;Virtualization&lt;/h1&gt;
-&lt;p&gt;To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.&lt;/p&gt;</description>
+      <description>When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.
+Virtualization To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.</description>
       <content:encoded><![CDATA[<p>When you learn about DevOps, you will come across the concept of a container early on. This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
 <h1 id="virtualization">Virtualization</h1>
 <p>To understand containers, we need to understand virtualization. Virtualization is the process of creating &ldquo;fake computers&rdquo; or &ldquo;virtual computers&rdquo; on a physical computer.</p>
@@ -713,11 +634,9 @@
       <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
-      <description>&lt;h1 id=&#34;tldr&#34;&gt;TLDR&lt;/h1&gt;
-&lt;p&gt;It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck:
-&lt;a href=&#34;https://github.com/mischavandenburg/az-104-azure-administrator&#34;&gt;GitHub repo&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.&lt;/p&gt;</description>
+      <description>TLDR It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck: GitHub repo
+Introduction When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.
+That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications.</description>
       <content:encoded><![CDATA[<h1 id="tldr">TLDR</h1>
 <p>It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck:
 <a href="https://github.com/mischavandenburg/az-104-azure-administrator">GitHub repo</a></p>
@@ -760,8 +679,8 @@
       <pubDate>Sat, 24 Dec 2022 13:49:55 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</guid>
-      <description>&lt;p&gt;This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.&lt;/p&gt;
-&lt;p&gt;My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure. I also wanted to try out ArgoCD and learn more about GitOps.&lt;/p&gt;</description>
+      <description>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.
+My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure.</description>
       <content:encoded><![CDATA[<p>This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.</p>
 <p>My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure. I also wanted to try out ArgoCD and learn more about GitOps.</p>
 <p>The application is a simple web app that I wrote which displays a quote in the browser:</p>
@@ -863,9 +782,8 @@
       <pubDate>Sun, 18 Dec 2022 00:55:47 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/identity/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?&lt;/p&gt;
-&lt;p&gt;This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;</description>
+      <description>Introduction Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?
+This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</description>
       <content:encoded><![CDATA[<h1 id="introduction">Introduction</h1>
 <p>Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&rsquo;s account?</p>
 <p>This is a &ldquo;Mischa Explains&rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.</p>
@@ -909,10 +827,10 @@
       <pubDate>Fri, 02 Dec 2022 20:45:46 +0100</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/nav-podcast/</guid>
-      <description>&lt;p&gt;An interesting podcast episode describing the system that runs Norway&amp;rsquo;s welfare payments. It was interesting to hear that they focus on open source and that everything runs one one big kubernetes cluster.&lt;/p&gt;
-&lt;p&gt;It was also very inspiring to hear that they went from 4 nightly deployments a year to 1700 deployments a week.&lt;/p&gt;
-&lt;p&gt;Link to the podcast episode:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://changelog.com/shipit/78&#34;&gt;The system that runs Norway&amp;rsquo;s welfare payments&lt;/a&gt;&lt;/p&gt;</description>
+      <description>An interesting podcast episode describing the system that runs Norway&amp;rsquo;s welfare payments. It was interesting to hear that they focus on open source and that everything runs one one big kubernetes cluster.
+It was also very inspiring to hear that they went from 4 nightly deployments a year to 1700 deployments a week.
+Link to the podcast episode:
+The system that runs Norway&amp;rsquo;s welfare payments</description>
       <content:encoded><![CDATA[<p>An interesting podcast episode describing the system that runs Norway&rsquo;s welfare payments. It was interesting to hear that they focus on open source and that everything runs one one big kubernetes cluster.</p>
 <p>It was also very inspiring to hear that they went from 4 nightly deployments a year to 1700 deployments a week.</p>
 <p>Link to the podcast episode:</p>
@@ -926,9 +844,7 @@
       <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/unicorn-project/</guid>
-      <description>&lt;p&gt;
-  &lt;img loading=&#34;lazy&#34; src=&#34;https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg&#34; alt=&#34;Unicorn Project&#34;  /&gt;&lt;/p&gt;
-&lt;p&gt;This book is the sequel to &lt;a href=&#34;https://mischavandenburg.com/zet/articles/phoenix-project&#34;&gt;the Phoenix project&lt;/a&gt;. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet. Phoenix will enable it to generate targeted marketing campaigns from the data when it&amp;rsquo;s finished.&lt;/p&gt;</description>
+      <description>This book is the sequel to the Phoenix project. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet.</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg" alt="Unicorn Project"  /></p>
 <p>This book is the sequel to <a href="/zet/articles/phoenix-project">the Phoenix project</a>. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet. Phoenix will enable it to generate targeted marketing campaigns from the data when it&rsquo;s finished.</p>
@@ -960,10 +876,8 @@
       <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/phoenix-project/</guid>
-      <description>&lt;p&gt;
-  &lt;img loading=&#34;lazy&#34; src=&#34;https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/914-sUgELZL.jpg&#34; alt=&#34;Phoenix Project&#34;  /&gt;&lt;/p&gt;
-&lt;p&gt;When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &amp;ldquo;the old way&amp;rdquo; of doing things and the merits of implementing DevOps principles.&lt;/p&gt;
-&lt;p&gt;I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.&lt;/p&gt;</description>
+      <description>When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &amp;ldquo;the old way&amp;rdquo; of doing things and the merits of implementing DevOps principles.
+I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.</description>
       <content:encoded><![CDATA[<p>
   <img loading="lazy" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/914-sUgELZL.jpg" alt="Phoenix Project"  /></p>
 <p>When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &ldquo;the old way&rdquo; of doing things and the merits of implementing DevOps principles.</p>
@@ -1009,7 +923,7 @@
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/articles/cka-tips/</guid>
-      <description>&lt;p&gt;I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.&lt;/p&gt;</description>
+      <description>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily.</description>
       <content:encoded><![CDATA[<p>I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.</p>
 <h3 id="my-preparation">My preparation</h3>
 <ul>
@@ -1062,8 +976,9 @@
       <pubDate>Tue, 19 Jul 2022 18:01:26 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/how-to-upgrade-java-and-jenkins-on-ubuntu-18-04/</guid>
-      <description>&lt;p&gt;Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 &lt;a href=&#34;https://www.jenkins.io/blog/2022/06/28/require-java-11/&#34;&gt;will be required to run Jenkins&lt;/a&gt;. Also, the upcoming LTS release will require Java 11.&lt;/p&gt;
-&lt;p&gt;This means that I also needed to update Java on our Jenkins servers. Here are the steps that I did to perform the Jenkins and Java upgrade.&lt;/p&gt;</description>
+      <description>Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 will be required to run Jenkins. Also, the upcoming LTS release will require Java 11.
+This means that I also needed to update Java on our Jenkins servers. Here are the steps that I did to perform the Jenkins and Java upgrade.
+SSH into the server and stop the service.</description>
       <content:encoded><![CDATA[<p>Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 <a href="https://www.jenkins.io/blog/2022/06/28/require-java-11/">will be required to run Jenkins</a>. Also, the upcoming LTS release will require Java 11.</p>
 <p>This means that I also needed to update Java on our Jenkins servers. Here are the steps that I did to perform the Jenkins and Java upgrade.</p>
 <p>SSH into the server and stop the service. Then get the latest upgrades for your server, which is good practice:</p>
@@ -1119,7 +1034,7 @@
       <pubDate>Mon, 04 Jul 2022 20:04:33 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/5-reasons-why-i-changed-my-career-to-it-in-my-thirties/</guid>
-      <description>&lt;p&gt;In this post, I’d like to share the five main reasons why I changed my career to IT in my thirties. Making a career change can be daunting, especially when you are past your twenties, and employers can get more skeptical of hiring and training you. However, when I passed my twenties and became more serious and intentional about my life and career, I decided to take the plunge and hope for the best. These are listed in no particular order.&lt;/p&gt;</description>
+      <description>In this post, I’d like to share the five main reasons why I changed my career to IT in my thirties. Making a career change can be daunting, especially when you are past your twenties, and employers can get more skeptical of hiring and training you. However, when I passed my twenties and became more serious and intentional about my life and career, I decided to take the plunge and hope for the best.</description>
       <content:encoded><![CDATA[<p>In this post, I’d like to share the five main reasons why I changed my career to IT in my thirties. Making a career change can be daunting, especially when you are past your twenties, and employers can get more skeptical of hiring and training you. However, when I passed my twenties and became more serious and intentional about my life and career, I decided to take the plunge and hope for the best. These are listed in no particular order.</p>
 <h2 id="1-job-opportunities">#1 job opportunities</h2>
 <p>IT has always been a field with many job opportunities, and with the current movements of digitalization and automation, there is no sign that it will slow down.</p>
@@ -1150,9 +1065,9 @@
       <pubDate>Sun, 30 Jan 2022 16:20:24 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/docker-lemp-stack-deployed-with-ansible/</guid>
-      <description>&lt;p&gt;In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.&lt;/p&gt;
-&lt;p&gt;I wrote a playbook that installs Docker and deploys a fully containerised LEMP stack on a virtual machine.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/mischavandenburg/lemp_docker_ansible&#34;&gt;You can have a look at the Github repo with the result here. &lt;/a&gt;&lt;/p&gt;</description>
+      <description>In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.
+I wrote a playbook that installs Docker and deploys a fully containerised LEMP stack on a virtual machine.
+You can have a look at the Github repo with the result here.</description>
       <content:encoded><![CDATA[<p>In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.</p>
 <p>I wrote a playbook that installs Docker and deploys a fully containerised LEMP stack on a virtual machine.</p>
 <p><a href="https://github.com/mischavandenburg/lemp_docker_ansible">You can have a look at the Github repo with the result here. </a></p>
@@ -1238,7 +1153,7 @@
       <pubDate>Fri, 28 Jan 2022 08:56:38 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/my-journey-into-devops-so-far/</guid>
-      <description>&lt;p&gt;In 2021 I had reached a certain stage in my life where I had the liberty to make a choice. I was 31 years old and had just finished an important chapter of my life, and was ready to begin a new one. After thinking about where I wanted to steer my professional career, I decided to follow my passion for programming and automation and attempt to make a career out of my interests in tech and IT.&lt;/p&gt;</description>
+      <description>In 2021 I had reached a certain stage in my life where I had the liberty to make a choice. I was 31 years old and had just finished an important chapter of my life, and was ready to begin a new one. After thinking about where I wanted to steer my professional career, I decided to follow my passion for programming and automation and attempt to make a career out of my interests in tech and IT.</description>
       <content:encoded><![CDATA[<p>In 2021 I had reached a certain stage in my life where I had the liberty to make a choice. I was 31 years old and had just finished an important chapter of my life, and was ready to begin a new one. After thinking about where I wanted to steer my professional career, I decided to follow my passion for programming and automation and attempt to make a career out of my interests in tech and IT.</p>
 <p>I was in a fortunate situation, because there were large shortages of people on the IT job market in The Netherlands. Consequently, employers were much more willing to train their employees to perform the roles that they required to fulfill.</p>
 <h2 id="bots-and-scripts">Bots and Scripts</h2>

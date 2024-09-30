@@ -13,11 +13,9 @@
       <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/go-struct-python-class/</guid>
-      <description>&lt;p&gt;The Tour of Go is very clear:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Go does not have classes.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.&lt;/p&gt;</description>
+      <description>The Tour of Go is very clear:
+Go does not have classes.
+One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.</description>
       <content:encoded><![CDATA[<p>The Tour of Go is very clear:</p>
 <blockquote>
 <p>Go does not have classes.</p>

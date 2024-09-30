@@ -13,7 +13,7 @@
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</guid>
-      <description>&lt;p&gt;I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.&lt;/p&gt;</description>
+      <description>I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.</description>
       <content:encoded><![CDATA[<p>I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.</p>
 <p>These small frictions can become large irritations, even though I only use Obsidian on my iPad very occasionally.</p>
 <p>To alleviate this problem I switched to Obsidian Sync. It&rsquo;s 4 dollars a month, and a great way to support the project. I&rsquo;ve had Sync before, but switched to iCloud when I entered the Apple ecosystem.</p>
@@ -60,8 +60,8 @@
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/power-of-writing/</guid>
-      <description>&lt;p&gt;Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.&lt;/p&gt;
-&lt;p&gt;However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post &lt;a href=&#34;https://herman.bearblog.dev/on-writing-regularly/&#34;&gt;on writing regularly&lt;/a&gt;, and I was touched by his words:&lt;/p&gt;</description>
+      <description>Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.
+However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post on writing regularly, and I was touched by his words:</description>
       <content:encoded><![CDATA[<p>Ah, writing. It&rsquo;s one of the skills that I&rsquo;ve consistently been praised for throughout my life. I&rsquo;m pretty good at it, and I think that&rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.</p>
 <p>However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post <a href="https://herman.bearblog.dev/on-writing-regularly/">on writing regularly</a>, and I was touched by his words:</p>
 <blockquote>
@@ -90,17 +90,9 @@
       <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/neovim-zettelkasten/</guid>
-      <description>&lt;p&gt;I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.&lt;/p&gt;
-&lt;p&gt;Digital note-taking provides the following advantages:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Searchability&lt;/li&gt;
-&lt;li&gt;Collected in one place&lt;/li&gt;
-&lt;li&gt;Can be converted to different output formats&lt;/li&gt;
-&lt;li&gt;Easier to share with others&lt;/li&gt;
-&lt;li&gt;Does not take up physical space&lt;/li&gt;
-&lt;li&gt;No risk of losing your notes in case of fire or other disaster&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I&amp;rsquo;ve gone through several iterations of my note-taking systems. I started on Google Docs, moved on to Notion and eventually landed on Obsidian. However, as I became more proficient with UNIX systems and vim, I realized I did not need all of that distracting functionality, and I switched over to using Neovim and a few bash scripts. I occasionally open up Obsidian to look at my graph view or to make use of the Anki plugin, but I enjoy the trimmed-down version that I built myself. I don&amp;rsquo;t need to leave the command line to read my notes or to create a new one.&lt;/p&gt;</description>
+      <description>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.
+Digital note-taking provides the following advantages:
+Searchability Collected in one place Can be converted to different output formats Easier to share with others Does not take up physical space No risk of losing your notes in case of fire or other disaster I&amp;rsquo;ve gone through several iterations of my note-taking systems.</description>
       <content:encoded><![CDATA[<p>I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.</p>
 <p>Digital note-taking provides the following advantages:</p>
 <ul>

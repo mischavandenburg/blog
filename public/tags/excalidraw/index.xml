@@ -13,9 +13,9 @@
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/homelab-network-design/</guid>
-      <description>&lt;p&gt;My ISP router only allowed me to assign 200 IP addresses and it didn&amp;rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.&lt;/p&gt;
-&lt;p&gt;Now that I&amp;rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.&lt;/p&gt;
-&lt;p&gt;I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.&lt;/p&gt;</description>
+      <description>My ISP router only allowed me to assign 200 IP addresses and it didn&amp;rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.
+Now that I&amp;rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.
+I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</description>
       <content:encoded><![CDATA[<p>My ISP router only allowed me to assign 200 IP addresses and it didn&rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.</p>
 <p>Now that I&rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.</p>
 <p>I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.</p>

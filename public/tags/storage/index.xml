@@ -13,13 +13,8 @@
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</guid>
-      <description>&lt;p&gt;I always thought that Persistent Volume Claims where deleted when you delete the pod which they are associated with. I was wrong. The lifecycle of PVCs is independent of Pods, and their behavior is largely governed by the Reclaim Policy set on the PVs. Here&amp;rsquo;s what you need to know:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;PVCs&lt;/strong&gt;: These are requests for storage, akin to how Pods request resources like CPU and memory. They exist independently and can be bound to Pods when needed.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;PVs&lt;/strong&gt;: Provisioned by administrators or dynamically through Storage Classes, PVs provide the actual storage resources. Their lifecycle is not tied to any specific Pod.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;understanding-reclaim-policies&#34;&gt;Understanding Reclaim Policies&lt;/h1&gt;
-&lt;p&gt;The Reclaim Policy on a PV dictates its fate after a PVC is released. There are three policies to be aware of:&lt;/p&gt;</description>
+      <description>I always thought that Persistent Volume Claims where deleted when you delete the pod which they are associated with. I was wrong. The lifecycle of PVCs is independent of Pods, and their behavior is largely governed by the Reclaim Policy set on the PVs. Here&amp;rsquo;s what you need to know:
+PVCs: These are requests for storage, akin to how Pods request resources like CPU and memory. They exist independently and can be bound to Pods when needed.</description>
       <content:encoded><![CDATA[<p>I always thought that Persistent Volume Claims where deleted when you delete the pod which they are associated with. I was wrong. The lifecycle of PVCs is independent of Pods, and their behavior is largely governed by the Reclaim Policy set on the PVs. Here&rsquo;s what you need to know:</p>
 <ul>
 <li><strong>PVCs</strong>: These are requests for storage, akin to how Pods request resources like CPU and memory. They exist independently and can be bound to Pods when needed.</li>
