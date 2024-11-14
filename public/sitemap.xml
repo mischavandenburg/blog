@@ -3,7 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
+    <lastmod>2024-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/</loc>
+    <lastmod>2024-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/tags/talos/</loc>
+    <lastmod>2024-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/talos-homelab-upgrade-guide-october/</loc>
+    <lastmod>2024-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2024-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/linux/</loc>
     <lastmod>2024-09-06T00:00:00+00:00</lastmod>
@@ -12,12 +27,6 @@
     <lastmod>2024-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/running-icloud-web-as-a-desktop-application-on-arch-linux-with-hyprland/</loc>
-    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/</loc>
-    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2024-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/adding-articles-to-wallabag-with-qutebrowser/</loc>
@@ -40,12 +49,6 @@
   </url><url>
     <loc>https://mischavandenburg.com/tags/security/</loc>
     <lastmod>2024-08-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
-    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/tags/talos/</loc>
-    <lastmod>2024-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</loc>
     <lastmod>2024-07-31T00:00:00+00:00</lastmod>

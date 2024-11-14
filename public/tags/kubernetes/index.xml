@@ -6,7 +6,79 @@
     <description>Recent content in Kubernetes on Mischa van den Burg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mischavandenburg.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Talos Homelab Upgrade Guide October</title>
+      <link>https://mischavandenburg.com/zet/talos-homelab-upgrade-guide-october/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mischavandenburg.com/zet/talos-homelab-upgrade-guide-october/</guid>
+      <description>[!IMPORTANT] Remember to create a custom image including iscsi-tools when using the Synology CSI driver
+Set up CLI environment and set databases to maintenance mode export TALOS_CP=&amp;#34;192.168.100.107&amp;#34; export TALOS_W1=&amp;#34;192.168.100.245&amp;#34; export TALOS_W2=&amp;#34;192.168.100.60&amp;#34; export TALOS_W3=&amp;#34;192.168.100.228&amp;#34; # Set databases to maintenance mode k cnp maintenance set --all-namespaces [!WARNING] Use the --preserve flag on single-node control plane clusters. Only needed for the control plane node.
+Upgrade path from 1.7.5 to 1.7.7 from 1.7.7 to 1.</description>
+      <content:encoded><![CDATA[<blockquote>
+<p>[!IMPORTANT]
+Remember to create a custom image including iscsi-tools when using the Synology CSI driver</p>
+</blockquote>
+<h3 id="set-up-cli-environment-and-set-databases-to-maintenance-mode">Set up CLI environment and set databases to maintenance mode</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_CP</span><span class="o">=</span><span class="s2">&#34;192.168.100.107&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_W1</span><span class="o">=</span><span class="s2">&#34;192.168.100.245&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_W2</span><span class="o">=</span><span class="s2">&#34;192.168.100.60&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_W3</span><span class="o">=</span><span class="s2">&#34;192.168.100.228&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set databases to maintenance mode</span>
+</span></span><span class="line"><span class="cl">k cnp maintenance <span class="nb">set</span> --all-namespaces
+</span></span></code></pre></div><blockquote>
+<p>[!WARNING]
+Use the <code>--preserve</code> flag on single-node control plane clusters.
+Only needed for the control plane node.</p>
+</blockquote>
+<h3 id="upgrade-path">Upgrade path</h3>
+<ol>
+<li>from 1.7.5 to 1.7.7</li>
+<li>from 1.7.7 to 1.8.2</li>
+</ol>
+<h3 id="upgrade-1">Upgrade 1</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_IMAGE</span><span class="o">=</span><span class="s1">&#39;factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac:v1.7.7&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">talosctl upgrade --preserve --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> --image <span class="nv">$TALOS_IMAGE</span>
+</span></span><span class="line"><span class="cl">talosctl upgrade --wait --debug --nodes <span class="nv">$TALOS_W1</span> -e <span class="nv">$TALOS_CP</span> --image <span class="nv">$TALOS_IMAGE</span>
+</span></span><span class="line"><span class="cl">talosctl upgrade --wait --debug --nodes <span class="nv">$TALOS_W2</span> -e <span class="nv">$TALOS_CP</span> --image <span class="nv">$TALOS_IMAGE</span>
+</span></span><span class="line"><span class="cl">talosctl upgrade --wait --debug --nodes <span class="nv">$TALOS_W3</span> -e <span class="nv">$TALOS_CP</span> --image <span class="nv">$TALOS_IMAGE</span>
+</span></span></code></pre></div><h3 id="upgrade-2">Upgrade 2</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TALOS_IMAGE</span><span class="o">=</span><span class="s1">&#39;factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac:v1.8.2&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">talosctl upgrade --preserve --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> --image <span class="nv">$TALOS_IMAGE</span>
+</span></span><span class="line"><span class="cl">talosctl upgrade --nodes <span class="nv">$TALOS_W1</span> -e <span class="nv">$TALOS_CP</span> --image <span class="nv">$TALOS_IMAGE</span>
+</span></span><span class="line"><span class="cl">talosctl upgrade --nodes <span class="nv">$TALOS_W2</span> -e <span class="nv">$TALOS_CP</span> --image <span class="nv">$TALOS_IMAGE</span>
+</span></span><span class="line"><span class="cl">talosctl upgrade --nodes <span class="nv">$TALOS_W3</span> -e <span class="nv">$TALOS_CP</span> --image <span class="nv">$TALOS_IMAGE</span>
+</span></span></code></pre></div><h2 id="kubernetes-upgrade">Kubernetes Upgrade</h2>
+<blockquote>
+<p>[!WARNING]
+Make sure to upgrade the Talos CLI before proceeding.
+&ldquo;It is advisable to use the same version of talosctl as the version of the boot media used.&rdquo; - Talos Docs</p>
+</blockquote>
+<h3 id="upgrade-path-1">Upgrade Path</h3>
+<ol>
+<li>From 1.30.3 to 1.30.5</li>
+<li>From 1.30.5 to 1.31.1</li>
+</ol>
+<blockquote>
+<p>[!NOTE]
+To trigger a Kubernetes upgrade, issue a command specifying the version of Kubernetes to upgrade to, such as:
+talosctl &ndash;nodes <!-- raw HTML omitted --> upgrade-k8s &ndash;to 1.30.0
+Note that the &ndash;nodes parameter specifies the control plane node to send the API call to, but all members of the cluster will be upgraded.
+To check what will be upgraded you can run talosctl upgrade-k8s with the &ndash;dry-run flag</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">k cnp maintenance <span class="nb">set</span> --all-namespaces
+</span></span><span class="line"><span class="cl">kubent
+</span></span><span class="line"><span class="cl">talosctl --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> upgrade-k8s --to 1.31.1 --dry-run
+</span></span><span class="line"><span class="cl">talosctl --nodes <span class="nv">$TALOS_CP</span> -e <span class="nv">$TALOS_CP</span> upgrade-k8s --to 1.31.1
+</span></span></code></pre></div><h2 id="links">Links</h2>
+<p>202411140811</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Talos Linux Upgrade Guide July</title>
       <link>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</link>
