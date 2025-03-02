@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mischavandenburg.com/</loc>
-    <lastmod>2024-11-14T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/knowing-containers-databases--code-is-magic/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mischavandenburg.com/zet/</loc>
+    <lastmod>2025-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/kubernetes/</loc>
     <lastmod>2024-11-14T00:00:00+00:00</lastmod>
@@ -15,9 +21,6 @@
     <lastmod>2024-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/zet/talos-homelab-upgrade-guide-october/</loc>
-    <lastmod>2024-11-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mischavandenburg.com/zet/</loc>
     <lastmod>2024-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mischavandenburg.com/tags/linux/</loc>
