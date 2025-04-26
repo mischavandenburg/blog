@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Grafana on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/grafana/</link>
+    <description>Recent content in Grafana on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discovered a simple CLI to backup and upload Grafana dashboards</title>
+      <link>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</guid>
+      <description>&lt;p&gt;This is a super useful tool to list, download and upload Grafana dashboards as json.&lt;/p&gt;
+&lt;p&gt;Currently using this to occasionally take extra-extra backups of my Grafana creations&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://software.es.net/gdg/&#34;&gt;https://software.es.net/gdg/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312301612&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Viewing Strava Data In Grafana Dashboards</title>
+      <link>https://mischavandenburg.com/zet/video-strava-grafana/</link>
+      <pubDate>Wed, 27 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-strava-grafana/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/CgP9hs9UDzA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I&amp;rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;creating an application in Strava&lt;/li&gt;
+&lt;li&gt;installing the Strava plugin in Grafana&lt;/li&gt;
+&lt;li&gt;adding the Strava data source&lt;/li&gt;
+&lt;li&gt;importing dashboards&lt;/li&gt;
+&lt;li&gt;exploring data and creating custom dashboard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312250812&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: How To Install Prometheus &amp; Grafana In Your Homelab</title>
+      <link>https://mischavandenburg.com/zet/video-install-prometheus-grafana-homelab/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-install-prometheus-grafana-homelab/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/3AINqaBwOYs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I&amp;rsquo;ll be installing Prometheus and Grafana in a Kubernetes cluster running in Rancher Desktop on my MacBook.&lt;/p&gt;
+&lt;p&gt;There are many options available out there but this is the easiest one I found to get up and running quickly.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;helm repo update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace=prometheus-stack --create-namespace&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploying Grafana Agent With Custom Secrets From Azure Key Vault Using Akv2k8s And K8s-Monitoring Helm Chart</title>
+      <link>https://mischavandenburg.com/zet/grafana-agent-with-custom-secrets-akv2k8s/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-agent-with-custom-secrets-akv2k8s/</guid>
+      <description>&lt;p&gt;Grafana has developed a Helm chart which greatly simplifies the deployment of a monitoring stack to your Kubernetes clusters.&lt;/p&gt;
+&lt;p&gt;It contains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;kube-state-metrics, which gathers metrics about Kubernetes objects&lt;/li&gt;
+&lt;li&gt;Node exporter, which gathers metrics about Kubernetes nodes&lt;/li&gt;
+&lt;li&gt;OpenCost, which interprets the above to create cost metrics for the cluster, and&lt;/li&gt;
+&lt;li&gt;Grafana Agent, which scrapes the above services to forward metrics to Prometheus and logs to Loki&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Prometheus and Loki services may be hosted on the same cluster, or remotely (e.g. on Grafana Cloud).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up Grafana Cloud with Entra ID authentication using Terraform</title>
+      <link>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</guid>
+      <description>&lt;p&gt;Been working on a nice project lately. My current client has chosen to run Grafana Cloud and the instance was running in West US, which was leading to slower performance. I took up the project of provisioning a new instance in West Europe. Although I would have preferred to host Grafana ourselves or use Azure Managed Grafana, this is what the client has chosen so I that is what I&amp;rsquo;ll have to work with.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

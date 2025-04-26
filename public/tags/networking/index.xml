@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Networking on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/networking/</link>
+    <description>Recent content in Networking on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alleviating Confusion About The To Field In Network Policies</title>
+      <link>https://mischavandenburg.com/zet/alleviating-confusion-about-the-to-field-in-network-policies/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/alleviating-confusion-about-the-to-field-in-network-policies/</guid>
+      <description>&lt;p&gt;When solving a killercoda challenge I ran into some confusion. Even though my solution worked, there was a difference which I wanted to get clear on.&lt;/p&gt;
+&lt;p&gt;I wrote this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;networking.k8s.io/v1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;NetworkPolicy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;space1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;spec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;podSelector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;{}&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;policyTypes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;Egress&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;egress&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;namespaceSelector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;matchLabels&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kubernetes.io/metadata.name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;space2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ports&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;protocol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TCP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;protocol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;UDP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But the provided course solution was this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I&#39;m better at Network Policies than I thought</title>
+      <link>https://mischavandenburg.com/zet/im-better-at-network-policies-than-i-thought/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/im-better-at-network-policies-than-i-thought/</guid>
+      <description>&lt;p&gt;There are two things which I&amp;rsquo;m dreading most for the CKS exam: writing Network Policies and configuring RBAC under heavy time pressure.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve heard from colleagues that the exam has many questions of this nature, so it will be a good way of scoring points. However, regardless of the exam, the fact that I&amp;rsquo;m dreading these topics also shows that I&amp;rsquo;m not familiar enough with them and therefore this is a point where I should improve. It&amp;rsquo;s not only about the exam, but also my growth of expertise as a Kubernetes Engineer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kubernetes Gateway API &amp; Azure Application Gateway for Containers</title>
+      <link>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</guid>
+      <description>&lt;p&gt;This document is the result of my research into the Gateway API. It aims to briefly describe the Gateway API for Kubernetes, a typical implementation of ingress traffic using NGINX in AKS and how this setup could benefit from implementing the Gateway API.&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Gateway API is an official Kubernetes project focused on L4 and L7 routing in Kubernetes. This project represents the next generation of Kubernetes Ingress, Load Balancing, and Service Mesh APIs. From the outset, it has been designed to be generic, expressive, and role-oriented.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Learned Cilium Network Policies</title>
+      <link>https://mischavandenburg.com/zet/cilium-network-policies/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/cilium-network-policies/</guid>
+      <description>&lt;p&gt;Today I learned about Cilium network policies. These are much easier to implement than normal network policies because there are some tools available when creating the cilium policies. Network policies were probably my weakest Kubernetes skill and I tended to avoid them.&lt;/p&gt;
+&lt;p&gt;But now I&amp;rsquo;m exposing some apps to the internet in my homelab and I&amp;rsquo;m forced to think about security and what would happen if a hacker managed to get root privileges in a container even though I implemented strict security contests and enabled privilege escalation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Designed The Network For My Homelab</title>
+      <link>https://mischavandenburg.com/zet/homelab-network-design/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/homelab-network-design/</guid>
+      <description>&lt;p&gt;My ISP router only allowed me to assign 200 IP addresses and it didn&amp;rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.&lt;/p&gt;
+&lt;p&gt;Now that I&amp;rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.&lt;/p&gt;
+&lt;p&gt;I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video notes - Application Gateway for Containers</title>
+      <link>https://mischavandenburg.com/zet/application-gateway-for-containers/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/application-gateway-for-containers/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/slCjHV8z9Wk?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h1 id=&#34;app-gateway&#34;&gt;App Gateway&lt;/h1&gt;
+&lt;p&gt;It has App Gateway in the name, but it is an entirely new solution. The App Gateway is the only thing it has in common with Azure Application Gateway.&lt;/p&gt;
+&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
+&lt;p&gt;Two types of resources. Azure resources and k8s resources.&lt;/p&gt;
+&lt;p&gt;The App Gateway for Container is an azure resource which listens to changes in k8s resources through the ALB controller. AGWFC is the control plane.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Homelab E2 - Setting Up Monitoring &#43; Studying k3s Networking  &amp; Configuring Ingress</title>
+      <link>https://mischavandenburg.com/zet/video-homelab-3-k3s-networking/</link>
+      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-homelab-3-k3s-networking/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JjIB65CVXAo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I installed Prometheus and Grafana using helm and studied k3s networking.&lt;/p&gt;
+&lt;p&gt;My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;installed prometheus and grafana with kube-prometheus-stack helm chart&lt;/li&gt;
+&lt;li&gt;reflected on why I use k3s&lt;/li&gt;
+&lt;li&gt;gained understanding of k3s loadbalancing solution&lt;/li&gt;
+&lt;li&gt;configured /etc/hosts file to resolve to fake domain&lt;/li&gt;
+&lt;li&gt;configured k3s ingress to use fake local domain&lt;/li&gt;
+&lt;li&gt;struggled with ingress but figured it out in the end&lt;/li&gt;
+&lt;li&gt;successfully made grafana UI available on fake local domain grafana.homelab.nl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312261012&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Began studying for AZ-700 Designing and Implementing Microsoft Azure Networking Solutions</title>
+      <link>https://mischavandenburg.com/zet/starting-az-700/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/starting-az-700/</guid>
+      <description>&lt;p&gt;Before I went on holiday I formed the intention to begin studying again after I came back.&lt;/p&gt;
+&lt;p&gt;During my current gig I&amp;rsquo;m configuring a fair bit of networking, VNets, peerings, firewall rules and set up a full hub-spoke network from scratch, so I&amp;rsquo;ve had a fair bit of practical experience. Now that the experience is still fresh in the mind I figured I&amp;rsquo;d go for this certification.&lt;/p&gt;
+&lt;p&gt;Usually I only use Microsoft Learn and practice exams, but this time around I want to try out a video course. I purchased a year of A Cloud Guru access and so far it has been a good experience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is Azure CNI Overlay for AKS?</title>
+      <link>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</guid>
+      <description>&lt;h1 id=&#34;cni&#34;&gt;CNI?&lt;/h1&gt;
+&lt;p&gt;CNI stands for Container Network Interface. It allows communication between pods and services.&lt;/p&gt;
+&lt;h2 id=&#34;current-azure-cni-limitations&#34;&gt;Current Azure CNI limitations&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s take a practical example. We have an enterprise environment where a large network is utilized, spanning multiple clouds and on-prem infrastructure hubs. To enable seamless communication across these sections, they must belong to the same network. As a result, specific IP address ranges are assigned to each section, with AWS, On-Prem A, and Azure each having their respective ranges.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

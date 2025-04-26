@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hardware on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/hardware/</link>
+    <description>Recent content in Hardware on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Starting My Homelab</title>
+      <link>https://mischavandenburg.com/zet/starting-my-homelab/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/starting-my-homelab/</guid>
+      <description>&lt;p&gt;This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J&#34;&gt;Homelab Init&lt;/a&gt; playlist on YouTube which I&amp;rsquo;m working on.&lt;/p&gt;
+&lt;p&gt;There are a few reasons why I haven&amp;rsquo;t started up until now:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

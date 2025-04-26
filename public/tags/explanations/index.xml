@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Explanations on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/explanations/</link>
+    <description>Recent content in Explanations on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/explanations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go - Reading from Standard Input Provided by User</title>
+      <link>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m working through the &amp;ldquo;greet&amp;rdquo; &lt;a href=&#34;https://rwx.gg/lang/cha/&#34;&gt;challenge&lt;/a&gt; by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.&lt;/p&gt;
+&lt;p&gt;The program should take input from the user and print it out. I worked through the challenge together with Rob &lt;a href=&#34;https://www.youtube.com/watch?v=WMH5ENF_Xvo&#34;&gt;in his video&lt;/a&gt; but I&amp;rsquo;m going to talk (write) myself through these functions to fully understand what&amp;rsquo;s going on.&lt;/p&gt;
+&lt;p&gt;We have the following function in main.go:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Application Insights: Telemetry Sampling</title>
+      <link>https://mischavandenburg.com/zet/application-insights-sampling/</link>
+      <pubDate>Tue, 03 Jan 2023 08:41:09 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/application-insights-sampling/</guid>
+      <description>&lt;p&gt;Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.&lt;/p&gt;
+&lt;p&gt;Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.&lt;/p&gt;
+&lt;p&gt;For small and medium sized applications sampling is generally not necessary.&lt;/p&gt;
+&lt;p&gt;Advantages of sampling:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Throttling data when the application suddenly sends a high volume of telemetry in a short time
+&lt;ul&gt;
+&lt;li&gt;This saves costs!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Keeping a pricing tier quota&lt;/li&gt;
+&lt;li&gt;Reduce network traffic from telemetry collection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Three different kinds of sampling:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pipelines: Continuous Monitoring</title>
+      <link>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</link>
+      <pubDate>Tue, 03 Jan 2023 08:30:03 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</guid>
+      <description>&lt;p&gt;This term can be confusing. Initially I thought it meant monitoring of the pipelines themselves. However, in the context of Azure Release Pipelines, continuous monitoring refers to something else.&lt;/p&gt;
+&lt;p&gt;Continuous monitoring leverages metrics from other services such as Application Insights. You can set up release gates based on these metrics. For example, you can set up a release gate to roll back the deployment if an alert is being fired for high CPU usage in the application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distributed Tracing</title>
+      <link>https://mischavandenburg.com/zet/distributed-tracing/</link>
+      <pubDate>Tue, 03 Jan 2023 07:58:44 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/distributed-tracing/</guid>
+      <description>&lt;p&gt;Debugging is done using &lt;a href=&#34;https://mischavandenburg.com/zet/call-stacks/&#34;&gt;call stacks&lt;/a&gt; in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.&lt;/p&gt;
+&lt;p&gt;Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.&lt;/p&gt;
+&lt;p&gt;Distributed tracing is an implementation of the call stack in the cloud. It is usually implemented by adding an agent, &lt;a href=&#34;https://mischavandenburg.com/zet/sdk/&#34;&gt;SDK&lt;/a&gt;, or library to the service. In Azure you can enable distributed tracing via Application Insights through auto-instrumentation or SDKs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is a SDK?</title>
+      <link>https://mischavandenburg.com/zet/sdk/</link>
+      <pubDate>Tue, 03 Jan 2023 07:50:55 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/sdk/</guid>
+      <description>&lt;p&gt;A software development kit (SDK) is a set of tools provided by the manufacturer of (usually) a hardware platform, operating system (OS), or programming language.&lt;/p&gt;
+&lt;p&gt;SDKs contain all the tools you need to get started. They typically contain a compiler, a debugger and an API. But they can also contain documentation and testing tools.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How This Blog is Created, Written and Hosted</title>
+      <link>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;As I alluded to in my &lt;a href=&#34;https://mischavandenburg.com/zet/articles/obsidian-introduction&#34;&gt;article about Obsidian,&lt;/a&gt; I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.&lt;/p&gt;
+&lt;p&gt;Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What Are Containers?</title>
+      <link>https://mischavandenburg.com/zet/articles/what-are-containers/</link>
+      <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
+      <description>&lt;p&gt;When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;
+&lt;h1 id=&#34;virtualization&#34;&gt;Virtualization&lt;/h1&gt;
+&lt;p&gt;To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tokens and Identity on the Internet</title>
+      <link>https://mischavandenburg.com/zet/articles/identity/</link>
+      <pubDate>Sun, 18 Dec 2022 00:55:47 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/identity/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?&lt;/p&gt;
+&lt;p&gt;This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

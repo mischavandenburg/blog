@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Azure on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/azure/</link>
+    <description>Recent content in Azure on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparing akv2k8s with Azure Key Vault Provider for Secret Store CSI Driver</title>
+      <link>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</guid>
+      <description>&lt;p&gt;In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.&lt;/p&gt;
+&lt;p&gt;Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges. Notably, the latest version of akv2k8s has been problematic, especially concerning the deployment of Postgres databases on our AKS clusters using the EDB operator. Akv2k8s alters the SecurityContext of pods in a way that causes them to fail.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kubernetes Gateway API &amp; Azure Application Gateway for Containers</title>
+      <link>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</guid>
+      <description>&lt;p&gt;This document is the result of my research into the Gateway API. It aims to briefly describe the Gateway API for Kubernetes, a typical implementation of ingress traffic using NGINX in AKS and how this setup could benefit from implementing the Gateway API.&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Gateway API is an official Kubernetes project focused on L4 and L7 routing in Kubernetes. This project represents the next generation of Kubernetes Ingress, Load Balancing, and Service Mesh APIs. From the outset, it has been designed to be generic, expressive, and role-oriented.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PersistentVolumeClaims Lifecycle in Kubernetes</title>
+      <link>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</guid>
+      <description>&lt;p&gt;I always thought that Persistent Volume Claims where deleted when you delete the pod which they are associated with. I was wrong. The lifecycle of PVCs is independent of Pods, and their behavior is largely governed by the Reclaim Policy set on the PVs. Here&amp;rsquo;s what you need to know:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PVCs&lt;/strong&gt;: These are requests for storage, akin to how Pods request resources like CPU and memory. They exist independently and can be bound to Pods when needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PVs&lt;/strong&gt;: Provisioned by administrators or dynamically through Storage Classes, PVs provide the actual storage resources. Their lifecycle is not tied to any specific Pod.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;understanding-reclaim-policies&#34;&gt;Understanding Reclaim Policies&lt;/h1&gt;
+&lt;p&gt;The Reclaim Policy on a PV dictates its fate after a PVC is released. There are three policies to be aware of:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video notes - Application Gateway for Containers</title>
+      <link>https://mischavandenburg.com/zet/application-gateway-for-containers/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/application-gateway-for-containers/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/slCjHV8z9Wk?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h1 id=&#34;app-gateway&#34;&gt;App Gateway&lt;/h1&gt;
+&lt;p&gt;It has App Gateway in the name, but it is an entirely new solution. The App Gateway is the only thing it has in common with Azure Application Gateway.&lt;/p&gt;
+&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
+&lt;p&gt;Two types of resources. Azure resources and k8s resources.&lt;/p&gt;
+&lt;p&gt;The App Gateway for Container is an azure resource which listens to changes in k8s resources through the ALB controller. AGWFC is the control plane.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Homelab Secret Management With GitOps and Azure Key Vault</title>
+      <link>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</guid>
+      <description>&lt;p&gt;In this blog post, I want to share with you how I set up secrets management for my &lt;a href=&#34;https://github.com/mischavandenburg/homelab/&#34;&gt;home lab&lt;/a&gt;. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Talk: Avoiding Microservice Megadisasters by Jimmy Bogard</title>
+      <link>https://mischavandenburg.com/zet/talk-avoiding-microservice-disasters/</link>
+      <pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/talk-avoiding-microservice-disasters/</guid>
+      <description>&lt;p&gt;Watched this very insightful talk on microservice architecture.&lt;/p&gt;
+&lt;p&gt;Some things I learned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;microservices should be &lt;strong&gt;autonomous&lt;/strong&gt;: they should have minimal dependencies on other microservices&lt;/li&gt;
+&lt;li&gt;if they have dependencies they should only be 1 layer deep
+&lt;ul&gt;
+&lt;li&gt;a microservice should not be calling another microservice which calls another microservice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;dependencies can be reversed by pushing data towards the service
+&lt;ul&gt;
+&lt;li&gt;for example: a pricing database can be dumped and pushed to a catalog service once a day&lt;/li&gt;
+&lt;li&gt;data duplication is not a sin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another powerful point he made is that the architecture is a reflection from the organization&amp;rsquo;s structure. He explained that the company was organized in teams and that managers of teams were promoted based on the amount of people they managed. This meant that managers were making up services which needed people to build them, which led to a proliferation of services and dependencies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ensure Cgroupsv2 compatiblity when containerizing old apps</title>
+      <link>https://mischavandenburg.com/zet/ensure-cgroupsv2-compatibility/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/ensure-cgroupsv2-compatibility/</guid>
+      <description>&lt;p&gt;Are you currently working with containerizing older Java or .NET applications? From Kubernetes 1.29, the default cgroups implementation on Azure Linux AKS nodes will be cgroupsv2. Older versions of Java, .NET and NodeJS do not support memory querying v2 memory constraints and this will lead to out of memory (OOM) issues for workloads.&lt;/p&gt;
+&lt;p&gt;Please make sure that your older containerized applications are compatible with cgroupsv2 or you might be in quite some pain in the future.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploying Grafana Agent With Custom Secrets From Azure Key Vault Using Akv2k8s And K8s-Monitoring Helm Chart</title>
+      <link>https://mischavandenburg.com/zet/grafana-agent-with-custom-secrets-akv2k8s/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-agent-with-custom-secrets-akv2k8s/</guid>
+      <description>&lt;p&gt;Grafana has developed a Helm chart which greatly simplifies the deployment of a monitoring stack to your Kubernetes clusters.&lt;/p&gt;
+&lt;p&gt;It contains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;kube-state-metrics, which gathers metrics about Kubernetes objects&lt;/li&gt;
+&lt;li&gt;Node exporter, which gathers metrics about Kubernetes nodes&lt;/li&gt;
+&lt;li&gt;OpenCost, which interprets the above to create cost metrics for the cluster, and&lt;/li&gt;
+&lt;li&gt;Grafana Agent, which scrapes the above services to forward metrics to Prometheus and logs to Loki&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Prometheus and Loki services may be hosted on the same cluster, or remotely (e.g. on Grafana Cloud).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up Grafana Cloud with Entra ID authentication using Terraform</title>
+      <link>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</guid>
+      <description>&lt;p&gt;Been working on a nice project lately. My current client has chosen to run Grafana Cloud and the instance was running in West US, which was leading to slower performance. I took up the project of provisioning a new instance in West Europe. Although I would have preferred to host Grafana ourselves or use Azure Managed Grafana, this is what the client has chosen so I that is what I&amp;rsquo;ll have to work with.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>KEDA went GA for AKS!</title>
+      <link>https://mischavandenburg.com/zet/keda-ga/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/keda-ga/</guid>
+      <description>&lt;p&gt;Great news! KEDA finally went GA for AKS.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/aks/keda-about&#34;&gt;https://learn.microsoft.com/en-us/azure/aks/keda-about&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202311081711&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting A Secret from an Azure Key Vault From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/list-azure-key-vault-secret/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/list-azure-key-vault-secret/</guid>
+      <description>&lt;p&gt;I use this bash code to get secrets from Azure key vaults using the Azure CLI.&lt;/p&gt;
+&lt;p&gt;Make sure to set your subscription with &lt;code&gt;az account set -s 12321424&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;kvname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;kv-vo-rea-prd-weu-001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;secretname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;worker-ad-client-secret
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;az keyvault secret show --vault-name &lt;span class=&#34;nv&#34;&gt;$kvname&lt;/span&gt; --name &lt;span class=&#34;nv&#34;&gt;$secretname&lt;/span&gt;  --query value -o tsv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202310312010&lt;/p&gt;
+&lt;p&gt;[[Azure]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AZ-700 Notes - Virtual WAN</title>
+      <link>https://mischavandenburg.com/zet/az-700-virtual-wan/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/az-700-virtual-wan/</guid>
+      <description>&lt;h1 id=&#34;chapter-11-virtual-wan&#34;&gt;Chapter 11 Virtual WAN&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Easy Mode Hub-Spoke&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;incorporates multiple hybrid connections (vpn/expressroute)&lt;/li&gt;
+&lt;li&gt;incorporates multiple VNets&lt;/li&gt;
+&lt;li&gt;Dynamically handles routing&lt;/li&gt;
+&lt;li&gt;easily deploys NVA/Firewall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;use-case&#34;&gt;Use case&lt;/h2&gt;
+&lt;p&gt;You technically don&amp;rsquo;t need to use it for anything, you can do the same with a normal hub-spoke built using VNets.&lt;/p&gt;
+&lt;p&gt;However, when you do, you&amp;rsquo;re in charge of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add/update routes&lt;/li&gt;
+&lt;li&gt;network gateway connections&lt;/li&gt;
+&lt;li&gt;integration with virtual appliances / firewalls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Virtual WAN makes these tasks easier.&lt;/p&gt;
+&lt;h2 id=&#34;components&#34;&gt;Components&lt;/h2&gt;
+&lt;p&gt;Virtual Wan&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Backing up AKS Clusters with Azure Backup is now in preview</title>
+      <link>https://mischavandenburg.com/zet/aks-azure-backup-preview/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/aks-azure-backup-preview/</guid>
+      <description>&lt;p&gt;You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup&#34;&gt;https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202310130610&lt;/p&gt;
+&lt;p&gt;[[AKS]]&lt;/p&gt;
+&lt;p&gt;[[Kubernetes]]&lt;/p&gt;
+&lt;p&gt;[[Azure]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Began studying for AZ-700 Designing and Implementing Microsoft Azure Networking Solutions</title>
+      <link>https://mischavandenburg.com/zet/starting-az-700/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/starting-az-700/</guid>
+      <description>&lt;p&gt;Before I went on holiday I formed the intention to begin studying again after I came back.&lt;/p&gt;
+&lt;p&gt;During my current gig I&amp;rsquo;m configuring a fair bit of networking, VNets, peerings, firewall rules and set up a full hub-spoke network from scratch, so I&amp;rsquo;ve had a fair bit of practical experience. Now that the experience is still fresh in the mind I figured I&amp;rsquo;d go for this certification.&lt;/p&gt;
+&lt;p&gt;Usually I only use Microsoft Learn and practice exams, but this time around I want to try out a video course. I purchased a year of A Cloud Guru access and so far it has been a good experience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Interesting Features went GA on Azure</title>
+      <link>https://mischavandenburg.com/zet/azure-updates-sept-23/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-updates-sept-23/</guid>
+      <description>&lt;p&gt;Yesterday a few interesting AKS related features became Generally Available on Azure.&lt;/p&gt;
+&lt;p&gt;KEDA add-on makes it easier to scale your applications on AKS cluster.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can have a flexible and customized strategy for node-level OS security updates.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/ga-node-os-patching-nodeimage-feature-in-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/ga-node-os-patching-nodeimage-feature-in-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Use Vertical Pod Autoscaling add-on for AKS to improve cost-efficiency, and cluster utilization for your workloads&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;preview&#34;&gt;Preview&lt;/h1&gt;
+&lt;p&gt;Public preview: AKS support for Kubernetes version 1.28&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/&#34;&gt;https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202309281009&lt;/p&gt;
+&lt;p&gt;[[Azure]]&lt;/p&gt;
+&lt;p&gt;[[Kubernetes]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pod Disruption Budgets Can Mess With Your AKS Updates</title>
+      <link>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</guid>
+      <description>&lt;p&gt;Past week we&amp;rsquo;ve been struggling a bit with poorly configured pod disruption budgets. When you do an AKS upgrade, a new node is created and one of the old nodes is drained.&lt;/p&gt;
+&lt;p&gt;If a deployment has a pod disruption budget which is incorrectly configured, it might show up as &lt;code&gt;ALLOWED DISRUPTIONS: 0&lt;/code&gt;. When this happens, the node cannot be drained and you will get an error message in your events.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Exams Are Open Book Exams From Now On</title>
+      <link>https://mischavandenburg.com/zet/azure-exams-open-book/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-exams-open-book/</guid>
+      <description>&lt;p&gt;From here on out you can access Microsoft Learn during the exams. This is great news! This is much more like the actual experience of an engineer&amp;rsquo;s daily activities. It is arguably more important to look up things efficiently rather than memorizing everything for a test and forgetting it a few weeks later.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/iPiq3YuhnHc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202308231608&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Deploying MkDocs To Azure Using With Azure DevOps</title>
+      <link>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_-D1Qz6jtEU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video, I will walk you through the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set up a repo in Azure DevOps with MkDocs files&lt;/li&gt;
+&lt;li&gt;Set up a Static Web App in Azure portal and link it to the repo&lt;/li&gt;
+&lt;li&gt;Configure the Azure DevOps pipeline for MkDocs deployment&lt;/li&gt;
+&lt;li&gt;Configure a custom theme for the website&lt;/li&gt;
+&lt;li&gt;Demonstrate the pull request workflow for updating the docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps. You will also learn how to use Azure DevOps and Static Web Apps to collaborate on your documentation projects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I used Azure OpenAI to create an AI model of my late meditation teacher</title>
+      <link>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-azure-openai-chah-first-demo/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/jZTJaUncbWc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;With the new Azure OpenAI service it is possible to host your own instance of ChatGPT, which allows you to bring your own data.&lt;/p&gt;
+&lt;p&gt;I decided to use this service to create an AI model of my late meditation teacher, Ajahn Chah. He was one of the most influential and respected Buddhist monks of the 20th century, and his teachings have helped millions of people around the world to find peace, wisdom, and happiness. He passed away in 1992, but his legacy lives on through his books, recordings, and disciples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Podcast Notes - Azure OpenAI with Dr. Linda Sharer</title>
+      <link>https://mischavandenburg.com/zet/podcast-azure-openai/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/podcast-azure-openai/</guid>
+      <description>&lt;h1 id=&#34;key-points-ive-learned&#34;&gt;Key points I&amp;rsquo;ve learned&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;LLM models are not malleable. A generative AI model is a static thing which took an enormous amount of compute to get it to the state that it is&lt;/li&gt;
+&lt;li&gt;For example ChatGPT 3.5, 4. They are as they are, they don&amp;rsquo;t change.&lt;/li&gt;
+&lt;li&gt;The models won&amp;rsquo;t remember your previous data. The only way to have a continuous interaction with the model is to feed all of the data into it every time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+&lt;p&gt;This podcast is about OpenAI with Dr. Linda Sharer, a senior cloud solution architect for data and AI at Microsoft. The main topic of the episode is Azure Open AI, a service that allows users to interact with powerful generative AI models using natural language. The guest explains the concepts and capabilities of Open AI, such as prompt engineering, one-shot and few-shot learning, fine-tuning, vectorization, and retrieval-augmented generation. She also discusses the design choices and challenges of building applications with Open AI, as well as the integration with other Azure services such as Cognitive Search and ML. The host and the co-host ask questions and share their experiences with using Open AI for various use cases, such as transcribing podcasts, generating code, and searching documents. The web page also provides links to the podcast website, Twitter account, and relevant resources on Open AI.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Deploying AKS Cluster With Azure CNI Using Bicep</title>
+      <link>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</link>
+      <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_U3HichIJ0Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.&lt;/p&gt;
+&lt;p&gt;Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wrote A Script To Delete All Resource Groups In An Azure Subscription</title>
+      <link>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/script-delete-all-resource-groups/</guid>
+      <description>&lt;p&gt;In the Azure portal you can&amp;rsquo;t select multiple resource groups for deletion.&lt;/p&gt;
+&lt;p&gt;I have a sponsored subscription to play around in which I sometimes wish to clean completely.&lt;/p&gt;
+&lt;p&gt;I wrote this script to delete all resource groups using bash.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# script to delete all resource groups in a subscription using Azure CLI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# get the current subscription name to confirm&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;subscription&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;az account show --query name -o tsv&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Use this script with caution!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;You are about to delete all resource groups in the subscription: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$subscription&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# prompt for confirmation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;Are you sure? (y/n) &amp;#34;&lt;/span&gt; will_delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$will_delete&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Yy&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;* &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Deleting resource groups...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;groups&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;az group list --query &lt;span class=&#34;s2&#34;&gt;&amp;#34;[].name&amp;#34;&lt;/span&gt; -o tsv&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;# Loop through each group name and delete it&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; group in &lt;span class=&#34;nv&#34;&gt;$groups&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		az group delete --name &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$group&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; --yes --no-wait
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;All resource groups have been deleted.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Exiting without deleting any resource groups.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Probably wise.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202307081507&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Choosing A Cloud And The Importance Of Specialization</title>
+      <link>https://mischavandenburg.com/zet/choosing-a-cloud-provider-and-specialization/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/choosing-a-cloud-provider-and-specialization/</guid>
+      <description>&lt;p&gt;As a DevOps Engineer or Cloud Native Engineer, I think it’s important to specialize in one cloud provider in the beginning of your career. Specializing allows you to gain deep knowledge and expertise in the specific tools and services related to that cloud provider, making you a valuable asset to any company using that provider. Although cloud computing is similar in essence no matter which provider you choose, each cloud provider has its own vocabulary and way of structuring things.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How To Generate Random Strings In Bicep</title>
+      <link>https://mischavandenburg.com/zet/bicep-random-strings/</link>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/bicep-random-strings/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/n9MRNnAJjZY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I explain how to generate random strings in Bicep and demonstrate a couple of deployments.&lt;/p&gt;
+&lt;p&gt;I use the uniqueString function combined with the utcNow function. But the caveat is that you can only use it as a default value for a parameter, as follows:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Lowlands: Impressions from my first IT event</title>
+      <link>https://mischavandenburg.com/zet/azure-lowlands/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-lowlands/</guid>
+      <description>&lt;p&gt;Have you ever attended an IT event that felt like a festival from the sixties? That was my experience at Azure Lowlands! I couldn&amp;rsquo;t have wished for a better first IT event. It was like going back in time, but with a modern twist.&lt;/p&gt;
+&lt;p&gt;The name Lowlands immediately appealed to me. I had no idea what to expect. And the name lived up to it! I&amp;rsquo;m a big fan of Jimi Hendrix and the Woodstock vibe, and that&amp;rsquo;s exactly what I felt at Azure Lowlands. When I walked into the first talk, I was surprised by a hall full of colorful beach chairs, and people who were listening to the speaker while taking it easy and lounging in the chairs. I felt right at home!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Interesting Facts About Azure</title>
+      <link>https://mischavandenburg.com/zet/interesting-facts-azure/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/interesting-facts-azure/</guid>
+      <description>&lt;p&gt;Some interesting facts about Azure from this Reddit post by Denis Kazakov, Microsoft MVP&lt;/p&gt;
+&lt;p&gt;Things that stand out to me:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;85% of Fortune 500 companies use Microsoft Azure Cloud&lt;/li&gt;
+&lt;li&gt;Azure generated a revenue of 75,3 billion in 2022 which is 38% of whole Microsoft&amp;rsquo;s revenue. It is x3 in compare to 2017.&lt;/li&gt;
+&lt;li&gt;The project name was Red Dog internally, which you can sometimes see as DNS or as cloud service VM hostnames like RDxxxxx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/r/AZURE/comments/14mcuoy/some_interesting_facts_about_azure/?utm_source=share&amp;amp;utm_medium=web2x&amp;amp;context=3&#34;&gt;https://www.reddit.com/r/AZURE/comments/14mcuoy/some_interesting_facts_about_azure/?utm_source=share&amp;amp;utm_medium=web2x&amp;amp;context=3&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Finishing Pipeline Setup  &amp; Working on KeyVault Template - Azure Kubernetes Lab Series</title>
+      <link>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Finish deploying keyvault using pipeline&lt;/li&gt;
+&lt;li&gt;Get the random name generation to work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Subscriptions need to be registered with resource providers, apparently&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled&lt;/li&gt;
+&lt;li&gt;Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;achieved&#34;&gt;Achieved&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting up connection between pipeline and Azure subscription&lt;/li&gt;
+&lt;li&gt;Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources)&lt;/li&gt;
+&lt;li&gt;Learned about provider registrations&lt;/li&gt;
+&lt;li&gt;Made progress on creating unique names for resources&lt;/li&gt;
+&lt;li&gt;Successfully deployed new resource group and key vault from the pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;next-time&#34;&gt;Next time:&lt;/h1&gt;
+&lt;p&gt;Look into random string creation with utcNow&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Setting Up A Simple Azure Pipeline To Deploy A Keyvault</title>
+      <link>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Write KeyVault template&lt;/li&gt;
+&lt;li&gt;Write pipeline code&lt;/li&gt;
+&lt;li&gt;set up Azure DevOps pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Always make sure to use &lt;code&gt;az deployment group&lt;/code&gt; instead of &lt;code&gt;az group deployment&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Because it has older Bicep version and will be deprecated&lt;/li&gt;
+&lt;li&gt;Make sure to be in correct Directory to be able to sync subscriptions for service connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202306302206&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim</title>
+      <link>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</guid>
+      <description>&lt;p&gt;Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202306271706&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=l0B65FUfNBU&#34;&gt;https://www.youtube.com/watch?v=l0B65FUfNBU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[[AKS]]
+[[Kubernetes]]
+[[Neovim]]
+[[bicep]]
+[[coding]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Introducing New Bicep Parameter Files - .bicepparam - No more JSON!</title>
+      <link>https://mischavandenburg.com/zet/video-bicep-bicepparam/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-bicep-bicepparam/</guid>
+      <description>&lt;p&gt;The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More readable and editor friendly&lt;/li&gt;
+&lt;li&gt;Cleaner and less lines of code&lt;/li&gt;
+&lt;li&gt;VSCode integration&lt;/li&gt;
+&lt;li&gt;Quickly convert from JSON or template file using VSCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microsoft Achieves First Milestone Towards A Quantum Supercomputer</title>
+      <link>https://mischavandenburg.com/zet/microsoft-first-milestone-quantum-supercomputer/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/microsoft-first-milestone-quantum-supercomputer/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/7VQ7BZwuZkU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202306261006&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=7VQ7BZwuZkU&#34;&gt;https://www.youtube.com/watch?v=7VQ7BZwuZkU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudblogs.microsoft.com/quantum/2023/06/21/microsoft-achieves-first-milestone-towards-a-quantum-supercomputer/&#34;&gt;https://cloudblogs.microsoft.com/quantum/2023/06/21/microsoft-achieves-first-milestone-towards-a-quantum-supercomputer/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How To Get The Id Of An Existing Subnet In Bicep</title>
+      <link>https://mischavandenburg.com/zet/bicep-getting-subnet-id/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/bicep-getting-subnet-id/</guid>
+      <description>&lt;p&gt;Did a refactor of some of our Bicep template code for our AKS clusters today.&lt;/p&gt;
+&lt;p&gt;Before, we were using a rather complicated line of code using string interpolation.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bicep&#34; data-lang=&#34;bicep&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetSubnetId&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;resourceId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetResourceGroupName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Microsoft.Network/virtualNetworks&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/subnets/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vnetSubnetName&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This was hard to read and the Bicep linter gave the following warning in my editor and during deployment:&lt;/p&gt;
+&lt;p&gt;WARNING: D:\a\1\a\drop\Generic-templates\containers\azure-kubernetes-service\v4.0\templates\aks.bicep(117,7) : Warning use-resource-id-functions: If property &amp;ldquo;vnetSubnetID&amp;rdquo; represents a resource ID, it must use a symbolic resource reference, be a parameter or start with one of these functions: extensionResourceId, guid, if, reference, resourceId, subscription, subscriptionResourceId, tenantResourceId. Found nonconforming expression at vnetSubnetID -&amp;gt; vnetSubnetId [https://aka.ms/bicep/linter/use-resource-id-functions]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is Azure CNI Overlay for AKS?</title>
+      <link>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</guid>
+      <description>&lt;h1 id=&#34;cni&#34;&gt;CNI?&lt;/h1&gt;
+&lt;p&gt;CNI stands for Container Network Interface. It allows communication between pods and services.&lt;/p&gt;
+&lt;h2 id=&#34;current-azure-cni-limitations&#34;&gt;Current Azure CNI limitations&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s take a practical example. We have an enterprise environment where a large network is utilized, spanning multiple clouds and on-prem infrastructure hubs. To enable seamless communication across these sections, they must belong to the same network. As a result, specific IP address ranges are assigned to each section, with AWS, On-Prem A, and Azure each having their respective ranges.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploying Simple Applications to AKS with Draft</title>
+      <link>https://mischavandenburg.com/zet/deploy-draft-azure/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/deploy-draft-azure/</guid>
+      <description>&lt;p&gt;Not sure how this will play out with more complex applications, but I can definitely see how this would accellerate the process for developers to get their first versions deployed without the toil of setting up manifests and pipelines. Will definitely play around with this soon and I&amp;rsquo;m curious to see how far Microsoft will take this!&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/PqhdX8-SZYw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202306092006&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>You Can Abort Operations on AKS Clusters Now</title>
+      <link>https://mischavandenburg.com/zet/aks-abort-operation/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/aks-abort-operation/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;az aks operation-abort --name myAKSCluster --resource-group myResourceGroup&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202304270704&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes: Advanced Bicep</title>
+      <link>https://mischavandenburg.com/zet/advanced-bicep/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/advanced-bicep/</guid>
+      <description>&lt;h1 id=&#34;deploying-to-subscriptions-and-management-groups&#34;&gt;Deploying to subscriptions and management groups&lt;/h1&gt;
+&lt;p&gt;To tell Bicep which scope to deploy to, use the &lt;code&gt;targetScope&lt;/code&gt; keyword, for example, managementGroup.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;re not specifying which management group exactly, this is done during deployment of the template file.&lt;/p&gt;
+&lt;p&gt;targetScope can be set to resourceGroup, subscription, managementGroup or tenant.&lt;/p&gt;
+&lt;p&gt;If it is not set, Bicep assumes resourceGroup.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-resource-group&#34;&gt;create a resource group&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bicep&#34; data-lang=&#34;bicep&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;targetScope&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;subscription&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;resource&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;resourceGroup&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Microsoft.Resources/resourceGroups@2021-01-01&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;example-resource-group&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;westus&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To deploy you use &lt;code&gt;az deployment group create&lt;/code&gt; for resource groups, but you use &lt;code&gt;az deployment sub create&lt;/code&gt; for subscriptions, &lt;code&gt;mg&lt;/code&gt; for management group and &lt;code&gt;tenant&lt;/code&gt; for tenant.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes: Intermediate Bicep</title>
+      <link>https://mischavandenburg.com/zet/intermediate-bicep/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/intermediate-bicep/</guid>
+      <description>&lt;p&gt;Today I finished the Intermediate Bicep module. Here are my notes.&lt;/p&gt;
+&lt;h1 id=&#34;child-and-extension&#34;&gt;Child and Extension&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&amp;rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes: Fundamentals of Bicep</title>
+      <link>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.&lt;/p&gt;
+&lt;h1 id=&#34;why-bicep&#34;&gt;Why Bicep?&lt;/h1&gt;
+&lt;p&gt;Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I passed the AZ-400 DevOps Expert today</title>
+      <link>https://mischavandenburg.com/zet/passed-az-400/</link>
+      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/passed-az-400/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m typing this 30 minutes after I passed my AZ-400 exam. I&amp;rsquo;m sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust. This one took about 70 hours of study.&lt;/p&gt;
+&lt;p&gt;I started preparing immediately after passing my AZ-104 exam, which was a good move. The AZ-400 requires you to know many details about Azure services and how to access them. For example, Shared Access Signatures are only used for accessing storage accounts, but they came up quite often as alternative answers to the questions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure DevOps Personal Access Tokens are always for authenticating into ADO</title>
+      <link>https://mischavandenburg.com/zet/azure-personal-access-tokens/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-personal-access-tokens/</guid>
+      <description>&lt;p&gt;The PAT (Personal Access Token) often comes up during practice tests for the AZ-400.&lt;/p&gt;
+&lt;p&gt;One way to remember when to use a PAT is that these are only for authenticating &lt;strong&gt;into&lt;/strong&gt; Azure DevOps, never to external services.&lt;/p&gt;
+&lt;p&gt;For example, you might get a question on connecting your Azure DevOps project with a GitHub account from Azure DevOps, and PAT will show up as one of the alternative answers. By remembering that PATs are only for authenticating into ADO, you can elminate this alternative, and make your choice easier.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to build and deploy a Docker container to an Azure VM using Azure Pipelines</title>
+      <link>https://mischavandenburg.com/zet/docker-to-azure-vm/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/docker-to-azure-vm/</guid>
+      <description>&lt;p&gt;I wanted to build an application from a Dockerfile and deploy it to a VM. I used a default Svelte setup as an example app.&lt;/p&gt;
+&lt;p&gt;Naturally, Azure prefers that you deploy containers to services such as Azure Container Instances or App Services, so they don&amp;rsquo;t provide modules for the pipelines to deploy to docker servers as far as I could tell.&lt;/p&gt;
+&lt;p&gt;I searched for a long time but I could not find a solution. In the end I just ran shell commands from the pipeline to run the container on on the server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to deploy to a Linux VM in Azure with Azure Pipelines</title>
+      <link>https://mischavandenburg.com/zet/azure-pipelines-deploy-vm/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-pipelines-deploy-vm/</guid>
+      <description>&lt;p&gt;To reach a VM from Azure Pipelines, you need to set up an environment.&lt;/p&gt;
+&lt;p&gt;Create your Linux VM in Azure.&lt;/p&gt;
+&lt;p&gt;In Azure DevOps, click envirnoments, new, and select the Virtual Machine option.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mischavandenburg.com/env1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A command is generated for you. SSH into your VM and run the command.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mischavandenburg.com/env2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now the VM should show up under environments in Azure DevOps.&lt;/p&gt;
+&lt;p&gt;Set up a repo with an azure-pipelines.yml with these contents to test. under &lt;code&gt;environment&lt;/code&gt;, set the same name as you did in Azure DevOps for your environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Application Insights: Telemetry Sampling</title>
+      <link>https://mischavandenburg.com/zet/application-insights-sampling/</link>
+      <pubDate>Tue, 03 Jan 2023 08:41:09 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/application-insights-sampling/</guid>
+      <description>&lt;p&gt;Telemetry is the collection of measurements or other data at remote points, and transmitting that data to a receiver for monitoring.&lt;/p&gt;
+&lt;p&gt;Sampling is used to reduce telemetry traffic and costs for storage and data in Application Insights.&lt;/p&gt;
+&lt;p&gt;For small and medium sized applications sampling is generally not necessary.&lt;/p&gt;
+&lt;p&gt;Advantages of sampling:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Throttling data when the application suddenly sends a high volume of telemetry in a short time
+&lt;ul&gt;
+&lt;li&gt;This saves costs!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Keeping a pricing tier quota&lt;/li&gt;
+&lt;li&gt;Reduce network traffic from telemetry collection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Three different kinds of sampling:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pipelines: Continuous Monitoring</title>
+      <link>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</link>
+      <pubDate>Tue, 03 Jan 2023 08:30:03 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/pipelines-continuous-monitoring/</guid>
+      <description>&lt;p&gt;This term can be confusing. Initially I thought it meant monitoring of the pipelines themselves. However, in the context of Azure Release Pipelines, continuous monitoring refers to something else.&lt;/p&gt;
+&lt;p&gt;Continuous monitoring leverages metrics from other services such as Application Insights. You can set up release gates based on these metrics. For example, you can set up a release gate to roll back the deployment if an alert is being fired for high CPU usage in the application.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Distributed Tracing</title>
+      <link>https://mischavandenburg.com/zet/distributed-tracing/</link>
+      <pubDate>Tue, 03 Jan 2023 07:58:44 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/distributed-tracing/</guid>
+      <description>&lt;p&gt;Debugging is done using &lt;a href=&#34;https://mischavandenburg.com/zet/call-stacks/&#34;&gt;call stacks&lt;/a&gt; in monolithic applications. Nowadays it is more common to deploy an application using a microservices architecture. Microservices make it easier to update certain parts of the application, and allow for more frequent deployments.&lt;/p&gt;
+&lt;p&gt;Using microservices does have a disadvantage: you cannot use the local call stack for debugging, because calls are sent to different microservices.&lt;/p&gt;
+&lt;p&gt;Distributed tracing is an implementation of the call stack in the cloud. It is usually implemented by adding an agent, &lt;a href=&#34;https://mischavandenburg.com/zet/sdk/&#34;&gt;SDK&lt;/a&gt;, or library to the service. In Azure you can enable distributed tracing via Application Insights through auto-instrumentation or SDKs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Study Guide: AZ-104 Azure Administrator Associate</title>
+      <link>https://mischavandenburg.com/zet/articles/az-104-study-guide/</link>
+      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
+      <description>&lt;h1 id=&#34;tldr&#34;&gt;TLDR&lt;/h1&gt;
+&lt;p&gt;It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck:
+&lt;a href=&#34;https://github.com/mischavandenburg/az-104-azure-administrator&#34;&gt;GitHub repo&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.&lt;/p&gt;
+&lt;p&gt;That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications. These tests are hard! I&amp;rsquo;m typing this while sitting on the bus on my way home from my AZ-104 exam. I passed with an 860 score of 1000, where 700 or higher is a pass. But it was an astonishingly tough exam. Usually, I finish quickly and spend at least half an hour reviewing my answers. I had only 5 minutes to review my questions this time because I had used up all of the available time. The questions required intense concentration and were time-consuming because I needed to compare many options which were very similar to each other. There were no easy questions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

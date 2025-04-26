@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Obsidian on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/obsidian/</link>
+    <description>Recent content in Obsidian on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 22 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remove Backgrounds from Images using MacOS Preview</title>
+      <link>https://mischavandenburg.com/zet/remove-background-image-macos/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/remove-background-image-macos/</guid>
+      <description>&lt;p&gt;Removing backgrounds from images is always an annoying task which I always need to google. And every time I end up on a different website where you can upload an image and then download a low-resolution version without the background, and you&amp;rsquo;ll have to pay for the high-resolution.&lt;/p&gt;
+&lt;p&gt;Turns out MacOS preview can do this just fine. I keep finding these little gems in MacOS that completely remove the need for any external app or saas. Such as Apple Reminders.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/python/</link>
+    <description>Recent content in Python on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Structs In Go - Similar To Classes In Python?</title>
+      <link>https://mischavandenburg.com/zet/go-struct-python-class/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-struct-python-class/</guid>
+      <description>&lt;p&gt;The Tour of Go is very clear:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Go does not have classes.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

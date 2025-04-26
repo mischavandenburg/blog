@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Terraform on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/terraform/</link>
+    <description>Recent content in Terraform on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Grafana Cloud with Entra ID authentication using Terraform</title>
+      <link>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-cloud-azure-ad/</guid>
+      <description>&lt;p&gt;Been working on a nice project lately. My current client has chosen to run Grafana Cloud and the instance was running in West US, which was leading to slower performance. I took up the project of provisioning a new instance in West Europe. Although I would have preferred to host Grafana ourselves or use Azure Managed Grafana, this is what the client has chosen so I that is what I&amp;rsquo;ll have to work with.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploying a Linux VM to Azure with Terraform</title>
+      <link>https://mischavandenburg.com/zet/terraform-linux-vm/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/terraform-linux-vm/</guid>
+      <description>&lt;p&gt;For a project I&amp;rsquo;m setting up my environment with Terraform.&lt;/p&gt;
+&lt;p&gt;I used &lt;a href=&#34;https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform&#34;&gt;this tutorial&lt;/a&gt;, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.&lt;/p&gt;
+&lt;p&gt;I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

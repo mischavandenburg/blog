@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cloud-Native on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/cloud-native/</link>
+    <description>Recent content in Cloud-Native on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/cloud-native/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discovered a simple CLI to backup and upload Grafana dashboards</title>
+      <link>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</guid>
+      <description>&lt;p&gt;This is a super useful tool to list, download and upload Grafana dashboards as json.&lt;/p&gt;
+&lt;p&gt;Currently using this to occasionally take extra-extra backups of my Grafana creations&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://software.es.net/gdg/&#34;&gt;https://software.es.net/gdg/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312301612&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Viewing Strava Data In Grafana Dashboards</title>
+      <link>https://mischavandenburg.com/zet/video-strava-grafana/</link>
+      <pubDate>Wed, 27 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-strava-grafana/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/CgP9hs9UDzA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I&amp;rsquo;ll show you how to view your Strava data in Grafana by doing the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;creating an application in Strava&lt;/li&gt;
+&lt;li&gt;installing the Strava plugin in Grafana&lt;/li&gt;
+&lt;li&gt;adding the Strava data source&lt;/li&gt;
+&lt;li&gt;importing dashboards&lt;/li&gt;
+&lt;li&gt;exploring data and creating custom dashboard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312250812&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Talk: Avoiding Microservice Megadisasters by Jimmy Bogard</title>
+      <link>https://mischavandenburg.com/zet/talk-avoiding-microservice-disasters/</link>
+      <pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/talk-avoiding-microservice-disasters/</guid>
+      <description>&lt;p&gt;Watched this very insightful talk on microservice architecture.&lt;/p&gt;
+&lt;p&gt;Some things I learned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;microservices should be &lt;strong&gt;autonomous&lt;/strong&gt;: they should have minimal dependencies on other microservices&lt;/li&gt;
+&lt;li&gt;if they have dependencies they should only be 1 layer deep
+&lt;ul&gt;
+&lt;li&gt;a microservice should not be calling another microservice which calls another microservice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;dependencies can be reversed by pushing data towards the service
+&lt;ul&gt;
+&lt;li&gt;for example: a pricing database can be dumped and pushed to a catalog service once a day&lt;/li&gt;
+&lt;li&gt;data duplication is not a sin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another powerful point he made is that the architecture is a reflection from the organization&amp;rsquo;s structure. He explained that the company was organized in teams and that managers of teams were promoted based on the amount of people they managed. This meant that managers were making up services which needed people to build them, which led to a proliferation of services and dependencies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ensure Cgroupsv2 compatiblity when containerizing old apps</title>
+      <link>https://mischavandenburg.com/zet/ensure-cgroupsv2-compatibility/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/ensure-cgroupsv2-compatibility/</guid>
+      <description>&lt;p&gt;Are you currently working with containerizing older Java or .NET applications? From Kubernetes 1.29, the default cgroups implementation on Azure Linux AKS nodes will be cgroupsv2. Older versions of Java, .NET and NodeJS do not support memory querying v2 memory constraints and this will lead to out of memory (OOM) issues for workloads.&lt;/p&gt;
+&lt;p&gt;Please make sure that your older containerized applications are compatible with cgroupsv2 or you might be in quite some pain in the future.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>You Can Abort Operations on AKS Clusters Now</title>
+      <link>https://mischavandenburg.com/zet/aks-abort-operation/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/aks-abort-operation/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s now possible to abort long running operations on AKS clusters. It was released as Generally Available.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;az aks operation-abort --name myAKSCluster --resource-group myResourceGroup&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202304270704&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/generally-available-operation-abort-in-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Outlining My First Go Project</title>
+      <link>https://mischavandenburg.com/zet/go-twitter-cli-project/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-twitter-cli-project/</guid>
+      <description>&lt;p&gt;When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.&lt;/p&gt;
+&lt;p&gt;Over the past few months I&amp;rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mischavandenburg/twitter-cli&#34;&gt;https://github.com/mischavandenburg/twitter-cli&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/mischa_vdburg&#34;&gt;https://twitter.com/mischa_vdburg&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;twitter-cli&#34;&gt;Twitter CLI&lt;/h1&gt;
+&lt;p&gt;Programs should solve a problem. My problem has to do with Twitter. I recently created a Twitter account, and I want to make a tweet whenever I publish something new on my website. I&amp;rsquo;m currently doing this by hand, and that needs to stop, obviously.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kubernetes Resource Management for Pods and Containers - CPU and Memory</title>
+      <link>https://mischavandenburg.com/zet/kubernetes-resource-management-pods-containers/</link>
+      <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/kubernetes-resource-management-pods-containers/</guid>
+      <description>&lt;p&gt;Pods have containers, and limits can be set on those containers.&lt;/p&gt;
+&lt;h1 id=&#34;requests&#34;&gt;Requests&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;used by the kube-scheduler to determine where the Pod will be placed&lt;/li&gt;
+&lt;li&gt;containers can use more than requested resources if it is available on node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If a limit is specified, but no request, Kubernetes will use the limit value as the request value.&lt;/p&gt;
+&lt;h1 id=&#34;limits&#34;&gt;Limits&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;containers may never use more than the set limit&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;enforced by kubelet and container&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Difference Between DevOps, Cloud and Cloud Native</title>
+      <link>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/cloud-cloudnative-devops/</guid>
+      <description>&lt;p&gt;I found &lt;a href=&#34;https://youtu.be/gyjRriOyw-k&#34;&gt;an excellent video&lt;/a&gt; by Rob Muhlenstein explaining the differences between Cloud, Cloud Native and DevOps. Here are the notes I wrote.&lt;/p&gt;
+&lt;h1 id=&#34;cloud&#34;&gt;Cloud&lt;/h1&gt;
+&lt;p&gt;These are primarily &lt;em&gt;cloud services&lt;/em&gt;. The external cloud.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Something as a Service&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amazon&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;li&gt;GCP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;cloud-native&#34;&gt;Cloud Native&lt;/h1&gt;
+&lt;p&gt;This is Cloud Native: &lt;a href=&#34;https://landscape.cncf.io/&#34;&gt;The CNCF Landscape&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cloud Native is the technology that makes the cloud possible, and all the technology dependent on those services.&lt;/p&gt;
+&lt;h2 id=&#34;computing&#34;&gt;Computing&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Edge Computing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;High Performance Computing&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

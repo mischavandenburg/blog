@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>All Articles on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/zet/articles/</link>
+    <description>Recent content in All Articles on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/zet/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Multiple Docker Images Using Automatic Versioning Using GitHub Actions</title>
+      <link>https://mischavandenburg.com/zet/articles/building-multiple-docker-images-using-automatic-versioning-using-github-actions/</link>
+      <pubDate>Tue, 30 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/building-multiple-docker-images-using-automatic-versioning-using-github-actions/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m working on a project where I&amp;rsquo;m migrating an Azure Pipeline to GitHub Actions. So far I&amp;rsquo;ve found the GitHub Actions very intuitive to work with and it was a very easy transition from Azure Pipelines.&lt;/p&gt;
+&lt;p&gt;One requirement was to increase the version with every build. In the previous setup they were using the build ID, but I&amp;rsquo;m an advocate of always using semantic versioning if possible, so I wondered if this could be done using the GitHub Actions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Comparing akv2k8s with Azure Key Vault Provider for Secret Store CSI Driver</title>
+      <link>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</guid>
+      <description>&lt;p&gt;In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.&lt;/p&gt;
+&lt;p&gt;Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges. Notably, the latest version of akv2k8s has been problematic, especially concerning the deployment of Postgres databases on our AKS clusters using the EDB operator. Akv2k8s alters the SecurityContext of pods in a way that causes them to fail.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kubernetes Gateway API &amp; Azure Application Gateway for Containers</title>
+      <link>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/gateway-api-application-gateway-for-containers/</guid>
+      <description>&lt;p&gt;This document is the result of my research into the Gateway API. It aims to briefly describe the Gateway API for Kubernetes, a typical implementation of ingress traffic using NGINX in AKS and how this setup could benefit from implementing the Gateway API.&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Gateway API is an official Kubernetes project focused on L4 and L7 routing in Kubernetes. This project represents the next generation of Kubernetes Ingress, Load Balancing, and Service Mesh APIs. From the outset, it has been designed to be generic, expressive, and role-oriented.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes: Fundamentals of Bicep</title>
+      <link>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.&lt;/p&gt;
+&lt;h1 id=&#34;why-bicep&#34;&gt;Why Bicep?&lt;/h1&gt;
+&lt;p&gt;Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lab VM project - Install ArgoCD to your Kubernetes cluster</title>
+      <link>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/lab-vm-install-argocd/</guid>
+      <description>&lt;p&gt;This guide uses the official getting started guide with a few modifications. This installation is only for lab purposes. Running ArgoCD in a production environment requires more configuration.&lt;/p&gt;
+&lt;h2 id=&#34;install-argocd-and-argocd-cli&#34;&gt;Install argocd and argocd cli&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl create namespace argocd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;My VM is running on arm architecture, so I need these commands to install the argocd cli on ubuntu.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -sSL -o argocd-linux-arm64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo install -m &lt;span class=&#34;m&#34;&gt;555&lt;/span&gt; argocd-linux-arm64 /usr/local/bin/argocd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm argocd-linux-arm64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Change the service type to LoadBalancer&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up a Kubernetes cluster on an Ubuntu 20.04 VM with containerd and flannel</title>
+      <link>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/simple-cluster-on-ubuntu-vm/</guid>
+      <description>&lt;p&gt;You can get a free 24GB ram VM from Oracle. What better place for your own Kubernetes lab that is always available? See &lt;a href=&#34;https://mischavandenburg.com/zet/free-oracle-vm.md&#34;&gt;this article&lt;/a&gt; to create your VM.&lt;/p&gt;
+&lt;p&gt;Here are the steps I took to install a single node kubernetes cluster on the Ubuntu VM.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install apt-transport-https curl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install containerd&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkdir -p /etc/apt/keyrings
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://download.docker.com/linux/ubuntu/gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;deb [arch=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;dpkg --print-architecture&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;lsb_release -cs&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; stable&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install containerd.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remove the default containerd configuration, because it creates errors when running kubeadm init.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up a new LUKS encrypted disk with dm-crypt in Arch Linux</title>
+      <link>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</link>
+      <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</guid>
+      <description>&lt;p&gt;Today I added a harddisk I had lying around because I needed some more space. On my Arch Linux system I have all my drives encrypted like a good boy. It can be a bit tricky when you are adding them because you need to configure a few different files and add different UUID&amp;rsquo;s in each of them.&lt;/p&gt;
+&lt;p&gt;Here are the steps I follow to add a new disk. Note that this how to assumes that you already have set up your system with dm-crypt.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Copyright and License</title>
+      <link>https://mischavandenburg.com/zet/articles/copyright-license/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/copyright-license/</guid>
+      <description>&lt;p&gt;All of the content on this blog is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).&lt;/p&gt;
+&lt;h1 id=&#34;you-are-free-to&#34;&gt;You are free to:&lt;/h1&gt;
+&lt;p&gt;Share — copy and redistribute the material in any medium or format&lt;/p&gt;
+&lt;h1 id=&#34;under-the-following-terms&#34;&gt;Under the following terms:&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Attribution&lt;/strong&gt; — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How This Blog is Created, Written and Hosted</title>
+      <link>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/how-this-blog-is-created/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;As I alluded to in my &lt;a href=&#34;https://mischavandenburg.com/zet/articles/obsidian-introduction&#34;&gt;article about Obsidian,&lt;/a&gt; I am very fond of editing my text in neovim. Naturally, if you want to edit in neovim, you need to have your text as local files. I keep all of my personal notes in markdown.&lt;/p&gt;
+&lt;p&gt;Previously I was using WordPress, but the editing and writing experience became torture which I could not endure any longer. I looked for a different solution that would allow me to edit my files locally instead of in the browser.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Obsidian: A Note Taking App For DevOps Engineers</title>
+      <link>https://mischavandenburg.com/zet/articles/obsidian-introduction/</link>
+      <pubDate>Sun, 01 Jan 2023 19:05:13 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/obsidian-introduction/</guid>
+      <description>&lt;p&gt;As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.&lt;/p&gt;
+&lt;p&gt;Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What Are Containers?</title>
+      <link>https://mischavandenburg.com/zet/articles/what-are-containers/</link>
+      <pubDate>Sun, 01 Jan 2023 16:17:58 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/what-are-containers/</guid>
+      <description>&lt;p&gt;When you learn about DevOps, you will come across the concept of a container early on. This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;
+&lt;h1 id=&#34;virtualization&#34;&gt;Virtualization&lt;/h1&gt;
+&lt;p&gt;To understand containers, we need to understand virtualization. Virtualization is the process of creating &amp;ldquo;fake computers&amp;rdquo; or &amp;ldquo;virtual computers&amp;rdquo; on a physical computer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting Started with Neovim: kickstart.nvim</title>
+      <link>https://mischavandenburg.com/zet/articles/kickstart-nvim/</link>
+      <pubDate>Sun, 01 Jan 2023 09:11:57 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/kickstart-nvim/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using neovim for over a year now, and I&amp;rsquo;m very happy that I went through the initial difficulty of learning vim. One of the best perks of using neovim is that you can customize your entire editing experience and workflow. However, it can be a daunting experience to start with an empty configuration and set up everything from scratch.&lt;/p&gt;
+&lt;p&gt;I started with an empty vanilla vim config and slowly added the plugins as I went along. Videos by content creators such as ThePrimagen were also helpful in getting inspiration on which plugins I might like for my setup. But this might not be suitable for everyone. I was only editing yaml files and writing simple Python scripts at the time, whereas you might be looking for an IDE experience out of the box.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Study Guide: AZ-104 Azure Administrator Associate</title>
+      <link>https://mischavandenburg.com/zet/articles/az-104-study-guide/</link>
+      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
+      <description>&lt;h1 id=&#34;tldr&#34;&gt;TLDR&lt;/h1&gt;
+&lt;p&gt;It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck:
+&lt;a href=&#34;https://github.com/mischavandenburg/az-104-azure-administrator&#34;&gt;GitHub repo&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.&lt;/p&gt;
+&lt;p&gt;That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications. These tests are hard! I&amp;rsquo;m typing this while sitting on the bus on my way home from my AZ-104 exam. I passed with an 860 score of 1000, where 700 or higher is a pass. But it was an astonishingly tough exam. Usually, I finish quickly and spend at least half an hour reviewing my answers. I had only 5 minutes to review my questions this time because I had used up all of the available time. The questions required intense concentration and were time-consuming because I needed to compare many options which were very similar to each other. There were no easy questions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lab Project: GitOps with ArgoCD, Azure Pipelines and Minikube</title>
+      <link>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</link>
+      <pubDate>Sat, 24 Dec 2022 13:49:55 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/lab-argocd-azure-pipelines/</guid>
+      <description>&lt;p&gt;This weekend I had a lot of fun with a project. I wanted to learn more about GitOps and try out ArgoCD.&lt;/p&gt;
+&lt;p&gt;My goal was to be able to deploy an application from a GitHub repo to my local Kubernetes cluster running in minikube. There are many options I could have used, such as running Jenkins in my cluster. But I wanted to use Azure pipelines for practice, which complicates the deployment to my local cluster, because the cluster is not running on Azure. I also wanted to try out ArgoCD and learn more about GitOps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tokens and Identity on the Internet</title>
+      <link>https://mischavandenburg.com/zet/articles/identity/</link>
+      <pubDate>Sun, 18 Dec 2022 00:55:47 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/identity/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Have you ever thought about your identity on the internet? How does LinkedIn know it is you when you log in to LinkedIn? And when you allow LinkedIn to post to your Twitter, how does LinkedIn access your account and not your kindergarten teacher&amp;rsquo;s account?&lt;/p&gt;
+&lt;p&gt;This is a &amp;ldquo;Mischa Explains&amp;rdquo; article where I attempt to explain a concept in my own words as simply as possible. I use the Feynman technique and pretend to explain it to a 12-year-old.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Podcast Tip: The system that runs Norway&#39;s welfare payments</title>
+      <link>https://mischavandenburg.com/zet/articles/nav-podcast/</link>
+      <pubDate>Fri, 02 Dec 2022 20:45:46 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/nav-podcast/</guid>
+      <description>&lt;p&gt;An interesting podcast episode describing the system that runs Norway&amp;rsquo;s welfare payments. It was interesting to hear that they focus on open source and that everything runs one one big kubernetes cluster.&lt;/p&gt;
+&lt;p&gt;It was also very inspiring to hear that they went from 4 nightly deployments a year to 1700 deployments a week.&lt;/p&gt;
+&lt;p&gt;Link to the podcast episode:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://changelog.com/shipit/78&#34;&gt;The system that runs Norway&amp;rsquo;s welfare payments&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Book Notes: Ikigai: The Japanese Secret to a Long and Happy Life</title>
+      <link>https://mischavandenburg.com/zet/articles/ikigai-book/</link>
+      <pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/ikigai-book/</guid>
+      <description>&lt;p&gt;I came across this little book while doing some research for my &lt;a href=&#34;https://mischavandenburg.com/zet/articles/jiro-sushi&#34;&gt;Jiro Dreams of Sushi article.&lt;/a&gt; While scanning the book&amp;rsquo;s description, I was intrigued by this sentence: &amp;ldquo;the happiness of always being busy.&amp;rdquo; Although I work hard every day, I also enjoy ticking off the last item on my to-do list and enjoying some rest. Is there more happiness in being in constant activity?&lt;/p&gt;
+&lt;h2 id=&#34;ikigai&#34;&gt;Ikigai&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&amp;ldquo;He who has a why to live for can bear with almost any how.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Book Notes: The Unicorn Project</title>
+      <link>https://mischavandenburg.com/zet/articles/unicorn-project/</link>
+      <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/unicorn-project/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Unicorn Project&#34; loading=&#34;lazy&#34; src=&#34;https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91UM5i4nirL.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This book is the sequel to &lt;a href=&#34;https://mischavandenburg.com/zet/articles/phoenix-project&#34;&gt;the Phoenix project&lt;/a&gt;. Both books are set at Parts Unlimited, a fictitious company that supplies car parts to DIY mechanics and repair shops. Phoenix is a new system that Parts Unlimited has worked on for multiple years. It is supposed to handle order processing and communication between manufacturing, stores, and clients. Phoenix will also play a role in sales and marketing. The company has been gathering customer data for years, but it cannot use any of this data yet. Phoenix will enable it to generate targeted marketing campaigns from the data when it&amp;rsquo;s finished.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I&#39;m In Love with my Work: Lessons from a Japanese Sushi Master</title>
+      <link>https://mischavandenburg.com/zet/articles/jiro-sushi/</link>
+      <pubDate>Sat, 08 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/jiro-sushi/</guid>
+      <description>&lt;p&gt;Last week I watched &amp;ldquo;Jiro Dreams of Sushi&amp;rdquo; again. It must be the eighth time I revisited this piece of art. I have very little interest in sushi, but there is much more to this documentary. It was first recommended to me by my good friend Anders more than five years ago, but I couldn&amp;rsquo;t grasp its underlying life lessons the first time around.&lt;/p&gt;
+&lt;p&gt;Even though I couldn&amp;rsquo;t fully understand the message, I was intrigued by it and kept returning to the documentary. Over the years, I managed to grasp more of its deeper meaning. The documentary is about Jiro: one of the best sushi chefs in the world. His tiny restaurant, located in a subway station, even received a 3 Michelin star rating. So how does a man operating from a subway restaurant become the best in the world? And what can a DevOps Engineer learn from a sushi chef?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How and Why I Started Using Vim</title>
+      <link>https://mischavandenburg.com/zet/articles/how-started-vim/</link>
+      <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/how-started-vim/</guid>
+      <description>&lt;p&gt;If you are just starting your Linux journey, you might have noticed that a few camps exist in the Linux world. Just like in any other area of life, it seems that groups of human beings enjoy dividing themselves instead of living in harmony. There are camps centered around Linux distributions (I use Arch, btw) but also around text editors.&lt;/p&gt;
+&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;
+&lt;p&gt;The reason why I started to use vim is rather practical. When I was studying to become a Cloud Engineer, I had access to subscriptions on AWS and Azure to experiment with virtual machines. This was a perfect place to learn to work with Ansible. Many of the labs projects I did involved setting up a few virtual machines, and I destroyed many VMs when I made some big mistakes in the configuration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Book Notes: The Phoenix Project</title>
+      <link>https://mischavandenburg.com/zet/articles/phoenix-project/</link>
+      <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/phoenix-project/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Phoenix Project&#34; loading=&#34;lazy&#34; src=&#34;https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/914-sUgELZL.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When I started my DevOps traineeship, I borrowed this book from my boss and read it from cover to cover. I loved the story and the characters; it helped me understand &amp;ldquo;the old way&amp;rdquo; of doing things and the merits of implementing DevOps principles.&lt;/p&gt;
+&lt;p&gt;I reread the book ten months later. In the meantime, I&amp;rsquo;ve learned many new skills and technologies and started working full-time as a DevOps engineer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Certified Kubernetes Administrator (CKA) Exam Tips</title>
+      <link>https://mischavandenburg.com/zet/articles/cka-tips/</link>
+      <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/cka-tips/</guid>
+      <description>&lt;p&gt;I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building my Own OS: Linux as a Creative Activity</title>
+      <link>https://mischavandenburg.com/zet/articles/linux-creativity/</link>
+      <pubDate>Sat, 10 Sep 2022 12:22:28 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/linux-creativity/</guid>
+      <description>&lt;p&gt;&lt;em&gt;NOTE: In this article, I use a rather broad definition of “Operating System.” I do not intend to appear as if I wrote and compiled my own Linux kernel, nor do I understand the inner workings of the kernel written in C. Instead, with “building my OS from scratch,” I intend to convey that I used a minimal Linux distribution as a starting point and started building from there.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;introduction&lt;/h2&gt;
+&lt;p&gt;I started using GNU/Linux as a daily driver about six months ago, and I have not regretted the decision ever since. There has not been a single use case where I needed to use Windows for anything at all.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Upgrade Java and Jenkins on Ubuntu 18.04</title>
+      <link>https://mischavandenburg.com/how-to-upgrade-java-and-jenkins-on-ubuntu-18-04/</link>
+      <pubDate>Tue, 19 Jul 2022 18:01:26 +0000</pubDate>
+      <guid>https://mischavandenburg.com/how-to-upgrade-java-and-jenkins-on-ubuntu-18-04/</guid>
+      <description>&lt;p&gt;Last week I upgraded Jenkins to the latest version on the server infrastructure at work. Starting with the Jenkins 2.357 release, Java 11 or Java 17 &lt;a href=&#34;https://www.jenkins.io/blog/2022/06/28/require-java-11/&#34;&gt;will be required to run Jenkins&lt;/a&gt;. Also, the upcoming LTS release will require Java 11.&lt;/p&gt;
+&lt;p&gt;This means that I also needed to update Java on our Jenkins servers. Here are the steps that I did to perform the Jenkins and Java upgrade.&lt;/p&gt;
+&lt;p&gt;SSH into the server and stop the service. Then get the latest upgrades for your server, which is good practice:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>5 Reasons Why I Changed my Career to IT in my Thirties</title>
+      <link>https://mischavandenburg.com/5-reasons-why-i-changed-my-career-to-it-in-my-thirties/</link>
+      <pubDate>Mon, 04 Jul 2022 20:04:33 +0000</pubDate>
+      <guid>https://mischavandenburg.com/5-reasons-why-i-changed-my-career-to-it-in-my-thirties/</guid>
+      <description>&lt;p&gt;In this post, I’d like to share the five main reasons why I changed my career to IT in my thirties. Making a career change can be daunting, especially when you are past your twenties, and employers can get more skeptical of hiring and training you. However, when I passed my twenties and became more serious and intentional about my life and career, I decided to take the plunge and hope for the best. These are listed in no particular order.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How To Move Steam Game Files To a Separate Hard Drive on Linux</title>
+      <link>https://mischavandenburg.com/how-to-move-your-steam-game-files-to-a-separate-hard-drive-on-linux/</link>
+      <pubDate>Thu, 26 May 2022 09:03:44 +0000</pubDate>
+      <guid>https://mischavandenburg.com/how-to-move-your-steam-game-files-to-a-separate-hard-drive-on-linux/</guid>
+      <description>&lt;p&gt;I have installed my OS on a 240GB SSD, and I prefer to keep my data on a different disk to leave enough space to work with. I wanted to move my steam game files to a separate hard drive on Linux. I’ll show you what I did to make this happen in this article. I use Manjaro GNOME.&lt;/p&gt;
+&lt;p&gt;First, you need a correctly partitioned hard drive.&lt;/p&gt;
+&lt;p&gt;To wipe your drive clean and have a single partition on it, we’ll use GParted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Goodbye Windows, Hello Linux! Switching to Linux as my Daily Driver</title>
+      <link>https://mischavandenburg.com/goodbye-windows-hello-linux-switching-to-linux-as-my-daily-driver/</link>
+      <pubDate>Tue, 26 Apr 2022 06:38:57 +0000</pubDate>
+      <guid>https://mischavandenburg.com/goodbye-windows-hello-linux-switching-to-linux-as-my-daily-driver/</guid>
+      <description>&lt;p&gt;After getting my LPIC-1 certification, my interest in Linux continued to grow. When I started my new job, I performed more sysadmin tasks, such as increasing the size of filesystems or removing backups, and it felt good to put the theory into practice.&lt;/p&gt;
+&lt;p&gt;I was still using Windows in my personal setup, and I started running into limitations. Finally, I realized how much I appreciated the freedom and control over my system that Linux gave me. So I decided I wanted to switch to Linux for my daily operating system. But a few things were holding me back. Will I be able to play my favorite games? Will I run into a lot of problems with my sound and microphone? Are all the apps I need for working from home available on Linux? Can I even edit videos on Linux?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yadm: Keep Track of Your Precious Dotfiles</title>
+      <link>https://mischavandenburg.com/yadm-keep-track-of-your-precious-dotfiles/</link>
+      <pubDate>Sat, 02 Apr 2022 09:55:03 +0000</pubDate>
+      <guid>https://mischavandenburg.com/yadm-keep-track-of-your-precious-dotfiles/</guid>
+      <description>&lt;p&gt;This week I learned about &lt;a href=&#34;https://yadm.io&#34;&gt;yadm: yet another dotfile manager&lt;/a&gt;. It is the perfect way to keep track of all your custom configuration files, known as dotfiles.&lt;/p&gt;
+&lt;p&gt;Even if you have only a little bit of experience with Linux, you know that everything is managed in files. All configuration parameters are set or changed in text files stored on the hard disk. These files are usually located in your home directory and are hidden by default. This is indicated by prefixing the file with a period. So the configuration file for the vim editor is .vimrc, and for zshell you use the .zshrc. This is why configuration files are referred to as dotfiles.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LPIC-1 Study Guide</title>
+      <link>https://mischavandenburg.com/lpic-1-study-guide/</link>
+      <pubDate>Wed, 16 Mar 2022 21:20:19 +0000</pubDate>
+      <guid>https://mischavandenburg.com/lpic-1-study-guide/</guid>
+      <description>&lt;p&gt;I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me. This article offers a beginner’s perspective on the LPIC-1 certification. Is the LPIC-1 hard to pass? Keep reading to find out.&lt;/p&gt;
+&lt;p&gt;Before this certification, I had only a little bit of experience. I deployed LAMP stacks using Ansible and configured VMs to be able to communicate with each other using only the command line. I also did a “Linux Fundamentals” video training. I could navigate the filesystem, edit text files and work in the terminal, but that was about it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Contribution to Open Source</title>
+      <link>https://mischavandenburg.com/my-first-contribution-to-open-source/</link>
+      <pubDate>Fri, 18 Feb 2022 16:21:12 +0000</pubDate>
+      <guid>https://mischavandenburg.com/my-first-contribution-to-open-source/</guid>
+      <description>&lt;p&gt;Two months ago I knew nothing about GitHub. This week my first pull request got merged into master!&lt;/p&gt;
+&lt;p&gt;Programming tutorials and books very often suggest that you should try to contribute to open source in order to practice your skills. Even though I am still on the beginner level in Python, I managed to find something I could contribute with. But there were a few things I needed to learn in order to be able to do so.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Mirst Useful Python Script</title>
+      <link>https://mischavandenburg.com/my-first-useful-python-script/</link>
+      <pubDate>Sat, 05 Feb 2022 05:49:06 +0000</pubDate>
+      <guid>https://mischavandenburg.com/my-first-useful-python-script/</guid>
+      <description>&lt;p&gt;The best part of learning Python is trying to identify things in my life which I can automate by writing a script. Learning a programming language involves doing a lot of exercises that sometimes lack a connection with the real world. But after I decided to go for it, I am always on the lookout for projects. Not only for my job as a DevOps Engineer, but also for my private life. In this case, I needed to write a program that parses log files from a bot so I could get a total number of runs. You can have a look at the final result in my Diablo 2 &lt;a href=&#34;https://github.com/mischavandenburg/diablo2&#34;&gt;GitHub repo. &lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python Project: Mad Libs</title>
+      <link>https://mischavandenburg.com/python-project-mad-libs/</link>
+      <pubDate>Tue, 01 Feb 2022 21:41:28 +0000</pubDate>
+      <guid>https://mischavandenburg.com/python-project-mad-libs/</guid>
+      <description>&lt;p&gt;I am currently working through the book &lt;a href=&#34;https://automatetheboringstuff.com&#34;&gt;Automate the Boring Stuff&lt;/a&gt; by Al Sweigart . I can already highly recommend it to anybody who is learning Python.&lt;/p&gt;
+&lt;p&gt;Chapter 9 is about reading and writing files, and there are two assignments at the end of the chapter. Here I’ll discuss my solution of the Mad Libs assignment.&lt;/p&gt;
+&lt;h3 id=&#34;here-is-the-full-assignment-text&#34;&gt;here is the full assignment text:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Mad Libs
+Create a Mad Libs program that reads in text files and lets the user add their own text anywhere the word ADJECTIVE, NOUN, ADVERB, or VERB appears in the text file. For example, a text file may look like this:
+The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN was
+unaffected by these events.
+
+The program would find these occurrences and prompt the user to replace them.
+Enter an adjective:
+silly
+Enter a noun:
+chandelier
+Enter a verb:
+screamed
+Enter a noun:
+pickup truck
+
+The following text file would then be created:
+The silly panda walked to the chandelier and then screamed. A nearby pickup
+truck was unaffected by these events.
+
+The results should be printed to the screen and saved to a new text file.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Looks pretty simple, right? I went into it with a lot of zeal and started writing a long list of if statements. My first attempts at the solution involved matching the words NOUN and ADJECTIVE directly, like so:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker LEMP Stack deployed with Ansible</title>
+      <link>https://mischavandenburg.com/docker-lemp-stack-deployed-with-ansible/</link>
+      <pubDate>Sun, 30 Jan 2022 16:20:24 +0000</pubDate>
+      <guid>https://mischavandenburg.com/docker-lemp-stack-deployed-with-ansible/</guid>
+      <description>&lt;p&gt;In order to learn more about Docker and Ansible I am working on an assignment to take an existing application and to break it down into containers. However, in order to be able to understand this process properly, I first needed to understand more about Docker and containerisation.&lt;/p&gt;
+&lt;p&gt;I wrote a playbook that installs Docker and deploys a fully containerised LEMP stack on a virtual machine.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mischavandenburg/lemp_docker_ansible&#34;&gt;You can have a look at the Github repo with the result here. &lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why I Chose a Bear as a Logo</title>
+      <link>https://mischavandenburg.com/why-i-chose-a-bear-for-my-logo/</link>
+      <pubDate>Sun, 30 Jan 2022 11:53:21 +0000</pubDate>
+      <guid>https://mischavandenburg.com/why-i-chose-a-bear-for-my-logo/</guid>
+      <description>&lt;p&gt;I always struggled with finding an online nickname for myself. I was never given one, and over the years I used a few here and there, ranging from Nordic gods to my favourite fantasy character: Gandalf the Grey.&lt;/p&gt;
+&lt;p&gt;I intended to create a tech blog to document my journey ever since I started my career change. But for months I was stopped by trying to decide on a name. (That’s me in a nutshell), because it needed to be perfect. Eventually I decided to just use my full name.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Journey Into DevOps So Far</title>
+      <link>https://mischavandenburg.com/my-journey-into-devops-so-far/</link>
+      <pubDate>Fri, 28 Jan 2022 08:56:38 +0000</pubDate>
+      <guid>https://mischavandenburg.com/my-journey-into-devops-so-far/</guid>
+      <description>&lt;p&gt;In 2021 I had reached a certain stage in my life where I had the liberty to make a choice. I was 31 years old and had just finished an important chapter of my life, and was ready to begin a new one. After thinking about where I wanted to steer my professional career, I decided to follow my passion for programming and automation and attempt to make a career out of my interests in tech and IT.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

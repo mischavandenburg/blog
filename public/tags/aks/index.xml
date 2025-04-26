@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AKS on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/aks/</link>
+    <description>Recent content in AKS on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/aks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparing akv2k8s with Azure Key Vault Provider for Secret Store CSI Driver</title>
+      <link>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</guid>
+      <description>&lt;p&gt;In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.&lt;/p&gt;
+&lt;p&gt;Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges. Notably, the latest version of akv2k8s has been problematic, especially concerning the deployment of Postgres databases on our AKS clusters using the EDB operator. Akv2k8s alters the SecurityContext of pods in a way that causes them to fail.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PersistentVolumeClaims Lifecycle in Kubernetes</title>
+      <link>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/kubernetes-storage-pvc-pv/</guid>
+      <description>&lt;p&gt;I always thought that Persistent Volume Claims where deleted when you delete the pod which they are associated with. I was wrong. The lifecycle of PVCs is independent of Pods, and their behavior is largely governed by the Reclaim Policy set on the PVs. Here&amp;rsquo;s what you need to know:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PVCs&lt;/strong&gt;: These are requests for storage, akin to how Pods request resources like CPU and memory. They exist independently and can be bound to Pods when needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PVs&lt;/strong&gt;: Provisioned by administrators or dynamically through Storage Classes, PVs provide the actual storage resources. Their lifecycle is not tied to any specific Pod.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;understanding-reclaim-policies&#34;&gt;Understanding Reclaim Policies&lt;/h1&gt;
+&lt;p&gt;The Reclaim Policy on a PV dictates its fate after a PVC is released. There are three policies to be aware of:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Homelab Secret Management With GitOps and Azure Key Vault</title>
+      <link>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</guid>
+      <description>&lt;p&gt;In this blog post, I want to share with you how I set up secrets management for my &lt;a href=&#34;https://github.com/mischavandenburg/homelab/&#34;&gt;home lab&lt;/a&gt;. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Implementing Pod Disruption Budgets</title>
+      <link>https://mischavandenburg.com/zet/implementing-poddisruptionbudgets/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/implementing-poddisruptionbudgets/</guid>
+      <description>&lt;p&gt;When I was doing the first round of AKS cluster upgrades at my current client, I noticed we were running a lot of pods with only 1 replica. I always try to lift my clients to the next level by leveraging Cloud Native technologies as much as possible. I&amp;rsquo;m therefore starting a project to always run applications with multiple replicas.&lt;/p&gt;
+&lt;p&gt;However, running multiple replicas is not the only necessary improvement here. Even though a pod is running with multiple replicas, that does not mean that Kubernetes will always keep them alive. When you do an AKS cluster upgrade, nodes are drained one by one and the pods are moved to a node with the higher k8s version. Technically, when draining a node, Kubernetes could kill both of the pods at the same time if they are running on the same node.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>KEDA went GA for AKS!</title>
+      <link>https://mischavandenburg.com/zet/keda-ga/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/keda-ga/</guid>
+      <description>&lt;p&gt;Great news! KEDA finally went GA for AKS.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/aks/keda-about&#34;&gt;https://learn.microsoft.com/en-us/azure/aks/keda-about&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202311081711&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Backing up AKS Clusters with Azure Backup is now in preview</title>
+      <link>https://mischavandenburg.com/zet/aks-azure-backup-preview/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/aks-azure-backup-preview/</guid>
+      <description>&lt;p&gt;You can back up your AKS clusters using Azure Backup in preview! Preferably you have your clusters stateless and you can redeploy everything from code when sh*t hits the fan. However, I can think of a few enterprise use cases that will be relevant for this new feature.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup&#34;&gt;https://learn.microsoft.com/en-us/azure/backup/azure-kubernetes-service-cluster-backup&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202310130610&lt;/p&gt;
+&lt;p&gt;[[AKS]]&lt;/p&gt;
+&lt;p&gt;[[Kubernetes]]&lt;/p&gt;
+&lt;p&gt;[[Azure]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Interesting Features went GA on Azure</title>
+      <link>https://mischavandenburg.com/zet/azure-updates-sept-23/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-updates-sept-23/</guid>
+      <description>&lt;p&gt;Yesterday a few interesting AKS related features became Generally Available on Azure.&lt;/p&gt;
+&lt;p&gt;KEDA add-on makes it easier to scale your applications on AKS cluster.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/generally-available-keda-addon-for-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can have a flexible and customized strategy for node-level OS security updates.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/ga-node-os-patching-nodeimage-feature-in-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/ga-node-os-patching-nodeimage-feature-in-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Use Vertical Pod Autoscaling add-on for AKS to improve cost-efficiency, and cluster utilization for your workloads&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-aks/&#34;&gt;https://azure.microsoft.com/en-us/updates/ga-vertical-pod-autoscaling-addon-for-aks/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;preview&#34;&gt;Preview&lt;/h1&gt;
+&lt;p&gt;Public preview: AKS support for Kubernetes version 1.28&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/&#34;&gt;https://azure.microsoft.com/en-us/updates/public-preview-aks-support-for-kubernetes-version-128/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202309281009&lt;/p&gt;
+&lt;p&gt;[[Azure]]&lt;/p&gt;
+&lt;p&gt;[[Kubernetes]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pod Disruption Budgets Can Mess With Your AKS Updates</title>
+      <link>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/pod-disruption-budget-aks/</guid>
+      <description>&lt;p&gt;Past week we&amp;rsquo;ve been struggling a bit with poorly configured pod disruption budgets. When you do an AKS upgrade, a new node is created and one of the old nodes is drained.&lt;/p&gt;
+&lt;p&gt;If a deployment has a pod disruption budget which is incorrectly configured, it might show up as &lt;code&gt;ALLOWED DISRUPTIONS: 0&lt;/code&gt;. When this happens, the node cannot be drained and you will get an error message in your events.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Deploying AKS Cluster With Azure CNI Using Bicep</title>
+      <link>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</link>
+      <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-deploy-aks-with-azure-cni/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_U3HichIJ0Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video, I will show you how to use Bicep to deploy a Kubernetes cluster with custom network settings using the Azure CNI.&lt;/p&gt;
+&lt;p&gt;Azure CNI allows pods to be assigned IP addresses from Azure VNets which allows them to communicate with Azure resources directly through peered networks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Finishing Pipeline Setup  &amp; Working on KeyVault Template - Azure Kubernetes Lab Series</title>
+      <link>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Finish deploying keyvault using pipeline&lt;/li&gt;
+&lt;li&gt;Get the random name generation to work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Subscriptions need to be registered with resource providers, apparently&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled&lt;/li&gt;
+&lt;li&gt;Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;achieved&#34;&gt;Achieved&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting up connection between pipeline and Azure subscription&lt;/li&gt;
+&lt;li&gt;Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources)&lt;/li&gt;
+&lt;li&gt;Learned about provider registrations&lt;/li&gt;
+&lt;li&gt;Made progress on creating unique names for resources&lt;/li&gt;
+&lt;li&gt;Successfully deployed new resource group and key vault from the pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;next-time&#34;&gt;Next time:&lt;/h1&gt;
+&lt;p&gt;Look into random string creation with utcNow&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Setting Up A Simple Azure Pipeline To Deploy A Keyvault</title>
+      <link>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Write KeyVault template&lt;/li&gt;
+&lt;li&gt;Write pipeline code&lt;/li&gt;
+&lt;li&gt;set up Azure DevOps pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Always make sure to use &lt;code&gt;az deployment group&lt;/code&gt; instead of &lt;code&gt;az group deployment&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Because it has older Bicep version and will be deprecated&lt;/li&gt;
+&lt;li&gt;Make sure to be in correct Directory to be able to sync subscriptions for service connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202306302206&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim</title>
+      <link>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</guid>
+      <description>&lt;p&gt;Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202306271706&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=l0B65FUfNBU&#34;&gt;https://www.youtube.com/watch?v=l0B65FUfNBU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[[AKS]]
+[[Kubernetes]]
+[[Neovim]]
+[[bicep]]
+[[coding]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Introducing New Bicep Parameter Files - .bicepparam - No more JSON!</title>
+      <link>https://mischavandenburg.com/zet/video-bicep-bicepparam/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-bicep-bicepparam/</guid>
+      <description>&lt;p&gt;The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More readable and editor friendly&lt;/li&gt;
+&lt;li&gt;Cleaner and less lines of code&lt;/li&gt;
+&lt;li&gt;VSCode integration&lt;/li&gt;
+&lt;li&gt;Quickly convert from JSON or template file using VSCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is Azure CNI Overlay for AKS?</title>
+      <link>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-aks-cni-overlay/</guid>
+      <description>&lt;h1 id=&#34;cni&#34;&gt;CNI?&lt;/h1&gt;
+&lt;p&gt;CNI stands for Container Network Interface. It allows communication between pods and services.&lt;/p&gt;
+&lt;h2 id=&#34;current-azure-cni-limitations&#34;&gt;Current Azure CNI limitations&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s take a practical example. We have an enterprise environment where a large network is utilized, spanning multiple clouds and on-prem infrastructure hubs. To enable seamless communication across these sections, they must belong to the same network. As a result, specific IP address ranges are assigned to each section, with AWS, On-Prem A, and Azure each having their respective ranges.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

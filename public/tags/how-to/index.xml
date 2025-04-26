@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>How-To on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/how-to/</link>
+    <description>Recent content in How-To on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Run Newsboat in Zenmode</title>
+      <link>https://mischavandenburg.com/zet/newsboat-in-zenmode/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/newsboat-in-zenmode/</guid>
+      <description>&lt;p&gt;To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.&lt;/p&gt;
+&lt;p&gt;However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&amp;rsquo;ll notice that the text is always located in a middle column of the window, so you don&amp;rsquo;t have to move your neck while reading. At least, this is the case with well designed websites that serve text content.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up a new LUKS encrypted disk with dm-crypt in Arch Linux</title>
+      <link>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</link>
+      <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/new-luks-encrypted-disk/</guid>
+      <description>&lt;p&gt;Today I added a harddisk I had lying around because I needed some more space. On my Arch Linux system I have all my drives encrypted like a good boy. It can be a bit tricky when you are adding them because you need to configure a few different files and add different UUID&amp;rsquo;s in each of them.&lt;/p&gt;
+&lt;p&gt;Here are the steps I follow to add a new disk. Note that this how to assumes that you already have set up your system with dm-crypt.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to build and deploy a Docker container to an Azure VM using Azure Pipelines</title>
+      <link>https://mischavandenburg.com/zet/docker-to-azure-vm/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/docker-to-azure-vm/</guid>
+      <description>&lt;p&gt;I wanted to build an application from a Dockerfile and deploy it to a VM. I used a default Svelte setup as an example app.&lt;/p&gt;
+&lt;p&gt;Naturally, Azure prefers that you deploy containers to services such as Azure Container Instances or App Services, so they don&amp;rsquo;t provide modules for the pipelines to deploy to docker servers as far as I could tell.&lt;/p&gt;
+&lt;p&gt;I searched for a long time but I could not find a solution. In the end I just ran shell commands from the pipeline to run the container on on the server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to deploy to a Linux VM in Azure with Azure Pipelines</title>
+      <link>https://mischavandenburg.com/zet/azure-pipelines-deploy-vm/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-pipelines-deploy-vm/</guid>
+      <description>&lt;p&gt;To reach a VM from Azure Pipelines, you need to set up an environment.&lt;/p&gt;
+&lt;p&gt;Create your Linux VM in Azure.&lt;/p&gt;
+&lt;p&gt;In Azure DevOps, click envirnoments, new, and select the Virtual Machine option.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mischavandenburg.com/env1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A command is generated for you. SSH into your VM and run the command.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://mischavandenburg.com/env2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now the VM should show up under environments in Azure DevOps.&lt;/p&gt;
+&lt;p&gt;Set up a repo with an azure-pipelines.yml with these contents to test. under &lt;code&gt;environment&lt;/code&gt;, set the same name as you did in Azure DevOps for your environment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploying a Linux VM to Azure with Terraform</title>
+      <link>https://mischavandenburg.com/zet/terraform-linux-vm/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/terraform-linux-vm/</guid>
+      <description>&lt;p&gt;For a project I&amp;rsquo;m setting up my environment with Terraform.&lt;/p&gt;
+&lt;p&gt;I used &lt;a href=&#34;https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform&#34;&gt;this tutorial&lt;/a&gt;, but modified the code to make it simpler and easier to understand for beginners. The original uses a random module to generate random names, and generates a new SSH key. Also, this tutorial uses expensive VM tiers and Premium storage, which are not necessary when you are learning.&lt;/p&gt;
+&lt;p&gt;I also thought the SSH configuration was overcomplicated. My version just takes an SSH keypair stored at &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to follow symbolic links while searching with Telescope in neovim</title>
+      <link>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/neovim-telescope-follow-symlinks/</guid>
+      <description>&lt;p&gt;I use the &lt;a href=&#34;https://mischavandenburg.com/zet/articles/obsidian-introduction/&#34;&gt;Obsidian&lt;/a&gt; app, but I mostly write and search my notes with neovim. I added my zet directory from this blog repo into the Obsidian vault as a symbolic link, but I soon discovered that these files were not being searched.&lt;/p&gt;
+&lt;p&gt;Telescope.nvim uses ripgrep (rg) to do the live grepping in its search, and ripgrep does not follow symbolic links by default. You need to pass the -L flag to it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to install the Openstack CLI on Linux</title>
+      <link>https://mischavandenburg.com/zet/install-openstack-cli/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/install-openstack-cli/</guid>
+      <description>&lt;p&gt;Make sure to have pip installed.&lt;/p&gt;
+&lt;p&gt;Run &lt;code&gt;pip install python-openstackclient&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Pip will install a binary called &amp;ldquo;openstack&amp;rdquo; in ~/.local/bin&lt;/p&gt;
+&lt;p&gt;If the openstack command is not available in your session, you might need to add it to your PATH:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;export PATH=&amp;quot;$HOME/.local/bin:$PATH&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Add this to your ~/.zshrc or ~/.bashrc to make sure this happens for each shell session.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t forget to source your updated ~/.zshrc if you chose to add it:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;source ~/.zshrc&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Reset a VM Root Password using the Openstack CLI</title>
+      <link>https://mischavandenburg.com/zet/openstack-root-password/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/openstack-root-password/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;Download the Openstack RC file from the Openstack portal. Click your username in the top right corner to find it.&lt;/li&gt;
+&lt;li&gt;Source the RC file to make the environment variables avaialable to your current session: &lt;code&gt;source ~/my_openstack.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Find the instance ID of your VM from the portal.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;openstack server set --root-password be3xxxx5-8348-418b-xxxb-c4xxxx575cd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;You will be prompted for the new password which will be set on the virtual machine.&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>How to run installed pip packages as binaries</title>
+      <link>https://mischavandenburg.com/zet/run-installed-pip-packages/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/run-installed-pip-packages/</guid>
+      <description>&lt;p&gt;When you install a pip package which is meant to be run from the command line as a command, you might find that it is not available to you after installation.&lt;/p&gt;
+&lt;p&gt;If this happens, it might be that the path is missing from your PATH variable. Therefore, the shell does not source these binaries when initiated, and does not know that these executables exist.&lt;/p&gt;
+&lt;p&gt;You can find the location of your binaries by running &lt;code&gt;pip show package_name&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

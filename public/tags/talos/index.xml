@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Talos on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/talos/</link>
+    <description>Recent content in Talos on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/talos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Talos Homelab Upgrade Guide October</title>
+      <link>https://mischavandenburg.com/zet/talos-homelab-upgrade-guide-october/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/talos-homelab-upgrade-guide-october/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Remember to create a custom image including iscsi-tools when using the Synology CSI driver&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;set-up-cli-environment-and-set-databases-to-maintenance-mode&#34;&gt;Set up CLI environment and set databases to maintenance mode&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_CP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.107&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.245&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.60&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.228&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Set databases to maintenance mode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;k cnp maintenance &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --all-namespaces
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+Use the &lt;code&gt;--preserve&lt;/code&gt; flag on single-node control plane clusters.
+Only needed for the control plane node.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;upgrade-path&#34;&gt;Upgrade path&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;from 1.7.5 to 1.7.7&lt;/li&gt;
+&lt;li&gt;from 1.7.7 to 1.8.2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;upgrade-1&#34;&gt;Upgrade 1&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_IMAGE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac:v1.7.7&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;talosctl upgrade --preserve --nodes &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; --image &lt;span class=&#34;nv&#34;&gt;$TALOS_IMAGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;talosctl upgrade --wait --debug --nodes &lt;span class=&#34;nv&#34;&gt;$TALOS_W1&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; --image &lt;span class=&#34;nv&#34;&gt;$TALOS_IMAGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;talosctl upgrade --wait --debug --nodes &lt;span class=&#34;nv&#34;&gt;$TALOS_W2&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; --image &lt;span class=&#34;nv&#34;&gt;$TALOS_IMAGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;talosctl upgrade --wait --debug --nodes &lt;span class=&#34;nv&#34;&gt;$TALOS_W3&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; --image &lt;span class=&#34;nv&#34;&gt;$TALOS_IMAGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;upgrade-2&#34;&gt;Upgrade 2&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_IMAGE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac:v1.8.2&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;talosctl upgrade --preserve --nodes &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; --image &lt;span class=&#34;nv&#34;&gt;$TALOS_IMAGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;talosctl upgrade --nodes &lt;span class=&#34;nv&#34;&gt;$TALOS_W1&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; --image &lt;span class=&#34;nv&#34;&gt;$TALOS_IMAGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;talosctl upgrade --nodes &lt;span class=&#34;nv&#34;&gt;$TALOS_W2&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; --image &lt;span class=&#34;nv&#34;&gt;$TALOS_IMAGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;talosctl upgrade --nodes &lt;span class=&#34;nv&#34;&gt;$TALOS_W3&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$TALOS_CP&lt;/span&gt; --image &lt;span class=&#34;nv&#34;&gt;$TALOS_IMAGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;kubernetes-upgrade&#34;&gt;Kubernetes Upgrade&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+Make sure to upgrade the Talos CLI before proceeding.
+&amp;ldquo;It is advisable to use the same version of talosctl as the version of the boot media used.&amp;rdquo; - Talos Docs&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Talos Linux Upgrade Guide July</title>
+      <link>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</guid>
+      <description>&lt;p&gt;I upgraded my homelab cluster using Talos Linux today.&lt;/p&gt;
+&lt;p&gt;I made a mistake and forgot to use the custom-built image using iscsi-tools.&lt;/p&gt;
+&lt;p&gt;Learning the hard way.&lt;/p&gt;
+&lt;p&gt;Here are my notes:&lt;/p&gt;
+&lt;h2 id=&#34;talos-upgrade&#34;&gt;Talos upgrade&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Remember to create a custom image including iscsi-tools&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;set-up-cli-environment-and-set-databases-to-maintenance-mode&#34;&gt;Set up CLI environment and set databases to maintenance mode&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_CP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.107&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.245&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.60&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;k cnp maintenance &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --all-namespaces
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+Use the &lt;code&gt;--preserve&lt;/code&gt; flag on single-node control plane clusters.
+Only needed for the control plane node.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

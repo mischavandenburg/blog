@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cilium on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/cilium/</link>
+    <description>Recent content in Cilium on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/cilium/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learned Cilium Network Policies</title>
+      <link>https://mischavandenburg.com/zet/cilium-network-policies/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/cilium-network-policies/</guid>
+      <description>&lt;p&gt;Today I learned about Cilium network policies. These are much easier to implement than normal network policies because there are some tools available when creating the cilium policies. Network policies were probably my weakest Kubernetes skill and I tended to avoid them.&lt;/p&gt;
+&lt;p&gt;But now I&amp;rsquo;m exposing some apps to the internet in my homelab and I&amp;rsquo;m forced to think about security and what would happen if a hacker managed to get root privileges in a container even though I implemented strict security contests and enabled privilege escalation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,13 +1,16 @@
 baseURL: "https://mischavandenburg.com/"
 title: Mischa van den Burg
-paginate: 20
-theme: PaperModX
-
+# paginate: 20
+# theme: PaperModX
+theme: PaperMod
+# theme: archie
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: true
 buildExpired: true
 pygmentsUseClasses: true
+
+ignoreLogs: ["warning-goldmark-raw-html"]
 
 services:
   googleAnalytics:
@@ -133,23 +136,23 @@ menu:
       name: "About"
       url: /aboutme/
       weight: 10
-    - identifier: Services
-      name: "Services"
-      url: /services/
-      weight: 13
-   #  - identifier: Coaching
-   #    name: "Coaching"
-   #    url: /coaching/
-   #    weight: 14
-    - identifier: Courses
-      name: "Courses"
-      url: /courses/
-      weight: 15
-    - identifier: Contact
-      name: "Contact"
-      url: /contact/
-      weight: 17
-    # - identifier: Current
+    # - identifier: Services
+    #   name: "Services"
+    #   url: /services/
+    #   weight: 13
+    #  - identifier: Coaching
+    #    name: "Coaching"
+    #    url: /coaching/
+    #    weight: 14
+    # - identifier: Courses
+    #   name: "Courses"
+    #   url: /courses/
+    #   weight: 15
+    # - identifier: Contact
+    #   name: "Contact"
+    #   url: /contact/
+    #   weight: 17
+    # # - identifier: Current
     #   name: "Current"
     #   url: /current/
     #   weight: 15

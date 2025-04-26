@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Security on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/security/</link>
+    <description>Recent content in Security on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I set up Pi-hole on my Synology NAS</title>
+      <link>https://mischavandenburg.com/zet/i-set-up-pi-hole-on-my-synology-nas/</link>
+      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/i-set-up-pi-hole-on-my-synology-nas/</guid>
+      <description>&lt;p&gt;Transition to manifest V3 is now starting and Ublock Origin might not be supported in Chrome in the future.&lt;/p&gt;
+&lt;p&gt;Because of my transition from a mouse to a pen tablet, I&amp;rsquo;ve already been experimenting with Qutebrowser for the past couple of weeks and I really enjoy it. It feels much closer to vim because I can run commands like this: &amp;ldquo;:set darkmode&amp;rdquo; which feels familiar and I can search my history very easily.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Starting my CKS studies</title>
+      <link>https://mischavandenburg.com/zet/starting-cks-studies/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/starting-cks-studies/</guid>
+      <description>&lt;p&gt;It seems like I will have a couple of hours a day which I can allot to study in the coming month. This will be the perfect moment to start working on a goal I&amp;rsquo;ve had for a long time: getting my Certified Kubernetes Security Specialist certification.&lt;/p&gt;
+&lt;p&gt;t&amp;rsquo;s not going to be easy. I&amp;rsquo;m quite intimidated by all of the new things I&amp;rsquo;ll have to learn. But that&amp;rsquo;s a good sign. It&amp;rsquo;s the way it works. Everybody would be doing this if it was easy, and I can only grow by doing hard things that seem intimidating at first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Comparing akv2k8s with Azure Key Vault Provider for Secret Store CSI Driver</title>
+      <link>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/akv2k8s-azure-key-vault-csi-analysis/</guid>
+      <description>&lt;p&gt;In a recent analysis, I explored two notable solutions for synchronizing secrets from Azure Key Vaults to AKS (Azure Kubernetes Service) clusters: akv2k8s and the Azure Key Vault Provider for the Secret Store CSI Driver. Here, I present my findings and recommendations based on the functionality, maintenance requirements, and integration capabilities of these tools.&lt;/p&gt;
+&lt;p&gt;Akv2k8s, maintained by Sparebanken, is an open-source tool designed for the synchronization of secrets. Being dependent on an external tool for Kubernetes secrets synchronization is an undesirable situation and poses several challenges. Notably, the latest version of akv2k8s has been problematic, especially concerning the deployment of Postgres databases on our AKS clusters using the EDB operator. Akv2k8s alters the SecurityContext of pods in a way that causes them to fail.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Homelab Secret Management With GitOps and Azure Key Vault</title>
+      <link>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</guid>
+      <description>&lt;p&gt;In this blog post, I want to share with you how I set up secrets management for my &lt;a href=&#34;https://github.com/mischavandenburg/homelab/&#34;&gt;home lab&lt;/a&gt;. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

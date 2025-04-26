@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mastodon on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/mastodon/</link>
+    <description>Recent content in Mastodon on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/mastodon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Found a Mastodon CLI</title>
+      <link>https://mischavandenburg.com/zet/toot-mastodon-cli/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/toot-mastodon-cli/</guid>
+      <description>&lt;p&gt;Last week I created my own Go program to send toots to Mastodon but now I stumbled across a full fledged CLI with a TUI&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://toot.bezdomni.net/&#34;&gt;https://toot.bezdomni.net/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312311312&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

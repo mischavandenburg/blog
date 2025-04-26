@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Video on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/video/</link>
+    <description>Recent content in Video on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/video/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Got my CKS</title>
+      <link>https://mischavandenburg.com/zet/got-my-cks/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/got-my-cks/</guid>
+      <description>&lt;p&gt;Just realized I never posted on the blog that I achieved the CKS a month ago.&lt;/p&gt;
+&lt;p&gt;I even created a study guide for it:&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_l232KiJHNA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202406152006&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: My Entire Neovim &#43; Tmux Workflow As A DevOps Engineer On MacOS</title>
+      <link>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-tmux-neovim-macos-workflow/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/iagjeLuxnMs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;I&amp;rsquo;ve just released a comprehensive video delving deep into my Neovim setup and command-line centric workflow. This video is a response to the curiosity of my YouTube subscribers. It&amp;rsquo;s an all-inclusive guide from A to Z, detailing the rationale behind my configuration choices. I&amp;rsquo;ve spent years perfecting my workflow and this video has been several months in the making, so I&amp;rsquo;m excited that I can finally share it with you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Homelab E2 - Setting Up Monitoring &#43; Studying k3s Networking  &amp; Configuring Ingress</title>
+      <link>https://mischavandenburg.com/zet/video-homelab-3-k3s-networking/</link>
+      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-homelab-3-k3s-networking/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JjIB65CVXAo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I installed Prometheus and Grafana using helm and studied k3s networking.&lt;/p&gt;
+&lt;p&gt;My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;installed prometheus and grafana with kube-prometheus-stack helm chart&lt;/li&gt;
+&lt;li&gt;reflected on why I use k3s&lt;/li&gt;
+&lt;li&gt;gained understanding of k3s loadbalancing solution&lt;/li&gt;
+&lt;li&gt;configured /etc/hosts file to resolve to fake domain&lt;/li&gt;
+&lt;li&gt;configured k3s ingress to use fake local domain&lt;/li&gt;
+&lt;li&gt;struggled with ingress but figured it out in the end&lt;/li&gt;
+&lt;li&gt;successfully made grafana UI available on fake local domain grafana.homelab.nl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312261012&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Homelab Episode 1</title>
+      <link>https://mischavandenburg.com/zet/homelab-episode-1/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/homelab-episode-1/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/X40gNPZ2xP4?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;This is the first video of my homelab series.&lt;/p&gt;
+&lt;p&gt;I set up the repo for my project and do the initial installation of k3s on an old laptop I had lying around. I had a k8s cluster installed on there with kubeadm which I needed to clean up first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Deploying MkDocs To Azure Using With Azure DevOps</title>
+      <link>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-mkdocs-azure-webapp/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_-D1Qz6jtEU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video, I will walk you through the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set up a repo in Azure DevOps with MkDocs files&lt;/li&gt;
+&lt;li&gt;Set up a Static Web App in Azure portal and link it to the repo&lt;/li&gt;
+&lt;li&gt;Configure the Azure DevOps pipeline for MkDocs deployment&lt;/li&gt;
+&lt;li&gt;Configure a custom theme for the website&lt;/li&gt;
+&lt;li&gt;Demonstrate the pull request workflow for updating the docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By the end of this video, you will have a fully functional MkDocs site hosted on Azure Static Web Apps. You will also learn how to use Azure DevOps and Static Web Apps to collaborate on your documentation projects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Finishing Pipeline Setup  &amp; Working on KeyVault Template - Azure Kubernetes Lab Series</title>
+      <link>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-finish-pipeline-setup-aks-series/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/eooZ3OHl5Mc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Finish deploying keyvault using pipeline&lt;/li&gt;
+&lt;li&gt;Get the random name generation to work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Subscriptions need to be registered with resource providers, apparently&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&#34;&gt;https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-cli&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;acccesPolicies are mandatory on KeyVaults, but not when RBAC is enabled&lt;/li&gt;
+&lt;li&gt;Assign contributor role to Azure DevOps service connection to be able to create resource groups from pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;achieved&#34;&gt;Achieved&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting up connection between pipeline and Azure subscription&lt;/li&gt;
+&lt;li&gt;Assign correct rights to the service connection so it is allowed to deploy new resource groups (and other resources)&lt;/li&gt;
+&lt;li&gt;Learned about provider registrations&lt;/li&gt;
+&lt;li&gt;Made progress on creating unique names for resources&lt;/li&gt;
+&lt;li&gt;Successfully deployed new resource group and key vault from the pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;next-time&#34;&gt;Next time:&lt;/h1&gt;
+&lt;p&gt;Look into random string creation with utcNow&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Setting Up A Simple Azure Pipeline To Deploy A Keyvault</title>
+      <link>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-aks-lab-pipeline-first-setup/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/WnA8V3uq7P8?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Write KeyVault template&lt;/li&gt;
+&lt;li&gt;Write pipeline code&lt;/li&gt;
+&lt;li&gt;set up Azure DevOps pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons Learned&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Always make sure to use &lt;code&gt;az deployment group&lt;/code&gt; instead of &lt;code&gt;az group deployment&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Because it has older Bicep version and will be deprecated&lt;/li&gt;
+&lt;li&gt;Make sure to be in correct Directory to be able to sync subscriptions for service connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202306302206&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Deploying an AKS Cluster with Bicep, GitHub Copilot and Neovim</title>
+      <link>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-deploying-aks-cluster-bicep-github-copilot/</guid>
+      <description>&lt;p&gt;Inspired by a GitHub Copilot demonstration I witnessed at Microsoft, I wanted to see how quickly I could deploy an AKS cluster from Neovim with Bicep using Copilot. I wasn&amp;rsquo;t disappointed!&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/l0B65FUfNBU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202306271706&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=l0B65FUfNBU&#34;&gt;https://www.youtube.com/watch?v=l0B65FUfNBU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[[AKS]]
+[[Kubernetes]]
+[[Neovim]]
+[[bicep]]
+[[coding]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Introducing New Bicep Parameter Files - .bicepparam - No more JSON!</title>
+      <link>https://mischavandenburg.com/zet/video-bicep-bicepparam/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-bicep-bicepparam/</guid>
+      <description>&lt;p&gt;The new parameter files use bicep style formatting instead of JSON, and they will make the lives of Cloud Engineers a lot easier. They have the following advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More readable and editor friendly&lt;/li&gt;
+&lt;li&gt;Cleaner and less lines of code&lt;/li&gt;
+&lt;li&gt;VSCode integration&lt;/li&gt;
+&lt;li&gt;Quickly convert from JSON or template file using VSCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this video I introduce these new files. I go over the new formatting, and I also introduce the new features in VSCode for the .bicepparam files.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Invest In Experiences For Happiness</title>
+      <link>https://mischavandenburg.com/zet/invest-in-experiences-for-happiness/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/invest-in-experiences-for-happiness/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/840iXuXwE4Y?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h1 id=&#34;happiness-hedonic-adjustment-experiences&#34;&gt;Happiness, Hedonic Adjustment, Experiences&lt;/h1&gt;
+&lt;p&gt;This was a very good video. I can honestly say that I am very happy and content, and I lead a very fulfilling life. I do not usually watch this kind of &amp;ldquo;happiness&amp;rdquo; content because I&amp;rsquo;m already happy. But this video did give me some very important insights which have influenced the way I approach money and happiness.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: How I Write &amp; Publish My Blog Using Neovim &amp; Hugo From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/blogging-from-command-line/</link>
+      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/blogging-from-command-line/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;I show my workflow to publish my Hugo blog from the command line using neovim and bash&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202305091705&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Creating A Command To Change Fontsize in Alacritty</title>
+      <link>https://mischavandenburg.com/zet/video-custom-fontsize-command/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-custom-fontsize-command/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Q8dxoqqMHAg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202305070805&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/Q8dxoqqMHAg&#34;&gt;https://youtu.be/Q8dxoqqMHAg&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: How To Read The News From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/reading-news-from-command-line/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/reading-news-from-command-line/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/08SxwJ7ZVyo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;I use RSS feeds to read the news, and I use Newsboat as a RSS reader.&lt;/p&gt;
+&lt;p&gt;To in stall on MacOS: &lt;code&gt;brew install newsboat&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Integrate in already existing terminal workflow&lt;/li&gt;
+&lt;li&gt;Free from distraction&lt;/li&gt;
+&lt;li&gt;Control how content is rendered&lt;/li&gt;
+&lt;li&gt;Carefully curate which content you consume&lt;/li&gt;
+&lt;li&gt;Build your own &amp;ldquo;Social Media feed&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;No advertisements or suggested articles&lt;/li&gt;
+&lt;li&gt;Newsboat uses RSS feeds which are generated by websites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202304271004&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

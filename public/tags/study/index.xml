@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Study on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/study/</link>
+    <description>Recent content in Study on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/study/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Got my CKS</title>
+      <link>https://mischavandenburg.com/zet/got-my-cks/</link>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/got-my-cks/</guid>
+      <description>&lt;p&gt;Just realized I never posted on the blog that I achieved the CKS a month ago.&lt;/p&gt;
+&lt;p&gt;I even created a study guide for it:&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/_l232KiJHNA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202406152006&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Alleviating Confusion About The To Field In Network Policies</title>
+      <link>https://mischavandenburg.com/zet/alleviating-confusion-about-the-to-field-in-network-policies/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/alleviating-confusion-about-the-to-field-in-network-policies/</guid>
+      <description>&lt;p&gt;When solving a killercoda challenge I ran into some confusion. Even though my solution worked, there was a difference which I wanted to get clear on.&lt;/p&gt;
+&lt;p&gt;I wrote this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;networking.k8s.io/v1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;NetworkPolicy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;namespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;space1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;spec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;podSelector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;{}&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;policyTypes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;Egress&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;egress&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;namespaceSelector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;matchLabels&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;kubernetes.io/metadata.name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;space2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ports&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;protocol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TCP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;protocol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;UDP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But the provided course solution was this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I&#39;m better at Network Policies than I thought</title>
+      <link>https://mischavandenburg.com/zet/im-better-at-network-policies-than-i-thought/</link>
+      <pubDate>Mon, 25 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/im-better-at-network-policies-than-i-thought/</guid>
+      <description>&lt;p&gt;There are two things which I&amp;rsquo;m dreading most for the CKS exam: writing Network Policies and configuring RBAC under heavy time pressure.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve heard from colleagues that the exam has many questions of this nature, so it will be a good way of scoring points. However, regardless of the exam, the fact that I&amp;rsquo;m dreading these topics also shows that I&amp;rsquo;m not familiar enough with them and therefore this is a point where I should improve. It&amp;rsquo;s not only about the exam, but also my growth of expertise as a Kubernetes Engineer.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Starting my CKS studies</title>
+      <link>https://mischavandenburg.com/zet/starting-cks-studies/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/starting-cks-studies/</guid>
+      <description>&lt;p&gt;It seems like I will have a couple of hours a day which I can allot to study in the coming month. This will be the perfect moment to start working on a goal I&amp;rsquo;ve had for a long time: getting my Certified Kubernetes Security Specialist certification.&lt;/p&gt;
+&lt;p&gt;t&amp;rsquo;s not going to be easy. I&amp;rsquo;m quite intimidated by all of the new things I&amp;rsquo;ll have to learn. But that&amp;rsquo;s a good sign. It&amp;rsquo;s the way it works. Everybody would be doing this if it was easy, and I can only grow by doing hard things that seem intimidating at first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Learning Flux and Installing To Homelab</title>
+      <link>https://mischavandenburg.com/zet/video-homelab-learning-flux/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-homelab-learning-flux/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/BtuqzsyztBc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AZ-700 Notes - Virtual WAN</title>
+      <link>https://mischavandenburg.com/zet/az-700-virtual-wan/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/az-700-virtual-wan/</guid>
+      <description>&lt;h1 id=&#34;chapter-11-virtual-wan&#34;&gt;Chapter 11 Virtual WAN&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Easy Mode Hub-Spoke&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;incorporates multiple hybrid connections (vpn/expressroute)&lt;/li&gt;
+&lt;li&gt;incorporates multiple VNets&lt;/li&gt;
+&lt;li&gt;Dynamically handles routing&lt;/li&gt;
+&lt;li&gt;easily deploys NVA/Firewall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;use-case&#34;&gt;Use case&lt;/h2&gt;
+&lt;p&gt;You technically don&amp;rsquo;t need to use it for anything, you can do the same with a normal hub-spoke built using VNets.&lt;/p&gt;
+&lt;p&gt;However, when you do, you&amp;rsquo;re in charge of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add/update routes&lt;/li&gt;
+&lt;li&gt;network gateway connections&lt;/li&gt;
+&lt;li&gt;integration with virtual appliances / firewalls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Virtual WAN makes these tasks easier.&lt;/p&gt;
+&lt;h2 id=&#34;components&#34;&gt;Components&lt;/h2&gt;
+&lt;p&gt;Virtual Wan&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Began studying for AZ-700 Designing and Implementing Microsoft Azure Networking Solutions</title>
+      <link>https://mischavandenburg.com/zet/starting-az-700/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/starting-az-700/</guid>
+      <description>&lt;p&gt;Before I went on holiday I formed the intention to begin studying again after I came back.&lt;/p&gt;
+&lt;p&gt;During my current gig I&amp;rsquo;m configuring a fair bit of networking, VNets, peerings, firewall rules and set up a full hub-spoke network from scratch, so I&amp;rsquo;ve had a fair bit of practical experience. Now that the experience is still fresh in the mind I figured I&amp;rsquo;d go for this certification.&lt;/p&gt;
+&lt;p&gt;Usually I only use Microsoft Learn and practice exams, but this time around I want to try out a video course. I purchased a year of A Cloud Guru access and so far it has been a good experience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure Exams Are Open Book Exams From Now On</title>
+      <link>https://mischavandenburg.com/zet/azure-exams-open-book/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/azure-exams-open-book/</guid>
+      <description>&lt;p&gt;From here on out you can access Microsoft Learn during the exams. This is great news! This is much more like the actual experience of an engineer&amp;rsquo;s daily activities. It is arguably more important to look up things efficiently rather than memorizing everything for a test and forgetting it a few weeks later.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/iPiq3YuhnHc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202308231608&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Starting My Homelab</title>
+      <link>https://mischavandenburg.com/zet/starting-my-homelab/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/starting-my-homelab/</guid>
+      <description>&lt;p&gt;This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J&#34;&gt;Homelab Init&lt;/a&gt; playlist on YouTube which I&amp;rsquo;m working on.&lt;/p&gt;
+&lt;p&gt;There are a few reasons why I haven&amp;rsquo;t started up until now:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Structs In Go - Similar To Classes In Python?</title>
+      <link>https://mischavandenburg.com/zet/go-struct-python-class/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-struct-python-class/</guid>
+      <description>&lt;p&gt;The Tour of Go is very clear:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Go does not have classes.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go - Skillstak Beginner Boost Week 17 and 18 Notes</title>
+      <link>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</guid>
+      <description>&lt;h1 id=&#34;beginner-boost-week-17-and-18-notes&#34;&gt;Beginner Boost Week 17 and 18 Notes&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=WMH5ENF_Xvo&#34;&gt;Link to video&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t forget to set &lt;code&gt;GOBIN=~/.local/bin&lt;/code&gt;, &lt;code&gt;GOPRIVATE&lt;/code&gt;, &lt;code&gt;CGO_ENABLED=0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;go-testing---example-tests&#34;&gt;Go Testing - Example Tests&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ExampleFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// Output:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// Foo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The ExampleFoo indicates the test here. It needs to match the name exactly after Example. But it is capitalized.&lt;/p&gt;
+&lt;p&gt;It runs that function and will compare the output to what is specified.&lt;/p&gt;
+&lt;p&gt;It says &amp;ldquo;see if the program generates this output in std out&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes: Advanced Bicep</title>
+      <link>https://mischavandenburg.com/zet/advanced-bicep/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/advanced-bicep/</guid>
+      <description>&lt;h1 id=&#34;deploying-to-subscriptions-and-management-groups&#34;&gt;Deploying to subscriptions and management groups&lt;/h1&gt;
+&lt;p&gt;To tell Bicep which scope to deploy to, use the &lt;code&gt;targetScope&lt;/code&gt; keyword, for example, managementGroup.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;re not specifying which management group exactly, this is done during deployment of the template file.&lt;/p&gt;
+&lt;p&gt;targetScope can be set to resourceGroup, subscription, managementGroup or tenant.&lt;/p&gt;
+&lt;p&gt;If it is not set, Bicep assumes resourceGroup.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-resource-group&#34;&gt;create a resource group&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bicep&#34; data-lang=&#34;bicep&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;targetScope&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;subscription&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;resource&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;resourceGroup&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Microsoft.Resources/resourceGroups@2021-01-01&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;example-resource-group&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;westus&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To deploy you use &lt;code&gt;az deployment group create&lt;/code&gt; for resource groups, but you use &lt;code&gt;az deployment sub create&lt;/code&gt; for subscriptions, &lt;code&gt;mg&lt;/code&gt; for management group and &lt;code&gt;tenant&lt;/code&gt; for tenant.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes: Intermediate Bicep</title>
+      <link>https://mischavandenburg.com/zet/intermediate-bicep/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/intermediate-bicep/</guid>
+      <description>&lt;p&gt;Today I finished the Intermediate Bicep module. Here are my notes.&lt;/p&gt;
+&lt;h1 id=&#34;child-and-extension&#34;&gt;Child and Extension&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can also use Bicep to refer to resources that were created outside the Bicep file itself. For example, you can refer to resources that your colleagues have created manually by using the Azure portal, or from within another Bicep template or module, even if they&amp;rsquo;re in a different resource group or subscription. By using these features of Bicep, you can unlock the ability to create powerful templates that deploy all aspects of your Azure infrastructure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes: Fundamentals of Bicep</title>
+      <link>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/fundamentals-of-bicep/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ll be working with Bicep during my next contract, so I&amp;rsquo;m working through the Bicep modules on Microsoft Learn to prepare. I must say that these modules are particularly helpful. They are well structured and they provide you with free sandbox environments to practice deploying the templates you create.&lt;/p&gt;
+&lt;h1 id=&#34;why-bicep&#34;&gt;Why Bicep?&lt;/h1&gt;
+&lt;p&gt;Resources in Azure are deployed by the Azure Resource Manager (ARM). These resources are JSON objects under the covers, and ARM templates are a way to generate these JSON objects. However, JSON is not really meant to be edited by humans, and the ARM templates are not very suitable for editing either. Thus, Bicep was developed to allow for a better editing experience and better readability and reusability.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Learning Go Day 1: Notes</title>
+      <link>https://mischavandenburg.com/zet/go-day-1/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-day-1/</guid>
+      <description>&lt;p&gt;The CTO of my new company recommended the Udemy course &amp;ldquo;Go: The Complete Developer&amp;rsquo;s Guide (Golang)&amp;rdquo;. I started today and here are some notes I made.&lt;/p&gt;
+&lt;h1 id=&#34;hello-world-in-go&#34;&gt;Hello World in Go&lt;/h1&gt;
+&lt;p&gt;We start by writing a Hello World and studying all the elements.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;how-do-we-run-code&#34;&gt;How do we run code?&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;go run main.go&lt;/code&gt; runs the program
+&lt;code&gt;go build main.go&lt;/code&gt; compiles it to an executable&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I passed the AZ-400 DevOps Expert today</title>
+      <link>https://mischavandenburg.com/zet/passed-az-400/</link>
+      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/passed-az-400/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m typing this 30 minutes after I passed my AZ-400 exam. I&amp;rsquo;m sitting in a lovely cafe on Leidseplein in Amsterdam and feel relieved. Another significant certification bites the dust. This one took about 70 hours of study.&lt;/p&gt;
+&lt;p&gt;I started preparing immediately after passing my AZ-104 exam, which was a good move. The AZ-400 requires you to know many details about Azure services and how to access them. For example, Shared Access Signatures are only used for accessing storage accounts, but they came up quite often as alternative answers to the questions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Pomodoro technique has won me over</title>
+      <link>https://mischavandenburg.com/zet/pomodoro/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/pomodoro/</guid>
+      <description>&lt;p&gt;I did a lot of studying last year, and I achieved a few tough certifications. I&amp;rsquo;ve always been good at studying and never struggled with getting decent grades in university. As a result, I never felt the need to use particular techniques to pass my tests. However, now that I need to do my studies combined with a full-time job, I did some optimization and looked into study techniques.&lt;/p&gt;
+&lt;p&gt;One technique I&amp;rsquo;ve become very fond of is the Pomodoro Technique. I don&amp;rsquo;t have any problems focusing for long periods, but I still decided to try it. I use the standard 25-minute study with a 5-minute break routine, and after four cycles, I take a 30-minute break.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Obsidian: A Note Taking App For DevOps Engineers</title>
+      <link>https://mischavandenburg.com/zet/articles/obsidian-introduction/</link>
+      <pubDate>Sun, 01 Jan 2023 19:05:13 +0100</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/obsidian-introduction/</guid>
+      <description>&lt;p&gt;As a DevOps or Cloud engineer, you work with many different technologies daily. Therefore, a good engineer needs a solid foundation in Linux, a lot of knowledge about your cloud solution, networking, CI/CD, at least one programming language, and many other topics.&lt;/p&gt;
+&lt;p&gt;Not only are there many of these categories, but within these categories, there are several alternatives. For example, in the category of infrastructure management, there is Ansible, Puppet, or Chef, each with its particular approach and configuration methods.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Study Guide: AZ-104 Azure Administrator Associate</title>
+      <link>https://mischavandenburg.com/zet/articles/az-104-study-guide/</link>
+      <pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/az-104-study-guide/</guid>
+      <description>&lt;h1 id=&#34;tldr&#34;&gt;TLDR&lt;/h1&gt;
+&lt;p&gt;It took me 80 hours of studying to gain this certification. Here are my notes and Anki deck:
+&lt;a href=&#34;https://github.com/mischavandenburg/az-104-azure-administrator&#34;&gt;GitHub repo&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;When I did my English degree at University, exams were usually handwritten essays that needed to be done within a 3-hour timeframe. Sometimes we had multiple-choice tests, and I would always consider them a guaranteed pass because multiple-choice was much easier in my experience.&lt;/p&gt;
+&lt;p&gt;That opinion has changed since I&amp;rsquo;ve obtained a few IT certifications. These tests are hard! I&amp;rsquo;m typing this while sitting on the bus on my way home from my AZ-104 exam. I passed with an 860 score of 1000, where 700 or higher is a pass. But it was an astonishingly tough exam. Usually, I finish quickly and spend at least half an hour reviewing my answers. I had only 5 minutes to review my questions this time because I had used up all of the available time. The questions required intense concentration and were time-consuming because I needed to compare many options which were very similar to each other. There were no easy questions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Certified Kubernetes Administrator (CKA) Exam Tips</title>
+      <link>https://mischavandenburg.com/zet/articles/cka-tips/</link>
+      <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/articles/cka-tips/</guid>
+      <description>&lt;p&gt;I recently obtained my CKA certification. I started this certification journey with zero knowledge of Kubernetes. However, I was already working as a DevOps Engineer, and I know a fair bit of Linux. I daily drive Arch Linux and have LPIC-1 certification. It was handy to know where files are located on Linux systems and how to interact with systemd services. I also knew yaml quite well because I work with Ansible daily. I passed on my first try, and I did one session of killer.sh.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LPIC-1 Study Guide</title>
+      <link>https://mischavandenburg.com/lpic-1-study-guide/</link>
+      <pubDate>Wed, 16 Mar 2022 21:20:19 +0000</pubDate>
+      <guid>https://mischavandenburg.com/lpic-1-study-guide/</guid>
+      <description>&lt;p&gt;I recently obtained my LPIC-1 certification, and in this blog post, I’ll share the strategy and techniques I used to pass this exam and share my thoughts on the certification. Because I am a Linux novice, the exam was a pretty tough grind for me. This article offers a beginner’s perspective on the LPIC-1 certification. Is the LPIC-1 hard to pass? Keep reading to find out.&lt;/p&gt;
+&lt;p&gt;Before this certification, I had only a little bit of experience. I deployed LAMP stacks using Ansible and configured VMs to be able to communicate with each other using only the command line. I also did a “Linux Fundamentals” video training. I could navigate the filesystem, edit text files and work in the terminal, but that was about it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

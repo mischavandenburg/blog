@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Command-Line on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/command-line/</link>
+    <description>Recent content in Command-Line on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding Articles to Wallabag From Qutebrowser</title>
+      <link>https://mischavandenburg.com/zet/adding-articles-to-wallabag-with-qutebrowser/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/adding-articles-to-wallabag-with-qutebrowser/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been daily driving Qutebrowser for over a month now, and I&amp;rsquo;m starting to feel at home in it.&lt;/p&gt;
+&lt;p&gt;Since it doesn&amp;rsquo;t have any extensions, you have to hack things together yourself, which is why I like it so much.&lt;/p&gt;
+&lt;p&gt;Today I wanted to add an article to my Wallabag instance, which I usually did by using the browser extension.&lt;/p&gt;
+&lt;p&gt;I installed this Wallabag CLI:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/artur-shaik/wallabag-client&#34;&gt;https://github.com/artur-shaik/wallabag-client&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pipx install wallabag-client&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;After setting up the config I can now add entries from the command line. By running &lt;code&gt;wallabag add [url]&lt;/code&gt;. Neat!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No More GitHub - My Updated Backup Setup For My Obsidian Zettelkasten</title>
+      <link>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</guid>
+      <description>&lt;p&gt;I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Return of Arch Linux</title>
+      <link>https://mischavandenburg.com/zet/the-return-of-arch-linux/</link>
+      <pubDate>Fri, 26 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/the-return-of-arch-linux/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m planning to do a series on Linux on my YouTube channel. The idea is to cover the fundamentals of Linux, either by teaching them myself or to link to existing resources. When the basics are done, I will take over and we&amp;rsquo;ll build an Arch Linux desktop together.&lt;/p&gt;
+&lt;p&gt;I use my MacBook for normal productive work and coding, and I have a Thinkpad T480 which I have for experimentation, and mostly for writing notes and browsing while I&amp;rsquo;m in the living room. It was running Fedora using the Sway spin, and it worked fine.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Best Way To Download Youtube Videos From Cli</title>
+      <link>https://mischavandenburg.com/zet/best-way-to-download-youtube-videos-from-cli/</link>
+      <pubDate>Sun, 12 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/best-way-to-download-youtube-videos-from-cli/</guid>
+      <description>&lt;p&gt;This is hands down the best CLI for downloading YouTube videos.&lt;/p&gt;
+&lt;p&gt;I needed this to transfer some of my private videos to Vimeo. Don&amp;rsquo;t use this to break YouTube&amp;rsquo;s terms please.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kkdai/youtube&#34;&gt;https://github.com/kkdai/youtube&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202405121505&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Found a Mastodon CLI</title>
+      <link>https://mischavandenburg.com/zet/toot-mastodon-cli/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/toot-mastodon-cli/</guid>
+      <description>&lt;p&gt;Last week I created my own Go program to send toots to Mastodon but now I stumbled across a full fledged CLI with a TUI&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://toot.bezdomni.net/&#34;&gt;https://toot.bezdomni.net/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312311312&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Discovered a simple CLI to backup and upload Grafana dashboards</title>
+      <link>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</guid>
+      <description>&lt;p&gt;This is a super useful tool to list, download and upload Grafana dashboards as json.&lt;/p&gt;
+&lt;p&gt;Currently using this to occasionally take extra-extra backups of my Grafana creations&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://software.es.net/gdg/&#34;&gt;https://software.es.net/gdg/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312301612&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting A Secret from an Azure Key Vault From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/list-azure-key-vault-secret/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/list-azure-key-vault-secret/</guid>
+      <description>&lt;p&gt;I use this bash code to get secrets from Azure key vaults using the Azure CLI.&lt;/p&gt;
+&lt;p&gt;Make sure to set your subscription with &lt;code&gt;az account set -s 12321424&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;kvname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;kv-vo-rea-prd-weu-001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;secretname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;worker-ad-client-secret
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;az keyvault secret show --vault-name &lt;span class=&#34;nv&#34;&gt;$kvname&lt;/span&gt; --name &lt;span class=&#34;nv&#34;&gt;$secretname&lt;/span&gt;  --query value -o tsv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202310312010&lt;/p&gt;
+&lt;p&gt;[[Azure]]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>It is good to keep your second brain compatible with Obsidian</title>
+      <link>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</guid>
+      <description>&lt;p&gt;Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.&lt;/p&gt;
+&lt;p&gt;I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.&lt;/p&gt;
+&lt;p&gt;For my new gig at work I&amp;rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault. Then it is a godsend to be able to install Obsidian and use that to interact with my second brain.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: How I Write &amp; Publish My Blog Using Neovim &amp; Hugo From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/blogging-from-command-line/</link>
+      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/blogging-from-command-line/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bzkrmkGDQJA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;I show my workflow to publish my Hugo blog from the command line using neovim and bash&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202305091705&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How To Check The Weather From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/check-weather-terminal/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/check-weather-terminal/</guid>
+      <description>&lt;p&gt;For the past few months I&amp;rsquo;ve been using this neat API to check the weather from the command line. It&amp;rsquo;s very simple to use. Simply run:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl wttr.in&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This will show the weather based on your location, but you can also give a particular location and format.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;curl wttr.in/Amsterdam&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202304271504&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/chubin/wttr.in&#34;&gt;https://github.com/chubin/wttr.in&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: How To Read The News From The Command Line</title>
+      <link>https://mischavandenburg.com/zet/reading-news-from-command-line/</link>
+      <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/reading-news-from-command-line/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/08SxwJ7ZVyo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;I use RSS feeds to read the news, and I use Newsboat as a RSS reader.&lt;/p&gt;
+&lt;p&gt;To in stall on MacOS: &lt;code&gt;brew install newsboat&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Integrate in already existing terminal workflow&lt;/li&gt;
+&lt;li&gt;Free from distraction&lt;/li&gt;
+&lt;li&gt;Control how content is rendered&lt;/li&gt;
+&lt;li&gt;Carefully curate which content you consume&lt;/li&gt;
+&lt;li&gt;Build your own &amp;ldquo;Social Media feed&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;No advertisements or suggested articles&lt;/li&gt;
+&lt;li&gt;Newsboat uses RSS feeds which are generated by websites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202304271004&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Run Newsboat in Zenmode</title>
+      <link>https://mischavandenburg.com/zet/newsboat-in-zenmode/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/newsboat-in-zenmode/</guid>
+      <description>&lt;p&gt;To read the news free from distractions and ads I use Newsboat as a reader for RSS feeds.&lt;/p&gt;
+&lt;p&gt;However, one thing that annoyed me was that it would span across my entire screen in the terminal. When you read blogs or news pages in the browser, you&amp;rsquo;ll notice that the text is always located in a middle column of the window, so you don&amp;rsquo;t have to move your neck while reading. At least, this is the case with well designed websites that serve text content.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

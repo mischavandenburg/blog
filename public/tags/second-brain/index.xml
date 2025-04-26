@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Second-Brain on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/second-brain/</link>
+    <description>Recent content in Second-Brain on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/second-brain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dont Use Question Marks in Windows Filenames</title>
+      <link>https://mischavandenburg.com/zet/windows-filenames-invalid/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/windows-filenames-invalid/</guid>
+      <description>&lt;p&gt;Ran into a problem when cloning my second brain repository on a new windows machine which I need to use for work. Also trying to get familiar with VSCode although I&amp;rsquo;m doing my best to get a good WSL setup going on my new windows setup.&lt;/p&gt;
+&lt;p&gt;One problem I was running into was that I could not for the life of me clone my repository at all on Windows. Eventually I realized that it kept failing on a file that had a question mark in its filename.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>It is good to keep your second brain compatible with Obsidian</title>
+      <link>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/keep-second-brain-obsidian-compatible/</guid>
+      <description>&lt;p&gt;Although I rarely use Obsidian anymore, I still have it open because it is running the obsidian-git plugin in the background and it is constantly backing up my second brain to GitHub.&lt;/p&gt;
+&lt;p&gt;I use iCloud to synch my vault across my iOs devices and I always create and edit my files using neovim.&lt;/p&gt;
+&lt;p&gt;For my new gig at work I&amp;rsquo;m forced to use a windows laptop which means I cannot use iCloud to synch my vault. Then it is a godsend to be able to install Obsidian and use that to interact with my second brain.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Power of Writing</title>
+      <link>https://mischavandenburg.com/zet/power-of-writing/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/power-of-writing/</guid>
+      <description>&lt;p&gt;Ah, writing. It&amp;rsquo;s one of the skills that I&amp;rsquo;ve consistently been praised for throughout my life. I&amp;rsquo;m pretty good at it, and I think that&amp;rsquo;s because I enjoy it. It led me to getting an academic degree in English Literature and Culture, simply because I was following the things I was naturally good at.&lt;/p&gt;
+&lt;p&gt;However, just like any other skill, you can only become better at it through consistent practice. This morning I read a wonderful little blog post &lt;a href=&#34;https://herman.bearblog.dev/on-writing-regularly/&#34;&gt;on writing regularly&lt;/a&gt;, and I was touched by his words:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Neovim Zettelkasten: How I Take Notes in Markdown Using Vim and Bash</title>
+      <link>https://mischavandenburg.com/zet/neovim-zettelkasten/</link>
+      <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/neovim-zettelkasten/</guid>
+      <description>&lt;p&gt;I used to make all my notes on paper, but I decided to switch to a digital note-taking system about two years ago.&lt;/p&gt;
+&lt;p&gt;Digital note-taking provides the following advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Searchability&lt;/li&gt;
+&lt;li&gt;Collected in one place&lt;/li&gt;
+&lt;li&gt;Can be converted to different output formats&lt;/li&gt;
+&lt;li&gt;Easier to share with others&lt;/li&gt;
+&lt;li&gt;Does not take up physical space&lt;/li&gt;
+&lt;li&gt;No risk of losing your notes in case of fire or other disaster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;rsquo;ve gone through several iterations of my note-taking systems. I started on Google Docs, moved on to Notion and eventually landed on Obsidian. However, as I became more proficient with UNIX systems and vim, I realized I did not need all of that distracting functionality, and I switched over to using Neovim and a few bash scripts. I occasionally open up Obsidian to look at my graph view or to make use of the Anki plugin, but I enjoy the trimmed-down version that I built myself. I don&amp;rsquo;t need to leave the command line to read my notes or to create a new one.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trying out pandoc for vim</title>
+      <link>https://mischavandenburg.com/zet/trying-out-pandoc/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/trying-out-pandoc/</guid>
+      <description>&lt;p&gt;I do all of my writing in markdown. I keep my diaries in my Second Brain, I constantly write notes on the topics I&amp;rsquo;m studying, and my entire blog is written in markdown.&lt;/p&gt;
+&lt;p&gt;Some of the writing is done in Obsidian but I&amp;rsquo;m moving away from Obsidian step by step. I&amp;rsquo;ll still keep my second brain compatible with it, but I want to be able to do all of my writing in (neo)vim.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

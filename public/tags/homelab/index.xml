@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Homelab on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/homelab/</link>
+    <description>Recent content in Homelab on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I set up Pi-hole on my Synology NAS</title>
+      <link>https://mischavandenburg.com/zet/i-set-up-pi-hole-on-my-synology-nas/</link>
+      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/i-set-up-pi-hole-on-my-synology-nas/</guid>
+      <description>&lt;p&gt;Transition to manifest V3 is now starting and Ublock Origin might not be supported in Chrome in the future.&lt;/p&gt;
+&lt;p&gt;Because of my transition from a mouse to a pen tablet, I&amp;rsquo;ve already been experimenting with Qutebrowser for the past couple of weeks and I really enjoy it. It feels much closer to vim because I can run commands like this: &amp;ldquo;:set darkmode&amp;rdquo; which feels familiar and I can search my history very easily.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Talos Linux Upgrade Guide July</title>
+      <link>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/talos-linux-upgrade-guide-july/</guid>
+      <description>&lt;p&gt;I upgraded my homelab cluster using Talos Linux today.&lt;/p&gt;
+&lt;p&gt;I made a mistake and forgot to use the custom-built image using iscsi-tools.&lt;/p&gt;
+&lt;p&gt;Learning the hard way.&lt;/p&gt;
+&lt;p&gt;Here are my notes:&lt;/p&gt;
+&lt;h2 id=&#34;talos-upgrade&#34;&gt;Talos upgrade&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Remember to create a custom image including iscsi-tools&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;set-up-cli-environment-and-set-databases-to-maintenance-mode&#34;&gt;Set up CLI environment and set databases to maintenance mode&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_CP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.107&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.245&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TALOS_W2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;192.168.100.60&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;k cnp maintenance &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --all-namespaces
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+Use the &lt;code&gt;--preserve&lt;/code&gt; flag on single-node control plane clusters.
+Only needed for the control plane node.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Learning Flux and Installing To Homelab</title>
+      <link>https://mischavandenburg.com/zet/video-homelab-learning-flux/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-homelab-learning-flux/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/BtuqzsyztBc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I set up Flux running in a local cluster on my MacBook by following the getting started guide. Then I learn about how to structure the repo according to Flux methodology. I implement this structure in my homelab repo and deploy flux to my homelab cluster. Then I manage to configure Grafana and the Weave UI to be accessbible via ingress using a custom fake domain.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Designed The Network For My Homelab</title>
+      <link>https://mischavandenburg.com/zet/homelab-network-design/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/homelab-network-design/</guid>
+      <description>&lt;p&gt;My ISP router only allowed me to assign 200 IP addresses and it didn&amp;rsquo;t have any possibility to create VLANS, so it was time for an upgrade to my setup.&lt;/p&gt;
+&lt;p&gt;Now that I&amp;rsquo;m hosting several clusters in my homelab and exposing things to the internet I can justify to spend the money on this hardware and the complexity of dividing up my home network into VLANS.&lt;/p&gt;
+&lt;p&gt;I bought a Unifi Express gateway and the Unifi Lite 8 PoE managed switch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Homelab E2 - Setting Up Monitoring &#43; Studying k3s Networking  &amp; Configuring Ingress</title>
+      <link>https://mischavandenburg.com/zet/video-homelab-3-k3s-networking/</link>
+      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-homelab-3-k3s-networking/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JjIB65CVXAo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I installed Prometheus and Grafana using helm and studied k3s networking.&lt;/p&gt;
+&lt;p&gt;My goal was to make Grafana approachable via ingress using a fake domain and after a bit of tinkering it worked.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;installed prometheus and grafana with kube-prometheus-stack helm chart&lt;/li&gt;
+&lt;li&gt;reflected on why I use k3s&lt;/li&gt;
+&lt;li&gt;gained understanding of k3s loadbalancing solution&lt;/li&gt;
+&lt;li&gt;configured /etc/hosts file to resolve to fake domain&lt;/li&gt;
+&lt;li&gt;configured k3s ingress to use fake local domain&lt;/li&gt;
+&lt;li&gt;struggled with ingress but figured it out in the end&lt;/li&gt;
+&lt;li&gt;successfully made grafana UI available on fake local domain grafana.homelab.nl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312261012&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: Homelab Episode 1</title>
+      <link>https://mischavandenburg.com/zet/homelab-episode-1/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/homelab-episode-1/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/X40gNPZ2xP4?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;This is the first video of my homelab series.&lt;/p&gt;
+&lt;p&gt;I set up the repo for my project and do the initial installation of k3s on an old laptop I had lying around. I had a k8s cluster installed on there with kubeadm which I needed to clean up first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Discovered a simple CLI to backup and upload Grafana dashboards</title>
+      <link>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</link>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/grafana-gdg-backup-cli/</guid>
+      <description>&lt;p&gt;This is a super useful tool to list, download and upload Grafana dashboards as json.&lt;/p&gt;
+&lt;p&gt;Currently using this to occasionally take extra-extra backups of my Grafana creations&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://software.es.net/gdg/&#34;&gt;https://software.es.net/gdg/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links:&lt;/h2&gt;
+&lt;p&gt;202312301612&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Homelab Secret Management With GitOps and Azure Key Vault</title>
+      <link>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/handling-secrets-kubernetes/</guid>
+      <description>&lt;p&gt;In this blog post, I want to share with you how I set up secrets management for my &lt;a href=&#34;https://github.com/mischavandenburg/homelab/&#34;&gt;home lab&lt;/a&gt;. I use my home lab to explore new technologies, but I also try to keep it in line with the practices I would use when setting up environments for clients. I focus on Microsoft Azure and the ecosystem they provide for cloud native applications. Secrets management is an important aspect of any cloud-native application, as it allows you to securely store and access sensitive information such as passwords, tokens and certificates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video: How To Install Prometheus &amp; Grafana In Your Homelab</title>
+      <link>https://mischavandenburg.com/zet/video-install-prometheus-grafana-homelab/</link>
+      <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/video-install-prometheus-grafana-homelab/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/3AINqaBwOYs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;In this video I&amp;rsquo;ll be installing Prometheus and Grafana in a Kubernetes cluster running in Rancher Desktop on my MacBook.&lt;/p&gt;
+&lt;p&gt;There are many options available out there but this is the easiest one I found to get up and running quickly.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;helm repo update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace=prometheus-stack --create-namespace&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Starting My Homelab</title>
+      <link>https://mischavandenburg.com/zet/starting-my-homelab/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/starting-my-homelab/</guid>
+      <description>&lt;p&gt;This week I started a project which I&amp;rsquo;ve been putting off for too long. I finally started my homelab. Over the past year I&amp;rsquo;ve been collecting hardware here and there, and I&amp;rsquo;ve had the intention to start up a proper Kubernetes cluster at home. I got inspired by Rob Muhlenstein&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/playlist?list=PLrK9UeDMcQLpjUGg5z9Z6Un-axVx06-2J&#34;&gt;Homelab Init&lt;/a&gt; playlist on YouTube which I&amp;rsquo;m working on.&lt;/p&gt;
+&lt;p&gt;There are a few reasons why I haven&amp;rsquo;t started up until now:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

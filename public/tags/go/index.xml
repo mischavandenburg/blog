@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/go/</link>
+    <description>Recent content in Go on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 24 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wrote A Go Program That Posts To Mastodon</title>
+      <link>https://mischavandenburg.com/zet/go-mastodon-post/</link>
+      <pubDate>Sun, 24 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-mastodon-post/</guid>
+      <description>&lt;p&gt;This morning I had some fun writing a Go program which takes the latest blog post from my RSS feed and posts it to Mastodon. It is based on my &lt;a href=&#34;https://github.com/mischavandenburg/twitter-cli&#34;&gt;twitter cli&lt;/a&gt; I wrote a while ago.&lt;/p&gt;
+&lt;p&gt;It was fun to write some Go again, it has been far too long. I&amp;rsquo;ve been writing mostly Terraform and yaml recently and working a lot with infrastructure. I haven&amp;rsquo;t been doing any projects at home that required programming. But recently I started up my personal blog and completely re-architected my social media setup.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Structs In Go - Similar To Classes In Python?</title>
+      <link>https://mischavandenburg.com/zet/go-struct-python-class/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-struct-python-class/</guid>
+      <description>&lt;p&gt;The Tour of Go is very clear:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Go does not have classes.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;One benefit of learning multiple programming languages is that each language provides you with a set of “pegs” that you can use to refer to other languages. As I learned about structs in Go, I hung them to the “Python classes” peg and used that as a reference point. Using these reference points can help you to understand the object of study by looking at their differences and similarities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use The %q Verb When Debugging In Go</title>
+      <link>https://mischavandenburg.com/zet/go-use-q-for-debugging/</link>
+      <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-use-q-for-debugging/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m working on my twitter CLI and as I was writing a function to format the tweet I remembered something I picked up last week. After a quick search in my notes I remembered to use the &lt;code&gt;%q&lt;/code&gt; with printf.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;feed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;feed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;strings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Testing printf %q&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is very useful when formatting output. Now I can actually see whether it is inserting the new line characters correctly:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Testing printf &amp;quot;I Made My First Tweet Using My Go Program\nhttps://mischavandenburg.com/zet/go-first-tweet/&amp;quot;I Made My First Tweet Using My Go Program&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Made My First Tweet Using My Go Program</title>
+      <link>https://mischavandenburg.com/zet/go-first-tweet/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-first-tweet/</guid>
+      <description>&lt;p&gt;I spent the evening learning about the Twitter API. It was not as straight forward as I thought. My goal was to do this project using only the standard library, and I hoped to get away with a few simple curls, but since the API requires OAuth 1 to create tweets, I had to revise my strategy.&lt;/p&gt;
+&lt;p&gt;After struggling with Postman for a few hours to get the correct environment variables set up I managed to make my first tweet through Postman. Turns out that Twitter made some big changes in the free tier of their API, and it took me quite a while to figure out that the functions that are used as examples in the API documentation are not accessible to free accounts anymore.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Outlining My First Go Project</title>
+      <link>https://mischavandenburg.com/zet/go-twitter-cli-project/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-twitter-cli-project/</guid>
+      <description>&lt;p&gt;When learning a programming language it is important to start building things quickly and to begin applying the theory. I have a tendency to dive into the books and lose myself in the theory, where I should be getting hands on experience.&lt;/p&gt;
+&lt;p&gt;Over the past few months I&amp;rsquo;ve generated a bunch of ideas for projects that I want to write, and I selected my first project today.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mischavandenburg/twitter-cli&#34;&gt;https://github.com/mischavandenburg/twitter-cli&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/mischa_vdburg&#34;&gt;https://twitter.com/mischa_vdburg&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;twitter-cli&#34;&gt;Twitter CLI&lt;/h1&gt;
+&lt;p&gt;Programs should solve a problem. My problem has to do with Twitter. I recently created a Twitter account, and I want to make a tweet whenever I publish something new on my website. I&amp;rsquo;m currently doing this by hand, and that needs to stop, obviously.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Wrote My First Go Program Today</title>
+      <link>https://mischavandenburg.com/zet/my-first-go-program/</link>
+      <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/my-first-go-program/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m still at the beginning of my Go learning journey, but I worked through a few tutorials and guides by now. I&amp;rsquo;ve gathered lots of ideas for programs that I want to write, big and small, but I have to start somewhere.&lt;/p&gt;
+&lt;p&gt;The best thing to do is to write little programs that solve a problem that you have.&lt;/p&gt;
+&lt;p&gt;One problem I needed to solve was converting sentences to title case in vim. There are plugins for this, or elaborate macros, but I thought this was a nice opportunity to write my first program from scratch. You can view the program here: &lt;a href=&#34;https://github.com/mischavandenburg/go/tree/main/projects/title&#34;&gt;my go repo&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go - Reading from Standard Input Provided by User</title>
+      <link>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-reading-stdinput-cmdline/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m working through the &amp;ldquo;greet&amp;rdquo; &lt;a href=&#34;https://rwx.gg/lang/cha/&#34;&gt;challenge&lt;/a&gt; by rwxrob. It is amazing how such a relatively simple and small challenge can lead down to so many rabbit holes.&lt;/p&gt;
+&lt;p&gt;The program should take input from the user and print it out. I worked through the challenge together with Rob &lt;a href=&#34;https://www.youtube.com/watch?v=WMH5ENF_Xvo&#34;&gt;in his video&lt;/a&gt; but I&amp;rsquo;m going to talk (write) myself through these functions to fully understand what&amp;rsquo;s going on.&lt;/p&gt;
+&lt;p&gt;We have the following function in main.go:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go - Skillstak Beginner Boost Week 17 and 18 Notes</title>
+      <link>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-rwxrob-boost-week-17-18/</guid>
+      <description>&lt;h1 id=&#34;beginner-boost-week-17-and-18-notes&#34;&gt;Beginner Boost Week 17 and 18 Notes&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=WMH5ENF_Xvo&#34;&gt;Link to video&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t forget to set &lt;code&gt;GOBIN=~/.local/bin&lt;/code&gt;, &lt;code&gt;GOPRIVATE&lt;/code&gt;, &lt;code&gt;CGO_ENABLED=0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;go-testing---example-tests&#34;&gt;Go Testing - Example Tests&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ExampleFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// Output:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// Foo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The ExampleFoo indicates the test here. It needs to match the name exactly after Example. But it is capitalized.&lt;/p&gt;
+&lt;p&gt;It runs that function and will compare the output to what is specified.&lt;/p&gt;
+&lt;p&gt;It says &amp;ldquo;see if the program generates this output in std out&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is the difference between a Go module and a package?</title>
+      <link>https://mischavandenburg.com/zet/package-module-go/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/package-module-go/</guid>
+      <description>&lt;p&gt;A module is generally associated with a single git repo.&lt;/p&gt;
+&lt;p&gt;You can have a module with multiple packages, and each package would get its own subdirectory.&lt;/p&gt;
+&lt;p&gt;You should always name your main file main.go&lt;/p&gt;
+&lt;h2 id=&#34;creating-a-module&#34;&gt;creating a module&lt;/h2&gt;
+&lt;p&gt;Use the &lt;code&gt;go mod init {{your path here}}&lt;/code&gt; command to initiate a module.&lt;/p&gt;
+&lt;h2 id=&#34;multiple-modules&#34;&gt;multiple modules&lt;/h2&gt;
+&lt;p&gt;I was running into some trouble with this because I want to have one big repo where I will store all my go projects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to continuously run a Go file while coding in the terminal</title>
+      <link>https://mischavandenburg.com/zet/running-go-on-change/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/running-go-on-change/</guid>
+      <description>&lt;p&gt;I do all my coding and note taking in the terminal using tmux and neovim. I picked up a nice trick from Rob Muhlenstein today.&lt;/p&gt;
+&lt;p&gt;You can use this command in a split window to keep running a Go file. It will update when you save the file.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;entr -c bash -c &amp;quot;go run main.go&amp;quot; &amp;lt;&amp;lt;&amp;lt; main.go&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Entr runs commands when files change. Here we are feeding it only one file, but you can also feed it a directory like so:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Learning Go Day 1: Notes</title>
+      <link>https://mischavandenburg.com/zet/go-day-1/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/go-day-1/</guid>
+      <description>&lt;p&gt;The CTO of my new company recommended the Udemy course &amp;ldquo;Go: The Complete Developer&amp;rsquo;s Guide (Golang)&amp;rdquo;. I started today and here are some notes I made.&lt;/p&gt;
+&lt;h1 id=&#34;hello-world-in-go&#34;&gt;Hello World in Go&lt;/h1&gt;
+&lt;p&gt;We start by writing a Hello World and studying all the elements.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;how-do-we-run-code&#34;&gt;How do we run code?&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;go run main.go&lt;/code&gt; runs the program
+&lt;code&gt;go build main.go&lt;/code&gt; compiles it to an executable&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I started to learn Go!</title>
+      <link>https://mischavandenburg.com/zet/start-learning-go/</link>
+      <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/start-learning-go/</guid>
+      <description>&lt;p&gt;For month&amp;rsquo;s I considered to learn Go, and today I finally started.&lt;/p&gt;
+&lt;p&gt;I doubted for a long time, because I figured it would be better to dive deeper into Python. However, when I reflected on it, I realized I&amp;rsquo;m able to do the things I want to do in Python. I can create scripts to manipulate data, and I can string different tools and libraries together if I need to. So how deep do I actually need to go as a DevOps Engineer?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

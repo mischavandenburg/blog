@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Note-Taking on Mischa van den Burg</title>
+    <link>https://mischavandenburg.com/tags/note-taking/</link>
+    <description>Recent content in Note-Taking on Mischa van den Burg</description>
+    <image>
+      <title>Mischa van den Burg</title>
+      <url>https://mischavandenburg.com/cloud-blue-logo.jpeg</url>
+      <link>https://mischavandenburg.com/cloud-blue-logo.jpeg</link>
+    </image>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mischavandenburg.com/tags/note-taking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No More GitHub - My Updated Backup Setup For My Obsidian Zettelkasten</title>
+      <link>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mischavandenburg.com/zet/my-updated-backup-setup-for-my-obsidian-zetelkasten/</guid>
+      <description>&lt;p&gt;I relied on iCloud sync for my Obsidian backup for many years. However, my vault has grown significantly and has reached nearly 3500 notes. This leads to problems when opening the vault on other iOs devices, because iCloud sync removes files from devices when they are not used. When the vault is reopened, it takes over 5 minutes to sync everything. Having this 5 minute waiting time every time I open up my vault on my iPad was a problem which I needed to address.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
