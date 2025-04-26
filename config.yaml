@@ -137,10 +137,10 @@ menu:
       name: "Services"
       url: /services/
       weight: 13
-    - identifier: Coaching
-      name: "Coaching"
-      url: /coaching/
-      weight: 14
+   #  - identifier: Coaching
+   #    name: "Coaching"
+   #    url: /coaching/
+   #    weight: 14
     - identifier: Courses
       name: "Courses"
       url: /courses/
